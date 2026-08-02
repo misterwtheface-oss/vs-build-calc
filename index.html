@@ -3,61 +3,1487 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vampire Survivors Build Planner</title>
+  <title>Vampire Survivors Build Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0d0b18;
+      --surface:     #1a1525;
+      --surface2:    #241c38;
+      --border:      #3d2e5e;
+      --border-hi:   #6a4a9c;
+      --accent:      #c01020;
+      --accent-glow: rgba(192,16,32,.35);
+      --gold:        #c8a030;
+      --gold-dim:    #7a6018;
+      --text:        #e8e0d0;
+      --text-muted:  #7a7090;
+      --text-dim:    #4a4060;
+      --slot-bg:     #100d1e;
+      --slot-border: #4a3a6a;
+      --hi-char:     #3a7ad9;   /* char-associated */
+      --hi-arcana:   #9b3fd9;   /* arcana-associated */
+      --hi-item:     #2aaa60;   /* item-associated */
+      --evolved:     #e8a000;
+      --font-title:  'Cinzel', Georgia, serif;
+      --font-body:   'Crimson Text', Georgia, serif;
+      --slot-size:   52px;
+      --char-size:   76px;
+    }
+
     body {
-      font-family: sans-serif;
-      background: #1a1a2e;
-      color: #eee;
-      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #app { min-height: 100vh; }
+
+    /* ── Typography ── */
+    h1, h2, h3, .label { font-family: var(--font-title); letter-spacing: .05em; }
+    h1 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
+    h2 { font-size: 1.1rem; font-weight: 600; color: var(--gold); }
+    h3 { font-size: .85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; }
+    .label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
+
+    /* ── Buttons ── */
+    button {
+      font-family: var(--font-title);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background .15s, color .15s, box-shadow .15s;
+    }
+    .btn {
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: .35rem .9rem;
+      font-size: .8rem;
+      letter-spacing: .05em;
+    }
+    .btn:hover { border-color: var(--border-hi); color: var(--gold); }
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .btn-accent:hover { background: #e01828; box-shadow: 0 0 10px var(--accent-glow); }
+    .btn-sm { padding: .2rem .55rem; font-size: .72rem; }
+    .btn-icon { background: none; border: none; padding: 3px; line-height: 1; font-size: .85rem; color: var(--text-muted); }
+    .btn-icon:hover { color: var(--accent); }
+
+    /* ═══════════════════════════════════════════════════
+       LANDING PAGE
+    ═══════════════════════════════════════════════════ */
+    #landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
       padding: 2rem;
+      background: radial-gradient(ellipse at 50% 30%, #1e1035 0%, #0d0b18 70%);
+    }
+    .landing-banner {
       text-align: center;
     }
-    h1 { color: #e94560; }
-    p { color: #aaa; max-width: 480px; margin: 1rem auto; }
-    .status {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      border: 1px solid #e94560;
+    .landing-banner h1 {
+      text-shadow: 0 0 20px rgba(192,16,32,.6);
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+    }
+    .landing-banner p {
+      color: var(--text-muted);
+      margin-top: .5rem;
+      font-size: 1rem;
+      font-style: italic;
+    }
+    .landing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      max-width: 520px;
+      width: 100%;
+    }
+    .player-tile-btn {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .7rem;
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+    }
+    .player-tile-btn:hover {
+      border-color: var(--accent);
+      background: var(--surface2);
+      box-shadow: 0 0 18px var(--accent-glow);
+    }
+    .player-tile-btn .count-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+    .player-tile-btn .count-icons span {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 2px solid var(--border-hi);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .75rem;
+      color: var(--gold);
+      font-family: var(--font-title);
+    }
+    .player-tile-btn .tile-label {
+      font-family: var(--font-title);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .player-tile-btn .tile-sub {
+      font-size: .78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       PLANNING PAGE
+    ═══════════════════════════════════════════════════ */
+    #planning {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .planning-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .75rem 1.25rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .planning-header h1 { font-size: 1.1rem; }
+    .planning-body {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    /* Player rows grid — varies by player count */
+    .players-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .players-grid.p1 { grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; }
+    .players-grid.p2 { grid-template-columns: 1fr 1fr; }
+    .players-grid.p3 { grid-template-columns: 1fr 1fr 1fr; }
+    .players-grid.p4 { grid-template-columns: 1fr 1fr; }
+
+    /* ── Player card ── */
+    .player-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .player-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .5rem .85rem;
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .player-header:hover { background: #2a2040; }
+    .player-header-left { display: flex; align-items: center; gap: .5rem; }
+    .player-header-left .player-name { font-family: var(--font-title); font-size: .85rem; color: var(--gold); }
+    .player-header-left .char-name { font-size: .82rem; color: var(--text-muted); font-style: italic; }
+    .player-header-actions { display: flex; gap: .4rem; align-items: center; }
+
+    .player-body { padding: .75rem; display: flex; flex-direction: column; gap: .6rem; }
+
+    /* ── Slot rows ── */
+    .slot-row { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
+    .slot-row-label { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); width: 3.5rem; flex-shrink: 0; }
+
+    /* ── Slots ── */
+    .slot {
+      width: var(--slot-size); height: var(--slot-size);
+      background: var(--slot-bg);
+      border: 2px solid var(--slot-border);
       border-radius: 6px;
-      color: #e94560;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .slot:hover { border-color: var(--border-hi); box-shadow: 0 0 8px rgba(106,74,156,.5); }
+    .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .slot .slot-remove {
+      position: absolute; top: 1px; right: 1px;
+      width: 16px; height: 16px;
+      background: rgba(0,0,0,.7);
+      border: none; border-radius: 2px;
+      color: #aaa; font-size: 10px; line-height: 1;
+      cursor: pointer; display: none;
+      align-items: center; justify-content: center;
+    }
+    .slot:hover .slot-remove { display: flex; }
+    .slot .slot-remove:hover { color: var(--accent); }
+    .slot.evolved { border-color: var(--evolved); }
+    .slot.evolved::after {
+      content: '⬆';
+      position: absolute; bottom: 1px; left: 2px;
+      font-size: 9px; color: var(--evolved); line-height: 1;
+    }
+    .slot.hi-char  { border-color: var(--hi-char);   box-shadow: 0 0 6px rgba(58,122,217,.4); }
+    .slot.hi-arcana{ border-color: var(--hi-arcana);  box-shadow: 0 0 6px rgba(155,63,217,.4); }
+    .slot.hi-item  { border-color: var(--hi-item);    box-shadow: 0 0 6px rgba(42,170,96,.4); }
+    .slot.hidden-weapon { opacity: .4; cursor: default; }
+    .slot.hidden-weapon:hover { border-color: var(--slot-border); box-shadow: none; }
+    .slot.hidden-weapon .slot-remove { display: none !important; }
+
+    .slot-char { --slot-size: var(--char-size); border-radius: 8px; }
+
+    /* ── Info panel ── */
+    .info-panel {
+      border-top: 1px solid var(--border);
+      padding: .65rem .85rem;
+      font-size: .82rem;
+      background: rgba(0,0,0,.2);
+      display: none;
+    }
+    .info-panel.open { display: block; }
+    .info-panel h3 { margin-bottom: .4rem; }
+    .info-panel p { color: var(--text-muted); font-style: italic; line-height: 1.5; }
+
+    /* ── Hidden weapons divider ── */
+    .hidden-divider {
+      width: 1px; height: var(--slot-size);
+      background: var(--border);
+      margin: 0 .25rem;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       OVERLAY
+    ═══════════════════════════════════════════════════ */
+    #overlay-root {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.75);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    #overlay-root.hidden { display: none; }
+
+    .overlay-panel {
+      background: var(--surface);
+      border: 1px solid var(--border-hi);
+      border-radius: 12px;
+      width: 75vw;
+      max-width: 960px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0,0,0,.8);
+    }
+    .overlay-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .75rem 1.1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface2);
+      flex-shrink: 0;
+    }
+    .overlay-header h2 { margin: 0; }
+    .overlay-close { font-size: 1.3rem; line-height: 1; }
+    .overlay-body {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* left panel (stats) */
+    .ovl-left {
+      width: 180px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      padding: .75rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    /* center grid */
+    .ovl-center {
+      flex: 1;
+      overflow-y: auto;
+      padding: .75rem;
+    }
+    /* right panel (identity / detail) */
+    .ovl-right {
+      width: 220px;
+      flex-shrink: 0;
+      border-left: 1px solid var(--border);
+      overflow-y: auto;
+      padding: .75rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .overlay-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: .6rem;
+      padding: .6rem 1rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface2);
+      flex-shrink: 0;
+    }
+
+    /* ── Stat grid ── */
+    .stat-grid { display: flex; flex-direction: column; gap: 2px; }
+    .stat-row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .78rem; padding: 2px 4px; border-radius: 3px;
+    }
+    .stat-row.changed { background: rgba(200,160,48,.12); }
+    .stat-key { color: var(--text-muted); }
+    .stat-val { font-weight: 600; color: var(--text); }
+    .stat-val.pos { color: #5ddd88; }
+    .stat-val.neg { color: #dd5555; }
+
+    /* ── Item / Arcana grid ── */
+    .item-section-label {
+      font-family: var(--font-title);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--text-muted);
+      margin: .5rem 0 .3rem;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--border);
+    }
+    .item-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .item-card {
+      width: var(--slot-size); height: var(--slot-size);
+      background: var(--slot-bg);
+      border: 2px solid var(--slot-border);
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: border-color .15s, box-shadow .15s, opacity .15s;
+    }
+    .item-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .item-card:hover { border-color: var(--border-hi); box-shadow: 0 0 8px rgba(106,74,156,.5); }
+    .item-card.selected { border-color: var(--gold); box-shadow: 0 0 10px rgba(200,160,48,.5); }
+    .item-card.hi-char   { border-color: var(--hi-char);   box-shadow: 0 0 6px rgba(58,122,217,.4); }
+    .item-card.hi-arcana { border-color: var(--hi-arcana);  box-shadow: 0 0 6px rgba(155,63,217,.4); }
+    .item-card.hi-item   { border-color: var(--hi-item);    box-shadow: 0 0 6px rgba(42,170,96,.4); }
+    .item-card.dim { opacity: .35; pointer-events: none; }
+    .item-card .card-badge {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(0,0,0,.7);
+      font-size: 8px;
+      text-align: center;
+      color: var(--text-muted);
+      padding: 1px;
+      line-height: 1.2;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    /* variant stack effect */
+    .item-card.stacked::before {
+      content: '';
+      position: absolute; inset: -3px;
+      background: var(--surface2);
+      border: 2px solid var(--slot-border);
+      border-radius: 7px;
+      z-index: -1;
+      transform: translate(4px, 4px);
+    }
+    .stack-wrapper {
+      position: relative;
+      width: calc(var(--slot-size) + 6px);
+      height: calc(var(--slot-size) + 6px);
+      flex-shrink: 0;
+    }
+    .stack-wrapper .item-card { position: absolute; top: 0; left: 0; }
+    .stack-nav {
+      position: absolute; bottom: -1px; right: -1px;
+      display: flex; gap: 2px;
+    }
+    .stack-btn {
+      width: 14px; height: 14px;
+      background: rgba(0,0,0,.85);
+      border: 1px solid var(--border-hi);
+      border-radius: 2px;
+      color: var(--text); font-size: 8px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 2;
+    }
+    .stack-btn:hover { color: var(--gold); }
+
+    /* ── Detail panels (right side) ── */
+    .detail-icon {
+      width: 64px; height: 64px;
+      border: 2px solid var(--slot-border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 0 auto .5rem;
+    }
+    .detail-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .detail-name { font-family: var(--font-title); font-size: .95rem; text-align: center; color: var(--gold); margin-bottom: .3rem; }
+    .detail-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; font-style: italic; }
+    .detail-section { margin-top: .5rem; }
+    .detail-section h3 { margin-bottom: .25rem; }
+    .detail-section ul { list-style: none; padding: 0; }
+    .detail-section li { font-size: .77rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
+    .detail-section li::before { content: '▸ '; color: var(--gold-dim); }
+    .evo-chain {
+      display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
+      font-size: .75rem; margin-top: .3rem;
+    }
+    .evo-chain .evo-step {
+      background: var(--slot-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 5px;
+      color: var(--text-muted);
+    }
+    .evo-chain .evo-step.current { border-color: var(--gold); color: var(--gold); }
+    .evo-chain .evo-arrow { color: var(--border-hi); }
+    .req-icons { display: flex; gap: 4px; flex-wrap: wrap; margin-top: .3rem; }
+    .req-icon {
+      width: 28px; height: 28px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .req-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .hi-badge {
+      display: inline-block;
+      font-size: .65rem;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-family: var(--font-title);
+      letter-spacing: .04em;
+      margin: 2px;
+    }
+    .hi-badge.char   { background: rgba(58,122,217,.25);  color: #6aadff; border: 1px solid rgba(58,122,217,.4);  }
+    .hi-badge.arcana { background: rgba(155,63,217,.25);   color: #c08dff; border: 1px solid rgba(155,63,217,.4);  }
+    .hi-badge.item   { background: rgba(42,170,96,.25);    color: #6ae8a4; border: 1px solid rgba(42,170,96,.4);   }
+
+    /* ── Character grid (overlay) ── */
+    .char-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-content: flex-start;
+    }
+    .char-card {
+      --slot-size: 60px;
+      width: var(--slot-size); height: var(--slot-size);
+      background: var(--slot-bg);
+      border: 2px solid var(--slot-border);
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      transition: border-color .15s, box-shadow .15s;
+      flex-shrink: 0;
+    }
+    .char-card img { width: 100%; height: 100%; object-fit: cover; }
+    .char-card:hover { border-color: var(--border-hi); }
+    .char-card.selected { border-color: var(--gold); box-shadow: 0 0 10px rgba(200,160,48,.5); }
+    .char-card.stacked::before {
+      content: '';
+      position: absolute; inset: -3px;
+      background: var(--surface2);
+      border: 2px solid var(--slot-border);
+      border-radius: 9px;
+      z-index: -1;
+      transform: translate(4px, 4px);
+    }
+    .variant-count {
+      position: absolute; top: 2px; right: 2px;
+      background: rgba(0,0,0,.75);
+      color: var(--gold);
+      font-size: 8px;
+      font-family: var(--font-title);
+      padding: 1px 3px;
+      border-radius: 2px;
+    }
+
+    /* arcana overlay two-panel (no left stats) */
+    .ovl-center-wide { flex: 1; overflow-y: auto; padding: .75rem; }
+
+    /* stage grid */
+    .stage-grid { display: flex; flex-direction: column; gap: 4px; }
+    .stage-row {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .4rem .6rem;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+      font-size: .85rem;
+    }
+    .stage-row:hover { background: var(--surface2); border-color: var(--border); }
+    .stage-row.selected { background: rgba(200,160,48,.1); border-color: var(--gold); color: var(--gold); }
+    .stage-row .stage-icon {
+      width: 32px; height: 32px;
+      background: var(--slot-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; color: var(--text-dim);
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--border-hi); }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr 1fr; }
+      .players-grid.p2 { grid-template-columns: 1fr; }
+      .overlay-panel { width: 95vw; }
+      .ovl-left, .ovl-right { width: 140px; }
+    }
+    @media (max-width: 480px) {
+      .ovl-left { display: none; }
+      .ovl-right { width: 160px; }
     }
   </style>
 </head>
 <body>
-  <h1>Vampire Survivors Build Planner</h1>
-  <p>
-    Plan your run: pick a character, slot weapons and passives,
-    and see which evolutions you can hit.
-  </p>
-  <div class="status">COMING SOON — DATA IMPORT IN PROGRESS</div>
+  <div id="app"></div>
+  <div id="overlay-root" class="hidden"></div>
 
-  <!--
-    TODO: Build planner engine
-
-    Data sources (generated by tools/build-data.mjs from skill CSVs):
-      data/characters.json  — character roster
-      data/weapons.json     — all weapons
-      data/passives.json    — all passives/accessories
-      data/evolutions.json  — evolution + union map
-      data/stages.json      — stage banners
-
-    UI Components:
-      1. Character picker (portrait grid → select one)
-      2. Weapon slots (6 × card; character starting weapon auto-fills slot 1)
-      3. Passive slots (6 × card)
-      4. Evolution panel (lights up when base weapon + ingredient are both selected)
-      5. Stage selector (shows banner bonuses)
-      6. Save / share build (URL-encoded or saved to builds/*.json)
-      7. Load build dropdown (reads builds/index.json)
-  -->
-
+  <script src="data/data.js"></script>
   <script>
-    // Engine will be wired up here once data/*.json files are populated.
-    // See tools/build-data.mjs to generate them from the skill's CSV files.
+  // ═══════════════════════════════════════════════════════
+  //  CONSTANTS
+  // ═══════════════════════════════════════════════════════
+
+  const SLOT_COUNTS = {
+    1: { weapons: 6, passives: 6 },
+    2: { weapons: 4, passives: 4 },
+    3: { weapons: 3, passives: 3 },
+    4: { weapons: 2, passives: 2 },
+  };
+
+  const STAT_LABELS = {
+    max_health: 'Max Health', recovery: 'Recovery',   armor: 'Armor',
+    move_speed: 'Move Speed', might: 'Might',          speed: 'Proj. Speed',
+    duration:   'Duration',   area: 'Area',             cooldown: 'Cooldown',
+    amount:     'Amount',     revival: 'Revival',       magnet: 'Magnet',
+    luck:       'Luck',       growth: 'Growth',         greed: 'Greed',
+    curse:      'Curse',
+  };
+
+  // Stats expressed as percentage multipliers (0.4 → +40%)
+  const PCT_STATS = new Set(['move_speed','might','speed','duration','area','cooldown','luck','growth','greed','curse']);
+
+  const EMPTY_ICON = '../.claude/skills/vampire-survivors-theorycraft/assets/icons/passives/empty.png';
+
+  // Hardcoded stages (pending stages.csv)
+  const STAGES = [
+    { name: 'Mad Forest',       items: ['Hollow Heart','Pummarola','Candelabrador','Bracer'] },
+    { name: 'Inlaid Library',   items: ['Metaglio Left','Metaglio Right','Spellbinder','Crown'] },
+    { name: 'Dairy Plant',      items: ['Silver Ring','Gold Ring','Attractorb','Clover'] },
+    { name: 'Gallo Tower',      items: ['Clock Lancet','Laurel','Spinach','Wings'] },
+    { name: 'Cappella Magna',   items: ['Pentagram Crown','Empty Tome','Stone Mask'] },
+    { name: 'The Bone Zone',    items: ['Skull O\'Maniac','Armor'] },
+    { name: 'Holy Forbidden',   items: [] },
+    { name: 'Moongolow',        items: [] },
+    { name: 'Boss Rash',        items: [] },
+    { name: 'Il Molise',        items: [] },
+    { name: 'Green Acres',      items: [] },
+    { name: 'Bat Country',      items: [] },
+    { name: 'Tiny Bridge',      items: [] },
+    { name: 'Misty Mountains',  items: [] },
+    { name: 'Lake Foscari',     items: ['Parm Aegis','Torrona\'s Box'] },
+    { name: 'Abyss Foscari',    items: [] },
+    { name: 'Forest Foscari',   items: [] },
+    { name: 'Mt. Moonspell',    items: [] },
+    { name: 'Starroad',         items: [] },
+    { name: 'Eudaimonia M.',    items: [] },
+  ];
+
+  // ═══════════════════════════════════════════════════════
+  //  STATE
+  // ═══════════════════════════════════════════════════════
+
+  let D = null; // VS_DATA
+
+  const state = {
+    page: 'landing',
+    playerCount: 1,
+    players: [],
+    infoPanel: null, // playerIdx
+    overlay: null,   // { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem }
+    ovl: {           // ephemeral overlay UI state
+      selected: null,
+      variantIdx: {}, // baseName → idx
+      stackIdx: {},   // baseNum → idx (0=arcana,1=darkana)
+    },
+  };
+
+  function makePlayer() {
+    return { character: null, weapons: [], passives: [], arcana: [null,null,null], stage: null };
+  }
+
+  function initPlayers(newCount, prevPlayers = []) {
+    const players = [];
+    for (let i = 0; i < newCount; i++) {
+      players.push(prevPlayers[i] ? prevPlayers[i] : makePlayer());
+    }
+    // Trim weapon/passive slots to new count (slots already on player object)
+    return players;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  DATA HELPERS
+  // ═══════════════════════════════════════════════════════
+
+  function weaponByName(name) { return D.weapons.find(w => w.name === name) || null; }
+  function passiveByName(name) { return D.passives.find(p => p.name === name) || null; }
+
+  // Group characters by base_name, preserving CSV order of first appearance
+  function charGroups() {
+    const order = [];
+    const map = {};
+    for (const c of D.characters) {
+      const key = c.base_name || c.name;
+      if (!map[key]) { map[key] = []; order.push(key); }
+      map[key].push(c);
+    }
+    return order.map(k => map[k]);
+  }
+
+  // Group arcana: pair Arcana + Darkana sharing the same base_num
+  function arcanaGroups() {
+    const order = [];
+    const map = {};
+    for (const a of D.arcana) {
+      const key = a.base_num || a.number;
+      if (!map[key]) { map[key] = []; order.push(key); }
+      map[key].push(a);
+    }
+    // Sort so Arcana type comes before Darkana within each group
+    return order.map(k => {
+      const g = map[k];
+      g.sort((a, b) => (a.type === 'Arcana' ? -1 : 1) - (b.type === 'Arcana' ? -1 : 1));
+      return g;
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  EVOLUTION
+  // ═══════════════════════════════════════════════════════
+
+  function computeEffectiveWeapon(weapon, player) {
+    if (!weapon || !weapon.trans_result) return weapon;
+    const passiveNames = new Set(player.passives.filter(Boolean).map(p => p.name));
+    const weaponNames  = new Set(player.weapons.filter(Boolean).map(w => w.name));
+    const all = new Set([...passiveNames, ...weaponNames]);
+    const met = weapon.requirements.every(r => all.has(r));
+    if (!met) return weapon;
+    const evolved = weaponByName(weapon.trans_result);
+    if (!evolved) return weapon;
+    return computeEffectiveWeapon(evolved, player); // chain-evolve
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  HIGHLIGHTS: which weapons are associated with char / arcana / items
+  // ═══════════════════════════════════════════════════════
+
+  function getHighlights(playerIdx) {
+    const player = state.players[playerIdx];
+    if (!player) return { weaponHi: new Set(), passiveHi: new Set(), arcanaHi: new Set() };
+    const char = player.character;
+    const selectedWeaponNames = player.weapons.filter(Boolean).map(w => w.name);
+    const selectedArcana = player.arcana.filter(Boolean);
+
+    // weapons highlighted by character
+    const charWeapons = new Set(char ? char.starting_weapons : []);
+
+    // weapons highlighted by selected arcana
+    const arcanaWeapons = new Set();
+    for (const arc of selectedArcana) {
+      if (!arc.weapon_col) continue;
+      for (const w of D.weapons) {
+        if (w.arcana_ratings[arc.weapon_col]) arcanaWeapons.add(w.name);
+      }
+    }
+
+    // passives highlighted: those that are requirements for selected weapons
+    const passiveHi = new Set();
+    for (const w of player.weapons.filter(Boolean)) {
+      for (const req of w.requirements) passiveHi.add(req);
+    }
+
+    // arcana highlighted by selected weapons
+    const arcanaHi = new Set();
+    for (const w of player.weapons.filter(Boolean)) {
+      for (const col of Object.keys(w.arcana_ratings)) arcanaHi.add(col);
+    }
+
+    return { charWeapons, arcanaWeapons, passiveHi, arcanaHi };
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  RENDER HELPERS
+  // ═══════════════════════════════════════════════════════
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function slotHTML(item, opts = {}) {
+    const { type = 'weapon', playerIdx = 0, slotIdx = 0,
+            evolved = false, hidden = false, removable = true } = opts;
+    const isEmpty = !item;
+    const isChar  = type === 'char';
+    const icon = item ? (item.icon || EMPTY_ICON) : (isChar ? EMPTY_ICON : '');
+    const classes = [
+      'slot',
+      isChar ? 'slot-char' : '',
+      evolved ? 'evolved' : '',
+      hidden  ? 'hidden-weapon' : '',
+    ].filter(Boolean).join(' ');
+
+    const removeBtn = (!hidden && removable && item)
+      ? `<button class="slot-remove" data-action="remove-slot" data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" title="Remove">×</button>`
+      : '';
+
+    const imgTag = icon
+      ? `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.style.display='none'">`
+      : '';
+
+    return `<div class="${classes}"
+      data-action="open-slot" data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}"
+      title="${item ? esc(item.name) : 'Empty'}">
+      ${imgTag}
+      ${removeBtn}
+    </div>`;
+  }
+
+  function statVal(key, val) {
+    if (val === 0) return null;
+    const pct = PCT_STATS.has(key);
+    const num = pct ? Math.round(val * 100) : val;
+    const sign = num > 0 ? '+' : '';
+    const suffix = pct ? '%' : '';
+    const cls = num > 0 ? 'pos' : 'neg';
+    return `<span class="stat-val ${cls}">${sign}${num}${suffix}</span>`;
+  }
+
+  function statsHTML(char) {
+    let rows = '';
+    for (const [key, label] of Object.entries(STAT_LABELS)) {
+      const val = char ? char.stats[key] : 0;
+      const rendered = statVal(key, val);
+      if (!rendered && !char) continue; // hide zero rows when no char
+      rows += `<div class="stat-row${val !== 0 ? ' changed' : ''}">
+        <span class="stat-key">${label}</span>
+        ${rendered || '<span class="stat-val">—</span>'}
+      </div>`;
+    }
+    return `<div class="stat-grid">${rows}</div>`;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  LANDING PAGE
+  // ═══════════════════════════════════════════════════════
+
+  function renderLanding() {
+    const tiles = [1,2,3,4].map(n => {
+      const counts = SLOT_COUNTS[n];
+      const icons = Array.from({length: n}, (_, i) => `<span>${i+1}</span>`).join('');
+      return `<button class="player-tile-btn" data-action="set-player-count" data-count="${n}">
+        <div class="count-icons">${icons}</div>
+        <div class="tile-label">${n} Player${n > 1 ? 's' : ''}</div>
+        <div class="tile-sub">${counts.weapons}W · ${counts.passives}P · 3A · 1S</div>
+      </button>`;
+    }).join('');
+
+    document.getElementById('app').innerHTML = `
+      <div id="landing">
+        <div class="landing-banner">
+          <h1>Vampire Survivors<br>Build Calculator</h1>
+          <p>Select number of players to begin</p>
+        </div>
+        <div class="landing-grid">${tiles}</div>
+      </div>`;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  PLANNING PAGE
+  // ═══════════════════════════════════════════════════════
+
+  function renderPlanning() {
+    const { playerCount, players, infoPanel } = state;
+    const counts = SLOT_COUNTS[playerCount];
+
+    const playerCards = players.map((player, idx) => {
+      const char = player.character;
+      const eff  = player.weapons.map(w => computeEffectiveWeapon(w, player));
+
+      // ── Character slot
+      const charSlot = slotHTML(char, { type:'char', playerIdx:idx, slotIdx:0, removable: !!char });
+
+      // ── Weapon slots
+      const wSlots = Array.from({length: counts.weapons}, (_, si) => {
+        const base = player.weapons[si] || null;
+        const ev   = eff[si] || null;
+        const isEvolved = base && ev && base.name !== ev.name;
+        return slotHTML(ev, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved });
+      }).join('');
+
+      // ── Hidden weapons (char starting weapons beyond slot count)
+      let hiddenSlots = '';
+      if (char) {
+        const occupied = player.weapons.filter(Boolean).map(w => w.name);
+        const hidden = char.starting_weapons.slice(counts.weapons)
+          .filter(wn => !occupied.includes(wn));
+        if (hidden.length) {
+          hiddenSlots += '<div class="hidden-divider"></div>';
+          hiddenSlots += hidden.map(wn => slotHTML(weaponByName(wn), {
+            type:'weapon', playerIdx:idx, slotIdx:-1, hidden:true
+          })).join('');
+        }
+      }
+
+      // ── Passive slots
+      const pSlots = Array.from({length: counts.passives}, (_, si) =>
+        slotHTML(player.passives[si] || null, { type:'passive', playerIdx:idx, slotIdx:si })
+      ).join('');
+
+      // ── Arcana slots
+      const aSlots = player.arcana.map((arc, si) =>
+        slotHTML(arc, { type:'arcana', playerIdx:idx, slotIdx:si })
+      ).join('');
+
+      // ── Stage slot
+      const stageSlot = slotHTML(player.stage ? { name:player.stage.name, icon:'' } : null,
+        { type:'stage', playerIdx:idx, slotIdx:0 });
+
+      // ── Info panel
+      const infoPanelHTML = infoPanel === idx
+        ? `<div class="info-panel open">
+            ${char ? `<h3>${esc(char.name)}</h3><p class="detail-desc">${esc(char.description)}</p>` : '<p>No character selected.</p>'}
+          </div>` : '';
+
+      return `<div class="player-card">
+        <div class="player-header" data-action="toggle-info" data-player="${idx}">
+          <div class="player-header-left">
+            <span class="player-name">Player ${idx+1}</span>
+            ${char ? `<span class="char-name">— ${esc(char.name)}</span>` : ''}
+          </div>
+          <div class="player-header-actions">
+            <button class="btn btn-sm" data-action="clear-player" data-player="${idx}" title="Clear all">✕ Clear</button>
+          </div>
+        </div>
+        <div class="player-body">
+          <div class="slot-row">
+            <span class="slot-row-label">Char</span>
+            ${charSlot}
+          </div>
+          <div class="slot-row">
+            <span class="slot-row-label">Weapons</span>
+            ${wSlots}${hiddenSlots}
+          </div>
+          <div class="slot-row">
+            <span class="slot-row-label">Passives</span>
+            ${pSlots}
+          </div>
+          <div class="slot-row">
+            <span class="slot-row-label">Arcana</span>
+            ${aSlots}
+            <div style="flex:1"></div>
+            <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
+            ${stageSlot}
+          </div>
+        </div>
+        ${infoPanelHTML}
+      </div>`;
+    }).join('');
+
+    document.getElementById('app').innerHTML = `
+      <div id="planning">
+        <div class="planning-header">
+          <h1>Vampire Survivors Build Calculator</h1>
+          <button class="btn" data-action="change-player-count">⟵ Change Player Count</button>
+        </div>
+        <div class="planning-body">
+          <div class="players-grid p${playerCount}">${playerCards}</div>
+        </div>
+      </div>`;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  RENDER (router)
+  // ═══════════════════════════════════════════════════════
+
+  function render() {
+    if (state.page === 'landing') renderLanding();
+    else renderPlanning();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  OVERLAYS
+  // ═══════════════════════════════════════════════════════
+
+  // ── Character overlay ────────────────────────────────
+
+  function openCharacterOverlay(playerIdx) {
+    const player = state.players[playerIdx];
+    state.overlay = { type:'char', playerIdx, fromEmpty: !player.character, prevItem: player.character };
+    state.ovl.selected = player.character;
+    buildAndShowOverlay(charOverlayHTML(playerIdx));
+  }
+
+  function charOverlayHTML(playerIdx) {
+    const groups = charGroups();
+    const sel = state.ovl.selected;
+
+    let cards = '';
+    for (const group of groups) {
+      const vi  = (state.ovl.variantIdx[group[0].base_name] ?? 0) % group.length;
+      const cur = group[vi];
+      const isSelected = sel && group.some(c => c.name === sel.name);
+      const hasVariants = group.length > 1;
+      if (hasVariants) {
+        cards += `<div class="stack-wrapper">
+          <div class="char-card stacked${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
+            <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+            <div class="variant-count">${vi+1}/${group.length}</div>
+          </div>
+          <div class="stack-nav">
+            <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="-1">‹</div>
+            <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="1">›</div>
+          </div>
+        </div>`;
+      } else {
+        cards += `<div class="char-card${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
+          <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+        </div>`;
+      }
+    }
+
+    const left = `<h3>Stats</h3>${statsHTML(sel)}`;
+    const right = sel
+      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+         <div class="detail-name">${esc(sel.name)}</div>
+         <div class="detail-desc">${esc(sel.description)}</div>
+         ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>` : ''}`
+      : '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a character</div>';
+
+    return `<div class="overlay-header">
+        <h2>Character Selection</h2>
+        <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+      </div>
+      <div class="overlay-body">
+        <div class="ovl-left">${left}</div>
+        <div class="ovl-center"><div class="char-grid">${cards}</div></div>
+        <div class="ovl-right">${right}</div>
+      </div>
+      <div class="overlay-footer">
+        <button class="btn" data-action="ovl-close">Cancel</button>
+        <button class="btn btn-accent" data-action="ovl-confirm">Confirm</button>
+      </div>`;
+  }
+
+  // ── Item overlay ─────────────────────────────────────
+
+  function openItemOverlay(playerIdx, slotIdx, slotType) {
+    const player = state.players[playerIdx];
+    const prev = slotType === 'weapon' ? player.weapons[slotIdx] : player.passives[slotIdx];
+    state.overlay = { type:'item', playerIdx, slotIdx, slotType, fromEmpty: !prev, prevItem: prev };
+    state.ovl.selected = prev;
+    buildAndShowOverlay(itemOverlayHTML(playerIdx, slotIdx, slotType));
+  }
+
+  function itemOverlayHTML(playerIdx, slotIdx, slotType) {
+    const player = state.players[playerIdx];
+    const sel    = state.ovl.selected;
+    const { charWeapons, arcanaWeapons, passiveHi } = getHighlights(playerIdx);
+
+    // Passives section
+    let pCards = '';
+    for (const p of D.passives) {
+      const isSel = sel && sel.name === p.name;
+      const isHi  = passiveHi.has(p.name);
+      const isDim = slotType === 'weapon'; // dim passives when filling weapon slot
+      pCards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-item' : ''}${isDim ? ' dim' : ''}"
+        data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive"
+        title="${esc(p.name)}">
+        <img src="${esc(p.icon||EMPTY_ICON)}" alt="${esc(p.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+      </div>`;
+    }
+
+    // Weapons section (collection/CSV order)
+    let wCards = '';
+    for (const w of D.weapons) {
+      if (w.category !== 'Base') continue; // only base weapons selectable
+      const isSel    = sel && sel.name === w.name;
+      const hiChar   = charWeapons.has(w.name);
+      const hiArcana = arcanaWeapons.has(w.name);
+      const isDim    = slotType === 'passive'; // dim weapons when filling passive slot
+      let hiClass = '';
+      if (hiChar) hiClass = 'hi-char';
+      else if (hiArcana) hiClass = 'hi-arcana';
+      wCards += `<div class="item-card${isSel ? ' selected' : ''}${hiClass ? ' '+hiClass : ''}${isDim ? ' dim' : ''}"
+        data-action="ovl-select-item" data-item="${esc(w.name)}" data-item-type="weapon"
+        title="${esc(w.name)}">
+        <img src="${esc(w.icon||EMPTY_ICON)}" alt="${esc(w.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+      </div>`;
+    }
+
+    // Left panel
+    let leftHTML = '<h3>Details</h3>';
+    if (sel) {
+      const isPassive = D.passives.some(p => p.name === sel.name);
+      if (isPassive) {
+        const p = D.passives.find(p => p.name === sel.name);
+        leftHTML += `<div class="detail-name" style="font-size:.85rem">${esc(p.name)}</div>
+          <div class="detail-desc" style="margin:.3rem 0">${esc(p.description)}</div>
+          ${p.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul>
+            ${p.level_ups.map((l,i) => `<li>Lv${i+1}: ${esc(l)}</li>`).join('')}
+          </ul></div>` : ''}`;
+      } else {
+        const w = D.weapons.find(w => w.name === sel.name);
+        if (w) {
+          leftHTML += `<div class="detail-name" style="font-size:.85rem">${esc(w.name)}</div>
+            <div class="detail-desc" style="margin:.3rem 0">${esc(w.description)}</div>
+            ${w.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul>
+              ${w.level_ups.map((l,i) => `<li>Lv${i+1}: ${esc(l)}</li>`).join('')}
+            </ul></div>` : ''}`;
+        }
+      }
+    } else {
+      leftHTML += '<div class="detail-desc" style="margin-top:.5rem">Select an item</div>';
+    }
+
+    // Right panel
+    let rightHTML = '';
+    if (sel) {
+      const wObj = D.weapons.find(w => w.name === sel.name);
+      if (wObj) {
+        const evolvedW = wObj.trans_result ? weaponByName(wObj.trans_result) : null;
+        const finalW   = wObj.final_state   ? weaponByName(wObj.final_state)  : null;
+        rightHTML = `
+          <div class="detail-icon"><img src="${esc(wObj.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+          <div class="detail-name">${esc(wObj.name)}</div>
+          ${wObj.trans_result ? `<div class="detail-section">
+            <h3>Evolution</h3>
+            <div class="evo-chain">
+              <span class="evo-step current">${esc(wObj.name)}</span>
+              <span class="evo-arrow">→</span>
+              <span class="evo-step">${esc(wObj.trans_result)}</span>
+              ${wObj.final_state ? `<span class="evo-arrow">→</span><span class="evo-step">${esc(wObj.final_state)}</span>` : ''}
+            </div>
+            ${wObj.requirements.length ? `<div class="label" style="margin-top:.4rem">Requires:</div>
+              <div class="req-icons">
+                ${wObj.requirements.map(r => {
+                  const pi = passiveByName(r);
+                  return `<div class="req-icon" title="${esc(r)}">
+                    ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'">` : esc(r)}
+                  </div>`;
+                }).join('')}
+              </div>` : ''}
+          </div>` : ''}
+          ${Object.keys(wObj.arcana_ratings).length ? `<div class="detail-section">
+            <h3>Arcana Synergies</h3>
+            <ul>${Object.entries(wObj.arcana_ratings).slice(0,6).map(([k,v]) =>
+              `<li>${esc(k.replace(/_/g,' '))}: ${esc(v)}</li>`
+            ).join('')}</ul>
+          </div>` : ''}`;
+      } else {
+        const pObj = D.passives.find(p => p.name === sel.name);
+        if (pObj) {
+          rightHTML = `<div class="detail-icon"><img src="${esc(pObj.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+            <div class="detail-name">${esc(pObj.name)}</div>
+            <div class="detail-desc">${esc(pObj.description)}</div>`;
+        }
+      }
+    } else {
+      rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select an item to see details</div>';
+    }
+
+    return `<div class="overlay-header">
+        <h2>Item Selection — ${slotType === 'weapon' ? 'Weapon' : 'Passive'} Slot ${slotIdx+1}</h2>
+        <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+      </div>
+      <div class="overlay-body">
+        <div class="ovl-left">${leftHTML}</div>
+        <div class="ovl-center">
+          <div class="item-section-label">Passives</div>
+          <div class="item-grid">${pCards}</div>
+          <div class="item-section-label" style="margin-top:.75rem">Weapons (Base)</div>
+          <div class="item-grid">${wCards}</div>
+        </div>
+        <div class="ovl-right">${rightHTML}</div>
+      </div>
+      <div class="overlay-footer">
+        <button class="btn" data-action="ovl-close">Cancel</button>
+        <button class="btn btn-accent" data-action="ovl-confirm">Confirm</button>
+      </div>`;
+  }
+
+  // ── Arcana overlay ───────────────────────────────────
+
+  function openArcanaOverlay(playerIdx, slotIdx) {
+    const player = state.players[playerIdx];
+    const prev   = player.arcana[slotIdx];
+    state.overlay = { type:'arcana', playerIdx, slotIdx, fromEmpty: !prev, prevItem: prev };
+    state.ovl.selected = prev;
+    buildAndShowOverlay(arcanaOverlayHTML(playerIdx, slotIdx));
+  }
+
+  function arcanaOverlayHTML(playerIdx, slotIdx) {
+    const player  = state.players[playerIdx];
+    const sel     = state.ovl.selected;
+    const groups  = arcanaGroups();
+    const { arcanaHi } = getHighlights(playerIdx);
+
+    let cards = '';
+    for (const group of groups) {
+      const key = group[0].base_num;
+      const si  = (state.ovl.stackIdx[key] ?? 0) % group.length;
+      const cur = group[si];
+      const isSel  = sel && group.some(a => a.name === sel.name);
+      const isHi   = cur.weapon_col && arcanaHi.has(cur.weapon_col);
+      const isStack = group.length > 1;
+
+      const cardEl = `<div class="item-card${isSel ? ' selected' : ''}${isStack ? ' stacked' : ''}${isHi ? ' hi-arcana' : ''}"
+          data-action="ovl-select-arcana" data-arcana="${esc(cur.name)}" data-base="${esc(key)}"
+          title="${esc(cur.name)} (${cur.type})">
+          <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+          <div class="card-badge">${esc(cur.number)}</div>
+        </div>`;
+
+      if (isStack) {
+        cards += `<div class="stack-wrapper">
+          ${cardEl}
+          <div class="stack-nav">
+            <div class="stack-btn" data-action="cycle-arcana-stack" data-base="${esc(key)}" data-dir="-1">‹</div>
+            <div class="stack-btn" data-action="cycle-arcana-stack" data-base="${esc(key)}" data-dir="1">›</div>
+          </div>
+        </div>`;
+      } else {
+        cards += cardEl;
+      }
+    }
+
+    const rightHTML = sel
+      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+         <div class="detail-name">${esc(sel.name)}</div>
+         <div class="hi-badge ${sel.type === 'Arcana' ? 'arcana' : 'item'}" style="display:block;text-align:center;margin-bottom:.3rem">${esc(sel.type)} · ${esc(sel.number)}</div>
+         <div class="detail-desc">${esc(sel.description)}</div>
+         ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes.slice(0,500))}…</div></div>` : ''}`
+      : '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select an arcana</div>';
+
+    return `<div class="overlay-header">
+        <h2>Arcana Selection — Slot ${slotIdx+1}</h2>
+        <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+      </div>
+      <div class="overlay-body">
+        <div class="ovl-center-wide">
+          <div class="item-grid">${cards}</div>
+        </div>
+        <div class="ovl-right">${rightHTML}</div>
+      </div>
+      <div class="overlay-footer">
+        <button class="btn" data-action="ovl-close">Cancel</button>
+        <button class="btn btn-accent" data-action="ovl-confirm">Confirm</button>
+      </div>`;
+  }
+
+  // ── Stage overlay ────────────────────────────────────
+
+  function openStageOverlay(playerIdx) {
+    const player = state.players[playerIdx];
+    state.overlay = { type:'stage', playerIdx, slotIdx:0, fromEmpty:!player.stage, prevItem:player.stage };
+    state.ovl.selected = player.stage;
+    buildAndShowOverlay(stageOverlayHTML(playerIdx));
+  }
+
+  function stageOverlayHTML(playerIdx) {
+    const sel = state.ovl.selected;
+    let rows = '';
+    for (const stage of STAGES) {
+      const isSel = sel && sel.name === stage.name;
+      rows += `<div class="stage-row${isSel ? ' selected' : ''}" data-action="ovl-select-stage" data-stage="${esc(stage.name)}">
+        <div class="stage-icon">🗺</div>
+        <span>${esc(stage.name)}</span>
+      </div>`;
+    }
+
+    let rightHTML = '';
+    if (sel) {
+      const stage = STAGES.find(s => s.name === sel.name);
+      rightHTML = `<div class="detail-name">${esc(sel.name)}</div>
+        ${stage && stage.items.length ? `<div class="detail-section">
+          <h3>Stage Items</h3>
+          <div class="req-icons" style="margin-top:.4rem">
+            ${stage.items.map(it => {
+              const pi = passiveByName(it);
+              return `<div class="req-icon" title="${esc(it)}">
+                ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
+              </div>`;
+            }).join('')}
+          </div>
+        </div>` : '<div class="detail-desc" style="margin-top:.5rem">No item data yet.</div>'}`;
+    } else {
+      rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a stage</div>';
+    }
+
+    return `<div class="overlay-header">
+        <h2>Stage Selection</h2>
+        <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+      </div>
+      <div class="overlay-body">
+        <div class="ovl-center"><div class="stage-grid">${rows}</div></div>
+        <div class="ovl-right">${rightHTML}</div>
+      </div>
+      <div class="overlay-footer">
+        <button class="btn" data-action="ovl-close">Cancel</button>
+        <button class="btn btn-accent" data-action="ovl-confirm">Confirm</button>
+      </div>`;
+  }
+
+  // ── Show / rebuild overlay ───────────────────────────
+
+  function buildAndShowOverlay(inner) {
+    const root = document.getElementById('overlay-root');
+    root.innerHTML = `<div class="overlay-panel">${inner}</div>`;
+    root.classList.remove('hidden');
+  }
+
+  function refreshOverlay() {
+    const { type, playerIdx, slotIdx, slotType } = state.overlay;
+    let inner = '';
+    if (type === 'char')    inner = charOverlayHTML(playerIdx);
+    else if (type === 'item')   inner = itemOverlayHTML(playerIdx, slotIdx, slotType);
+    else if (type === 'arcana') inner = arcanaOverlayHTML(playerIdx, slotIdx);
+    else if (type === 'stage')  inner = stageOverlayHTML(playerIdx);
+    document.getElementById('overlay-root').querySelector('.overlay-panel').innerHTML = inner;
+  }
+
+  function closeOverlay(confirmed) {
+    const { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem } = state.overlay;
+    const sel = state.ovl.selected;
+
+    if (confirmed || (fromEmpty && sel)) {
+      // Apply selection
+      if (type === 'char') {
+        state.players[playerIdx].character = sel;
+        // Auto-fill starting weapons into empty slots
+        if (sel) {
+          const counts = SLOT_COUNTS[state.playerCount];
+          sel.starting_weapons.slice(0, counts.weapons).forEach((wn, i) => {
+            if (!state.players[playerIdx].weapons[i]) {
+              state.players[playerIdx].weapons[i] = weaponByName(wn) || null;
+            }
+          });
+        }
+      } else if (type === 'item') {
+        if (sel) {
+          const isWeapon = D.weapons.some(w => w.name === sel.name);
+          const isPassive = D.passives.some(p => p.name === sel.name);
+          if (slotType === 'weapon' && isWeapon && slotIdx >= 0)  state.players[playerIdx].weapons[slotIdx] = D.weapons.find(w => w.name === sel.name);
+          if (slotType === 'passive' && isPassive && slotIdx >= 0) state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
+        }
+      } else if (type === 'arcana') {
+        state.players[playerIdx].arcana[slotIdx] = sel;
+      } else if (type === 'stage') {
+        state.players[playerIdx].stage = sel;
+      }
+    }
+    // else: cancel (no change)
+
+    state.overlay = null;
+    state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, stackIdx: state.ovl.stackIdx };
+    document.getElementById('overlay-root').classList.add('hidden');
+    render();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  EVENT HANDLERS
+  // ═══════════════════════════════════════════════════════
+
+  function handleOverlayClick(e) {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) {
+      // click outside panel
+      if (e.target === document.getElementById('overlay-root')) closeOverlay(false);
+      return;
+    }
+    e.stopPropagation();
+    const action = btn.dataset.action;
+
+    if (action === 'ovl-close') { closeOverlay(false); return; }
+    if (action === 'ovl-confirm') { closeOverlay(true); return; }
+
+    if (action === 'ovl-select-char') {
+      const name = btn.dataset.char;
+      state.ovl.selected = D.characters.find(c => c.name === name) || null;
+      refreshOverlay(); return;
+    }
+    if (action === 'cycle-char-variant') {
+      const base = btn.dataset.base;
+      const groups = charGroups();
+      const grp = groups.find(g => g[0].base_name === base) || [];
+      const cur = state.ovl.variantIdx[base] ?? 0;
+      const dir = parseInt(btn.dataset.dir) || 1;
+      state.ovl.variantIdx[base] = (cur + dir + grp.length) % grp.length;
+      refreshOverlay(); return;
+    }
+
+    if (action === 'ovl-select-item') {
+      const name = btn.dataset.item;
+      const itemType = btn.dataset.itemType;
+      if (itemType === 'passive') state.ovl.selected = D.passives.find(p => p.name === name) || null;
+      else                        state.ovl.selected = D.weapons.find(w => w.name === name) || null;
+      refreshOverlay(); return;
+    }
+
+    if (action === 'ovl-select-arcana') {
+      const name = btn.dataset.arcana;
+      state.ovl.selected = D.arcana.find(a => a.name === name) || null;
+      refreshOverlay(); return;
+    }
+    if (action === 'cycle-arcana-stack') {
+      const base = btn.dataset.base;
+      const grps = arcanaGroups();
+      const grp  = grps.find(g => g[0].base_num === base) || [];
+      const cur  = state.ovl.stackIdx[base] ?? 0;
+      const dir  = parseInt(btn.dataset.dir) || 1;
+      state.ovl.stackIdx[base] = (cur + dir + grp.length) % grp.length;
+      refreshOverlay(); return;
+    }
+
+    if (action === 'ovl-select-stage') {
+      const name = btn.dataset.stage;
+      state.ovl.selected = STAGES.find(s => s.name === name) || null;
+      refreshOverlay(); return;
+    }
+  }
+
+  function handleAppClick(e) {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) return;
+    const action = btn.dataset.action;
+    const playerIdx = parseInt(btn.dataset.player ?? '0');
+    const slotIdx   = parseInt(btn.dataset.slot   ?? '0');
+    const slotType  = btn.dataset.type;
+
+    if (action === 'set-player-count') {
+      const n = parseInt(btn.dataset.count);
+      state.playerCount = n;
+      state.players = initPlayers(n, state.players);
+      state.page = 'planning';
+      render();
+      return;
+    }
+    if (action === 'change-player-count') {
+      state.page = 'landing';
+      render();
+      return;
+    }
+    if (action === 'toggle-info') {
+      state.infoPanel = state.infoPanel === playerIdx ? null : playerIdx;
+      render();
+      return;
+    }
+    if (action === 'clear-player') {
+      e.stopPropagation(); // don't toggle info panel
+      state.players[playerIdx] = makePlayer();
+      render();
+      return;
+    }
+    if (action === 'remove-slot') {
+      e.stopPropagation();
+      const p = state.players[playerIdx];
+      if (slotType === 'char')    p.character = null;
+      else if (slotType === 'weapon')  p.weapons[slotIdx] = null;
+      else if (slotType === 'passive') p.passives[slotIdx] = null;
+      else if (slotType === 'arcana')  p.arcana[slotIdx] = null;
+      else if (slotType === 'stage')   p.stage = null;
+      render();
+      return;
+    }
+    if (action === 'open-slot') {
+      e.stopPropagation();
+      if (slotType === 'char')   { openCharacterOverlay(playerIdx); return; }
+      if (slotType === 'weapon' || slotType === 'passive') { openItemOverlay(playerIdx, slotIdx, slotType); return; }
+      if (slotType === 'arcana') { openArcanaOverlay(playerIdx, slotIdx); return; }
+      if (slotType === 'stage')  { openStageOverlay(playerIdx); return; }
+    }
+  }
+
+  // ─── Keyboard ────────────────────────────────────────
+
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if (!state.overlay) return;
+    const { fromEmpty } = state.overlay;
+    const hasSelection = !!state.ovl.selected;
+    if (fromEmpty && hasSelection) closeOverlay(true);
+    else closeOverlay(false);
+  });
+
+  // ═══════════════════════════════════════════════════════
+  //  INIT
+  // ═══════════════════════════════════════════════════════
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.VS_DATA) {
+      document.getElementById('app').innerHTML =
+        '<div style="padding:2rem;text-align:center;color:#c01020;font-family:serif">' +
+        '<h2>Data not found</h2><p>Run <code>node tools/build-data.mjs</code> first.</p></div>';
+      return;
+    }
+    D = window.VS_DATA;
+    render();
+    // Bind once to persistent elements — survives innerHTML replacements
+    document.getElementById('app').addEventListener('click', handleAppClick);
+    document.getElementById('overlay-root').addEventListener('click', handleOverlayClick);
+  });
   </script>
 </body>
 </html>
