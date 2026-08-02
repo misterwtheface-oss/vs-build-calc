@@ -192,6 +192,21 @@
     .players-grid.p3 { grid-template-columns: 1fr 1fr 1fr; }
     .players-grid.p4 { grid-template-columns: 1fr 1fr; }
 
+    /* ── Global arcana/stage row ── */
+    .global-row {
+      margin-top: .75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .6rem 1rem;
+    }
+    .global-row-inner {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+
     /* ── Player card ── */
     .player-card {
       background: var(--surface);
@@ -652,9 +667,11 @@
     page: 'landing',
     playerCount: 1,
     players: [],
-    infoPanel: null, // playerIdx
+    arcana: [null, null, null], // global — shared across all players
+    stage: null,                // global — shared across all players
+    infoPanel: null,
     overlay: null,   // { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem }
-    ovl: {           // ephemeral overlay UI state
+    ovl: {
       selected: null,
       variantIdx: {}, // baseName → idx
       stackIdx: {},   // baseNum → idx (0=arcana,1=darkana)
@@ -662,7 +679,7 @@
   };
 
   function makePlayer() {
-    return { character: null, weapons: [], passives: [], arcana: [null,null,null], stage: null };
+    return { character: null, weapons: [], passives: [] };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -735,7 +752,7 @@
     if (!player) return { weaponHi: new Set(), passiveHi: new Set(), arcanaHi: new Set() };
     const char = player.character;
     const selectedWeaponNames = player.weapons.filter(Boolean).map(w => w.name);
-    const selectedArcana = player.arcana.filter(Boolean);
+    const selectedArcana = state.arcana.filter(Boolean);
 
     // weapons highlighted by character
     const charWeapons = new Set(char ? char.starting_weapons : []);
@@ -892,15 +909,6 @@
         slotHTML(player.passives[si] || null, { type:'passive', playerIdx:idx, slotIdx:si })
       ).join('');
 
-      // ── Arcana slots
-      const aSlots = player.arcana.map((arc, si) =>
-        slotHTML(arc, { type:'arcana', playerIdx:idx, slotIdx:si })
-      ).join('');
-
-      // ── Stage slot
-      const stageSlot = slotHTML(player.stage ? { name:player.stage.name, icon:'' } : null,
-        { type:'stage', playerIdx:idx, slotIdx:0 });
-
       // ── Info panel
       const infoPanelHTML = infoPanel === idx
         ? `<div class="info-panel open">
@@ -930,17 +938,17 @@
             <span class="slot-row-label">Passives</span>
             ${pSlots}
           </div>
-          <div class="slot-row">
-            <span class="slot-row-label">Arcana</span>
-            ${aSlots}
-            <div style="flex:1"></div>
-            <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
-            ${stageSlot}
-          </div>
         </div>
         ${infoPanelHTML}
       </div>`;
     }).join('');
+
+    // ── Global arcana + stage row
+    const gASlots = state.arcana.map((arc, si) =>
+      slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si })
+    ).join('');
+    const gStageSlot = slotHTML(state.stage ? { name:state.stage.name, icon:'' } : null,
+      { type:'stage', playerIdx:0, slotIdx:0 });
 
     document.getElementById('app').innerHTML = `
       <div id="planning">
@@ -950,6 +958,15 @@
         </div>
         <div class="planning-body">
           <div class="players-grid p${playerCount}">${playerCards}</div>
+          <div class="global-row">
+            <div class="global-row-inner">
+              <span class="slot-row-label">Arcana</span>
+              ${gASlots}
+              <div style="flex:1"></div>
+              <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
+              ${gStageSlot}
+            </div>
+          </div>
         </div>
       </div>`;
   }
@@ -1166,19 +1183,23 @@
 
   // ── Arcana overlay ───────────────────────────────────
 
-  function openArcanaOverlay(playerIdx, slotIdx) {
-    const player = state.players[playerIdx];
-    const prev   = player.arcana[slotIdx];
-    state.overlay = { type:'arcana', playerIdx, slotIdx, fromEmpty: !prev, prevItem: prev };
+  function openArcanaOverlay(slotIdx) {
+    const prev = state.arcana[slotIdx];
+    state.overlay = { type:'arcana', playerIdx:0, slotIdx, fromEmpty: !prev, prevItem: prev };
     state.ovl.selected = prev;
-    buildAndShowOverlay(arcanaOverlayHTML(playerIdx, slotIdx));
+    buildAndShowOverlay(arcanaOverlayHTML(slotIdx));
   }
 
-  function arcanaOverlayHTML(playerIdx, slotIdx) {
-    const player  = state.players[playerIdx];
-    const sel     = state.ovl.selected;
-    const groups  = arcanaGroups();
-    const { arcanaHi } = getHighlights(playerIdx);
+  function arcanaOverlayHTML(slotIdx) {
+    const sel    = state.ovl.selected;
+    const groups = arcanaGroups();
+    // Arcana highlights: union of all players' weapon associations
+    const arcanaHi = new Set();
+    for (const player of state.players) {
+      for (const w of player.weapons.filter(Boolean)) {
+        for (const col of Object.keys(w.arcana_ratings)) arcanaHi.add(col);
+      }
+    }
 
     let cards = '';
     for (const group of groups) {
@@ -1235,14 +1256,13 @@
 
   // ── Stage overlay ────────────────────────────────────
 
-  function openStageOverlay(playerIdx) {
-    const player = state.players[playerIdx];
-    state.overlay = { type:'stage', playerIdx, slotIdx:0, fromEmpty:!player.stage, prevItem:player.stage };
-    state.ovl.selected = player.stage;
-    buildAndShowOverlay(stageOverlayHTML(playerIdx));
+  function openStageOverlay() {
+    state.overlay = { type:'stage', playerIdx:0, slotIdx:0, fromEmpty:!state.stage, prevItem:state.stage };
+    state.ovl.selected = state.stage;
+    buildAndShowOverlay(stageOverlayHTML());
   }
 
-  function stageOverlayHTML(playerIdx) {
+  function stageOverlayHTML() {
     const sel = state.ovl.selected;
     let rows = '';
     for (const stage of STAGES) {
@@ -1299,8 +1319,8 @@
     let inner = '';
     if (type === 'char')    inner = charOverlayHTML(playerIdx);
     else if (type === 'item')   inner = itemOverlayHTML(playerIdx, slotIdx, slotType);
-    else if (type === 'arcana') inner = arcanaOverlayHTML(playerIdx, slotIdx);
-    else if (type === 'stage')  inner = stageOverlayHTML(playerIdx);
+    else if (type === 'arcana') inner = arcanaOverlayHTML(slotIdx);
+    else if (type === 'stage')  inner = stageOverlayHTML();
     document.getElementById('overlay-root').querySelector('.overlay-panel').innerHTML = inner;
   }
 
@@ -1329,9 +1349,9 @@
           if (slotType === 'passive' && isPassive && slotIdx >= 0) state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
         }
       } else if (type === 'arcana') {
-        state.players[playerIdx].arcana[slotIdx] = sel;
+        state.arcana[slotIdx] = sel;
       } else if (type === 'stage') {
-        state.players[playerIdx].stage = sel;
+        state.stage = sel;
       }
     }
     // else: cancel (no change)
@@ -1442,8 +1462,8 @@
       if (slotType === 'char')    p.character = null;
       else if (slotType === 'weapon')  p.weapons[slotIdx] = null;
       else if (slotType === 'passive') p.passives[slotIdx] = null;
-      else if (slotType === 'arcana')  p.arcana[slotIdx] = null;
-      else if (slotType === 'stage')   p.stage = null;
+      else if (slotType === 'arcana')  state.arcana[slotIdx] = null;
+      else if (slotType === 'stage')   state.stage = null;
       render();
       return;
     }
@@ -1451,8 +1471,8 @@
       e.stopPropagation();
       if (slotType === 'char')   { openCharacterOverlay(playerIdx); return; }
       if (slotType === 'weapon' || slotType === 'passive') { openItemOverlay(playerIdx, slotIdx, slotType); return; }
-      if (slotType === 'arcana') { openArcanaOverlay(playerIdx, slotIdx); return; }
-      if (slotType === 'stage')  { openStageOverlay(playerIdx); return; }
+      if (slotType === 'arcana') { openArcanaOverlay(slotIdx); return; }
+      if (slotType === 'stage')  { openStageOverlay(); return; }
     }
   }
 
