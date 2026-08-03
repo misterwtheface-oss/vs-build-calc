@@ -13,8 +13,8 @@
       --bg:          #120404;
       --surface:     #1e0808;
       --surface2:    #2c1010;
-      --border:      #7a5010;
-      --border-hi:   #b88820;
+      --border:      #b88820;
+      --border-hi:   #e8b820;
       --accent:      #c01020;
       --accent-glow: rgba(192,16,32,.4);
       --gold:        #e8b820;
@@ -23,7 +23,7 @@
       --text-muted:  #a08858;
       --text-dim:    #5a3820;
       --slot-bg:     #160606;
-      --slot-border: #6a4010;
+      --slot-border: #b88820;
       --hi-char:     #3a7ad9;   /* char-associated */
       --hi-arcana:   #9b3fd9;   /* arcana-associated */
       --hi-item:     #2aaa60;   /* item-associated */
@@ -109,19 +109,21 @@
     }
     .landing-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 270px);
       gap: 1.25rem;
-      max-width: 520px;
-      width: 100%;
     }
     .player-tile-btn {
+      width: 270px;
+      min-height: 150px;
+      box-sizing: border-box;
       background: var(--surface);
-      border: 2px solid var(--border);
+      border: 2px solid var(--border-hi);
       border-radius: 14px;
       padding: 2rem 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: .7rem;
       cursor: pointer;
       transition: border-color .2s, box-shadow .2s, background .2s;
@@ -133,19 +135,13 @@
     }
     .player-tile-btn .count-icons {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 6px;
       justify-content: center;
     }
-    .player-tile-btn .count-icons span {
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      background: var(--surface2);
-      border: 2px solid var(--border-hi);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .75rem;
-      color: var(--gold);
-      font-family: var(--font-title);
+    .player-tile-btn .player-icon {
+      width: 48px; height: 48px;
+      image-rendering: pixelated;
     }
     .player-tile-btn .tile-label {
       font-family: var(--font-title);
@@ -153,11 +149,7 @@
       font-weight: 600;
       color: var(--text);
     }
-    .player-tile-btn .tile-sub {
-      font-size: .78rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
+
 
     /* ═══════════════════════════════════════════════════
        PLANNING PAGE
@@ -181,7 +173,64 @@
       flex: 1;
       padding: 1rem;
       overflow-y: auto;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
     }
+    .planning-main {
+      flex: 1;
+      min-width: 0;
+    }
+    .info-sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+    .info-sidebar-empty {
+      color: var(--text-dim);
+      font-size: .82rem;
+      text-align: center;
+      padding: 2rem 0;
+      font-style: italic;
+      line-height: 1.8;
+    }
+    .info-sidebar .detail-icon { text-align: center; margin-bottom: .5rem; }
+    .info-sidebar .detail-icon img { max-width: 120px; image-rendering: pixelated; }
+    .info-sidebar .detail-name {
+      font-family: var(--font-title);
+      font-size: 1rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: .4rem;
+    }
+    .info-sidebar .detail-desc {
+      font-size: .8rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: .75rem;
+    }
+    .info-sidebar .detail-section { margin: .6rem 0; }
+    .info-sidebar .detail-section-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-dim);
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .info-sidebar .req-row { display: flex; flex-wrap: wrap; gap: 4px; }
+    .info-sidebar .req-icon { width: 32px; height: 32px; }
+    .info-sidebar .req-icon img { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
+    .info-sidebar .stat-grid { font-size: .78rem; }
+    .info-sidebar .stat-row { padding: 2px 0; }
     /* Player rows grid — varies by player count */
     .players-grid {
       display: grid;
@@ -240,17 +289,13 @@
     /* ── Slots ── */
     .slot {
       width: var(--slot-size); height: var(--slot-size);
-      background: var(--slot-bg);
-      border: 2px solid var(--slot-border);
-      border-radius: 6px;
       cursor: pointer;
       position: relative;
-      overflow: hidden;
       flex-shrink: 0;
-      transition: border-color .15s, box-shadow .15s;
+      transition: box-shadow .15s, filter .15s;
     }
-    .slot:hover { border-color: var(--border-hi); box-shadow: 0 0 8px rgba(184,136,32,.4); }
-    .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .slot:hover img { filter: brightness(1.2); }
+    .slot img { width: 100%; height: 100%; object-fit: cover; display: block; image-rendering: pixelated; }
     .slot .slot-remove {
       position: absolute; top: 1px; right: 1px;
       width: 16px; height: 16px;
@@ -262,32 +307,28 @@
     }
     .slot:hover .slot-remove { display: flex; }
     .slot .slot-remove:hover { color: var(--accent); }
-    .slot.evolved { border-color: var(--evolved); }
+    .slot.evolved { box-shadow: 0 0 0 2px var(--evolved), 0 0 6px rgba(232,192,0,.4); }
     .slot.evolved::after {
       content: '⬆';
       position: absolute; bottom: 1px; left: 2px;
       font-size: 9px; color: var(--evolved); line-height: 1;
     }
-    .slot.hi-char  { border-color: var(--hi-char);   box-shadow: 0 0 6px rgba(58,122,217,.4); }
-    .slot.hi-arcana{ border-color: var(--hi-arcana);  box-shadow: 0 0 6px rgba(155,63,217,.4); }
-    .slot.hi-item  { border-color: var(--hi-item);    box-shadow: 0 0 6px rgba(42,170,96,.4); }
+    .slot.hi-char  { box-shadow: 0 0 0 2px var(--hi-char),   0 0 6px rgba(58,122,217,.4); }
+    .slot.hi-arcana{ box-shadow: 0 0 0 2px var(--hi-arcana), 0 0 6px rgba(155,63,217,.4); }
+    .slot.hi-item  { box-shadow: 0 0 0 2px var(--hi-item),   0 0 6px rgba(42,170,96,.4); }
     .slot.hidden-weapon { opacity: .4; cursor: default; }
-    .slot.hidden-weapon:hover { border-color: var(--slot-border); box-shadow: none; }
+    .slot.hidden-weapon:hover img { filter: none; }
     .slot.hidden-weapon .slot-remove { display: none !important; }
+    .slot.slot-locked { cursor: default; }
+    .slot.slot-locked:hover img { filter: none; }
 
-    .slot-char { --slot-size: var(--char-size); border-radius: 8px; }
+    .slot-char   { --slot-size: var(--char-size); }
+    .slot-arcana { height: auto; }
+    .slot-arcana img { height: auto; object-fit: fill; }
+    .slot-stage  { width: 120px; height: auto; }
+    .slot-stage img { width: 120px; height: auto; object-fit: fill; }
 
-    /* ── Info panel ── */
-    .info-panel {
-      border-top: 1px solid var(--border);
-      padding: .65rem .85rem;
-      font-size: .82rem;
-      background: rgba(0,0,0,.2);
-      display: none;
-    }
-    .info-panel.open { display: block; }
-    .info-panel h3 { margin-bottom: .4rem; }
-    .info-panel p { color: var(--text-muted); font-style: italic; line-height: 1.5; }
+
 
     /* ── Hidden weapons divider ── */
     .hidden-divider {
@@ -519,26 +560,32 @@
 
     /* ── Character grid (overlay) ── */
     .char-grid {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       align-content: flex-start;
     }
+    .char-grid .stack-wrapper {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+    }
     .char-card {
-      --slot-size: 60px;
-      width: var(--slot-size); height: var(--slot-size);
-      background: var(--slot-bg);
-      border: 2px solid var(--slot-border);
-      border-radius: 8px;
+      width: 100%;
+      aspect-ratio: 1;
       cursor: pointer;
       overflow: hidden;
       position: relative;
-      transition: border-color .15s, box-shadow .15s;
-      flex-shrink: 0;
+      border-radius: 8px;
+      transition: box-shadow .15s, filter .15s;
     }
-    .char-card img { width: 100%; height: 100%; object-fit: cover; }
-    .char-card:hover { border-color: var(--border-hi); }
-    .char-card.selected { border-color: var(--gold); box-shadow: 0 0 10px rgba(232,184,32,.5); }
+    .char-card img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+    .char-card:hover img { filter: brightness(1.15); }
+    .char-card.selected { box-shadow: 0 0 0 3px var(--gold), 0 0 12px rgba(232,184,32,.5); }
+    .char-card.broken {
+      background: var(--slot-bg);
+      border: 2px solid var(--slot-border);
+    }
     .char-card.stacked::before {
       content: '';
       position: absolute; inset: -3px;
@@ -630,9 +677,17 @@
   };
 
   // Stats expressed as percentage multipliers (0.4 → +40%)
-  const PCT_STATS = new Set(['move_speed','might','speed','duration','area','cooldown','luck','growth','greed','curse']);
+  const PCT_STATS      = new Set(['move_speed','might','speed','duration','area','cooldown','luck','growth','greed','curse']);
+  const INVERTED_STATS = new Set(['cooldown']); // negative is good
 
-  const EMPTY_ICON = '../.claude/skills/vampire-survivors-theorycraft/assets/icons/passives/empty.png';
+  const EMPTY_ICONS = {
+    char:    'assets/icons/characters/empty.png',
+    weapon:  'assets/icons/weapons/empty.png',
+    passive: 'assets/icons/passives/empty.png',
+    arcana:  'assets/icons/arcana/empty.png',
+    stage:   'assets/icons/stages/empty.png',
+  };
+  const EMPTY_ICON = EMPTY_ICONS.passive;
 
   // Hardcoded stages (pending stages.csv)
   const STAGES = [
@@ -792,28 +847,30 @@
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            evolved = false, hidden = false, removable = true } = opts;
-    const isEmpty = !item;
+            evolved = false, hidden = false, removable = true, locked = false } = opts;
     const isChar  = type === 'char';
-    const icon = item ? (item.icon || EMPTY_ICON) : (isChar ? EMPTY_ICON : '');
+    const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
+    const icon = (item && item.icon) ? item.icon : emptyIcon;
     const classes = [
       'slot',
       isChar ? 'slot-char' : '',
+      type === 'arcana' ? 'slot-arcana' : '',
+      type === 'stage'  ? 'slot-stage'  : '',
       evolved ? 'evolved' : '',
       hidden  ? 'hidden-weapon' : '',
+      locked  ? 'slot-locked'   : '',
     ].filter(Boolean).join(' ');
 
-    const removeBtn = (!hidden && removable && item)
+    const removeBtn = (!hidden && removable && item && !locked)
       ? `<button class="slot-remove" data-action="remove-slot" data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" title="Remove">×</button>`
       : '';
 
-    const imgTag = icon
-      ? `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.style.display='none'">`
-      : '';
+    const imgTag = `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.src='${emptyIcon}'">`;
+    const slotAction = hidden ? '' : item ? 'view-slot' : locked ? '' : 'open-slot';
 
     return `<div class="${classes}"
-      data-action="open-slot" data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}"
-      title="${item ? esc(item.name) : 'Empty'}">
+      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}"
+      title="${item ? esc(item.name) + (locked ? ' (starter)' : '') : 'Empty'}">
       ${imgTag}
       ${removeBtn}
     </div>`;
@@ -825,7 +882,8 @@
     const num = pct ? Math.round(val * 100) : val;
     const sign = num > 0 ? '+' : '';
     const suffix = pct ? '%' : '';
-    const cls = num > 0 ? 'pos' : 'neg';
+    const isGood = INVERTED_STATS.has(key) ? num < 0 : num > 0;
+    const cls = isGood ? 'pos' : 'neg';
     return `<span class="stat-val ${cls}">${sign}${num}${suffix}</span>`;
   }
 
@@ -850,11 +908,12 @@
   function renderLanding() {
     const tiles = [1,2,3,4].map(n => {
       const counts = SLOT_COUNTS[n];
-      const icons = Array.from({length: n}, (_, i) => `<span>${i+1}</span>`).join('');
+      const icons = Array.from({length: n}, (_, i) =>
+        `<img class="player-icon" src="assets/icons/ui/player_${i+1}.png" alt="Player ${i+1}">`
+      ).join('');
       return `<button class="player-tile-btn" data-action="set-player-count" data-count="${n}">
         <div class="count-icons">${icons}</div>
         <div class="tile-label">${n} Player${n > 1 ? 's' : ''}</div>
-        <div class="tile-sub">${counts.weapons}W · ${counts.passives}P · 3A · 1S</div>
       </button>`;
     }).join('');
 
@@ -872,6 +931,81 @@
   //  PLANNING PAGE
   // ═══════════════════════════════════════════════════════
 
+  function buildInfoSidebar(panel) {
+    if (!panel) {
+      return `<div class="info-sidebar">
+        <div class="info-sidebar-empty">Left-click a slot<br>to see details<br><br>Right-click to change</div>
+      </div>`;
+    }
+    const { type, playerIdx, slotIdx } = panel;
+    const player = state.players[playerIdx];
+
+    let item = null;
+    if (type === 'char')    item = player?.character;
+    else if (type === 'weapon')  {
+      const base = player?.weapons[slotIdx];
+      item = computeEffectiveWeapon(base, player) || base;
+    }
+    else if (type === 'passive') item = player?.passives[slotIdx];
+    else if (type === 'arcana')  item = state.arcana[slotIdx];
+    else if (type === 'stage')   item = state.stage;
+
+    if (!item) return `<div class="info-sidebar"><div class="info-sidebar-empty">Empty slot</div></div>`;
+
+    const icon = (item.icon) ? item.icon : (EMPTY_ICONS[type] || EMPTY_ICONS.weapon);
+    let html = `<div class="detail-icon"><img src="${esc(icon)}" onerror="this.src='${EMPTY_ICONS[type]||EMPTY_ICONS.weapon}'"></div>`;
+    html += `<div class="detail-name">${esc(item.name)}</div>`;
+    if (item.description) html += `<div class="detail-desc">${esc(item.description)}</div>`;
+
+    if (type === 'char') {
+      if (item.starting_weapons?.length) {
+        html += `<div class="detail-section"><span class="detail-section-label">Starting Weapons</span><div class="req-row">`;
+        for (const wn of item.starting_weapons) {
+          const w = weaponByName(wn);
+          html += `<div class="req-icon" title="${esc(wn)}">${w ? `<img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">` : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
+        }
+        html += `</div></div>`;
+      }
+      html += statsHTML(item);
+    }
+
+    if (type === 'weapon') {
+      const wObj = D.weapons.find(w => w.name === item.name);
+      if (wObj?.trans_result) {
+        const ev = weaponByName(wObj.trans_result);
+        html += `<div class="detail-section"><span class="detail-section-label">Evolves Into</span><div class="req-row">`;
+        if (ev) html += `<div class="req-icon" title="${esc(ev.name)}"><img src="${esc(ev.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>`;
+        html += `</div></div>`;
+        if (wObj.trans_reqs?.length) {
+          html += `<div class="detail-section"><span class="detail-section-label">Requires</span><div class="req-row">`;
+          for (const r of wObj.trans_reqs) {
+            const pi = passiveByName(r);
+            html += `<div class="req-icon" title="${esc(r)}">${pi ? `<img src="${esc(pi.icon||EMPTY_ICONS.passive)}" onerror="this.src='${EMPTY_ICONS.passive}'">` : `<span style="font-size:.55rem">${esc(r.slice(0,6))}</span>`}</div>`;
+          }
+          html += `</div></div>`;
+        }
+      }
+    }
+
+    if (type === 'passive') {
+      const related = D.weapons.filter(w => w.trans_reqs?.includes(item.name));
+      if (related.length) {
+        html += `<div class="detail-section"><span class="detail-section-label">Used for Evolution</span><div class="req-row">`;
+        for (const w of related.slice(0, 8)) {
+          html += `<div class="req-icon" title="${esc(w.name)}"><img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>`;
+        }
+        html += `</div></div>`;
+      }
+    }
+
+    if (type === 'arcana') {
+      const aObj = D.arcana.find(a => a.name === item.name);
+      if (aObj) html += `<div class="hi-badge arcana" style="text-align:center;margin:.4rem 0">${esc(aObj.type)} · ${esc(aObj.number)}</div>`;
+    }
+
+    return `<div class="info-sidebar">${html}</div>`;
+  }
+
   function renderPlanning() {
     const { playerCount, players, infoPanel } = state;
     const counts = SLOT_COUNTS[playerCount];
@@ -884,11 +1018,13 @@
       const charSlot = slotHTML(char, { type:'char', playerIdx:idx, slotIdx:0, removable: !!char });
 
       // ── Weapon slots
+      const starterWeapons = new Set(char ? char.starting_weapons : []);
       const wSlots = Array.from({length: counts.weapons}, (_, si) => {
         const base = player.weapons[si] || null;
         const ev   = eff[si] || null;
         const isEvolved = base && ev && base.name !== ev.name;
-        return slotHTML(ev, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved });
+        const isLocked = base && starterWeapons.has(base.name);
+        return slotHTML(ev, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved, locked:isLocked });
       }).join('');
 
       // ── Hidden weapons (char starting weapons beyond slot count)
@@ -910,14 +1046,8 @@
         slotHTML(player.passives[si] || null, { type:'passive', playerIdx:idx, slotIdx:si })
       ).join('');
 
-      // ── Info panel
-      const infoPanelHTML = infoPanel === idx
-        ? `<div class="info-panel open">
-            ${char ? `<h3>${esc(char.name)}</h3><p class="detail-desc">${esc(char.description)}</p>` : '<p>No character selected.</p>'}
-          </div>` : '';
-
       return `<div class="player-card">
-        <div class="player-header" data-action="toggle-info" data-player="${idx}">
+        <div class="player-header">
           <div class="player-header-left">
             <span class="player-name">Player ${idx+1}</span>
             ${char ? `<span class="char-name">— ${esc(char.name)}</span>` : ''}
@@ -940,7 +1070,6 @@
             ${pSlots}
           </div>
         </div>
-        ${infoPanelHTML}
       </div>`;
     }).join('');
 
@@ -958,16 +1087,19 @@
           <button class="btn" data-action="change-player-count">⟵ Change Player Count</button>
         </div>
         <div class="planning-body">
-          <div class="players-grid p${playerCount}">${playerCards}</div>
-          <div class="global-row">
-            <div class="global-row-inner">
-              <span class="slot-row-label">Arcana</span>
-              ${gASlots}
-              <div style="flex:1"></div>
-              <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
-              ${gStageSlot}
+          <div class="planning-main">
+            <div class="players-grid p${playerCount}">${playerCards}</div>
+            <div class="global-row">
+              <div class="global-row-inner">
+                <span class="slot-row-label">Arcana</span>
+                ${gASlots}
+                <div style="flex:1"></div>
+                <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
+                ${gStageSlot}
+              </div>
             </div>
           </div>
+          ${buildInfoSidebar(state.infoPanel)}
         </div>
       </div>`;
   }
@@ -1007,7 +1139,7 @@
       if (hasVariants) {
         cards += `<div class="stack-wrapper">
           <div class="char-card stacked${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
-            <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+            <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
             <div class="variant-count">${vi+1}/${group.length}</div>
           </div>
           <div class="stack-nav">
@@ -1017,14 +1149,14 @@
         </div>`;
       } else {
         cards += `<div class="char-card${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
-          <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+          <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
         </div>`;
       }
     }
 
     const left = `<h3>Stats</h3>${statsHTML(sel)}`;
     const right = sel
-      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICONS.char)}" onerror="this.src='${EMPTY_ICONS.char}'"></div>
          <div class="detail-name">${esc(sel.name)}</div>
          <div class="detail-desc">${esc(sel.description)}</div>
          ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>` : ''}`
@@ -1069,7 +1201,7 @@
       pCards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-item' : ''}${isDim ? ' dim' : ''}"
         data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive"
         title="${esc(p.name)}">
-        <img src="${esc(p.icon||EMPTY_ICON)}" alt="${esc(p.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+        <img src="${esc(p.icon||EMPTY_ICON)}" alt="${esc(p.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
       </div>`;
     }
 
@@ -1087,7 +1219,7 @@
       wCards += `<div class="item-card${isSel ? ' selected' : ''}${hiClass ? ' '+hiClass : ''}${isDim ? ' dim' : ''}"
         data-action="ovl-select-item" data-item="${esc(w.name)}" data-item-type="weapon"
         title="${esc(w.name)}">
-        <img src="${esc(w.icon||EMPTY_ICON)}" alt="${esc(w.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+        <img src="${esc(w.icon||EMPTY_ICON)}" alt="${esc(w.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
       </div>`;
     }
 
@@ -1124,7 +1256,7 @@
         const evolvedW = wObj.trans_result ? weaponByName(wObj.trans_result) : null;
         const finalW   = wObj.final_state   ? weaponByName(wObj.final_state)  : null;
         rightHTML = `
-          <div class="detail-icon"><img src="${esc(wObj.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+          <div class="detail-icon"><img src="${esc(wObj.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(wObj.name)}</div>
           ${wObj.trans_result ? `<div class="detail-section">
             <h3>Evolution</h3>
@@ -1139,7 +1271,7 @@
                 ${wObj.requirements.map(r => {
                   const pi = passiveByName(r);
                   return `<div class="req-icon" title="${esc(r)}">
-                    ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'">` : esc(r)}
+                    ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : esc(r)}
                   </div>`;
                 }).join('')}
               </div>` : ''}
@@ -1153,7 +1285,7 @@
       } else {
         const pObj = D.passives.find(p => p.name === sel.name);
         if (pObj) {
-          rightHTML = `<div class="detail-icon"><img src="${esc(pObj.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+          rightHTML = `<div class="detail-icon"><img src="${esc(pObj.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
             <div class="detail-name">${esc(pObj.name)}</div>
             <div class="detail-desc">${esc(pObj.description)}</div>`;
         }
@@ -1214,7 +1346,7 @@
       const cardEl = `<div class="item-card${isSel ? ' selected' : ''}${isStack ? ' stacked' : ''}${isHi ? ' hi-arcana' : ''}"
           data-action="ovl-select-arcana" data-arcana="${esc(cur.name)}" data-base="${esc(key)}"
           title="${esc(cur.name)} (${cur.type})">
-          <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.src='${esc(EMPTY_ICON)}'">
+          <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
           <div class="card-badge">${esc(cur.number)}</div>
         </div>`;
 
@@ -1232,7 +1364,7 @@
     }
 
     const rightHTML = sel
-      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>
+      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
          <div class="detail-name">${esc(sel.name)}</div>
          <div class="hi-badge ${sel.type === 'Arcana' ? 'arcana' : 'item'}" style="display:block;text-align:center;margin-bottom:.3rem">${esc(sel.type)} · ${esc(sel.number)}</div>
          <div class="detail-desc">${esc(sel.description)}</div>
@@ -1284,7 +1416,7 @@
             ${stage.items.map(it => {
               const pi = passiveByName(it);
               return `<div class="req-icon" title="${esc(it)}">
-                ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
+                ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
               </div>`;
             }).join('')}
           </div>
@@ -1318,11 +1450,16 @@
   function refreshOverlay() {
     const { type, playerIdx, slotIdx, slotType } = state.overlay;
     let inner = '';
-    if (type === 'char')    inner = charOverlayHTML(playerIdx);
+    if (type === 'char')        inner = charOverlayHTML(playerIdx);
     else if (type === 'item')   inner = itemOverlayHTML(playerIdx, slotIdx, slotType);
     else if (type === 'arcana') inner = arcanaOverlayHTML(slotIdx);
     else if (type === 'stage')  inner = stageOverlayHTML();
-    document.getElementById('overlay-root').querySelector('.overlay-panel').innerHTML = inner;
+    const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
+    const scroller = panel.querySelector('.ovl-center, .ovl-center-wide');
+    const scrollTop = scroller ? scroller.scrollTop : 0;
+    panel.innerHTML = inner;
+    const newScroller = panel.querySelector('.ovl-center, .ovl-center-wide');
+    if (newScroller) newScroller.scrollTop = scrollTop;
   }
 
   function closeOverlay(confirmed) {
@@ -1446,14 +1583,9 @@
       render();
       return;
     }
-    if (action === 'toggle-info') {
-      state.infoPanel = state.infoPanel === playerIdx ? null : playerIdx;
-      render();
-      return;
-    }
     if (action === 'clear-player') {
-      e.stopPropagation(); // don't toggle info panel
       state.players[playerIdx] = makePlayer();
+      if (state.infoPanel?.playerIdx === playerIdx) state.infoPanel = null;
       render();
       return;
     }
@@ -1465,16 +1597,37 @@
       else if (slotType === 'passive') p.passives[slotIdx] = null;
       else if (slotType === 'arcana')  state.arcana[slotIdx] = null;
       else if (slotType === 'stage')   state.stage = null;
+      state.infoPanel = null;
+      render();
+      return;
+    }
+    if (action === 'view-slot') {
+      state.infoPanel = { type: slotType, playerIdx, slotIdx };
       render();
       return;
     }
     if (action === 'open-slot') {
-      e.stopPropagation();
-      if (slotType === 'char')   { openCharacterOverlay(playerIdx); return; }
-      if (slotType === 'weapon' || slotType === 'passive') { openItemOverlay(playerIdx, slotIdx, slotType); return; }
-      if (slotType === 'arcana') { openArcanaOverlay(slotIdx); return; }
-      if (slotType === 'stage')  { openStageOverlay(); return; }
+      openSlotOverlay(slotType, playerIdx, slotIdx);
+      return;
     }
+  }
+
+  function openSlotOverlay(slotType, playerIdx, slotIdx) {
+    if (slotType === 'char')   { openCharacterOverlay(playerIdx); return; }
+    if (slotType === 'weapon' || slotType === 'passive') { openItemOverlay(playerIdx, slotIdx, slotType); return; }
+    if (slotType === 'arcana') { openArcanaOverlay(slotIdx); return; }
+    if (slotType === 'stage')  { openStageOverlay(); return; }
+  }
+
+  function handleAppContextMenu(e) {
+    const slot = e.target.closest('[data-action="view-slot"],[data-action="open-slot"]');
+    if (!slot) return;
+    e.preventDefault();
+    if (slot.classList.contains('slot-locked')) return;
+    const playerIdx = parseInt(slot.dataset.player ?? '0');
+    const slotIdx   = parseInt(slot.dataset.slot   ?? '0');
+    const slotType  = slot.dataset.type;
+    openSlotOverlay(slotType, playerIdx, slotIdx);
   }
 
   // ─── Keyboard ────────────────────────────────────────
@@ -1503,6 +1656,7 @@
     render();
     // Bind once to persistent elements — survives innerHTML replacements
     document.getElementById('app').addEventListener('click', handleAppClick);
+    document.getElementById('app').addEventListener('contextmenu', handleAppContextMenu);
     document.getElementById('overlay-root').addEventListener('click', handleOverlayClick);
   });
   </script>
