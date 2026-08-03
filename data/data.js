@@ -9404,7 +9404,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 100
     },
     {
       "name": "Bloody Tear",
@@ -9429,7 +9430,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Vento Sacro",
@@ -9463,7 +9465,8 @@ window.VS_DATA = {
         "xiv_jail_of_crystal": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Fuwalafuwaloo",
@@ -9488,7 +9491,8 @@ window.VS_DATA = {
         "xiv_jail_of_crystal": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Magic Wand",
@@ -9521,7 +9525,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 100
     },
     {
       "name": "Holy Wand",
@@ -9547,7 +9552,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Summon Spirit",
@@ -9580,7 +9586,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S+",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Spirit of Light",
@@ -9604,7 +9611,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S+",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Knife",
@@ -9636,7 +9644,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 100
     },
     {
       "name": "Thousand Edge",
@@ -9662,7 +9671,8 @@ window.VS_DATA = {
         "xvi_slash": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Valmanway",
@@ -9695,7 +9705,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Million Cut",
@@ -9719,7 +9730,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Axe",
@@ -9752,7 +9764,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 100
     },
     {
       "name": "Death Spiral",
@@ -9778,7 +9791,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Dark Rift",
@@ -9810,7 +9824,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Legacy of Death: Soul River",
@@ -9834,7 +9849,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Cross",
@@ -9866,7 +9882,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Heaven Sword",
@@ -9891,7 +9908,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Grand Cross",
@@ -9926,7 +9944,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Arch Angle",
@@ -9951,7 +9970,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "King Bible",
@@ -9983,7 +10003,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Unholy Vespers",
@@ -10008,7 +10029,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Icebrand",
@@ -10036,7 +10058,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "S",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Ninth Circle",
@@ -10056,7 +10079,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Fire Wand",
@@ -10090,7 +10114,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Hellfire",
@@ -10118,7 +10143,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Aura Blast",
@@ -10152,7 +10178,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Kardía Phlegeton",
@@ -10177,7 +10204,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Garlic",
@@ -10210,7 +10238,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Soul Eater",
@@ -10237,7 +10266,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Anura",
@@ -10270,7 +10300,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Dark Frogamorphosis",
@@ -10296,7 +10327,8 @@ window.VS_DATA = {
         "xiv_jail_of_crystal": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Santa Water",
@@ -10330,7 +10362,8 @@ window.VS_DATA = {
         "xiv_jail_of_crystal": "L",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 100
     },
     {
       "name": "La Borra",
@@ -10355,7 +10388,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Hydro Storm",
@@ -10388,7 +10422,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Hydro Pump Climax",
@@ -10412,7 +10447,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Runetracer",
@@ -10448,7 +10484,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "NO FUTURE",
@@ -10473,7 +10510,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Troll Bomb",
@@ -10505,7 +10543,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Carnage Heart",
@@ -10529,7 +10568,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Lightning Ring",
@@ -10562,7 +10602,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Thunder Loop",
@@ -10585,7 +10626,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Sword Brothers",
@@ -10614,7 +10656,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xvii_lost_and_found_painting": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Vjaya Sisters",
@@ -10632,7 +10675,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xx_silent_old_sanctuary": "S",
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Pentagram",
@@ -10662,7 +10706,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Gorgeous Moon",
@@ -10688,7 +10733,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Summon Spirit Tornado",
@@ -10722,7 +10768,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Venus Crescent",
@@ -10746,7 +10793,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Peachone",
@@ -10779,7 +10827,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Cygnus",
@@ -10804,7 +10853,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Ebony Wings",
@@ -10837,7 +10887,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Zhar Ptytsia",
@@ -10864,7 +10915,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Vandalier",
@@ -10894,7 +10946,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Phiera Der Tuphello",
@@ -10927,7 +10980,8 @@ window.VS_DATA = {
         "xiii_wicked_season": "A",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Red Muscle",
@@ -10952,7 +11006,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Eight The Sparrow",
@@ -10986,7 +11041,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "R",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Twice Upon a Time",
@@ -11013,7 +11069,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Phieraggi",
@@ -11039,7 +11096,8 @@ window.VS_DATA = {
         "xvii_lost_and_found_painting": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Gatti Amari",
@@ -11075,7 +11133,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Flock Destroyer",
@@ -11091,7 +11150,8 @@ window.VS_DATA = {
         "Gatti Amari"
       ],
       "final_state": "Flock Destroyer",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Vicious Hunger",
@@ -11107,7 +11167,8 @@ window.VS_DATA = {
         "Soul Steal"
       ],
       "final_state": "Power of Lire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Soul Steal",
@@ -11130,7 +11191,8 @@ window.VS_DATA = {
         "Vicious Hunger"
       ],
       "final_state": "Power of Lire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 1
     },
     {
       "name": "Power of Lire",
@@ -11151,7 +11213,8 @@ window.VS_DATA = {
         "x_bloodline": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Song of Mana",
@@ -11176,7 +11239,8 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "arcana_ratings": {
         "ix_divine_bloodline": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Mannajja",
@@ -11194,7 +11258,8 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Arrow of Goth",
@@ -11217,7 +11282,8 @@ window.VS_DATA = {
         "Mannajja"
       ],
       "final_state": "Dies Irae",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 20
     },
     {
       "name": "Dies Irae",
@@ -11233,7 +11299,8 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Shadow Pinion",
@@ -11258,7 +11325,8 @@ window.VS_DATA = {
       "final_state": "Darkness Illusion",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Valkyrie Turner",
@@ -11274,7 +11342,8 @@ window.VS_DATA = {
         "Svarog Statue"
       ],
       "final_state": "Darkness Illusion",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Svarog Statue",
@@ -11300,7 +11369,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xii_out_of_bounds": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Darkness Illusion",
@@ -11319,7 +11389,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "iii_twilight_princess": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Clock Lancet",
@@ -11345,7 +11416,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "X",
         "iii_twilight_princess": "UL"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Infinite Corridor",
@@ -11364,7 +11436,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "iii_twilight_princess": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Laurel",
@@ -11387,7 +11460,8 @@ window.VS_DATA = {
         "Metaglio Left"
       ],
       "final_state": "Crimson Shroud",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Crimson Shroud",
@@ -11401,7 +11475,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Crimson Shroud",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Bone",
@@ -11426,7 +11501,8 @@ window.VS_DATA = {
       "final_state": "Anima of Mortaccio",
       "arcana_ratings": {
         "x_bloodline": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Anima of Mortaccio",
@@ -11442,7 +11518,8 @@ window.VS_DATA = {
       "final_state": "Anima of Mortaccio",
       "arcana_ratings": {
         "x_bloodline": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Cherry Bomb",
@@ -11469,7 +11546,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "vi_sarabande_of_healing": "L",
         "x_bloodline": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Yatta Daikarin",
@@ -11486,7 +11564,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "ii_twilight_requiem": "L",
         "vi_sarabande_of_healing": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Carréllo",
@@ -11511,7 +11590,8 @@ window.VS_DATA = {
       "final_state": "Carozza!",
       "arcana_ratings": {
         "x_bloodline": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Carozza!",
@@ -11525,7 +11605,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Carozza!",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Celestial Dusting",
@@ -11550,7 +11631,8 @@ window.VS_DATA = {
       "final_state": "Profusione D'Amore",
       "arcana_ratings": {
         "x_bloodline": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Profusione D'Amore",
@@ -11564,7 +11646,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Profusione D'Amore",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "La Robba",
@@ -11588,7 +11671,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "x_bloodline": "L",
         "xii_out_of_bounds": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Greatest Jubilee",
@@ -11612,7 +11696,8 @@ window.VS_DATA = {
       "final_state": "Greatest Jubilee",
       "arcana_ratings": {
         "xii_out_of_bounds": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Bracelet",
@@ -11631,7 +11716,8 @@ window.VS_DATA = {
       "trans_result": "Bi-Bracelet",
       "requirements": [],
       "final_state": "Lapiste Tepisto",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 40
     },
     {
       "name": "Bi-Bracelet",
@@ -11650,7 +11736,8 @@ window.VS_DATA = {
       "trans_result": "Tri-Bracelet",
       "requirements": [],
       "final_state": "Lapiste Tepisto",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Tri-Bracelet",
@@ -11673,7 +11760,8 @@ window.VS_DATA = {
       "final_state": "Lapiste Tepisto",
       "arcana_ratings": {
         "vi_sarabande_of_healing": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Kaiser Knuckle",
@@ -11699,7 +11787,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "vi_sarabande_of_healing": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Lapiste Tepisto",
@@ -11713,7 +11802,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Lapiste Tepisto",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Candybox",
@@ -11727,7 +11817,8 @@ window.VS_DATA = {
       "trans_result": "Super Candybox II Turbo",
       "requirements": [],
       "final_state": "Candybox",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 2
     },
     {
       "name": "Super Candybox II Turbo",
@@ -11741,7 +11832,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Super Candybox II Turbo",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Pako Battiliar",
@@ -11764,7 +11856,8 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Mazo Familiar",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Mazo Familiar",
@@ -11778,7 +11871,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Mazo Familiar",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Ammo Appalate",
@@ -11803,7 +11897,8 @@ window.VS_DATA = {
       "final_state": "Gunastrophe",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Gunastrophe",
@@ -11819,7 +11914,8 @@ window.VS_DATA = {
       "final_state": "Gunastrophe",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Victory Sword",
@@ -11850,7 +11946,8 @@ window.VS_DATA = {
         "vii_iron_blue_will": "L",
         "ix_divine_bloodline": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 30
     },
     {
       "name": "Sole Solution",
@@ -11867,7 +11964,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "vii_iron_blue_will": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Flames of Misspell",
@@ -11894,7 +11992,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "xiv_jail_of_crystal": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 30
     },
     {
       "name": "Ashes of Muspell",
@@ -11912,7 +12011,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "xiv_jail_of_crystal": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Unearthly Bolt",
@@ -11937,7 +12037,8 @@ window.VS_DATA = {
       "final_state": "Spirit Disturbance",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Spirit Disturbance",
@@ -11953,7 +12054,8 @@ window.VS_DATA = {
       "final_state": "Spirit Disturbance",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Glass Fandango",
@@ -11978,7 +12080,8 @@ window.VS_DATA = {
       "final_state": "Celestial Voulge",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Celestial Voulge",
@@ -11994,7 +12097,8 @@ window.VS_DATA = {
       "final_state": "Celestial Voulge",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Penshin Fatcha",
@@ -12010,7 +12114,8 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Tonno Subito",
@@ -12029,7 +12134,8 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Tonnado",
@@ -12048,7 +12154,8 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Tonn'omoto",
@@ -12067,7 +12174,8 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Tonn'oddeeo",
@@ -12086,7 +12194,8 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Tonne",
@@ -12107,7 +12216,8 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "arcana_ratings": {
         "vi_sarabande_of_healing": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Unsurpassed",
@@ -12128,7 +12238,8 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "arcana_ratings": {
         "vi_sarabande_of_healing": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Miracle of Multiplication",
@@ -12142,7 +12253,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Santa Javelin",
@@ -12165,7 +12277,8 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "Seraphic Cry",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Levelin'Eh",
@@ -12181,7 +12294,8 @@ window.VS_DATA = {
         "Santa Javelin"
       ],
       "final_state": "Levelin'Eh",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Seraphic Cry",
@@ -12195,7 +12309,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Seraphic Cry",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gaze of Gaea",
@@ -12220,7 +12335,8 @@ window.VS_DATA = {
       "final_state": "Embrace of Gaea",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Embrace of Gaea",
@@ -12236,7 +12352,8 @@ window.VS_DATA = {
       "final_state": "Embrace of Gaea",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Magi-Stone",
@@ -12262,7 +12379,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Kyra-Stones",
@@ -12276,7 +12394,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Kyra-Stones",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Phas3r",
@@ -12299,7 +12418,8 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Photonstorm",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Photonstorm",
@@ -12315,7 +12435,8 @@ window.VS_DATA = {
       "final_state": "Photonstorm",
       "arcana_ratings": {
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Arma Dio",
@@ -12338,7 +12459,8 @@ window.VS_DATA = {
         "xviii_boogaloo_of_illusions": "S",
         "xix_heart_of_fire": "L",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Chaos Rune",
@@ -12364,7 +12486,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "vii_iron_blue_will": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 40
     },
     {
       "name": "Wicked Ruler",
@@ -12380,7 +12503,8 @@ window.VS_DATA = {
       "final_state": "Wicked Ruler",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Silver Wind",
@@ -12407,7 +12531,8 @@ window.VS_DATA = {
         "vii_iron_blue_will": "L",
         "ix_divine_bloodline": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Festive Winds",
@@ -12423,7 +12548,8 @@ window.VS_DATA = {
       "final_state": "Festive Winds",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Four Seasons",
@@ -12449,7 +12575,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "vii_iron_blue_will": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Godai Shuffle",
@@ -12466,7 +12593,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "ii_twilight_requiem": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Summon Night",
@@ -12492,7 +12620,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "ii_twilight_requiem": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Echo Night",
@@ -12508,7 +12637,8 @@ window.VS_DATA = {
       "final_state": "Echo Night",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Mirage Robe",
@@ -12533,7 +12663,8 @@ window.VS_DATA = {
       "final_state": "J'Odore",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "J'Odore",
@@ -12549,7 +12680,8 @@ window.VS_DATA = {
       "final_state": "J'Odore",
       "arcana_ratings": {
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Night Sword",
@@ -12574,7 +12706,8 @@ window.VS_DATA = {
       "final_state": "Muramasa",
       "arcana_ratings": {
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 30
     },
     {
       "name": "Muramasa",
@@ -12590,7 +12723,8 @@ window.VS_DATA = {
       "final_state": "Muramasa",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Mille Bolle Blu",
@@ -12615,7 +12749,8 @@ window.VS_DATA = {
       "final_state": "Boo Roo Boolle",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Boo Roo Boolle",
@@ -12629,7 +12764,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Boo Roo Boolle",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "108 Bocce",
@@ -12650,7 +12786,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "108 Bocce",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 10
     },
     {
       "name": "SpellString",
@@ -12672,7 +12809,8 @@ window.VS_DATA = {
         "SpellStrike"
       ],
       "final_state": "SpellStrom",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 70
     },
     {
       "name": "SpellStream",
@@ -12694,7 +12832,8 @@ window.VS_DATA = {
         "SpellStrike"
       ],
       "final_state": "SpellStrom",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 70
     },
     {
       "name": "SpellStrike",
@@ -12720,7 +12859,8 @@ window.VS_DATA = {
         "i_gemini": "L",
         "xii_out_of_bounds": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "SpellStrom",
@@ -12738,7 +12878,8 @@ window.VS_DATA = {
         "i_gemini": "X",
         "xii_out_of_bounds": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Eskizzibur",
@@ -12764,7 +12905,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xii_out_of_bounds": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Legionnaire",
@@ -12778,7 +12920,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Legionnaire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Flash Arrow",
@@ -12801,7 +12944,8 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Millionaire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 70
     },
     {
       "name": "Millionaire",
@@ -12817,7 +12961,8 @@ window.VS_DATA = {
       "final_state": "Millionaire",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Prismatic Missile",
@@ -12843,7 +12988,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "ii_twilight_requiem": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Luminaire",
@@ -12859,7 +13005,8 @@ window.VS_DATA = {
       "final_state": "Luminaire",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Shadow Servant",
@@ -12884,7 +13031,8 @@ window.VS_DATA = {
       "final_state": "Ophion",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Silver Sliver",
@@ -12902,7 +13050,8 @@ window.VS_DATA = {
       "final_state": "Silver Sliver",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Ophion",
@@ -12918,7 +13067,8 @@ window.VS_DATA = {
       "final_state": "Ophion",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Party Popper",
@@ -12942,7 +13092,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xiv_jail_of_crystal": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 1
     },
     {
       "name": "Party Pooper",
@@ -12961,7 +13112,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xiv_jail_of_crystal": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Report!",
@@ -12986,7 +13138,8 @@ window.VS_DATA = {
       "final_state": "Emergency Meeting",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Emergency Meeting",
@@ -13002,7 +13155,8 @@ window.VS_DATA = {
       "final_state": "Emergency Meeting",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Lucky Swipe",
@@ -13028,7 +13182,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "ii_twilight_requiem": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Crossed Wires",
@@ -13045,7 +13200,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "ii_twilight_requiem": "L",
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Lifesign Scan",
@@ -13070,7 +13226,8 @@ window.VS_DATA = {
       "final_state": "Paranormal Scan",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 40
     },
     {
       "name": "Paranormal Scan",
@@ -13086,7 +13243,8 @@ window.VS_DATA = {
       "final_state": "Paranormal Scan",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Just Vent",
@@ -13112,7 +13270,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xvi_slash": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Unjust Ejection",
@@ -13129,7 +13288,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xvi_slash": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Clear Debris",
@@ -13154,7 +13314,8 @@ window.VS_DATA = {
       "final_state": "Clear Asteroids",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Clear Asteroids",
@@ -13170,7 +13331,8 @@ window.VS_DATA = {
       "final_state": "Clear Asteroids",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Sharp Tongue",
@@ -13195,7 +13357,8 @@ window.VS_DATA = {
       "final_state": "Impostongue",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Silver Tongue",
@@ -13213,7 +13376,8 @@ window.VS_DATA = {
       "final_state": "Silver Tongue",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Impostongue",
@@ -13229,7 +13393,8 @@ window.VS_DATA = {
       "final_state": "Impostongue",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Science Rocks",
@@ -13254,7 +13419,8 @@ window.VS_DATA = {
       "final_state": "Rocket Science",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Rocket Science",
@@ -13268,7 +13434,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Rocket Science",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Hats",
@@ -13289,7 +13456,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Hats",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 1
     },
     {
       "name": "Long Gun",
@@ -13314,7 +13482,8 @@ window.VS_DATA = {
       "final_state": "Prototype A",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Prototype A",
@@ -13330,7 +13499,8 @@ window.VS_DATA = {
       "final_state": "Prototype A",
       "arcana_ratings": {
         "vii_iron_blue_will": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Short Gun",
@@ -13356,7 +13526,8 @@ window.VS_DATA = {
       "final_state": "Prototype B",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Prototype B",
@@ -13372,7 +13543,8 @@ window.VS_DATA = {
       "final_state": "Prototype B",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Spread Shot",
@@ -13396,7 +13568,8 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Prototype C",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Prototype C",
@@ -13410,7 +13583,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Prototype C",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "C-U-Laser",
@@ -13437,7 +13611,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Pronto Beam",
@@ -13454,7 +13629,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "X",
         "xix_heart_of_fire": "UL"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Firearm",
@@ -13481,7 +13657,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Fire-L3GS",
@@ -13498,7 +13675,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Sonic Bloom",
@@ -13525,7 +13703,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "X",
         "xiv_jail_of_crystal": "UL"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Wave Beam",
@@ -13542,7 +13721,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Homing Miss",
@@ -13569,7 +13749,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Multistage Missiles",
@@ -13585,7 +13766,8 @@ window.VS_DATA = {
       "final_state": "Multistage Missiles",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Diver Mines",
@@ -13612,7 +13794,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Atmo-Torpedo",
@@ -13629,7 +13812,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Blade Crossbow",
@@ -13655,7 +13839,8 @@ window.VS_DATA = {
       "final_state": "BFC2000-AD",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "BFC2000-AD",
@@ -13672,7 +13857,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xi_waltz_of_pearls": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Prism Lass",
@@ -13699,7 +13885,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "iii_twilight_princess": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Prism Damsel",
@@ -13717,7 +13904,8 @@ window.VS_DATA = {
       "final_state": "Prism Damsel",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Time Warp",
@@ -13734,7 +13922,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "iii_twilight_princess": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Metal Claw",
@@ -13761,7 +13950,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "iii_twilight_princess": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Big Fuzzy Fist",
@@ -13777,7 +13967,8 @@ window.VS_DATA = {
       "final_state": "Big Fuzzy Fist",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Alchemy Whip",
@@ -13803,7 +13994,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "iii_twilight_princess": "L"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Vampire Killer",
@@ -13820,7 +14012,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Wind Whip",
@@ -13846,7 +14039,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "X",
         "ii_twilight_requiem": "UL"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Spirit Tornado Tip",
@@ -13863,7 +14057,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Platinum Whip",
@@ -13889,7 +14084,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Cross Crasher Tip",
@@ -13906,7 +14102,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "X",
         "ii_twilight_requiem": "UL"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Dragon Water Whip",
@@ -13932,7 +14129,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Hydrostormer Tip",
@@ -13946,7 +14144,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Hydrostormer Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Sonic Whip",
@@ -13969,7 +14168,8 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Crissaegrim Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Crissaegrim Tip",
@@ -13983,7 +14183,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Crissaegrim Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Jet Black Whip",
@@ -14006,7 +14207,8 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Mormegil Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Mormegil Tip",
@@ -14020,7 +14222,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Mormegil Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Vibhuti Whip",
@@ -14043,7 +14246,8 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "Daybreaker Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Daybreaker Tip",
@@ -14057,7 +14261,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Daybreaker Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Vanitas Whip",
@@ -14080,7 +14285,8 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Aurablaster Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Aurablaster Tip",
@@ -14094,7 +14300,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Aurablaster Tip",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Shuriken",
@@ -14117,7 +14324,8 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Yagyu Shuriken",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Yagyu Shuriken",
@@ -14131,7 +14339,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Yagyu Shuriken",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Curved Knife",
@@ -14154,7 +14363,8 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Bwaka Knife",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Bwaka Knife",
@@ -14168,7 +14378,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Bwaka Knife",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Javelin",
@@ -14191,7 +14402,8 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Long Inus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 70
     },
     {
       "name": "Long Inus",
@@ -14205,7 +14417,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Long Inus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Discus",
@@ -14228,7 +14441,8 @@ window.VS_DATA = {
         "Parm Aegis"
       ],
       "final_state": "Stellar Blade",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 70
     },
     {
       "name": "Stellar Blade",
@@ -14242,7 +14456,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Stellar Blade",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Iron Ball",
@@ -14267,7 +14482,8 @@ window.VS_DATA = {
       "final_state": "Wrecking Ball",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Wrecking Ball",
@@ -14283,7 +14499,8 @@ window.VS_DATA = {
       "final_state": "Wrecking Ball",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Silver Revolver",
@@ -14308,7 +14525,8 @@ window.VS_DATA = {
       "final_state": "Jewel Gun",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Jewel Gun",
@@ -14324,7 +14542,8 @@ window.VS_DATA = {
       "final_state": "Jewel Gun",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Hand Grenade",
@@ -14349,7 +14568,8 @@ window.VS_DATA = {
       "final_state": "The RPG",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "The RPG",
@@ -14363,7 +14583,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "The RPG",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Wine Glass",
@@ -14386,7 +14607,8 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Meal Ticket",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Meal Ticket",
@@ -14400,7 +14622,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Meal Ticket",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Raging Fire",
@@ -14423,7 +14646,8 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Salamender",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Raging Fire",
@@ -14439,7 +14663,8 @@ window.VS_DATA = {
         "Raging Fire"
       ],
       "final_state": "Speculo Raging Fire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Salamender",
@@ -14453,7 +14678,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Salamender",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Ice Fang",
@@ -14476,7 +14702,8 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Cocytus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Ice Fang",
@@ -14494,7 +14721,8 @@ window.VS_DATA = {
       "final_state": "Speculo Ice Fang",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Cocytus",
@@ -14510,7 +14738,8 @@ window.VS_DATA = {
       "final_state": "Cocytus",
       "arcana_ratings": {
         "i_gemini": "X"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Gale Force",
@@ -14535,7 +14764,8 @@ window.VS_DATA = {
       "final_state": "Pneuma Tempestas",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Speculo Gale Force",
@@ -14553,7 +14783,8 @@ window.VS_DATA = {
       "final_state": "Speculo Gale Force",
       "arcana_ratings": {
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Pneuma Tempestas",
@@ -14569,7 +14800,8 @@ window.VS_DATA = {
       "final_state": "Pneuma Tempestas",
       "arcana_ratings": {
         "xxi_blood_astronomica": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Rock Riot",
@@ -14592,7 +14824,8 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Gemma Torpor",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Rock Riot",
@@ -14608,7 +14841,8 @@ window.VS_DATA = {
         "Rock Riot"
       ],
       "final_state": "Speculo Rock Riot",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gemma Torpor",
@@ -14622,7 +14856,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Gemma Torpor",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Fulgur",
@@ -14645,7 +14880,8 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Tenebris Tonitrus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Fulgur",
@@ -14661,7 +14897,8 @@ window.VS_DATA = {
         "Fulgur"
       ],
       "final_state": "Speculo Fulgur",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Tenebris Tonitrus",
@@ -14675,7 +14912,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Tenebris Tonitrus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Keremet Bubbles",
@@ -14698,7 +14936,8 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Keremet Morbus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Keremet Bubbles",
@@ -14714,7 +14953,8 @@ window.VS_DATA = {
         "Keremet Bubbles"
       ],
       "final_state": "Speculo Keremet Bubbles",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Keremet Morbus",
@@ -14728,7 +14968,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Keremet Morbus",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Hex",
@@ -14751,7 +14992,8 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Nightmare",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Hex",
@@ -14767,7 +15009,8 @@ window.VS_DATA = {
         "Hex"
       ],
       "final_state": "Speculo Hex",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Nightmare",
@@ -14781,7 +15024,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Nightmare",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Refectio",
@@ -14804,7 +15048,8 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "Sanctuary",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Refectio",
@@ -14820,7 +15065,8 @@ window.VS_DATA = {
         "Refectio"
       ],
       "final_state": "Speculo Refectio",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Sanctuary",
@@ -14834,7 +15080,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Sanctuary",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Mace",
@@ -14857,7 +15104,8 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Stamazza",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Stamazza",
@@ -14871,7 +15119,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Stamazza",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Star Flail",
@@ -14894,7 +15143,8 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Moon Rod",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Moon Rod",
@@ -14908,7 +15158,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Moon Rod",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Alucard Spear",
@@ -14931,7 +15182,8 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Thunderbolt Spear",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Thunderbolt Spear",
@@ -14948,7 +15200,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xii_out_of_bounds": "UL",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Trident",
@@ -14971,7 +15224,8 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Gungnir-Souris",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Gungnir-Souris",
@@ -14987,7 +15241,8 @@ window.VS_DATA = {
       "final_state": "Gungnir-Souris",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Iron Shield",
@@ -15012,7 +15267,8 @@ window.VS_DATA = {
       "final_state": "Dark Iron Shield",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Dark Iron Shield",
@@ -15026,7 +15282,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Dark Iron Shield",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Guardian's Targe",
@@ -15049,7 +15306,8 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Sacred Beasts Tower Shield",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Sacred Beasts Tower Shield",
@@ -15063,7 +15321,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Sacred Beasts Tower Shield",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Tyrfing",
@@ -15086,7 +15345,8 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Rune Sword",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Rune Sword",
@@ -15100,7 +15360,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Rune Sword",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Alucart Sworb",
@@ -15121,7 +15382,8 @@ window.VS_DATA = {
       "trans_result": "Alucard Swords",
       "requirements": [],
       "final_state": "Alucard Shield",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Alucard Swords",
@@ -15142,7 +15404,8 @@ window.VS_DATA = {
       "trans_result": "Alucard Shield",
       "requirements": [],
       "final_state": "Alucard Shield",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Alucard Shield",
@@ -15156,7 +15419,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Alucard Shield",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Confodere",
@@ -15178,7 +15442,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xii_out_of_bounds": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Vol Confodere",
@@ -15200,7 +15465,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xii_out_of_bounds": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Melio Confodere",
@@ -15222,7 +15488,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xii_out_of_bounds": "L",
         "xiv_jail_of_crystal": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Globus",
@@ -15245,7 +15512,8 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Nitesco",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Speculo Globus",
@@ -15261,7 +15529,8 @@ window.VS_DATA = {
         "Globus"
       ],
       "final_state": "Nitesco",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Nitesco",
@@ -15277,7 +15546,8 @@ window.VS_DATA = {
       "final_state": "Nitesco",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Optical Shot",
@@ -15303,7 +15573,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xiv_jail_of_crystal": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Acerbatus",
@@ -15320,7 +15591,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "xiv_jail_of_crystal": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Dextro Custos",
@@ -15344,7 +15616,8 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Sinestro Custos",
@@ -15368,7 +15641,8 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Centralis Custos",
@@ -15392,7 +15666,8 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 70
     },
     {
       "name": "Trinum Custodem",
@@ -15408,7 +15683,8 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Dominus Anger",
@@ -15432,7 +15708,8 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Dominus Hatred",
@@ -15456,7 +15733,8 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "arcana_ratings": {
         "iii_twilight_princess": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Dominus Agony",
@@ -15480,7 +15758,8 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "arcana_ratings": {
         "iii_twilight_princess": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Power of Sire",
@@ -15498,7 +15777,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "xiv_jail_of_crystal": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Sonic Dash",
@@ -15525,7 +15805,8 @@ window.VS_DATA = {
         "ii_twilight_requiem": "L",
         "xiv_jail_of_crystal": "L",
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 50
     },
     {
       "name": "Rapidus Fio",
@@ -15541,7 +15822,8 @@ window.VS_DATA = {
       "final_state": "Rapidus Fio",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Luminatio",
@@ -15564,7 +15846,8 @@ window.VS_DATA = {
       "final_state": "Vol Luminatio",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 60
     },
     {
       "name": "Vol Luminatio",
@@ -15584,7 +15867,8 @@ window.VS_DATA = {
       "final_state": "Vol Luminatio",
       "arcana_ratings": {
         "xix_heart_of_fire": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Umbra",
@@ -15605,7 +15889,8 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "Vol Umbra",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 60
     },
     {
       "name": "Vol Umbra",
@@ -15623,7 +15908,8 @@ window.VS_DATA = {
         "Vol Luminatio"
       ],
       "final_state": "Vol Umbra",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Universitas",
@@ -15637,7 +15923,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Universitas",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Morning Star",
@@ -15651,7 +15938,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Morning Star",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 2
     },
     {
       "name": "Coat of Arms",
@@ -15665,7 +15953,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Coat of Arms",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 2
     },
     {
       "name": "Spectral Sword",
@@ -15681,7 +15970,8 @@ window.VS_DATA = {
       "final_state": "Spectral Sword",
       "arcana_ratings": {
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 2
     },
     {
       "name": "Belnades' Spellbook",
@@ -15697,7 +15987,8 @@ window.VS_DATA = {
       "final_state": "Belnades' Spellbook",
       "arcana_ratings": {
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 2
     },
     {
       "name": "Ebony Diabologue",
@@ -15713,7 +16004,8 @@ window.VS_DATA = {
       "final_state": "Ebony Diabologue",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 2
     },
     {
       "name": "Pocket Knife",
@@ -15738,7 +16030,8 @@ window.VS_DATA = {
       "final_state": "Claimh Solais",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 80
     },
     {
       "name": "Claimh Solais",
@@ -15754,7 +16047,8 @@ window.VS_DATA = {
       "final_state": "Claimh Solais",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Endo Gears",
@@ -15782,7 +16076,8 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Peri Pendulum",
@@ -15810,7 +16105,8 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "arcana_ratings": {
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Myo Lift",
@@ -15838,7 +16134,8 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "arcana_ratings": {
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Epi Head",
@@ -15866,7 +16163,8 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "arcana_ratings": {
         "ii_twilight_requiem": "L"
-      }
+      },
+      "rarity": 20
     },
     {
       "name": "Clock Tower",
@@ -15882,7 +16180,8 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Familiar Forge",
@@ -15898,7 +16197,8 @@ window.VS_DATA = {
       "final_state": "Familiar Forge",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 6
     },
     {
       "name": "Fleuret",
@@ -15921,7 +16221,8 @@ window.VS_DATA = {
       "final_state": "Espada Ropera",
       "arcana_ratings": {
         "xvi_slash": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Dress Sword",
@@ -15942,7 +16243,8 @@ window.VS_DATA = {
         "Shocking Rush"
       ],
       "final_state": "Espada Ropera",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Espada Ropera",
@@ -15956,7 +16258,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Espada Ropera",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Town Sword",
@@ -15977,7 +16280,8 @@ window.VS_DATA = {
         "Swallow Slice"
       ],
       "final_state": "Dayblade",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Lordstar",
@@ -16000,7 +16304,8 @@ window.VS_DATA = {
       "final_state": "Dayblade",
       "arcana_ratings": {
         "i_gemini": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Dayblade",
@@ -16017,7 +16322,8 @@ window.VS_DATA = {
       "arcana_ratings": {
         "i_gemini": "L",
         "xii_out_of_bounds": "L"
-      }
+      },
+      "rarity": 0
     },
     {
       "name": "Splashers",
@@ -16041,7 +16347,8 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Pursuant Blades",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Pursuant Blades",
@@ -16062,7 +16369,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Pursuant Blades",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Flamberge",
@@ -16083,7 +16391,8 @@ window.VS_DATA = {
         "Bull Crush"
       ],
       "final_state": "Galatyn",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Zweihander",
@@ -16104,7 +16413,8 @@ window.VS_DATA = {
         "Absetzen"
       ],
       "final_state": "Galatyn",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Galatyn",
@@ -16118,7 +16428,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Galatyn",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Punch",
@@ -16139,7 +16450,8 @@ window.VS_DATA = {
         "Raksha"
       ],
       "final_state": "Gilded Hand",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Pressure Point",
@@ -16160,7 +16472,8 @@ window.VS_DATA = {
         "Shenlong Firefist"
       ],
       "final_state": "Gilded Hand",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gilded Hand",
@@ -16174,7 +16487,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Gilded Hand",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Kick",
@@ -16198,7 +16512,8 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Triangle Kick",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Triangle Kick",
@@ -16219,7 +16534,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Triangle Kick",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Saber Machine Gun",
@@ -16240,7 +16556,8 @@ window.VS_DATA = {
         "Shockwave"
       ],
       "final_state": "Divergence",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Hecaton Machine Gun",
@@ -16261,7 +16578,8 @@ window.VS_DATA = {
         "Bombarding Fire"
       ],
       "final_state": "Divergence",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Divergence",
@@ -16275,7 +16593,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Divergence",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Super Missile",
@@ -16296,7 +16615,8 @@ window.VS_DATA = {
         "Ballistic Missiles"
       ],
       "final_state": "Hyperion Bazooka",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Hydra Cannon",
@@ -16317,7 +16637,8 @@ window.VS_DATA = {
         "Artificial Hailstorm"
       ],
       "final_state": "Hyperion Bazooka",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Hyperion Bazooka",
@@ -16331,7 +16652,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Hyperion Bazooka",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Eagle Gun",
@@ -16355,7 +16677,8 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Pendragon",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Pendragon",
@@ -16376,7 +16699,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Pendragon",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Khukuri",
@@ -16400,7 +16724,8 @@ window.VS_DATA = {
         "Parm Aegis"
       ],
       "final_state": "Jetstream",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Jetstream",
@@ -16421,7 +16746,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Jetstream",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Twin Dragon",
@@ -16445,7 +16771,8 @@ window.VS_DATA = {
         "Karoma's Mana"
       ],
       "final_state": "Gekkabijin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gekkabijin",
@@ -16466,7 +16793,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Gekkabijin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Bullova",
@@ -16490,7 +16818,8 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Falconwind",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Falconwind",
@@ -16511,7 +16840,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Falconwind",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Sanguine Star",
@@ -16535,7 +16865,8 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Blood Chalice",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Blood Chalice",
@@ -16556,7 +16887,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Blood Chalice",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Glaive",
@@ -16577,7 +16909,8 @@ window.VS_DATA = {
         "Divine Lancer"
       ],
       "final_state": "Lohengrin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Feather Spear",
@@ -16598,7 +16931,8 @@ window.VS_DATA = {
         "Stardust"
       ],
       "final_state": "Lohengrin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Lohengrin",
@@ -16612,7 +16946,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Lohengrin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Spirit Rings",
@@ -16633,7 +16968,8 @@ window.VS_DATA = {
       "trans_result": "Rings of Calamity",
       "requirements": [],
       "final_state": "Rings of Calamity",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Rings of Calamity",
@@ -16647,7 +16983,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Rings of Calamity",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Emerald Rapture",
@@ -16670,7 +17007,8 @@ window.VS_DATA = {
         "Crown"
       ],
       "final_state": "Emerald Wave",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Emerald Wave",
@@ -16684,7 +17022,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Emerald Wave",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Intuition",
@@ -16698,7 +17037,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Intuition",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Infernolatro",
@@ -16722,7 +17062,8 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "NaneInferno",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "NaneInferno",
@@ -16736,7 +17077,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "NaneInferno",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gros Michel",
@@ -16760,7 +17102,8 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "Cavendish",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Cavendish",
@@ -16772,7 +17115,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Cavendish",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Fibonacci Spritz",
@@ -16796,7 +17140,8 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "Royal Flush",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Royal Flush",
@@ -16810,7 +17155,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Royal Flush",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Celestial Booster",
@@ -16834,7 +17180,8 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "Negative Space",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 80
     },
     {
       "name": "Negative Space",
@@ -16848,7 +17195,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Negative Space",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Experience Gem",
@@ -16862,7 +17210,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Experience Gem",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gold Coin",
@@ -16876,7 +17225,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Gold Coin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Coin Bag",
@@ -16890,7 +17240,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Coin Bag",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Big Coin Bag",
@@ -16904,7 +17255,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Big Coin Bag",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Rich Coin Bag",
@@ -16918,7 +17270,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Rich Coin Bag",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Rosary",
@@ -16932,7 +17285,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Rosary",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Nduja Fritta Tanto",
@@ -16946,7 +17300,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Nduja Fritta Tanto",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Orologion",
@@ -16960,7 +17315,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Orologion",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Vacuum",
@@ -16974,7 +17330,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Vacuum",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Floor Chicken",
@@ -16988,7 +17345,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Floor Chicken",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gilded Clover",
@@ -17002,7 +17360,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Gilded Clover",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Little Clover",
@@ -17016,7 +17375,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Little Clover",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gold Finger",
@@ -17030,7 +17390,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Gold Finger",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Friendship Amulet",
@@ -17044,7 +17405,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Friendship Amulet",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Sorbetto",
@@ -17058,7 +17420,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Sorbetto",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Treasure Chest",
@@ -17072,7 +17435,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Treasure Chest",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Body Part",
@@ -17086,7 +17450,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Body Part",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Rapid Fire",
@@ -17100,7 +17465,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Rapid Fire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Barrier",
@@ -17114,7 +17480,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Barrier",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Grenade",
@@ -17128,7 +17495,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Grenade",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Wall Chicken",
@@ -17142,7 +17510,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Wall Chicken",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Heart Refresh",
@@ -17156,7 +17525,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Heart Refresh",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Karma Coin",
@@ -17170,7 +17540,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Karma Coin",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Mirror of Truth",
@@ -17184,7 +17555,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Mirror of Truth",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Neutron Bomb",
@@ -17198,7 +17570,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Neutron Bomb",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Little Heart",
@@ -17212,7 +17585,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Little Heart",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Crystallized Soul",
@@ -17226,7 +17600,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Crystallized Soul",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Golden Egg",
@@ -17240,7 +17615,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Golden Egg",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Pie",
@@ -17254,7 +17630,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Pie",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Cheese",
@@ -17268,7 +17645,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Cheese",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Corn",
@@ -17282,7 +17660,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Corn",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "World Eater",
@@ -17296,7 +17675,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "World Eater",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Sarabande of Healing",
@@ -17310,7 +17690,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Sarabande of Healing",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Game Killer",
@@ -17324,7 +17705,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Game Killer",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Heart of Fire",
@@ -17338,7 +17720,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Heart of Fire",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Out of Bounds",
@@ -17352,7 +17735,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Out of Bounds",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Divine Bloodline",
@@ -17366,7 +17750,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Divine Bloodline",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Blood Astronomia",
@@ -17380,7 +17765,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Blood Astronomia",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Wandering the Jet Black",
@@ -17394,7 +17780,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Wandering the Jet Black",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Insatiable",
@@ -17408,7 +17795,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Insatiable",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Acquazzone",
@@ -17422,7 +17810,8 @@ window.VS_DATA = {
       "trans_result": "-",
       "requirements": [],
       "final_state": "Acquazzone",
-      "arcana_ratings": {}
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Power Of Lire",
@@ -17443,7 +17832,8 @@ window.VS_DATA = {
         "x_bloodline": "S",
         "xviii_boogaloo_of_illusions": "S",
         "xx_silent_old_sanctuary": "S"
-      }
+      },
+      "rarity": 0
     }
   ],
   "passives": [
@@ -18236,5 +18626,391 @@ window.VS_DATA = {
       "description": "Losing health generates exploding projectiles. Explosion damage is increased by total recovered health and Magnet bonus. Explosion Area is increased by Magnet.",
       "notes": "- While Wandering the Jet Black (XXI) is active, it generates circular, crimson projectiles that revolve around the player and deal damage based on total recovered Health and  Magnet. The projectiles prior to exploding start with 10 Base Damage. These projectiles deal minor contact damage, but will explode after a time.\n- Projectiles are spawned when losing health and when healing for at least 3.3 Health. The number of projectiles is increased by  Amount, and they orbit faster with  Speed. The area of each projectile's explosion is equal to Magnet.\n- The contact damage of the projectiles during their orbit is 0.5*Power*Magnet the damage of the explosion is increased by multiple factors, and follows the formula: Power*Magnet+AccumulatedDamage+AccumulatedRecovery+BloodlineDamage \n- The base Power of this weapon is always 1, which is the source of the 10 Base Damage.\n- AccumulatedDamage is increased whenever the player receives damage. If AccumulatedDamage is under 5, then it will be increased by the damage the player received multiplied by 0.01. When over 5, the damage the player receives is instead multiplied by 0.001.\n- AccumulatedRecovery is increased whenever the player heals or overheals. If AccumulatedRecovery is under 5, then it will be increased by the amount healed multiplied by 0.005. When over 5, the healing received is instead multiplied by 0.001.\n- BloodlineDamage is the flat damage bonus provided by  Divine Bloodline (IX).\n- The value calculated by either formula is ultimately multiplied by 10 for final damage. For the AccumulatedDamage and AccumulatedRecovery values, after the threshold is reached, both values effectively become +1 damage per 100 damage or healing received, respectively.\n- One of the easiest ways to unlock Wandering the Jet Black (XXI) is to select  Divine Bloodline (IX), and use retaliatory-damage-builds (such as the  Victory Sword) and allow Max Health to reach 665.\n- Perhaps a safer unlocking method is to use  Crystal Cries (XII) with freeze builds.\n- Another method is pairing  Hidden Anathema (III) with any method of generating pickups, such as  Hail from the Future (X) or  Greatest Jubilee.\n- To pair with these methods, you can use the Milk Elemental Enemah, as it gives 400 Max Heath by itself. Combined with Hollow Heart, you don't need much more to get to unlock requirement.\n- This Darkana pairs extremely well with any weapon that utilizes Health Drain, such as the  Muramasa This content requires the Legacy of the Moonspell DLC to access, which rapidly damages the user, resulting in projectiles being fired even if enemies cannot reach the character. At the same time, the Muramasa also heals the user, which steadily increases the damage of Wandering the Jet Black (XXI) throughout the run.\n- Dominus Anger This content requires the Ode to Castlevania DLC to access,  Dominus Hatred This content requires the Ode to Castlevania DLC to access,  Dominus Agony This content requires the Ode to Castlevania DLC to access, and the  Power of Sire This content requires the Ode to Castlevania DLC to access are also great sources of self-damage.\n- Consequently, this makes characters with Health Drain immunity receive less of a benefit from Wandering the Jet Black (XXI), and they will have to rely more on damage from enemies for it to activate. This might require increasing  Curse or  Charm to increase enemy spawn rates through obtaining the  Skull O'Maniac or  Karoma's Mana.\n- This Darkana also pairs well with  Cosmo Pavone due to the character's high  Recovery potentially allowing a very high damage output."
     }
+  ],
+  "banishLayout": [
+    "Whip",
+    "Bloody Tear",
+    "Magic Wand",
+    "Holy Wand",
+    "Knife",
+    "Thousand Edge",
+    "Axe",
+    "Death Spiral",
+    "Cross",
+    "Heaven Sword",
+    "King Bible",
+    "Unholy Vespers",
+    "Fire Wand",
+    "Hellfire",
+    "Garlic",
+    "Soul Eater",
+    "Santa Water",
+    "La Borra",
+    "Runetracer",
+    "NO FUTURE",
+    "Lightning Ring",
+    "Thunder Loop",
+    "Pentagram",
+    "Gorgeous Moon",
+    "Peachone",
+    "Ebony Wings",
+    "Vandalier",
+    "Phiera Der Tuphello",
+    "Eight The Sparrow",
+    "Phieraggi",
+    "Gatti Amari",
+    "Vicious Hunger",
+    "Song of Mana",
+    "Mannajja",
+    "Shadow Pinion",
+    "Valkyrie Turner",
+    "Clock Lancet",
+    "Infinite Corridor",
+    "Laurel",
+    "Crimson Shroud",
+    "Vento Sacro",
+    "Fuwalafuwaloo",
+    "Bone",
+    "Cherry Bomb",
+    "Carréllo",
+    "Celestial Dusting",
+    "La Robba",
+    "Greatest Jubilee",
+    "Bracelet",
+    "Bi-Bracelet",
+    "Tri-Bracelet",
+    "Candybox",
+    "Super Candybox II Turbo",
+    "Pako Battiliar",
+    "Mazo Familiar",
+    "Ammo Appalate",
+    "Gunastrophe",
+    "Unearthly Bolt",
+    "Spirit Disturbance",
+    "Victory Sword",
+    "Sole Solution",
+    "Flames of Misspell",
+    "Ashes of Muspell",
+    "Glass Fandango",
+    "Celestial Voulge",
+    "Penshin Fatcha",
+    "Tonno Subito",
+    "Tonnado",
+    "Tonn'omoto",
+    "Tonn'oddeeo",
+    "Tonne",
+    "Unsurpassed",
+    "Miracle of Multiplication",
+    "Santa Javelin",
+    "Seraphic Cry",
+    "Gaze of Gaea",
+    "Embrace of Gaea",
+    "Magi-Stone",
+    "Kyra-Stones",
+    "Phas3r",
+    "Photonstorm",
+    "Chaos Rune",
+    "Wicked Ruler",
+    "Arma Dio",
+    "Spinach",
+    "Armor",
+    "Hollow Heart",
+    "Pummarola",
+    "Empty Tome",
+    "Candelabrador",
+    "Bracer",
+    "Spellbinder",
+    "Duplicator",
+    "Wings",
+    "Attractorb",
+    "Clover",
+    "Crown",
+    "Stone Mask",
+    "Skull O'Maniac",
+    "Tirajisú",
+    "Torrona's Box",
+    "Parm Aegis",
+    "Karoma's Mana",
+    "Cygnus",
+    "Zhar Ptytsia",
+    "Red Muscle",
+    "Twice Upon a Time",
+    "Flock Destroyer",
+    "Horse Cartridge",
+    "Levelin'Eh",
+    "Silver Ring",
+    "Gold Ring",
+    "Metaglio Left",
+    "Metaglio Right",
+    "Silver Wind",
+    "Festive Winds",
+    "Four Seasons",
+    "Godai Shuffle",
+    "Summon Night",
+    "Echo Night",
+    "Mirage Robe",
+    "J'Odore",
+    "Night Sword",
+    "Muramasa",
+    "Mille Bolle Blu",
+    "Boo Roo Boolle",
+    "108 Bocce",
+    "SpellString",
+    "SpellStream",
+    "SpellStrike",
+    "SpellStrom",
+    "Eskizzibur",
+    "Legionnaire",
+    "Flash Arrow",
+    "Millionaire",
+    "Prismatic Missile",
+    "Luminaire",
+    "Shadow Servant",
+    "Ophion",
+    "Party Popper",
+    "Silver Sliver",
+    "Party Pooper",
+    "Academy Badge",
+    "Silver Sliver",
+    "Party Pooper",
+    "Report!",
+    "Emergency Meeting",
+    "Lucky Swipe",
+    "Crossed Wires",
+    "Lifesign Scan",
+    "Paranormal Scan",
+    "Just Vent",
+    "Unjust Ejection",
+    "Clear Debris",
+    "Clear Asteroids",
+    "Sharp Tongue",
+    "Impostongue",
+    "Science Rocks",
+    "Rocket Science",
+    "Hats",
+    "Silver Tongue",
+    "Mini Crewmate",
+    "Mini Engineer",
+    "Mini Ghost",
+    "Mini Shapeshifter",
+    "Mini Guardian",
+    "Mini Impostor",
+    "Mini Scientist",
+    "Mini Horse",
+    "Long Gun",
+    "Prototype A",
+    "Short Gun",
+    "Prototype B",
+    "Spread Shot",
+    "Prototype C",
+    "C-U-Laser",
+    "Pronto Beam",
+    "Firearm",
+    "Fire-L3GS",
+    "Sonic Bloom",
+    "Wave Beam",
+    "Homing Miss",
+    "Multistage Missiles",
+    "Diver Mines",
+    "Atmo-Torpedo",
+    "Blade Crossbow",
+    "BFC2000-AD",
+    "Prism Lass",
+    "Time Warp",
+    "Metal Claw",
+    "Big Fuzzy Fist",
+    "Weapon Power-Up",
+    "Prism Damsel",
+    "Alchemy Whip",
+    "Vampire Killer",
+    "Wind Whip",
+    "Spirit Tornado Tip",
+    "Platinum Whip",
+    "Cross Crasher Tip",
+    "Dragon Water Whip",
+    "Hydrostormer Tip",
+    "Sonic Whip",
+    "Crissaegrim Tip",
+    "Jet Black Whip",
+    "Mormegil Tip",
+    "Vibhuti Whip",
+    "Daybreaker Tip",
+    "Vanitas Whip",
+    "Aurablaster Tip",
+    "Shuriken",
+    "Yagyu Shuriken",
+    "Curved Knife",
+    "Bwaka Knife",
+    "Javelin",
+    "Long Inus",
+    "Discus",
+    "Stellar Blade",
+    "Iron Ball",
+    "Wrecking Ball",
+    "Silver Revolver",
+    "Jewel Gun",
+    "Hand Grenade",
+    "The RPG",
+    "Wine Glass",
+    "Meal Ticket",
+    "Raging Fire",
+    "Salamender",
+    "Ice Fang",
+    "Cocytus",
+    "Gale Force",
+    "Pneuma Tempestas",
+    "Rock Riot",
+    "Gemma Torpor",
+    "Fulgur",
+    "Tenebris Tonitrus",
+    "Keremet Bubbles",
+    "Keremet Morbus",
+    "Hex",
+    "Nightmare",
+    "Refectio",
+    "Sanctuary",
+    "Mace",
+    "Stamazza",
+    "Star Flail",
+    "Moon Rod",
+    "Alucard Spear",
+    "Thunderbolt Spear",
+    "Trident",
+    "Gungnir-Souris",
+    "Iron Shield",
+    "Dark Iron Shield",
+    "Guardian's Targe",
+    "Sacred Beasts Tower Shield",
+    "Tyrfing",
+    "Rune Sword",
+    "Alucart Sworb",
+    "Alucard Swords",
+    "Alucard Shield",
+    "Confodere",
+    "Vol Confodere",
+    "Melio Confodere",
+    "Globus",
+    "Nitesco",
+    "Optical Shot",
+    "Acerbatus",
+    "Dextro Custos",
+    "Sinestro Custos",
+    "Centralis Custos",
+    "Trinum Custodem",
+    "Dominus Anger",
+    "Dominus Hatred",
+    "Dominus Agony",
+    "Power of Sire",
+    "Sonic Dash",
+    "Rapidus Fio",
+    "Luminatio",
+    "Vol Luminatio",
+    "Umbra",
+    "Vol Umbra",
+    "Universitas",
+    "Morning Star",
+    "Coat of Arms",
+    "Belnades' Spellbook",
+    "Spectral Sword",
+    "Ebony Diabologue",
+    "Valmanway",
+    "Million Cut",
+    "Icebrand",
+    "Ninth Circle",
+    "Arrow of Goth",
+    "Dies Irae",
+    "Aura Blast",
+    "Kardía Phlegeton",
+    "Kaiser Knuckle",
+    "Lapiste Tepisto",
+    "Pocket Knife",
+    "Claimh Solais",
+    "Svarog Statue",
+    "Darkness Illusion",
+    "Troll Bomb",
+    "Carnage Heart",
+    "Hydro Storm",
+    "Hydro Pump Climax",
+    "Grand Cross",
+    "Arch Angle",
+    "Summon Spirit",
+    "Spirit of Light",
+    "Soul Steal",
+    "Power of Lire",
+    "Dark Rift",
+    "Legacy of Death: Soul River",
+    "Sword Brothers",
+    "Vjaya Sisters",
+    "Summon Spirit Tornado",
+    "Venus Crescent",
+    "Anura",
+    "Dark Frogamorphosis",
+    "Endo Gears",
+    "Peri Pendulum",
+    "Myo Lift",
+    "Epi Head",
+    "Clock Tower",
+    "Familiar Forge",
+    "Speculo Globus",
+    "Speculo Raging Fire",
+    "Speculo Ice Fang",
+    "Speculo Rock Riot",
+    "Speculo Gale Force",
+    "Speculo Fulgur",
+    "Speculo Keremet Bubbles",
+    "Speculo Refectio",
+    "Speculo Hex",
+    "Speculo Anura",
+    "Fleuret",
+    "Dress Sword",
+    "Espada Ropera",
+    "Town Sword",
+    "Lordstar",
+    "Dayblade",
+    "Splashers",
+    "Pursuant Blades",
+    "Flamberge",
+    "Zweihander",
+    "Galatyn",
+    "Punch",
+    "Pressure Point",
+    "Gilded Hand",
+    "Kick",
+    "Triangle Kick",
+    "Saber Machine Gun",
+    "Hecaton Machine Gun",
+    "Divergence",
+    "Super Missile",
+    "Hydra Cannon",
+    "Hyperion Bazooka",
+    "Eagle Gun",
+    "Pendragon",
+    "Khukuri",
+    "Jetstream",
+    "Twin Dragon",
+    "Gekkabijin",
+    "Bullova",
+    "Falconwind",
+    "Sanguine Star",
+    "Blood Chalice",
+    "Glaive",
+    "Feather Spear",
+    "Lohengrin",
+    "Spirit Rings",
+    "Rings of Calamity",
+    "Emerald Rapture",
+    "Emerald Wave",
+    "Infernolatro",
+    "NaneInferno",
+    "Gros Michel",
+    "Cavendish",
+    "Fibonacci Spritz",
+    "Royal Flush",
+    "Celestial Booster",
+    "Negative Space",
+    "Outer Saboteur",
+    null,
+    null,
+    null
   ]
 };
