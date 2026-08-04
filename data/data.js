@@ -19012,5 +19012,3630 @@ window.VS_DATA = {
     null,
     null,
     null
+  ],
+  "stats": [
+    {
+      "name": "Max Health",
+      "key": "max_health",
+      "icon": "assets/icons/stats/max_health.png",
+      "description": "Determines the maximum amount of HP for the character.",
+      "base_value": 100,
+      "base_raw": "100 HP",
+      "max_value": null,
+      "stacking": "multiplicative",
+      "levels": [
+        {
+          "max_health": 0.1
+        },
+        {
+          "max_health": 0.1
+        },
+        {
+          "max_health": 0.1
+        }
+      ],
+      "max_level": 3
+    },
+    {
+      "name": "Recovery",
+      "key": "recovery",
+      "icon": "assets/icons/stats/recovery.png",
+      "description": "Determines how much HP is generated for the character per second.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "recovery": 1
+        },
+        {
+          "recovery": 1
+        },
+        {
+          "recovery": 1
+        },
+        {
+          "recovery": 1
+        },
+        {
+          "recovery": 1
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Armor",
+      "key": "armor",
+      "icon": "assets/icons/stats/armor.png",
+      "description": "Determines the amount of reduced incoming damage.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": 50,
+      "stacking": "additive",
+      "levels": [
+        {
+          "armor": 1,
+          "retaliate_damage": 0.1
+        },
+        {
+          "armor": 1,
+          "retaliate_damage": 0.1
+        },
+        {
+          "armor": 1,
+          "retaliate_damage": 0.1
+        }
+      ],
+      "max_level": 3
+    },
+    {
+      "name": "Move Speed",
+      "key": "move_speed",
+      "icon": "assets/icons/stats/move_speed.png",
+      "description": "Modifies the movement speed of the character.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "move_speed": 0.05
+        },
+        {
+          "move_speed": 0.05
+        }
+      ],
+      "max_level": 2
+    },
+    {
+      "name": "Might",
+      "key": "might",
+      "icon": "assets/icons/stats/might.png",
+      "description": "Modifies the damage of all attacks.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": 1000,
+      "stacking": "additive",
+      "levels": [
+        {
+          "might": 0.05
+        },
+        {
+          "might": 0.05
+        },
+        {
+          "might": 0.05
+        },
+        {
+          "might": 0.05
+        },
+        {
+          "might": 0.05
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Area",
+      "key": "area",
+      "icon": "assets/icons/stats/area.png",
+      "description": "Modifies the area of all attacks.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": 1000,
+      "stacking": "additive",
+      "levels": [
+        {
+          "area": 0.05
+        },
+        {
+          "area": 0.05
+        }
+      ],
+      "max_level": 2
+    },
+    {
+      "name": "Speed",
+      "key": "speed",
+      "icon": "assets/icons/stats/speed.png",
+      "description": "Modifies the movement speed of all projectiles.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": 500,
+      "stacking": "additive",
+      "levels": [
+        {
+          "speed": 0.1
+        },
+        {
+          "speed": 0.1
+        }
+      ],
+      "max_level": 2
+    },
+    {
+      "name": "Duration",
+      "key": "duration",
+      "icon": "assets/icons/stats/duration.png",
+      "description": "Modifies the duration of weapon effects.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": 500,
+      "stacking": "additive",
+      "levels": [
+        {
+          "duration": 0.15
+        },
+        {
+          "duration": 0.15
+        }
+      ],
+      "max_level": 2
+    },
+    {
+      "name": "Amount",
+      "key": "amount",
+      "icon": "assets/icons/stats/amount.png",
+      "description": "Determines the amount of extra projectiles weapons have.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": 10,
+      "stacking": "additive",
+      "levels": [
+        {
+          "amount": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "name": "Cooldown",
+      "key": "cooldown",
+      "icon": "assets/icons/stats/cooldown.png",
+      "description": "Modifies the duration of the cooldown between attacks.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": 10,
+      "stacking": "additive",
+      "levels": [
+        {
+          "cooldown": -0.025
+        },
+        {
+          "cooldown": -0.025
+        }
+      ],
+      "max_level": 2
+    },
+    {
+      "name": "Luck",
+      "key": "luck",
+      "icon": "assets/icons/stats/luck.png",
+      "description": "Modifies the chances of certain things, such as the drop chances of most Pickups and the chances of Treasure Chests being of higher quality.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "luck": 0.1
+        },
+        {
+          "luck": 0.1
+        },
+        {
+          "luck": 0.1
+        }
+      ],
+      "max_level": 3
+    },
+    {
+      "name": "Growth",
+      "key": "growth",
+      "icon": "assets/icons/stats/growth.png",
+      "description": "Modifies the amount of experience gained from collecting Experience Gems.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "growth": 0.03
+        },
+        {
+          "growth": 0.03
+        },
+        {
+          "growth": 0.03
+        },
+        {
+          "growth": 0.03
+        },
+        {
+          "growth": 0.03
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Greed",
+      "key": "greed",
+      "icon": "assets/icons/stats/greed.png",
+      "description": "Modifies the amount of gold gained from Pickups and Treasure Chests.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Curse",
+      "key": "curse",
+      "icon": "assets/icons/stats/curse.png",
+      "description": "Modifies the enemies speed, health, quantity and frequency.",
+      "base_value": 100,
+      "base_raw": "100%",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Magnet",
+      "key": "magnet",
+      "icon": "assets/icons/stats/magnet.png",
+      "description": "Determines the radius inside which Experience Gems and Pickups are collected.",
+      "base_value": 30,
+      "base_raw": "30",
+      "max_value": null,
+      "stacking": "multiplicative",
+      "levels": [
+        {
+          "magnet": 0.25
+        },
+        {
+          "magnet": 0.25
+        }
+      ],
+      "max_level": 2
+    },
+    {
+      "name": "Revival",
+      "key": "revival",
+      "icon": "assets/icons/stats/revival.png",
+      "description": "Determines the amount of Extra Lives the player has.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "revival": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "name": "Omni",
+      "key": "omni",
+      "icon": "assets/icons/stats/omni.png",
+      "description": "Increases Might, Projectile Speed, Duration, and Area by 2% per rank (max +10%).",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "might": 0.02,
+          "speed": 0.02,
+          "duration": 0.02,
+          "area": 0.02
+        },
+        {
+          "might": 0.02,
+          "speed": 0.02,
+          "duration": 0.02,
+          "area": 0.02
+        },
+        {
+          "might": 0.02,
+          "speed": 0.02,
+          "duration": 0.02,
+          "area": 0.02
+        },
+        {
+          "might": 0.02,
+          "speed": 0.02,
+          "duration": 0.02,
+          "area": 0.02
+        },
+        {
+          "might": 0.02,
+          "speed": 0.02,
+          "duration": 0.02,
+          "area": 0.02
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Charm",
+      "key": "charm",
+      "icon": "assets/icons/stats/charm.png",
+      "description": "Increases the quantity of enemy waves by a flat amount.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "charm": 20
+        },
+        {
+          "charm": 20
+        },
+        {
+          "charm": 20
+        },
+        {
+          "charm": 20
+        },
+        {
+          "charm": 20
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Defang",
+      "key": "defang",
+      "icon": "assets/icons/stats/defang.png",
+      "description": "Makes a percentage of enemy spawns unable to deal damage.",
+      "base_value": 0,
+      "base_raw": "0%",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "defang": 0.03
+        },
+        {
+          "defang": 0.03
+        },
+        {
+          "defang": 0.03
+        },
+        {
+          "defang": 0.03
+        },
+        {
+          "defang": 0.03
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Reroll",
+      "key": "reroll",
+      "icon": "assets/icons/stats/reroll.png",
+      "description": "Determines how many times the player can reroll level-up rewards.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "reroll": 2
+        },
+        {
+          "reroll": 2
+        },
+        {
+          "reroll": 2
+        },
+        {
+          "reroll": 2
+        },
+        {
+          "reroll": 2
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Skip",
+      "key": "skip",
+      "icon": "assets/icons/stats/skip.png",
+      "description": "Determines how many times the player can skip level-up rewards.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "skip": 2
+        },
+        {
+          "skip": 2
+        },
+        {
+          "skip": 2
+        },
+        {
+          "skip": 2
+        },
+        {
+          "skip": 2
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Banish",
+      "key": "banish",
+      "icon": "assets/icons/stats/banish.png",
+      "description": "Determines how many times the player can banish level-up rewards.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "banish": 2
+        },
+        {
+          "banish": 2
+        },
+        {
+          "banish": 2
+        },
+        {
+          "banish": 2
+        },
+        {
+          "banish": 2
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Preserve",
+      "key": "preserve",
+      "icon": "assets/icons/stats/preserve.png",
+      "description": "Provides a chance to retain uses of Rerolls, Skips, and Banishes.",
+      "base_value": 0,
+      "base_raw": "0%",
+      "max_value": 50,
+      "stacking": "additive",
+      "levels": [
+        {
+          "preserve": 0.1
+        },
+        {
+          "preserve": 0.1
+        },
+        {
+          "preserve": 0.1
+        },
+        {
+          "preserve": 0.1
+        },
+        {
+          "preserve": 0.1
+        }
+      ],
+      "max_level": 5
+    },
+    {
+      "name": "Seal I",
+      "key": "seal_i",
+      "icon": "assets/icons/stats/seal_i.png",
+      "description": "Allows to Banish weapons from level-up choices or pick-ups from appearing before entering a stage. Used in the Collection menu.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        },
+        {
+          "seal": 1
+        }
+      ],
+      "max_level": 10
+    },
+    {
+      "name": "Seal II",
+      "key": "seal_ii",
+      "icon": "assets/icons/stats/seal_ii.png",
+      "description": "Allows to Banish two items from level up choices, or a pickup from light sources. Use in COLLECTION menu.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        },
+        {
+          "seal": 2
+        }
+      ],
+      "max_level": 10
+    },
+    {
+      "name": "Seal III",
+      "key": "seal_iii",
+      "icon": "assets/icons/stats/seal_iii.png",
+      "description": "Allows you to Banish three items from level up choices, or a pickup from light sources. Use in COLLECTION menu.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        },
+        {
+          "seal": 3
+        }
+      ],
+      "max_level": 10
+    },
+    {
+      "name": "Seal All",
+      "key": "seal_all",
+      "icon": "assets/icons/stats/seal_all.png",
+      "description": "Allows you to Banish four items from level up choices, or a pickup from light sources. Use in COLLECTION menu.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        },
+        {
+          "seal": 4
+        }
+      ],
+      "max_level": 10
+    },
+    {
+      "name": "Fever",
+      "key": "fever",
+      "icon": "assets/icons/stats/fever.png",
+      "description": "Affects the duration of Gold Fever and Gold Finger",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [],
+      "max_level": 0
+    },
+    {
+      "name": "Thorns",
+      "key": "thorns",
+      "icon": "assets/icons/stats/thorns.png",
+      "description": "Deals Retaliatory damage to enemies that damage the player.",
+      "base_value": 0,
+      "base_raw": "0",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [],
+      "max_level": 0
+    },
+    {
+      "name": "Invulnerability Time",
+      "key": "invulnerability_time",
+      "icon": "assets/icons/stats/invulnerability_time.png",
+      "description": "Determines how long the player is immune after receiving damage or a source of immunity.",
+      "base_value": 240,
+      "base_raw": "240 milliseconds",
+      "max_value": null,
+      "stacking": "additive",
+      "levels": [],
+      "max_level": 0
+    }
+  ],
+  "evoPaths": [
+    {
+      "evo_path": "Fuwalafuwaloo",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Whip",
+      "b1_2": "Hollow Heart",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Bloody Tear",
+      "b2_1": "Bloody Tear",
+      "b2_2": "Vento Sacro",
+      "b2_r": "Fuwalafuwaloo",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Whip",
+        "Hollow Heart",
+        "Bloody Tear",
+        "Vento Sacro",
+        "Fuwalafuwaloo"
+      ]
+    },
+    {
+      "evo_path": "Spirit of Light",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Magic Wand",
+      "b1_2": "Empty Tome",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Holy Wand",
+      "b2_1": "Holy Wand",
+      "b2_2": "Summon Spirit",
+      "b2_r": "Spirit of Light",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Magic Wand",
+        "Empty Tome",
+        "Holy Wand",
+        "Summon Spirit",
+        "Spirit of Light"
+      ]
+    },
+    {
+      "evo_path": "Million Cut",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Knife",
+      "b1_2": "Bracer",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Thousand Edge",
+      "b2_1": "Thousand Edge",
+      "b2_2": "Valmanway",
+      "b2_r": "Million Cut",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Knife",
+        "Bracer",
+        "Thousand Edge",
+        "Valmanway",
+        "Million Cut"
+      ]
+    },
+    {
+      "evo_path": "Legacy of Death: Soul River",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Axe",
+      "b1_2": "Candelabrador",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Death Spiral",
+      "b2_1": "Death Spiral",
+      "b2_2": "Dark Rift",
+      "b2_r": "Legacy of Death: Soul River",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Axe",
+        "Candelabrador",
+        "Death Spiral",
+        "Dark Rift",
+        "Legacy of Death: Soul River"
+      ]
+    },
+    {
+      "evo_path": "Arch Angle",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Cross",
+      "b1_2": "Clover",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Heaven Sword",
+      "b2_1": "Heaven Sword",
+      "b2_2": "Grand Cross",
+      "b2_r": "Arch Angle",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Cross",
+        "Clover",
+        "Heaven Sword",
+        "Grand Cross",
+        "Arch Angle"
+      ]
+    },
+    {
+      "evo_path": "Ninth Circle",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "King Bible",
+      "b1_2": "Spellbinder",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Unholy Vespers",
+      "b2_1": "Unholy Vespers",
+      "b2_2": "Icebrand",
+      "b2_r": "Ninth Circle",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "King Bible",
+        "Spellbinder",
+        "Unholy Vespers",
+        "Icebrand",
+        "Ninth Circle"
+      ]
+    },
+    {
+      "evo_path": "Kardía Phlegeton",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Fire Wand",
+      "b1_2": "Spinach",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Hellfire",
+      "b2_1": "Hellfire",
+      "b2_2": "Aura Blast",
+      "b2_r": "Kardía Phlegeton",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Fire Wand",
+        "Spinach",
+        "Hellfire",
+        "Aura Blast",
+        "Kardía Phlegeton"
+      ]
+    },
+    {
+      "evo_path": "Dark Frogamorphosis",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Garlic",
+      "b1_2": "Pummarola",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Soul Eater",
+      "b2_1": "Soul Eater",
+      "b2_2": "Anura",
+      "b2_r": "Dark Frogamorphosis",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Garlic",
+        "Pummarola",
+        "Soul Eater",
+        "Anura",
+        "Dark Frogamorphosis"
+      ]
+    },
+    {
+      "evo_path": "Hydro Pump Climax",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Santa Water",
+      "b1_2": "Attractorb",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "La Borra",
+      "b2_1": "La Borra",
+      "b2_2": "Hydro Storm",
+      "b2_r": "Hydro Pump Climax",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Santa Water",
+        "Attractorb",
+        "La Borra",
+        "Hydro Storm",
+        "Hydro Pump Climax"
+      ]
+    },
+    {
+      "evo_path": "Carnage Heart",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Runetracer",
+      "b1_2": "Armor",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "NO FUTURE",
+      "b2_1": "NO FUTURE",
+      "b2_2": "Troll Bomb",
+      "b2_r": "Carnage Heart",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Runetracer",
+        "Armor",
+        "NO FUTURE",
+        "Troll Bomb",
+        "Carnage Heart"
+      ]
+    },
+    {
+      "evo_path": "Vjaya Sisters",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Lightning Ring",
+      "b1_2": "Duplicator",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Thunder Loop",
+      "b2_1": "Thunder Loop",
+      "b2_2": "Sword Brothers",
+      "b2_r": "Vjaya Sisters",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Lightning Ring",
+        "Duplicator",
+        "Thunder Loop",
+        "Sword Brothers",
+        "Vjaya Sisters"
+      ]
+    },
+    {
+      "evo_path": "Venus Crescent",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Pentagram",
+      "b1_2": "Crown",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Gorgeous Moon",
+      "b2_1": "Gorgeous Moon",
+      "b2_2": "Summon Spirit Tornado",
+      "b2_r": "Venus Crescent",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Pentagram",
+        "Crown",
+        "Gorgeous Moon",
+        "Summon Spirit Tornado",
+        "Venus Crescent"
+      ]
+    },
+    {
+      "evo_path": "Vandalier",
+      "pattern": "Dual(Counterpart):Union>Final",
+      "b1_1": "Peachone",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Cygnus",
+      "b2_1": "Ebony Wings",
+      "b2_2": "Gemini (I)",
+      "b2_r": "Zhar Ptytsia",
+      "b3_1": "Peachone",
+      "b3_2": "Ebony Wings",
+      "b3_r": "Vandalier",
+      "related_to": [
+        "Gemini (I)",
+        "Peachone",
+        "Cygnus",
+        "Ebony Wings",
+        "Zhar Ptytsia",
+        "Vandalier"
+      ]
+    },
+    {
+      "evo_path": "Phieraggi",
+      "pattern": "Dual(Counterpart):Union>Final",
+      "b1_1": "Phiera Der Tuphello",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Red Muscle",
+      "b2_1": "Eight The Sparrow",
+      "b2_2": "Gemini (I)",
+      "b2_r": "Twice Upon a Time",
+      "b3_1": "Phiera Der Tuphello",
+      "b3_2": "Eight The Sparrow",
+      "b3_r": "Phieraggi",
+      "related_to": [
+        "Gemini (I)",
+        "Phiera Der Tuphello",
+        "Red Muscle",
+        "Eight The Sparrow",
+        "Twice Upon a Time",
+        "Phieraggi"
+      ]
+    },
+    {
+      "evo_path": "Power of Lire",
+      "pattern": "Counterpart:Evo>Union>Final",
+      "b1_1": "Gatti Amari",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Flock Destroyer",
+      "b2_1": "Gatti Amari",
+      "b2_2": "Stone Mask",
+      "b2_r": "Vicious Hunger",
+      "b3_1": "Vicious Hunger",
+      "b3_2": "Soul Steal",
+      "b3_r": "Power of Lire",
+      "related_to": [
+        "Gemini (I)",
+        "Gatti Amari",
+        "Flock Destroyer",
+        "Vicious Hunger",
+        "Soul Steal",
+        "Power of Lire"
+      ]
+    },
+    {
+      "evo_path": "Dies Irae",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Song of Mana",
+      "b1_2": "Skull O'Maniac",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Mannajja",
+      "b2_1": "Mannajja",
+      "b2_2": "Arrow of Goth",
+      "b2_r": "Dies Irae",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Song of Mana",
+        "Skull O'Maniac",
+        "Mannajja",
+        "Arrow of Goth",
+        "Dies Irae"
+      ]
+    },
+    {
+      "evo_path": "Darkness Illusion",
+      "pattern": "Evo>Union>Final",
+      "b1_1": "Shadow Pinion",
+      "b1_2": "Wings",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Valkyrie Turner",
+      "b2_1": "Valkyrie Turner",
+      "b2_2": "Svarog Statue",
+      "b2_r": "Darkness Illusion",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Shadow Pinion",
+        "Wings",
+        "Valkyrie Turner",
+        "Svarog Statue",
+        "Darkness Illusion"
+      ]
+    },
+    {
+      "evo_path": "Infinite Corridor",
+      "pattern": "TwoReqEvo(Max)>Final",
+      "b1_1": "Clock Lancet",
+      "b1_2": "Silver Ring",
+      "b1_3": "Gold Ring",
+      "b1_4": null,
+      "b1_r": "Infinite Corridor",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Clock Lancet",
+        "Silver Ring",
+        "Gold Ring",
+        "Infinite Corridor"
+      ]
+    },
+    {
+      "evo_path": "Crimson Shroud",
+      "pattern": "TwoReqEvo(Max)>Final",
+      "b1_1": "Laurel",
+      "b1_2": "Metaglio Left",
+      "b1_3": "Metaglio Right",
+      "b1_4": null,
+      "b1_r": "Crimson Shroud",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Laurel",
+        "Metaglio Left",
+        "Metaglio Right",
+        "Crimson Shroud"
+      ]
+    },
+    {
+      "evo_path": "Anima of Mortaccio",
+      "pattern": "ChaosEvolution>Final",
+      "b1_1": "Chaos Malachite",
+      "b1_2": "Mortaccio",
+      "b1_3": "Bone",
+      "b1_4": null,
+      "b1_r": "Anima of Mortaccio",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Bone",
+        "Mortaccio",
+        "Chaos Malachite",
+        "Anima of Mortaccio"
+      ]
+    },
+    {
+      "evo_path": "Yatta Daikarin",
+      "pattern": "ChaosEvolution>Final",
+      "b1_1": "Chaos Rosalia",
+      "b1_2": "Yatta Cavallo",
+      "b1_3": "Cherry Bomb",
+      "b1_4": null,
+      "b1_r": "Yatta Daikarin",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Cherry Bomb",
+        "Chaos Rosalia",
+        "Yatta Cavallo",
+        "Yatta Daikarin"
+      ]
+    },
+    {
+      "evo_path": "Carozza!",
+      "pattern": "ChaosEvolution>Final",
+      "b1_1": "Chaos Lazulia",
+      "b1_2": "Bianca Ramba",
+      "b1_3": "Carréllo",
+      "b1_4": null,
+      "b1_r": "Carozza!",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Carréllo",
+        "Chaos Lazulia",
+        "Bianca Ramba",
+        "Carozza!"
+      ]
+    },
+    {
+      "evo_path": "Profusione D'Amore",
+      "pattern": "ChaosEvolution>Final",
+      "b1_1": "Chaos Altemanna",
+      "b1_2": "O'Sole Meeo",
+      "b1_3": "Celestial Dusting",
+      "b1_4": null,
+      "b1_r": "Profusione D'Amore",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Celestial Dusting",
+        "Chaos Altemanna",
+        "O'Sole Meeo",
+        "Profusione D'Amore"
+      ]
+    },
+    {
+      "evo_path": "La Robba",
+      "pattern": "Final",
+      "b1_1": null,
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "La Robba"
+      ]
+    },
+    {
+      "evo_path": "Greatest Jubilee",
+      "pattern": "Final",
+      "b1_1": null,
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Greatest Jubilee"
+      ]
+    },
+    {
+      "evo_path": "Lapiste Tepisto",
+      "pattern": "EzEvo>EzEvo>Union>Final",
+      "b1_1": "Bracelet",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Bi-Bracelet",
+      "b2_1": "Bi-Bracelet",
+      "b2_2": null,
+      "b2_r": "Tri-Bracelet",
+      "b3_1": "Tri-Bracelet",
+      "b3_2": "Kaiser Knuckle",
+      "b3_r": "Lapiste Tepisto",
+      "related_to": [
+        "Bracelet",
+        "Bi-Bracelet",
+        "Tri-Bracelet",
+        "Kaiser Knuckle",
+        "Lapiste Tepisto"
+      ]
+    },
+    {
+      "evo_path": "Super Candybox II Turbo",
+      "pattern": "Gift(Treasure)>Final",
+      "b1_1": "Candybox",
+      "b1_2": "Treasure Chest",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Super Candybox II Turbo",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Candybox",
+        "Treasure Chest",
+        "Super Candybox II Turbo"
+      ]
+    },
+    {
+      "evo_path": "Mazo Familiar",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Pako Battiliar",
+      "b1_2": "Hollow Heart",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Mazo Familiar",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Pako Battiliar",
+        "Hollow Heart",
+        "Mazo Familiar"
+      ]
+    },
+    {
+      "evo_path": "Gunastrophe",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Ammo Appalate",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Horse Cartridge",
+      "b2_1": "Ammo Appalate",
+      "b2_2": "Bracer",
+      "b2_r": "Gunastrophe",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Ammo Appalate",
+        "Gunastrophe"
+      ]
+    },
+    {
+      "evo_path": "Sole Solution",
+      "pattern": "Evo(Max)>HiddenFinal",
+      "b1_1": "Victory Sword",
+      "b1_2": "Torona's Box",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Sole Solution",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Victory Sword",
+        "Torona's Box",
+        "Sole Solution"
+      ]
+    },
+    {
+      "evo_path": "Ashes of Muspell",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Flames of Misspell",
+      "b1_2": "Torona's Box",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Ashes of Muspell",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Flames of Misspell",
+        "Torona's Box",
+        "Ashes of Muspell"
+      ]
+    },
+    {
+      "evo_path": "Spirit Disturbance",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Unearthly Bolt",
+      "b1_2": "Tirajisú",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Spirit Disturbance",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Unearthly Bolt",
+        "Tirajisú",
+        "Spirit Disturbance"
+      ]
+    },
+    {
+      "evo_path": "Celestial Voulge",
+      "pattern": "Evo>Final",
+      "b1_1": "Glass Fandango",
+      "b1_2": "Wings",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Celestial Voulge",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Glass Fandango",
+        "Wings",
+        "Celestial Voulge"
+      ]
+    },
+    {
+      "evo_path": "Miracle of Multiplication",
+      "pattern": "Tuna>Final",
+      "b1_1": "Penshin Fatcha",
+      "b1_2": "Tonno Subito",
+      "b1_3": "Tonnado",
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": "Tonn'omoto",
+      "b2_2": "Tonn'oddeeo",
+      "b2_r": null,
+      "b3_1": "Tonne",
+      "b3_2": "Unsurpassed",
+      "b3_r": "Miracle of Multiplication",
+      "related_to": [
+        "Penshin Fatcha",
+        "Tonno Subito",
+        "Tonnado",
+        "Tonn'omoto",
+        "Tonn'oddeeo",
+        "Tonne",
+        "Unsurpassed",
+        "Miracle of Multiplication"
+      ]
+    },
+    {
+      "evo_path": "Seraphic Cry",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Santa Javelin",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Levelin'Eh",
+      "b2_1": "Santa Javelin",
+      "b2_2": "Clover",
+      "b2_r": "Seraphic Cry",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Santa Javelin",
+        "Clover",
+        "Levelin'Eh",
+        "Seraphic Cry"
+      ]
+    },
+    {
+      "evo_path": "Embrace of Gaea",
+      "pattern": "Evo>Final",
+      "b1_1": "Gaze of Gaea",
+      "b1_2": "Parm Aegis",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Embrace of Gaea",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gaze of Gaea",
+        "Parm Aegis",
+        "Embrace of Gaea"
+      ]
+    },
+    {
+      "evo_path": "Kyra-Stones",
+      "pattern": "Evo>Final",
+      "b1_1": "Magi-Stone",
+      "b1_2": "Karoma's Mana",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Kyra-Stones",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Magi-Stone",
+        "Karoma's Mana",
+        "Kyra-Stones"
+      ]
+    },
+    {
+      "evo_path": "Photonstorm",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Phas3r",
+      "b1_2": "Empty Tome",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Photonstorm",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Phas3r",
+        "Empty Tome",
+        "Photonstorm"
+      ]
+    },
+    {
+      "evo_path": "Wicked Ruler",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Chaos Rune",
+      "b1_2": "Spellbinder",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Wicked Ruler",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Chaos Rune",
+        "Spellbinder",
+        "Wicked Ruler"
+      ]
+    },
+    {
+      "evo_path": "Festive Winds",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Silver Wind",
+      "b1_2": "Pummarola",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Festive Winds",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Silver Wind",
+        "Pummarola",
+        "Festive Winds"
+      ]
+    },
+    {
+      "evo_path": "Godai Shuffle",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Four Seasons",
+      "b1_2": "Candelabrador",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Godai Shuffle",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Four Seasons",
+        "Candelabrador",
+        "Godai Shuffle"
+      ]
+    },
+    {
+      "evo_path": "Echo Night",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Summon Night",
+      "b1_2": "Duplicator",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Echo Night",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Summon Night",
+        "Duplicator",
+        "Echo Night"
+      ]
+    },
+    {
+      "evo_path": "J'Odore",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Mirage Robe",
+      "b1_2": "Attractorb",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "J'Odore",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Mirage Robe",
+        "Attractorb",
+        "J'Odore"
+      ]
+    },
+    {
+      "evo_path": "Muramasa",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Night Sword",
+      "b1_2": "Stone Mask",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Muramasa",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Night Sword",
+        "Stone Mask",
+        "Muramasa"
+      ]
+    },
+    {
+      "evo_path": "Boo Roo Boolle",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Mille Bolle Blu",
+      "b1_2": "Spellbinder",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Boo Roo Boolle",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Mille Bolle Blu",
+        "Spellbinder",
+        "Boo Roo Boolle"
+      ]
+    },
+    {
+      "evo_path": "108 Bocce",
+      "pattern": "Final",
+      "b1_1": null,
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "108 Bocce"
+      ]
+    },
+    {
+      "evo_path": "SpellStrom",
+      "pattern": "TripleUnion>Final",
+      "b1_1": "SpellString",
+      "b1_2": "SpellStream",
+      "b1_3": "SpellStrike",
+      "b1_4": null,
+      "b1_r": "SpellStrom",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "SpellString",
+        "SpellStream",
+        "SpellStrike",
+        "SpellStrom"
+      ]
+    },
+    {
+      "evo_path": "Legionnaire",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Eskizzibur",
+      "b1_2": "Armor",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Legionnaire",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Eskizzibur",
+        "Armor",
+        "Legionnaire"
+      ]
+    },
+    {
+      "evo_path": "Millionaire",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Flash Arrow",
+      "b1_2": "Bracer",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Millionaire",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Flash Arrow",
+        "Bracer",
+        "Millionaire"
+      ]
+    },
+    {
+      "evo_path": "Luminaire",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Prismatic Missile",
+      "b1_2": "Crown",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Luminaire",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Prismatic Missile",
+        "Luminaire"
+      ]
+    },
+    {
+      "evo_path": "Ophion",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Shadow Servant",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Silver Sliver",
+      "b2_1": "Shadow Servant",
+      "b2_2": "Skull O'Maniac",
+      "b2_r": "Ophion",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Shadow Servant",
+        "Skull O'Maniac",
+        "Silver Sliver",
+        "Ophion"
+      ]
+    },
+    {
+      "evo_path": "Party Pooper",
+      "pattern": "Counterpart:Final",
+      "b1_1": "Party Popper",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Party Pooper",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Party Popper",
+        "Party Pooper"
+      ]
+    },
+    {
+      "evo_path": "Emergency Meeting",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Report!",
+      "b1_2": "Mini Crewmate",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Emergency Meeting",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Report!",
+        "Mini Crewmate",
+        "Emergency Meeting"
+      ]
+    },
+    {
+      "evo_path": "Crossed Wires",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Lucky Swipe",
+      "b1_2": "Mini Engineer",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Crossed Wires",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Lucky Swipe",
+        "Mini Engineer",
+        "Crossed Wires"
+      ]
+    },
+    {
+      "evo_path": "Paranormal Scan",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Lifesign Scan",
+      "b1_2": "Mini Ghost",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Paranormal Scan",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Lifesign Scan",
+        "Mini Ghost",
+        "Paranormal Scan"
+      ]
+    },
+    {
+      "evo_path": "Unjust Ejection",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Just Vent",
+      "b1_2": "Mini Shapeshifter",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Unjust Ejection",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Just Vent",
+        "Mini Shapeshifter",
+        "Unjust Ejection"
+      ]
+    },
+    {
+      "evo_path": "Clear Asteroids",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Clear Debris",
+      "b1_2": "Mini Guardian",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Clear Asteroids",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Clear Debris",
+        "Mini Guardian",
+        "Clear Asteroids"
+      ]
+    },
+    {
+      "evo_path": "Impostongue",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Sharp Tongue",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Silver Tongue",
+      "b2_1": "Sharp Tongue",
+      "b2_2": "Mini Impostor",
+      "b2_r": "Impostongue",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Sharp Tongue",
+        "Mini Impostor",
+        "Silver Tongue",
+        "Impostongue"
+      ]
+    },
+    {
+      "evo_path": "Rocket Science",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Science Rocks",
+      "b1_2": "Mini Scientist",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Rocket Science",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Science Rocks",
+        "Mini Scientist",
+        "Rocket Science"
+      ]
+    },
+    {
+      "evo_path": "Hats",
+      "pattern": "Final",
+      "b1_1": null,
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Hats"
+      ]
+    },
+    {
+      "evo_path": "Prototype A",
+      "pattern": "Evo>Final",
+      "b1_1": "Long Gun",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Prototype A",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Long Gun",
+        "Weapon Power-Up",
+        "Prototype A"
+      ]
+    },
+    {
+      "evo_path": "Prototype B",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Short Gun",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Bracer",
+      "b1_4": null,
+      "b1_r": "Prototype B",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Short Gun",
+        "Bracer",
+        "Weapon Power-Up",
+        "Prototype B"
+      ]
+    },
+    {
+      "evo_path": "Prototype C",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Spread Shot",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Empty Tome",
+      "b1_4": null,
+      "b1_r": "Prototype C",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Spread Shot",
+        "Empty Tome",
+        "Weapon Power-Up",
+        "Prototype C"
+      ]
+    },
+    {
+      "evo_path": "Pronto Beam",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "C-U-Laser",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Tirajisú",
+      "b1_4": null,
+      "b1_r": "Pronto Beam",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "C-U-Laser",
+        "Tirajisú",
+        "Weapon Power-Up",
+        "Pronto Beam"
+      ]
+    },
+    {
+      "evo_path": "Fire-L3GS",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Firearm",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Candelabrador",
+      "b1_4": null,
+      "b1_r": "Fire-L3GS",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Firearm",
+        "Candelabrador",
+        "Weapon Power-Up",
+        "Fire-L3GS"
+      ]
+    },
+    {
+      "evo_path": "Wave Beam",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Sonic Bloom",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Armor",
+      "b1_4": null,
+      "b1_r": "Wave Beam",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Sonic Bloom",
+        "Armor",
+        "Weapon Power-Up",
+        "Wave Beam"
+      ]
+    },
+    {
+      "evo_path": "Multistage Missiles",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Homing Miss",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Duplicator",
+      "b1_4": null,
+      "b1_r": "Multistage Missiles",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Homing Miss",
+        "Duplicator",
+        "Weapon Power-Up",
+        "Multistage Missiles"
+      ]
+    },
+    {
+      "evo_path": "Atmo-Torpedo",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Diver Mines",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Attractorb",
+      "b1_4": null,
+      "b1_r": "Atmo-Torpedo",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Diver Mines",
+        "Attractorb",
+        "Weapon Power-Up",
+        "Atmo-Torpedo"
+      ]
+    },
+    {
+      "evo_path": "BFC2000-AD",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Blade Crossbow",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Clover",
+      "b1_4": null,
+      "b1_r": "BFC2000-AD",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Blade Crossbow",
+        "Clover",
+        "Weapon Power-Up",
+        "BFC2000-AD"
+      ]
+    },
+    {
+      "evo_path": "Time Warp",
+      "pattern": "Counterpart:TwoReqEvo>Final",
+      "b1_1": "Prism Lass",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Prism Damsel",
+      "b2_1": "Prism Lass",
+      "b2_2": "Wings",
+      "b2_r": "Time Warp",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Prism Lass",
+        "Wings",
+        "Weapon Power-Up",
+        "Prism Damsel",
+        "Time Warp"
+      ]
+    },
+    {
+      "evo_path": "Big Fuzzy Fist",
+      "pattern": "TwoReqEvo>Final",
+      "b1_1": "Metal Claw",
+      "b1_2": "Weapon Power-Up",
+      "b1_3": "Hollow Heart",
+      "b1_4": null,
+      "b1_r": "Big Fuzzy Fist",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Metal Claw",
+        "Hollow Heart",
+        "Weapon Power-Up",
+        "Big Fuzzy Fist"
+      ]
+    },
+    {
+      "evo_path": "Vampire Killer",
+      "pattern": "Evo>Final",
+      "b1_1": "Alchemy Whip",
+      "b1_2": "Tirajisú",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Vampire Killer",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Alchemy Whip",
+        "Tirajisú",
+        "Vampire Killer"
+      ]
+    },
+    {
+      "evo_path": "Spirit Tornado Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Wind Whip",
+      "b1_2": "Crown",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Spirit Tornado Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Wind Whip",
+        "Crown",
+        "Spirit Tornado Tip"
+      ]
+    },
+    {
+      "evo_path": "Cross Crasher Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Platinum Whip",
+      "b1_2": "Clover",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Cross Crasher Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Platinum Whip",
+        "Clover",
+        "Cross Crasher Tip"
+      ]
+    },
+    {
+      "evo_path": "Hydrostormer Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Dragon Water Whip",
+      "b1_2": "Attractorb",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Hydrostormer Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Dragon Water Whip",
+        "Attractorb",
+        "Hydrostormer Tip"
+      ]
+    },
+    {
+      "evo_path": "Crissaegrim Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Sonic Whip",
+      "b1_2": "Skull O'Maniac",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Crissaegrim Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Sonic Whip",
+        "Skull O'Maniac",
+        "Crissaegrim Tip"
+      ]
+    },
+    {
+      "evo_path": "Mormegil Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Jet Black Whip",
+      "b1_2": "Stone Mask",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Mormegil Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Jet Black Whip",
+        "Stone Mask",
+        "Mormegil Tip"
+      ]
+    },
+    {
+      "evo_path": "Daybreaker Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Vibhuti Whip",
+      "b1_2": "Candelabrador",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Daybreaker Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Vibhuti Whip",
+        "Candelabrador",
+        "Daybreaker Tip"
+      ]
+    },
+    {
+      "evo_path": "Aurablaster Tip",
+      "pattern": "Evo>Final",
+      "b1_1": "Vanitas Whip",
+      "b1_2": "Hollow Heart",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Aurablaster Tip",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Vanitas Whip",
+        "Hollow Heart",
+        "Aurablaster Tip"
+      ]
+    },
+    {
+      "evo_path": "Yagyu Shuriken",
+      "pattern": "Evo>Final",
+      "b1_1": "Shuriken",
+      "b1_2": "Empty Tome",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Yagyu Shuriken",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Shuriken",
+        "Empty Tome",
+        "Yagyu Shuriken"
+      ]
+    },
+    {
+      "evo_path": "Bwaka Knife",
+      "pattern": "Evo>Final",
+      "b1_1": "Curved Knife",
+      "b1_2": "Bracer",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Bwaka Knife",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Curved Knife",
+        "Bracer",
+        "Bwaka Knife"
+      ]
+    },
+    {
+      "evo_path": "Long Inus",
+      "pattern": "Evo>Final",
+      "b1_1": "Javelin",
+      "b1_2": "Spellbinder",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Long Inus",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Javelin",
+        "Spellbinder",
+        "Long Inus"
+      ]
+    },
+    {
+      "evo_path": "Stellar Blade",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Discus",
+      "b1_2": "Parm Aegis",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Stellar Blade",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Discus",
+        "Parm Aegis",
+        "Stellar Blade"
+      ]
+    },
+    {
+      "evo_path": "Wrecking Ball",
+      "pattern": "Evo>Final",
+      "b1_1": "Iron Ball",
+      "b1_2": "Armor",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Wrecking Ball",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Iron Ball",
+        "Armor",
+        "Wrecking Ball"
+      ]
+    },
+    {
+      "evo_path": "Jewel Gun",
+      "pattern": "Evo>Final",
+      "b1_1": "Silver Revolver",
+      "b1_2": "Karoma's Mana",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Jewel Gun",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Silver Revolver",
+        "Karoma's Mana",
+        "Jewel Gun"
+      ]
+    },
+    {
+      "evo_path": "The RPG",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Hand Grenade",
+      "b1_2": "Candelabrador",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "The RPG",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Hand Grenade",
+        "Candelabrador",
+        "The RPG"
+      ]
+    },
+    {
+      "evo_path": "Meal Ticket",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Wine Glass",
+      "b1_2": "Tirajisú",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Meal Ticket",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Wine Glass",
+        "Tirajisú",
+        "Meal Ticket"
+      ]
+    },
+    {
+      "evo_path": "Salamender",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Raging Fire",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Raging Fire",
+      "b2_1": "Raging Fire",
+      "b2_2": "Spinach",
+      "b2_r": "Salamender",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Spinach",
+        "Raging Fire",
+        "Speculo Raging Fire",
+        "Salamender"
+      ]
+    },
+    {
+      "evo_path": "Cocytus",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Ice Fang",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Ice Fang",
+      "b2_1": "Ice Fang",
+      "b2_2": "Spellbinder",
+      "b2_r": "Cocytus",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Spellbinder",
+        "Ice Fang",
+        "Speculo Ice Fang",
+        "Cocytus"
+      ]
+    },
+    {
+      "evo_path": "Pneuma Tempestas",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Gale Force",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Gale Force",
+      "b2_1": "Gale Force",
+      "b2_2": "Bracer",
+      "b2_r": "Pneuma Tempestas",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Bracer",
+        "Gale Force",
+        "Speculo Gale Force",
+        "Pneuma Tempestas"
+      ]
+    },
+    {
+      "evo_path": "Gemma Torpor",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Rock Riot",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Rock Riot",
+      "b2_1": "Rock Riot",
+      "b2_2": "Stone Mask",
+      "b2_r": "Gemma Torpor",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Stone Mask",
+        "Rock Riot",
+        "Speculo Rock Riot",
+        "Gemma Torpor"
+      ]
+    },
+    {
+      "evo_path": "Tenebris Tonitrus",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Fulgur",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Fulgur",
+      "b2_1": "Fulgur",
+      "b2_2": "Duplicator",
+      "b2_r": "Tenebris Tonitrus",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Duplicator",
+        "Fulgur",
+        "Speculo Fulgur",
+        "Tenebris Tonitrus"
+      ]
+    },
+    {
+      "evo_path": "Keremet Morbus",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Keremet Bubbles",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Keremet Bubbles",
+      "b2_1": "Keremet Bubbles",
+      "b2_2": "Armor",
+      "b2_r": "Keremet Morbus",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Armor",
+        "Keremet Bubbles",
+        "Speculo Keremet Bubbles",
+        "Keremet Morbus"
+      ]
+    },
+    {
+      "evo_path": "Nightmare",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Hex",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Hex",
+      "b2_1": "Hex",
+      "b2_2": "Skull O'Maniac",
+      "b2_r": "Nightmare",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Skull O'Maniac",
+        "Hex",
+        "Speculo Hex",
+        "Nightmare"
+      ]
+    },
+    {
+      "evo_path": "Sanctuary",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Refectio",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Refectio",
+      "b2_1": "Refectio",
+      "b2_2": "Clover",
+      "b2_r": "Sanctuary",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Clover",
+        "Refectio",
+        "Speculo Refectio",
+        "Sanctuary"
+      ]
+    },
+    {
+      "evo_path": "Stamazza",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Mace",
+      "b1_2": "Hollow Heart",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Stamazza",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Hollow Heart",
+        "Mace",
+        "Stamazza"
+      ]
+    },
+    {
+      "evo_path": "Moon Rod",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Star Flail",
+      "b1_2": "Pummarola",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Moon Rod",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Pummarola",
+        "Star Flail",
+        "Moon Rod"
+      ]
+    },
+    {
+      "evo_path": "Thunderbolt Spear",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Alucard Spear",
+      "b1_2": "Wings",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Thunderbolt Spear",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Wings",
+        "Alucard Spear",
+        "Thunderbolt Spear"
+      ]
+    },
+    {
+      "evo_path": "Gungnir-Souris",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Trident",
+      "b1_2": "Duplicator",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Gungnir-Souris",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Duplicator",
+        "Trident",
+        "Gungnir-Souris"
+      ]
+    },
+    {
+      "evo_path": "Dark Iron Shield",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Iron Shield",
+      "b1_2": "Parm Aegis",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dark Iron Shield",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Parm Aegis",
+        "Iron Shield",
+        "Dark Iron Shield"
+      ]
+    },
+    {
+      "evo_path": "Sacred Beasts Tower Shield",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Guardian's Targe",
+      "b1_2": "Pummarola",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Sacred Beasts Tower Shield",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Pummarola",
+        "Guardian's Targe",
+        "Sacred Beasts Tower Shield"
+      ]
+    },
+    {
+      "evo_path": "Rune Sword",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Tyrfing",
+      "b1_2": "Spinach",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Rune Sword",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Spinach",
+        "Tyrfing",
+        "Rune Sword"
+      ]
+    },
+    {
+      "evo_path": "Alucard Shield",
+      "pattern": "EzEvo>AlucardGiftFinal",
+      "b1_1": "Alucart Sworb",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Alucard Swords",
+      "b2_1": "Alucard Swords",
+      "b2_2": null,
+      "b2_r": "Alucard Shield",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Alucart Sworb",
+        "Alucard Swords",
+        "Alucard Shield"
+      ]
+    },
+    {
+      "evo_path": "Melio Confodere",
+      "pattern": "EzEvo>EzEvo>Final",
+      "b1_1": "Confodere",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Vol Confodere",
+      "b2_1": "Vol Confodere",
+      "b2_2": null,
+      "b2_r": "Melio Confodere",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Confodere",
+        "Vol Confodere",
+        "Melio Confodere"
+      ]
+    },
+    {
+      "evo_path": "Nitesco",
+      "pattern": "Counterpart:Evo(Max)>Final",
+      "b1_1": "Globus",
+      "b1_2": "Gemini (I)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Speculo Globus",
+      "b2_1": "Globus",
+      "b2_2": "Empty Tome",
+      "b2_r": "Nitesco",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gemini (I)",
+        "Globus",
+        "Empty Tome",
+        "Speculo Globus",
+        "Nitesco"
+      ]
+    },
+    {
+      "evo_path": "Acerbatus",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Optical Shot",
+      "b1_2": "Karoma's Mana",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Acerbatus",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Optical Shot",
+        "Karoma's Mana",
+        "Acerbatus"
+      ]
+    },
+    {
+      "evo_path": "Trinum Custodem",
+      "pattern": "TripleUnion>Final",
+      "b1_1": "Dextro Custos",
+      "b1_2": "Centralis Custos",
+      "b1_3": "Sinestro Custos",
+      "b1_4": null,
+      "b1_r": "Trinum Custodem",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Dextro Custos",
+        "Sinestro Custos",
+        "Centralis Custos",
+        "Trinum Custodem"
+      ]
+    },
+    {
+      "evo_path": "Power of Sire",
+      "pattern": "TripleUnion>Final",
+      "b1_1": "Dominus Anger",
+      "b1_2": "Dominus Hatred",
+      "b1_3": "Dominus Agony",
+      "b1_4": null,
+      "b1_r": "Power of Sire",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Dominus Anger",
+        "Dominus Hatred",
+        "Dominus Agony",
+        "Power of Sire"
+      ]
+    },
+    {
+      "evo_path": "Rapidus Fio",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Sonic Dash",
+      "b1_2": "Wings",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Rapidus Fio",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Sonic Dash",
+        "Wings",
+        "Rapidus Fio"
+      ]
+    },
+    {
+      "evo_path": "Universitas",
+      "pattern": "Dual(Evo(Max))>HiddenFinal",
+      "b1_1": "Luminatio",
+      "b1_2": "Crown",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Vol Luminatio",
+      "b2_1": "Umbra",
+      "b2_2": "Attractorb",
+      "b2_r": "Vol Umbra",
+      "b3_1": "Vol Luminatio",
+      "b3_2": "Vol Umbra",
+      "b3_r": "Universitas",
+      "related_to": [
+        "Luminatio",
+        "Crown",
+        "Vol Luminatio",
+        "Umbra",
+        "Vol Umbra",
+        "Attractorb",
+        "Universitas"
+      ]
+    },
+    {
+      "evo_path": "Morning Star",
+      "pattern": "Magic Whip>Final",
+      "b1_1": "Alchemy Whip|Wind Whip|Platinum Whip|Dragon Water Whip|Sonic Whip|Jet Black Whip|Vibhuti Whip|Vanitas Whip",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Morning Star"
+      ]
+    },
+    {
+      "evo_path": "Coat of Arms",
+      "pattern": "Vampire-Killing Tool>Final",
+      "b1_1": "Whip|Knife|Axe|Cross|Grand Cross|King Bible|Santa Water|Hydro Storm|Runetracer|Troll Bomb|Lightning Ring|Svarog Statue|Kaiser Knuckle|Shuriken|Curved Knife|Javelin|Discus|Iron Ball|Silver Revolver|Hand Grenade|Wine Glass",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Coat of Arms"
+      ]
+    },
+    {
+      "evo_path": "Spectral Sword",
+      "pattern": "Magic Weapon>Final",
+      "b1_1": "Valmanway|Icebrand|Aura Blast|Arrow of Goth|Mace|Star Flail|Alucard Spear|Trident|Iron Shield|Guardian's Targe|Alucart Sworb|Pocket Knife",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Spectral Sword"
+      ]
+    },
+    {
+      "evo_path": "Belnades' Spellbook",
+      "pattern": "Belnades' Spell>Final",
+      "b1_1": "Anura|Summon Spirit Tornado|Raging Fire|Ice Fang|Gale Force|Rock Riot|Fulgur|Keremet Bubbles|Hex|Refectio",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Belnades' Spellbook"
+      ]
+    },
+    {
+      "evo_path": "Ebony Diabologue",
+      "pattern": "Ambiguous Power>Final",
+      "b1_1": "Summon Spirit|Dark Rift|Sword Brothers|Soul Steal|Confodere|Globus|Optical Shot|Dextro Custos|Sinestro Custos|Centralis Custos|Dominus Anger|Dominus Hatred|Dominus Agony|Sonic Dash|Luminatio|Umbra",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Ebony Diabologue"
+      ]
+    },
+    {
+      "evo_path": "Claimh Solais",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Pocket Knife",
+      "b1_2": "Torrona's Box",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Claimh Solais",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Pocket Knife",
+        "Torrona's Box",
+        "Claimh Solais"
+      ]
+    },
+    {
+      "evo_path": "Clock Tower",
+      "pattern": "QuadUnion>HiddenFinal",
+      "b1_1": "Endo Gears",
+      "b1_2": "Peri Pendulum",
+      "b1_3": "Myo Lift",
+      "b1_4": "Epi Head",
+      "b1_r": "Clock Tower",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Endo Gears",
+        "Peri Pendulum",
+        "Myo Lift",
+        "Epi Head",
+        "Clock Tower"
+      ]
+    },
+    {
+      "evo_path": "Familiar Forge",
+      "pattern": "Familiar>Final",
+      "b1_1": "Ukoback|Bitterfly|Alleged Ghost|Imp|Wood Rod|Pumpkin|Faerie|Sacred Cardinal|Sacred Dragon|Sacred Tiger|Sacred Turtle",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Familiar Forge"
+      ]
+    },
+    {
+      "evo_path": "Espada Ropera",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Fleuret",
+      "b1_2": "Glimmer (Crystalline Carve)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Shocking Rush)",
+      "b2_r": "Espada Ropera",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Fleuret",
+        "Dress Sword",
+        "Espada Ropera"
+      ]
+    },
+    {
+      "evo_path": "Dayblade",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Town Sword",
+      "b1_2": "Glimmer (Swallow Slice)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Airwave)",
+      "b2_r": "Dayblade",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Fleuret",
+        "Dress Sword",
+        "Espada Ropera"
+      ]
+    },
+    {
+      "evo_path": "Pursuant Blades",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Splashers",
+      "b1_2": "Glimmer (Dual Whirlwind)",
+      "b1_3": "Spellbinder",
+      "b1_4": null,
+      "b1_r": "Pursuant Blades",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Splashers",
+        "Pursuant Blades",
+        "Spellbinder"
+      ]
+    },
+    {
+      "evo_path": "Galatyn",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Flamberge",
+      "b1_2": "Glimmer (Bull Crush)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Absetzen)",
+      "b2_r": "Galatyn",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Flamberge",
+        "Zweihander",
+        "Galatyn"
+      ]
+    },
+    {
+      "evo_path": "Gilded Hand",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Punch",
+      "b1_2": "Glimmer (Raksha)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Shenlong Firefist)",
+      "b2_r": "Gilded Hand",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Punch",
+        "Pressure Point",
+        "Gilded Hand"
+      ]
+    },
+    {
+      "evo_path": "Triangle Kick",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Kick",
+      "b1_2": "Glimmer (Thunder Kick)",
+      "b1_3": "Pummarola",
+      "b1_4": null,
+      "b1_r": "Triangle Kick",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Kick",
+        "Triangle Kick",
+        "Pummarola"
+      ]
+    },
+    {
+      "evo_path": "Divergence",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Saber Machine Gun",
+      "b1_2": "Glimmer (Shockwave)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Bombarding Fire)",
+      "b2_r": "Divergence",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Saber Machine Gun",
+        "Hecaton Machine Gun",
+        "Divergence"
+      ]
+    },
+    {
+      "evo_path": "Hyperion Bazooka",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Super Missile",
+      "b1_2": "Glimmer (Ballistic Missiles)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Artificial Hailstorm)",
+      "b2_r": "Hyperion Bazooka",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Super Missile",
+        "Hydra Cannon",
+        "Hyperion Bazooka"
+      ]
+    },
+    {
+      "evo_path": "Pendragon",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Eagle Gun",
+      "b1_2": "Glimmer (Falconfire)",
+      "b1_3": "Spinach",
+      "b1_4": null,
+      "b1_r": "Pendragon",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Eagle Gun",
+        "Pendragon",
+        "Spinach"
+      ]
+    },
+    {
+      "evo_path": "Jetstream",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Khukuri",
+      "b1_2": "Glimmer (Moonfall Slash)",
+      "b1_3": "Parm Aegis",
+      "b1_4": null,
+      "b1_r": "Jetstream",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Khukuri",
+        "Jetstream",
+        "Parm Aegis"
+      ]
+    },
+    {
+      "evo_path": "Gekkabijin",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Twin Dragon",
+      "b1_2": "Glimmer (Gravedigger)",
+      "b1_3": "Karoma's Mana",
+      "b1_4": null,
+      "b1_r": "Gekkabijin",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Twin Dragon",
+        "Gekkabijin",
+        "Karoma's Mana"
+      ]
+    },
+    {
+      "evo_path": "Falconwind",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Bullova",
+      "b1_2": "Glimmer (Hell's Fury)",
+      "b1_3": "Skull O'Maniac",
+      "b1_4": null,
+      "b1_r": "Falconwind",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Bullova",
+        "Falconwind",
+        "Skull O'Maniac"
+      ]
+    },
+    {
+      "evo_path": "Blood Chalice",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Sanguine Star",
+      "b1_2": "Glimmer (Blood Rage)",
+      "b1_3": "Stone Mask",
+      "b1_4": null,
+      "b1_r": "Blood Chalice",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Sanguine Star",
+        "Blood Chalice",
+        "Stone Mask"
+      ]
+    },
+    {
+      "evo_path": "Lohengrin",
+      "pattern": "GlimmerEzEvo>GlimmerEzEvo>Final",
+      "b1_1": "Glaive",
+      "b1_2": "Glimmer (Divine Lancer)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dress Sword",
+      "b2_1": "Dress Sword",
+      "b2_2": "Glimmer (Stardust)",
+      "b2_r": "Lohengrin",
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Glaive",
+        "Feather Spear",
+        "Lohengrin"
+      ]
+    },
+    {
+      "evo_path": "Rings of Calamity",
+      "pattern": "FivePassive>Final",
+      "b1_1": "Spirit Rings",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Rings of Calamity",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Spirit Rings",
+        "Rings of Calamity"
+      ]
+    },
+    {
+      "evo_path": "Emerald Wave",
+      "pattern": "GlimmerEvo>Final",
+      "b1_1": "Emerald Rapture",
+      "b1_2": "Glimmer (Crown)",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Emerald Wave",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Emerald Rapture",
+        "Emerald Wave"
+      ]
+    },
+    {
+      "evo_path": "Intuition",
+      "pattern": "Emerald Diorama>Final",
+      "b1_1": "Fleuret|Town Sword|Splashers|Flamberge|Punch|Kick|Saber Machine Gun|Super Missile|Eagle Gun|Khukuri|Twin Dragon|Bullova|Sanguine Star|Glaive|Spirit Rings|Emerald Rapture|Intuition",
+      "b1_2": null,
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": null,
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Intuition"
+      ]
+    },
+    {
+      "evo_path": "NaneInferno",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Infernolatro",
+      "b1_2": "Outer Saboteur",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "NaneInferno",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Infernolatro",
+        "NaneInferno",
+        "Outer Saboteur"
+      ]
+    },
+    {
+      "evo_path": "Cavendish",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Gros Michel",
+      "b1_2": "Outer Saboteur",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Cavendish",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Gros Michel",
+        "Cavendish"
+      ]
+    },
+    {
+      "evo_path": "Royal Flush",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Fibonacci Spritz",
+      "b1_2": "Outer Saboteur",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Royal Flush",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Fibonacci Spritz",
+        "Royal Flush"
+      ]
+    },
+    {
+      "evo_path": "Negative Space",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Celestial Booster",
+      "b1_2": "Outer Saboteur",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Negative Space",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Celestial Booster",
+        "Negative Space"
+      ]
+    }
   ]
 };

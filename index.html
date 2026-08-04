@@ -302,6 +302,7 @@
     .info-sidebar .req-icon img { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
     .info-sidebar .stat-grid { font-size: .78rem; }
     .info-sidebar .stat-row { padding: 2px 0; }
+    .info-sidebar .stat-header { padding: 0 0 3px; }
     /* Player rows grid — varies by player count */
     .players-grid {
       display: grid;
@@ -466,7 +467,7 @@
 
     /* left panel (stats) */
     .ovl-left {
-      width: 180px;
+      width: 215px;
       flex-shrink: 0;
       border-right: 1px solid var(--border);
       overflow-y: auto;
@@ -504,16 +505,52 @@
     }
 
     /* ── Stat grid ── */
-    .stat-grid { display: flex; flex-direction: column; gap: 2px; }
+    .stat-grid { display: flex; flex-direction: column; gap: 1px; }
+    .stat-header {
+      display: grid; grid-template-columns: 1fr 36px 36px 40px 46px;
+      font-size: .62rem; text-transform: uppercase;
+      color: var(--text-muted); padding: 0 4px 3px; border-bottom: 1px solid var(--border);
+      margin-bottom: 2px;
+    }
+    .stat-header span { text-align: right; }
+    .stat-header span:first-child { text-align: left; }
+    .ovl-left .stat-header,
+    .ovl-left .stat-row { grid-template-columns: 1fr 30px 30px 34px 40px; font-size: .67rem; }
+    .ovl-left .stat-header { font-size: .58rem; }
     .stat-row {
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: .78rem; padding: 2px 4px; border-radius: 3px;
+      display: grid; grid-template-columns: 1fr 36px 36px 40px 46px;
+      align-items: center; font-size: .71rem; padding: 2px 4px; border-radius: 3px;
     }
     .stat-row.changed { background: rgba(232,184,32,.12); }
     .stat-key { color: var(--text-muted); }
-    .stat-val { font-weight: 600; color: var(--text); }
+    .stat-base  { text-align: right; color: var(--text-muted); font-size: .68rem; }
+    .stat-char  { text-align: right; font-weight: 600; }
+    .stat-pu    { text-align: right; color: #7ab8e8; font-size: .69rem; }
+    .stat-total { text-align: right; font-weight: 700; color: var(--text); }
+    .stat-row.capped .stat-total { color: var(--gold); font-weight: 600; }
     .stat-val.pos { color: #5ddd88; }
     .stat-val.neg { color: #dd5555; }
+
+    /* ── Power-up overlay ── */
+    .pu-panel { max-width: 480px; width: 92vw; }
+    .pu-list-wrap { overflow-y: auto; padding: .5rem .75rem; flex: 1; }
+    .pu-row {
+      display: grid; grid-template-columns: 24px 1fr auto;
+      align-items: center; gap: .5rem;
+      padding: 4px 2px; border-bottom: 1px solid rgba(184,136,32,.15);
+    }
+    .pu-row.no-levels { opacity: .4; }
+    .pu-icon { width: 24px; height: 24px; image-rendering: pixelated; object-fit: cover; }
+    .pu-name { font-size: .8rem; color: var(--text); }
+    .pu-level-ctrl { display: flex; align-items: center; gap: 4px; }
+    .pu-level-ctrl button {
+      width: 20px; height: 20px; padding: 0; line-height: 1;
+      font-size: .85rem; border: 1px solid var(--border); border-radius: 3px;
+      background: var(--surface2); color: var(--text); cursor: pointer;
+    }
+    .pu-level-ctrl button:disabled { opacity: .3; cursor: default; }
+    .pu-level-ctrl button:not(:disabled):hover { border-color: var(--border-hi); color: var(--gold); }
+    .pu-level-display { font-size: .75rem; font-family: var(--font-title); color: var(--gold); min-width: 30px; text-align: center; }
 
     /* ── Item / Arcana grid ── */
     .item-section-label {
@@ -533,22 +570,47 @@
     }
     .item-card {
       width: var(--slot-size); height: var(--slot-size);
-      background: var(--slot-bg);
-      border: 2px solid var(--slot-border);
       border-radius: 6px;
       cursor: pointer;
       position: relative;
       overflow: hidden;
       flex-shrink: 0;
-      transition: border-color .15s, box-shadow .15s, opacity .15s;
+      transition: box-shadow .15s, opacity .15s;
     }
     .item-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .item-card:hover { border-color: var(--border-hi); box-shadow: 0 0 8px rgba(184,136,32,.4); }
-    .item-card.selected { border-color: var(--gold); box-shadow: 0 0 10px rgba(232,184,32,.5); }
-    .item-card.hi-char   { border-color: var(--hi-char);   box-shadow: 0 0 6px rgba(58,122,217,.4); }
-    .item-card.hi-arcana { border-color: var(--hi-arcana);  box-shadow: 0 0 6px rgba(155,63,217,.4); }
-    .item-card.hi-item   { border-color: var(--hi-item);    box-shadow: 0 0 6px rgba(42,170,96,.4); }
+    .item-card:hover { box-shadow: 0 0 0 2px var(--border-hi), 0 0 8px rgba(184,136,32,.4); }
+    .item-card.selected { box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(232,184,32,.5); }
+    .item-card.hi-char   { box-shadow: 0 0 0 2px var(--hi-char),   0 0 6px rgba(58,122,217,.4); }
+    .item-card.hi-arcana { box-shadow: 0 0 0 2px var(--hi-arcana), 0 0 6px rgba(155,63,217,.4); }
+    .item-card.hi-item   { box-shadow: 0 0 0 2px var(--hi-item),   0 0 6px rgba(42,170,96,.4); }
     .item-card.dim { opacity: .35; pointer-events: none; }
+    .search-dim { display: none !important; }
+    .ovl-search-wrap { position: relative; margin-bottom: .6rem; }
+    .ovl-search {
+      width: 100%; box-sizing: border-box;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 4px; padding: 5px 28px 5px 9px;
+      color: var(--text); font-size: .82rem; font-family: var(--font-body);
+      outline: none; display: block;
+    }
+    .ovl-search:focus { border-color: var(--border-hi); }
+    .ovl-search-clear {
+      position: absolute; right: 0; top: 0; bottom: 0;
+      width: 26px; background: none; border: none; cursor: pointer;
+      color: var(--text-muted); font-size: .8rem; line-height: 1;
+      display: none; align-items: center; justify-content: center;
+      padding: 0;
+    }
+    .ovl-search-clear:hover { color: var(--text); }
+    .ovl-search:not(:placeholder-shown) + .ovl-search-clear { display: flex; }
+    .item-card.evo { box-shadow: 0 0 0 1px rgba(232,184,32,.3); }
+    .req-row { display:flex; align-items:center; gap:.4rem; margin:.2rem 0; }
+    .req-icon { width:26px; height:26px; flex-shrink:0; border-radius:4px; overflow:hidden; }
+    .req-icon img { width:100%; height:100%; object-fit:cover; display:block; }
+    .req-status { font-size:.67rem; padding:1px 5px; border-radius:2px; white-space:nowrap; }
+    .req-status.ok   { color:#5ddd88; }
+    .req-status.add  { color:var(--gold); }
+    .req-status.miss { color:#dd5555; cursor:help; }
     .item-card .card-badge {
       position: absolute; bottom: 0; left: 0; right: 0;
       background: rgba(0,0,0,.7);
@@ -564,7 +626,6 @@
       content: '';
       position: absolute; inset: -3px;
       background: var(--surface2);
-      border: 2px solid var(--slot-border);
       border-radius: 7px;
       z-index: -1;
       transform: translate(4px, 4px);
@@ -592,13 +653,7 @@
     .stack-btn:hover { color: var(--gold); }
 
     /* ── Detail panels (right side) ── */
-    .detail-icon {
-      width: 64px; height: 64px;
-      border: 2px solid var(--slot-border);
-      border-radius: 8px;
-      overflow: hidden;
-      margin: 0 auto .5rem;
-    }
+    .detail-icon { width: 64px; height: 64px; border-radius: 8px; overflow: hidden; margin: 0 auto .5rem; }
     .detail-icon img { width: 100%; height: 100%; object-fit: cover; }
     .detail-name { font-family: var(--font-title); font-size: .95rem; text-align: center; color: var(--gold); margin-bottom: .3rem; }
     .detail-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; font-style: italic; }
@@ -607,26 +662,47 @@
     .detail-section ul { list-style: none; padding: 0; }
     .detail-section li { font-size: .77rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
     .detail-section li::before { content: '▸ '; color: var(--gold-dim); }
-    .evo-chain {
-      display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
-      font-size: .75rem; margin-top: .3rem;
-    }
-    .evo-chain .evo-step {
-      background: var(--slot-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2px 5px;
-      color: var(--text-muted);
-    }
-    .evo-chain .evo-step.current { border-color: var(--gold); color: var(--gold); }
-    .evo-chain .evo-arrow { color: var(--border-hi); }
+    .evo-flow { display: flex; flex-direction: column; gap: 8px; margin-top: .35rem; }
+    .evo-row { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; }
+    .evo-node { width: 28px; height: 28px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
+    .evo-node.current { outline: 1px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.4); }
+    .evo-node.evo-hidden { opacity: .4; }
+    .evo-node img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .evo-op { font-size: .8rem; color: var(--text-muted); flex-shrink: 0; }
+    .evo-nw { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; flex-shrink: 0; }
+    .evo-max { font-size: .5rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; }
+    .evo-sub { font-size: .48rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
+    .evo-dash-line { width: 14px; border-top: 1.5px dashed var(--text-dim); flex-shrink: 0; }
+    .evo-gem { width: 14px; height: 14px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
+    .evo-gem img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* merge-bar: stacked rows on left → bar → output right (dual/Vandalier/Universitas) */
+    .evo-merge { display: flex; align-items: stretch; gap: 6px; }
+    .evo-merge-rows { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+    .evo-merge-bar { width: 2px; background: var(--border); border-radius: 1px; flex-shrink: 0; min-height: 24px; }
+    .evo-merge-out { display: flex; align-items: center; gap: 4px; }
+    /* u2f grid: base-evo on left | bar | mid on right-top, union-partner on right-bot | final (centered) */
+    .evo-u2f { display: grid; grid-template-columns: auto 2px auto auto; grid-template-rows: auto auto; gap: 4px 6px; align-items: center; }
+    .evo-u2f > .u2l { grid-column:1; grid-row:1; display:flex; align-items:center; gap:4px; }
+    .evo-u2f > .u2b { grid-column:2; grid-row:1/3; background:var(--border); align-self:stretch; border-radius:1px; }
+    .evo-u2f > .u2t { grid-column:3; grid-row:1; display:flex; align-items:center; gap:4px; }
+    .evo-u2f > .u2m { grid-column:3; grid-row:2; display:flex; align-items:center; gap:4px; }
+    .evo-u2f > .u2f { grid-column:4; grid-row:1/3; display:flex; align-items:center; gap:4px; }
+    /* triple/quad union: stacked inputs + bar + final */
+    .evo-multi-union { display: flex; align-items: stretch; gap: 6px; }
+    .evo-multi-inputs { display: flex; flex-direction: column; gap: 4px; justify-content: center; }
+    /* collection finals */
+    .evo-coll-wrap { display: flex; flex-direction: column; gap: 4px; }
+    .evo-coll-inputs { display: flex; flex-wrap: wrap; gap: 3px; }
+    /* pentagram (FivePassive) */
+    .evo-pentagram { position: relative; width: 110px; height: 110px; margin: .4rem 0; }
+    .evo-pentagram .ep-item { position: absolute; transform: translate(-50%,-50%); }
+    .evo-pentagram .ep-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    /* hexagram (Tuna) */
+    .evo-hexagram { position: relative; width: 160px; height: 150px; margin: .4rem 0; }
+    .evo-hexagram .eh-item { position: absolute; transform: translate(-50%,-50%); }
+    .evo-hexagram .eh-label { position: absolute; font-size: .44rem; color: var(--text-muted); white-space: nowrap; transform: translate(-50%,0); }
     .req-icons { display: flex; gap: 4px; flex-wrap: wrap; margin-top: .3rem; }
-    .req-icon {
-      width: 28px; height: 28px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-    }
+    .req-icon { width: 28px; height: 28px; border-radius: 4px; overflow: hidden; }
     .req-icon img { width: 100%; height: 100%; object-fit: cover; }
     .hi-badge {
       display: inline-block;
@@ -706,9 +782,7 @@
     .stage-row.selected { background: rgba(232,184,32,.1); border-color: var(--gold); color: var(--gold); }
     .stage-row .stage-icon {
       width: 32px; height: 32px;
-      background: var(--slot-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      border-radius: 4px; overflow: hidden;
       flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       font-size: .7rem; color: var(--text-dim);
@@ -814,7 +888,10 @@
       selected: null,
       variantIdx: {}, // baseName → idx
       stackIdx: {},   // baseNum → idx (0=arcana,1=darkana)
+      search: '',
     },
+    puActive: false,
+    powerUps: {}, // stat name → current level (initialized from D.stats on load)
     banish: {
       active: false,
       selected: new Set(),
@@ -842,6 +919,225 @@
 
   function weaponByName(name) { return D.weapons.find(w => w.name === name) || null; }
   function passiveByName(name) { return D.passives.find(p => p.name === name) || null; }
+
+  // ── Evo path renderer ────────────────────────────────────────────────────
+
+  function evoPathsFor(name) {
+    return (D.evoPaths || []).filter(ep => ep.related_to.includes(name) || ep.evo_path === name);
+  }
+
+  function evoIcon(name) {
+    if (!name) return EMPTY_ICON;
+    const w = D.weapons.find(x => x.name === name); if (w) return w.icon || EMPTY_ICON;
+    const p = D.passives.find(x => x.name === name); if (p) return p.icon || EMPTY_ICON;
+    const a = D.arcana.find(x => x.name === name);   if (a) return a.icon || EMPTY_ICON;
+    const c = D.characters.find(x => x.name === name); if (c) return c.icon || EMPTY_ICON;
+    return EMPTY_ICON;
+  }
+
+  function eNode(name, { cur = false, max = false, hidden = false, sub = null } = {}) {
+    if (!name) return '';
+    const icon = evoIcon(name);
+    let cls = 'evo-node'; if (cur) cls += ' current'; if (hidden) cls += ' evo-hidden';
+    const img = `<img src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${esc(EMPTY_ICON)}'">`;
+    const nd = `<div class="${cls}" title="${esc(name)}">${img}</div>`;
+    const extras = [];
+    if (max) extras.push(`<div class="evo-max">MAX</div>`);
+    if (sub) extras.push(`<div class="evo-sub">${esc(sub)}</div>`);
+    if (!extras.length) return nd;
+    return `<div class="evo-nw">${nd}${extras.join('')}</div>`;
+  }
+
+  const EP = `<span class="evo-op">+</span>`;
+  const EA = `<span class="evo-op">→</span>`;
+
+  // Small Gemini connector node — replaces ← [gem] + between counterpart and base.
+  // pos: 'top' = align-self:flex-start, 'bot' = flex-end, 'center' = center
+  function gemNode(name, pos = 'center') {
+    const icon = evoIcon(name);
+    const as = pos === 'top' ? 'flex-start' : pos === 'bot' ? 'flex-end' : 'center';
+    return `<div class="evo-gem" style="align-self:${as}" title="${esc(name)}"><img src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>`;
+  }
+
+  function eRow(...parts) { return `<div class="evo-row">${parts.join('')}</div>`; }
+
+  function mergeBar(leftRows, rightHTML) {
+    const rows = leftRows.map(r => `<div class="evo-row">${r}</div>`).join('');
+    return `<div class="evo-merge"><div class="evo-merge-rows">${rows}</div><div class="evo-merge-bar"></div><div class="evo-merge-out">${rightHTML}</div></div>`;
+  }
+
+  // Grid layout: base-evo left | bar | mid(top) + union-partner(bot) | final(centered)
+  function u2f(leftHTML, midHTML, partHTML, finalHTML) {
+    return `<div class="evo-u2f"><div class="u2l">${leftHTML}</div><div class="u2b"></div><div class="u2t">${midHTML}</div><div class="u2m">${partHTML}</div><div class="u2f">${finalHTML}</div></div>`;
+  }
+
+  function buildEvoChainHTML(w) {
+    const paths = evoPathsFor(w.name);
+    if (!paths.length) return '';
+    const sections = paths.map(ep => renderEvoPath(ep, w.name)).filter(Boolean);
+    if (!sections.length) return '';
+    return `<div class="detail-section"><h3>Evolution</h3><div class="evo-flow">${sections.join('')}</div></div>`;
+  }
+
+  function renderEvoPath(ep, cur) {
+    const n = (name, opts = {}) => eNode(name, { ...opts, cur: name === cur });
+    const { b1_1, b1_2, b1_3, b1_4, b1_r, b2_1, b2_2, b2_r, b3_1, b3_2, b3_r, pattern: pat } = ep;
+
+    if (pat === 'Final') return '';
+
+    if (pat === 'Evo>Final')
+      return eRow(n(b1_1), EP, n(b1_2), EA, n(b1_r));
+
+    if (pat === 'Evo(Max)>Final')
+      return eRow(n(b1_1), EP, n(b1_2, { max: true }), EA, n(b1_r));
+
+    if (pat === 'Evo(Max)>HiddenFinal')
+      return eRow(n(b1_1), EP, n(b1_2, { max: true }), EA, n(b1_r, { hidden: true, sub: 'Hidden' }));
+
+    if (pat === 'TwoReqEvo>Final')
+      return eRow(n(b1_1), EP, n(b1_2), EP, n(b1_3), EA, n(b1_r));
+
+    if (pat === 'TwoReqEvo(Max)>Final')
+      return eRow(n(b1_1), EP, n(b1_2, { max: true }), EP, n(b1_3, { max: true }), EA, n(b1_r));
+
+    if (pat === 'Evo>Union>Final') {
+      // left: [b1_1]+[b1_2] | mid: [b1_r] | bot: [b2_2] (aligned with mid) | final: +→[b2_r]
+      return u2f(n(b1_1) + EP + n(b1_2), n(b1_r), n(b2_2), EP + EA + n(b2_r));
+    }
+
+    if (pat === 'TripleUnion>Final') {
+      return `<div class="evo-multi-union"><div class="evo-multi-inputs">${[b1_1,b1_2,b1_3].map(nm => `<div class="evo-row">${n(nm)}</div>`).join('')}</div><div class="evo-merge-bar"></div><div class="evo-merge-out">${EA}${n(b1_r)}</div></div>`;
+    }
+
+    if (pat === 'QuadUnion>HiddenFinal') {
+      return `<div class="evo-multi-union"><div class="evo-multi-inputs">${[b1_1,b1_2,b1_3,b1_4].map(nm => `<div class="evo-row">${n(nm)}</div>`).join('')}</div><div class="evo-merge-bar"></div><div class="evo-merge-out">${EA}${n(b1_r, { hidden: true, sub: 'Hidden' })}</div></div>`;
+    }
+
+    if (pat === 'EzEvo>EzEvo>Final')
+      return eRow(n(b1_1), EA, n(b1_r), EA, n(b3_1));
+
+    if (pat === 'EzEvo>EzEvo>Union>Final') {
+      // left: [b1_1]→[b1_r] | mid: [b2_r] | bot: [b3_2] (aligned) | final: +→[b3_r]
+      return u2f(n(b1_1) + EA + n(b1_r), n(b2_r), n(b3_2), EP + EA + n(b3_r));
+    }
+
+    if (pat === 'EzEvo>AlucardGiftFinal') {
+      const examples = ['Bloody Tear','Holy Wand','Thousand Edge','Death Spiral','Heaven Sword'];
+      const dimRow = `<div class="evo-row" style="gap:2px;opacity:.45">${examples.map(nm => n(nm, { hidden: true })).join('')}<span class="evo-sub" style="align-self:center;margin-left:4px">+5 evos</span></div>`;
+      return eRow(n(b1_1), EA, n(b1_r), EA, n(b2_1, { hidden: true, sub: 'Hidden' })) + dimRow;
+    }
+
+    if (pat === 'Counterpart:Final')
+      return eRow(n(b1_r), gemNode(b1_2), n(b1_1));
+
+    if (pat === 'Counterpart:Evo(Max)>Final')
+      return eRow(n(b1_r), gemNode(b1_2), n(b1_1), EP, n(b2_2, { max: true }), EA, n(b2_r));
+
+    if (pat === 'Counterpart:Evo>Union>Final') {
+      // base shown once; gemNode replaces ←[gem]+ between counterpart and base
+      return u2f(
+        n(b1_r) + gemNode(b1_2) + n(b1_1) + EP + n(b2_2),
+        n(b2_r),
+        n(b3_2),
+        EP + EA + n(b3_r)
+      );
+    }
+
+    if (pat === 'Counterpart:TwoReqEvo>Final')
+      return eRow(n(b1_r), gemNode(b1_2), n(b1_1), EP, n(b2_2), EA, n(b2_r));
+
+    if (pat === 'Dual(Counterpart):Union>Final') {
+      // gem in row 1 sits toward top, row 2 toward bottom — visually anchors each to its row
+      return mergeBar(
+        [n(b1_r) + gemNode(b1_2, 'top') + n(b1_1) + EA, n(b2_r) + gemNode(b2_2, 'bot') + n(b2_1) + EA],
+        n(b3_r)
+      );
+    }
+
+    if (pat === 'Dual(Evo(Max))>HiddenFinal') {
+      return mergeBar(
+        [n(b1_1) + EP + n(b1_2, { max: true }) + EA + n(b1_r) + EA, n(b2_1) + EP + n(b2_2, { max: true }) + EA + n(b2_r) + EA],
+        n(b3_r, { hidden: true, sub: 'Hidden' })
+      );
+    }
+
+    if (pat === 'ChaosEvolution>Final') {
+      // b1_1=chaos item, b1_2=character, b1_3=base weapon, b1_r=final
+      const chaosNode = `<div class="evo-nw">${n(b1_2)}<div class="evo-sub">Lv.80</div></div>`;
+      return eRow(n(b1_3), EA, chaosNode, EA, n(b1_r));
+    }
+
+    if (pat === 'GlimmerEzEvo>GlimmerEzEvo>Final')
+      return eRow(n(b1_1), EA, n(b1_r), EA, n(b2_r));
+
+    if (pat === 'GlimmerEvo>Final')
+      return b1_3 ? eRow(n(b1_1), EP, n(b1_3), EA, n(b1_r)) : eRow(n(b1_1), EA, n(b1_r));
+
+    const COLL_PATS = ['Magic Whip>Final','Vampire-Killing Tool>Final','Magic Weapon>Final',
+      "Belnades' Spell>Final",'Ambiguous Power>Final','Familiar>Final','Emerald Diorama>Final'];
+    if (COLL_PATS.includes(pat)) {
+      if (cur !== ep.evo_path) return '';
+      // new format: b1_1 holds the pipe-delimited ingredient list
+      // old format (Familiar Forge, Intuition not yet updated): fall back to related_to
+      const inputs = (b1_1 && b1_1.includes('|'))
+        ? b1_1.split('|').map(s => s.trim()).filter(Boolean)
+        : ep.related_to.filter(nm => nm !== ep.evo_path);
+      const MAX_ROW = 8;
+      let rows = '';
+      for (let i = 0; i < inputs.length; i += MAX_ROW)
+        rows += `<div class="evo-coll-inputs">${inputs.slice(i, i + MAX_ROW).map(nm => n(nm)).join('')}</div>`;
+      return `<div class="evo-coll-wrap">${rows}<div class="evo-row" style="margin-top:2px">${EA}${n(ep.evo_path)}</div></div>`;
+    }
+
+    if (pat === 'Gift(Treasure)>Final')
+      return eRow(n(b1_1), EA, n(b1_2), `<span class="evo-op" title="Luck roll">🍀</span>`, EA, n(b1_r));
+
+    if (pat === 'FivePassive>Final') {
+      const angles = [270, 342, 54, 126, 198];
+      const r = 36, cx = 55, cy = 55;
+      const items = angles.map(deg => {
+        const rd = deg * Math.PI / 180;
+        return `<div class="ep-item" style="left:${cx + r * Math.cos(rd)}px;top:${cy + r * Math.sin(rd)}px">${n(b1_1)}</div>`;
+      }).join('');
+      return `<div class="evo-pentagram">${items}<div class="ep-center">${n(b1_r)}</div></div>`;
+    }
+
+    if (pat === 'Tuna>Final') {
+      const forms = [b1_2, b1_3, b2_1, b2_2, b3_1, b3_2];
+      const r = 52, cx = 80, cy = 75;
+      const hexItems = forms.map((nm, i) => {
+        const rd = (i * 60 - 90) * Math.PI / 180;
+        return `<div class="eh-item" style="left:${cx + r * Math.cos(rd)}px;top:${cy + r * Math.sin(rd)}px">${n(nm)}</div>`;
+      }).join('');
+      const labelX = cx + 18, labelY = cy + 18;
+      return `<div class="evo-hexagram">
+        ${hexItems}
+        <div class="eh-item" style="left:${cx - 18}px;top:${cy}px">${n(b1_1)}</div>
+        <div class="eh-item" style="left:${cx + 18}px;top:${cy}px">${n(b3_r)}</div>
+        <div class="eh-label" style="left:${labelX}px;top:${labelY}px">6 Evolutions</div>
+      </div>`;
+    }
+
+    return '';
+  }
+
+  function getEvolutionPassiveStatus(selW, playerIdx) {
+    const player = state.players[playerIdx];
+    const counts = SLOT_COUNTS[state.playerCount];
+    const pending = []; // {name, slot}
+    const missing = []; // names
+    const virtuallyTaken = new Set();
+    for (const req of (selW.requirements || [])) {
+      if (!D.passives.some(p => p.name === req)) continue; // weapon req, skip
+      if (player.passives.some(p => p && p.name === req)) continue; // already equipped
+      const emptySlot = player.passives.findIndex(
+        (p, i) => !p && i < counts.passives && !virtuallyTaken.has(i)
+      );
+      if (emptySlot >= 0) { virtuallyTaken.add(emptySlot); pending.push({ name: req, slot: emptySlot }); }
+      else missing.push(req);
+    }
+    return { pending, missing };
+  }
 
   // Group characters by base_name, preserving CSV order of first appearance
   function charGroups() {
@@ -981,15 +1277,31 @@
   function statsHTML(char) {
     let rows = '';
     for (const [key, label] of Object.entries(STAT_LABELS)) {
-      const val = char ? char.stats[key] : 0;
-      const rendered = statVal(key, val);
-      if (!rendered && !char) continue; // hide zero rows when no char
-      rows += `<div class="stat-row${val !== 0 ? ' changed' : ''}">
+      const rawChar = char ? (char.stats[key] || 0) : 0;
+      const { dispBase, dispChar, dispPU, total, isPct, isCapped } = calcStatTotal(key, char?.stats);
+      const suffix = isPct ? '%' : '';
+      const charIsZero = dispChar === 0;
+      const charSign = dispChar > 0 ? '+' : '';
+      const isGood = INVERTED_STATS.has(key) ? dispChar < 0 : dispChar > 0;
+      const charCls = charIsZero ? '' : (isGood ? 'pos' : 'neg');
+      const charDisplay = charIsZero
+        ? '<span class="stat-char stat-val">—</span>'
+        : `<span class="stat-char stat-val ${charCls}">${charSign}${dispChar}${suffix}</span>`;
+      const puDisplay = dispPU
+        ? `<span class="stat-pu">${dispPU}</span>`
+        : '<span class="stat-pu" style="color:var(--text-muted)">—</span>';
+      const changed = rawChar !== 0;
+      const rowCls = ['stat-row', changed ? 'changed' : '', isCapped ? 'capped' : ''].filter(Boolean).join(' ');
+      rows += `<div class="${rowCls}">
         <span class="stat-key">${label}</span>
-        ${rendered || '<span class="stat-val">—</span>'}
+        <span class="stat-base">${dispBase}</span>
+        ${charDisplay}
+        ${puDisplay}
+        <span class="stat-total">${total}${suffix}</span>
       </div>`;
     }
-    return `<div class="stat-grid">${rows}</div>`;
+    const header = `<div class="stat-header"><span>Stat</span><span>Base</span><span>Char</span><span>PU</span><span>Total</span></div>`;
+    return `<div class="stat-grid">${header}${rows}</div>`;
   }
 
   // ═══════════════════════════════════════════════════════
@@ -1109,12 +1421,12 @@
       const charSlot = slotHTML(char, { type:'char', playerIdx:idx, slotIdx:0, removable: !!char });
 
       // ── Weapon slots
-      const starterWeapons = new Set(char ? char.starting_weapons : []);
+      const starterCount = char ? Math.min(char.starting_weapons.length, counts.weapons) : 0;
       const wSlots = Array.from({length: counts.weapons}, (_, si) => {
         const base = player.weapons[si] || null;
         const ev   = eff[si] || null;
         const isEvolved = base && ev && base.name !== ev.name;
-        const isLocked = base && starterWeapons.has(base.name);
+        const isLocked = si < starterCount;
         return slotHTML(ev, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved, locked:isLocked });
       }).join('');
 
@@ -1175,6 +1487,7 @@
         <div class="planning-header">
           <h1>Vampire Survivors Build Calculator</h1>
           <div class="planning-header-actions">
+            <button class="btn" data-action="open-power-ups">Power-Ups</button>
             <button class="btn" data-action="open-banish">Banish Advisor</button>
             <button class="btn btn-back" data-action="change-player-count">⟵ Change Player Count</button>
           </div>
@@ -1229,8 +1542,9 @@
       const cur = group[vi];
       const isSelected = sel && group.some(c => c.name === sel.name);
       const hasVariants = group.length > 1;
+      const searchVal = esc(group.map(c => c.name).join('|'));
       if (hasVariants) {
-        cards += `<div class="stack-wrapper">
+        cards += `<div class="stack-wrapper" data-search="${searchVal}">
           <div class="char-card stacked${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
             <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
             <div class="variant-count">${vi+1}/${group.length}</div>
@@ -1241,7 +1555,7 @@
           </div>
         </div>`;
       } else {
-        cards += `<div class="char-card${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
+        cards += `<div class="char-card${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" data-search="${searchVal}">
           <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
         </div>`;
       }
@@ -1261,7 +1575,10 @@
       </div>
       <div class="overlay-body">
         <div class="ovl-left">${left}</div>
-        <div class="ovl-center"><div class="char-grid">${cards}</div></div>
+        <div class="ovl-center">
+          ${searchBarHTML('Search characters…')}
+          <div class="char-grid">${cards}</div>
+        </div>
         <div class="ovl-right">${right}</div>
       </div>
       <div class="overlay-footer">
@@ -1272,132 +1589,193 @@
 
   // ── Item overlay ─────────────────────────────────────
 
-  function openItemOverlay(playerIdx, slotIdx, slotType) {
-    const player = state.players[playerIdx];
-    const prev = slotType === 'weapon' ? player.weapons[slotIdx] : player.passives[slotIdx];
-    state.overlay = { type:'item', playerIdx, slotIdx, slotType, fromEmpty: !prev, prevItem: prev };
+  function openWeaponOverlay(playerIdx, slotIdx) {
+    const prev = state.players[playerIdx].weapons[slotIdx];
+    state.overlay = { type:'item', playerIdx, slotIdx, slotType:'weapon', fromEmpty: !prev, prevItem: prev };
     state.ovl.selected = prev;
-    buildAndShowOverlay(itemOverlayHTML(playerIdx, slotIdx, slotType));
+    buildAndShowOverlay(weaponOverlayHTML(playerIdx, slotIdx));
   }
 
-  function itemOverlayHTML(playerIdx, slotIdx, slotType) {
+  function openPassiveOverlay(playerIdx, slotIdx) {
+    const prev = state.players[playerIdx].passives[slotIdx];
+    state.overlay = { type:'item', playerIdx, slotIdx, slotType:'passive', fromEmpty: !prev, prevItem: prev };
+    state.ovl.selected = prev;
+    buildAndShowOverlay(passiveOverlayHTML(playerIdx, slotIdx));
+  }
+
+  function weaponOverlayHTML(playerIdx, slotIdx) {
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
-    const { charWeapons, arcanaWeapons, passiveHi } = getHighlights(playerIdx);
+    const { charWeapons, arcanaWeapons } = getHighlights(playerIdx);
+    const usedWeapons = new Set(player.weapons.filter((w, i) => w && i !== slotIdx).map(w => w.name));
 
-    // Passives section
-    let pCards = '';
+    // Banish layout order for sorting
+    const banishOrder = new Map();
+    D.banishLayout.forEach((name, i) => { if (name) banishOrder.set(name, i); });
+
+    // Reverse map: evolution name → base weapon name
+    const baseByEvo = new Map();
+    D.weapons.forEach(w => { if (w.trans_result) baseByEvo.set(w.trans_result, w.name); });
+
+    function weaponSortKey(w) {
+      const base = baseByEvo.get(w.name) ?? w.name;
+      return banishOrder.get(base) ?? banishOrder.get(w.name) ?? 9999;
+    }
+
+    const baseWeapons = D.weapons.filter(w => w.category === 'Base')
+      .slice().sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
+
+    // Group non-base by category, each group sorted by base weapon order
+    const evoGroups = new Map();
+    D.weapons.filter(w => w.category !== 'Base').forEach(w => {
+      if (!evoGroups.has(w.category)) evoGroups.set(w.category, []);
+      evoGroups.get(w.category).push(w);
+    });
+    for (const arr of evoGroups.values()) arr.sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
+
+    function makeCard(w) {
+      const isSel  = sel && sel.name === w.name;
+      const isUsed = usedWeapons.has(w.name);
+      const isEvo  = w.category !== 'Base';
+      const hiChar   = charWeapons.has(w.name);
+      const hiArcana = arcanaWeapons.has(w.name);
+      let cls = 'item-card';
+      if (isSel) cls += ' selected';
+      else if (isEvo) cls += ' evo';
+      if (!isSel && hiChar)   cls += ' hi-char';
+      else if (!isSel && hiArcana) cls += ' hi-arcana';
+      if (isUsed) cls += ' dim';
+      return `<div class="${cls}" data-action="ovl-select-item" data-item="${esc(w.name)}" data-item-type="weapon" data-search="${esc(w.name)}" title="${esc(w.name)}">
+        <img src="${esc(w.icon||EMPTY_ICON)}" alt="${esc(w.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
+      </div>`;
+    }
+
+    let centerHTML = `${searchBarHTML('Search weapons…')}
+      <div class="item-section-label">Base Weapons</div>
+      <div class="item-grid">${baseWeapons.map(makeCard).join('')}</div>`;
+    for (const [cat, weapons] of evoGroups) {
+      centerHTML += `<div class="item-section-label" style="margin-top:.75rem">${esc(cat)}</div>
+        <div class="item-grid">${weapons.map(makeCard).join('')}</div>`;
+    }
+
+    // Left panel: description + level ups for selected weapon
+    let leftHTML = '<div class="detail-desc" style="margin-top:.5rem;color:var(--text-muted)">Select a weapon to see details</div>';
+    let rightHTML = '';
+
+    if (sel) {
+      const w = D.weapons.find(w => w.name === sel.name);
+      if (w) {
+        leftHTML = `<div class="detail-desc" style="margin:.2rem 0">${esc(w.description)}</div>
+          ${w.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
+            ${w.level_ups.map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+1}: ${esc(l)}</li>`).join('')}
+          </ul></div>` : ''}`;
+
+        // Requirements with status
+        let reqHTML = '';
+        if (w.requirements.length) {
+          const { pending, missing } = getEvolutionPassiveStatus(w, playerIdx);
+          const pendingNames = new Set(pending.map(p => p.name));
+          reqHTML = `<div class="detail-section"><h3>Requirements</h3>
+            ${w.requirements.map(r => {
+              const pObj = passiveByName(r);
+              const wObj2 = weaponByName(r);
+              const obj = pObj || wObj2;
+              const icon = obj ? obj.icon : '';
+              let statusHTML = '';
+              if (pObj) {
+                if (player.passives.some(p => p && p.name === r))
+                  statusHTML = '<span class="req-status ok">✓ Equipped</span>';
+                else if (pendingNames.has(r))
+                  statusHTML = '<span class="req-status add">+ Auto-add</span>';
+                else
+                  statusHTML = '<span class="req-status miss" title="No passive slot available">✗ No room</span>';
+              } else if (wObj2) {
+                statusHTML = player.weapons.some(pw => pw && pw.name === r)
+                  ? '<span class="req-status ok">✓ In build</span>'
+                  : '<span class="req-status miss" title="Add this weapon to the build">✗ Missing</span>';
+              }
+              return `<div class="req-row">
+                <div class="req-icon">${icon ? `<img src="${esc(icon)}" alt="${esc(r)}" onerror="this.src='${esc(EMPTY_ICON)}'">` : ''}</div>
+                <span style="flex:1;font-size:.75rem">${esc(r)}</span>${statusHTML}
+              </div>`;
+            }).join('')}
+          </div>`;
+        }
+
+        const chainHTML = buildEvoChainHTML(w);
+
+        rightHTML = `<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+          <div class="detail-name">${esc(w.name)}</div>
+          ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}
+          ${reqHTML}${chainHTML}
+          ${Object.keys(w.arcana_ratings).length ? `<div class="detail-section"><h3>Arcana Synergies</h3>
+            <ul style="padding-left:1rem;margin:.3rem 0">${Object.entries(w.arcana_ratings).slice(0,6).map(([k,v]) =>
+              `<li style="font-size:.72rem">${esc(k.replace(/_/g,' '))}: ${esc(v)}</li>`
+            ).join('')}</ul>
+          </div>` : ''}`;
+      }
+    } else {
+      rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a weapon</div>';
+    }
+
+    return `<div class="overlay-header">
+        <h2>Weapon Slot ${slotIdx+1}</h2>
+        <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+      </div>
+      <div class="overlay-body">
+        <div class="ovl-left">${leftHTML}</div>
+        <div class="ovl-center">${centerHTML}</div>
+        <div class="ovl-right">${rightHTML}</div>
+      </div>
+      <div class="overlay-footer">
+        <button class="btn btn-back" data-action="ovl-close">Cancel</button>
+        <button class="btn btn-confirm" data-action="ovl-confirm">Confirm</button>
+      </div>`;
+  }
+
+  function passiveOverlayHTML(playerIdx, slotIdx) {
+    const player = state.players[playerIdx];
+    const sel    = state.ovl.selected;
+    const { passiveHi } = getHighlights(playerIdx);
+    const usedPassives = new Set(player.passives.filter((p, i) => p && i !== slotIdx).map(p => p.name));
+
+    let cards = '';
     for (const p of D.passives) {
       const isSel = sel && sel.name === p.name;
       const isHi  = passiveHi.has(p.name);
-      const isDim = slotType === 'weapon'; // dim passives when filling weapon slot
-      pCards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-item' : ''}${isDim ? ' dim' : ''}"
-        data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive"
+      const isDim = usedPassives.has(p.name);
+      cards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-item' : ''}${isDim ? ' dim' : ''}"
+        data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive" data-search="${esc(p.name)}"
         title="${esc(p.name)}">
         <img src="${esc(p.icon||EMPTY_ICON)}" alt="${esc(p.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
       </div>`;
     }
 
-    // Weapons section (collection/CSV order)
-    let wCards = '';
-    for (const w of D.weapons) {
-      if (w.category !== 'Base') continue; // only base weapons selectable
-      const isSel    = sel && sel.name === w.name;
-      const hiChar   = charWeapons.has(w.name);
-      const hiArcana = arcanaWeapons.has(w.name);
-      const isDim    = slotType === 'passive'; // dim weapons when filling passive slot
-      let hiClass = '';
-      if (hiChar) hiClass = 'hi-char';
-      else if (hiArcana) hiClass = 'hi-arcana';
-      wCards += `<div class="item-card${isSel ? ' selected' : ''}${hiClass ? ' '+hiClass : ''}${isDim ? ' dim' : ''}"
-        data-action="ovl-select-item" data-item="${esc(w.name)}" data-item-type="weapon"
-        title="${esc(w.name)}">
-        <img src="${esc(w.icon||EMPTY_ICON)}" alt="${esc(w.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
-      </div>`;
-    }
+    let leftHTML = '<div class="detail-desc" style="margin-top:.5rem;color:var(--text-muted)">Select a passive to see details</div>';
+    let rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a passive</div>';
 
-    // Left panel
-    let leftHTML = '<h3>Details</h3>';
     if (sel) {
-      const isPassive = D.passives.some(p => p.name === sel.name);
-      if (isPassive) {
-        const p = D.passives.find(p => p.name === sel.name);
-        leftHTML += `<div class="detail-name" style="font-size:.85rem">${esc(p.name)}</div>
-          <div class="detail-desc" style="margin:.3rem 0">${esc(p.description)}</div>
-          ${p.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul>
-            ${p.level_ups.map((l,i) => `<li>Lv${i+1}: ${esc(l)}</li>`).join('')}
+      const p = D.passives.find(p => p.name === sel.name);
+      if (p) {
+        leftHTML = `<div class="detail-desc" style="margin:.2rem 0">${esc(p.description)}</div>
+          ${p.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
+            ${p.level_ups.map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+1}: ${esc(l)}</li>`).join('')}
           </ul></div>` : ''}`;
-      } else {
-        const w = D.weapons.find(w => w.name === sel.name);
-        if (w) {
-          leftHTML += `<div class="detail-name" style="font-size:.85rem">${esc(w.name)}</div>
-            <div class="detail-desc" style="margin:.3rem 0">${esc(w.description)}</div>
-            ${w.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul>
-              ${w.level_ups.map((l,i) => `<li>Lv${i+1}: ${esc(l)}</li>`).join('')}
-            </ul></div>` : ''}`;
-        }
+        rightHTML = `<div class="detail-icon"><img src="${esc(p.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+          <div class="detail-name">${esc(p.name)}</div>
+          <div class="detail-desc">${esc(p.description)}</div>`;
       }
-    } else {
-      leftHTML += '<div class="detail-desc" style="margin-top:.5rem">Select an item</div>';
-    }
-
-    // Right panel
-    let rightHTML = '';
-    if (sel) {
-      const wObj = D.weapons.find(w => w.name === sel.name);
-      if (wObj) {
-        const evolvedW = wObj.trans_result ? weaponByName(wObj.trans_result) : null;
-        const finalW   = wObj.final_state   ? weaponByName(wObj.final_state)  : null;
-        rightHTML = `
-          <div class="detail-icon"><img src="${esc(wObj.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
-          <div class="detail-name">${esc(wObj.name)}</div>
-          ${wObj.trans_result ? `<div class="detail-section">
-            <h3>Evolution</h3>
-            <div class="evo-chain">
-              <span class="evo-step current">${esc(wObj.name)}</span>
-              <span class="evo-arrow">→</span>
-              <span class="evo-step">${esc(wObj.trans_result)}</span>
-              ${wObj.final_state ? `<span class="evo-arrow">→</span><span class="evo-step">${esc(wObj.final_state)}</span>` : ''}
-            </div>
-            ${wObj.requirements.length ? `<div class="label" style="margin-top:.4rem">Requires:</div>
-              <div class="req-icons">
-                ${wObj.requirements.map(r => {
-                  const pi = passiveByName(r);
-                  return `<div class="req-icon" title="${esc(r)}">
-                    ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : esc(r)}
-                  </div>`;
-                }).join('')}
-              </div>` : ''}
-          </div>` : ''}
-          ${Object.keys(wObj.arcana_ratings).length ? `<div class="detail-section">
-            <h3>Arcana Synergies</h3>
-            <ul>${Object.entries(wObj.arcana_ratings).slice(0,6).map(([k,v]) =>
-              `<li>${esc(k.replace(/_/g,' '))}: ${esc(v)}</li>`
-            ).join('')}</ul>
-          </div>` : ''}`;
-      } else {
-        const pObj = D.passives.find(p => p.name === sel.name);
-        if (pObj) {
-          rightHTML = `<div class="detail-icon"><img src="${esc(pObj.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
-            <div class="detail-name">${esc(pObj.name)}</div>
-            <div class="detail-desc">${esc(pObj.description)}</div>`;
-        }
-      }
-    } else {
-      rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select an item to see details</div>';
     }
 
     return `<div class="overlay-header">
-        <h2>Item Selection — ${slotType === 'weapon' ? 'Weapon' : 'Passive'} Slot ${slotIdx+1}</h2>
+        <h2>Passive Slot ${slotIdx+1}</h2>
         <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
       </div>
       <div class="overlay-body">
         <div class="ovl-left">${leftHTML}</div>
         <div class="ovl-center">
-          <div class="item-section-label">Passives</div>
-          <div class="item-grid">${pCards}</div>
-          <div class="item-section-label" style="margin-top:.75rem">Weapons (Base)</div>
-          <div class="item-grid">${wCards}</div>
+          ${searchBarHTML('Search passives…')}
+          <div class="item-grid">${cards}</div>
         </div>
         <div class="ovl-right">${rightHTML}</div>
       </div>
@@ -1436,15 +1814,17 @@
       const isHi   = cur.weapon_col && arcanaHi.has(cur.weapon_col);
       const isStack = group.length > 1;
 
+      const arcanaSearchVal = esc(group.map(a => a.name).join('|'));
       const cardEl = `<div class="item-card${isSel ? ' selected' : ''}${isStack ? ' stacked' : ''}${isHi ? ' hi-arcana' : ''}"
           data-action="ovl-select-arcana" data-arcana="${esc(cur.name)}" data-base="${esc(key)}"
+          ${!isStack ? `data-search="${arcanaSearchVal}"` : ''}
           title="${esc(cur.name)} (${cur.type})">
           <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
           <div class="card-badge">${esc(cur.number)}</div>
         </div>`;
 
       if (isStack) {
-        cards += `<div class="stack-wrapper">
+        cards += `<div class="stack-wrapper" data-search="${arcanaSearchVal}">
           ${cardEl}
           <div class="stack-nav">
             <div class="stack-btn" data-action="cycle-arcana-stack" data-base="${esc(key)}" data-dir="-1">‹</div>
@@ -1470,6 +1850,7 @@
       </div>
       <div class="overlay-body">
         <div class="ovl-center-wide">
+          ${searchBarHTML('Search arcana…')}
           <div class="item-grid">${cards}</div>
         </div>
         <div class="ovl-right">${rightHTML}</div>
@@ -1534,6 +1915,30 @@
 
   // ── Show / rebuild overlay ───────────────────────────
 
+  function searchBarHTML(placeholder) {
+    return `<div class="ovl-search-wrap">
+      <input type="text" class="ovl-search" placeholder="${esc(placeholder)}" autocomplete="off" spellcheck="false">
+      <button class="ovl-search-clear" data-action="ovl-search-clear" tabindex="-1">✕</button>
+    </div>`;
+  }
+
+  function applyOverlaySearch(input) {
+    const query = (input.value || '').toLowerCase().trim();
+    const center = input.closest('.ovl-center, .ovl-center-wide');
+    if (!center) return;
+    center.querySelectorAll('[data-search]').forEach(el => {
+      const matches = !query || el.dataset.search.toLowerCase().includes(query);
+      el.classList.toggle('search-dim', !matches);
+    });
+    // Hide section labels whose entire grid is filtered out
+    center.querySelectorAll('.item-section-label').forEach(label => {
+      let sib = label.nextElementSibling;
+      while (sib && !sib.classList.contains('item-grid')) sib = sib.nextElementSibling;
+      const hasVisible = sib && sib.querySelector('[data-search]:not(.search-dim)');
+      label.classList.toggle('search-dim', !hasVisible);
+    });
+  }
+
   function buildAndShowOverlay(inner) {
     const root = document.getElementById('overlay-root');
     root.innerHTML = `<div class="overlay-panel">${inner}</div>`;
@@ -1543,8 +1948,9 @@
   function refreshOverlay() {
     const { type, playerIdx, slotIdx, slotType } = state.overlay;
     let inner = '';
-    if (type === 'char')        inner = charOverlayHTML(playerIdx);
-    else if (type === 'item')   inner = itemOverlayHTML(playerIdx, slotIdx, slotType);
+    if (type === 'char')                             inner = charOverlayHTML(playerIdx);
+    else if (type === 'item' && slotType === 'weapon')  inner = weaponOverlayHTML(playerIdx, slotIdx);
+    else if (type === 'item' && slotType === 'passive') inner = passiveOverlayHTML(playerIdx, slotIdx);
     else if (type === 'arcana') inner = arcanaOverlayHTML(slotIdx);
     else if (type === 'stage')  inner = stageOverlayHTML();
     const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
@@ -1553,6 +1959,11 @@
     panel.innerHTML = inner;
     const newScroller = panel.querySelector('.ovl-center, .ovl-center-wide');
     if (newScroller) newScroller.scrollTop = scrollTop;
+    const searchInput = panel.querySelector('.ovl-search');
+    if (searchInput && state.ovl.search) {
+      searchInput.value = state.ovl.search;
+      applyOverlaySearch(searchInput);
+    }
   }
 
   function closeOverlay(confirmed) {
@@ -1576,7 +1987,16 @@
         if (sel) {
           const isWeapon = D.weapons.some(w => w.name === sel.name);
           const isPassive = D.passives.some(p => p.name === sel.name);
-          if (slotType === 'weapon' && isWeapon && slotIdx >= 0)  state.players[playerIdx].weapons[slotIdx] = D.weapons.find(w => w.name === sel.name);
+          if (slotType === 'weapon' && isWeapon && slotIdx >= 0) {
+            const wDef = D.weapons.find(w => w.name === sel.name);
+            state.players[playerIdx].weapons[slotIdx] = wDef;
+            if (wDef && wDef.category !== 'Base') {
+              const { pending } = getEvolutionPassiveStatus(wDef, playerIdx);
+              pending.forEach(({ name, slot }) => {
+                state.players[playerIdx].passives[slot] = passiveByName(name);
+              });
+            }
+          }
           if (slotType === 'passive' && isPassive && slotIdx >= 0) state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
         }
       } else if (type === 'arcana') {
@@ -1588,9 +2008,127 @@
     // else: cancel (no change)
 
     state.overlay = null;
-    state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, stackIdx: state.ovl.stackIdx };
+    state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, stackIdx: state.ovl.stackIdx, search: '' };
     document.getElementById('overlay-root').classList.add('hidden');
     render();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  POWER-UP CALCULATIONS
+  // ═══════════════════════════════════════════════════════
+
+  function calcPowerUpBonus(charStatKey) {
+    let additive = 0;
+    let multiplierSum = 0;
+    D.stats.forEach(stat => {
+      const level = state.powerUps[stat.name] ?? stat.max_level;
+      for (let i = 0; i < level; i++) {
+        const val = stat.levels[i]?.[charStatKey];
+        if (val === undefined || val === null) continue;
+        if (stat.stacking === 'multiplicative') multiplierSum += val;
+        else additive += val;
+      }
+    });
+    return { additive, multiplierSum, multiplier: 1 + multiplierSum };
+  }
+
+  function calcStatTotal(charStatKey, charStats) {
+    const statDef  = D.stats.find(s => s.key === charStatKey);
+    const isPct    = PCT_STATS.has(charStatKey);
+    const inverted = INVERTED_STATS.has(charStatKey);
+    const rawBase  = statDef ? statDef.base_value : (isPct ? 100 : 0);
+    const rawChar  = charStats ? (charStats[charStatKey] || 0) : 0;
+    const { additive, multiplierSum, multiplier } = calcPowerUpBonus(charStatKey);
+    const isMultStat = statDef?.stacking === 'multiplicative';
+
+    // Base column: power-up-adjusted baseline (no char bonus)
+    let adjBase;
+    if (isMultStat) {
+      adjBase = Math.round(rawBase * multiplier);
+    } else if (isPct) {
+      adjBase = Math.round(rawBase + additive * 100);
+    } else {
+      adjBase = Math.round(rawBase + additive);
+    }
+
+    // Total: (base + char) × multiplier  OR  base + char_pct + additive
+    let total;
+    if (isMultStat) {
+      total = Math.round((rawBase + rawChar) * multiplier);
+    } else if (isPct) {
+      total = Math.round(rawBase + rawChar * 100 + additive * 100);
+    } else {
+      total = Math.round(rawBase + rawChar + additive);
+    }
+
+    // Cap
+    let isCapped = false;
+    if (statDef?.max_value != null) {
+      const cap = statDef.max_value;
+      if (inverted ? total <= cap : total >= cap) { total = cap; isCapped = true; }
+    }
+
+    // PU column display
+    let dispPU;
+    if (isMultStat && multiplierSum !== 0) {
+      const factor = (1 + multiplierSum);
+      dispPU = '×' + (Number.isInteger(factor) ? factor : parseFloat(factor.toFixed(2)));
+    } else if (!isMultStat && additive !== 0) {
+      const val = isPct ? Math.round(additive * 100) : Math.round(additive);
+      dispPU = (val > 0 ? '+' : '') + val + (isPct ? '%' : '');
+    } else {
+      dispPU = null;
+    }
+
+    const dispBase = isPct ? rawBase + '%' : rawBase;
+    const dispChar = isPct ? Math.round(rawChar * 100) : Math.round(rawChar);
+    return { dispBase, dispChar, dispPU, total, isPct, isCapped };
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  POWER-UP OVERLAY
+  // ═══════════════════════════════════════════════════════
+
+  function renderPowerUpOverlay() {
+    const rows = D.stats.map(stat => {
+      const level   = state.powerUps[stat.name] ?? stat.max_level;
+      const hasLevels = stat.max_level > 0;
+      const id      = 'pu-lv-' + stat.name.replace(/\W+/g, '_');
+      return `<div class="pu-row${hasLevels ? '' : ' no-levels'}">
+        <img class="pu-icon" src="${esc(stat.icon)}" alt="${esc(stat.name)}"
+          onerror="this.src='assets/icons/stats/template_stats.png'">
+        <span class="pu-name" title="${esc(stat.description)}">${esc(stat.name)}</span>
+        ${hasLevels ? `<div class="pu-level-ctrl">
+          <button data-action="pu-level" data-stat="${esc(stat.name)}" data-delta="-1"
+            ${level <= 0 ? 'disabled' : ''}>−</button>
+          <span class="pu-level-display" id="${id}">${level}/${stat.max_level}</span>
+          <button data-action="pu-level" data-stat="${esc(stat.name)}" data-delta="1"
+            ${level >= stat.max_level ? 'disabled' : ''}>+</button>
+        </div>` : `<span class="pu-level-display" style="color:var(--text-muted)">—</span>`}
+      </div>`;
+    }).join('');
+
+    const root = document.getElementById('overlay-root');
+    root.innerHTML = `
+      <div class="overlay-panel pu-panel">
+        <div class="overlay-header">
+          <h2>Power-Ups</h2>
+          <div style="display:flex;gap:.4rem;align-items:center">
+            <button class="btn btn-sm btn-confirm" data-action="pu-max-all">Max All</button>
+            <button class="btn btn-sm btn-back" data-action="pu-disable-all">Disable All</button>
+            <button class="btn btn-icon overlay-close" data-action="pu-close">✕</button>
+          </div>
+        </div>
+        <div class="pu-list-wrap"><div class="pu-list">${rows}</div></div>
+      </div>`;
+    root.classList.remove('hidden');
+    state.puActive = true;
+  }
+
+  function closePowerUpOverlay() {
+    document.getElementById('overlay-root').classList.add('hidden');
+    state.puActive = false;
+    render(); // update stat totals in sidebar
   }
 
   // ═══════════════════════════════════════════════════════
@@ -1713,13 +2251,45 @@
     const btn = e.target.closest('[data-action]');
     if (!btn) {
       if (e.target === document.getElementById('overlay-root')) {
-        if (state.banish.active) closeBanishOverlay();
+        if (state.puActive) closePowerUpOverlay();
+        else if (state.banish.active) closeBanishOverlay();
         else closeOverlay(false);
       }
       return;
     }
     e.stopPropagation();
     const action = btn.dataset.action;
+
+    // ── Power-up overlay actions ──
+    if (action === 'pu-close') { closePowerUpOverlay(); return; }
+    if (action === 'pu-disable-all') {
+      D.stats.forEach(s => { state.powerUps[s.name] = 0; });
+      renderPowerUpOverlay(); return;
+    }
+    if (action === 'pu-max-all') {
+      D.stats.forEach(s => { state.powerUps[s.name] = s.max_level; });
+      renderPowerUpOverlay(); return;
+    }
+    if (action === 'pu-level') {
+      const statName = btn.dataset.stat;
+      const delta    = parseInt(btn.dataset.delta);
+      const stat     = D.stats.find(s => s.name === statName);
+      if (!stat) return;
+      const cur  = state.powerUps[statName] ?? stat.max_level;
+      const next = Math.max(0, Math.min(stat.max_level, cur + delta));
+      state.powerUps[statName] = next;
+      // patch DOM in-place instead of full re-render
+      const id = 'pu-lv-' + statName.replace(/\W+/g, '_');
+      const lbl = document.getElementById(id);
+      if (lbl) lbl.textContent = `${next}/${stat.max_level}`;
+      const row  = btn.closest('.pu-row');
+      const btns = row?.querySelectorAll('[data-action="pu-level"]');
+      if (btns) {
+        btns[0].disabled = next <= 0;
+        btns[1].disabled = next >= stat.max_level;
+      }
+      return;
+    }
 
     // ── Banish overlay actions ──
     if (action === 'banish-close') { closeBanishOverlay(); return; }
@@ -1743,6 +2313,11 @@
 
     if (action === 'ovl-close') { closeOverlay(false); return; }
     if (action === 'ovl-confirm') { closeOverlay(true); return; }
+    if (action === 'ovl-search-clear') {
+      const input = e.target.closest('.ovl-search-wrap')?.querySelector('.ovl-search');
+      if (input) { input.value = ''; state.ovl.search = ''; applyOverlaySearch(input); input.focus(); }
+      return;
+    }
 
     if (action === 'ovl-select-char') {
       const name = btn.dataset.char;
@@ -1805,6 +2380,10 @@
       render();
       return;
     }
+    if (action === 'open-power-ups') {
+      renderPowerUpOverlay();
+      return;
+    }
     if (action === 'open-banish') {
       renderBanishOverlay();
       return;
@@ -1844,10 +2423,11 @@
   }
 
   function openSlotOverlay(slotType, playerIdx, slotIdx) {
-    if (slotType === 'char')   { openCharacterOverlay(playerIdx); return; }
-    if (slotType === 'weapon' || slotType === 'passive') { openItemOverlay(playerIdx, slotIdx, slotType); return; }
-    if (slotType === 'arcana') { openArcanaOverlay(slotIdx); return; }
-    if (slotType === 'stage')  { openStageOverlay(); return; }
+    if (slotType === 'char')    { openCharacterOverlay(playerIdx); return; }
+    if (slotType === 'weapon')  { openWeaponOverlay(playerIdx, slotIdx); return; }
+    if (slotType === 'passive') { openPassiveOverlay(playerIdx, slotIdx); return; }
+    if (slotType === 'arcana')  { openArcanaOverlay(slotIdx); return; }
+    if (slotType === 'stage')   { openStageOverlay(); return; }
   }
 
   function handleAppContextMenu(e) {
@@ -1865,6 +2445,7 @@
 
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
+    if (state.puActive) { closePowerUpOverlay(); return; }
     if (state.banish.active) { closeBanishOverlay(); return; }
     if (!state.overlay) return;
     const { fromEmpty } = state.overlay;
@@ -1885,6 +2466,7 @@
       return;
     }
     D = window.VS_DATA;
+    D.stats.forEach(s => { state.powerUps[s.name] = s.max_level; });
     render();
     // Bind once to persistent elements — survives innerHTML replacements
     document.getElementById('app').addEventListener('click', handleAppClick);
@@ -1892,12 +2474,18 @@
     const ovlRoot = document.getElementById('overlay-root');
     ovlRoot.addEventListener('click', handleOverlayClick);
     ovlRoot.addEventListener('input', e => {
-      if (e.target.id !== 'banish-rarity-slider') return;
-      const rarities = e.target.dataset.rarities.split(',').map(Number);
-      const val = rarities[parseInt(e.target.value)] ?? 0;
-      state.banish.minRarity = val;
-      const disp = document.getElementById('banish-rarity-val');
-      if (disp) disp.textContent = val;
+      if (e.target.id === 'banish-rarity-slider') {
+        const rarities = e.target.dataset.rarities.split(',').map(Number);
+        const val = rarities[parseInt(e.target.value)] ?? 0;
+        state.banish.minRarity = val;
+        const disp = document.getElementById('banish-rarity-val');
+        if (disp) disp.textContent = val;
+        return;
+      }
+      if (e.target.classList.contains('ovl-search')) {
+        state.ovl.search = e.target.value;
+        applyOverlaySearch(e.target);
+      }
     });
     ovlRoot.addEventListener('change', e => {
       if (e.target.id !== 'banish-passives-chk') return;
