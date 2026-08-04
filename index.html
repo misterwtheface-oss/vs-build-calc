@@ -28,6 +28,7 @@
       --hi-arcana:   #9b3fd9;   /* arcana-associated */
       --hi-item:     #2aaa60;   /* item-associated */
       --evolved:     #e8c000;
+      --can-evolve:  #ffe840;
       --font-title:  'Cinzel', Georgia, serif;
       --font-body:   'Crimson Text', Georgia, serif;
       --slot-size:   52px;
@@ -177,7 +178,7 @@
        PLANNING PAGE
     ═══════════════════════════════════════════════════ */
     #planning {
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
     }
@@ -242,15 +243,17 @@
     .banish-cell.banished .banish-seal { opacity: .5; }
     .planning-body {
       flex: 1;
+      min-height: 0;
       padding: 1rem;
-      overflow-y: auto;
+      overflow: hidden;
       display: flex;
       gap: 1rem;
-      align-items: flex-start;
+      align-items: stretch;
     }
     .planning-main {
       flex: 1;
       min-width: 0;
+      overflow-y: auto;
     }
     .info-sidebar {
       width: 260px;
@@ -258,11 +261,19 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      max-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .sidebar-top {
+      flex-shrink: 0;
+      padding: 1rem 1rem .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-body {
+      flex: 1;
       overflow-y: auto;
+      padding: .5rem 1rem 1rem;
     }
     .info-sidebar-empty {
       color: var(--text-dim);
@@ -381,7 +392,8 @@
     }
     .slot:hover .slot-remove { display: flex; }
     .slot .slot-remove:hover { color: var(--accent); }
-    .slot.evolved { box-shadow: 0 0 0 2px var(--evolved), 0 0 6px rgba(232,192,0,.4); }
+    .slot.evolved   { box-shadow: 0 0 0 2px var(--evolved),    0 0 6px rgba(232,192,0,.4); }
+    .slot.can-union { box-shadow: 0 0 0 2px var(--can-evolve), 0 0 10px rgba(255,232,64,.55); }
     .slot.evolved::after {
       content: '⬆';
       position: absolute; bottom: 1px; left: 2px;
@@ -487,11 +499,22 @@
       width: 220px;
       flex-shrink: 0;
       border-left: 1px solid var(--border);
-      overflow-y: auto;
-      padding: .75rem;
       display: flex;
       flex-direction: column;
-      gap: .5rem;
+      overflow: hidden;
+    }
+    .ovl-right-top {
+      flex-shrink: 0;
+      padding: .75rem .75rem .4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .ovl-right-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: .5rem .75rem .75rem;
     }
     .overlay-footer {
       display: flex;
@@ -662,33 +685,35 @@
     .detail-section ul { list-style: none; padding: 0; }
     .detail-section li { font-size: .77rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
     .detail-section li::before { content: '▸ '; color: var(--gold-dim); }
-    .evo-flow { display: flex; flex-direction: column; gap: 8px; margin-top: .35rem; }
+    .evo-flow { display: flex; flex-direction: column; gap: 14px; margin-top: .35rem; }
+    .evo-path-group { padding-top: .6rem; border-top: 1px solid var(--border); }
+    .evo-path-group:first-child { padding-top: 0; border-top: none; }
     .evo-row { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; }
     .evo-node { width: 28px; height: 28px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
     .evo-node.current { outline: 1px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.4); }
     .evo-node.evo-hidden { opacity: .4; }
     .evo-node img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .evo-op { font-size: .8rem; color: var(--text-muted); flex-shrink: 0; }
-    .evo-nw { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; flex-shrink: 0; }
-    .evo-max { font-size: .5rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; }
-    .evo-sub { font-size: .48rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
+    .evo-nw { display: inline-flex; align-items: center; flex-shrink: 0; position: relative; }
+    .evo-max { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .5rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; white-space: nowrap; }
+    .evo-sub { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .48rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
     .evo-dash-line { width: 14px; border-top: 1.5px dashed var(--text-dim); flex-shrink: 0; }
     .evo-gem { width: 14px; height: 14px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
     .evo-gem img { width: 100%; height: 100%; object-fit: cover; display: block; }
     /* merge-bar: stacked rows on left → bar → output right (dual/Vandalier/Universitas) */
-    .evo-merge { display: flex; align-items: stretch; gap: 6px; }
+    .evo-merge { display: inline-flex; align-items: stretch; gap: 3px; }
     .evo-merge-rows { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
     .evo-merge-bar { width: 2px; background: var(--border); border-radius: 1px; flex-shrink: 0; min-height: 24px; }
     .evo-merge-out { display: flex; align-items: center; gap: 4px; }
     /* u2f grid: base-evo on left | bar | mid on right-top, union-partner on right-bot | final (centered) */
-    .evo-u2f { display: grid; grid-template-columns: auto 2px auto auto; grid-template-rows: auto auto; gap: 4px 6px; align-items: center; }
+    .evo-u2f { display: grid; grid-template-columns: auto 2px auto auto; grid-template-rows: auto auto; gap: 4px 3px; align-items: center; justify-content: start; }
     .evo-u2f > .u2l { grid-column:1; grid-row:1; display:flex; align-items:center; gap:4px; }
     .evo-u2f > .u2b { grid-column:2; grid-row:1/3; background:var(--border); align-self:stretch; border-radius:1px; }
     .evo-u2f > .u2t { grid-column:3; grid-row:1; display:flex; align-items:center; gap:4px; }
     .evo-u2f > .u2m { grid-column:3; grid-row:2; display:flex; align-items:center; gap:4px; }
     .evo-u2f > .u2f { grid-column:4; grid-row:1/3; display:flex; align-items:center; gap:4px; }
     /* triple/quad union: stacked inputs + bar + final */
-    .evo-multi-union { display: flex; align-items: stretch; gap: 6px; }
+    .evo-multi-union { display: inline-flex; align-items: stretch; gap: 3px; }
     .evo-multi-inputs { display: flex; flex-direction: column; gap: 4px; justify-content: center; }
     /* collection finals */
     .evo-coll-wrap { display: flex; flex-direction: column; gap: 4px; }
@@ -979,6 +1004,28 @@
     return `<div class="detail-section"><h3>Evolution</h3><div class="evo-flow">${sections.join('')}</div></div>`;
   }
 
+  // Returns evo chain HTML for all paths involving a passive, optionally filtered to a player's equipped weapons.
+  function buildPassiveEvoHTML(passiveName, playerIdx = null) {
+    const relatedWeapons = D.weapons.filter(w => (w.requirements || []).includes(passiveName));
+    const equippedNames = playerIdx != null
+      ? new Set(state.players[playerIdx].weapons.filter(Boolean).map(w => w.name))
+      : null;
+
+    const seen = new Set();
+    const groups = [];
+    for (const w of relatedWeapons) {
+      for (const ep of evoPathsFor(w.name)) {
+        if (seen.has(ep.evo_path)) continue;
+        if (equippedNames && !ep.related_to.some(rn => equippedNames.has(rn))) continue;
+        seen.add(ep.evo_path);
+        const rendered = renderEvoPath(ep, w.name);
+        if (rendered) groups.push(`<div class="evo-path-group"><div style="font-size:.58rem;color:var(--gold-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem">${esc(ep.evo_path)}</div>${rendered}</div>`);
+      }
+    }
+    if (!groups.length) return '';
+    return `<div class="detail-section"><h3>Used In</h3><div class="evo-flow" style="gap:.6rem">${groups.join('')}</div></div>`;
+  }
+
   function renderEvoPath(ep, cur) {
     const n = (name, opts = {}) => eNode(name, { ...opts, cur: name === cur });
     const { b1_1, b1_2, b1_3, b1_4, b1_r, b2_1, b2_2, b2_r, b3_1, b3_2, b3_r, pattern: pat } = ep;
@@ -1130,9 +1177,11 @@
     for (const req of (selW.requirements || [])) {
       if (!D.passives.some(p => p.name === req)) continue; // weapon req, skip
       if (player.passives.some(p => p && p.name === req)) continue; // already equipped
-      const emptySlot = player.passives.findIndex(
-        (p, i) => !p && i < counts.passives && !virtuallyTaken.has(i)
-      );
+      // Explicitly iterate slot indices — passives array is sparse so findIndex misses unset slots
+      let emptySlot = -1;
+      for (let i = 0; i < counts.passives; i++) {
+        if (!player.passives[i] && !virtuallyTaken.has(i)) { emptySlot = i; break; }
+      }
       if (emptySlot >= 0) { virtuallyTaken.add(emptySlot); pending.push({ name: req, slot: emptySlot }); }
       else missing.push(req);
     }
@@ -1184,6 +1233,72 @@
     return computeEffectiveWeapon(evolved, player); // chain-evolve
   }
 
+  function getReadyUnions(playerIdx) {
+    const player = state.players[playerIdx];
+    const equippedNames = new Set(player.weapons.filter(Boolean).map(w => w.name));
+    const seen = new Set();
+    const ready = [];
+    for (const [si, base] of player.weapons.entries()) {
+      if (!base || base.method !== 'Union' || !base.trans_result) continue;
+      if (seen.has(base.trans_result)) continue;
+      seen.add(base.trans_result);
+      const allInputs = D.weapons.filter(w => w.method === 'Union' && w.trans_result === base.trans_result);
+      if (!allInputs.every(w => equippedNames.has(w.name))) continue;
+      const result = weaponByName(base.trans_result);
+      if (!result) continue;
+      const inputSlots = allInputs.map(w => player.weapons.findIndex(b => b && b.name === w.name));
+      if (inputSlots.every(s => s >= 0)) ready.push({ result, inputSlots });
+    }
+    return ready;
+  }
+
+  function weaponLineage(name) {
+    const forms = new Set();
+    let w = weaponByName(name);
+    while (w) {
+      forms.add(w.name);
+      w = w.trans_result ? weaponByName(w.trans_result) : null;
+    }
+    return forms;
+  }
+
+  function getHiddenCounterparts(playerIdx) {
+    const player = state.players[playerIdx];
+    const equippedNames = new Set(player.weapons.filter(Boolean).map(w => w.name));
+    const hasGemini = state.arcana.some(a => a && a.name === 'Gemini (I)');
+    if (!hasGemini) return [];
+    const seen = new Set();
+    const hidden = [];
+
+    function checkBase(baseName, counterpartName) {
+      if (!baseName || !counterpartName || seen.has(counterpartName)) return;
+      const lineage = weaponLineage(baseName);
+      if ([...lineage].some(n => equippedNames.has(n))) {
+        seen.add(counterpartName);
+        hidden.push(counterpartName);
+      }
+    }
+
+    for (const ep of (D.evoPaths || [])) {
+      if (!ep.pattern.includes('Counterpart')) continue;
+      checkBase(ep.b1_1, ep.b1_r);
+      if (ep.pattern === 'Dual(Counterpart):Union>Final') checkBase(ep.b2_1, ep.b2_r);
+    }
+    return hidden;
+  }
+
+  function getReadyEvolutions(playerIdx) {
+    const player = state.players[playerIdx];
+    const passiveNames = new Set(player.passives.filter(Boolean).map(p => p.name));
+    return player.weapons.map((base, si) => {
+      if (!base || base.method !== 'Evolution' || !base.trans_result) return null;
+      const passiveReqs = (base.requirements || []).filter(r => D.passives.some(p => p.name === r));
+      if (!passiveReqs.every(r => passiveNames.has(r))) return null;
+      const result = weaponByName(base.trans_result);
+      return result ? { result, slotIdx: si } : null;
+    }).filter(Boolean);
+  }
+
   // ═══════════════════════════════════════════════════════
   //  HIGHLIGHTS: which weapons are associated with char / arcana / items
   // ═══════════════════════════════════════════════════════
@@ -1232,7 +1347,7 @@
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            evolved = false, hidden = false, removable = true, locked = false } = opts;
+            evolved = false, hidden = false, removable = true, locked = false, canUnion = false } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     const icon = (item && item.icon) ? item.icon : emptyIcon;
@@ -1241,9 +1356,10 @@
       isChar ? 'slot-char' : '',
       type === 'arcana' ? 'slot-arcana' : '',
       type === 'stage'  ? 'slot-stage'  : '',
-      evolved ? 'evolved' : '',
-      hidden  ? 'hidden-weapon' : '',
-      locked  ? 'slot-locked'   : '',
+      evolved   ? 'evolved'   : '',
+      hidden    ? 'hidden-weapon' : '',
+      locked    ? 'slot-locked'   : '',
+      canUnion  ? 'can-union'     : '',
     ].filter(Boolean).join(' ');
 
     const removeBtn = (!hidden && removable && item && !locked)
@@ -1251,12 +1367,13 @@
       : '';
 
     const imgTag = `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.src='${emptyIcon}'">`;
-    const slotAction = hidden ? '' : item ? 'view-slot' : locked ? '' : 'open-slot';
+    const slotAction = hidden ? (item ? 'view-hidden' : '') : item ? 'view-slot' : locked ? '' : 'open-slot';
 
     const lockIcon = locked ? `<img class="slot-lock" src="assets/icons/ui/locked.png" alt="">` : '';
+    const hiddenAttr = (hidden && item) ? `data-hidden-name="${esc(item.name)}"` : '';
     return `<div class="${classes}"
-      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}"
-      title="${item ? esc(item.name) + (locked ? ' (starter)' : '') : 'Empty'}">
+      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" ${hiddenAttr}
+      title="${item ? esc(item.name) + (locked ? ' (starter)' : hidden ? ' (hidden)' : '') : 'Empty'}">
       ${imgTag}
       ${removeBtn}
       ${lockIcon}
@@ -1337,28 +1454,28 @@
   function buildInfoSidebar(panel) {
     if (!panel) {
       return `<div class="info-sidebar">
-        <div class="info-sidebar-empty">Left-click a slot<br>to see details<br><br>Right-click to change</div>
+        <div class="sidebar-body"><div class="info-sidebar-empty">Left-click a slot<br>to see details<br><br>Right-click to change</div></div>
       </div>`;
     }
-    const { type, playerIdx, slotIdx } = panel;
+    const { type, playerIdx, slotIdx, hiddenName } = panel;
     const player = state.players[playerIdx];
 
     let item = null;
     if (type === 'char')    item = player?.character;
     else if (type === 'weapon')  {
-      const base = player?.weapons[slotIdx];
-      item = computeEffectiveWeapon(base, player) || base;
+      item = hiddenName ? weaponByName(hiddenName) : player?.weapons[slotIdx];
     }
     else if (type === 'passive') item = player?.passives[slotIdx];
     else if (type === 'arcana')  item = state.arcana[slotIdx];
     else if (type === 'stage')   item = state.stage;
 
-    if (!item) return `<div class="info-sidebar"><div class="info-sidebar-empty">Empty slot</div></div>`;
+    if (!item) return `<div class="info-sidebar"><div class="sidebar-body"><div class="info-sidebar-empty">Empty slot</div></div></div>`;
 
     const icon = (item.icon) ? item.icon : (EMPTY_ICONS[type] || EMPTY_ICONS.weapon);
-    let html = `<div class="detail-icon"><img src="${esc(icon)}" onerror="this.src='${EMPTY_ICONS[type]||EMPTY_ICONS.weapon}'"></div>`;
-    html += `<div class="detail-name">${esc(item.name)}</div>`;
-    if (item.description) html += `<div class="detail-desc">${esc(item.description)}</div>`;
+    let top = `<div class="detail-icon"><img src="${esc(icon)}" onerror="this.src='${EMPTY_ICONS[type]||EMPTY_ICONS.weapon}'"></div>`;
+    top += `<div class="detail-name">${esc(item.name)}</div>`;
+    if (item.description) top += `<div class="detail-desc">${esc(item.description)}</div>`;
+    let html = '';
 
     if (type === 'char') {
       if (item.starting_weapons?.length) {
@@ -1374,31 +1491,47 @@
 
     if (type === 'weapon') {
       const wObj = D.weapons.find(w => w.name === item.name);
-      if (wObj?.trans_result) {
-        const ev = weaponByName(wObj.trans_result);
-        html += `<div class="detail-section"><span class="detail-section-label">Evolves Into</span><div class="req-row">`;
-        if (ev) html += `<div class="req-icon" title="${esc(ev.name)}"><img src="${esc(ev.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>`;
-        html += `</div></div>`;
-        if (wObj.trans_reqs?.length) {
-          html += `<div class="detail-section"><span class="detail-section-label">Requires</span><div class="req-row">`;
-          for (const r of wObj.trans_reqs) {
-            const pi = passiveByName(r);
-            html += `<div class="req-icon" title="${esc(r)}">${pi ? `<img src="${esc(pi.icon||EMPTY_ICONS.passive)}" onerror="this.src='${EMPTY_ICONS.passive}'">` : `<span style="font-size:.55rem">${esc(r.slice(0,6))}</span>`}</div>`;
-          }
-          html += `</div></div>`;
-        }
+      if (wObj) html += buildEvoChainHTML(wObj);
+      // Evolution ready?
+      const readyEvos = getReadyEvolutions(playerIdx);
+      const evo = readyEvos.find(e => e.slotIdx === slotIdx);
+      if (evo) {
+        const rw = evo.result;
+        html += `<div class="detail-section">
+          <span class="detail-section-label" style="color:var(--can-evolve)">Evolution Ready</span>
+          <div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.4rem">
+            <div class="req-icon" title="${esc(rw.name)}"><img src="${esc(rw.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
+            <span style="font-size:.75rem;color:var(--text)">${esc(rw.name)}</span>
+          </div>
+          <button class="btn btn-sm" style="width:100%"
+            data-action="perform-evolve"
+            data-player="${playerIdx}"
+            data-slot="${slotIdx}"
+            data-result="${esc(rw.name)}">Evolve →</button>
+        </div>`;
+      }
+      // Union ready?
+      const readyUnions = getReadyUnions(playerIdx);
+      const union = readyUnions.find(u => u.inputSlots.includes(slotIdx));
+      if (union) {
+        const rw = union.result;
+        html += `<div class="detail-section">
+          <span class="detail-section-label" style="color:var(--can-evolve)">Union Ready</span>
+          <div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.4rem">
+            <div class="req-icon" title="${esc(rw.name)}"><img src="${esc(rw.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
+            <span style="font-size:.75rem;color:var(--text)">${esc(rw.name)}</span>
+          </div>
+          <button class="btn btn-sm" style="width:100%"
+            data-action="perform-union"
+            data-player="${playerIdx}"
+            data-result="${esc(rw.name)}"
+            data-input-slots="${union.inputSlots.join(',')}">Union →</button>
+        </div>`;
       }
     }
 
     if (type === 'passive') {
-      const related = D.weapons.filter(w => w.trans_reqs?.includes(item.name));
-      if (related.length) {
-        html += `<div class="detail-section"><span class="detail-section-label">Used for Evolution</span><div class="req-row">`;
-        for (const w of related.slice(0, 8)) {
-          html += `<div class="req-icon" title="${esc(w.name)}"><img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>`;
-        }
-        html += `</div></div>`;
-      }
+      html += buildPassiveEvoHTML(item.name, playerIdx);
     }
 
     if (type === 'arcana') {
@@ -1406,7 +1539,7 @@
       if (aObj) html += `<div class="hi-badge arcana" style="text-align:center;margin:.4rem 0">${esc(aObj.type)} · ${esc(aObj.number)}</div>`;
     }
 
-    return `<div class="info-sidebar">${html}</div>`;
+    return `<div class="info-sidebar"><div class="sidebar-top">${top}</div><div class="sidebar-body">${html}</div></div>`;
   }
 
   function renderPlanning() {
@@ -1415,33 +1548,43 @@
 
     const playerCards = players.map((player, idx) => {
       const char = player.character;
-      const eff  = player.weapons.map(w => computeEffectiveWeapon(w, player));
 
       // ── Character slot
       const charSlot = slotHTML(char, { type:'char', playerIdx:idx, slotIdx:0, removable: !!char });
 
       // ── Weapon slots
       const starterCount = char ? Math.min(char.starting_weapons.length, counts.weapons) : 0;
+      const starterLineages = char
+        ? char.starting_weapons.slice(0, starterCount).map(wn => weaponLineage(wn))
+        : [];
+      const readyUnions = getReadyUnions(idx);
+      const readyEvos   = getReadyEvolutions(idx);
+      const upgradeSlotSet = new Set([
+        ...readyUnions.flatMap(u => u.inputSlots),
+        ...readyEvos.map(e => e.slotIdx),
+      ]);
       const wSlots = Array.from({length: counts.weapons}, (_, si) => {
         const base = player.weapons[si] || null;
-        const ev   = eff[si] || null;
-        const isEvolved = base && ev && base.name !== ev.name;
-        const isLocked = si < starterCount;
-        return slotHTML(ev, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved, locked:isLocked });
+        const isEvolved = base && base.category !== 'Base';
+        // Locked only if the weapon belongs to this slot's starter lineage (starter → evo → union result).
+        // Empty slots and weapons from outside the lineage are not locked.
+        const isLocked = si < starterCount && !!base && (starterLineages[si]?.has(base.name) ?? false);
+        return slotHTML(base, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved, locked:isLocked, canUnion: upgradeSlotSet.has(si) });
       }).join('');
 
-      // ── Hidden weapons (char starting weapons beyond slot count)
+      // ── Hidden weapons (char overflow + counterparts unlocked by Gemini)
+      const occupied = new Set(player.weapons.filter(Boolean).map(w => w.name));
+      const charOverflow = char
+        ? char.starting_weapons.slice(counts.weapons).filter(wn => !occupied.has(wn))
+        : [];
+      const counterparts = getHiddenCounterparts(idx);
+      const allHidden = [...new Set([...charOverflow, ...counterparts])];
       let hiddenSlots = '';
-      if (char) {
-        const occupied = player.weapons.filter(Boolean).map(w => w.name);
-        const hidden = char.starting_weapons.slice(counts.weapons)
-          .filter(wn => !occupied.includes(wn));
-        if (hidden.length) {
-          hiddenSlots += '<div class="hidden-divider"></div>';
-          hiddenSlots += hidden.map(wn => slotHTML(weaponByName(wn), {
-            type:'weapon', playerIdx:idx, slotIdx:-1, hidden:true
-          })).join('');
-        }
+      if (allHidden.length) {
+        hiddenSlots += '<div class="hidden-divider"></div>';
+        hiddenSlots += allHidden.map(wn => slotHTML(weaponByName(wn), {
+          type:'weapon', playerIdx:idx, slotIdx:-1, hidden:true
+        })).join('');
       }
 
       // ── Passive slots
@@ -1704,18 +1847,19 @@
 
         const chainHTML = buildEvoChainHTML(w);
 
-        rightHTML = `<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+        const wRightTop = `<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(w.name)}</div>
-          ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}
-          ${reqHTML}${chainHTML}
+          ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}`;
+        const wRightBody = `${reqHTML}${chainHTML}
           ${Object.keys(w.arcana_ratings).length ? `<div class="detail-section"><h3>Arcana Synergies</h3>
             <ul style="padding-left:1rem;margin:.3rem 0">${Object.entries(w.arcana_ratings).slice(0,6).map(([k,v]) =>
               `<li style="font-size:.72rem">${esc(k.replace(/_/g,' '))}: ${esc(v)}</li>`
             ).join('')}</ul>
           </div>` : ''}`;
+        rightHTML = `<div class="ovl-right-top">${wRightTop}</div><div class="ovl-right-body">${wRightBody}</div>`;
       }
     } else {
-      rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a weapon</div>';
+      rightHTML = `<div class="ovl-right-top"><div class="detail-desc" style="text-align:center">Select a weapon</div></div><div class="ovl-right-body"></div>`;
     }
 
     return `<div class="overlay-header">
@@ -1752,7 +1896,8 @@
     }
 
     let leftHTML = '<div class="detail-desc" style="margin-top:.5rem;color:var(--text-muted)">Select a passive to see details</div>';
-    let rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a passive</div>';
+    let rightTop = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a passive</div>';
+    let rightBody = '';
 
     if (sel) {
       const p = D.passives.find(p => p.name === sel.name);
@@ -1761,11 +1906,13 @@
           ${p.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
             ${p.level_ups.map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+1}: ${esc(l)}</li>`).join('')}
           </ul></div>` : ''}`;
-        rightHTML = `<div class="detail-icon"><img src="${esc(p.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+        rightTop = `<div class="detail-icon"><img src="${esc(p.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(p.name)}</div>
           <div class="detail-desc">${esc(p.description)}</div>`;
+        rightBody = buildPassiveEvoHTML(p.name, null);
       }
     }
+    const rightHTML = `<div class="ovl-right-top">${rightTop}</div><div class="ovl-right-body">${rightBody}</div>`;
 
     return `<div class="overlay-header">
         <h2>Passive Slot ${slotIdx+1}</h2>
@@ -1973,10 +2120,15 @@
     if (confirmed || (fromEmpty && sel)) {
       // Apply selection
       if (type === 'char') {
+        const oldChar = state.players[playerIdx].character;
         state.players[playerIdx].character = sel;
-        // Auto-fill starting weapons into empty slots
         if (sel) {
           const counts = SLOT_COUNTS[state.playerCount];
+          // Clear slots locked by the previous character before filling new starters
+          if (oldChar) {
+            const oldCount = Math.min(oldChar.starting_weapons.length, counts.weapons);
+            for (let i = 0; i < oldCount; i++) state.players[playerIdx].weapons[i] = null;
+          }
           sel.starting_weapons.slice(0, counts.weapons).forEach((wn, i) => {
             if (!state.players[playerIdx].weapons[i]) {
               state.players[playerIdx].weapons[i] = weaponByName(wn) || null;
@@ -2413,6 +2565,32 @@
     }
     if (action === 'view-slot') {
       state.infoPanel = { type: slotType, playerIdx, slotIdx };
+      render();
+      return;
+    }
+    if (action === 'view-hidden') {
+      state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1, hiddenName: btn.dataset.hiddenName };
+      render();
+      return;
+    }
+    if (action === 'perform-evolve') {
+      const resultW = weaponByName(btn.dataset.result);
+      if (resultW) {
+        state.players[playerIdx].weapons[slotIdx] = resultW;
+        state.infoPanel = { type: 'weapon', playerIdx, slotIdx };
+      }
+      render();
+      return;
+    }
+    if (action === 'perform-union') {
+      const inputSlots = (btn.dataset.inputSlots || '').split(',').map(Number);
+      const resultW = weaponByName(btn.dataset.result);
+      if (resultW && inputSlots.length) {
+        inputSlots.forEach((si, i) => {
+          state.players[playerIdx].weapons[si] = i === 0 ? resultW : null;
+        });
+        state.infoPanel = { type: 'weapon', playerIdx, slotIdx: inputSlots[0] };
+      }
       render();
       return;
     }

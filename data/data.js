@@ -9379,6 +9379,7 @@ window.VS_DATA = {
       "name": "Whip",
       "icon": "assets/icons/weapons/whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Attacks horizontally, passes through enemies.",
       "level_ups": [
         "Attacks horizontally, passes through enemies.",
@@ -9411,6 +9412,7 @@ window.VS_DATA = {
       "name": "Bloody Tear",
       "icon": "assets/icons/weapons/bloody_tear.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolution of the whip. Can deal critical damage and absorb HP.",
       "level_ups": [
         "-"
@@ -9437,6 +9439,7 @@ window.VS_DATA = {
       "name": "Vento Sacro",
       "icon": "assets/icons/weapons/vento_sacro.png",
       "category": "Base",
+      "method": "Union",
       "description": "Stronger with continuous movement. Can deal critical damage.",
       "level_ups": [
         "Stronger with continuous movement. Can deal critical damage.",
@@ -9472,12 +9475,13 @@ window.VS_DATA = {
       "name": "Fuwalafuwaloo",
       "icon": "assets/icons/weapons/fuwalafuwaloo.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Fuwalafuwaloo",
       "arcana_ratings": {
@@ -9498,6 +9502,7 @@ window.VS_DATA = {
       "name": "Magic Wand",
       "icon": "assets/icons/weapons/magic_wand.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires at the nearest enemy.",
       "level_ups": [
         "Fires at the nearest enemy.",
@@ -9532,6 +9537,7 @@ window.VS_DATA = {
       "name": "Holy Wand",
       "icon": "assets/icons/weapons/holy_wand.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolution of the Magic Wand. Fires with no delay.",
       "level_ups": [
         "-"
@@ -9559,6 +9565,7 @@ window.VS_DATA = {
       "name": "Summon Spirit",
       "icon": "assets/icons/weapons/summon_spirit.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires a homing projectile.",
       "level_ups": [
         "Fires a homing projectile.",
@@ -9593,12 +9600,13 @@ window.VS_DATA = {
       "name": "Spirit of Light",
       "icon": "assets/icons/weapons/spirit_of_light.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Summon Spirit and Holy Wand. Fires homing spirits from a portal of light.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Spirit of Light",
       "arcana_ratings": {
@@ -9618,6 +9626,7 @@ window.VS_DATA = {
       "name": "Knife",
       "icon": "assets/icons/weapons/knife.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires quickly in the faced direction.",
       "level_ups": [
         "Fires quickly in the faced direction.",
@@ -9651,6 +9660,7 @@ window.VS_DATA = {
       "name": "Thousand Edge",
       "icon": "assets/icons/weapons/thousand_edge.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Knife. Fires with no delay.",
       "level_ups": [
         "-"
@@ -9678,6 +9688,7 @@ window.VS_DATA = {
       "name": "Valmanway",
       "icon": "assets/icons/weapons/valmanway.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires faster when moving.",
       "level_ups": [
         "Fires faster when moving.",
@@ -9712,12 +9723,13 @@ window.VS_DATA = {
       "name": "Million Cut",
       "icon": "assets/icons/weapons/million_cut.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Valmanway and Thousand Edge. Slashes endlessly. Grows bigger with continuous movement.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Million Cut",
       "arcana_ratings": {
@@ -9737,6 +9749,7 @@ window.VS_DATA = {
       "name": "Axe",
       "icon": "assets/icons/weapons/axe.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "High damage, high area scaling.",
       "level_ups": [
         "High damage, high Area scaling.",
@@ -9771,6 +9784,7 @@ window.VS_DATA = {
       "name": "Death Spiral",
       "icon": "assets/icons/weapons/death_spiral.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Axe. Passes through enemies.",
       "level_ups": [
         "-"
@@ -9798,6 +9812,7 @@ window.VS_DATA = {
       "name": "Dark Rift",
       "icon": "assets/icons/weapons/dark_rift.png",
       "category": "Base",
+      "method": "Union",
       "description": "Generates vertical damaging zones.",
       "level_ups": [
         "Generates vertical damaging zones.",
@@ -9831,12 +9846,13 @@ window.VS_DATA = {
       "name": "Legacy of Death: Soul River",
       "icon": "assets/icons/weapons/legacy_of_death_soul.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Dark Rift and Death Spiral. Death becomes you.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Legacy of Death: Soul River",
       "arcana_ratings": {
@@ -9856,6 +9872,7 @@ window.VS_DATA = {
       "name": "Cross",
       "icon": "assets/icons/weapons/cross.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Aims at the nearest enemy, has a boomerang effect.",
       "level_ups": [
         "Aims at nearest enemy, has boomerang effect.",
@@ -9889,6 +9906,7 @@ window.VS_DATA = {
       "name": "Heaven Sword",
       "icon": "assets/icons/weapons/heaven_sword.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Cross. Can do critical damage.",
       "level_ups": [
         "-"
@@ -9915,6 +9933,7 @@ window.VS_DATA = {
       "name": "Grand Cross",
       "icon": "assets/icons/weapons/grand_cross.png",
       "category": "Base",
+      "method": "Union",
       "description": "Summons holy light.",
       "level_ups": [
         "Summons holy light.",
@@ -9951,12 +9970,13 @@ window.VS_DATA = {
       "name": "Arch Angle",
       "icon": "assets/icons/weapons/arch_angle.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Grand Cross and Heaven Sword. Central beam pulses when crosses pass through it.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Arch Angle",
       "arcana_ratings": {
@@ -9977,6 +9997,7 @@ window.VS_DATA = {
       "name": "King Bible",
       "icon": "assets/icons/weapons/king_bible.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Orbits around the character.",
       "level_ups": [
         "Orbits around the character.",
@@ -10010,6 +10031,7 @@ window.VS_DATA = {
       "name": "Unholy Vespers",
       "icon": "assets/icons/weapons/unholy_vespers.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved King Bible. Never Ends.",
       "level_ups": [
         "-"
@@ -10036,6 +10058,7 @@ window.VS_DATA = {
       "name": "Icebrand",
       "icon": "assets/icons/weapons/icebrand.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires lingering projectiles. Might freeze enemies.",
       "level_ups": [
         "Fires lingering projectiles. Might freeze enemies.",
@@ -10065,12 +10088,13 @@ window.VS_DATA = {
       "name": "Ninth Circle",
       "icon": "assets/icons/weapons/ninth_circle.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Icebrand and Unholy Vespers. Hell truly has frozen over.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Ninth Circle",
       "arcana_ratings": {
@@ -10086,6 +10110,7 @@ window.VS_DATA = {
       "name": "Fire Wand",
       "icon": "assets/icons/weapons/fire_wand.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires at a random enemy, deals heavy damage.",
       "level_ups": [
         "Fires at a random enemy, deals heavy damage.",
@@ -10121,6 +10146,7 @@ window.VS_DATA = {
       "name": "Hellfire",
       "icon": "assets/icons/weapons/hellfire.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Fire Wand. Passes through enemies.",
       "level_ups": [
         "-"
@@ -10150,6 +10176,7 @@ window.VS_DATA = {
       "name": "Aura Blast",
       "icon": "assets/icons/weapons/aura_blast.png",
       "category": "Base",
+      "method": "Union",
       "description": "Generates explosive sideways.",
       "level_ups": [
         "Generates explosive sideways.",
@@ -10185,12 +10212,13 @@ window.VS_DATA = {
       "name": "Kardía Phlegeton",
       "icon": "assets/icons/weapons/kardía_phlegeton.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Aura Blast and Hellfire. Calls forth a massive volcanic eruption.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Kardía Phlegeton",
       "arcana_ratings": {
@@ -10211,6 +10239,7 @@ window.VS_DATA = {
       "name": "Garlic",
       "icon": "assets/icons/weapons/garlic.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Damages nearby enemies. Reduces resistance to knockback and freeze.",
       "level_ups": [
         "Damages nearby enemies. Reduces resistance to knockback and freeze.",
@@ -10245,6 +10274,7 @@ window.VS_DATA = {
       "name": "Soul Eater",
       "icon": "assets/icons/weapons/soul_eater.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Garlic. Steals hearts. Power increases when recovering HP.",
       "level_ups": [
         "-"
@@ -10273,6 +10303,7 @@ window.VS_DATA = {
       "name": "Anura",
       "icon": "assets/icons/weapons/anura.png",
       "category": "Base",
+      "method": "Union",
       "description": "Summons frogs that damage enemies as they jump.",
       "level_ups": [
         "Summons frogs that damage enemies as they jump.",
@@ -10307,12 +10338,13 @@ window.VS_DATA = {
       "name": "Dark Frogamorphosis",
       "icon": "assets/icons/weapons/dark_frogamorphosis.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Anura and Soul Eater. May actually eat enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Dark Frogamorphosis",
       "arcana_ratings": {
@@ -10334,6 +10366,7 @@ window.VS_DATA = {
       "name": "Santa Water",
       "icon": "assets/icons/weapons/santa_water.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates damaging zones.",
       "level_ups": [
         "Generates damaging zones.",
@@ -10369,6 +10402,7 @@ window.VS_DATA = {
       "name": "La Borra",
       "icon": "assets/icons/weapons/la_borra.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Santa water. Damaging zones follow you and grow when they move.",
       "level_ups": [
         "-"
@@ -10395,6 +10429,7 @@ window.VS_DATA = {
       "name": "Hydro Storm",
       "icon": "assets/icons/weapons/hydro_storm.png",
       "category": "Base",
+      "method": "Union",
       "description": "Generates damaging waves based on Projectile Speed and Duration.",
       "level_ups": [
         "Generates damaging waves based on Projectile Speed and Duration.",
@@ -10429,12 +10464,13 @@ window.VS_DATA = {
       "name": "Hydro Pump Climax",
       "icon": "assets/icons/weapons/hydro_pump_climax.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Hydro Storm and La Borra. It never rains but it pours.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Hydro Pump Climax",
       "arcana_ratings": {
@@ -10454,6 +10490,7 @@ window.VS_DATA = {
       "name": "Runetracer",
       "icon": "assets/icons/weapons/runetracer.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Passes through enemies, bounces around.",
       "level_ups": [
         "Passes through enemies, bounces around.",
@@ -10491,6 +10528,7 @@ window.VS_DATA = {
       "name": "NO FUTURE",
       "icon": "assets/icons/weapons/no_future.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Runetracer. Explodes when bouncing and in retaliation.",
       "level_ups": [
         "-"
@@ -10517,6 +10555,7 @@ window.VS_DATA = {
       "name": "Troll Bomb",
       "icon": "assets/icons/weapons/troll_bomb.png",
       "category": "Base",
+      "method": "Union",
       "description": "This one doesn't bounce.",
       "level_ups": [
         "This one doesn't bounce.",
@@ -10550,12 +10589,13 @@ window.VS_DATA = {
       "name": "Carnage Heart",
       "icon": "assets/icons/weapons/carnage_heart.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Troll Bomb and NO FUTURE. This one does in fact bounce.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Carnage Heart",
       "arcana_ratings": {
@@ -10575,6 +10615,7 @@ window.VS_DATA = {
       "name": "Lightning Ring",
       "icon": "assets/icons/weapons/lightning_ring.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at random enemies.",
       "level_ups": [
         "Strikes at random enemies.",
@@ -10609,6 +10650,7 @@ window.VS_DATA = {
       "name": "Thunder Loop",
       "icon": "assets/icons/weapons/thunder_loop.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Lightning Ring. Projectiles strike twice.",
       "level_ups": [
         "-"
@@ -10633,6 +10675,7 @@ window.VS_DATA = {
       "name": "Sword Brothers",
       "icon": "assets/icons/weapons/sword_brothers.png",
       "category": "Base",
+      "method": "Union",
       "description": "Grants a brief moment of Invulnerability and generates a damaging wave.",
       "level_ups": [
         "Grants a brief moment of Invulnerability and generates a damaging wave.",
@@ -10663,12 +10706,13 @@ window.VS_DATA = {
       "name": "Vjaya Sisters",
       "icon": "assets/icons/weapons/vjaya_sisters.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Sword Brothers and Thunder Loop. Lightning triggers sword explosions with brief Invulnerability.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Vjaya Sisters",
       "arcana_ratings": {
@@ -10682,6 +10726,7 @@ window.VS_DATA = {
       "name": "Pentagram",
       "icon": "assets/icons/weapons/pentagram.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Erases everything in sight.",
       "level_ups": [
         "Erases everything in sight.",
@@ -10713,6 +10758,7 @@ window.VS_DATA = {
       "name": "Gorgeous Moon",
       "icon": "assets/icons/weapons/gorgeous_moon.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Pentagram. Generates extra gems and gathers all of them.",
       "level_ups": [
         "-"
@@ -10740,6 +10786,7 @@ window.VS_DATA = {
       "name": "Summon Spirit Tornado",
       "icon": "assets/icons/weapons/summon_spirit_tornado.png",
       "category": "Base",
+      "method": "Union",
       "description": "Summons spirits that will occasionally pick up XP gems for you.",
       "level_ups": [
         "Summons spirits that will occasionally pick up XP gems for you.",
@@ -10775,12 +10822,13 @@ window.VS_DATA = {
       "name": "Venus Crescent",
       "icon": "assets/icons/weapons/venus_crescent.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Summon Spirit Tornado and Gorgeous Moon. Love, Beauty and Light.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Venus Crescent",
       "arcana_ratings": {
@@ -10800,6 +10848,7 @@ window.VS_DATA = {
       "name": "Peachone",
       "icon": "assets/icons/weapons/peachone.png",
       "category": "Base",
+      "method": "Union",
       "description": "Bombards in a circular area.",
       "level_ups": [
         "Bombards in a circling zone.",
@@ -10834,6 +10883,7 @@ window.VS_DATA = {
       "name": "Cygnus",
       "icon": "assets/icons/weapons/cygnus.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Bombards in a circular area.",
       "level_ups": [
         "-"
@@ -10860,6 +10910,7 @@ window.VS_DATA = {
       "name": "Ebony Wings",
       "icon": "assets/icons/weapons/ebony_wings.png",
       "category": "Base",
+      "method": "Union",
       "description": "Bombards in a circular area.",
       "level_ups": [
         "Bombards in a circling zone.",
@@ -10894,6 +10945,7 @@ window.VS_DATA = {
       "name": "Zhar Ptytsia",
       "icon": "assets/icons/weapons/zhar_ptytsia.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Bombards in a circular area.",
       "level_ups": [
         "-"
@@ -10922,6 +10974,7 @@ window.VS_DATA = {
       "name": "Vandalier",
       "icon": "assets/icons/weapons/vandalier.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Peachone and Ebony Wings.",
       "level_ups": [
         "Union of Ebony Wings and Peachone",
@@ -10934,7 +10987,7 @@ window.VS_DATA = {
         "Base Area up by 20%."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Vandalier",
       "arcana_ratings": {
@@ -10953,6 +11006,7 @@ window.VS_DATA = {
       "name": "Phiera Der Tuphello",
       "icon": "assets/icons/weapons/phiera_der_tuphello.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires quickly in four fixed directions.",
       "level_ups": [
         "Fires quickly in four fixed directions.",
@@ -10987,6 +11041,7 @@ window.VS_DATA = {
       "name": "Red Muscle",
       "icon": "assets/icons/weapons/red_muscle.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
       "level_ups": [
         "-"
@@ -11013,6 +11068,7 @@ window.VS_DATA = {
       "name": "Eight The Sparrow",
       "icon": "assets/icons/weapons/eight_the_sparrow.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires quickly in four fixed directions.",
       "level_ups": [
         "Fires quickly in four fixed directions.",
@@ -11048,6 +11104,7 @@ window.VS_DATA = {
       "name": "Twice Upon a Time",
       "icon": "assets/icons/weapons/twice_upon_a_time.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
       "level_ups": [
         "-"
@@ -11076,12 +11133,13 @@ window.VS_DATA = {
       "name": "Phieraggi",
       "icon": "assets/icons/weapons/phieraggi.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Phieraggi",
       "arcana_ratings": {
@@ -11103,6 +11161,7 @@ window.VS_DATA = {
       "name": "Gatti Amari",
       "icon": "assets/icons/weapons/gatti_amari.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Summons capricious projectiles. Might interact with pickups.",
       "level_ups": [
         "Summons capricious projectiles. Might interact with pickups.",
@@ -11140,6 +11199,7 @@ window.VS_DATA = {
       "name": "Flock Destroyer",
       "icon": "assets/icons/weapons/flock_destroyer.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Summons capricious projectiles. Might interact with pickups.",
       "level_ups": [
         "-"
@@ -11157,6 +11217,7 @@ window.VS_DATA = {
       "name": "Vicious Hunger",
       "icon": "assets/icons/weapons/vicious_hunger.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Gatti Amari. Might turn anything into gold.",
       "level_ups": [
         "-"
@@ -11174,6 +11235,7 @@ window.VS_DATA = {
       "name": "Soul Steal",
       "icon": "assets/icons/weapons/soul_steal.png",
       "category": "Base",
+      "method": "Union",
       "description": "Damages all enemies in sight and attempts to turn them into hearts.",
       "level_ups": [
         "Damages all enemies in sight and attempts to turn them into hearts.",
@@ -11198,12 +11260,13 @@ window.VS_DATA = {
       "name": "Power of Lire",
       "icon": "assets/icons/weapons/power_of_lire.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Soul Steal and Vicious Hunger. Devours enemies with insatiable greed.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Power of Lire",
       "arcana_ratings": {
@@ -11220,6 +11283,7 @@ window.VS_DATA = {
       "name": "Song of Mana",
       "icon": "assets/icons/weapons/song_of_mana.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Attacks vertically, passes through enemies.",
       "level_ups": [
         "Attacks vertically, passes through enemies.",
@@ -11246,6 +11310,7 @@ window.VS_DATA = {
       "name": "Mannajja",
       "icon": "assets/icons/weapons/mannajja.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Song of Mana. Might slow enemies down.",
       "level_ups": [
         "-"
@@ -11265,6 +11330,7 @@ window.VS_DATA = {
       "name": "Arrow of Goth",
       "icon": "assets/icons/weapons/arrow_of_goth.png",
       "category": "Base",
+      "method": "Union",
       "description": "Critical hits maximise amount of projectiles.",
       "level_ups": [
         "Critical hits maximise amount of projectiles.",
@@ -11289,12 +11355,13 @@ window.VS_DATA = {
       "name": "Dies Irae",
       "icon": "assets/icons/weapons/dies_irae.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Arrow of Goth and Mannajja. Alamaric Snipers rain down arrows, even more so on critical hit.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Dies Irae",
       "arcana_ratings": {
@@ -11306,6 +11373,7 @@ window.VS_DATA = {
       "name": "Shadow Pinion",
       "icon": "assets/icons/weapons/shadow_pinion.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generating damaging zones when moving, strikes when stopping.",
       "level_ups": [
         "Generates damaging zones when moving, strikes when stopping.",
@@ -11332,6 +11400,7 @@ window.VS_DATA = {
       "name": "Valkyrie Turner",
       "icon": "assets/icons/weapons/valkyrie_turner.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Evolved Shadow Pinion. Bigger, longer, faster, stronger.",
       "level_ups": [
         "-"
@@ -11349,6 +11418,7 @@ window.VS_DATA = {
       "name": "Svarog Statue",
       "icon": "assets/icons/weapons/svarog_statue.png",
       "category": "Base",
+      "method": "Union",
       "description": "Geneartes damaging zones when moving.",
       "level_ups": [
         "Generates damaging zones when moving.",
@@ -11376,12 +11446,13 @@ window.VS_DATA = {
       "name": "Darkness Illusion",
       "icon": "assets/icons/weapons/darkness_illusion.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Svarog Statue and Valkyrie Turner. Crimson clones dance with you in the flames.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Darkness Illusion",
       "arcana_ratings": {
@@ -11396,6 +11467,7 @@ window.VS_DATA = {
       "name": "Clock Lancet",
       "icon": "assets/icons/weapons/clock_lancet.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Chance to freeze enemies in time.",
       "level_ups": [
         "Chance to freeze enemies in time.",
@@ -11423,12 +11495,13 @@ window.VS_DATA = {
       "name": "Infinite Corridor",
       "icon": "assets/icons/weapons/infinite_corridor.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Clock Lancet. Halves enemies' health.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Infinite Corridor",
       "arcana_ratings": {
@@ -11443,6 +11516,7 @@ window.VS_DATA = {
       "name": "Laurel",
       "icon": "assets/icons/weapons/laurel.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Shields from damage while active.",
       "level_ups": [
         "Shields from damage while active.",
@@ -11467,12 +11541,13 @@ window.VS_DATA = {
       "name": "Crimson Shroud",
       "icon": "assets/icons/weapons/crimson_shroud.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Crimson Shroud",
       "arcana_ratings": {},
@@ -11482,6 +11557,7 @@ window.VS_DATA = {
       "name": "Bone",
       "icon": "assets/icons/weapons/bone.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws a bouncing projectile.",
       "level_ups": [
         "Throws a bouncing projectile.",
@@ -11508,12 +11584,13 @@ window.VS_DATA = {
       "name": "Anima of Mortaccio",
       "icon": "assets/icons/weapons/anima_of_mortaccio.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Bone. Projectiles accelerate when bouncing.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Anima of Mortaccio",
       "arcana_ratings": {
@@ -11525,6 +11602,7 @@ window.VS_DATA = {
       "name": "Cherry Bomb",
       "icon": "assets/icons/weapons/cherry_bomb.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws a bouncing projectile that explodes after some time.",
       "level_ups": [
         "Throws a bouncing projectile. Explodes, sometimes.",
@@ -11553,12 +11631,13 @@ window.VS_DATA = {
       "name": "Yatta Daikarin",
       "icon": "assets/icons/weapons/yatta_daikarin.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Yatta Daikarin",
       "arcana_ratings": {
@@ -11571,6 +11650,7 @@ window.VS_DATA = {
       "name": "Carréllo",
       "icon": "assets/icons/weapons/carréllo.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws a bouncing projectile. Number of bounces affected by Amount.",
       "level_ups": [
         "Throws a bouncing projectile. Number of bounces affected by Amount.",
@@ -11597,12 +11677,13 @@ window.VS_DATA = {
       "name": "Carozza!",
       "icon": "assets/icons/weapons/carozza!.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Carréllo. Duration, Speed, and Area affect damage instead.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Carozza!",
       "arcana_ratings": {},
@@ -11612,6 +11693,7 @@ window.VS_DATA = {
       "name": "Celestial Dusting",
       "icon": "assets/icons/weapons/celestial_dusting.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws a bouncing projectile. Cooldown reduces when moving.",
       "level_ups": [
         "Throws a bouncing projectile. Cooldown reduces when moving.",
@@ -11638,12 +11720,13 @@ window.VS_DATA = {
       "name": "Profusione D'Amore",
       "icon": "assets/icons/weapons/profusione_damore.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Profusione D'Amore",
       "arcana_ratings": {},
@@ -11653,6 +11736,7 @@ window.VS_DATA = {
       "name": "La Robba",
       "icon": "assets/icons/weapons/la_robba.png",
       "category": "Base",
+      "method": null,
       "description": "Generates bouncing projectiles.",
       "level_ups": [
         "Generates bouncing projectiles.",
@@ -11665,7 +11749,7 @@ window.VS_DATA = {
         "Fires 1 more projectile. Effect lasts 0.3 seconds longer.[1]"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "La Robba",
       "arcana_ratings": {
@@ -11678,6 +11762,7 @@ window.VS_DATA = {
       "name": "Greatest Jubilee",
       "icon": "assets/icons/weapons/greatest_jubilee.png",
       "category": "Base",
+      "method": null,
       "description": "Has a chance to summon light sources.",
       "level_ups": [
         "Has a chance to summon light sources.",
@@ -11691,7 +11776,7 @@ window.VS_DATA = {
         "Enables finisher."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Greatest Jubilee",
       "arcana_ratings": {
@@ -11703,6 +11788,7 @@ window.VS_DATA = {
       "name": "Bracelet",
       "icon": "assets/icons/weapons/bracelet.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
       "level_ups": [
         "Fires three projectiles at a random enemy.",
@@ -11723,6 +11809,7 @@ window.VS_DATA = {
       "name": "Bi-Bracelet",
       "icon": "assets/icons/weapons/bi-bracelet.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
       "level_ups": [
         "Fires three projectiles at a random enemy.",
@@ -11743,6 +11830,7 @@ window.VS_DATA = {
       "name": "Tri-Bracelet",
       "icon": "assets/icons/weapons/tri-bracelet.png",
       "category": "Evolution",
+      "method": "Union",
       "description": "Fires three projectiles at a random enemy.",
       "level_ups": [
         "Fires three projectiles at a random enemy.",
@@ -11767,6 +11855,7 @@ window.VS_DATA = {
       "name": "Kaiser Knuckle",
       "icon": "assets/icons/weapons/kaiser_knuckle.png",
       "category": "Base",
+      "method": "Union",
       "description": "Throws a flurry of close-range punches.",
       "level_ups": [
         "Throws a flurry of close-range punches.",
@@ -11794,12 +11883,13 @@ window.VS_DATA = {
       "name": "Lapiste Tepisto",
       "icon": "assets/icons/weapons/lapiste_tepisto.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Kaiser Knuckle and Tri-Bracelet. Launches a barrage of stony fists.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Lapiste Tepisto",
       "arcana_ratings": {},
@@ -11809,6 +11899,7 @@ window.VS_DATA = {
       "name": "Candybox",
       "icon": "assets/icons/weapons/candybox.png",
       "category": "Base",
+      "method": "Gift",
       "description": "Allows you to choose any unlocked base weapon.",
       "level_ups": [
         "-"
@@ -11824,12 +11915,13 @@ window.VS_DATA = {
       "name": "Super Candybox II Turbo",
       "icon": "assets/icons/weapons/super_candybox_ii_turbo.png",
       "category": "Gift",
+      "method": null,
       "description": "Gift of Candybox. Allows to choose among a selection of advanced weapons.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Super Candybox II Turbo",
       "arcana_ratings": {},
@@ -11839,6 +11931,7 @@ window.VS_DATA = {
       "name": "Pako Battiliar",
       "icon": "assets/icons/weapons/pako_battiliar.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "May retaliate when losing health.",
       "level_ups": [
         "\"May retaliate when losing health.\"",
@@ -11863,12 +11956,13 @@ window.VS_DATA = {
       "name": "Mazo Familiar",
       "icon": "assets/icons/weapons/mazo_familiar.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Pako Battiliar. Damage and Amount affected by Max Health.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Mazo Familiar",
       "arcana_ratings": {},
@@ -11878,6 +11972,7 @@ window.VS_DATA = {
       "name": "Ammo Appalate",
       "icon": "assets/icons/weapons/ammo_appalate.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
       "level_ups": [
         "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
@@ -11904,12 +11999,13 @@ window.VS_DATA = {
       "name": "Gunastrophe",
       "icon": "assets/icons/weapons/gunastrophe.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gunastrophe",
       "arcana_ratings": {
@@ -11921,6 +12017,7 @@ window.VS_DATA = {
       "name": "Victory Sword",
       "icon": "assets/icons/weapons/victory_sword.png",
       "category": "Base",
+      "method": "Gift",
       "description": "Strikes with a combo attack at the nearest enemy. Retaliates.",
       "level_ups": [
         "Strikes with a combo attack at the nearest enemy. Retaliates.",
@@ -11953,12 +12050,13 @@ window.VS_DATA = {
       "name": "Sole Solution",
       "icon": "assets/icons/weapons/sole_solution.png",
       "category": "Gift",
+      "method": null,
       "description": "Gift of Victory Sword. The more enemies are defeated, the stronger it grows.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Sole Solution",
       "arcana_ratings": {
@@ -11971,6 +12069,7 @@ window.VS_DATA = {
       "name": "Flames of Misspell",
       "icon": "assets/icons/weapons/flames_of_misspell.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Emits cones of flames.",
       "level_ups": [
         "Emits cones of flames.",
@@ -11999,12 +12098,13 @@ window.VS_DATA = {
       "name": "Ashes of Muspell",
       "icon": "assets/icons/weapons/ashes_of_muspell.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Ashes of Muspell",
       "arcana_ratings": {
@@ -12018,6 +12118,7 @@ window.VS_DATA = {
       "name": "Unearthly Bolt",
       "icon": "assets/icons/weapons/unearthly_bolt.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
       "level_ups": [
         "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
@@ -12044,12 +12145,13 @@ window.VS_DATA = {
       "name": "Spirit Disturbance",
       "icon": "assets/icons/weapons/spirit_disturbance.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Unearthly Bolt. Always deals critical hits.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Disturbance",
       "arcana_ratings": {
@@ -12061,6 +12163,7 @@ window.VS_DATA = {
       "name": "Glass Fandango",
       "icon": "assets/icons/weapons/glass_fandango.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Stronger with movement, Orologions, and against frozen enemies",
       "level_ups": [
         "Stronger with movement, Orologions, and against frozen enemies.",
@@ -12087,12 +12190,13 @@ window.VS_DATA = {
       "name": "Celestial Voulge",
       "icon": "assets/icons/weapons/celestial_voulge.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Celestial Voulge",
       "arcana_ratings": {
@@ -12104,6 +12208,7 @@ window.VS_DATA = {
       "name": "Penshin Fatcha",
       "icon": "assets/icons/weapons/penshin_fatcha.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "A selection of aquatic armaments that can evolve endlessly. (Default)|\r\nChoose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved",
       "level_ups": [
         "-"
@@ -12121,6 +12226,7 @@ window.VS_DATA = {
       "name": "Tonno Subito",
       "icon": "assets/icons/weapons/tonno_subito.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Basic tuna. Level up bonuses focus on Speed.",
       "level_ups": [
         "Basic tuna. Level up bonuses focus on Speed.",
@@ -12141,6 +12247,7 @@ window.VS_DATA = {
       "name": "Tonnado",
       "icon": "assets/icons/weapons/tonnado.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Whipped tuna. Level up bonuses focus on Duration.",
       "level_ups": [
         "Whipped tuna. Level up bonuses focus on Duration.",
@@ -12161,6 +12268,7 @@ window.VS_DATA = {
       "name": "Tonn'omoto",
       "icon": "assets/icons/weapons/tonnomoto.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Freshwater tuna. Level up bonuses focus on Cooldown.",
       "level_ups": [
         "Freshwater tuna. Level up bonuses focus on Cooldown.",
@@ -12181,6 +12289,7 @@ window.VS_DATA = {
       "name": "Tonn'oddeeo",
       "icon": "assets/icons/weapons/tonnoddeeo.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Heavenly tuna. Level up bonuses focus on Amount.",
       "level_ups": [
         "Heavenly tuna. Level up bonuses focus on Amount.",
@@ -12201,6 +12310,7 @@ window.VS_DATA = {
       "name": "Tonne",
       "icon": "assets/icons/weapons/tonne.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
       "level_ups": [
         "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
@@ -12223,6 +12333,7 @@ window.VS_DATA = {
       "name": "Unsurpassed",
       "icon": "assets/icons/weapons/unsurpassed.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Premium tuna. Level up bonuses focus on Might.",
       "level_ups": [
         "Premium tuna. Level up bonuses focus on Might.",
@@ -12245,12 +12356,13 @@ window.VS_DATA = {
       "name": "Miracle of Multiplication",
       "icon": "assets/icons/weapons/miracle_of_multiplication.png",
       "category": "Evolution",
+      "method": null,
       "description": "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve.",
       "level_ups": [
         "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Miracle of Multiplication",
       "arcana_ratings": {},
@@ -12260,6 +12372,7 @@ window.VS_DATA = {
       "name": "Santa Javelin",
       "icon": "assets/icons/weapons/santa_javelin.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Duration affects Amount. Can deal critical damage.",
       "level_ups": [
         "Duration affects amount. Can deal critical damage.",
@@ -12284,6 +12397,7 @@ window.VS_DATA = {
       "name": "Levelin'Eh",
       "icon": "assets/icons/weapons/levelineh.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Duration affects Amount. Can deal critical damage.",
       "level_ups": [
         "-"
@@ -12301,12 +12415,13 @@ window.VS_DATA = {
       "name": "Seraphic Cry",
       "icon": "assets/icons/weapons/seraphic_cry.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Seraphic Cry",
       "arcana_ratings": {},
@@ -12316,6 +12431,7 @@ window.VS_DATA = {
       "name": "Gaze of Gaea",
       "icon": "assets/icons/weapons/gaze_of_gaea.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Might Defang enemies.",
       "level_ups": [
         "Might Defang enemies.",
@@ -12342,12 +12458,13 @@ window.VS_DATA = {
       "name": "Embrace of Gaea",
       "icon": "assets/icons/weapons/embrace_of_gaea.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Embrace of Gaea",
       "arcana_ratings": {
@@ -12359,6 +12476,7 @@ window.VS_DATA = {
       "name": "Magi-Stone",
       "icon": "assets/icons/weapons/magi-stone.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Deals fixed damage based on Weapon Level.",
       "level_ups": [
         "\"Deals fixed damage based on Weapon Level.\"",
@@ -12386,12 +12504,13 @@ window.VS_DATA = {
       "name": "Kyra-Stones",
       "icon": "assets/icons/weapons/kyra-stones.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Kyra-Stones",
       "arcana_ratings": {},
@@ -12401,6 +12520,7 @@ window.VS_DATA = {
       "name": "Phas3r",
       "icon": "assets/icons/weapons/phas3r.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates thin damaging zones. High Amount scaling.",
       "level_ups": [
         "Generates thin damaging zones. High Amount scaling.",
@@ -12425,12 +12545,13 @@ window.VS_DATA = {
       "name": "Photonstorm",
       "icon": "assets/icons/weapons/photonstorm.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Phas3r. Fires 2 to 5 times more projectiles depending on Luck.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Photonstorm",
       "arcana_ratings": {
@@ -12442,12 +12563,13 @@ window.VS_DATA = {
       "name": "Arma Dio",
       "icon": "assets/icons/weapons/arma_dio.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose an extra passive weapon.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Arma Dio",
       "arcana_ratings": {
@@ -12466,6 +12588,7 @@ window.VS_DATA = {
       "name": "Chaos Rune",
       "icon": "assets/icons/weapons/chaos_rune.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Speed and Duration affect the number of hit boxes instead.",
       "level_ups": [
         "Speed and Duration affect the number of hit boxes instead.",
@@ -12493,12 +12616,13 @@ window.VS_DATA = {
       "name": "Wicked Ruler",
       "icon": "assets/icons/weapons/wicked_ruler.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Chaos Rune. Exerts control over wild magical forces.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Wicked Ruler",
       "arcana_ratings": {
@@ -12510,6 +12634,7 @@ window.VS_DATA = {
       "name": "Silver Wind",
       "icon": "assets/icons/weapons/silver_wind.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Defeated enemies might drop hearts.",
       "level_ups": [
         "\"Defeated enemies might drop hearts.\"",
@@ -12538,12 +12663,13 @@ window.VS_DATA = {
       "name": "Festive Winds",
       "icon": "assets/icons/weapons/festive_winds.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Silver Wind. Weakens enemies defenses.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Festive Winds",
       "arcana_ratings": {
@@ -12555,6 +12681,7 @@ window.VS_DATA = {
       "name": "Four Seasons",
       "icon": "assets/icons/weapons/four_seasons.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates 4 explosions. Amount and Duration affect damage instead.",
       "level_ups": [
         "Generates 4 explosions. Amount and Duration affect damage instead.",
@@ -12582,12 +12709,13 @@ window.VS_DATA = {
       "name": "Godai Shuffle",
       "icon": "assets/icons/weapons/godai_shuffle.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Four Seasons. Generates an additional explosion.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Godai Shuffle",
       "arcana_ratings": {
@@ -12600,6 +12728,7 @@ window.VS_DATA = {
       "name": "Summon Night",
       "icon": "assets/icons/weapons/summon_night.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates damaging zones above the character.",
       "level_ups": [
         "\"Generates damaging zones above the character.\"",
@@ -12627,12 +12756,13 @@ window.VS_DATA = {
       "name": "Echo Night",
       "icon": "assets/icons/weapons/echo_night.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Summon Night. Generates damaging zones below the character.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Echo Night",
       "arcana_ratings": {
@@ -12644,6 +12774,7 @@ window.VS_DATA = {
       "name": "Mirage Robe",
       "icon": "assets/icons/weapons/mirage_robe.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates freezing static projectiles with a chance to explode.",
       "level_ups": [
         "\"Generates freezing mines with a chance to explode.\"",
@@ -12670,12 +12801,13 @@ window.VS_DATA = {
       "name": "J'Odore",
       "icon": "assets/icons/weapons/jodore.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Mirage Robe. Projectiles move and confuse enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "J'Odore",
       "arcana_ratings": {
@@ -12687,6 +12819,7 @@ window.VS_DATA = {
       "name": "Night Sword",
       "icon": "assets/icons/weapons/night_sword.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
       "level_ups": [
         "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
@@ -12713,12 +12846,13 @@ window.VS_DATA = {
       "name": "Muramasa",
       "icon": "assets/icons/weapons/muramasa.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Muramasa",
       "arcana_ratings": {
@@ -12730,6 +12864,7 @@ window.VS_DATA = {
       "name": "Mille Bolle Blu",
       "icon": "assets/icons/weapons/mille_bolle_blu.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires lingering projectiles.",
       "level_ups": [
         "\"Fires lingering projectiles.\"",
@@ -12756,12 +12891,13 @@ window.VS_DATA = {
       "name": "Boo Roo Boolle",
       "icon": "assets/icons/weapons/boo_roo_boolle.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Boo Roo Boolle",
       "arcana_ratings": {},
@@ -12771,6 +12907,7 @@ window.VS_DATA = {
       "name": "108 Bocce",
       "icon": "assets/icons/weapons/108_bocce.png",
       "category": "Base",
+      "method": null,
       "description": "Actually it's just 8. Damage affected by the difference between Curse and Luck.",
       "level_ups": [
         "\"Actually it's just 8. Damages nearby enemies.\"",
@@ -12783,7 +12920,7 @@ window.VS_DATA = {
         "Base Damage up by 4."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "108 Bocce",
       "arcana_ratings": {},
@@ -12793,6 +12930,7 @@ window.VS_DATA = {
       "name": "SpellString",
       "icon": "assets/icons/weapons/spellstring.png",
       "category": "Base",
+      "method": "Union",
       "description": "Strikes at nearby enemies. Damage multiplied by Speed.",
       "level_ups": [
         "\"Strikes at nearby enemies. Damage multiplied by Speed.\"",
@@ -12816,6 +12954,7 @@ window.VS_DATA = {
       "name": "SpellStream",
       "icon": "assets/icons/weapons/spellstream.png",
       "category": "Base",
+      "method": "Union",
       "description": "Generates an expanding damaging zone. Damage multiplied by Area.",
       "level_ups": [
         "\"Generates an expanding damaging zone. Damage multiplied by Area.\"",
@@ -12839,6 +12978,7 @@ window.VS_DATA = {
       "name": "SpellStrike",
       "icon": "assets/icons/weapons/spellstrike.png",
       "category": "Base",
+      "method": "Union",
       "description": "Strikes at the nearest enemy. Damage further multiplied by Might.",
       "level_ups": [
         "\"Stikes at the nearest enemy. Damage further multiplied by Might.\"",
@@ -12866,12 +13006,13 @@ window.VS_DATA = {
       "name": "SpellStrom",
       "icon": "assets/icons/weapons/spellstrom.png",
       "category": "Union",
+      "method": null,
       "description": "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "SpellStrom",
       "arcana_ratings": {
@@ -12885,6 +13026,7 @@ window.VS_DATA = {
       "name": "Eskizzibur",
       "icon": "assets/icons/weapons/eskizzibur.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Attacks nearby enemies. Retaliates.",
       "level_ups": [
         "\"Attacks nearby enemies. Retaliates.\"",
@@ -12912,12 +13054,13 @@ window.VS_DATA = {
       "name": "Legionnaire",
       "icon": "assets/icons/weapons/legionnaire.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Legionnaire",
       "arcana_ratings": {},
@@ -12927,6 +13070,7 @@ window.VS_DATA = {
       "name": "Flash Arrow",
       "icon": "assets/icons/weapons/flash_arrow.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Can deal critical damage. Amount affects damage instead.",
       "level_ups": [
         "\"Can deal critical damage. Amount affects damage instead\"",
@@ -12951,12 +13095,13 @@ window.VS_DATA = {
       "name": "Millionaire",
       "icon": "assets/icons/weapons/millionaire.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Millionaire",
       "arcana_ratings": {
@@ -12968,6 +13113,7 @@ window.VS_DATA = {
       "name": "Prismatic Missile",
       "icon": "assets/icons/weapons/prismatic_missile.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
       "level_ups": [
         "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
@@ -12995,12 +13141,13 @@ window.VS_DATA = {
       "name": "Luminaire",
       "icon": "assets/icons/weapons/luminaire.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Prismatic Missile. Increases the value of gems and coins on the ground.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Luminaire",
       "arcana_ratings": {
@@ -13012,6 +13159,7 @@ window.VS_DATA = {
       "name": "Shadow Servant",
       "icon": "assets/icons/weapons/shadow_servant.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Has a chance to slow enemies down.",
       "level_ups": [
         "Has a chance to slow enemies down.",
@@ -13038,6 +13186,7 @@ window.VS_DATA = {
       "name": "Silver Sliver",
       "icon": "assets/icons/weapons/silver_sliver.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Counterpart to Shadow Servant and Ophion from Arcana I - Gemini",
       "level_ups": [
         "-"
@@ -13057,12 +13206,13 @@ window.VS_DATA = {
       "name": "Ophion",
       "icon": "assets/icons/weapons/ophion.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Shadow Servant. Has a chance to instantly kill enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Ophion",
       "arcana_ratings": {
@@ -13074,6 +13224,7 @@ window.VS_DATA = {
       "name": "Party Popper",
       "icon": "assets/icons/weapons/party_popper.png",
       "category": "Base",
+      "method": null,
       "description": "Throws bouncing projectiles.",
       "level_ups": [
         "Throws bouncing projectiles.",
@@ -13086,7 +13237,7 @@ window.VS_DATA = {
         "Effect lasts 1 seconds longer."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Party Popper",
       "arcana_ratings": {
@@ -13099,6 +13250,7 @@ window.VS_DATA = {
       "name": "Party Pooper",
       "icon": "assets/icons/weapons/party_pooper.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Counterpart to Party Popper from Arcana I - Gemini",
       "level_ups": [
         "-"
@@ -13119,6 +13271,7 @@ window.VS_DATA = {
       "name": "Report!",
       "icon": "assets/icons/weapons/report!.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Damages enemies and pushes them away.",
       "level_ups": [
         "\"Damages enemies and pushes them away.\"",
@@ -13145,12 +13298,13 @@ window.VS_DATA = {
       "name": "Emergency Meeting",
       "icon": "assets/icons/weapons/emergency_meeting.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Report! Occasionally destroys all of one type of enemy.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Emergency Meeting",
       "arcana_ratings": {
@@ -13162,6 +13316,7 @@ window.VS_DATA = {
       "name": "Lucky Swipe",
       "icon": "assets/icons/weapons/lucky_swipe.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "The amount of Luck is affected by Amount and by low Luck.",
       "level_ups": [
         "\"The amount of attacks is affected by Amount and by low luck.\"",
@@ -13189,12 +13344,13 @@ window.VS_DATA = {
       "name": "Crossed Wires",
       "icon": "assets/icons/weapons/crossed_wires.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Lucky Swipe. Attacks in up to four directions.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Crossed Wires",
       "arcana_ratings": {
@@ -13207,6 +13363,7 @@ window.VS_DATA = {
       "name": "Lifesign Scan",
       "icon": "assets/icons/weapons/lifesign_scan.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Restores HP based on Amount and Recovery.",
       "level_ups": [
         "\"Restores HP based on Amount and Recovery.\"",
@@ -13233,12 +13390,13 @@ window.VS_DATA = {
       "name": "Paranormal Scan",
       "icon": "assets/icons/weapons/paranormal_scan.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Lifesign Scan. Periodically grants a random stat boost for the rest of the run.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Paranormal Scan",
       "arcana_ratings": {
@@ -13250,6 +13408,7 @@ window.VS_DATA = {
       "name": "Just Vent",
       "icon": "assets/icons/weapons/just_vent.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Destroys or heavily damages enemies. Amount affects how many times it can trigger.",
       "level_ups": [
         "\"Destroys or heavily damages enemies. Amount affects how many times it can trigger.\"",
@@ -13277,12 +13436,13 @@ window.VS_DATA = {
       "name": "Unjust Ejection",
       "icon": "assets/icons/weapons/unjust_ejection.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Just Vent. Sucks in enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Unjust Ejection",
       "arcana_ratings": {
@@ -13295,6 +13455,7 @@ window.VS_DATA = {
       "name": "Clear Debris",
       "icon": "assets/icons/weapons/clear_debris.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates projectile spawning zones that follow the player.",
       "level_ups": [
         "\"Generates projectile spawning zones that follow the player.\"",
@@ -13321,12 +13482,13 @@ window.VS_DATA = {
       "name": "Clear Asteroids",
       "icon": "assets/icons/weapons/clear_asteroids.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Clear Debris. Amount creates cluster explosions.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Clear Asteroids",
       "arcana_ratings": {
@@ -13338,6 +13500,7 @@ window.VS_DATA = {
       "name": "Sharp Tongue",
       "icon": "assets/icons/weapons/sharp_tongue.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes enemies in front of you. Damage multiplied by Recovery.",
       "level_ups": [
         "\"Licks enemies in front of you. Damage multiplied by Recovery.\"",
@@ -13364,6 +13527,7 @@ window.VS_DATA = {
       "name": "Silver Tongue",
       "icon": "assets/icons/weapons/silver_tongue.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Strikes enemies behind you. Damage multiplied by Recovery.",
       "level_ups": [
         "-"
@@ -13383,12 +13547,13 @@ window.VS_DATA = {
       "name": "Impostongue",
       "icon": "assets/icons/weapons/impostongue.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Sharp Tongue. Deals high damage to the strongest enemy and anything in its path.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Impostongue",
       "arcana_ratings": {
@@ -13400,6 +13565,7 @@ window.VS_DATA = {
       "name": "Science Rocks",
       "icon": "assets/icons/weapons/science_rocks.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.",
       "level_ups": [
         "\"Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.\"",
@@ -13426,12 +13592,13 @@ window.VS_DATA = {
       "name": "Rocket Science",
       "icon": "assets/icons/weapons/rocket_science.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Science Rocks. Triggers a finisher when the right conditions are met.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rocket Science",
       "arcana_ratings": {},
@@ -13441,6 +13608,7 @@ window.VS_DATA = {
       "name": "Hats",
       "icon": "assets/icons/weapons/hats.png",
       "category": "Base",
+      "method": null,
       "description": "Throws cute bouncing projectiles with random properties.",
       "level_ups": [
         "Throws cute bouncing projectiles with random properties.",
@@ -13453,7 +13621,7 @@ window.VS_DATA = {
         "Base Speed up by 50%."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Hats",
       "arcana_ratings": {},
@@ -13463,6 +13631,7 @@ window.VS_DATA = {
       "name": "Long Gun",
       "icon": "assets/icons/weapons/long_gun.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires constantly in the faced direction.",
       "level_ups": [
         "Fires constantly in the faced direction.",
@@ -13489,12 +13658,13 @@ window.VS_DATA = {
       "name": "Prototype A",
       "icon": "assets/icons/weapons/prototype_a.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Long Gun. Calls forth 2 drones for support fire.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Prototype A",
       "arcana_ratings": {
@@ -13506,6 +13676,7 @@ window.VS_DATA = {
       "name": "Short Gun",
       "icon": "assets/icons/weapons/short_gun.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires bursts of decaying projectiles horizontally.",
       "level_ups": [
         "Fires bursts of decaying projectiles horizontally.",
@@ -13533,12 +13704,13 @@ window.VS_DATA = {
       "name": "Prototype B",
       "icon": "assets/icons/weapons/prototype_b.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Short Gun. Calls forth 2 drones for support fire.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Prototype B",
       "arcana_ratings": {
@@ -13550,6 +13722,7 @@ window.VS_DATA = {
       "name": "Spread Shot",
       "icon": "assets/icons/weapons/spread_shot.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires in a wide spread in the faced direction.",
       "level_ups": [
         "Fires in a wide spread in the faced direction.",
@@ -13575,12 +13748,13 @@ window.VS_DATA = {
       "name": "Prototype C",
       "icon": "assets/icons/weapons/prototype_c.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Spread Shot. Calls forth 2 drones for support fire.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Prototype C",
       "arcana_ratings": {},
@@ -13590,6 +13764,7 @@ window.VS_DATA = {
       "name": "C-U-Laser",
       "icon": "assets/icons/weapons/c-u-laser.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires a piercing projectile in the faced direction.",
       "level_ups": [
         "Fires a piercing projectile in the faced direction.",
@@ -13618,12 +13793,13 @@ window.VS_DATA = {
       "name": "Pronto Beam",
       "icon": "assets/icons/weapons/pronto_beam.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved C-U-Laser. Lasers split into multiple beams when they hit.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Pronto Beam",
       "arcana_ratings": {
@@ -13636,6 +13812,7 @@ window.VS_DATA = {
       "name": "Firearm",
       "icon": "assets/icons/weapons/firearm.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires spinning projectiles at the nearest enemy.",
       "level_ups": [
         "Fires spinning projectiles at the nearest enemy.",
@@ -13664,12 +13841,13 @@ window.VS_DATA = {
       "name": "Fire-L3GS",
       "icon": "assets/icons/weapons/fire-l3gs.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Firearm. Fires again when destroying a light source or destructible item.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Fire-L3GS",
       "arcana_ratings": {
@@ -13682,6 +13860,7 @@ window.VS_DATA = {
       "name": "Sonic Bloom",
       "icon": "assets/icons/weapons/sonic_bloom.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires growing projectiles in the faced direction.",
       "level_ups": [
         "Fires growing projectiles in the faced direction.",
@@ -13710,12 +13889,13 @@ window.VS_DATA = {
       "name": "Wave Beam",
       "icon": "assets/icons/weapons/wave_beam.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Wave Beam",
       "arcana_ratings": {
@@ -13728,6 +13908,7 @@ window.VS_DATA = {
       "name": "Homing Miss",
       "icon": "assets/icons/weapons/homing_miss.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires exploding projectiles that home in on enemies.",
       "level_ups": [
         "Fires exploding projectiles that home in on enemies.",
@@ -13756,12 +13937,13 @@ window.VS_DATA = {
       "name": "Multistage Missiles",
       "icon": "assets/icons/weapons/multistage_missiles.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Homing Miss. Projectiles split into smaller ones when they hit.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Multistage Missiles",
       "arcana_ratings": {
@@ -13773,6 +13955,7 @@ window.VS_DATA = {
       "name": "Diver Mines",
       "icon": "assets/icons/weapons/diver_mines.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires explosive projectiles that travel along walls.",
       "level_ups": [
         "Fires explosive projectiles that travel along walls.",
@@ -13801,12 +13984,13 @@ window.VS_DATA = {
       "name": "Atmo-Torpedo",
       "icon": "assets/icons/weapons/atmo-torpedo.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Diver Mines. Creates damaging zones that attract enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Atmo-Torpedo",
       "arcana_ratings": {
@@ -13819,6 +14003,7 @@ window.VS_DATA = {
       "name": "Blade Crossbow",
       "icon": "assets/icons/weapons/blade_crossbow.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires homing projectiles that spin in place when they hit.",
       "level_ups": [
         "Fires homing projectiles that spin in place when they hit.",
@@ -13846,12 +14031,13 @@ window.VS_DATA = {
       "name": "BFC2000-AD",
       "icon": "assets/icons/weapons/bfc2000-ad.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "BFC2000-AD",
       "arcana_ratings": {
@@ -13864,6 +14050,7 @@ window.VS_DATA = {
       "name": "Prism Lass",
       "icon": "assets/icons/weapons/prism_lass.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Has a small chance to freeze enemies.",
       "level_ups": [
         "Has a small chance to freeze enemies.",
@@ -13892,6 +14079,7 @@ window.VS_DATA = {
       "name": "Prism Damsel",
       "icon": "assets/icons/weapons/prism_damsel.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Has a small chance to freeze enemies.",
       "level_ups": [
         "-"
@@ -13911,12 +14099,13 @@ window.VS_DATA = {
       "name": "Time Warp",
       "icon": "assets/icons/weapons/time_warp.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Prism Lass. May freeze, slow down, or DeFang enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Time Warp",
       "arcana_ratings": {
@@ -13929,6 +14118,7 @@ window.VS_DATA = {
       "name": "Metal Claw",
       "icon": "assets/icons/weapons/metal_claw.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Cooldown is affected by missing health.",
       "level_ups": [
         "Cooldown is affected by missing health.",
@@ -13957,12 +14147,13 @@ window.VS_DATA = {
       "name": "Big Fuzzy Fist",
       "icon": "assets/icons/weapons/big_fuzzy_fist.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Metal Claw. Pummels the most powerful enemies in sight.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Big Fuzzy Fist",
       "arcana_ratings": {
@@ -13974,6 +14165,7 @@ window.VS_DATA = {
       "name": "Alchemy Whip",
       "icon": "assets/icons/weapons/alchemy_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Grows stronger every time a boss enemy is defeated.",
       "level_ups": [
         "Grows stronger every time a boss enemy is defeated.",
@@ -14001,12 +14193,13 @@ window.VS_DATA = {
       "name": "Vampire Killer",
       "icon": "assets/icons/weapons/vampire_killer.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Alchemy Whip. Every 3rd activation fires additional projectiles. Intense sunlught incinerates boss enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Vampire Killer",
       "arcana_ratings": {
@@ -14019,6 +14212,7 @@ window.VS_DATA = {
       "name": "Wind Whip",
       "icon": "assets/icons/weapons/wind_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Damage affected by growth.",
       "level_ups": [
         "Damage affected by growth.",
@@ -14046,12 +14240,13 @@ window.VS_DATA = {
       "name": "Spirit Tornado Tip",
       "icon": "assets/icons/weapons/spirit_tornado_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Wind Whip. Every 7th activation summons a spirit that violently collects XP gems for you.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Tornado Tip",
       "arcana_ratings": {
@@ -14064,6 +14259,7 @@ window.VS_DATA = {
       "name": "Platinum Whip",
       "icon": "assets/icons/weapons/platinum_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Every 3rd activation fires projectiles in fixed directions.",
       "level_ups": [
         "Every 3rd activation fires projectiles in fixed directions.",
@@ -14091,12 +14287,13 @@ window.VS_DATA = {
       "name": "Cross Crasher Tip",
       "icon": "assets/icons/weapons/cross_crasher_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Platinum Whip. Every 7th activation also fires special projectiles.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Cross Crasher Tip",
       "arcana_ratings": {
@@ -14109,6 +14306,7 @@ window.VS_DATA = {
       "name": "Dragon Water Whip",
       "icon": "assets/icons/weapons/dragon_water_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Every 7th activation fires a snaking dragon projectile.",
       "level_ups": [
         "Every 7th activation fires a snaking dragon projectile.",
@@ -14136,12 +14334,13 @@ window.VS_DATA = {
       "name": "Hydrostormer Tip",
       "icon": "assets/icons/weapons/hydrostormer_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Dragon Water Whip. Every 13th activation generates damaging waves based on Projectile Speed and Duration.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Hydrostormer Tip",
       "arcana_ratings": {},
@@ -14151,6 +14350,7 @@ window.VS_DATA = {
       "name": "Sonic Whip",
       "icon": "assets/icons/weapons/sonic_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Chance to instant kill based on curse.",
       "level_ups": [
         "\"Chance to instant kill based on curse.\"",
@@ -14175,12 +14375,13 @@ window.VS_DATA = {
       "name": "Crissaegrim Tip",
       "icon": "assets/icons/weapons/crissaegrim_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Sonic Whip. Every 5th activation also triggers a blast of damaging waves.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Crissaegrim Tip",
       "arcana_ratings": {},
@@ -14190,6 +14391,7 @@ window.VS_DATA = {
       "name": "Jet Black Whip",
       "icon": "assets/icons/weapons/jet_black_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a linear damaging zone.",
       "level_ups": [
         "Strikes at the nearest enemy and generates a linear damaging zone.",
@@ -14214,12 +14416,13 @@ window.VS_DATA = {
       "name": "Mormegil Tip",
       "icon": "assets/icons/weapons/mormegil_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Jet Black Whip. Every 8th activation also triggers damaging zones.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Mormegil Tip",
       "arcana_ratings": {},
@@ -14229,6 +14432,7 @@ window.VS_DATA = {
       "name": "Vibhuti Whip",
       "icon": "assets/icons/weapons/vibhuti_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a cluster of explosions.",
       "level_ups": [
         "\"Strikes at the nearest enemy and generates a cluster of explosions.\"",
@@ -14253,12 +14457,13 @@ window.VS_DATA = {
       "name": "Daybreaker Tip",
       "icon": "assets/icons/weapons/daybreaker_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Vibhuti Whip. Critical hits maximise amount of projectiles.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Daybreaker Tip",
       "arcana_ratings": {},
@@ -14268,6 +14473,7 @@ window.VS_DATA = {
       "name": "Vanitas Whip",
       "icon": "assets/icons/weapons/vanitas_whip.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
       "level_ups": [
         "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
@@ -14292,12 +14498,13 @@ window.VS_DATA = {
       "name": "Aurablaster Tip",
       "icon": "assets/icons/weapons/aurablaster_tip.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Vanitas Whip. Every 7th activation generates an explosion.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Aurablaster Tip",
       "arcana_ratings": {},
@@ -14307,6 +14514,7 @@ window.VS_DATA = {
       "name": "Shuriken",
       "icon": "assets/icons/weapons/shuriken.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires projectiles in the faced direction.",
       "level_ups": [
         "Fires projectiles in the faced direction.",
@@ -14331,12 +14539,13 @@ window.VS_DATA = {
       "name": "Yagyu Shuriken",
       "icon": "assets/icons/weapons/yagyu_shuriken.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Shuriken. Fires with no delay.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Yagyu Shuriken",
       "arcana_ratings": {},
@@ -14346,6 +14555,7 @@ window.VS_DATA = {
       "name": "Curved Knife",
       "icon": "assets/icons/weapons/curved_knife.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires a spinning projectile at random enemy.",
       "level_ups": [
         "Fires a spinning projectile at random enemy.",
@@ -14370,12 +14580,13 @@ window.VS_DATA = {
       "name": "Bwaka Knife",
       "icon": "assets/icons/weapons/bwaka_knife.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Curved Knife. Projectiles bounce forever until Duration expires.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Bwaka Knife",
       "arcana_ratings": {},
@@ -14385,6 +14596,7 @@ window.VS_DATA = {
       "name": "Javelin",
       "icon": "assets/icons/weapons/javelin.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires a penetrating projectile in a fixed direction.",
       "level_ups": [
         "Fires a penetrating projectile in a fixed direction.",
@@ -14409,12 +14621,13 @@ window.VS_DATA = {
       "name": "Long Inus",
       "icon": "assets/icons/weapons/long_inus.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Javelin. Projectiles reappear after leaving the screen.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Long Inus",
       "arcana_ratings": {},
@@ -14424,6 +14637,7 @@ window.VS_DATA = {
       "name": "Discus",
       "icon": "assets/icons/weapons/discus.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires a defensive projectile.",
       "level_ups": [
         "Fires a defensive projectile.",
@@ -14448,12 +14662,13 @@ window.VS_DATA = {
       "name": "Stellar Blade",
       "icon": "assets/icons/weapons/stellar_blade.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Discus. Travels along walls. Deals critical damage if the user is invulnerable.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Stellar Blade",
       "arcana_ratings": {},
@@ -14463,6 +14678,7 @@ window.VS_DATA = {
       "name": "Iron Ball",
       "icon": "assets/icons/weapons/iron_ball.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Damage affected by Armor.",
       "level_ups": [
         "Damage affected by Armor",
@@ -14489,12 +14705,13 @@ window.VS_DATA = {
       "name": "Wrecking Ball",
       "icon": "assets/icons/weapons/wrecking_ball.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Iron Ball. Fires a very heavy projectile.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Wrecking Ball",
       "arcana_ratings": {
@@ -14506,6 +14723,7 @@ window.VS_DATA = {
       "name": "Silver Revolver",
       "icon": "assets/icons/weapons/silver_revolver.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires a powerful projectiles, six times.",
       "level_ups": [
         "Fires a powerful projectile, six times.",
@@ -14532,12 +14750,13 @@ window.VS_DATA = {
       "name": "Jewel Gun",
       "icon": "assets/icons/weapons/jewel_gun.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Silver Revolver. Critical hits instantly kill enemies and turn them into Jewels.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Jewel Gun",
       "arcana_ratings": {
@@ -14549,6 +14768,7 @@ window.VS_DATA = {
       "name": "Hand Grenade",
       "icon": "assets/icons/weapons/hand_grenade.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires an exploding projectile.",
       "level_ups": [
         "Fires an exploding projectile.",
@@ -14575,12 +14795,13 @@ window.VS_DATA = {
       "name": "The RPG",
       "icon": "assets/icons/weapons/the_rpg.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Hand Grenade. Explosions propagate.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "The RPG",
       "arcana_ratings": {},
@@ -14590,6 +14811,7 @@ window.VS_DATA = {
       "name": "Wine Glass",
       "icon": "assets/icons/weapons/wine_glass.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws an exploding projectile.",
       "level_ups": [
         "Throws an exploding projectile.",
@@ -14614,12 +14836,13 @@ window.VS_DATA = {
       "name": "Meal Ticket",
       "icon": "assets/icons/weapons/meal_ticket.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Wine Glass. Soulful food deals Revival-based damage to unrefined palates.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Meal Ticket",
       "arcana_ratings": {},
@@ -14629,6 +14852,7 @@ window.VS_DATA = {
       "name": "Raging Fire",
       "icon": "assets/icons/weapons/raging_fire.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates an exploding damaging zone.",
       "level_ups": [
         "Generates an exploding damaging zone.",
@@ -14653,6 +14877,7 @@ window.VS_DATA = {
       "name": "Speculo Raging Fire",
       "icon": "assets/icons/weapons/speculo_raging_fire.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Mirrors both Raging Fire and Salamender",
       "level_ups": [
         "-"
@@ -14670,12 +14895,13 @@ window.VS_DATA = {
       "name": "Salamender",
       "icon": "assets/icons/weapons/salamender.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Raging Fire. Also summons a snake of fire.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Salamender",
       "arcana_ratings": {},
@@ -14685,6 +14911,7 @@ window.VS_DATA = {
       "name": "Ice Fang",
       "icon": "assets/icons/weapons/ice_fang.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates damaging zones in a straight line.",
       "level_ups": [
         "Generates damaging zones in a straight line.",
@@ -14709,6 +14936,7 @@ window.VS_DATA = {
       "name": "Speculo Ice Fang",
       "icon": "assets/icons/weapons/speculo_ice_fang.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Mirrors both Ice Fang and Cocytus",
       "level_ups": [
         "-"
@@ -14728,12 +14956,13 @@ window.VS_DATA = {
       "name": "Cocytus",
       "icon": "assets/icons/weapons/cocytus.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Ice Fang. Also triggers a freezing wind.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Cocytus",
       "arcana_ratings": {
@@ -14745,6 +14974,7 @@ window.VS_DATA = {
       "name": "Gale Force",
       "icon": "assets/icons/weapons/gale_force.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires light-hitting projectiles backwards.",
       "level_ups": [
         "Fires light-hitting projectiles backwards.",
@@ -14771,6 +15001,7 @@ window.VS_DATA = {
       "name": "Speculo Gale Force",
       "icon": "assets/icons/weapons/speculo_gale_force.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Point symmetries both Gale Force and Pneuma Tempestas upside down",
       "level_ups": [
         "-"
@@ -14790,12 +15021,13 @@ window.VS_DATA = {
       "name": "Pneuma Tempestas",
       "icon": "assets/icons/weapons/pneuma_tempestas.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Gale Force. Also triggers a spinning tornado.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Pneuma Tempestas",
       "arcana_ratings": {
@@ -14807,6 +15039,7 @@ window.VS_DATA = {
       "name": "Rock Riot",
       "icon": "assets/icons/weapons/rock_riot.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires projectiles from a fixed location.",
       "level_ups": [
         "Fires projectiles from a fixed location.",
@@ -14831,6 +15064,7 @@ window.VS_DATA = {
       "name": "Speculo Rock Riot",
       "icon": "assets/icons/weapons/speculo_rock_riot.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Mirrors both Rock Riot and Gemma Torpor",
       "level_ups": [
         "-"
@@ -14848,12 +15082,13 @@ window.VS_DATA = {
       "name": "Gemma Torpor",
       "icon": "assets/icons/weapons/gemma_torpor.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Rock Riot. Also triggers a rain of crystals that can turn enemies into valuable jewels.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gemma Torpor",
       "arcana_ratings": {},
@@ -14863,6 +15098,7 @@ window.VS_DATA = {
       "name": "Fulgur",
       "icon": "assets/icons/weapons/fulgur.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at fixed locations.",
       "level_ups": [
         "Strikes at fixed locations.",
@@ -14887,6 +15123,7 @@ window.VS_DATA = {
       "name": "Speculo Fulgur",
       "icon": "assets/icons/weapons/speculo_fulgur.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Mirrors Fulgur and doubles Tenebris Tonitrus",
       "level_ups": [
         "-"
@@ -14904,12 +15141,13 @@ window.VS_DATA = {
       "name": "Tenebris Tonitrus",
       "icon": "assets/icons/weapons/tenebris_tonitrus.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Fulgur. Also triggers ball lightnings.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Tenebris Tonitrus",
       "arcana_ratings": {},
@@ -14919,6 +15157,7 @@ window.VS_DATA = {
       "name": "Keremet Bubbles",
       "icon": "assets/icons/weapons/keremet_bubbles.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires slow moving damaging zones.",
       "level_ups": [
         "Fires slow moving damaging zones.",
@@ -14943,6 +15182,7 @@ window.VS_DATA = {
       "name": "Speculo Keremet Bubbles",
       "icon": "assets/icons/weapons/speculo_keremet_bubbles.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Copies Keremet Bubbles. Has no effect on Keremet Morbus.",
       "level_ups": [
         "-"
@@ -14960,12 +15200,13 @@ window.VS_DATA = {
       "name": "Keremet Morbus",
       "icon": "assets/icons/weapons/keremet_morbus.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Keremet Bubbles. Also triggers a slimy swarm that chases enemies down.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Keremet Morbus",
       "arcana_ratings": {},
@@ -14975,6 +15216,7 @@ window.VS_DATA = {
       "name": "Hex",
       "icon": "assets/icons/weapons/hex.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates a moving damaging zone. Damage affected by Curse.",
       "level_ups": [
         "Generates a moving damaging zone. Damage affected by Curse.",
@@ -14999,6 +15241,7 @@ window.VS_DATA = {
       "name": "Speculo Hex",
       "icon": "assets/icons/weapons/speculo_hex.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Mirrors both Hex and Nightmare",
       "level_ups": [
         "-"
@@ -15016,12 +15259,13 @@ window.VS_DATA = {
       "name": "Nightmare",
       "icon": "assets/icons/weapons/nightmare.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Hex. Also tirggers a negative energy zone that doubles Curse when stepped into.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Nightmare",
       "arcana_ratings": {},
@@ -15031,6 +15275,7 @@ window.VS_DATA = {
       "name": "Refectio",
       "icon": "assets/icons/weapons/refectio.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Generates a damaging zone that also provides light healing.",
       "level_ups": [
         "Generates a damaging zone that also provides light healing.",
@@ -15055,6 +15300,7 @@ window.VS_DATA = {
       "name": "Speculo Refectio",
       "icon": "assets/icons/weapons/speculo_refectio.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "Point symmetries Refectio. Has no effect on Sanctuary.",
       "level_ups": [
         "-"
@@ -15072,12 +15318,13 @@ window.VS_DATA = {
       "name": "Sanctuary",
       "icon": "assets/icons/weapons/sanctuary.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Refectio. At fixed intervals, also fully heals characters and purifies all enemies in sight.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Sanctuary",
       "arcana_ratings": {},
@@ -15087,6 +15334,7 @@ window.VS_DATA = {
       "name": "Mace",
       "icon": "assets/icons/weapons/mace.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Amount affects number of hits.",
       "level_ups": [
         "Amount affects number of hits.",
@@ -15111,12 +15359,13 @@ window.VS_DATA = {
       "name": "Stamazza",
       "icon": "assets/icons/weapons/stamazza.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Mace. Has a catastrophically high critical damage multiplier.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Stamazza",
       "arcana_ratings": {},
@@ -15126,6 +15375,7 @@ window.VS_DATA = {
       "name": "Star Flail",
       "icon": "assets/icons/weapons/star_flail.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires lingering projectiles. Damage multiplied by Recovery.",
       "level_ups": [
         "Fires lingering projectiles. Damage multiplied by Recovery.",
@@ -15150,12 +15400,13 @@ window.VS_DATA = {
       "name": "Moon Rod",
       "icon": "assets/icons/weapons/moon_rod.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Star Flail. Projectiles are shot in the faced direction.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Moon Rod",
       "arcana_ratings": {},
@@ -15165,6 +15416,7 @@ window.VS_DATA = {
       "name": "Alucard Spear",
       "icon": "assets/icons/weapons/alucard_spear.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Executes a spinning attack when changing horizontal direction.",
       "level_ups": [
         "Executes a spinning attack when changing horizontal direction.",
@@ -15189,12 +15441,13 @@ window.VS_DATA = {
       "name": "Thunderbolt Spear",
       "icon": "assets/icons/weapons/thunderbolt_spear.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Alucard Spear. Every 7th activation triggers a special attack based on speed.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Thunderbolt Spear",
       "arcana_ratings": {
@@ -15207,6 +15460,7 @@ window.VS_DATA = {
       "name": "Trident",
       "icon": "assets/icons/weapons/trident.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at fixed locations.",
       "level_ups": [
         "Strikes at fixed locations.",
@@ -15231,12 +15485,13 @@ window.VS_DATA = {
       "name": "Gungnir-Souris",
       "icon": "assets/icons/weapons/gungnir-souris.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Trident. Critical hits also fire a damaging beam.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gungnir-Souris",
       "arcana_ratings": {
@@ -15248,6 +15503,7 @@ window.VS_DATA = {
       "name": "Iron Shield",
       "icon": "assets/icons/weapons/iron_shield.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Retaliates by shooting lingering projectiles.",
       "level_ups": [
         "Retaliates by shooting lingering projectiles.",
@@ -15274,12 +15530,13 @@ window.VS_DATA = {
       "name": "Dark Iron Shield",
       "icon": "assets/icons/weapons/dark_iron_shield.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Iron Shield. Critical hits retaliate with spinning swords.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Dark Iron Shield",
       "arcana_ratings": {},
@@ -15289,6 +15546,7 @@ window.VS_DATA = {
       "name": "Guardian's Targe",
       "icon": "assets/icons/weapons/guardians_targe.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Summons defensive followers. Overhealing triggers additional follower's attacks.",
       "level_ups": [
         "Summons defensive followers. Overhealing triggers additional follower's attacks.",
@@ -15313,12 +15571,13 @@ window.VS_DATA = {
       "name": "Sacred Beasts Tower Shield",
       "icon": "assets/icons/weapons/sacred_beasts_tower_shield.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Guardian's Targe. Overhealing also triggers a period of invulnerability.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Beasts Tower Shield",
       "arcana_ratings": {},
@@ -15328,6 +15587,7 @@ window.VS_DATA = {
       "name": "Tyrfing",
       "icon": "assets/icons/weapons/tyrfing.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Has boomerang effect, can deal critical damage.",
       "level_ups": [
         "Has boomerang effect, can deal critical damage.",
@@ -15352,12 +15612,13 @@ window.VS_DATA = {
       "name": "Rune Sword",
       "icon": "assets/icons/weapons/rune_sword.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Tyrfing. Critical damage also affected by Area, Speed, and Duration.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rune Sword",
       "arcana_ratings": {},
@@ -15367,6 +15628,7 @@ window.VS_DATA = {
       "name": "Alucart Sworb",
       "icon": "assets/icons/weapons/alucart_sworb.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Allegedly strikes at the nearest enemy.",
       "level_ups": [
         "Allegedly strikes at the nearest enemy.",
@@ -15389,6 +15651,7 @@ window.VS_DATA = {
       "name": "Alucard Swords",
       "icon": "assets/icons/weapons/alucard_swords.png",
       "category": "Evolution",
+      "method": "Gift",
       "description": "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
       "level_ups": [
         "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
@@ -15411,12 +15674,13 @@ window.VS_DATA = {
       "name": "Alucard Shield",
       "icon": "assets/icons/weapons/alucard_shield.png",
       "category": "Gift",
+      "method": null,
       "description": "Gift of Alucard Swords. Absorbs and triggers all other equipped evolutions. Hovering shield damages enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Alucard Shield",
       "arcana_ratings": {},
@@ -15426,6 +15690,7 @@ window.VS_DATA = {
       "name": "Confodere",
       "icon": "assets/icons/weapons/confodere.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects damage.",
       "level_ups": [
         "Attack nearby enemies. Speed affects damage.",
@@ -15449,6 +15714,7 @@ window.VS_DATA = {
       "name": "Vol Confodere",
       "icon": "assets/icons/weapons/vol_confodere.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects Damage.",
       "level_ups": [
         "Attack nearby enemies. Speed affects damage.",
@@ -15472,6 +15738,7 @@ window.VS_DATA = {
       "name": "Melio Confodere",
       "icon": "assets/icons/weapons/melio_confodere.png",
       "category": "Evolution",
+      "method": null,
       "description": "Attack nearby enemies. Speed affects Cooldown and Damage.",
       "level_ups": [
         "Attack nearby enemies. Speed affects Cooldown and Damage.",
@@ -15482,7 +15749,7 @@ window.VS_DATA = {
         "Base Area up by 10%."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Melio Confodere",
       "arcana_ratings": {
@@ -15495,6 +15762,7 @@ window.VS_DATA = {
       "name": "Globus",
       "icon": "assets/icons/weapons/globus.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires two bouncing projectiles. Amount affects Duration.",
       "level_ups": [
         "Fires two bouncing projectiles. Amount affects Duration.",
@@ -15519,6 +15787,7 @@ window.VS_DATA = {
       "name": "Speculo Globus",
       "icon": "assets/icons/weapons/speculo_globus.png",
       "category": "Counterpart",
+      "method": "Arcana",
       "description": "",
       "level_ups": [
         "-"
@@ -15536,12 +15805,13 @@ window.VS_DATA = {
       "name": "Nitesco",
       "icon": "assets/icons/weapons/nitesco.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Globus. Fires a piercing energy beam in the faced direction.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Nitesco",
       "arcana_ratings": {
@@ -15553,6 +15823,7 @@ window.VS_DATA = {
       "name": "Optical Shot",
       "icon": "assets/icons/weapons/optical_shot.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires two penetrating projectiles.",
       "level_ups": [
         "Fires two penetrating projectiles.",
@@ -15580,12 +15851,13 @@ window.VS_DATA = {
       "name": "Acerbatus",
       "icon": "assets/icons/weapons/acerbatus.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Optical Shot. Damage is affected by the amount of defeated enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Acerbatus",
       "arcana_ratings": {
@@ -15598,6 +15870,7 @@ window.VS_DATA = {
       "name": "Dextro Custos",
       "icon": "assets/icons/weapons/dextro_custos.png",
       "category": "Base",
+      "method": "Union",
       "description": "Summons Cerberus' fiery head in faced direction.",
       "level_ups": [
         "Summons Cerberus' fiery head in faced direction.",
@@ -15623,6 +15896,7 @@ window.VS_DATA = {
       "name": "Sinestro Custos",
       "icon": "assets/icons/weapons/sinestro_custos.png",
       "category": "Base",
+      "method": "Union",
       "description": "Summons Cerberus' icy head in faced direction.",
       "level_ups": [
         "Summons Cerberus' icy head in faced direction.",
@@ -15648,6 +15922,7 @@ window.VS_DATA = {
       "name": "Centralis Custos",
       "icon": "assets/icons/weapons/centralis_custos.png",
       "category": "Base",
+      "method": "Union",
       "description": "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
       "level_ups": [
         "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
@@ -15673,12 +15948,13 @@ window.VS_DATA = {
       "name": "Trinum Custodem",
       "icon": "assets/icons/weapons/trinum_custodem.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Dextro Custos, Sinestro Custos, and Centralis Custos.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Trinum Custodem",
       "arcana_ratings": {
@@ -15690,6 +15966,7 @@ window.VS_DATA = {
       "name": "Dominus Anger",
       "icon": "assets/icons/weapons/dominus_anger.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires a penetrating projectile. Drains health.",
       "level_ups": [
         "Fires a penetrating projectile. Drains health.",
@@ -15715,6 +15992,7 @@ window.VS_DATA = {
       "name": "Dominus Hatred",
       "icon": "assets/icons/weapons/dominus_hatred.png",
       "category": "Base",
+      "method": "Union",
       "description": "Fires projectiles from above. Drains health.",
       "level_ups": [
         "Fires projectiles from above. Drains Health.",
@@ -15740,6 +16018,7 @@ window.VS_DATA = {
       "name": "Dominus Agony",
       "icon": "assets/icons/weapons/dominus_agony.png",
       "category": "Base",
+      "method": "Union",
       "description": "Increases Might, Speed, Duration, and Area. Drains Health.",
       "level_ups": [
         "Increases Might, Speed, Duration, and Area. Drains Health.",
@@ -15765,12 +16044,13 @@ window.VS_DATA = {
       "name": "Power of Sire",
       "icon": "assets/icons/weapons/power_of_sire.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Dominus Anger, Dominus Hatred and Dominus Agony. Deals critical damage to anything in sight. Drains health.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Power of Sire",
       "arcana_ratings": {
@@ -15784,6 +16064,7 @@ window.VS_DATA = {
       "name": "Sonic Dash",
       "icon": "assets/icons/weapons/sonic_dash.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
       "level_ups": [
         "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
@@ -15812,12 +16093,13 @@ window.VS_DATA = {
       "name": "Rapidus Fio",
       "icon": "assets/icons/weapons/rapidus_fio.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Sonic Dash. Also triggers a single shield charge.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rapidus Fio",
       "arcana_ratings": {
@@ -15829,6 +16111,7 @@ window.VS_DATA = {
       "name": "Luminatio",
       "icon": "assets/icons/weapons/luminatio.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires spinning projectiles made of light.",
       "level_ups": [
         "Fires spinning projects made of light.",
@@ -15853,6 +16136,7 @@ window.VS_DATA = {
       "name": "Vol Luminatio",
       "icon": "assets/icons/weapons/vol_luminatio.png",
       "category": "Evolution",
+      "method": "Gift",
       "description": "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
       "level_ups": [
         "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
@@ -15874,6 +16158,7 @@ window.VS_DATA = {
       "name": "Umbra",
       "icon": "assets/icons/weapons/umbra.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires spinning projectiles made of darkness.",
       "level_ups": [
         "Fires spinning projects made of darkness.",
@@ -15896,6 +16181,7 @@ window.VS_DATA = {
       "name": "Vol Umbra",
       "icon": "assets/icons/weapons/vol_umbra.png",
       "category": "Evolution",
+      "method": "Gift",
       "description": "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
       "level_ups": [
         "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
@@ -15915,12 +16201,13 @@ window.VS_DATA = {
       "name": "Universitas",
       "icon": "assets/icons/weapons/universitas.png",
       "category": "Gift",
+      "method": null,
       "description": "Gift of Vol Luminatio and Vol Umbra. Meteors rain down on enemies at fixed intervals.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Universitas",
       "arcana_ratings": {},
@@ -15930,12 +16217,13 @@ window.VS_DATA = {
       "name": "Morning Star",
       "icon": "assets/icons/weapons/morning_star.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose from a selection of magic whips.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Morning Star",
       "arcana_ratings": {},
@@ -15945,12 +16233,13 @@ window.VS_DATA = {
       "name": "Coat of Arms",
       "icon": "assets/icons/weapons/coat_of_arms.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose from a selection of vampire-killing tools.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Coat of Arms",
       "arcana_ratings": {},
@@ -15960,12 +16249,13 @@ window.VS_DATA = {
       "name": "Spectral Sword",
       "icon": "assets/icons/weapons/spectral_sword.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose from a selection of magic weapons.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Spectral Sword",
       "arcana_ratings": {
@@ -15977,12 +16267,13 @@ window.VS_DATA = {
       "name": "Belnades' Spellbook",
       "icon": "assets/icons/weapons/belnades_spellbook.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose from a selection of spells.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Belnades' Spellbook",
       "arcana_ratings": {
@@ -15994,12 +16285,13 @@ window.VS_DATA = {
       "name": "Ebony Diabologue",
       "icon": "assets/icons/weapons/ebony_diabologue.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose from a selection of ambiguous powers.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Ebony Diabologue",
       "arcana_ratings": {
@@ -16011,6 +16303,7 @@ window.VS_DATA = {
       "name": "Pocket Knife",
       "icon": "assets/icons/weapons/pocket_knife.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws a short-lived knife in the faced direction.",
       "level_ups": [
         "Throws a short-lived knife in the faced direction.",
@@ -16037,12 +16330,13 @@ window.VS_DATA = {
       "name": "Claimh Solais",
       "icon": "assets/icons/weapons/claimh_solais.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Pocket Knife. Globally increases Might, Armor and Crit Damage for each enemy in sight.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Claimh Solais",
       "arcana_ratings": {
@@ -16054,6 +16348,7 @@ window.VS_DATA = {
       "name": "Endo Gears",
       "icon": "assets/icons/weapons/endo_gears.png",
       "category": "Base",
+      "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
       "level_ups": [
         "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -16083,6 +16378,7 @@ window.VS_DATA = {
       "name": "Peri Pendulum",
       "icon": "assets/icons/weapons/peri_pendulum.png",
       "category": "Base",
+      "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
       "level_ups": [
         "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -16112,6 +16408,7 @@ window.VS_DATA = {
       "name": "Myo Lift",
       "icon": "assets/icons/weapons/myo_lift.png",
       "category": "Base",
+      "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
       "level_ups": [
         "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -16141,6 +16438,7 @@ window.VS_DATA = {
       "name": "Epi Head",
       "icon": "assets/icons/weapons/epi_head.png",
       "category": "Base",
+      "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
       "level_ups": [
         "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -16170,12 +16468,13 @@ window.VS_DATA = {
       "name": "Clock Tower",
       "icon": "assets/icons/weapons/clock_tower.png",
       "category": "Union",
+      "method": null,
       "description": "Union of Endo Gears, Peri Pendulum, Myo Lift, and Epi Heads.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Clock Tower",
       "arcana_ratings": {
@@ -16187,12 +16486,13 @@ window.VS_DATA = {
       "name": "Familiar Forge",
       "icon": "assets/icons/weapons/familiar_forge.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to summon a familiar.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Familiar Forge",
       "arcana_ratings": {
@@ -16204,6 +16504,7 @@ window.VS_DATA = {
       "name": "Fleuret",
       "icon": "assets/icons/weapons/fleuret.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.",
       "level_ups": [
         "\"Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.\"",
@@ -16228,6 +16529,7 @@ window.VS_DATA = {
       "name": "Dress Sword",
       "icon": "assets/icons/weapons/dress_sword.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
       "level_ups": [
         "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
@@ -16250,12 +16552,13 @@ window.VS_DATA = {
       "name": "Espada Ropera",
       "icon": "assets/icons/weapons/espada_ropera.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Espada Ropera",
       "arcana_ratings": {},
@@ -16265,6 +16568,7 @@ window.VS_DATA = {
       "name": "Town Sword",
       "icon": "assets/icons/weapons/town_sword.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
       "level_ups": [
         "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
@@ -16287,6 +16591,7 @@ window.VS_DATA = {
       "name": "Lordstar",
       "icon": "assets/icons/weapons/lordstar.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
       "level_ups": [
         "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
@@ -16311,12 +16616,13 @@ window.VS_DATA = {
       "name": "Dayblade",
       "icon": "assets/icons/weapons/dayblade.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Dayblade",
       "arcana_ratings": {
@@ -16329,6 +16635,7 @@ window.VS_DATA = {
       "name": "Splashers",
       "icon": "assets/icons/weapons/splashers.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
       "level_ups": [
         "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
@@ -16354,6 +16661,7 @@ window.VS_DATA = {
       "name": "Pursuant Blades",
       "icon": "assets/icons/weapons/pursuant_blades.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
       "level_ups": [
         "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
@@ -16366,7 +16674,7 @@ window.VS_DATA = {
         "Fires 1 more projectile."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Pursuant Blades",
       "arcana_ratings": {},
@@ -16376,6 +16684,7 @@ window.VS_DATA = {
       "name": "Flamberge",
       "icon": "assets/icons/weapons/flamberge.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
       "level_ups": [
         "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
@@ -16398,6 +16707,7 @@ window.VS_DATA = {
       "name": "Zweihander",
       "icon": "assets/icons/weapons/zweihander.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
       "level_ups": [
         "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
@@ -16420,12 +16730,13 @@ window.VS_DATA = {
       "name": "Galatyn",
       "icon": "assets/icons/weapons/galatyn.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Zweihander. Can glimmer the \"Vandalize\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Galatyn",
       "arcana_ratings": {},
@@ -16435,6 +16746,7 @@ window.VS_DATA = {
       "name": "Punch",
       "icon": "assets/icons/weapons/punch.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Attacks sideways. Can glimmer the \"Raksha\" tech.",
       "level_ups": [
         "Attacks sideways. Can glimmer the \"Raksha\" tech.",
@@ -16457,6 +16769,7 @@ window.VS_DATA = {
       "name": "Pressure Point",
       "icon": "assets/icons/weapons/pressure_point.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
       "level_ups": [
         "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
@@ -16479,12 +16792,13 @@ window.VS_DATA = {
       "name": "Gilded Hand",
       "icon": "assets/icons/weapons/gilded_hand.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gilded Hand",
       "arcana_ratings": {},
@@ -16494,6 +16808,7 @@ window.VS_DATA = {
       "name": "Kick",
       "icon": "assets/icons/weapons/kick.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
       "level_ups": [
         "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
@@ -16519,6 +16834,7 @@ window.VS_DATA = {
       "name": "Triangle Kick",
       "icon": "assets/icons/weapons/triangle_kick.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
       "level_ups": [
         "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
@@ -16531,7 +16847,7 @@ window.VS_DATA = {
         "Fires 1 more projectiles."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Triangle Kick",
       "arcana_ratings": {},
@@ -16541,6 +16857,7 @@ window.VS_DATA = {
       "name": "Saber Machine Gun",
       "icon": "assets/icons/weapons/saber_machine_gun.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
       "level_ups": [
         "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
@@ -16563,6 +16880,7 @@ window.VS_DATA = {
       "name": "Hecaton Machine Gun",
       "icon": "assets/icons/weapons/hecaton_machine_gun.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
       "level_ups": [
         "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
@@ -16585,12 +16903,13 @@ window.VS_DATA = {
       "name": "Divergence",
       "icon": "assets/icons/weapons/divergence.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Divergence",
       "arcana_ratings": {},
@@ -16600,6 +16919,7 @@ window.VS_DATA = {
       "name": "Super Missile",
       "icon": "assets/icons/weapons/super_missile.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
       "level_ups": [
         "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
@@ -16622,6 +16942,7 @@ window.VS_DATA = {
       "name": "Hydra Cannon",
       "icon": "assets/icons/weapons/hydra_cannon.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
       "level_ups": [
         "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
@@ -16644,12 +16965,13 @@ window.VS_DATA = {
       "name": "Hyperion Bazooka",
       "icon": "assets/icons/weapons/hyperion_bazooka.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Hyperion Bazooka",
       "arcana_ratings": {},
@@ -16659,6 +16981,7 @@ window.VS_DATA = {
       "name": "Eagle Gun",
       "icon": "assets/icons/weapons/eagle_gun.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
       "level_ups": [
         "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
@@ -16684,6 +17007,7 @@ window.VS_DATA = {
       "name": "Pendragon",
       "icon": "assets/icons/weapons/pendragon.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
       "level_ups": [
         "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
@@ -16696,7 +17020,7 @@ window.VS_DATA = {
         "Base Damage up by 5."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Pendragon",
       "arcana_ratings": {},
@@ -16706,6 +17030,7 @@ window.VS_DATA = {
       "name": "Khukuri",
       "icon": "assets/icons/weapons/khukuri.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
       "level_ups": [
         "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
@@ -16731,6 +17056,7 @@ window.VS_DATA = {
       "name": "Jetstream",
       "icon": "assets/icons/weapons/jetstream.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
       "level_ups": [
         "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
@@ -16743,7 +17069,7 @@ window.VS_DATA = {
         "Base Area up by 25%."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Jetstream",
       "arcana_ratings": {},
@@ -16753,6 +17079,7 @@ window.VS_DATA = {
       "name": "Twin Dragon",
       "icon": "assets/icons/weapons/twin_dragon.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
       "level_ups": [
         "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
@@ -16778,6 +17105,7 @@ window.VS_DATA = {
       "name": "Gekkabijin",
       "icon": "assets/icons/weapons/gekkabijin.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
       "level_ups": [
         "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
@@ -16790,7 +17118,7 @@ window.VS_DATA = {
         "Fires 1 more projectiles."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gekkabijin",
       "arcana_ratings": {},
@@ -16800,6 +17128,7 @@ window.VS_DATA = {
       "name": "Bullova",
       "icon": "assets/icons/weapons/bullova.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
       "level_ups": [
         "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
@@ -16825,6 +17154,7 @@ window.VS_DATA = {
       "name": "Falconwind",
       "icon": "assets/icons/weapons/falconwind.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
       "level_ups": [
         "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
@@ -16837,7 +17167,7 @@ window.VS_DATA = {
         "Effect lasts 0.5 seconds longer."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Falconwind",
       "arcana_ratings": {},
@@ -16847,6 +17177,7 @@ window.VS_DATA = {
       "name": "Sanguine Star",
       "icon": "assets/icons/weapons/sanguine_star.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
       "level_ups": [
         "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
@@ -16872,6 +17203,7 @@ window.VS_DATA = {
       "name": "Blood Chalice",
       "icon": "assets/icons/weapons/blood_chalice.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
       "level_ups": [
         "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
@@ -16884,7 +17216,7 @@ window.VS_DATA = {
         "Fires 1 more projectiles."
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Blood Chalice",
       "arcana_ratings": {},
@@ -16894,6 +17226,7 @@ window.VS_DATA = {
       "name": "Glaive",
       "icon": "assets/icons/weapons/glaive.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
       "level_ups": [
         "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
@@ -16916,6 +17249,7 @@ window.VS_DATA = {
       "name": "Feather Spear",
       "icon": "assets/icons/weapons/feather_spear.png",
       "category": "Evolution",
+      "method": "Evolution",
       "description": "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
       "level_ups": [
         "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
@@ -16938,12 +17272,13 @@ window.VS_DATA = {
       "name": "Lohengrin",
       "icon": "assets/icons/weapons/lohengrin.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Lohengrin",
       "arcana_ratings": {},
@@ -16953,6 +17288,7 @@ window.VS_DATA = {
       "name": "Spirit Rings",
       "icon": "assets/icons/weapons/spirit_rings.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
       "level_ups": [
         "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
@@ -16975,12 +17311,13 @@ window.VS_DATA = {
       "name": "Rings of Calamity",
       "icon": "assets/icons/weapons/rings_of_calamity.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rings of Calamity",
       "arcana_ratings": {},
@@ -16990,6 +17327,7 @@ window.VS_DATA = {
       "name": "Emerald Rapture",
       "icon": "assets/icons/weapons/emerald_rapture.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Picks random enemies to teleport away, but they might not drop XP gems.",
       "level_ups": [
         "Picks random enemies to teleport away, but they might not drop XP gems.",
@@ -17014,12 +17352,13 @@ window.VS_DATA = {
       "name": "Emerald Wave",
       "icon": "assets/icons/weapons/emerald_wave.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Emerald Wave",
       "arcana_ratings": {},
@@ -17029,12 +17368,13 @@ window.VS_DATA = {
       "name": "Intuition",
       "icon": "assets/icons/weapons/intuition.png",
       "category": "Base",
+      "method": null,
       "description": "Allows you to choose from a selection of weapons from Emerald Diorama.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Intuition",
       "arcana_ratings": {},
@@ -17044,6 +17384,7 @@ window.VS_DATA = {
       "name": "Infernolatro",
       "icon": "assets/icons/weapons/infernolatro.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
       "level_ups": [
         "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
@@ -17069,12 +17410,13 @@ window.VS_DATA = {
       "name": "NaneInferno",
       "icon": "assets/icons/weapons/naneinferno.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "NaneInferno",
       "arcana_ratings": {},
@@ -17084,6 +17426,7 @@ window.VS_DATA = {
       "name": "Gros Michel",
       "icon": "assets/icons/weapons/gros_michel.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
       "level_ups": [
         "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
@@ -17109,10 +17452,11 @@ window.VS_DATA = {
       "name": "Cavendish",
       "icon": "assets/icons/weapons/cavendish.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Gros Michel. Always crits. Always explodes. Other weapons crit more often.",
       "level_ups": [],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Cavendish",
       "arcana_ratings": {},
@@ -17122,6 +17466,7 @@ window.VS_DATA = {
       "name": "Fibonacci Spritz",
       "icon": "assets/icons/weapons/fibonacci_spritz.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
       "level_ups": [
         "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
@@ -17147,12 +17492,13 @@ window.VS_DATA = {
       "name": "Royal Flush",
       "icon": "assets/icons/weapons/royal_flush.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Royal Flush",
       "arcana_ratings": {},
@@ -17162,6 +17508,7 @@ window.VS_DATA = {
       "name": "Celestial Booster",
       "icon": "assets/icons/weapons/celestial_booster.png",
       "category": "Base",
+      "method": "Evolution",
       "description": "Planets orbit around you. Damage increases by amount of coins collected this run.",
       "level_ups": [
         "Planets orbit around you. Damage increases by amount of coins collected this run.",
@@ -17187,12 +17534,13 @@ window.VS_DATA = {
       "name": "Negative Space",
       "icon": "assets/icons/weapons/negative_space.png",
       "category": "Evolution",
+      "method": null,
       "description": "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Negative Space",
       "arcana_ratings": {},
@@ -17202,12 +17550,13 @@ window.VS_DATA = {
       "name": "Experience Gem",
       "icon": "assets/icons/weapons/experience_gem.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Increases experience.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Experience Gem",
       "arcana_ratings": {},
@@ -17217,12 +17566,13 @@ window.VS_DATA = {
       "name": "Gold Coin",
       "icon": "assets/icons/weapons/gold_coin.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Adds 1 to your gold coins total.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gold Coin",
       "arcana_ratings": {},
@@ -17232,12 +17582,13 @@ window.VS_DATA = {
       "name": "Coin Bag",
       "icon": "assets/icons/weapons/coin_bag.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Adds 10 to your gold coins total.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Coin Bag",
       "arcana_ratings": {},
@@ -17247,12 +17598,13 @@ window.VS_DATA = {
       "name": "Big Coin Bag",
       "icon": "assets/icons/weapons/big_coin_bag.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Adds 25 to your gold coins total.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Big Coin Bag",
       "arcana_ratings": {},
@@ -17262,12 +17614,13 @@ window.VS_DATA = {
       "name": "Rich Coin Bag",
       "icon": "assets/icons/weapons/rich_coin_bag.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Adds 100 to your gold coins total.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rich Coin Bag",
       "arcana_ratings": {},
@@ -17277,12 +17630,13 @@ window.VS_DATA = {
       "name": "Rosary",
       "icon": "assets/icons/weapons/rosary.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Destroys all enemies in sight.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rosary",
       "arcana_ratings": {},
@@ -17292,12 +17646,13 @@ window.VS_DATA = {
       "name": "Nduja Fritta Tanto",
       "icon": "assets/icons/weapons/nduja_fritta_tanto.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Temporarily emits cones of flames. Affected by player stats.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Nduja Fritta Tanto",
       "arcana_ratings": {},
@@ -17307,12 +17662,13 @@ window.VS_DATA = {
       "name": "Orologion",
       "icon": "assets/icons/weapons/orologion.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Freezes all enemies in time for 10 seconds.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Orologion",
       "arcana_ratings": {},
@@ -17322,12 +17678,13 @@ window.VS_DATA = {
       "name": "Vacuum",
       "icon": "assets/icons/weapons/vacuum.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Gathers all experience gems left on the ground.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Vacuum",
       "arcana_ratings": {},
@@ -17337,12 +17694,13 @@ window.VS_DATA = {
       "name": "Floor Chicken",
       "icon": "assets/icons/weapons/floor_chicken.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Restores 30 health points.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Floor Chicken",
       "arcana_ratings": {},
@@ -17352,12 +17710,13 @@ window.VS_DATA = {
       "name": "Gilded Clover",
       "icon": "assets/icons/weapons/gilded_clover.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Gathers all gold left on the ground and starts a Gold Fever.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gilded Clover",
       "arcana_ratings": {},
@@ -17367,12 +17726,13 @@ window.VS_DATA = {
       "name": "Little Clover",
       "icon": "assets/icons/weapons/little_clover.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Pick up to get 10% luckier.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Little Clover",
       "arcana_ratings": {},
@@ -17382,12 +17742,13 @@ window.VS_DATA = {
       "name": "Gold Finger",
       "icon": "assets/icons/weapons/gold_finger.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Gives temporary invulnerability, bonus Charm, and minimum Cooldown. Defeat as many enemies as possible to win a prize.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Gold Finger",
       "arcana_ratings": {},
@@ -17397,12 +17758,13 @@ window.VS_DATA = {
       "name": "Friendship Amulet",
       "icon": "assets/icons/weapons/friendship_amulet.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Every player gets a level up for one of their existing weapons.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Friendship Amulet",
       "arcana_ratings": {},
@@ -17412,12 +17774,13 @@ window.VS_DATA = {
       "name": "Sorbetto",
       "icon": "assets/icons/weapons/sorbetto.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Temporarily emits freezing cones. Affected by player stats.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Sorbetto",
       "arcana_ratings": {},
@@ -17427,12 +17790,13 @@ window.VS_DATA = {
       "name": "Treasure Chest",
       "icon": "assets/icons/weapons/treasure_chest.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Awards coins and power ups. Dropped by strong enemies",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Treasure Chest",
       "arcana_ratings": {},
@@ -17442,12 +17806,13 @@ window.VS_DATA = {
       "name": "Body Part",
       "icon": "assets/icons/weapons/body_part.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Body parts heal for 10-20 health.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Body Part",
       "arcana_ratings": {},
@@ -17457,12 +17822,13 @@ window.VS_DATA = {
       "name": "Rapid Fire",
       "icon": "assets/icons/weapons/rapid_fire.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Temporarily doubles Speed and halves Cooldown.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Rapid Fire",
       "arcana_ratings": {},
@@ -17472,12 +17838,13 @@ window.VS_DATA = {
       "name": "Barrier",
       "icon": "assets/icons/weapons/barrier.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Temporarily prevents all damage, but allows for retaliatory attacks.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Barrier",
       "arcana_ratings": {},
@@ -17487,12 +17854,13 @@ window.VS_DATA = {
       "name": "Grenade",
       "icon": "assets/icons/weapons/grenade.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Deals high damage to all visible enemies.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Grenade",
       "arcana_ratings": {},
@@ -17502,12 +17870,13 @@ window.VS_DATA = {
       "name": "Wall Chicken",
       "icon": "assets/icons/weapons/wall_chicken.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Typical Castlevania pot roast. Restores 60 Health points.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Wall Chicken",
       "arcana_ratings": {},
@@ -17517,12 +17886,13 @@ window.VS_DATA = {
       "name": "Heart Refresh",
       "icon": "assets/icons/weapons/heart_refresh.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Temporarily gives +5 Recovery.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Heart Refresh",
       "arcana_ratings": {},
@@ -17532,12 +17902,13 @@ window.VS_DATA = {
       "name": "Karma Coin",
       "icon": "assets/icons/weapons/karma_coin.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Has a 50% chance to trigger a Soul Steal, which destroys all enemies in line of sight and turns them into hearts.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Karma Coin",
       "arcana_ratings": {},
@@ -17547,12 +17918,13 @@ window.VS_DATA = {
       "name": "Mirror of Truth",
       "icon": "assets/icons/weapons/mirror_of_truth.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Temporarily doubles Amount. Activates all equipped weapons at once when picked up.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Mirror of Truth",
       "arcana_ratings": {},
@@ -17562,12 +17934,13 @@ window.VS_DATA = {
       "name": "Neutron Bomb",
       "icon": "assets/icons/weapons/neutron_bomb.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Deals high damage in a large area.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Neutron Bomb",
       "arcana_ratings": {},
@@ -17577,12 +17950,13 @@ window.VS_DATA = {
       "name": "Little Heart",
       "icon": "assets/icons/weapons/little_heart.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Pick up to recover 1 HP.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Little Heart",
       "arcana_ratings": {},
@@ -17592,12 +17966,13 @@ window.VS_DATA = {
       "name": "Crystallized Soul",
       "icon": "assets/icons/weapons/crystallized_soul.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Increases Growth, Recovery, and Max Health by a miniscule amount, but increases the more are collected.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Crystallized Soul",
       "arcana_ratings": {},
@@ -17607,12 +17982,13 @@ window.VS_DATA = {
       "name": "Golden Egg",
       "icon": "assets/icons/weapons/golden_egg.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Permanently improves a random stat for the current character, by a tiny amount.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Golden Egg",
       "arcana_ratings": {},
@@ -17622,12 +17998,13 @@ window.VS_DATA = {
       "name": "Pie",
       "icon": "assets/icons/weapons/pie.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Heals 30 HP.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Pie",
       "arcana_ratings": {},
@@ -17637,12 +18014,13 @@ window.VS_DATA = {
       "name": "Cheese",
       "icon": "assets/icons/weapons/cheese.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Heals 30 HP, summons werewolves.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Cheese",
       "arcana_ratings": {},
@@ -17652,12 +18030,13 @@ window.VS_DATA = {
       "name": "Corn",
       "icon": "assets/icons/weapons/corn.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Heals 30 HP.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Corn",
       "arcana_ratings": {},
@@ -17667,12 +18046,13 @@ window.VS_DATA = {
       "name": "World Eater",
       "icon": "assets/icons/weapons/world_eater.png",
       "category": "Special",
+      "method": "Pickup",
       "description": "Destroys all enemies in sight and turn them into Little Hearts.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "-",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "World Eater",
       "arcana_ratings": {},
@@ -17682,12 +18062,13 @@ window.VS_DATA = {
       "name": "Sarabande of Healing",
       "icon": "assets/icons/weapons/sarabande_of_healing.png",
       "category": "Special",
+      "method": "Arcana",
       "description": "All healing triggers an Area-of-Effect damage pulse within a fixed range, dealing damage equal to the amount healed.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Sarabande of Healing (VI)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Sarabande of Healing",
       "arcana_ratings": {},
@@ -17697,12 +18078,13 @@ window.VS_DATA = {
       "name": "Game Killer",
       "icon": "assets/icons/weapons/game_killer.png",
       "category": "Special",
+      "method": "Arcana",
       "description": "All experience gems act as exploding projectiles that hurl themselves to the closest enemy when collected.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Game Killer (0)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Game Killer",
       "arcana_ratings": {},
@@ -17712,12 +18094,13 @@ window.VS_DATA = {
       "name": "Heart of Fire",
       "icon": "assets/icons/weapons/heart_of_fire.png",
       "category": "Special",
+      "method": "Arcana",
       "description": "Projectiles from affected weapons create an explosion on impact, dealing 50% of base damage.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Heart of Fire (XIX)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Heart of Fire",
       "arcana_ratings": {},
@@ -17727,12 +18110,13 @@ window.VS_DATA = {
       "name": "Out of Bounds",
       "icon": "assets/icons/weapons/out_of_bounds.png",
       "category": "Special",
+      "method": "Arcana",
       "description": "Freezing Enemies generates explosions.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Out of Bounds (XII)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Out of Bounds",
       "arcana_ratings": {},
@@ -17742,12 +18126,13 @@ window.VS_DATA = {
       "name": "Divine Bloodline",
       "icon": "assets/icons/weapons/divine_bloodline.png",
       "category": "Special",
+      "method": "Arcana",
       "description": "Enemies that touch the character take 10 flat damage per Armor.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Divine Bloodline (IX)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Divine Bloodline",
       "arcana_ratings": {},
@@ -17757,12 +18142,13 @@ window.VS_DATA = {
       "name": "Blood Astronomia",
       "icon": "assets/icons/weapons/blood_astronomia.png",
       "category": "Special",
+      "method": "Arcana",
       "description": "Turns the character's Magnet area into a zone to damage enemies",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Blood Astronomia (XXI)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Blood Astronomia",
       "arcana_ratings": {},
@@ -17772,12 +18158,13 @@ window.VS_DATA = {
       "name": "Wandering the Jet Black",
       "icon": "assets/icons/weapons/wandering_the_jet_black.png",
       "category": "Special",
+      "method": "Darkana",
       "description": "Generates projectiles that circle the character and deal damage based on total recovered Health and Magnet.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Wandering the Jet Black (XXI)",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Wandering the Jet Black",
       "arcana_ratings": {},
@@ -17787,12 +18174,13 @@ window.VS_DATA = {
       "name": "Insatiable",
       "icon": "assets/icons/weapons/insatiable.png",
       "category": "Special",
+      "method": "Hidden",
       "description": "Creates a purple zone with a skull centered slightly above the character.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Je-Ne-Viv",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Insatiable",
       "arcana_ratings": {},
@@ -17802,12 +18190,13 @@ window.VS_DATA = {
       "name": "Acquazzone",
       "icon": "assets/icons/weapons/acquazzone.png",
       "category": "Special",
+      "method": "Hidden",
       "description": "Attacks enemies on the lower half of the screen.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Ferryman",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Acquazzone",
       "arcana_ratings": {},
@@ -17817,12 +18206,13 @@ window.VS_DATA = {
       "name": "Power Of Lire",
       "icon": "assets/icons/weapons/power_of_lire.png",
       "category": "Special",
+      "method": "Hidden",
       "description": "Periodically trigger starting a Gold Fever, magnetize gold bags and converted pickups.",
       "level_ups": [
         "-"
       ],
       "trans_conditions": "Master Librarian",
-      "trans_result": "-",
+      "trans_result": null,
       "requirements": [],
       "final_state": "Power Of Lire",
       "arcana_ratings": {
