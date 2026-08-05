@@ -5,7 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vampire Survivors Build Calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Perfect DOS VGA 437';
+      src: url('assets/fonts/Perfect DOS VGA 437.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'LanaPixel';
+      src: url('assets/fonts/LanaPixel.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -18,10 +32,10 @@
       --accent:      #c01020;
       --accent-glow: rgba(192,16,32,.4);
       --gold:        #e8b820;
-      --gold-dim:    #8a6010;
+      --gold-dim:    #b08c28;
       --text:        #f0e8d0;
-      --text-muted:  #a08858;
-      --text-dim:    #5a3820;
+      --text-muted:  #cead7e;
+      --text-dim:    #a07848;
       --slot-bg:     #160606;
       --slot-border: #b88820;
       --hi-char:     #3a7ad9;   /* char-associated */
@@ -29,19 +43,23 @@
       --hi-item:     #2aaa60;   /* item-associated */
       --evolved:     #e8c000;
       --can-evolve:  #ffe840;
-      --font-title:  'Cinzel', Georgia, serif;
-      --font-body:   'Crimson Text', Georgia, serif;
+      --font-title:  'Cormorant', Georgia, serif;
+      --font-body:   'Cormorant', Georgia, serif;
       --slot-size:   52px;
       --char-size:   110px;
     }
 
+    img { image-rendering: pixelated; }
     body {
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-body);
-      font-size: 16px;
+      font-size: 22px;
+      font-weight: 600;
       min-height: 100vh;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     #app { min-height: 100vh; }
@@ -49,9 +67,9 @@
     /* ── Typography ── */
     h1, h2, h3, .label { font-family: var(--font-title); letter-spacing: .05em; }
     h1 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
-    h2 { font-size: 1.1rem; font-weight: 600; color: var(--gold); }
-    h3 { font-size: .85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; }
-    .label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
+    h2 { font-size: 1.15rem; font-weight: 600; color: var(--gold); }
+    h3 { font-size: .9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; }
+    .label { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
 
     /* ── Buttons ── */
     button {
@@ -67,7 +85,7 @@
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: .35rem .9rem;
-      font-size: .8rem;
+      font-size: .88rem;
       letter-spacing: .05em;
     }
     .btn:hover { border-color: var(--border-hi); color: var(--gold); }
@@ -100,8 +118,14 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.1), inset 0 -2px 0 rgba(0,0,0,.3);
     }
     .btn-back:hover { background: #921c1c; box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 0 10px rgba(140,20,20,.5); }
-    .btn-sm { padding: .2rem .55rem; font-size: .72rem; }
-    .btn-icon { background: none; border: none; padding: 3px; line-height: 1; font-size: .85rem; color: var(--text-muted); }
+    .btn-sm { padding: .2rem .55rem; font-size: .8rem; }
+    .btn-stage { width: 100%; }
+    .btn-stage:disabled { opacity: .4; cursor: default; }
+    .btn-stage:disabled:hover { border-color: var(--border); color: var(--text); }
+    .btn-devolve { width: 100%; background: rgba(160,25,25,.1); border-color: rgba(200,50,50,.3); color: #cc7070; }
+    .btn-devolve:hover { background: rgba(160,25,25,.22); border-color: rgba(200,50,50,.55); color: #dd8080; }
+    .stage-missing { font-size: .7rem; color: var(--text-muted); margin: .15rem 0 .25rem; }
+    .btn-icon { background: none; border: none; padding: 3px; line-height: 1; font-size: .9rem; color: var(--text-muted); }
     .btn-icon:hover { color: var(--accent); }
 
     /* ═══════════════════════════════════════════════════
@@ -256,7 +280,7 @@
       overflow-y: auto;
     }
     .info-sidebar {
-      width: 260px;
+      width: 400px;
       flex-shrink: 0;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -277,23 +301,23 @@
     }
     .info-sidebar-empty {
       color: var(--text-dim);
-      font-size: .82rem;
+      font-size: .9rem;
       text-align: center;
       padding: 2rem 0;
       font-style: italic;
       line-height: 1.8;
     }
-    .info-sidebar .detail-icon { text-align: center; margin-bottom: .5rem; }
-    .info-sidebar .detail-icon img { max-width: 120px; image-rendering: pixelated; }
+    .info-sidebar .detail-icon { text-align: center; margin-bottom: .5rem; width: 100px; height: 100px; }
+    .info-sidebar .detail-icon img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
     .info-sidebar .detail-name {
       font-family: var(--font-title);
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--gold);
       text-align: center;
       margin-bottom: .4rem;
     }
     .info-sidebar .detail-desc {
-      font-size: .8rem;
+      font-size: .88rem;
       color: var(--text-muted);
       font-style: italic;
       line-height: 1.5;
@@ -301,7 +325,7 @@
     }
     .info-sidebar .detail-section { margin: .6rem 0; }
     .info-sidebar .detail-section-label {
-      font-size: .65rem;
+      font-size: .75rem;
       text-transform: uppercase;
       letter-spacing: .08em;
       color: var(--text-dim);
@@ -311,9 +335,41 @@
     .info-sidebar .req-row { display: flex; flex-wrap: wrap; gap: 4px; }
     .info-sidebar .req-icon { width: 32px; height: 32px; }
     .info-sidebar .req-icon img { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
-    .info-sidebar .stat-grid { font-size: .78rem; }
+    .info-sidebar .stat-grid { font-size: .88rem; }
     .info-sidebar .stat-row { padding: 2px 0; }
     .info-sidebar .stat-header { padding: 0 0 3px; }
+    .info-sidebar .stat-grid.with-pass .stat-header,
+    .info-sidebar .stat-grid.with-pass .stat-row { grid-template-columns: 1fr 50px 50px 56px 56px 62px; }
+    /* Stats heading row with level input */
+    .stats-heading-row { display: flex; align-items: center; gap: .5rem; margin-bottom: .35rem; }
+    .stats-heading-row h3 { margin: 0; flex-shrink: 0; }
+    .level-wrap { position: relative; display: flex; align-items: center; gap: 3px; width: 50%; margin-left: auto; }
+    .level-prefix { font-size: .78rem; color: var(--text-muted); flex-shrink: 0; }
+    .level-input {
+      flex: 1; min-width: 0; width: 100%; box-sizing: border-box;
+      padding: 4px 24px 4px 8px; font-size: .85rem; text-align: left;
+      background: var(--surface2); color: var(--text); border: 1px solid var(--border);
+      border-radius: 3px; font-family: var(--font-title);
+      -moz-appearance: textfield; appearance: textfield;
+    }
+    .level-input:focus { outline: none; border-color: var(--border-hi); }
+    .level-input::-webkit-inner-spin-button,
+    .level-input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    .level-clear {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 24px;
+      background: none; border: none; cursor: pointer; padding: 0;
+      color: var(--text-muted); font-size: .75rem; line-height: 1;
+      display: none; align-items: center; justify-content: center;
+    }
+    .level-clear:hover { color: var(--text); }
+    .level-wrap:not([data-at-default]) .level-clear { display: flex; }
+    /* Starting weapon hidden/max badges */
+    .info-sidebar .req-icon { position: relative; }
+    .sw-badge { position: absolute; bottom: 0; right: 0; font-size: .6rem; padding: 0 2px;
+      border-radius: 2px; line-height: 1.4; font-family: var(--font-title); }
+    .sw-max    { background: var(--gold); color: #1a1209; }
+    .sw-hidden { background: #444; color: var(--text-muted); }
+    .sw-is-hidden img { opacity: .55; }
     /* Player rows grid — varies by player count */
     .players-grid {
       display: grid;
@@ -369,7 +425,7 @@
 
     /* ── Slot rows ── */
     .slot-row { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
-    .slot-row-label { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); width: 3.5rem; flex-shrink: 0; }
+    .slot-row-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); width: 3.5rem; flex-shrink: 0; }
 
     /* ── Slots ── */
     .slot {
@@ -452,8 +508,8 @@
       background: var(--surface);
       border: 1px solid var(--border-hi);
       border-radius: 12px;
-      width: 75vw;
-      max-width: 960px;
+      width: 88vw;
+      max-width: 1380px;
       max-height: 85vh;
       display: flex;
       flex-direction: column;
@@ -479,7 +535,7 @@
 
     /* left panel (stats) */
     .ovl-left {
-      width: 215px;
+      width: 320px;
       flex-shrink: 0;
       border-right: 1px solid var(--border);
       overflow-y: auto;
@@ -491,12 +547,23 @@
     /* center grid */
     .ovl-center {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .ovl-center-search {
+      flex-shrink: 0;
+      padding: .75rem .75rem .4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .ovl-center-scroll {
+      flex: 1;
       overflow-y: auto;
       padding: .75rem;
     }
     /* right panel (identity / detail) */
     .ovl-right {
-      width: 220px;
+      width: 300px;
       flex-shrink: 0;
       border-left: 1px solid var(--border);
       display: flex;
@@ -530,26 +597,30 @@
     /* ── Stat grid ── */
     .stat-grid { display: flex; flex-direction: column; gap: 1px; }
     .stat-header {
-      display: grid; grid-template-columns: 1fr 36px 36px 40px 46px;
-      font-size: .62rem; text-transform: uppercase;
+      display: grid; grid-template-columns: 1fr 50px 50px 56px 62px;
+      font-size: .74rem; text-transform: uppercase;
       color: var(--text-muted); padding: 0 4px 3px; border-bottom: 1px solid var(--border);
       margin-bottom: 2px;
     }
+    .stat-row {
+      display: grid; grid-template-columns: 1fr 50px 50px 56px 62px;
+      align-items: center; font-size: .82rem; padding: 2px 4px; border-radius: 3px;
+    }
+    /* 6-column variant when passive column is shown */
+    .stat-grid.with-pass .stat-header,
+    .stat-grid.with-pass .stat-row { grid-template-columns: 1fr 50px 50px 56px 56px 62px; }
     .stat-header span { text-align: right; }
     .stat-header span:first-child { text-align: left; }
     .ovl-left .stat-header,
-    .ovl-left .stat-row { grid-template-columns: 1fr 30px 30px 34px 40px; font-size: .67rem; }
-    .ovl-left .stat-header { font-size: .58rem; }
-    .stat-row {
-      display: grid; grid-template-columns: 1fr 36px 36px 40px 46px;
-      align-items: center; font-size: .71rem; padding: 2px 4px; border-radius: 3px;
-    }
+    .ovl-left .stat-row { grid-template-columns: 1fr 48px 48px 54px 60px; font-size: .82rem; }
+    .ovl-left .stat-header { font-size: .74rem; }
     .stat-row.changed { background: rgba(232,184,32,.12); }
-    .stat-key { color: var(--text-muted); }
-    .stat-base  { text-align: right; color: var(--text-muted); font-size: .68rem; }
+    .stat-key { color: var(--text-muted); min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .stat-base  { text-align: right; color: var(--text-muted); font-size: .82rem; }
     .stat-char  { text-align: right; font-weight: 600; }
-    .stat-pu    { text-align: right; color: #7ab8e8; font-size: .69rem; }
-    .stat-total { text-align: right; font-weight: 700; color: var(--text); }
+    .stat-pu      { text-align: right; color: #7ab8e8; font-size: .82rem; }
+    .stat-passive { text-align: right; color: #c8a86e; font-size: .82rem; }
+    .stat-total   { text-align: right; font-weight: 700; color: var(--text); }
     .stat-row.capped .stat-total { color: var(--gold); font-weight: 600; }
     .stat-val.pos { color: #5ddd88; }
     .stat-val.neg { color: #dd5555; }
@@ -606,7 +677,8 @@
     .item-card.hi-char   { box-shadow: 0 0 0 2px var(--hi-char),   0 0 6px rgba(58,122,217,.4); }
     .item-card.hi-arcana { box-shadow: 0 0 0 2px var(--hi-arcana), 0 0 6px rgba(155,63,217,.4); }
     .item-card.hi-item   { box-shadow: 0 0 0 2px var(--hi-item),   0 0 6px rgba(42,170,96,.4); }
-    .item-card.dim { opacity: .35; pointer-events: none; }
+    .item-card.dim      { opacity: .35; pointer-events: none; }
+    .item-card.consumed { opacity: .25; pointer-events: none; filter: grayscale(.7) sepia(.4); }
     .search-dim { display: none !important; }
     .ovl-search-wrap { position: relative; margin-bottom: .6rem; }
     .ovl-search {
@@ -630,10 +702,29 @@
     .req-row { display:flex; align-items:center; gap:.4rem; margin:.2rem 0; }
     .req-icon { width:26px; height:26px; flex-shrink:0; border-radius:4px; overflow:hidden; }
     .req-icon img { width:100%; height:100%; object-fit:cover; display:block; }
-    .req-status { font-size:.67rem; padding:1px 5px; border-radius:2px; white-space:nowrap; }
+    .req-status { font-size:.75rem; padding:1px 5px; border-radius:2px; white-space:nowrap; }
     .req-status.ok   { color:#5ddd88; }
     .req-status.add  { color:var(--gold); }
     .req-status.miss { color:#dd5555; cursor:help; }
+    .auto-add-toggle {
+      display: flex; align-items: center; gap: .5rem;
+      margin-top: .6rem; padding: .35rem .5rem;
+      border-radius: 5px; border: 1px solid var(--border);
+      cursor: pointer; user-select: none;
+      font-size: .8rem; color: var(--text);
+      transition: border-color .15s, background .15s;
+    }
+    .auto-add-toggle:hover { border-color: var(--border-hi); background: var(--surface2); }
+    .auto-add-toggle.checked { border-color: rgba(93,221,136,.4); background: rgba(93,221,136,.06); }
+    .auto-add-toggle.error   { border-color: rgba(220,60,60,.4);  background: rgba(220,60,60,.06); }
+    .auto-add-box {
+      width: 14px; height: 14px; flex-shrink: 0;
+      border: 1px solid var(--border-hi); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; color: #5ddd88;
+    }
+    .auto-add-toggle.error .auto-add-box { border-color: #dd5555; color: #dd5555; }
+    .auto-add-warn { font-size: .72rem; color: #dd5555; margin-left: auto; }
     .item-card .card-badge {
       position: absolute; bottom: 0; left: 0; right: 0;
       background: rgba(0,0,0,.7);
@@ -677,13 +768,45 @@
 
     /* ── Detail panels (right side) ── */
     .detail-icon { width: 64px; height: 64px; border-radius: 8px; overflow: hidden; margin: 0 auto .5rem; }
+    .ovl-right-top .detail-icon { width: 88px; height: 88px; }
     .detail-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .detail-name { font-family: var(--font-title); font-size: .95rem; text-align: center; color: var(--gold); margin-bottom: .3rem; }
-    .detail-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; font-style: italic; }
+    /* Arcana cards are portrait 224×320 — override square assumptions */
+    .detail-icon.arcana-card { width: 140px; height: 200px; }
+    .detail-icon.arcana-card img { object-fit: fill; }
+    .ovl-center-wide .item-grid { gap: 12px; row-gap: 14px; }
+    .arcana-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding: .75rem;
+    }
+    .arcana-grid .item-card { width: 100%; height: auto; aspect-ratio: 224 / 320; }
+    .arcana-grid .item-card img { object-fit: fill; width: 100%; height: 100%; }
+    .arcana-tab-btn {
+      grid-column: span 2;
+      align-self: stretch;
+      background: var(--surface2);
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: .4rem; color: var(--text);
+    }
+    .arcana-tab-btn[data-tab="arcana"]  { background: rgba(180,30,30,.2);  border-color: rgba(220,60,60,.45);  }
+    .arcana-tab-btn[data-tab="darkana"] { background: rgba(120,40,200,.2); border-color: rgba(155,80,220,.45); }
+    .arcana-tab-btn[data-tab="arcana"]:hover  { border-color: rgba(220,60,60,.8);  }
+    .arcana-tab-btn[data-tab="darkana"]:hover { border-color: rgba(155,80,220,.8); }
+    .arcana-tab-current { font-family: var(--font-title); font-size: 1.5rem; color: var(--gold); font-weight: 600; }
+    .arcana-tab-switch { font-size: 1rem; color: var(--text-muted); }
+    .arcana-placeholder { opacity: .3; cursor: default; pointer-events: none; }
+    .detail-name { font-family: var(--font-title); font-size: 1.05rem; text-align: center; color: var(--gold); margin-bottom: .3rem; }
+    .detail-desc { font-size: .88rem; color: var(--text-muted); line-height: 1.5; font-style: italic; }
     .detail-section { margin-top: .5rem; }
     .detail-section h3 { margin-bottom: .25rem; }
     .detail-section ul { list-style: none; padding: 0; }
-    .detail-section li { font-size: .77rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
+    .detail-section li { font-size: .85rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
     .detail-section li::before { content: '▸ '; color: var(--gold-dim); }
     .evo-flow { display: flex; flex-direction: column; gap: 14px; margin-top: .35rem; }
     .evo-path-group { padding-top: .6rem; border-top: 1px solid var(--border); }
@@ -692,11 +815,26 @@
     .evo-node { width: 28px; height: 28px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
     .evo-node.current { outline: 1px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.4); }
     .evo-node.evo-hidden { opacity: .4; }
+    .evo-node[data-evo-item]:not(.current) { cursor: context-menu; }
+    .evo-node[data-evo-item]:not(.current):hover { outline: 1px solid var(--border-hi); }
+    .evo-gem[data-evo-item] { cursor: context-menu; }
+    .evo-gem[data-evo-item]:hover { outline: 1px solid var(--border-hi); }
+    .evo-toast {
+      position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+      padding: .4rem 1.1rem; border-radius: 6px; z-index: 9999; pointer-events: none;
+      font-size: .88rem; white-space: nowrap;
+      animation: toast-in .18s ease, toast-out .3s ease 1.7s forwards;
+    }
+    .evo-toast.ok  { background: rgba(18,18,12,.96); border: 1px solid rgba(93,221,136,.5); color: #5ddd88; }
+    .evo-toast.err { background: rgba(18,18,12,.96); border: 1px solid rgba(220,80,80,.5);  color: #ff8080; }
+    .evo-toast.warn{ background: rgba(18,18,12,.96); border: 1px solid rgba(232,184,32,.4); color: var(--gold); }
+    @keyframes toast-in  { from { opacity:0; transform:translateX(-50%) translateY(6px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+    @keyframes toast-out { to   { opacity:0; transform:translateX(-50%) translateY(6px); } }
     .evo-node img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .evo-op { font-size: .8rem; color: var(--text-muted); flex-shrink: 0; }
     .evo-nw { display: inline-flex; align-items: center; flex-shrink: 0; position: relative; }
-    .evo-max { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .5rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; white-space: nowrap; }
-    .evo-sub { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .48rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
+    .evo-max { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .65rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; white-space: nowrap; }
+    .evo-sub { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .63rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
     .evo-dash-line { width: 14px; border-top: 1.5px dashed var(--text-dim); flex-shrink: 0; }
     .evo-gem { width: 14px; height: 14px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
     .evo-gem img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -725,7 +863,7 @@
     /* hexagram (Tuna) */
     .evo-hexagram { position: relative; width: 160px; height: 150px; margin: .4rem 0; }
     .evo-hexagram .eh-item { position: absolute; transform: translate(-50%,-50%); }
-    .evo-hexagram .eh-label { position: absolute; font-size: .44rem; color: var(--text-muted); white-space: nowrap; transform: translate(-50%,0); }
+    .evo-hexagram .eh-label { position: absolute; font-size: .63rem; color: var(--text-muted); white-space: nowrap; transform: translate(-50%,0); }
     .req-icons { display: flex; gap: 4px; flex-wrap: wrap; margin-top: .3rem; }
     .req-icon { width: 28px; height: 28px; border-radius: 4px; overflow: hidden; }
     .req-icon img { width: 100%; height: 100%; object-fit: cover; }
@@ -740,7 +878,7 @@
     }
     .hi-badge.char   { background: rgba(58,122,217,.25);  color: #6aadff; border: 1px solid rgba(58,122,217,.4);  }
     .hi-badge.arcana { background: rgba(155,63,217,.25);   color: #c08dff; border: 1px solid rgba(155,63,217,.4);  }
-    .hi-badge.item   { background: rgba(42,170,96,.25);    color: #6ae8a4; border: 1px solid rgba(42,170,96,.4);   }
+    .hi-badge.item   { background: rgba(180,30,30,.25);    color: #ff8080; border: 1px solid rgba(220,60,60,.4);   }
 
     /* ── Character grid (overlay) ── */
     .char-grid {
@@ -766,6 +904,7 @@
     .char-card img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
     .char-card:hover img { filter: brightness(1.15); }
     .char-card.selected { box-shadow: 0 0 0 3px var(--gold), 0 0 12px rgba(232,184,32,.5); }
+    .char-card.dim, .stack-wrapper.dim { opacity: .35; pointer-events: none; }
     .char-card.broken {
       background: var(--slot-bg);
       border: 2px solid var(--slot-border);
@@ -790,7 +929,7 @@
     }
 
     /* arcana overlay two-panel (no left stats) */
-    .ovl-center-wide { flex: 1; overflow-y: auto; padding: .75rem; }
+    .ovl-center-wide { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 
     /* stage grid */
     .stage-grid { display: flex; flex-direction: column; gap: 4px; }
@@ -866,7 +1005,7 @@
     char:    'assets/icons/characters/empty.png',
     weapon:  'assets/icons/weapons/empty.png',
     passive: 'assets/icons/passives/empty.png',
-    arcana:  'assets/icons/arcana/empty.png',
+    arcana:  'assets/icons/arcana/empty_arcana.png',
     stage:   'assets/icons/stages/empty.png',
   };
   const EMPTY_ICON = EMPTY_ICONS.passive;
@@ -911,8 +1050,9 @@
     overlay: null,   // { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem }
     ovl: {
       selected: null,
-      variantIdx: {}, // baseName → idx
-      stackIdx: {},   // baseNum → idx (0=arcana,1=darkana)
+      variantIdx: {}, // baseName → idx (character variants)
+      arcanaTab: 'arcana',
+      autoAdd: null,  // null = use computed default; true/false = user override
       search: '',
     },
     puActive: false,
@@ -926,7 +1066,7 @@
   };
 
   function makePlayer() {
-    return { character: null, weapons: [], passives: [] };
+    return { character: null, weapons: [], passives: [], charLevel: 1 };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -965,7 +1105,7 @@
     const icon = evoIcon(name);
     let cls = 'evo-node'; if (cur) cls += ' current'; if (hidden) cls += ' evo-hidden';
     const img = `<img src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${esc(EMPTY_ICON)}'">`;
-    const nd = `<div class="${cls}" title="${esc(name)}">${img}</div>`;
+    const nd = `<div class="${cls}" title="${esc(name)}" data-evo-item="${esc(name)}">${img}</div>`;
     const extras = [];
     if (max) extras.push(`<div class="evo-max">MAX</div>`);
     if (sub) extras.push(`<div class="evo-sub">${esc(sub)}</div>`);
@@ -981,7 +1121,7 @@
   function gemNode(name, pos = 'center') {
     const icon = evoIcon(name);
     const as = pos === 'top' ? 'flex-start' : pos === 'bot' ? 'flex-end' : 'center';
-    return `<div class="evo-gem" style="align-self:${as}" title="${esc(name)}"><img src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>`;
+    return `<div class="evo-gem" style="align-self:${as}" title="${esc(name)}" data-evo-item="${esc(name)}"><img src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div>`;
   }
 
   function eRow(...parts) { return `<div class="evo-row">${parts.join('')}</div>`; }
@@ -999,7 +1139,10 @@
   function buildEvoChainHTML(w) {
     const paths = evoPathsFor(w.name);
     if (!paths.length) return '';
-    const sections = paths.map(ep => renderEvoPath(ep, w.name)).filter(Boolean);
+    const sections = paths.map(ep => {
+      const html = renderEvoPath(ep, w.name);
+      return html ? `<div data-evo-path="${esc(ep.evo_path)}">${html}</div>` : '';
+    }).filter(Boolean);
     if (!sections.length) return '';
     return `<div class="detail-section"><h3>Evolution</h3><div class="evo-flow">${sections.join('')}</div></div>`;
   }
@@ -1019,7 +1162,7 @@
         if (equippedNames && !ep.related_to.some(rn => equippedNames.has(rn))) continue;
         seen.add(ep.evo_path);
         const rendered = renderEvoPath(ep, w.name);
-        if (rendered) groups.push(`<div class="evo-path-group"><div style="font-size:.58rem;color:var(--gold-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem">${esc(ep.evo_path)}</div>${rendered}</div>`);
+        if (rendered) groups.push(`<div class="evo-path-group" data-evo-path="${esc(ep.evo_path)}"><div style="font-size:.65rem;color:var(--gold-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem">${esc(ep.evo_path)}</div>${rendered}</div>`);
       }
     }
     if (!groups.length) return '';
@@ -1171,13 +1314,17 @@
   function getEvolutionPassiveStatus(selW, playerIdx) {
     const player = state.players[playerIdx];
     const counts = SLOT_COUNTS[state.playerCount];
-    const pending = []; // {name, slot}
-    const missing = []; // names
+    const pending = []; // {name, slot} — needs to be added to this player
+    const missing = []; // names — needed but no slot available
     const virtuallyTaken = new Set();
+    // Passive equipped by ANY player satisfies the evo condition (cross-player sharing).
+    const allEquippedPassives = new Set(
+      state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
+    );
     for (const req of (selW.requirements || [])) {
       if (!D.passives.some(p => p.name === req)) continue; // weapon req, skip
-      if (player.passives.some(p => p && p.name === req)) continue; // already equipped
-      // Explicitly iterate slot indices — passives array is sparse so findIndex misses unset slots
+      if (allEquippedPassives.has(req)) continue; // satisfied by any player
+      // Passive is missing entirely — find an empty slot on this player to add it.
       let emptySlot = -1;
       for (let i = 0; i < counts.passives; i++) {
         if (!player.passives[i] && !virtuallyTaken.has(i)) { emptySlot = i; break; }
@@ -1209,8 +1356,8 @@
       if (!map[key]) { map[key] = []; order.push(key); }
       map[key].push(a);
     }
-    // Sort so Arcana type comes before Darkana within each group
-    return order.map(k => {
+    // Sort groups by numeric base_num, Arcana before Darkana within each group
+    return order.sort((a, b) => parseInt(a) - parseInt(b)).map(k => {
       const g = map[k];
       g.sort((a, b) => (a.type === 'Arcana' ? -1 : 1) - (b.type === 'Arcana' ? -1 : 1));
       return g;
@@ -1287,13 +1434,46 @@
     return hidden;
   }
 
+  // Auto-devolve any evolution weapons whose passive requirements are no longer met.
+  // Passive requirements live on the BASE weapon (e.g. Whip.requirements = ['Hollow Heart']),
+  // not on the evolved weapon (Bloody Tear.requirements = ['Vento Sacro'] — a union partner).
+  // Iterates until stable so cascading devolves resolve fully.
+  function autoDevolveBrokenEvos() {
+    let changed = true;
+    while (changed) {
+      changed = false;
+      const allPassiveNames = new Set(
+        state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
+      );
+      for (const player of state.players) {
+        for (let i = 0; i < player.weapons.length; i++) {
+          const w = player.weapons[i];
+          if (!w) continue;
+          // Only auto-devolve weapons produced by a standard evolution (not union)
+          const evoBases = D.weapons.filter(b => b.trans_result === w.name && b.method === 'Evolution');
+          if (!evoBases.length) continue;
+          // Passive reqs are on the BASE weapon (the thing that evolves)
+          const passiveReqs = evoBases.flatMap(b =>
+            (b.requirements || []).filter(r => D.passives.some(p => p.name === r))
+          );
+          if (!passiveReqs.every(r => allPassiveNames.has(r))) {
+            player.weapons[i] = evoBases[0];
+            changed = true;
+          }
+        }
+      }
+    }
+  }
+
   function getReadyEvolutions(playerIdx) {
     const player = state.players[playerIdx];
-    const passiveNames = new Set(player.passives.filter(Boolean).map(p => p.name));
+    const allPassiveNames = new Set(
+      state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
+    );
     return player.weapons.map((base, si) => {
       if (!base || base.method !== 'Evolution' || !base.trans_result) return null;
       const passiveReqs = (base.requirements || []).filter(r => D.passives.some(p => p.name === r));
-      if (!passiveReqs.every(r => passiveNames.has(r))) return null;
+      if (!passiveReqs.every(r => allPassiveNames.has(r))) return null;
       const result = weaponByName(base.trans_result);
       return result ? { result, slotIdx: si } : null;
     }).filter(Boolean);
@@ -1350,7 +1530,7 @@
             evolved = false, hidden = false, removable = true, locked = false, canUnion = false } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
-    const icon = (item && item.icon) ? item.icon : emptyIcon;
+    const icon = item ? (isChar ? (item.sprite_gif || item.icon || emptyIcon) : (item.icon || emptyIcon)) : emptyIcon;
     const classes = [
       'slot',
       isChar ? 'slot-char' : '',
@@ -1367,7 +1547,7 @@
       : '';
 
     const imgTag = `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.src='${emptyIcon}'">`;
-    const slotAction = hidden ? (item ? 'view-hidden' : '') : item ? 'view-slot' : locked ? '' : 'open-slot';
+    const slotAction = hidden ? (item ? 'view-hidden' : '') : locked ? (item ? 'open-slot' : '') : item ? 'view-slot' : 'open-slot';
 
     const lockIcon = locked ? `<img class="slot-lock" src="assets/icons/ui/locked.png" alt="">` : '';
     const hiddenAttr = (hidden && item) ? `data-hidden-name="${esc(item.name)}"` : '';
@@ -1391,11 +1571,11 @@
     return `<span class="stat-val ${cls}">${sign}${num}${suffix}</span>`;
   }
 
-  function statsHTML(char) {
+  function statsHTML(char, player, level) {
+    const showPassive = !!player;
     let rows = '';
     for (const [key, label] of Object.entries(STAT_LABELS)) {
-      const rawChar = char ? (char.stats[key] || 0) : 0;
-      const { dispBase, dispChar, dispPU, total, isPct, isCapped } = calcStatTotal(key, char?.stats);
+      const { dispBase, dispChar, dispPU, dispPassive, total, isPct, isCapped } = calcStatTotal(key, char?.stats, player, char, level);
       const suffix = isPct ? '%' : '';
       const charIsZero = dispChar === 0;
       const charSign = dispChar > 0 ? '+' : '';
@@ -1407,18 +1587,26 @@
       const puDisplay = dispPU
         ? `<span class="stat-pu">${dispPU}</span>`
         : '<span class="stat-pu" style="color:var(--text-muted)">—</span>';
-      const changed = rawChar !== 0;
+      const passiveDisplay = showPassive
+        ? (dispPassive
+            ? `<span class="stat-passive">${dispPassive}</span>`
+            : '<span class="stat-passive" style="color:var(--text-muted)">—</span>')
+        : '';
+      const changed = dispChar !== 0;
       const rowCls = ['stat-row', changed ? 'changed' : '', isCapped ? 'capped' : ''].filter(Boolean).join(' ');
       rows += `<div class="${rowCls}">
         <span class="stat-key">${label}</span>
         <span class="stat-base">${dispBase}</span>
         ${charDisplay}
         ${puDisplay}
+        ${passiveDisplay}
         <span class="stat-total">${total}${suffix}</span>
       </div>`;
     }
-    const header = `<div class="stat-header"><span>Stat</span><span>Base</span><span>Char</span><span>PU</span><span>Total</span></div>`;
-    return `<div class="stat-grid">${header}${rows}</div>`;
+    const header = showPassive
+      ? `<div class="stat-header"><span>Stat</span><span>Base</span><span>Char</span><span>PU</span><span>Pass</span><span>Total</span></div>`
+      : `<div class="stat-header"><span>Stat</span><span>Base</span><span>Char</span><span>PU</span><span>Total</span></div>`;
+    return `<div class="stat-grid${showPassive ? ' with-pass' : ''}">${header}${rows}</div>`;
   }
 
   // ═══════════════════════════════════════════════════════
@@ -1472,7 +1660,8 @@
     if (!item) return `<div class="info-sidebar"><div class="sidebar-body"><div class="info-sidebar-empty">Empty slot</div></div></div>`;
 
     const icon = (item.icon) ? item.icon : (EMPTY_ICONS[type] || EMPTY_ICONS.weapon);
-    let top = `<div class="detail-icon"><img src="${esc(icon)}" onerror="this.src='${EMPTY_ICONS[type]||EMPTY_ICONS.weapon}'"></div>`;
+    const iconClass = type === 'arcana' ? 'detail-icon arcana-card' : 'detail-icon';
+    let top = `<div class="${iconClass}"><img src="${esc(icon)}" onerror="this.src='${EMPTY_ICONS[type]||EMPTY_ICONS.weapon}'"></div>`;
     top += `<div class="detail-name">${esc(item.name)}</div>`;
     if (item.description) top += `<div class="detail-desc">${esc(item.description)}</div>`;
     let html = '';
@@ -1482,51 +1671,91 @@
         html += `<div class="detail-section"><span class="detail-section-label">Starting Weapons</span><div class="req-row">`;
         for (const wn of item.starting_weapons) {
           const w = weaponByName(wn);
-          html += `<div class="req-icon" title="${esc(wn)}">${w ? `<img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">` : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
+          const isHidden = item.hidden_items?.includes(wn);
+          const isMax    = item.max_items?.includes(wn);
+          const badge = isMax ? '<span class="sw-badge sw-max">MAX</span>' : isHidden ? '<span class="sw-badge sw-hidden">HID</span>' : '';
+          html += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}" title="${esc(wn)}${isHidden ? ' (Hidden)' : isMax ? ' (Max)' : ''}">${w ? `<img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">${badge}` : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
         }
         html += `</div></div>`;
       }
-      html += statsHTML(item);
+      const charLevel = player?.charLevel ?? 1;
+      html += levelRowHTML(playerIdx, charLevel);
+      html += statsHTML(item, player, charLevel);
     }
 
     if (type === 'weapon') {
       const wObj = D.weapons.find(w => w.name === item.name);
       if (wObj) html += buildEvoChainHTML(wObj);
-      // Evolution ready?
-      const readyEvos = getReadyEvolutions(playerIdx);
-      const evo = readyEvos.find(e => e.slotIdx === slotIdx);
-      if (evo) {
-        const rw = evo.result;
-        html += `<div class="detail-section">
-          <span class="detail-section-label" style="color:var(--can-evolve)">Evolution Ready</span>
-          <div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.4rem">
-            <div class="req-icon" title="${esc(rw.name)}"><img src="${esc(rw.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
-            <span style="font-size:.75rem;color:var(--text)">${esc(rw.name)}</span>
-          </div>
-          <button class="btn btn-sm" style="width:100%"
-            data-action="perform-evolve"
-            data-player="${playerIdx}"
-            data-slot="${slotIdx}"
-            data-result="${esc(rw.name)}">Evolve →</button>
-        </div>`;
-      }
-      // Union ready?
-      const readyUnions = getReadyUnions(playerIdx);
-      const union = readyUnions.find(u => u.inputSlots.includes(slotIdx));
-      if (union) {
-        const rw = union.result;
-        html += `<div class="detail-section">
-          <span class="detail-section-label" style="color:var(--can-evolve)">Union Ready</span>
-          <div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.4rem">
-            <div class="req-icon" title="${esc(rw.name)}"><img src="${esc(rw.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
-            <span style="font-size:.75rem;color:var(--text)">${esc(rw.name)}</span>
-          </div>
-          <button class="btn btn-sm" style="width:100%"
-            data-action="perform-union"
-            data-player="${playerIdx}"
-            data-result="${esc(rw.name)}"
-            data-input-slots="${union.inputSlots.join(',')}">Union →</button>
-        </div>`;
+
+      // Stage controls — only for real slots, not hidden weapon views
+      if (wObj && slotIdx >= 0) {
+        const player = state.players[playerIdx];
+        const nextW  = wObj.trans_result ? weaponByName(wObj.trans_result) : null;
+        // bases: weapons whose evo/union produces the current weapon (what we can devolve to)
+        const bases  = D.weapons.filter(b => b.trans_result === wObj.name);
+
+        if (nextW || bases.length > 0) {
+          let stageInner = '';
+
+          // ── Advance (Evolve / Union / Gift / …) ────────────
+          if (nextW && wObj.method) {
+            const methodStr = wObj.method;
+            const label     = methodStr === 'Evolution' ? 'Evolve' : methodStr;
+            let ready = false, missingText = '', dataAction, extraAttrs = '';
+
+            if (methodStr === 'Union') {
+              const allInputs  = D.weapons.filter(b => b.trans_result === wObj.trans_result && b.method === 'Union');
+              const others     = allInputs.filter(u => u.name !== wObj.name);
+              const otherPairs = others.map(u => ({
+                name: u.name,
+                slot: player.weapons.findIndex(w => w && w.name === u.name),
+              }));
+              const missing = otherPairs.filter(p => p.slot < 0).map(p => p.name);
+              ready = missing.length === 0;
+              missingText = missing.length ? `Missing: ${missing.map(esc).join(', ')}` : '';
+              const inputSlots = [slotIdx, ...otherPairs.filter(p => p.slot >= 0).map(p => p.slot)];
+              dataAction = 'perform-union';
+              extraAttrs = `data-input-slots="${inputSlots.join(',')}"`;
+            } else {
+              const allPassives = new Set(state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)));
+              const passiveReqs = (wObj.requirements || []).filter(r => D.passives.some(p => p.name === r));
+              const missing = passiveReqs.filter(r => !allPassives.has(r));
+              ready = missing.length === 0;
+              missingText = missing.length ? `Missing: ${missing.map(n => esc(n)).join(', ')}` : '';
+              dataAction = 'perform-evolve';
+            }
+
+            const labelColor = ready ? 'color:var(--can-evolve)' : '';
+            stageInner += `<div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.3rem">
+              <div class="req-icon" title="${esc(nextW.name)}"><img src="${esc(nextW.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
+              <span style="font-size:.75rem;${labelColor}">${esc(nextW.name)}${ready ? ' — Ready' : ''}</span>
+            </div>
+            <button class="btn btn-sm btn-stage" ${ready ? '' : 'disabled'}
+                    data-action="${dataAction}"
+                    data-player="${playerIdx}"
+                    data-slot="${slotIdx}"
+                    data-result="${esc(nextW.name)}"
+                    ${extraAttrs}>${esc(label)} →</button>
+            ${missingText ? `<div class="stage-missing">${missingText}</div>` : ''}`;
+          }
+
+          // ── Devolve ─────────────────────────────────────────
+          if (bases.length > 0) {
+            const primaryBase = bases[0];
+            const devolveLabel = bases.length === 1
+              ? `← ${esc(primaryBase.name)}`
+              : '← Devolve';
+            stageInner += `<button class="btn btn-sm btn-devolve"
+                    data-action="perform-devolve"
+                    data-player="${playerIdx}"
+                    data-slot="${slotIdx}">${devolveLabel}</button>`;
+          }
+
+          html += `<div class="detail-section">
+            <span class="detail-section-label">Stage</span>
+            ${stageInner}
+          </div>`;
+        }
       }
     }
 
@@ -1536,7 +1765,7 @@
 
     if (type === 'arcana') {
       const aObj = D.arcana.find(a => a.name === item.name);
-      if (aObj) html += `<div class="hi-badge arcana" style="text-align:center;margin:.4rem 0">${esc(aObj.type)} · ${esc(aObj.number)}</div>`;
+      if (aObj) html += `<div class="hi-badge ${aObj.type === 'Arcana' ? 'arcana' : 'item'}" style="text-align:center;margin:.4rem 0">${esc(aObj.type)}</div>`;
     }
 
     return `<div class="info-sidebar"><div class="sidebar-top">${top}</div><div class="sidebar-body">${html}</div></div>`;
@@ -1553,10 +1782,16 @@
       const charSlot = slotHTML(char, { type:'char', playerIdx:idx, slotIdx:0, removable: !!char });
 
       // ── Weapon slots
-      const starterCount = char ? Math.min(char.starting_weapons.length, counts.weapons) : 0;
-      const starterLineages = char
-        ? char.starting_weapons.slice(0, starterCount).map(wn => weaponLineage(wn))
+      // Weapons listed in hidden_items start in hidden slots, not regular slots
+      const hiddenItemSet = new Set(char?.hidden_items ?? []);
+      const normalStarters = char
+        ? char.starting_weapons.filter(wn => !hiddenItemSet.has(wn))
         : [];
+      const hiddenStarters = char
+        ? char.starting_weapons.filter(wn => hiddenItemSet.has(wn))
+        : [];
+      const starterCount = char ? Math.min(normalStarters.length, counts.weapons) : 0;
+      const starterLineages = normalStarters.slice(0, starterCount).map(wn => weaponLineage(wn));
       const readyUnions = getReadyUnions(idx);
       const readyEvos   = getReadyEvolutions(idx);
       const upgradeSlotSet = new Set([
@@ -1572,13 +1807,17 @@
         return slotHTML(base, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved, locked:isLocked, canUnion: upgradeSlotSet.has(si) });
       }).join('');
 
-      // ── Hidden weapons (char overflow + counterparts unlocked by Gemini)
+      // ── Hidden weapons (hidden starters + char overflow + counterparts unlocked by Gemini)
       const occupied = new Set(player.weapons.filter(Boolean).map(w => w.name));
       const charOverflow = char
-        ? char.starting_weapons.slice(counts.weapons).filter(wn => !occupied.has(wn))
+        ? normalStarters.slice(counts.weapons).filter(wn => !occupied.has(wn))
         : [];
       const counterparts = getHiddenCounterparts(idx);
-      const allHidden = [...new Set([...charOverflow, ...counterparts])];
+      const allHidden = [...new Set([
+        ...hiddenStarters.filter(wn => !occupied.has(wn)),
+        ...charOverflow,
+        ...counterparts,
+      ])];
       let hiddenSlots = '';
       if (allHidden.length) {
         hiddenSlots += '<div class="hidden-divider"></div>';
@@ -1679,15 +1918,24 @@
     const groups = charGroups();
     const sel = state.ovl.selected;
 
+    // Base names already chosen by other players — dim these in the grid.
+    const takenBaseNames = new Set(
+      state.players
+        .filter((_, i) => i !== playerIdx)
+        .map(p => p.character?.base_name)
+        .filter(Boolean)
+    );
+
     let cards = '';
     for (const group of groups) {
       const vi  = (state.ovl.variantIdx[group[0].base_name] ?? 0) % group.length;
       const cur = group[vi];
       const isSelected = sel && group.some(c => c.name === sel.name);
+      const isTaken    = takenBaseNames.has(group[0].base_name);
       const hasVariants = group.length > 1;
       const searchVal = esc(group.map(c => c.name).join('|'));
       if (hasVariants) {
-        cards += `<div class="stack-wrapper" data-search="${searchVal}">
+        cards += `<div class="stack-wrapper${isTaken ? ' dim' : ''}" data-search="${searchVal}">
           <div class="char-card stacked${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
             <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
             <div class="variant-count">${vi+1}/${group.length}</div>
@@ -1698,19 +1946,34 @@
           </div>
         </div>`;
       } else {
-        cards += `<div class="char-card${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" data-search="${searchVal}">
+        cards += `<div class="char-card${isSelected ? ' selected' : ''}${isTaken ? ' dim' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" data-search="${searchVal}">
           <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
         </div>`;
       }
     }
 
-    const left = `<h3>Stats</h3>${statsHTML(sel)}`;
-    const right = sel
-      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICONS.char)}" onerror="this.src='${EMPTY_ICONS.char}'"></div>
-         <div class="detail-name">${esc(sel.name)}</div>
-         <div class="detail-desc">${esc(sel.description)}</div>
-         ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>` : ''}`
-      : '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a character</div>';
+    const charLevel = state.players[playerIdx]?.charLevel ?? 1;
+    const left = `${levelRowHTML(playerIdx, charLevel)}${statsHTML(sel, null, charLevel)}`;
+    const rightTop = sel
+      ? `<div class="detail-icon"><img src="${esc(sel.sprite_static||sel.icon||EMPTY_ICONS.char)}" onerror="this.src='${EMPTY_ICONS.char}'"></div>
+         <div class="detail-name">${esc(sel.name)}</div>`
+      : `<div class="detail-desc" style="text-align:center">Select a character</div>`;
+    let rightBody = '';
+    if (sel) {
+      if (sel.description) rightBody += `<div class="detail-desc">${esc(sel.description)}</div>`;
+      if (sel.starting_weapons?.length) {
+        rightBody += `<div class="detail-section"><span class="detail-section-label">Starting Weapons</span><div class="req-row">`;
+        for (const wn of sel.starting_weapons) {
+          const w = weaponByName(wn);
+          const isHidden = sel.hidden_items?.includes(wn);
+          const isMax    = sel.max_items?.includes(wn);
+          const badge = isMax ? '<span class="sw-badge sw-max">MAX</span>' : isHidden ? '<span class="sw-badge sw-hidden">HID</span>' : '';
+          rightBody += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}" title="${esc(wn)}${isHidden ? ' (Hidden)' : isMax ? ' (Max)' : ''}">${w ? `<img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">${badge}` : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
+        }
+        rightBody += `</div></div>`;
+      }
+      if (sel.notes) rightBody += `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>`;
+    }
 
     return `<div class="overlay-header">
         <h2>Character Selection</h2>
@@ -1719,10 +1982,13 @@
       <div class="overlay-body">
         <div class="ovl-left">${left}</div>
         <div class="ovl-center">
-          ${searchBarHTML('Search characters…')}
-          <div class="char-grid">${cards}</div>
+          <div class="ovl-center-search">${searchBarHTML('Search characters…')}</div>
+          <div class="ovl-center-scroll"><div class="char-grid">${cards}</div></div>
         </div>
-        <div class="ovl-right">${right}</div>
+        <div class="ovl-right">
+          <div class="ovl-right-top">${rightTop}</div>
+          <div class="ovl-right-body">${rightBody}</div>
+        </div>
       </div>
       <div class="overlay-footer">
         <button class="btn btn-back" data-action="ovl-close">Cancel</button>
@@ -1733,9 +1999,20 @@
   // ── Item overlay ─────────────────────────────────────
 
   function openWeaponOverlay(playerIdx, slotIdx) {
-    const prev = state.players[playerIdx].weapons[slotIdx];
-    state.overlay = { type:'item', playerIdx, slotIdx, slotType:'weapon', fromEmpty: !prev, prevItem: prev };
-    state.ovl.selected = prev;
+    const player = state.players[playerIdx];
+    const char = player.character;
+    const hiddenSet = new Set(char?.hidden_items ?? []);
+    const counts = SLOT_COUNTS[state.playerCount];
+    const starterCount = char
+      ? Math.min(char.starting_weapons.filter(w => !hiddenSet.has(w)).length, counts.weapons)
+      : 0;
+    // Locked-evo mode: clicking a locked starter slot opens a filtered selector
+    // showing only that weapon's future evo forms, no other weapons.
+    const isLockedEvo = slotIdx < starterCount && !!player.weapons[slotIdx];
+    const prev = player.weapons[slotIdx];
+    state.overlay = { type:'item', playerIdx, slotIdx, slotType:'weapon',
+      fromEmpty: isLockedEvo || !prev, prevItem: prev, isLockedEvo };
+    state.ovl.selected = isLockedEvo ? null : prev;
     buildAndShowOverlay(weaponOverlayHTML(playerIdx, slotIdx));
   }
 
@@ -1750,7 +2027,33 @@
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
     const { charWeapons, arcanaWeapons } = getHighlights(playerIdx);
+    const isLockedEvo = !!state.overlay?.isLockedEvo;
+
+    // ── Locked-evo mode: only show future forms of the starter weapon ──────
+    // ── Normal mode: block evo-descendants of locked starters ──────────────
+    const char = player.character;
+    const hiddenSet = new Set(char?.hidden_items ?? []);
+    const counts = SLOT_COUNTS[state.playerCount];
+    const starterCount = char
+      ? Math.min(char.starting_weapons.filter(w => !hiddenSet.has(w)).length, counts.weapons)
+      : 0;
+
+    let evoOnlySet = null; // non-null → locked-evo mode, show only these weapons
+    if (isLockedEvo && player.weapons[slotIdx]) {
+      evoOnlySet = collectDescendants(player.weapons[slotIdx].name);
+      evoOnlySet.delete(player.weapons[slotIdx].name); // don't show the current form itself
+    }
+
     const usedWeapons = new Set(player.weapons.filter((w, i) => w && i !== slotIdx).map(w => w.name));
+    const consumedWeapons = getConsumedWeapons(playerIdx, slotIdx);
+    if (!isLockedEvo) {
+      // Block evo descendants of other locked starters — they must be selected via that locked slot.
+      for (let i = 0; i < starterCount; i++) {
+        if (i === slotIdx) continue;
+        const sw = player.weapons[i];
+        if (sw) collectDescendants(sw.name).forEach(name => consumedWeapons.add(name));
+      }
+    }
 
     // Banish layout order for sorting
     const banishOrder = new Map();
@@ -1765,41 +2068,52 @@
       return banishOrder.get(base) ?? banishOrder.get(w.name) ?? 9999;
     }
 
-    const baseWeapons = D.weapons.filter(w => w.category === 'Base')
+    // In locked-evo mode, only show the starter's future evo forms
+    const weaponFilter = evoOnlySet ? w => evoOnlySet.has(w.name) : () => true;
+    const baseWeapons = D.weapons.filter(w => w.category === 'Base' && weaponFilter(w))
       .slice().sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
 
     // Group non-base by category, each group sorted by base weapon order
     const evoGroups = new Map();
-    D.weapons.filter(w => w.category !== 'Base').forEach(w => {
+    D.weapons.filter(w => w.category !== 'Base' && weaponFilter(w)).forEach(w => {
       if (!evoGroups.has(w.category)) evoGroups.set(w.category, []);
       evoGroups.get(w.category).push(w);
     });
     for (const arr of evoGroups.values()) arr.sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
 
     function makeCard(w) {
-      const isSel  = sel && sel.name === w.name;
-      const isUsed = usedWeapons.has(w.name);
-      const isEvo  = w.category !== 'Base';
-      const hiChar   = charWeapons.has(w.name);
-      const hiArcana = arcanaWeapons.has(w.name);
+      const isSel      = sel && sel.name === w.name;
+      // In locked-evo mode: no dimming or consumed styling — all shown options are valid
+      const isUsed     = !isLockedEvo && usedWeapons.has(w.name);
+      const isConsumed = !isLockedEvo && !isSel && !isUsed && consumedWeapons.has(w.name);
+      const isEvo      = w.category !== 'Base';
+      const hiChar     = charWeapons.has(w.name);
+      const hiArcana   = arcanaWeapons.has(w.name);
       let cls = 'item-card';
       if (isSel) cls += ' selected';
       else if (isEvo) cls += ' evo';
       if (!isSel && hiChar)   cls += ' hi-char';
       else if (!isSel && hiArcana) cls += ' hi-arcana';
       if (isUsed) cls += ' dim';
-      return `<div class="${cls}" data-action="ovl-select-item" data-item="${esc(w.name)}" data-item-type="weapon" data-search="${esc(w.name)}" title="${esc(w.name)}">
+      else if (isConsumed) cls += ' consumed';
+      const title = isConsumed
+        ? `${w.name} — consumed in another evo chain`
+        : w.name;
+      return `<div class="${cls}" data-action="ovl-select-item" data-item="${esc(w.name)}" data-item-type="weapon" data-search="${esc(w.name)}" title="${esc(title)}">
         <img src="${esc(w.icon||EMPTY_ICON)}" alt="${esc(w.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
       </div>`;
     }
 
-    let centerHTML = `${searchBarHTML('Search weapons…')}
-      <div class="item-section-label">Base Weapons</div>
-      <div class="item-grid">${baseWeapons.map(makeCard).join('')}</div>`;
+    let centerGrid = '';
+    if (baseWeapons.length) {
+      centerGrid += `<div class="item-section-label">Base Weapons</div>
+        <div class="item-grid">${baseWeapons.map(makeCard).join('')}</div>`;
+    }
     for (const [cat, weapons] of evoGroups) {
-      centerHTML += `<div class="item-section-label" style="margin-top:.75rem">${esc(cat)}</div>
+      centerGrid += `<div class="item-section-label"${centerGrid ? ' style="margin-top:.75rem"' : ''}>${esc(cat)}</div>
         <div class="item-grid">${weapons.map(makeCard).join('')}</div>`;
     }
+    const centerHTML = `<div class="ovl-center-search">${searchBarHTML('Search weapons…')}</div><div class="ovl-center-scroll">${centerGrid}</div>`;
 
     // Left panel: description + level ups for selected weapon
     let leftHTML = '<div class="detail-desc" style="margin-top:.5rem;color:var(--text-muted)">Select a weapon to see details</div>';
@@ -1818,6 +2132,18 @@
         if (w.requirements.length) {
           const { pending, missing } = getEvolutionPassiveStatus(w, playerIdx);
           const pendingNames = new Set(pending.map(p => p.name));
+          const hasError    = missing.length > 0;
+          const effectiveAutoAdd = state.ovl.autoAdd ?? (pending.length > 0);
+          const toggleHTML = pending.length > 0 ? (() => {
+            const cls = `auto-add-toggle${effectiveAutoAdd ? ' checked' : ''}${hasError && !effectiveAutoAdd ? ' error' : ''}`;
+            const check = effectiveAutoAdd ? '✓' : '';
+            const warn  = hasError ? `<span class="auto-add-warn">${missing.length} won't fit</span>` : '';
+            return `<div class="${cls}" data-action="toggle-auto-add">
+              <span class="auto-add-box">${check}</span>
+              <span>Auto-add ${pending.length} passive${pending.length > 1 ? 's' : ''}</span>
+              ${warn}
+            </div>`;
+          })() : '';
           reqHTML = `<div class="detail-section"><h3>Requirements</h3>
             ${w.requirements.map(r => {
               const pObj = passiveByName(r);
@@ -1842,6 +2168,7 @@
                 <span style="flex:1;font-size:.75rem">${esc(r)}</span>${statusHTML}
               </div>`;
             }).join('')}
+            ${toggleHTML}
           </div>`;
         }
 
@@ -1881,7 +2208,11 @@
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
     const { passiveHi } = getHighlights(playerIdx);
-    const usedPassives = new Set(player.passives.filter((p, i) => p && i !== slotIdx).map(p => p.name));
+    // Block passives equipped by this player in other slots, and by any other player.
+    const usedPassives = new Set([
+      ...player.passives.filter((p, i) => p && i !== slotIdx).map(p => p.name),
+      ...state.players.filter((_, i) => i !== playerIdx).flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
+    ]);
 
     let cards = '';
     for (const p of D.passives) {
@@ -1903,8 +2234,8 @@
       const p = D.passives.find(p => p.name === sel.name);
       if (p) {
         leftHTML = `<div class="detail-desc" style="margin:.2rem 0">${esc(p.description)}</div>
-          ${p.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
-            ${p.level_ups.map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+1}: ${esc(l)}</li>`).join('')}
+          ${p.level_ups.length > 1 ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
+            ${p.level_ups.slice(1).map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+2}: ${esc(l)}</li>`).join('')}
           </ul></div>` : ''}`;
         rightTop = `<div class="detail-icon"><img src="${esc(p.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(p.name)}</div>
@@ -1921,8 +2252,8 @@
       <div class="overlay-body">
         <div class="ovl-left">${leftHTML}</div>
         <div class="ovl-center">
-          ${searchBarHTML('Search passives…')}
-          <div class="item-grid">${cards}</div>
+          <div class="ovl-center-search">${searchBarHTML('Search passives…')}</div>
+          <div class="ovl-center-scroll"><div class="item-grid">${cards}</div></div>
         </div>
         <div class="ovl-right">${rightHTML}</div>
       </div>
@@ -1943,7 +2274,10 @@
 
   function arcanaOverlayHTML(slotIdx) {
     const sel    = state.ovl.selected;
+    const tab    = state.ovl.arcanaTab; // 'arcana' | 'darkana'
     const groups = arcanaGroups();
+    const EMPTY_DARKANA = 'assets/icons/arcana/empty_darkana.png';
+
     // Arcana highlights: union of all players' weapon associations
     const arcanaHi = new Set();
     for (const player of state.players) {
@@ -1952,44 +2286,51 @@
       }
     }
 
-    let cards = '';
+    const otherTab  = tab === 'arcana' ? 'darkana' : 'arcana';
+    const tabLabel  = tab === 'arcana' ? 'Arcana' : 'Darkana';
+    const switchLabel = tab === 'arcana' ? '→ Darkana' : '→ Arcana';
+
+    const tabBtn = `<button class="arcana-tab-btn" data-action="arcana-tab-toggle" data-tab="${tab}">
+      <span class="arcana-tab-current">${tabLabel}</span>
+      <span class="arcana-tab-switch">${switchLabel}</span>
+    </button>`;
+
+    let cards = tabBtn;
     for (const group of groups) {
-      const key = group[0].base_num;
-      const si  = (state.ovl.stackIdx[key] ?? 0) % group.length;
-      const cur = group[si];
-      const isSel  = sel && group.some(a => a.name === sel.name);
-      const isHi   = cur.weapon_col && arcanaHi.has(cur.weapon_col);
-      const isStack = group.length > 1;
+      const key     = group[0].base_num;
+      const arcana  = group.find(a => a.type === 'Arcana');
+      const darkana = group.find(a => a.type === 'Darkana');
+      const cur     = tab === 'arcana' ? arcana : (darkana || null);
+      const isSel   = sel && group.some(a => a.name === sel.name);
+      const isHi    = cur?.weapon_col && arcanaHi.has(cur.weapon_col);
+      const searchVal = esc(group.map(a => a.name).join('|'));
 
-      const arcanaSearchVal = esc(group.map(a => a.name).join('|'));
-      const cardEl = `<div class="item-card${isSel ? ' selected' : ''}${isStack ? ' stacked' : ''}${isHi ? ' hi-arcana' : ''}"
-          data-action="ovl-select-arcana" data-arcana="${esc(cur.name)}" data-base="${esc(key)}"
-          ${!isStack ? `data-search="${arcanaSearchVal}"` : ''}
-          title="${esc(cur.name)} (${cur.type})">
-          <img src="${esc(cur.icon||EMPTY_ICON)}" alt="${esc(cur.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
-          <div class="card-badge">${esc(cur.number)}</div>
-        </div>`;
-
-      if (isStack) {
-        cards += `<div class="stack-wrapper" data-search="${arcanaSearchVal}">
-          ${cardEl}
-          <div class="stack-nav">
-            <div class="stack-btn" data-action="cycle-arcana-stack" data-base="${esc(key)}" data-dir="-1">‹</div>
-            <div class="stack-btn" data-action="cycle-arcana-stack" data-base="${esc(key)}" data-dir="1">›</div>
-          </div>
+      if (tab === 'darkana' && !darkana) {
+        // Placeholder for positions without a Darkana variant
+        cards += `<div class="item-card arcana-placeholder" data-search="${searchVal}" title="No Darkana variant">
+          <img src="${EMPTY_DARKANA}" alt="No Darkana">
         </div>`;
       } else {
-        cards += cardEl;
+        const display = cur || arcana;
+        cards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-arcana' : ''}"
+          data-action="ovl-select-arcana" data-arcana="${esc(display.name)}" data-base="${esc(key)}"
+          data-search="${searchVal}" title="${esc(display.name)} (${display.type})">
+          <img src="${esc(display.icon||EMPTY_ICON)}" alt="${esc(display.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
+        </div>`;
       }
     }
 
     const rightHTML = sel
-      ? `<div class="detail-icon"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
-         <div class="detail-name">${esc(sel.name)}</div>
-         <div class="hi-badge ${sel.type === 'Arcana' ? 'arcana' : 'item'}" style="display:block;text-align:center;margin-bottom:.3rem">${esc(sel.type)} · ${esc(sel.number)}</div>
-         <div class="detail-desc">${esc(sel.description)}</div>
-         ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes.slice(0,500))}…</div></div>` : ''}`
-      : '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select an arcana</div>';
+      ? `<div class="ovl-right-top">
+           <div class="detail-icon arcana-card"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+           <div class="detail-name">${esc(sel.name)}</div>
+           <div class="hi-badge ${sel.type === 'Arcana' ? 'arcana' : 'item'}" style="display:block;text-align:center;margin-bottom:.3rem">${esc(sel.type)}</div>
+         </div>
+         <div class="ovl-right-body">
+           <div class="detail-desc">${esc(sel.description)}</div>
+           ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes.slice(0,500))}…</div></div>` : ''}
+         </div>`
+      : '<div class="ovl-right-top"><div class="detail-desc" style="text-align:center">Select an arcana</div></div><div class="ovl-right-body"></div>';
 
     return `<div class="overlay-header">
         <h2>Arcana Selection — Slot ${slotIdx+1}</h2>
@@ -1997,8 +2338,8 @@
       </div>
       <div class="overlay-body">
         <div class="ovl-center-wide">
-          ${searchBarHTML('Search arcana…')}
-          <div class="item-grid">${cards}</div>
+          <div class="ovl-center-search">${searchBarHTML('Search arcana…')}</div>
+          <div class="ovl-center-scroll"><div class="arcana-grid">${cards}</div></div>
         </div>
         <div class="ovl-right">${rightHTML}</div>
       </div>
@@ -2069,6 +2410,18 @@
     </div>`;
   }
 
+  function levelRowHTML(playerIdx, level) {
+    const atDefault = level === 1 ? ' data-at-default' : '';
+    return `<div class="stats-heading-row">
+      <h3 style="margin:0">Stats</h3>
+      <div class="level-wrap"${atDefault}>
+        <span class="level-prefix">Lv</span>
+        <input type="number" class="level-input" value="${level}" min="1" max="999" data-player="${playerIdx}">
+        <button class="level-clear" data-action="level-clear" data-player="${playerIdx}" tabindex="-1">✕</button>
+      </div>
+    </div>`;
+  }
+
   function applyOverlaySearch(input) {
     const query = (input.value || '').toLowerCase().trim();
     const center = input.closest('.ovl-center, .ovl-center-wide');
@@ -2101,10 +2454,10 @@
     else if (type === 'arcana') inner = arcanaOverlayHTML(slotIdx);
     else if (type === 'stage')  inner = stageOverlayHTML();
     const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
-    const scroller = panel.querySelector('.ovl-center, .ovl-center-wide');
+    const scroller = panel.querySelector('.ovl-center-scroll');
     const scrollTop = scroller ? scroller.scrollTop : 0;
     panel.innerHTML = inner;
-    const newScroller = panel.querySelector('.ovl-center, .ovl-center-wide');
+    const newScroller = panel.querySelector('.ovl-center-scroll');
     if (newScroller) newScroller.scrollTop = scrollTop;
     const searchInput = panel.querySelector('.ovl-search');
     if (searchInput && state.ovl.search) {
@@ -2124,12 +2477,18 @@
         state.players[playerIdx].character = sel;
         if (sel) {
           const counts = SLOT_COUNTS[state.playerCount];
+          const selHiddenSet = new Set(sel.hidden_items ?? []);
+          const selNormalStarters = sel.starting_weapons.filter(wn => !selHiddenSet.has(wn));
           // Clear slots locked by the previous character before filling new starters
           if (oldChar) {
-            const oldCount = Math.min(oldChar.starting_weapons.length, counts.weapons);
-            for (let i = 0; i < oldCount; i++) state.players[playerIdx].weapons[i] = null;
+            const oldHiddenSet = new Set(oldChar.hidden_items ?? []);
+            const oldNormalCount = Math.min(
+              oldChar.starting_weapons.filter(wn => !oldHiddenSet.has(wn)).length,
+              counts.weapons
+            );
+            for (let i = 0; i < oldNormalCount; i++) state.players[playerIdx].weapons[i] = null;
           }
-          sel.starting_weapons.slice(0, counts.weapons).forEach((wn, i) => {
+          selNormalStarters.slice(0, counts.weapons).forEach((wn, i) => {
             if (!state.players[playerIdx].weapons[i]) {
               state.players[playerIdx].weapons[i] = weaponByName(wn) || null;
             }
@@ -2141,12 +2500,28 @@
           const isPassive = D.passives.some(p => p.name === sel.name);
           if (slotType === 'weapon' && isWeapon && slotIdx >= 0) {
             const wDef = D.weapons.find(w => w.name === sel.name);
-            state.players[playerIdx].weapons[slotIdx] = wDef;
-            if (wDef && wDef.category !== 'Base') {
-              const { pending } = getEvolutionPassiveStatus(wDef, playerIdx);
-              pending.forEach(({ name, slot }) => {
-                state.players[playerIdx].passives[slot] = passiveByName(name);
-              });
+            const counts = SLOT_COUNTS[state.playerCount];
+            const player = state.players[playerIdx];
+            // Add all passives required by the full evo chain that aren't already equipped
+            const chain = collectWeaponChain(wDef.name);
+            const allEquippedPassiveNames = new Set(
+              state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
+            );
+            for (const pname of collectChainPassives(chain)) {
+              if (allEquippedPassiveNames.has(pname)) continue;
+              const emptySlot = player.passives.findIndex(p => !p);
+              if (emptySlot >= 0) {
+                player.passives[emptySlot] = passiveByName(pname);
+                allEquippedPassiveNames.add(pname);
+              }
+            }
+            // Place weapon in the selected slot
+            player.weapons[slotIdx] = wDef;
+            // Clear other chain members from this player's slots (consumed by this evo)
+            for (let i = 0; i < counts.weapons; i++) {
+              if (i === slotIdx) continue;
+              const w = player.weapons[i];
+              if (w && chain.has(w.name)) player.weapons[i] = null;
             }
           }
           if (slotType === 'passive' && isPassive && slotIdx >= 0) state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
@@ -2160,7 +2535,7 @@
     // else: cancel (no change)
 
     state.overlay = null;
-    state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, stackIdx: state.ovl.stackIdx, search: '' };
+    state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
     document.getElementById('overlay-root').classList.add('hidden');
     render();
   }
@@ -2168,6 +2543,29 @@
   // ═══════════════════════════════════════════════════════
   //  POWER-UP CALCULATIONS
   // ═══════════════════════════════════════════════════════
+
+  function calcCharScalingBonus(charStatKey, char, level) {
+    if (!char?.scaling?.length || !level || level < 1) return 0;
+    let total = 0;
+    for (const s of char.scaling) {
+      if (s.key !== charStatKey) continue;
+      let bonus;
+      if (s.interval === 0) {
+        bonus = s.value;
+      } else if (s.interval === null) {
+        // "per level" (no N) — starts at level 2
+        bonus = s.value * Math.max(0, level - 1);
+      } else {
+        // "per N level" — increments at N, 2N, 3N, …
+        bonus = s.value * Math.floor(level / s.interval);
+      }
+      if (s.max !== null) {
+        bonus = s.value > 0 ? Math.min(s.max, bonus) : Math.max(s.max, bonus);
+      }
+      total += bonus;
+    }
+    return total;
+  }
 
   function calcPowerUpBonus(charStatKey) {
     let additive = 0;
@@ -2184,13 +2582,34 @@
     return { additive, multiplierSum, multiplier: 1 + multiplierSum };
   }
 
-  function calcStatTotal(charStatKey, charStats) {
+  function calcPassiveBonus(charStatKey, player) {
+    let additive = 0;
+    let multiplierSum = 0;
+    if (!player) return { additive, multiplierSum };
+    const isMultStat = D.stats.find(s => s.key === charStatKey)?.stacking === 'multiplicative';
+    player.passives.filter(Boolean).forEach(p => {
+      const passive = D.passives.find(d => d.name === p.name);
+      if (!passive?.level_up_values?.length) return;
+      passive.level_up_values.forEach(lvl => {
+        const val = lvl[charStatKey];
+        if (val === undefined || val === null) return;
+        if (isMultStat) multiplierSum += val;
+        else additive += val;
+      });
+    });
+    return { additive, multiplierSum };
+  }
+
+  function calcStatTotal(charStatKey, charStats, player, char, level) {
     const statDef  = D.stats.find(s => s.key === charStatKey);
     const isPct    = PCT_STATS.has(charStatKey);
     const inverted = INVERTED_STATS.has(charStatKey);
     const rawBase  = statDef ? statDef.base_value : (isPct ? 100 : 0);
-    const rawChar  = charStats ? (charStats[charStatKey] || 0) : 0;
+    const rawCharBase = charStats ? (charStats[charStatKey] || 0) : 0;
+    const scaling  = calcCharScalingBonus(charStatKey, char, level ?? 1);
+    const rawChar  = rawCharBase + scaling;
     const { additive, multiplierSum, multiplier } = calcPowerUpBonus(charStatKey);
+    const { additive: passiveAdd, multiplierSum: passiveMultSum } = calcPassiveBonus(charStatKey, player);
     const isMultStat = statDef?.stacking === 'multiplicative';
 
     // Base column: power-up-adjusted baseline (no char bonus)
@@ -2203,14 +2622,14 @@
       adjBase = Math.round(rawBase + additive);
     }
 
-    // Total: (base + char) × multiplier  OR  base + char_pct + additive
+    // Total: PU and passive both contribute
     let total;
     if (isMultStat) {
-      total = Math.round((rawBase + rawChar) * multiplier);
+      total = Math.round((rawBase + rawChar) * (1 + multiplierSum + passiveMultSum));
     } else if (isPct) {
-      total = Math.round(rawBase + rawChar * 100 + additive * 100);
+      total = Math.round(rawBase + rawChar * 100 + additive * 100 + passiveAdd * 100);
     } else {
-      total = Math.round(rawBase + rawChar + additive);
+      total = Math.round(rawBase + rawChar + additive + passiveAdd);
     }
 
     // Cap
@@ -2232,9 +2651,21 @@
       dispPU = null;
     }
 
+    // Passive column display
+    let dispPassive;
+    if (isMultStat && passiveMultSum !== 0) {
+      const factor = 1 + passiveMultSum;
+      dispPassive = '×' + (Number.isInteger(factor) ? factor : parseFloat(factor.toFixed(2)));
+    } else if (!isMultStat && passiveAdd !== 0) {
+      const val = isPct ? Math.round(passiveAdd * 100) : parseFloat(passiveAdd.toFixed(1));
+      dispPassive = (val > 0 ? '+' : '') + val + (isPct ? '%' : '');
+    } else {
+      dispPassive = null;
+    }
+
     const dispBase = isPct ? rawBase + '%' : rawBase;
     const dispChar = isPct ? Math.round(rawChar * 100) : Math.round(rawChar);
-    return { dispBase, dispChar, dispPU, total, isPct, isCapped };
+    return { dispBase, dispChar, dispPU, dispPassive, total, isPct, isCapped };
   }
 
   // ═══════════════════════════════════════════════════════
@@ -2470,6 +2901,10 @@
       if (input) { input.value = ''; state.ovl.search = ''; applyOverlaySearch(input); input.focus(); }
       return;
     }
+    if (action === 'level-clear') {
+      state.players[parseInt(btn.dataset.player ?? '0')].charLevel = 1;
+      refreshOverlay(); return;
+    }
 
     if (action === 'ovl-select-char') {
       const name = btn.dataset.char;
@@ -2491,6 +2926,17 @@
       const itemType = btn.dataset.itemType;
       if (itemType === 'passive') state.ovl.selected = D.passives.find(p => p.name === name) || null;
       else                        state.ovl.selected = D.weapons.find(w => w.name === name) || null;
+      state.ovl.autoAdd = null; // reset to computed default for new selection
+      refreshOverlay(); return;
+    }
+    if (action === 'toggle-auto-add') {
+      const ovCtx = state.overlay;
+      const { pending, missing } = getEvolutionPassiveStatus(
+        D.weapons.find(w => w.name === state.ovl.selected?.name) || {},
+        ovCtx.playerIdx
+      );
+      const current = state.ovl.autoAdd ?? (pending.length > 0);
+      state.ovl.autoAdd = !current;
       refreshOverlay(); return;
     }
 
@@ -2499,13 +2945,9 @@
       state.ovl.selected = D.arcana.find(a => a.name === name) || null;
       refreshOverlay(); return;
     }
-    if (action === 'cycle-arcana-stack') {
-      const base = btn.dataset.base;
-      const grps = arcanaGroups();
-      const grp  = grps.find(g => g[0].base_num === base) || [];
-      const cur  = state.ovl.stackIdx[base] ?? 0;
-      const dir  = parseInt(btn.dataset.dir) || 1;
-      state.ovl.stackIdx[base] = (cur + dir + grp.length) % grp.length;
+    if (action === 'arcana-tab-toggle') {
+      state.ovl.arcanaTab = state.ovl.arcanaTab === 'arcana' ? 'darkana' : 'arcana';
+      state.ovl.selected = null;
       refreshOverlay(); return;
     }
 
@@ -2551,12 +2993,17 @@
       render();
       return;
     }
+    if (action === 'level-clear') {
+      state.players[playerIdx].charLevel = 1;
+      render();
+      return;
+    }
     if (action === 'remove-slot') {
       e.stopPropagation();
       const p = state.players[playerIdx];
       if (slotType === 'char')    p.character = null;
       else if (slotType === 'weapon')  p.weapons[slotIdx] = null;
-      else if (slotType === 'passive') p.passives[slotIdx] = null;
+      else if (slotType === 'passive') { p.passives[slotIdx] = null; autoDevolveBrokenEvos(); }
       else if (slotType === 'arcana')  state.arcana[slotIdx] = null;
       else if (slotType === 'stage')   state.stage = null;
       state.infoPanel = null;
@@ -2594,6 +3041,32 @@
       render();
       return;
     }
+    if (action === 'perform-devolve') {
+      const player = state.players[playerIdx];
+      const current = player.weapons[slotIdx];
+      if (current) {
+        const counts = SLOT_COUNTS[state.playerCount];
+        // All weapons that produced the current weapon (one for evo, two+ for union)
+        const bases = D.weapons.filter(b => b.trans_result === current.name);
+        if (bases.length) {
+          // Primary base reclaims the current slot
+          player.weapons[slotIdx] = bases[0];
+          // Remaining union partners are restored to the first available empty slot,
+          // skipping any that are already present (guards against duplicate slots).
+          for (let i = 1; i < bases.length; i++) {
+            if (player.weapons.some(w => w && w.name === bases[i].name)) continue;
+            let emptySlot = -1;
+            for (let j = 0; j < counts.weapons; j++) {
+              if (!player.weapons[j]) { emptySlot = j; break; }
+            }
+            if (emptySlot >= 0) player.weapons[emptySlot] = bases[i];
+          }
+          state.infoPanel = { type: 'weapon', playerIdx, slotIdx };
+        }
+      }
+      render();
+      return;
+    }
     if (action === 'open-slot') {
       openSlotOverlay(slotType, playerIdx, slotIdx);
       return;
@@ -2608,7 +3081,267 @@
     if (slotType === 'stage')   { openStageOverlay(); return; }
   }
 
+  function showToast(msg, kind = 'ok') {
+    document.querySelectorAll('.evo-toast').forEach(t => t.remove());
+    const el = document.createElement('div');
+    el.className = `evo-toast ${kind}`;
+    el.textContent = msg;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 2100);
+  }
+
+  // Collect all missing base weapons + passives needed to make weaponName achievable.
+  // Handles unions recursively (their requirements are themselves evo weapons).
+  // Collect all weapon names in the full chain reaching targetName by following
+  // trans_result backward (bases that evolve/union into the target, recursively).
+  // We deliberately do NOT recurse into w.requirements weapon entries — those are
+  // union partners already reachable via trans_result, and recursing into them
+  // from the partner's side incorrectly inflates unrelated branches (e.g. Vento
+  // Sacro's partner Bloody Tear would pull Whip into Vento Sacro's chain).
+  function collectWeaponChain(targetName, visited = new Set()) {
+    if (visited.has(targetName)) return visited;
+    visited.add(targetName);
+    D.weapons.filter(b => b.trans_result === targetName)
+      .forEach(b => collectWeaponChain(b.name, visited));
+    return visited;
+  }
+
+  // Walk forward from targetName via trans_result to collect all future forms.
+  // Used to block forward-evo weapons in the selector when a base is already equipped.
+  function collectDescendants(targetName, visited = new Set()) {
+    if (visited.has(targetName)) return visited;
+    visited.add(targetName);
+    const w = D.weapons.find(x => x.name === targetName);
+    if (!w || !w.trans_result) return visited;
+    collectDescendants(w.trans_result, visited);
+    return visited;
+  }
+
+  // Return all passive names required by any weapon in the given chain set.
+  function collectChainPassives(chain) {
+    const passives = new Set();
+    chain.forEach(wname => {
+      const w = D.weapons.find(x => x.name === wname);
+      if (!w) return;
+      (w.requirements || []).forEach(req => {
+        if (D.passives.find(p => p.name === req)) passives.add(req);
+      });
+    });
+    return passives;
+  }
+
+  // Return the Set of weapon names consumed across ALL players (drop pool is shared).
+  // excludePlayerIdx + excludeSlotIdx: omit one slot from the computation — used when
+  // the weapon overlay is open so the slot being replaced doesn't block its own weapon.
+  //
+  // Starter-evolved exception: if a character starts with an evolved weapon (e.g. Minnah
+  // starts with Bloody Tear), the upstream bases (Whip) were never pulled from the drop
+  // pool. If that starter evo was itself later consumed into a union, the starter-evolved
+  // weapon can also be re-produced from scratch.
+  function getConsumedWeapons(excludePlayerIdx = -1, excludeSlotIdx = -1) {
+    const consumed          = new Set();
+    const starterEvolvedBases = new Set(); // upstream bases exempt from consumed
+    const starterEvolvedSelf  = new Set(); // the starter evo weapon itself (re-producible)
+    const allEquipped         = new Set(); // all weapon names in any slot, any player
+
+    state.players.forEach((player, pidx) => {
+      const char = player.character;
+      const hiddenSet         = new Set(char?.hidden_items ?? []);
+      const nonHiddenStarters = new Set((char?.starting_weapons ?? []).filter(sw => !hiddenSet.has(sw)));
+
+      // Accumulate starter-evolved exceptions for this player's character.
+      nonHiddenStarters.forEach(sw => {
+        if (D.weapons.some(b => b.trans_result === sw)) {
+          collectWeaponChain(sw).forEach(name => { if (name !== sw) starterEvolvedBases.add(name); });
+          starterEvolvedSelf.add(sw);
+        }
+      });
+
+      // Add every equipped weapon's full chain to consumed.
+      player.weapons.forEach((w, sidx) => {
+        if (!w) return;
+        if (pidx === excludePlayerIdx && sidx === excludeSlotIdx) return;
+        collectWeaponChain(w.name).forEach(name => consumed.add(name));
+        allEquipped.add(w.name);
+      });
+    });
+
+    // Un-consume upstream bases of starter-evolved weapons (they were never picked up).
+    starterEvolvedBases.forEach(name => {
+      if (!allEquipped.has(name)) consumed.delete(name);
+    });
+
+    // Un-consume the starter-evolved weapon itself if no player currently has it equipped
+    // (it was consumed into a union, so it can be re-produced from its freed prerequisites).
+    starterEvolvedSelf.forEach(sw => {
+      if (!allEquipped.has(sw)) consumed.delete(sw);
+    });
+
+    return consumed;
+  }
+
+  // Place a list of {name, type} items into available slots. Returns {added, failed}.
+  function applyBuildItems(items, playerIdx) {
+    const player = state.players[playerIdx];
+    const counts = SLOT_COUNTS[state.playerCount];
+    const char = player.character;
+    const hiddenSet = new Set(char?.hidden_items ?? []);
+    const starterCount = char
+      ? Math.min(char.starting_weapons.filter(wn => !hiddenSet.has(wn)).length, counts.weapons)
+      : 0;
+    const added = [], failed = [];
+    for (const item of items) {
+      if (item.type === 'weapon') {
+        const wObj = D.weapons.find(w => w.name === item.name);
+        if (!wObj) continue;
+        let slot = -1;
+        for (let i = starterCount; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
+        if (slot < 0) for (let i = 0; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
+        if (slot < 0) { failed.push(item.name); continue; }
+        player.weapons[slot] = wObj;
+        added.push(item.name);
+      } else if (item.type === 'passive') {
+        const pObj = D.passives.find(p => p.name === item.name);
+        if (!pObj) continue;
+        let slot = -1;
+        for (let i = 0; i < counts.passives; i++) { if (!player.passives[i]) { slot = i; break; } }
+        if (slot < 0) { failed.push(item.name); continue; }
+        player.passives[slot] = pObj;
+        added.push(item.name);
+      }
+    }
+    return { added, failed };
+  }
+
+  function evoQuickAdd(name, playerIdx) {
+    const player = state.players[playerIdx];
+    const counts = SLOT_COUNTS[state.playerCount];
+
+    // ── Arcana ──
+    const arcanaObj = D.arcana.find(a => a.name === name);
+    if (arcanaObj) {
+      if (state.arcana.some(a => a?.name === name)) { showToast(`${name} already in build`, 'warn'); return; }
+      const slot = state.arcana.findIndex(a => !a);
+      if (slot < 0) { showToast('No arcana slots available', 'err'); return; }
+      state.arcana[slot] = arcanaObj;
+      showToast(`Added ${name}`); render(); return;
+    }
+
+    // ── Passive ──
+    const passiveObj = D.passives.find(p => p.name === name);
+    if (passiveObj) {
+      if (player.passives.some(p => p?.name === name)) { showToast(`${name} already equipped`, 'warn'); return; }
+      let slot = -1;
+      for (let i = 0; i < counts.passives; i++) { if (!player.passives[i]) { slot = i; break; } }
+      if (slot < 0) { showToast(`No room for ${name}`, 'err'); return; }
+      player.passives[slot] = passiveObj;
+      showToast(`Added ${name}`); render(); return;
+    }
+
+    // ── Weapon ──
+    // Right-click = "I want this weapon in my final build."
+    // Find the chain of all weapons needed to produce it (bases + union partners),
+    // then reuse any equipped chain weapon's slot for the target. Only add passives
+    // as extra slots — transient weapons in the chain are never added separately.
+    const weaponObj = D.weapons.find(w => w.name === name);
+    if (!weaponObj) { showToast(`${name} not found`, 'err'); return; }
+
+    const equippedW = new Set(player.weapons.filter(Boolean).map(w => w.name));
+    // Cross-player evo: a passive equipped by any player satisfies the condition.
+    const equippedP = new Set(
+      state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
+    );
+
+    if (equippedW.has(name)) { showToast(`${name} already in build`, 'warn'); return; }
+
+    // Check if this weapon is consumed in any player's evo chain (drop pool is shared).
+    const consumed = getConsumedWeapons();
+    if (consumed.has(name)) {
+      let consumedBy = null;
+      for (const p of state.players) {
+        consumedBy = p.weapons.find(w => w && collectWeaponChain(w.name).has(name));
+        if (consumedBy) break;
+      }
+      showToast(consumedBy ? `${name} consumed by ${consumedBy.name}` : `${name} already consumed`, 'err');
+      return;
+    }
+
+    const chain = collectWeaponChain(name);
+    const requiredPassives = collectChainPassives(chain);
+    const missingPassives  = [...requiredPassives].filter(p => !equippedP.has(p));
+
+    // Find anchor: first equipped weapon slot belonging to this chain
+    let anchorSlot = -1;
+    for (let i = 0; i < counts.weapons; i++) {
+      const w = player.weapons[i];
+      if (w && chain.has(w.name)) { anchorSlot = i; break; }
+    }
+
+    const added = [], failed = [];
+
+    // Add missing passives
+    if (missingPassives.length) {
+      const r = applyBuildItems(missingPassives.map(p => ({ name: p, type: 'passive' })), playerIdx);
+      added.push(...r.added);
+      failed.push(...r.failed);
+    }
+
+    // Place target weapon — replace anchor slot, or claim an empty slot
+    if (anchorSlot >= 0) {
+      player.weapons[anchorSlot] = weaponObj;
+      added.unshift(name);
+    } else {
+      const char = player.character;
+      const hiddenSet = new Set(char?.hidden_items ?? []);
+      const starterCount = char
+        ? Math.min(char.starting_weapons.filter(wn => !hiddenSet.has(wn)).length, counts.weapons)
+        : 0;
+      let slot = -1;
+      for (let i = starterCount; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
+      if (slot < 0) for (let i = 0; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
+      if (slot >= 0) {
+        player.weapons[slot] = weaponObj;
+        added.unshift(name);
+      } else {
+        failed.unshift(name);
+      }
+    }
+
+    // Consume other chain weapons already in player's slots (e.g. union partners
+    // placed before the final form was committed via right-click).
+    if (added.length && added[0] === name) {
+      for (let i = 0; i < counts.weapons; i++) {
+        const w = player.weapons[i];
+        if (w && w.name !== name && chain.has(w.name)) {
+          player.weapons[i] = null;
+        }
+      }
+    }
+
+    if (!added.length) {
+      const label = failed.length === 1 ? failed[0] : failed.slice(0, 2).join(', ') + (failed.length > 2 ? '…' : '');
+      showToast(`No room for ${label}`, 'err');
+    } else {
+      const [wAdded, ...pAdded] = added;
+      let msg = `Added ${wAdded}`;
+      if (pAdded.length === 1) msg += ` + ${pAdded[0]}`;
+      else if (pAdded.length > 1) msg += ` + ${pAdded.length} passives`;
+      if (failed.length) msg += ` — no room for ${failed.join(', ')}`;
+      showToast(msg, failed.length ? 'warn' : 'ok');
+    }
+    render();
+  }
+
   function handleAppContextMenu(e) {
+    // Right-click on an evo path node → quick-add
+    const evoEl = e.target.closest('[data-evo-item]');
+    if (evoEl) {
+      e.preventDefault();
+      const playerIdx = state.infoPanel?.playerIdx ?? 0;
+      evoQuickAdd(evoEl.dataset.evoItem, playerIdx);
+      return;
+    }
+    // Right-click on a slot → open its overlay
     const slot = e.target.closest('[data-action="view-slot"],[data-action="open-slot"]');
     if (!slot) return;
     e.preventDefault();
@@ -2649,6 +3382,13 @@
     // Bind once to persistent elements — survives innerHTML replacements
     document.getElementById('app').addEventListener('click', handleAppClick);
     document.getElementById('app').addEventListener('contextmenu', handleAppContextMenu);
+    document.getElementById('app').addEventListener('change', e => {
+      if (!e.target.classList.contains('level-input')) return;
+      const playerIdx = parseInt(e.target.dataset.player ?? '0');
+      const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
+      state.players[playerIdx].charLevel = val;
+      render();
+    });
     const ovlRoot = document.getElementById('overlay-root');
     ovlRoot.addEventListener('click', handleOverlayClick);
     ovlRoot.addEventListener('input', e => {
@@ -2666,6 +3406,13 @@
       }
     });
     ovlRoot.addEventListener('change', e => {
+      if (e.target.classList.contains('level-input')) {
+        const playerIdx = parseInt(e.target.dataset.player ?? '0');
+        const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
+        state.players[playerIdx].charLevel = val;
+        refreshOverlay();
+        return;
+      }
       if (e.target.id !== 'banish-passives-chk') return;
       state.banish.banishPassives = e.target.checked;
       renderBanishOverlay();

@@ -129,18 +129,54 @@ const NUM_TO_COL = { ...ARCANA_NUM_TO_COL };
 
 const ARCANA_COL_KEYS = Object.values(NUM_TO_COL);
 
+// ─── Parse character scaling ──────────────────────────────────────────────
+// Format: "stat_key: value per [N] level [, max: cap]" pipe-separated
+// interval=null → "per level" (no N), starts at level 2: bonus = value × (level - 1)
+// interval=N    → "per N level", starts at level N:     bonus = value × floor(level / N)
+// interval=0    → flat, level-independent
+
+function parseScaling(raw) {
+  if (!raw || raw.trim() === '-') return [];
+  return raw.split('|').map(s => s.trim()).filter(Boolean).flatMap(part => {
+    const colonIdx = part.indexOf(':');
+    if (colonIdx < 0) return [];
+    const key  = part.slice(0, colonIdx).trim();
+    const rest = part.slice(colonIdx + 1).trim();
+    const perMatch = rest.match(/^([-\d.]+)\s+per\s+(\d+\s+)?level(?:\s*,\s*max:\s*([-\d.]+))?/i);
+    if (perMatch) {
+      const value       = parseFloat(perMatch[1]);
+      const intervalStr = perMatch[2] ? perMatch[2].trim() : null;
+      const interval    = intervalStr !== null ? parseInt(intervalStr) : null;
+      const max         = perMatch[3] !== undefined ? parseFloat(perMatch[3]) : null;
+      return [{ key, value, interval, max }];
+    }
+    const flatMatch = rest.match(/^([-\d.]+)$/);
+    if (flatMatch) return [{ key, value: parseFloat(flatMatch[1]), interval: 0, max: null }];
+    return [];
+  });
+}
+
 // ─── Process characters ───────────────────────────────────────────────────
+
+function splitItems(raw) {
+  return (raw || '').split('|').map(s => s.trim()).filter(s => s && s !== '-');
+}
 
 const rawChars = readCsv('characters.csv');
 const characters = rawChars.map(r => ({
   name: r.name,
   icon: iconPath(r.icon_path),
+  sprite_static: iconPath(r.sprite_static_path),
+  sprite_gif: iconPath(r.sprite_gif_path),
   base_name: r.base_name || r.name,
   starting_weapons: [r.starting_weapon_1, r.starting_weapon_2, r.starting_weapon_3]
     .map(w => (w || '').trim()).filter(w => w && w !== '-'),
+  hidden_items:  splitItems(r.hidden_items),
+  max_items:     splitItems(r.max_items),
   starting_arcana: (r.starting_arcana || '').trim().replace(/^-$/, '') || null,
   description: (r.character_description || '').trim(),
   notes: (r.additional_effects_clarification || '').trim(),
+  scaling: parseScaling(r.scaling),
   stats: {
     max_health: parseFloat(r.max_health)  || 0,
     recovery:   parseFloat(r.recovery)    || 0,
@@ -196,8 +232,8 @@ const passives = rawPassives.filter(r => r.item).map(r => ({
   max_level: parseInt(r.max_level) || 0,
   rarity: parseInt(r.rarity) || 0,
   description: (r.description || '').trim(),
-  // 6th unnamed column holds per-level descriptions (pipe-separated)
-  level_ups: (r[''] || '').split('|').map(s => s.trim().replace(/^"|"$/g, '')).filter(Boolean),
+  level_ups: (r['level_up_text'] || '').split('|').map(s => s.trim().replace(/^"|"$/g, '')).filter(Boolean),
+  level_up_values: parsePowerUpLevels(r['level_up_value']),
 }));
 
 // ─── Process arcana ───────────────────────────────────────────────────────

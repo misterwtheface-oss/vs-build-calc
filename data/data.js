@@ -8,9 +8,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more damage every 10 levels (max +50%).",
-      "notes": "- Antonio starts with +20  Max Health and +1  Armor. He gains +10%  Might every 10 levels until level 50. The maximum Might gained this way is +50%.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.1,
+          "interval": 10,
+          "max": 0.5
+        }
+      ],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -37,9 +47,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Magic Wand"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
-      "notes": "- Imelda gains +10%  Growth every 5 levels until level 15. The maximum Growth gained this way is +30%.\n- As there is no further benefit to gaining levels beyond Level 15, Imelda can very early on make effective use of the  Game Killer (0) Arcana. This is double-effective, as Imelda's passive boost also increases the damage of the Arcana.\nImelda can make use of  Wind Whip and  Vol Luminatio early on, since they grow stronger with extra Growth.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "growth",
+          "value": 0.1,
+          "interval": 5,
+          "max": 0.3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -65,11 +85,23 @@ window.VS_DATA = {
       "base_name": "Imelda Belpaese",
       "starting_weapons": [
         "Magic Wand",
-        "Empty Tome (Level 5)"
+        "Empty Tome"
+      ],
+      "hidden_items": [],
+      "max_items": [
+        "Empty Tome"
       ],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
-      "notes": "- Compared to Imelda, Unblinded Imelda starts with +40%  Speed, +40%  Move Speed, and -10%  Cooldown. She also starts with a level 5  Empty Tome.\n- As there is no further benefit to gaining levels beyond Level 15, Imelda can very early on make effective use of the  Game Killer (0) Arcana. This is double-effective, as Imelda's passive boost also increases the damage of the Arcana.\nImelda can make use of  Wind Whip and  Vol Luminatio early on, since they grow stronger with extra Growth.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "growth",
+          "value": 0.1,
+          "interval": 5,
+          "max": 0.3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -96,9 +128,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Runetracer"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Projectiles get 10% faster every 5 levels (max +30%).",
-      "notes": "- Pasqualina starts with +10%  Projectile Speed. Additionally, she gains +10% Projectile Speed every 5 levels until level 15. The maximum Projectile Speed gained this way is +30%, or +40% with the starting bonus included.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "speed",
+          "value": 0.1,
+          "interval": 5,
+          "max": 0.3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -125,9 +167,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Knife"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +1 projectile (all weapons).",
-      "notes": "- Gennaro's innate Amount bonus makes him one of the stronger character early in the game, but this initial boost falls behind in the mid and late game.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -154,9 +199,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fire Wand"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Weapon cooldown is reduced by 5% every 10 levels (max -15%).",
-      "notes": "- Arca starts with +10%  Might. He also gains -5%  Cooldown every 10 levels until level 30. The maximum Cooldown reduction gained this way is -15%.\n- The explosion effect for  Fire Wand or  Hellfire from  Heart of Fire (XIX) is very useful in the early game. It is advisable to select it as the first Arcana.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": -0.05,
+          "interval": 10,
+          "max": -0.15
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -183,9 +238,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Lightning Ring"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +30% Area. Starts with temporary cooldown bonus.",
-      "notes": "- Porta starts with +30%  Area. Additionally, Porta starts with -90%  Cooldown, however, the bonus depreciates by 30% each level, until the bonus is entirely gone at level 4. \n- Due to  Lightning Ring's random nature and long cooldown, it is normally not a very reliable weapon in the early game, however, this is greatly mitigated by the temporary Cooldown bonus. It is often better avoid collecting XP at the start to maintain the bonus longer rather than pick up another weapon immediately. When you think it is time to proceed, pick up the accumulated Experience Gems for multiple level ups at once.\n- Picking the  Game Killer (0) as a starting Arcana locks Porta at level 1 and allows her to keep her Cooldown bonus indefinitely. This can be useful on stages that already contain a  Duplicator, allowing Porta to evolve her Lightning Ring, or other powerful weapons and items, alternatively, weapons can be bought from the Merchant or the Master Librarian.\n- If  Sword Brothers is obtained while Porta is locked at level 1 with Game Killer, she becomes permanently invincible for the rest of the game, as the weapon will fire faster than its invulnerability frames run out. Since this can be achieved right out of the gate in stages where the Master Librarian is present, this makes Game Killer-locked Porta one of the most powerful builds in the entire game. Banishing the final level of Sword Brothers or sealing  Vjaya Sisters is recommended, as Vjaya Sisters does not provide full invulnerability.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": 0.3,
+          "interval": 1,
+          "max": 0.9
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -212,9 +277,31 @@ window.VS_DATA = {
       "starting_weapons": [
         "Axe"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +5% Might, MoveSpeed, and Curse every 10 levels (max +20%).",
-      "notes": "- Lama starts with +10  Max Health, +10%  Might, +10%  Move Speed, and +10%  Curse. She gains +5% Might, +5% MoveSpeed and +5% Curse every 10 levels until level 40. The maximum stats gained this way is +20%, and +30% in total.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "move_speed",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "curse",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        }
+      ],
       "stats": {
         "max_health": 10,
         "recovery": 0,
@@ -241,9 +328,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Garlic"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
-      "notes": "- Poe starts with -30  Max Health and +25%  Magnet.\n- Because  Garlic and  Soul Eater have the additional benefit of reducing enemy resistance to freezing, a freezing build with  Crystal Cries (XII) can be a powerful option.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -30,
         "recovery": 0,
@@ -269,11 +359,16 @@ window.VS_DATA = {
       "base_name": "Poe Ratcho",
       "starting_weapons": [
         "Garlic",
-        "Pummarola (Level 5)"
+        "Pummarola"
+      ],
+      "hidden_items": [],
+      "max_items": [
+        "Pummarola"
       ],
       "starting_arcana": null,
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
-      "notes": "- Compared to Poe, Retired Poe starts with +30 Max Health and +5  Recovery. He also starts with a level 5  Pummarola.\n- Retired Poe has a massive amount of Recovery which is further boosted by  Pummarola. This makes him one of the best users of  Impostongue in the game, although he cannot compete with  Cosmo Pavone.\n- Because  Garlic and  Soul Eater have the additional benefit of reducing enemy resistance to freezing, a freezing build with  Crystal Cries (XII) can be a powerful option. Crystal Cries boosts Retired Poe's regeneration even further, synergizing with his key weapon Impostongue.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 5,
@@ -300,9 +395,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Santa Water"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +0.5 HP/s and +50 Max Health. Starts with temporary area bonus.",
-      "notes": "- Clerici starts with +50  Max Health and +0.5  Recovery. Additionally, Clerici starts with +400%  Area, however, the bonus depreciates by 100% each level, until the bonus is entirely gone at level 5.\n- Suor Clerici's low-level  Area bonus applies to the gem explosions of the  Game Killer (0) Arcana, allowing every single gem blast to cover most of the screen and hit dozens of enemies at once. It also locks Clerici at level 1 so her temporary bonus never goes down.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "area",
+          "value": -1,
+          "interval": 1,
+          "max": -4
+        }
+      ],
       "stats": {
         "max_health": 50,
         "recovery": 0.5,
@@ -329,9 +434,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "King Bible"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +40% duration and speed, -40% move speed.",
-      "notes": "- Dommario starts with -40%  Move Speed, +40%  Projectile Speed, and +40%  Duration.\n- Weapons that benefit greatly from both Speed and Duration synergise well with Dommario, especially early on. Alongside his starting King Bible, consider weapons such as  Runetracer/ NO FUTURE,  Bone,  Mace/ Stamazza and  Hydro Storm which all work well with these benefits.\n- With enough levelling, the  Chaos in the Dark Night (V) and  Lost & Found Painting (XVII) Arcana's can greatly enhance Dommario's already high base passive bonuses. These in particular can make King Bible devastatingly powerful on its own without the need to evolve into  Unholy Vespers.\n- Dommario's low Movement speed is difficult to offset. As a result, any weapons or Arcanas that benefit from Movement Speed such as  Vento Sacro or  Tragic Princess (III) are not suitable for him.\n- If Dommario's low Movement speed is proving to be problematic, consider taking  Wings and/or  Sonic Dash, as both can quite easily bring his Movement speed to similar levels as other characters.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -358,9 +466,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Cross"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with 1 Revival. Gains 1 more Revival at level 33.",
-      "notes": "- Krochi starts with +30%  Move Speed and +1  Revival. He gains +1 Revival at level 33.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 33,
+          "max": 1
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -387,9 +505,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Pentagram"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with 1 extra Level.",
-      "notes": "- Christine starts with 1 extra level, -50  Max Health, +30%  Move Speed, -35%  Might, and -25%  Cooldown.\n- Christine starts with a high Cooldown reduction bonus, any strong but slow rate of fire weapons are greatly benefited by this initial boost even at the cost of lower initial Might.\n- Starting with Pentagram, especially at early game, is the cost of having a stronger start compared to  Arca or  Porta. While the weapon is extremely powerful, there is always a risk that all Pickups and Treasure Chests on your screen will be gone because of Pentagram's purging effect. Until then, always look out for the  Crown and level up Pentagram to evolve it into  Gorgeous Moon as soon as possible to save any future headaches.\n- With the initial level up at the start of the run made in order for you to get a weapon that will supplement Pentagram, be vigilant to not choose weapons without any damage output like  Clock Lancet or  Laurel. However, if the merchant is available, you can pick up one of his weapons instead to deal damage.\n- Pentagram ignores Amount, so the  Beginning (X) arcana is mostly useless on Christine until it evolves into  Gorgeous Moon, where Amount increases the extra gems created.\n- Picking  Blood Astronomia (XXI) allows Pentagram to deal direct damage.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "level",
+          "value": 1,
+          "interval": 0,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": -50,
         "recovery": 0,
@@ -417,9 +545,19 @@ window.VS_DATA = {
         "Phiera Der Tuphello",
         "Eight The Sparrow"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "notes": "- Pugnala starts with +20%  Move Speed. She gains +1%  Might every level. There is no cap on this bonus.\n- Pugnala has little bonus at the start of the game and her passive ability is very slightly behind  Antonio until level 51. She is better in this regard because she gains  Might more incrementally and benefits from the higher bonus between Antonio's 10 level gap.\n- The uncapped nature of her bonus means most weapons will partially catch up to enemy health scaling from leveling up.\n- A Multitude of powerful Arcana are useful to Pugnala, Here are the main three:\n- Since  Phieraggi's Base Damage and  Amount are determined by  Revival, the +3 Revivals from  Awake (IV) are very beneficial.\n- Gemini (I) will provide two more weapons.\n- Beginning (X) will give +3 Amount to both guns at the start and +3 Amount to  Phieraggi as well.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -446,9 +584,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Gatti Amari"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Projectile Speed every level.",
-      "notes": "- Giovanna starts with +20%  Move Speed. She gains +1%  Speed every level; there is no cap on this bonus.\n- Giovanna has little bonus at the start of the game and her passive ability is outclassed by  Dommario until level 41. The uncapped nature of this bonus means weapons like  Runetracer,  La Borra and  Bone can be extremely effective at high levels.\n- Gatti Amari requires some build-up to become effective. Increasing  Luck allows more light sources to be accessible, increases the chance that a cat using the scratch attack, start a scuffle with another cat, and not hurt Giovanna. More light sources also means  Floor Chicken are dropped more often, which increases Luck multiplicatively and Base damage of the weapon.\n- As such, Gatti Amari may not be a viable starting weapon. Focusing on a second weapon is advisable for early-game survival.\n- Pale Diamond Incursion (V) is especially useful for Giovana due to both scaling with  Speed and preventing self damage from  Gatti Amari.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "speed",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -475,9 +623,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Song of Mana"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Duration every level.",
-      "notes": "- Poppea starts with +20%  Move Speed. She gains +1%  Duration every level. There is no cap on this bonus.\n- Poppea has little bonus at the start of the game and her passive ability is outclassed by  Dommario until level 41. The uncapped nature of this bonus means weapons like  King Bible,  Santa Water, and  Song of Mana can be extremely effective at high levels.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "duration",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -504,9 +662,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Shadow Pinion"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Area every level.",
-      "notes": "- Concetta starts with +20%  Move Speed and +10%  Curse. She gains +1%  Area every level. There is no cap on this bonus.\n- Concetta has little bonus at the start of the game and her passive ability is outclassed by  Porta Ladonna until level 31. The uncapped nature of this bonus means weapons like  Garlic,  Santa Water, and  Song of Mana can be extremely effective at high levels.\r\n- Shadow Pinion can be a difficult weapon to use, at the start of a run you can move in a small circle without stopping to create a good defensive wall. It will sometimes be better to keep moving and not release the pinions if you are getting overwhelmed by enemies.\r\n- Using a combination of  Boogaloo of Illusions (XVIII) and  Wicked Season (XIII) will help maximize Concetta's bonus.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "area",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -533,9 +701,37 @@ window.VS_DATA = {
       "starting_weapons": [
         "Bone"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "notes": "- Mortaccio gains +1  Amount every 20 levels until level 60. The maximum Amount gained this way is +3.\n- After the  Chaos Malachite has been obtained, Mortaccio's weapon can be evolved into  Anima of Mortaccio upon reaching level 80, morphing him into a  Goshadokuro. He also gains +2  Armor, +1  Amount, and +100  Max Health.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        },
+        {
+          "key": "armor",
+          "value": 2,
+          "interval": 80,
+          "max": 2
+        },
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 80,
+          "max": 1
+        },
+        {
+          "key": "max_health_flat",
+          "value": 100,
+          "interval": 80,
+          "max": 100
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -562,9 +758,43 @@ window.VS_DATA = {
       "starting_weapons": [
         "Cherry Bomb"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "notes": "- Cavallo gains +1  Amount every 20 levels until level 60. The maximum Amount gained this way is +3.\n- After the  Chaos Rosalia has been obtained, Cavallo will morph into a constellation beast upon reaching level 80 and his weapon will be evolved into  Yatta Daikarin, which will set the chance of explosion to 100%. He will also gain +2  Armor, +1  Amount, +100  Max Health, and +25%  Luck.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        },
+        {
+          "key": "armor",
+          "value": 2,
+          "interval": 80,
+          "max": 2
+        },
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 80,
+          "max": 1
+        },
+        {
+          "key": "max_health_flat",
+          "value": 100,
+          "interval": 80,
+          "max": 100
+        },
+        {
+          "key": "luck",
+          "value": 0.25,
+          "interval": 80,
+          "max": 0.25
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -591,9 +821,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Carréllo"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "notes": "- Ramba gains +1  Amount every 20 levels until level 60. The maximum Amount gained this way is +3.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -620,9 +860,37 @@ window.VS_DATA = {
       "starting_weapons": [
         "Celestial Dusting"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "notes": "- O'Sole gains +1  Amount every 20 levels until level 60. The maximum Amount gained this way is +3.\n- After obtaining  Chaos Altemanna, O'Sole will morph into a shimmying humanoid with a sun-shaped head, with water and flowers spawning beneath them and its weapon evolving into  Profusione D'Amore upon reaching level 80. It also gains +2  Armor, +1  Amount, and +100  Max Health.\n- Once per run, typing \"pet\" while using O'Sole summons a ring of little hearts that heals it. (On console hold LT + RT)\r\n- O'Sole cannot be damaged by the plants in Il Molise, mainly to compensate for the fact that its weapon can only fire backwards and cannot actually deal damage to the plants.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        },
+        {
+          "key": "armor",
+          "value": 2,
+          "interval": 80,
+          "max": 2
+        },
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 80,
+          "max": 1
+        },
+        {
+          "key": "max_health_flat",
+          "value": 100,
+          "interval": 80,
+          "max": 100
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -649,9 +917,25 @@ window.VS_DATA = {
       "starting_weapons": [
         "La Robba"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3). Starts with temporary Amount bonus.",
-      "notes": "- Ambrojoe starts with +20%  Luck, +20%  Greed, and +20%  Magnet. Additionally, Ambrojoe starts with +10  Amount, however, the bonus depreciates by 2 each level, until the bonus is entirely gone at level 6. He gains +1  Amount every 20 levels until level 60. The maximum Amount gained this way is +3.\n- If  Game Killer (0) is selected as Ambrojoe's starting Arcana, he can keep his +10 Amount indefinitely at the cost of being unable to level up. While  La Robba alone may not be sufficient to deal with the hordes, other weapons may be obtained from the Merchant and the Master Librarian.\r\n- Moonlight Bolero (VI) is highly recommended as either a second Arcana or a simultaneous first Arcana (if playing on Inverse) to maximize the number of chests acquired and gain a chance of receiving passive items.\r\n- Alternatively, a limited weapons build with  Silent Old Sanctuary (XX) is also possible to maximize the power of La Robba.\r\n- Another option is purchasing  Icebrand This content requires the Ode to Castlevania DLC to access from the Master Librarian and selecting  Crystal Cries (XII) as a second Arcana. Crystal Cries in conjunction with the freezing ability of Icebrand will provide continuous scaling throughout the game in spite of the Game Killer lock, and boost the damage dealt by experience gems over time as they scale with Growth.\r\n- Summon Spirit Tornado This content requires the Ode to Castlevania DLC to access can be purchased from the Master Librarian, scales well with Amount and can be a great way of weaponizing gems via Game Killer.\r\n- Aura Blast This content requires the Ode to Castlevania DLC to access can also be purchased from the Master Librarian, and Ambrojoe's massive Amount bonus will make it immediately qualify to trigger the massive explosion.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": -2,
+          "interval": 1,
+          "max": -10
+        },
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -678,9 +962,25 @@ window.VS_DATA = {
       "starting_weapons": [
         "Clock Lancet"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with one extra level. Gains 10% Growth every 5 levels (max +50%).",
-      "notes": "- Gallo starts with with 1 extra level, +15%  Duration, -15%  Cooldown, -50%  Greed, +5  Reroll, and +5  Skip. They gain +10%  Growth every 5 levels up to level 25. The maximum Growth gained this way is +50%.\n- Picking  Out of Bounds (XII) or  Blood Astronomia (XXI) as the starting Arcana allows Clock Lancet to deal damage, negating the necessity to pick a damaging weapon on Gallo's second level.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "level",
+          "value": 1,
+          "interval": 0,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.1,
+          "interval": 5,
+          "max": 0.5
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -707,9 +1007,25 @@ window.VS_DATA = {
       "starting_weapons": [
         "Laurel"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with one extra level. Gains +1 Armor every 5 levels (max +5).",
-      "notes": "- Divano starts with 1 extra level, +1  Recovery, +30%  Luck, -50%  Greed, and +10  Banish. They gain +1  Armor every 5 levels up to level 25. The maximum amount of Armor gained this way is +5.\n- Due to Divano's armor level bonus, they are a great users of the  Divine Bloodline (IX) arcana. Using weapons that specialize in retaliation damage, with the most important being  Legionnaire, along with the likes of  NO FUTURE and  Victory Sword, can allow Divano to achieve large amounts of maximum health and an enormous damage output.  Armor is a key pickup for this build.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "level",
+          "value": 1,
+          "interval": 0,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "interval": 5,
+          "max": 5
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -736,9 +1052,37 @@ window.VS_DATA = {
       "starting_weapons": [
         "Vento Sacro"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.5% Might, Projectile Speed, Duration, and Area every level.",
-      "notes": "- Zi'Assunta starts with +20%  Move Speed and +10%  Curse. She gains +0.5%  Might,  Projectile Speed,  Duration, and  Area every level. There is no cap on these bonuses.\n- Her passive ability can eventually outclass  Antonio's Might passive bonus at level 101,  Dommario's Speed and Duration passive bonuses at level 82, and  Porta's Area passive bonus at level 62.\r\n- Like all level-scaling characters, Zi'Assunta's optimal starting Arcana is  Wicked Season (XIII) as its boosts to Curse and Growth massively improve the rate of leveling up.\r\n- Her scaling Might, Area, Speed and Duration means she can make great use of the  Rune Sword, massively increasing its critical damage. If building around the Rune Sword,  Slash (XVI) is a great second arcana to maximize the power of critical hits, it also applies to her starting Vento Sacro and the  Fuwalafuwaloo that she will eventually want to evolve it into. Wicked Season provides the Luck needed to consistently land critical hits.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.05,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.05,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.05,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.05,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -765,9 +1109,25 @@ window.VS_DATA = {
       "starting_weapons": [
         "Victory Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "She owns everything.",
-      "notes": "- Queen Sigma starts with +233  Max Health, +3  Recovery, +3  Armor, +50%  Move Speed, +50%  Might, +50%  Duration, -25%  Cooldown, +1  Amount, +1  Revival, +100%  Magnet, +50%  Luck, +10%  Curse, +108  Reroll, +108  Skip, and +108  Banish. She gains +1% Might and +1%  Growth every level. There is no cap on these bonuses.\n- At level 2, level 3, level 77, and level 108, the player is allowed to pick one Arcana from the full list of Arcanas, rather than picking from four randomly chosen ones. Chests that would normally contain Arcanas are replaced with regular chests when playing as her with three or more Arcanas.\n- Queen Sigma starts with a high number of Reroll, Skip, and Banish, and is able to buy Candybox from the Merchant. This can make achieving a specific build very easy when playing as her.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 233,
         "recovery": 3,
@@ -794,9 +1154,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Pako Battiliar"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Recovers 25% Max Health and gains +32 Max Health (Max +665) when health reaches a critically low level.",
-      "notes": "- Robbert starts with +0.5  Recovery, +1  Armor, and +20%  Move Speed.\n- Robbert has an HP-Critical skill that activates as soon as his HP drops below 20% of his  Max Health, which gives a bonus of +32 Max Health (caps at +665) for the current run and recovers 30% of his HP once triggered. The skill may only be activated again after recovering all of his HP. Receiving fatal damage resulting in a Game Over will not trigger the skill.\n- Divine Bloodline (IX) is an optimal choice for an Arcana on Bat Robbert, as its effect of increasing the flat damage of all weapons by +0.1 per missing HP complements his skill that increases his Max Health whenever his health reaches a low point. Furthermore, his starting weapon, Pako Battiliar deals retaliatory damage, and its evolution, the  Mazo Familiar further increases its damage based on the character's Max Health, which works well with Divine Bloodline. In addition, the  Hollow Heart, which is required to evolve the weapon, has obvious synergy with the aforementioned Arcana.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -823,9 +1186,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ammo Appalate"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can find extra explosive props that might drop Treasure Chests. Can destroy light sources by touching them.",
-      "notes": "- While playing as Zi'Appunta Belpaese, special light sources have a chance of appearing in place of regular light sources while moving around. Upon being destroyed, they have small,  Luck-based chance to drop a  Treasure Chest, with another small  Luck-based chance for it to be a  Golden Treasure Chest. Golden Treasure Chests only contain weapons that the player does not already have, and causes them to appear as stage items in a circle around the location the chest was opened instead of equipping them automatically in the player's weapon slots. Finding 10  Golden Treasure Chest in a single run will unlock  Pale Diamond Incursion (V).\n- Zi'Appunta Belpaese can also destroy light sources automatically upon contact with them.\n- The most important stat to level up with Zi'Appunta is  Luck, as it boosts the chances of finding Golden Chests in the special light sources she spawns. As such, the Luck PowerUp should always be on when playing as her,  Clover and  Wicked Season (XIII) are must picks and the player should try to find as many  Little Clover pickups as possible.\r\n- With her fairly well-rounded stats, Zi'Appunta is not geared towards any particular build. Rather, her ability allows her to use as many weapons as possible, more than any other character in the game. In fact, it is theoretically possible for her to have every single weapon equipped at once, though the game would be practically unplayable long before that point.\r\n- Both  Moonlight Bolero (VI) and  Hail from the Future (X) are very useful for Zi'Appunta as they allow her to gain more passive weapons (the former from dark treasure chests, the latter from the  Arma Dio it can potentially spawn), which makes it easier to evolve the mass of weapons she'll acquire.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -852,9 +1218,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Unearthly Bolt"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Activates his main weapon when picking up Gold Coins. Uses Gold Coins as damage barrier. Has a 4X chance of drafting FOIL Survarots.",
-      "notes": "- Big Troubler starts with +20%  Move Speed and +30%  Greed.\n- Whenever Big Troubler picks up a gold pick-up from the ground, his starting weapon is triggered, regardless of its current cooldown. This effect can happen multiple time depending on the amount of gold received from the pick-up, with 1 gold equaling 1 activation and each activation having a delay of 1 frame.\n- When Big Troubler collects gold during a run, he uses it as a shield/secondary health bar. Any damage taken will instead be subtracted from the player's current gold count for that run. Once the player's gold count is reduced to 0, Big Troubler will begin receiving damage to his health bar again. Big Troubler has reduced Invulnerability Time when he takes damage while carrying gold.\n- Big Troubler has a 4 times higher chance of drafting FOIL  Survarots, and a 2 times chance of drafting a Survarot with an Edition in general.\n- Big Troubler destroys light sources automatically when coming into contact with them.\n- Due to the nature of Big Troubler's passive,  The Reaper can quickly negate any gold gained during a run. If the player wishes to retain their gold, they should play with Endless Mode turned on or quit as soon as the The Reaper appears. Doing so will still count towards unlocks and stage completion.\r\n- Big Troubler's starting weapon is rather weak. Because of this, you should try to get as much value out of the first part of his passive as you can to ensure your survival early on.\r\n- Disco of Gold (XV) can be a good pick as it supports his already existent playstyle of farming light sources for the purpose of proccing his starting weapon, and it lets him keep his gold count / secondary health bar high. (note: the gold gained from killing enemies during Gold Fever does not trigger the first part of his passive.)",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -881,9 +1250,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Glass Fandango"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Freezes all enemies for 10 seconds when health reaches a critically low level.",
-      "notes": "- She-Moon starts with +2  Armor and +20%  Move Speed.\n- She-Moon has an \"HP-Critical\" skill that activates as soon as her HP drops below 20% of her  Max Health, which freezes all enemies for 10 seconds once triggered, similar to an  Orologion pickup. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- Her starting weapon and her passive make her well-suited to run a freezing build.  Clock Lancet and  Jail of Crystal (XIV) can serve as a way to set enemies up for massive damage from Glass Fandango or  Celestial Voulge.  Out of Bounds (XII) generates additional value from freezing enemies and increases the number of Orologions spawned, synergizing with Celestial Voulge.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -909,12 +1281,19 @@ window.VS_DATA = {
       "base_name": "She-Moon Eeta",
       "starting_weapons": [
         "Glass Fandango",
-        "(Hidden) Valkyrie Turner",
-        "Wings (Level 5)"
+        "Valkyrie Turner",
+        "Wings"
+      ],
+      "hidden_items": [
+        "Valkyrie Turner"
+      ],
+      "max_items": [
+        "Wings"
       ],
       "starting_arcana": null,
       "description": "Also starts with a Level 5 Wings and a hidden Valkyrie Turner.",
-      "notes": "- Compared to She-Moon, Reborn She-Moon starts with +100%  Luck, +7  Revivals, and level 5  Wings. She also has the  Valkyrie Turner as a hidden weapon.\n- Her starting weapon and her passive make her well-suited to run a freezing build.  Clock Lancet and  Jail of Crystal (XIV) can serve as a way to set enemies up for massive damage from Glass Fandango or  Celestial Voulge.  Out of Bounds (XII) generates additional value from freezing enemies and increases the number of Orologions spawned, synergizing with Celestial Voulge.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -939,11 +1318,17 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/para_kooleo_penshin_fatcha.png",
       "base_name": "Para Kooleo",
       "starting_weapons": [
-        "Penshin Fatcha"
+        "Penshin Fatcha",
+        "Acquazzone"
       ],
+      "hidden_items": [
+        "Acquazzone"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -970,9 +1355,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tonno Subito"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -999,9 +1387,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tonnado"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1028,9 +1419,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tonn'omoto"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1057,9 +1451,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tonn'oddeeo"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1086,9 +1483,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tonne"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1115,9 +1515,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Unsurpassed"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "notes": "- Para Kooleo and all of his skins start with +30%  Move Speed and +30%  Duration.\n- Para Kooleo has an \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers a  Vacuum. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- If the player has evolved Penshin Fatcha at least once, this Vacuum will be replaced with a Lavatrix Machina.\n- Whenever Para Kooleo evolves a weapon, his hidden  Acquazzone will trigger for 7 seconds. This Acquazzone has a base damage of 60 and a base  Amount of 12. Whenever it is triggered, this Acquazzone gains 6 base damage.\n- When playing as one of Para Kooleo's alternate skins, his starting weapon loses the ability to evolve at the exchange of Limit Break being far more effective. Each level of Limit Break will be five times as effective and every weapon can also receive +2  Amount (Max 20) as a potential bonus.\n- Para Kooleo works best with a limited number of weapons and  Silent Old Sanctuary (XX). This allows him to dedicate all chests obtained during a run into evolving  Penshin Fatcha, getting it to absurd power levels further boosted by Silent Old Sanctuary. This also applies to his alternate forms thanks to their enhanced limit breaks. Aside from that, however, the base form's optimal playstyle differs greatly from that of the alternate forms:\r\n- To maximize the base form's power, it is recommended to play on a stage like Ode to Castlevania, where the plentiful evolution chests available from a massive number of bosses can turn Penshin Fatcha into a juggernaut of a weapon. For even more chests, it is recommended to get  Moonlight Bolero (VI) relatively early.\r\n- On the other hand, chests are mostly wasted on the alternate forms, since they don't evolve; instead, the priority should be maximizing experience gain with  Crown,  Wicked Season (XIII), etc.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1144,9 +1547,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Santa Javelin"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporary Cooldown bonus. Triggers a Rosary when Health reaches a critically low level. Likes to keep secrets.",
-      "notes": "- Santa starts with +2  Armor and +30%  Luck. Additionally, Santa starts with -70%  Cooldown, however, the bonus depreciates by 20% each level, until the bonus is only -10% at level 4.\n- Upon reaching level 40 and 80,  Arma Dio and  Candybox will spawn underneath her respectively.\n- Santa has an \"HP-Critical\" skill that activates as soon as her HP drops below 20% of her  Max Health, which triggers a  Rosary. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- Santa can find evolved weapons in treasure chests that normally do not evolve weapons, and she can also find Arcanas in treasure chests that would normally evolve weapons, which does not affect her maximum amount of Arcanas.\n- If Santa has  Santa Water,  King Bible, and  Cross in her inventory and all three weapons are at least level 8, upon her next level up, all three weapons disappear and Santa gains a hidden  La Borra,  Unholy Vespers, and  Heaven Sword. This will not happen if any of the three weapons are evolved before this condition is met.\n- Santa Javelin starts with an extremely long Cooldown of 6.5 seconds. It is highly advised to take advantage of Santa's early Cooldown boost to survive until you can level up Santa Javelin or obtain other weapons.\r\n- Attractorb,  Spellbinder and  Clover are not necessary to obtain her hidden evolutions. However,  Clover is still required to evolve  Santa Javelin into  Seraphic Cry.\r\n- Until the hidden evolutions have been obtained, either refrain from fully leveling up the  Clover or avoid picking up any evolution chest. Otherwise, there is a risk of  Cross regularly evolving into  Heaven Sword, which will prevent Santa from obtaining her hidden weapons and freeing up 3 weapon slots.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": 0.2,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1173,9 +1586,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Gaze of Gaea"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +30 gives a cumulative bonus to a random stat.",
-      "notes": "- Gazebo starts with +50%  Move Speed.\n- Overhealing by +30 provides a stat bonus. After the first time a stat bonus is granted, the bonus will be lessened. Gazebo's sprite will also slightly increase in size for each instance this skill activates. The stats provided and their caps are: Max Health,40,6|Recovery,0.5,5%|Armor (stat),1,4%|Move Speed,0.2,1%|Might,0.2,0.01|Speed,0.2,1%|Duration,0.2,0.01|Area,0.2,0.01|Cooldown,-10%,-0.50%|Amount,1,0.04|Revival,1,0.08|Magnet,1,0.5\n- In total, it takes 357 instances of overhealing by +30 Health to max out Gazebo's bonuses.\n- Extra sources of  Luck can benefit Gazebo as the player will be more likely to find  Floor Chicken and  Wall Chicken This content requires the Ode to Castlevania DLC to access.\r\n- Paranormal Scan is extremely important, as in addition to being one of the few ways for Gazebo to consistently overheal by over 30 health, it also provides its own (uncapped) stat bonuses, allowing Gazebo to scale much faster. It also can go over the limit (357), and can keep giving Gazebo stat boosts.\r\n- Greatest Jubilee spawns light sources, which have a chance of containing Floor Chicken.\r\n- Increasing received healing via  Recovery and Arcanas such as  Sarabande of Healing (VI) will make it easier for the player to overheal enough to make use of Gazebo's passive.\r\n- Note that instances of Overhealing that are multiples of 30, (60, 90, 120, etc.) will NOT grant the player extra stats. Only one stat bonus is given per instance of healing.\r\n- Also, if the player is using  Disco of Gold (XV), sources of  Greed should be taken to increase the healing received from Gold received.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1202,9 +1618,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Magi-Stone"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Chances his luck every 30 seconds or when picking up a Rerollo.",
-      "notes": "- Upon obtaining a  Rerollo, or once every 30 seconds, Chula-Reh rolls a dice above his head. Getting a 2, 3, 4, or 5 just gives him a  Luck boost equal to the value rolled for the remainder of the run. Hurry Mode does not impact this timer.\n- Rolling a 1 darkens the screen, zooms the camera towards Chula-Reh, and causes the text \"Unlucky!\" to appear above him for about 3 seconds. He then gains +77%  Curse and -777%  Luck for 30 seconds before triggering  Shooting Stars to land on him.\n- Rolling a 6 darkens the screen, zooms the camera towards Chula-Reh, and causes the text \"Lucky!\" to appear above him for about 3 seconds. He then gains a bonus of +777%  Luck and +77%  Move Speed for 30 seconds and spawns light sources around him, similar to  Greatest Jubilee.\n- The chance to roll a 6 is based on 2 values. The first value is equal to the higher value between 1 and 'TotalLuck' +2. This value is then entered into a base-3 logarithm. The result is then multiplied by 1/6 for the final chance. Essentially, this chance will be 1/3 when the player reaches +600% Luck, 1/2 at +2400%, and guaranteed at +72600% Luck.\n- Since the result of 1 in a logarithm is always 0, Chula-Reh will normally not be able to roll a 6 while he is \"Unlucky!\", unless his Luck is relatively high outside of this state.\n- Rerollos are also made 5 times more common.\n- As his Luck may potentially increase whenever he picks up a  Rerollo, trying to get more is very important. To that end,  Hail from the Future (X) is a potent pick as it can potentially drop Rerollos every time he levels up.\r\n- For the same reason,  Greatest Jubilee is a very good pick, especially as his scaling luck means that it'll activate more often.\r\n- While not as consistent as other characters with scaling Luck, Chula-Reh can still run a very potent  Slash (XVI) and  Sapphire Mist (I) build.\r\n- 108 Bocce synergizes incredibly well with Chula-Reh, since it gains more damage both if he rolls normally or if he hits a 1. This will make surviving the Curse boost much easier.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1231,9 +1650,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Phas3r"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "May occasionally activate all weapons twice depending on Cooldown.",
-      "notes": "- Space Dude starts with +40%  Move Speed.\n- Space Dude will occasionally activate all weapons twice. This effect occurs more often the more  Cooldown reduction the character has. When activated, a green and blue aura circles around Space Dude. At -0% Cooldown, this ability will activate every 10-15 seconds. At the -90% Cooldown cap, it will activate roughly every 3 seconds.\n- Using long Cooldown weapons or evolutions with strong or powerful effects like  Seraphic Cry ,  Paranormal Scan This content requires the Emergency Meeting DLC to access ,  Emergency Meeting This content requires the Emergency Meeting DLC to access, and  Atmo-Torpedo This content requires the Operation Guns DLC to access can greatly increase their effectiveness.\n- Although it appears suitable, Space Dude's ability to activate weapons twice will provide little value to the  Pentagram or  Gorgeous Moon. Because the weapons' successive fires occur nearly simultaneously, the second blast would occur before any new enemies spawned after the first blast, rendering it useless. It will still doubles up the moon beams from Gorgeous Moon though.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1260,9 +1682,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Wings"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "At least they're lucky.",
-      "notes": "- Exdash starts with -23  Max Health, -10%  Move Speed, -10%  Might, -10%  Area, -50%  Speed, -10%  Duration, +10%  Cooldown, and +100%  Luck. It gains +10% luck every 10 levels up to level 50. The maximum amount of luck gained that way is +50%, or 150% with the starting bonus included.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "luck",
+          "value": 0.1,
+          "interval": 10,
+          "max": 0.5
+        }
+      ],
       "stats": {
         "max_health": -23,
         "recovery": 0,
@@ -1289,9 +1721,31 @@ window.VS_DATA = {
       "starting_weapons": [
         "Peachone"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "So much potential.",
-      "notes": "- Toastie starts with -99  Max Health, +20%  Move Speed, -10%  Might, -10%  Area, -50%  Speed, -10%  Duration, +10%  Cooldown, and +100%  Luck. Additionally, Toastie gains more Luck, Max Health and  Armor at certain levels: Level,Luck,Max Health,Armor|1-9,1,-99 (1),0|10-19,1.2,-99 (1),0|20-29,1.4,-99 (1),0|30-39,1.6,-99 (1),0|40-49,1.8,-99 (1),0|50-99,2,-99 (1),0|100-199,2,+9899 (9999),0|200+,2,+9899 (9999),65520\n- At 1 Max Health in the beginning, any enemies that touches Toastie results in an instant death. Toastie does have +20% additional Move Speed to be able to maneuver past enemies much easier.\r\n- Buying Golden Eggs can increase Toastie’s survivability and help them get past their early-game weakness.\r\n- Awake (IV) seems like a must have to avoid dying by mistake in the very beginning, and also granting Armor to reduce damage from  The Reaper once Toastie becomes level 200. However,  Divine Bloodline (IX) is the more optimal first pick (as early-game enemies are much easier to kill with retaliatory damage), and by the time the player usually gets their second Arcana, the risk of dying with a Divine Bloodline build should be nearly nonexistent. An early  Paranormal Scan can help with acquiring the last required points of armor to fully withstand the Reaper's assault without hogging a valuable Arcana slot.\r\n- Divine Bloodline (IX) can be used to increase Max Health by killing enemies with retaliatory damage. Tanking early enemies with retaliatory damage builds up massive Max Health, allowing for instant kills by Level 100 with uncapped flat damage boost per missing HP.\r\n- It is recommended to play in Inverse mode to pick and buy both Awake (IV) and Divine Bloodline (IX), as well as rolling for a Retaliate weapon at the start of a run.\r\nThe stages where the  Merchant is located farther away from starting location will be much harder.\r\n- Having high  Luck,  Cherry Bomb is also a good option to buy from the Merchant.\r\n- Building up  Armor is also important to survive and for the Divine Bloodline (IX) strategy.  Centralis Custos This content requires the Ode to Castlevania DLC to access is a good choice to increase Armor.\r\n- Tirajisú also helps Toastie survive early game and can boost the benefits from the Awake (IV) Arcana.\r\n- At Level 100, Toastie becomes nearly unkillable, excluding engaging The Reaper. At Level 200, Toastie can withstand the Reaper's damage, as he only takes 15 damage before other  Armor stat increases. Additional Armor increases can lead to Toastie only taking 1 damage from the Reaper.\r\n- Awake (IV) can give up to +6 Armor: +1 from  Revival PowerUp, +3 from Awake (IV), and +2 from Tirajisú.\r\n- +5 Armor from the  Armor passive item.\r\n- +3 Armor from Armor PowerUp.\r\n- Armor increases can also be provided by  Paranormal Scan.\r\n- It is also recommended to build up  Growth earlier to get leveling up faster.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "luck",
+          "value": 0.2,
+          "interval": 10,
+          "max": 1
+        },
+        {
+          "key": "max_health_flat",
+          "value": 9899,
+          "interval": 100,
+          "max": 9899
+        },
+        {
+          "key": "armor",
+          "value": 65520,
+          "interval": 200,
+          "max": 65520
+        }
+      ],
       "stats": {
         "max_health": -99,
         "recovery": 0,
@@ -1318,9 +1772,49 @@ window.VS_DATA = {
       "starting_weapons": [
         "Vandalier"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "The quirky white bear.",
-      "notes": "- Smith starts with -93  Max Health, +20%  Move Speed, -10%  Might, -10%  Area, -50%  Speed, -10%  Duration, +10%  Cooldown, and +100%  Luck. It gains +0.01  Recovery, +0.7% Might, Area, Projectile Speed, and Duration, -0.25% Cooldown, and +1% Luck every level. There is no cap on these bonuses.\n- Once their initially debuffed stats are compensated for with power ups and Passive items, Smith becomes one of the most versatile characters in the game thanks to having 7 stats which scale infinitely. One can think of Smith as a higher risk and higher reward version of  Zi'Assunta Belpaese.\n- Smith's low starting Health may be seen as a disadvantage, but it combines well with the  Crystal Cries (XII) Darkana, allowing them to quickly acquire bonuses to increase their Max Health,  Growth and Recovery. This can be done multiple times in a row early on.\n- Because of this, it might be considered wise to run a 'Freeze build' with Smith, using weapons such as  Clock Lancet,  Celestial Voulge,  Prism Lass/ Time Warp and  Icebrand.\n- With high Luck that scales endlessly, equipping weapons affected by the passive such as  108 Bocce and  Pentagram is worth considering. It can also be combined with the  Slash (XVI) Arcana and/or  Sapphire Mist (I) Darkana to increase their effective potential.\n- Smith's strategy is similar to Toastie's.\n- With scaling Projectile Speed, Area and Might, Smith can make incredible use of  SpellString,  SpellStream,  SpellStrike and their union,  SpellStrom, especially since their scaling Cooldown can increase the rate at which the SpellStrom singularity can occur and their scaling Duration increases how much damage each singularity deals.\n- They can make great use of the  Rune Sword, not only because they scale Area, Projectile Speed, and Duration, but also Luck, which increases the rate at which critical hits occur.\n- While overshadowed by  Cosmo Pavone and  Sara Trantoul in this aspect, Smith's scaling Recovery means they can still make great use of  Sharp Tongue/  Impostongue and the  Star Flail/ Moon Rod.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.07,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.007,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.007,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.007,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.0025,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.01,
+          "interval": null,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": -93,
         "recovery": 0,
@@ -1347,9 +1841,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Random"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Random.",
-      "notes": "- The character is presented with one of eight names, selected at random. The selected name influences the passive bonuses. Below is a table for the stat increases and oscillating stats by name where x is a decimal value between 0 and 1 and y is the multiplier from the character.\nStat,Base Formula,Aren Gijus,Titto,Chalanda,SHAtsung,Marionello,Birky,Zylaz,Mi Kujino\nMax Health,1*(x−0.025)*y,1,0.5,1,1,1,1,1,1.5\nRecovery,0.01*(x−0.5)*y,1,0.5,1,1,1,1,1,1.5\nArmor,0.01*(x−0.1)*y,1,1,1,1,1,1,1.5,0.5\nAmount,0.01*(x−0.1)*y,1,1,1,1,1,1,1.5,0.5\nRevival,0.01*(x−0.1)*y,1,1,1,1,1,1,1.5,0.5\nMagnet,0.03*(x−0.1)*y,1,1,1,1,1,1,1.5,0.5\nSpeed,0.01*(x−0.1)*y,1,1,1,1.5,1,1,0.5,1\nMove Speed,0.01*(x−0.2)*y,1,1,1,1.5,1,1,0.5,1\nMight,0.01*(x−0.1)*y,1,0.5,1,1,1,1,1,1.5\nCooldown,−0.005*(x−0.05)*y,1,1,1,1,1,1,1,1\nArea,0.01*(x−0.1)*y,1,0.5,1,1,1,1,1,1.5\nDuration,0.01*(x−0.1)*y,1,0.5,1,1,1,1,1,1.5\nLuck,0.01*(x−0.1)*y,1,1,1,1,1.5,0.5,1,1\nGrowth,0.01*(x−0.1)*y,1,1,1,1,1,1,1,1\nGreed,0.01*(x−0.1)*y,1,1,1,1,1,1,1,1\nCurse,0.01*(x−0.25)*y,1,1,0.5,1,1,1.5,1,1",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1376,9 +1873,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Thousand Edge"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
-      "description": "",
-      "notes": "- Marrabbio starts with +20  Max Health, +30%  Move Speed, +20%  Might, -110%  Speed, -80%  Greed, and +10%  Curse.\n- Without any other bonuses, he will shoot out projectiles backwards. With just one rank of Projectile Speed making it -100%, the projectiles will be stationary.\n- Having -100% or lower Projectile Speed means certain weapon cannot be fired, like  Discus This content requires the Ode to Castlevania DLC to access.\n- Boon Marrabbio can place projectiles on stages as traps and wait for enemies to touch them, which works well with projectile weapons that ignore  Duration. On the other hand, projectile weapons that scale with Duration become hard to use.\n- Weapons' Pool Limit becomes much more important for Boon Marrabbio.\n- Weapons that ignores Speed work as usual for Boon Marrabbio.",
+      "description": "-",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -1405,9 +1905,37 @@ window.VS_DATA = {
       "starting_weapons": [
         "Flames of Misspell"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of Fire. Grows stronger with every level, but also loses control.",
-      "notes": "- Avatar starts with +60 Max Health, +50%  Might, +50%  Luck, +100%  Magnet, +1  Revival, and +10  Reroll. He gains +2%  Move Speed, +0.5% Might, -0.25%  Cooldown, and +0.5%  Curse every level. There is no cap on these bonuses.\n- He starts with an extra Arcana  Heart of Fire (XIX).\n- Since Avatar gains +2% MoveSpeed with each level, moving is more difficult at higher levels because of the absurdly high speed. This is mentioned in his description, by implying that he loses control with every level.\n- This drawback can be avoided with  Edge of the Earth (VIII), setting your Move Speed to +100%.\n- Avatar Infernas is one of the few characters in the game whose cooldown scales infinitely (alongside  Smith). This makes Avatar a fantastic user of powerful weapons with long cooldowns like  Pentagram/ Gorgeous Moon.\n- Picking  Clock Lancet will make Avatar Infernas virtually untouchable at a certain point, as the speed of the Lancet firing will keep enemies permanently frozen. This also makes Avatar a decent user of  Out of Bounds (XII).\n- Picking  Laurel will make Avatar Infernas completely invincible starting at -87.5% Cooldown, as charges will regenerate faster than damage depletes them.\n- Avatar's scaling movement speed makes him a fantastic user of  Shadow Pinion,  Valkyrie Turner, and  Darkness Illusion This content requires the Ode to Castlevania DLC to access. In addition, Valkyrie Turner and Darkness Illusion benefit from its innate Heart of Fire.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "move_speed",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.005,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.0025,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.005,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 60,
         "recovery": 0,
@@ -1434,9 +1962,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Bloody Tear"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Might, Projectile Speed, Duration, Area, and Cooldown change every minute.",
-      "notes": "- Minnah starts with +50  Max Health, +0.5  Recovery, and -70%  Might. She gains +10% Might every three levels until 24. Her stats change every minute similar to some Arcanas. Might,  Speed,  Duration,  Area, and  Cooldown are on a cycle; when Duration, Area, and Cooldown are multiplied by 2, Might and Projectile Speed are divided by 2, and vice versa.\n- The stat changes may seem complicated but it is not random. She stays at the maximum or minimum bonuses most of the time so Minnah has two modes: Big  Area, long  Duration and  Cooldown, slow  Speed, and weaker.; Small Area, low Duration and Cooldown, fast Projectile Speed, and stronger.\r\n- Minnah does not benefit from the stat oscillation from Chaos in the Dark Night (V), Lost & Found Painting (XVII) and Boogaloo of Illusions (XVIII), as they require the character to not have value in the sineStat attributes to set their own value while the changing stats already occupied them. It does not override them either; however, she can still benefit from the additional stats every level.\r\n- As Minnah started with Bloody Tear, Whip is still in the pool of options for level ups. After uniting Bloody Tear with Vento Sacro into the Fuwalafuwaloo, it is able to evolve it into another Bloody Tear. However, they must be united before Whip is maxed out.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.1,
+          "interval": 3,
+          "max": 0.8
+        }
+      ],
       "stats": {
         "max_health": 50,
         "recovery": 0.5,
@@ -1463,9 +2001,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Holy Wand"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
-      "description": "",
-      "notes": "- Leda starts with +5  Armor, -20%  Move Speed, +100%  Might, +10%  Area, -10%  Cooldown, and -80%  Greed.\n- With her high starting  Armor, Leda can be a great user of  Divine Bloodline (IX), giving affected weapons +25 flat damage and dealing 50 retaliatory damage from the start of the run.\r\n- With her high starting  Might, Leda can make great use of  SpellStrike and  SpellStrom.",
+      "description": "-",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1490,12 +2031,37 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/cosmo_pavone.png",
       "base_name": "Cosmo Pavone",
       "starting_weapons": [
-        "(Hidden) Peachone",
-        "(Hidden) Ebony Wings"
+        "Peachone",
+        "Ebony Wings"
       ],
+      "hidden_items": [
+        "Peachone",
+        "Ebony Wings"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1 Recovery and +1% Luck every level. Gains +1 Revival every 100 levels. Has hidden weapons.",
-      "notes": "- Cosmo starts with -80  Max Health, +1  Recovery, +20%  Luck, +30%  Move Speed, and +1  Revival. It also gains +1 Recovery and +1% Luck every level, and +1 Revival every 100 levels (+0.01 Revivals every level). There is no cap on these bonuses.\n- It starts with hidden  Peachone and  Ebony Wings without taking up any weapon slots; the actual weapons themselves may still be obtained from level-ups, and doing so results in the character having two of each weapon. The hidden weapons are upgraded every five levels, starting at level 10, up to level 40 when both reach level 8. The birds cannot be united into  Vandalier, and as usual with hidden weapons, they cannot gain limit break stats.\n- Every time Cosmo is revived, it triggers a  Rosary effect. This will not be converted to a Weird Souls Purifier if the player has  Seraphic Cry.\n- Cosmo is the only character in the game that gains +1 Recovery per level and will likely remain so, as having such a steep Recovery rate can push the damage of certain weapons into the millions per second. Other characters scale Recovery at a much slower rate of +0.01 or +0.02 per level at most. The highest possible Recovery scaling beside Cosmo is 0.05 per level, which remains 20 times slower than Cosmo's scaling.\r\n- Cosmo does not have a starting weapon, giving it more customization when designing a build.\r\n- Cosmo can pair well with  Sarabande of Healing (VI), as its Recovery keeps on scaling every level, making it pulse with increasing power.\r\n- Wandering the Jet Black (XXI) is also an extremely strong pairing for similar reasons, since Cosmo can obtain incredible amounts of healing, leading to a large increase in damage.\r\n- Hidden Anathema (III) also has a strong pairing with Cosmo. Not only will Cosmo find more  Floor Chicken, because of their  Luck scaling, but they will get more stats from each chicken because of  Recovery.\r\n- Though the player can obtain two  Peachone and  Ebony Wings with this character,  Gemini (I) will only grant one of each counterpart weapon.\r\n- With Gemini and both sets of the weapons, the player can have 6 total birds following them at once.\r\n- Cosmo also pairs extremely well with  Divine Bloodline (IX) and  Crystal Cries (XII), most notably increasing the player's  Max Health, which counteracts Cosmo's low base HP. Crystal Cries also gives extra  Growth, synergizing well with Cosmo's scaling.\r\n- Due to its extremely high regeneration, it pairs well with weapons that damage the wielder, such as  Muramasa This content requires the Legacy of the Moonspell DLC to access,  Gatti Amari and the Dominus This content requires the Ode to Castlevania DLC to access weapons, essentially negating the risk of dying to these weapons. In addition, Muramasa also synergizes well with Divine Bloodline and its critical hit chance scales with Cosmo's ever-growing Luck.\r\n- Cosmo's powerful regeneration can allow him to greatly boost  Soul Eater's damage.\r\n- Sharp Tongue This content requires the Emergency Meeting DLC to access /  Impostongue This content requires the Emergency Meeting DLC to access, as well as  Star Flail This content requires the Ode to Castlevania DLC to access /  Moon Rod This content requires the Ode to Castlevania DLC to access, works extremely well with Cosmo because their damage is multiplied by Recovery. Reaching even double digit levels will have them dealing far higher damage than any other weapon.\r\n- Phieraggi,  Meal Ticket This content requires the Ode to Castlevania DLC to access, and  Grand Cross all gain extra damage from Cosmo's  Revival scaling, and extra Amount in the case of Phieraggi.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "recovery",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": -80,
         "recovery": 1,
@@ -1522,9 +2088,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Soul Eater"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporarily reduced area.",
-      "notes": "- Peppino starts with +20  Max Health, +2  Armor, -100%  Move Speed, -60%  Area, and +100%  Magnet. It gains +10% Area on levels 2, 3, 5, 8, 13, and 21.\n- Peppino starts with -100%  Move Speed, meaning that without any speed powerups, it is unable to move. While playing as a stationary character might seem like a fun challenge, starting with extra Move Speed from PowerUps is advised, which will at least allow it to slowly crawl to collect chests.\r\n- Wings can be a useful pickup to help boost Peppino's speed.\r\n- The  Sonic Dash provides a useful way to help Peppino move around, due to providing a speed boost when active.\r\n- Attractorb is one of the most important pickups for Peppino as early as possible, as it allows it to collect EXP gems in a large area without needing to move.\r\n- As such, one should focus on getting Evolutions that use the Attractorb. Of these,  J'Odore can be useful to pull stronger enemies away from Peppino, while  Vol Umbra can be incredibly strong thanks to scaling with Magnet.\r\n- As a result of Attractorb's critical benefit, Peppino's native Magnet boost, and its starting weapon being Soul Eater,  Blood Astronomia (XXI) is a good early arcana for this character.\r\nFor the same reasons,  Victorian Horror (XVIII) can be a good pick, though the increase in  Curse can end up doing more harm than good in the long run. It's better to pick it up later into the run.\r\n- Because Peppino has high armor but no ability to avoid enemies,  Divine Bloodline (IX) is another viable Arcana for its retaliatory damage. However, it should be noted that Divine Bloodline (IX) does not work with Soul Eater, only its pre-evolved form, Garlic. Therefore, while this Arcana is technically viable, its actual usefulness will be somewhat limited.\r\n- Mad Groove (VIII) can help Peppino compensate for its nearly nonexistent speed by gathering all stage items and chests around it. However, be careful not to grab the  Silver Ring,  Gold Ring,  Metaglio Left, or  Metaglio Right too early, as Peppino's awful movement speed means it absolutely must kill the Atlanteans very quickly or it will die.\r\n- In stages where The Stalker naturally spawns, like The Bone Zone, Peppino needs to grab a  Rosary or  Victory Sword before that happens or die, as it has no way of escaping from the creeping reaper.\r\n- If unlocked, picking up the  Edge of the Earth (VIII) darkana would modify its Move Speed to +100%, making the Peppino vastly more mobile than it would be at default Move Speed.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -1551,9 +2120,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Candybox"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Greed every level. Gold Fever lasts longer.",
-      "notes": "- Trouser starts with +30%  Move Speed and +20%  Greed. He gains +1% Greed every level. There is no cap on this bonus.\r\n- Trouser has longer  Gold Fevers by multiplying its duration cap and duration extension from Gold pickups by 1.5.\n- With Candybox, Trouser can start with any base weapon (or no weapon at all).\r\n- With his scaling  Greed and longer  Gilded Clover, he is one of the best suited for gold runs.\r\n- Trouser is an optimal character to gold farm with for players without access to  Sammy This content requires the Tides of the Foscari DLC to access from the Tides of the Foscari DLC, or for players who have low-end hardware that may lag when using Sammy. If Sammy is unlocked, it should be used instead, as it can greatly outperform Trouser in gold farming.\r\n- For gold farm runs, it is recommended to have at least 5,000 Golden Eggs on Trouser. Queen Sigma can be used to effectively farm enough gold to buy these first 5,000 Golden Eggs on Trouser.\r\n- Between 5,000 and 150,000  Golden Eggs,  Greatest Jubilee should be used along with  Sarabande of Healing (VI) (or  Blood Astronomia (XXI)) and Disco of Gold (XV) with the Inverse, Hyper, and Endless stage modifiers. Limit Break should be disabled, and Gold Bags should be selected upon level up. Picking up a weapon like  Crimson Shroud can help kill enemies, which may be needed.\r\n- 150,000-1,000,000,000 Golden Eggs on Trouser is much the same as above, although an additional weapon besides Greatest Jubilee shouldn't be needed.\r\n- Above 1 billion Golden Eggs, Greatest Jubilee can be swapped with  Garlic/ Laurel/ Pentagram, and Disco of Gold can be swapped with  Wicked Season (XIII). At this point, Gold Fevers will not be worth pursuing, since the level-up gold and the Greed from  Wicked Season (XIII) outperform it.\r\n- Recommended settings are Hyper Mode on, Arcanas on, Limit Break off, Inverse on, and Endless on. It is extremely important that Limit Break is off and Big Gold Bags are selected as level-up choices. Limit Break should not be used for Trouser gold farm runs.\r\n- Once past 1,000,000 Golden Eggs, most weapons stop killing enemies due to  Curse enemy scaling. Damage from Sarabande of Healing or Blood Astronomia is required after this point.\r\n- Outside the context of gold farming runs, Trouser's scaling Greed makes him one of the best users of  Muramasa.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "greed",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1581,9 +2160,12 @@ window.VS_DATA = {
         "Axe",
         "Death Spiral"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "M(▯▯)",
-      "notes": "- MissingN▯'s base stats and starting weapon are randomized every time the character selection screen is opened. The final stat is determined by the base stat and the stats from PowerUps.\n- Base Stats,Max Health,Recovery,Armor,Move Speed,Might,Area,Speed,Duration,Amount,Cooldown,Luck,Growth,Greed,Curse,Magnet,Revival\r\nMaximum,97.5,0.5,2,0,0.8,2.6,0.8,1.7,2,0.8,0.8,0.8,0.8,0.95,0.8,2\r\nMinimum,-2.5,-0.5,0,-200%,-120%,-140%,-120%,-130%,0,-120%,-120%,-120%,-120%,-105%,-120%,0\n- There are several interesting possible scenarios that may occur:\n1. If  Max Health is lower than 0, MissingN▯ becomes invincible. The  Max Health is then also unaffected by the health bonus from  Hollow Heart.\n2. If  Move Speed is lower than -100%, the controls become inverted.\n3. If Move Speed is exactly -100%, MissingN▯ will be unable to move.\n4. If  Growth is -100% or lower, MissingN▯ cannot gain experience.\n5. If  Curse is exactly -100% enemies will not spawn. Lower than -100% has enemies spawn but not move, and the  The Reaper will actually retreat.\n6. If  Luck is -100% or lower, no  Treasure Chests will drop.\n7. If  Greed is exactly -100%, no gold will be gained. If Greed is lower than -100%, gold will be lost until the player reaches 0 gold. Gold can not go below 0.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1610,9 +2192,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Heaven Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +2% Growth every level.",
-      "notes": "- Gains gains +2%  Growth every level. There is no cap on this bonus.\n- Gains is one of the most useful characters to use if a player wants to see just how powerful any given weapon can become when leveled to max with Limit Break, as its Growth growth means it will get levels faster and faster as time goes on.\r\n- Having infinitely scaling Growth makes the Wind Whip/Spirit Tornado Tip and Vol Luminatio both powerful weapons for Gains.\r\n- Wicked Season (XIII) can help push Growth even further, and it also increases Curse, which means more enemies to drop experience gems. Because Gains starts with an evolved weapon, it can usually easily survive the early game even after picking Wicked Season as its first Arcana.\r\n- The damage of Game Killer (0) is multiplied by Growth. Picking this arcana in the late game, likely after Gains has acquired a thousand or more levels, will result in insane damage output from the experience gems, especially if paired with Boogaloo of Illusions (XVIII) to increase the area of each explosion.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "growth",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1639,9 +2231,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Bracelet"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Can find evolutions in any Treasure.",
-      "notes": "- Gyorunton starts with +200  Max Health, +30%  Might, and +2  Revival. It gains +1%  Curse every level. There is no cap on this bonus.\r\n- Gyorunton can find evolutions in any  Treasure Chest, regardless of any other conditions.\n- With its unique ability to evolve weapons with any treasure chest, you can evolve weapons much earlier in runs than normal. Combined with its uncapped Curse bonus, which indirectly leads to more levels, Gyorunton can theoretically progress faster than any other character. This makes it useful for shorter stages and Hurry mode.\r\n- 108 Bocce This content requires the Legacy of the Moonspell DLC to access is highly recommended as Gyorunton's passive Curse gain will allow the damage to increase by up to 11 times.\r\n- Because Gyorunton has an uncapped Curse bonus but no other scaling stats, it can be difficult to keep up with the ever-increasing power and number of enemies. There are a few ways to try to get around this:\r\n- Use Arcana that scale with level, like  Boogaloo of Illusions (XVIII), to keep Gyorunton's weapons relevant against bigger and tougher hordes.\r\n- Run weapons and Arcana that scale with Curse, like 108 Bocce,  Nightmare This content requires the Ode to Castlevania DLC to access,  Crissaegrim Tip This content requires the Ode to Castlevania DLC to access,  Ophion This content requires the Tides of the Foscari DLC to access (its chance to instantly kill is based on Curse, despite the game not telling you this) and  Twilight Requiem (II) (which notably applies to  Tri-Bracelet, evolving from Gyorunton's starting weapon).\r\n- Wicked Season (XIII), Nightmare, Ophion, Boogaloo of Illusions and ideally  Gemini (I) results in a character that will mow down most non-boss enemies long before they can approach thanks to the boosted Curse making a one-hit kill from Ophion almost a foregone conclusion, however, it comes at the expense of being able to see your surroundings at all due to Ophion + Boogaloo covering the screen in darkness.\r\n- Paranormal Scan This content requires the Emergency Meeting DLC to access lets Gyorunton scale in power throughout the game.\r\n- Run a  Divine Bloodline (IX) build, as these offer have some of the highest damage outputs and scaling in the game. Gyorunton's somewhat high starting Health has decent synergy with Divine Bloodline, although it lacks armor or a relevant starting weapon.\r\n- Once Gyorunton's build is complete, Game Killer (0) can be used to lock its level, which stops the Curse scaling.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "curse",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -1668,9 +2270,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Death Spiral"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "A blasphemous mockery.",
-      "notes": "- Mask of the Red Death starts with +155  Max Health, +100%  Move Speed, and +20%  Might.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 155,
         "recovery": 0,
@@ -1697,9 +2302,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Mazo Familiar"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon gets stronger when levelling up. Revivals also affect Amount. Receives a follower after reviving.",
-      "notes": "- Bats Bats Bats starts with +80  Max Health, +80%  Move Speed, and +2  Revival.\r\n- Bats Bats Bats's starting weapon,  Mazo Familiar, which begins at 10 base damage (instead of the normal 40), gains +1 base damage every level. There is no cap to this bonus.\r\n- Revival increases  Amount by 1. If the Revival is consumed, this bonus is lost. Because Bats starts with +2 Revivals, it will always have at least +2 Amount right out of the gate.\r\n- When the character dies and revives, another Bats Bats Bats appears on the screen. This follower moves about randomly but will not leave the screen. Followers have  Pako Battiliar which functions as normal, spawning bats when they are hit. They can also collect  Experience Gems which are given to the player. Every time the player levels up, all followers gain random stat bonuses. If a follower dies it retreats into a coffin to regenerate health, once it is full, the coffin opens and the follower comes out again.\n- Because Bats Bats Bats gets scaling Amount based on Revival and gains an extra follower for each time it revives, it is almost mandatory to grab  Awake (IV) and  Tirajisú to acquire the most revivals possible.  Paranormal Scan This content requires the Emergency Meeting DLC to access can also give extra revivals over time. With the Revival and Amount upgrades purchased from the shop and Awake as a starting Arcana, Bats can start with an awe-inspiring +7 Amount right out of the gate.\r\n- Divine Bloodline (IX) can be built around to maximize Mazo Familiar damage.  Hollow Heart is also a decent pickup for the same reason.\r\n- The character's massive speed makes it very easy to explore most stages, although  Mask of the Red Death remains faster.\r\n- The followers are considered like teammates in Co-op mode, they can benefit from the healing of  Lifesign Scan This content requires the Emergency Meeting DLC to access/ Paranormal Scan This content requires the Emergency Meeting DLC to access and their deaths can trigger the \"Dead Body Reported\" screen nuke of  Report! This content requires the Emergency Meeting DLC to access/ Emergency Meeting This content requires the Emergency Meeting DLC to access by Bats Bats Bats.\r\n- Phieraggi scales well with Bats Bats Bats, as it gains amount from both the revivals and the extra amount bonuses.\r\n- Flash Arrow This content requires the Tides of the Foscari DLC to access pairs well with Bats Bats Bats, due to being able to get massive damage boosts from the high amount it can have.\r\n- If possible, Bats Bats Bats should try to pick up an Operation Guns weapon to be able to access  Weapon Power-Up This content requires the Operation Guns DLC to access, thus gaining more revival and amount.\r\n- Bats Bats Bats is a great choice for Lake Foscari and Abyss Foscari, as it can use the  Academy Badge This content requires the Tides of the Foscari DLC to access to gain even more revivals and amount.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -1726,9 +2334,31 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fuwalafuwaloo"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 100.",
-      "notes": "- Rose starts with +20%  Move Speed, -90%  Might, -80%  Growth, and +100  Charm. She gains +10%  Might every 12 levels until level 108, +10% Growth every 12 levels from level 36 to 84 and +15% Growth on levels 96 and 108.\n- At first glance, Rose might not seem like a strong character, with her reduced initial stats, lack of endless scaling, and seemingly detrimental ability. However, she starts with the powerful Fuwalafuwaloo, which provides a lot of healing that should easily keep her alive against the hordes she attracts. Once Rose finally sheds her stunted Growth, she can skyrocket in level thanks to the massive amount of enemies, potentially allowing her to have very powerful weapons with Limit Break enabled.\r\n- It is also a good idea to increase her Might and Growth by picking  Spinach and  Crown earlier.\r\n- Rose has the unique ability to increase the number of incoming enemies without boosting the  Curse stat. This means that while she will always face massive hordes, the enemies will not be any stronger or tougher than normal, allowing them to be wiped out with relative ease.\r\n- Due to the amount of enemies Rose will constantly be facing, it is recommended to favor weapons that can cover the whole screen.  Gatti Amari can be an interesting pick as Rose's Fuwalafuwaloo can outheal its self-damage. Picking the Arcana  Boogaloo of Illusions (XVIII) early on will help massively boost Rose's area in the late game.\r\n- Wicked Season (XIII) is a suitable first Arcana for Rose. In addition to the general benefits it provides, it can help Rose work around her early-game Growth limitations by exploiting the double Growth window. Double Curse is rarely a problem for Rose, even in the early game, as Fuwalafuwaloo should usually be sufficient to keep her alive.\r\n- Sarabande of Healing (VI) is a solid pick for weaponizing the healing provided by Fuwalafuwaloo.  Bloody Tear can be run at the same time for even more health regain.\r\n- Slash (XVI) massively boosts the power of Fuwalafuwaloo very early on, but it is worth noting that many of other weapons it applies to may not be optimal picks for dealing with dense hordes.\r\n- Sole Solution and  Ashes of Muspell are two of the best weapons Rose can pick up, as they grow in power based on the number of enemies killed. Due to Rose's ability, she can rack up more kills than any other character.\r\n- Easily the best way to cap out Rose's build is with  Game Killer (0). This is because the dense hordes she creates drop absurd amounts of experience gems for Rose to weaponize. If Boogaloo of Illusions (XVIII) was picked early, each individual gem explosion can cover most of the screen, translating to an absurd damage output.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.1,
+          "interval": 12,
+          "max": 0.9
+        },
+        {
+          "key": "growth",
+          "value": 0.1,
+          "interval": 12,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.15,
+          "interval": 12,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1752,10 +2382,84 @@ window.VS_DATA = {
       "name": "Torino",
       "icon": "assets/icons/characters/torino.png",
       "base_name": "Torino",
-      "starting_weapons": [],
+      "starting_weapons": [
+        "Eskizzibur"
+      ],
+      "hidden_items": [
+        "Eskizzibur"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Evolves into JoyaTauro at lv16, and into AccumulaTori at lv36. Retaliates.",
-      "notes": "- Torino starts with a hidden weapon akin to  Eskizzibur This content requires the Tides of the Foscari DLC to access. This can not evolve into  Legionnaire This content requires the Tides of the Foscari DLC to access and only does retaliatory damage.\n- Additionally, Torino can transform into 2 alternate forms, JoyaTauro at level 16, and AccumulaTori at level 36.\n- Upon morphing into Joya Tauro, Torino heals to full HP, loses 20%  Move Speed, and gains 1.35x  Max Health, +1  Armor, +35%  Might, +20%  Duration, and +35%  Area. Torino's hidden weapon will also gain 1.65x Base Damage.\n- Upon morphing into AccumlaTori, Torino heals to full HP, loses another 20%  Move Speed, and gains 1.8x  Max Health, +2  Armor, +35%  Might, and +20%  Duration. Torino's hidden weapon will gain another +0.65x Base Damage, totaling to 2.3x Base Damage.\n- Torino can destroy light sources by touching them.\n- Torino can make incredible use of  Divine Bloodline (IX) with his built-in method of retaliation.\r\n- Because of this, it might be a good idea to try to build up as much health as possible through retaliation before leveling up to transform, in order to gain as much value from the health multiplier as possible.\r\n- Other notable ways of increasing Max Health with Divine Bloodine include  Mazo Familiar,  Legionnaire This content requires the Tides of the Foscari DLC to access, and  Dark Iron Shield This content requires the Ode to Castlevania DLC to access.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "move_speed",
+          "value": -0.2,
+          "interval": 16,
+          "max": -0.2
+        },
+        {
+          "key": "max_health",
+          "value": 0.35,
+          "interval": 16,
+          "max": 0.35
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "interval": 16,
+          "max": 1
+        },
+        {
+          "key": "might",
+          "value": 0.35,
+          "interval": 16,
+          "max": 0.35
+        },
+        {
+          "key": "area",
+          "value": 0.35,
+          "interval": 16,
+          "max": 0.35
+        },
+        {
+          "key": "duration",
+          "value": 0.2,
+          "interval": 16,
+          "max": 0.2
+        },
+        {
+          "key": "move_speed",
+          "value": -0.2,
+          "interval": 36,
+          "max": -0.2
+        },
+        {
+          "key": "max_health",
+          "value": 0.8,
+          "interval": 36,
+          "max": 0.8
+        },
+        {
+          "key": "armor",
+          "value": 2,
+          "interval": 36,
+          "max": 2
+        },
+        {
+          "key": "might",
+          "value": 0.35,
+          "interval": 36,
+          "max": 0.35
+        },
+        {
+          "key": "duration",
+          "value": 0.2,
+          "interval": 36,
+          "max": 0.2
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1780,11 +2484,16 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/scorej-oni.png",
       "base_name": "Scorej-Oni",
       "starting_weapons": [
-        "(Hidden) Lightning Ring"
+        "Lightning Ring"
       ],
+      "hidden_items": [
+        "Lightning Ring"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a hidden Lightning Ring every 8 levels (max 6) that also fires when losing health.",
-      "notes": "- Scorej-Oni starts with +8  Max Health, -20%  Movement Speed, and +20%  Area.\r\n- It starts with a hidden  Lightning Ring and gains an additional one every 8 levels, up to a max of 6 at level 40, without taking up any weapon slots; the actual weapon can still be obtained from level-up choices, allowing the player to have a total of 7 Lightning Rings. After that, each of the hidden weapons is upgraded after every 12 levels, 7 times, up to level 124, where all rings reach their maximum level at level 8; however, they do not gain Limit Break bonuses. The hidden Lightning Rings also fire whenever the character takes any form of damage.\n- Scorej-Oni is incentivized into taking damage with its high Max Health, ideal for builds that focus on dealing retaliatory damage. Consequently,  Divine Bloodline (IX) can be a potent Arcana with this character due to its effects that complement the character's traits.\r\n- It is important to note that the lightning strikes fired after receiving damage aren't considered retaliatory damage; therefore, it won't activate Divine Bloodline's effect of increasing the character's max HP whenever an enemy is killed in retaliation.\r\n- Twilight Requiem (II) is a must-pick Arcana, as it buffs Lightning Rings' destructive power greatly.\r\n- Muramasa's This content requires the Legacy of the Moonspell DLC to access health drain effect, which counts as damage to the character, complements Scorej-Oni's hidden Lightning Rings' ability to fire every time the player takes damage, enabling the hidden weapons to fire rapidly without needing direct enemy hits.\r\n- This effect is further amplified by setting the weapon limit to 1 before starting a run, choosing the  Silent Old Sanctuary (XX) Arcana, and then also getting  Empty Tome. The low cooldown resulting from the reduction bonuses allows Scorej-Oni to become very powerful due to Muramasa's health drain becoming faster and, in turn, making the hidden weapons fire even quicker. However, it is essential to secure an effective way to recover or increase health when attempting this strategy, as the rapid health drain may be great enough to outstrip the recovery rate of the character, eventually killing the player.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 8,
         "recovery": 0,
@@ -1811,9 +2520,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "NO FUTURE"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon grows stronger when levelling up. Gains +1% Curse every level. Ignores Walls.",
-      "notes": "- Gyoruntin starts with +30  Max Health, +3  Armor, +80%  Move Speed. It gains +1%  Curse every level. There is no cap on this bonus.\n- Gyoruntin's starting weapon NO FUTURE, begins at 5 base damage (instead of the normal 30) and gains +1 base damage every level. There is no cap to this bonus.\n- Gyoruntin flies over the terrain and thus ignores any walls, obstacles, and terrain gaps.\n- Gyoruntin is one of the best users of the  Divine Bloodline (IX) arcana in the game. Thanks to its high starting armor, as well as its powerful starting weapon that naturally retaliates, Gyoruntin can quickly start snowballing into an unstoppable juggernaut. Its scaling  Curse is more of a blessing on this build, as it feeds more and more enemies into Gyoruntin's retaliatory attacks, scaling its  Max Health.\r\n- Limited weapon runs using  Silent Old Sanctuary (XX) and Limit Breaking  NO FUTURE are highly recommended, due to the level scaling base damage of NO FUTURE.\r\n- Crown is highly recommended to maximize Gyoruntin's leveling and thus its Curse stat and the power of NO FUTURE.\r\n- 108 Bocce This content requires the Legacy of the Moonspell DLC to access is recommended as Gyoruntin's passive Curse gain will allow the damage to increase by up to 11 times.\r\n- Thanks to having high speed and ignoring walls, Gyoruntin can shine on exploration-heavy maps like Lake Foscari or Abyss Foscari.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "curse",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -1840,9 +2559,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Kyra-Stones"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Gets a Survarot Multiplier equal to Log10 Golden Eggs (max x10).",
-      "notes": "- Upon starting the run, Secretino will be granted a draft of  Survarot, giving him a selection of various bonuses. Secretino is also always able to rarely find  Survarot cards from Light Sources.\n- Depending on the  Golden Eggs Secretino possesses, he will gain a Survarot multiplier in accordance to a base 10 logarithm. This multiplier increases how many level ups Survarot cards receive each time the player gains a level.\n- For example, if Secretino possesses 1,000,000 Golden eggs, he will have a Survarot multiplier of 6. Every time Secretino levels up, each Survarot card will gain 6 levels. This stacks additively with the  edition of these cards, which grants a multiplier of 4.\n- To receive the maximum multiplier, Secretino must possess 10,000,000,000 Golden Eggs, or 1E+10, costing a total of  100,000,000,000,000.\n- The damage of Secretino's  Kyra-Stones always equals the player's level.\n- This leads to a decrease in damage from levels 1 to 79, but no change compared to using the weapon on other characters at level 80 and above. At level 80, the weapon matches its typical damage, and the scaling acts as normal after level 81.\n- Secretino has  Zi'Appunta Belpaese's ability to where he can also break Light Sources by touching them.\n- Secretino makes great use of  Greatest Jubilee, due to its ability to spawn light sources and grant Secretino more Survarots.\r\n- The player does not have to enable  Golden eggs to make use of Secretino's Survarot multiplier. Instead, the Golden Eggs just need to be possessed by him.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1869,9 +2591,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Photonstorm"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon grows stronger when levelling up. Gets more fans from defeating a large amount of enemies.",
-      "notes": "- Space Dette starts with +40%  Move Speed.\r\n- Space Dette's starting weapon  Photonstorm begins at 10 base damage (instead of the normal 25) and gains +10 base damage every 10 levels starting at level 20. There is no cap to this bonus.\r\n- After killing a certain number of Enemies, Space Dette will spawn a \"fan\" follower that will either: Follow enemies, Follow the player, Move opposite to the player's movement, standing still otherwise, Stand still.\r\n- Fans spawned include  Moon Rabbits and  Moon Ducks.[1] Each fan starts with a  Phas3r. When Space Dette levels up, each fan will receive a copy of  Empty Tome,  Duplicator, or  Clover. Further levels will level up these Weapons and Passives. Fans can collect  Experience Gems for the player.\r\n- Fans are spawned upon reaching the following numbers of total enemies defeated: 100; 250; 500; 1000, Once the player has reached 1000 kills, fans will spawn for every 1000 kills (2000, 3000, etc.), until 10000 kills; 10000, Once the player has reached 10000 kills, fans will spawn for every 10000 kills (20000, 30000, etc).\r\n- This will continue until the player reaches 30 followers at 180000 kills. After this point, no more followers will spawn.\n- Wicked Season (XIII) is Space Dette's most important Arcana, since it scales three stats she needs: Growth to increase the damage of her starting Photonstorm, Curse to rack up a high number of kills, and Luck to improve the chance of firing more Photonstorm projectiles.\r\n- Like most of the characters with a starting weapon that scales with no cap, Space Dette can run a very powerful limited weapons build with Silent Old Sanctuary (XX) and Limit Break.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1898,9 +2623,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Silver Wind"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health.",
-      "notes": "- Miang starts with +20  Max Health, +1  Recovery, and +20%  Move Speed. Miang gains +0.2 Max Health each time she overheals. There is no cap on this bonus.\r\n- Miang also multiplies healing from all sources directly based on Recovery, on top of its usual multiplier which can be ignored by some form of healing like  Gold Coins with Disco of Gold (XV).\n- Miang is incentivized to build sources of healing in order to consistently trigger her overheal bonuses. Her primary weapon helps, but other healing sources, like  Muramasa, are also recommended. Since her ability does not require reaching a specific overheal threshold, fast sources of minor healing are preferable, but  Paranormal Scan is never a bad pick.\r\n- Bloody Tear and  Fuwalafuwaloo are very good weapons for Miang for this reason, as they have a high fire rate and the healing effect occurs upon landing a critical hit rather than killing an enemy.\r\n- Greatest Jubilee has a chance to spawn  Floor Chicken from the Light sources it creates, making it a useful tool.\r\n- Hollow Heart and  Metaglio Left can further boost Miang's health. It is recommended to pick these later into a game, though, since their effect improves based on how much health Miang already has.\r\n- The last part of Miang's toolkit consists of turning her high health into massive damage with  Mazo Familiar and  Aurablaster Tip.\r\n- Miang can also run a freezing build with  Crystal Cries (XII). In addition to helping her scale her Max Health even further, this also improves her Recovery, which further feeds into her healing and makes her very difficult to take down.\r\n- Miang can be a powerful user of  Sarabande of Healing (VI) thanks to having some of the best healing in the game, especially when combined with Crystal Cries.\r\n- Disco of Gold (XV) can be an extremely powerful arcana to use with Miang, as it makes the most common pickup, coins, into potential overhealing sources. This is even better when a Gold Fever is triggered, which can raise her Max Health by dozens, if not hundreds, of points in a very short amount of time.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 1,
@@ -1927,9 +2655,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Four Seasons"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Becomes stronger and invincible for a fixed interval after defeating a large amount of enemies.",
-      "notes": "- Menya starts with -20  Max Health, +10%  Might, -10%  Cooldown, +10%  Luck, and +8  Banish.\r\n- Menya enters a boosted state upon defeating a specific amount of enemies. When this bonus is triggered, all enemies are erased from the screen with the effects of the  Rosary; She gains a level 1  108 Bocce which is only active during the boosted duration. While inside this state, she cannot be damaged, gains +200% Might, -20% Cooldown, +50%  Curse, and +100% (up to 300% total)  Move Speed (to prevent her from moving too fast). This remains active for 30 real seconds (60 in-game seconds if hurry mode is active).\r\n- Menya's boosted state is triggered upon reaching the following numbers of total enemies defeated: 500, 1,000, 2,000, 3,000, 5,000, 7,000, 10,000, 15,000; After this, the bonus will continue to trigger every multiple of 10,000 enemies defeated (20,000, 30,000, 40,000, 50,000, etc).\r\n- The game only checks to see if the player has reached the next number needed when the bonus is not active. For example, say the player was in a bonus triggered by defeating 500 enemies. If she defeated 1,000 total enemies with five seconds remaining in her current bonus, the new bonus would not trigger for five seconds. This guarantees that all bonuses last their full duration.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -20,
         "recovery": 0,
@@ -1956,9 +2687,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Summon Night"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with hidden Night Sword. Morphs into a stronger version when his base weapon evolves.",
-      "notes": "- Syuuto starts with +50  Max Health, +2  Armor, -20%  Move Speed, +50%  Might, -30%  Speed, -30%  Area, and +50%  Curse.\r\n- Once his weapon evolves into  Echo Night, he transforms into a stronger form with +100 Max Health, +2 Armor, +40% Movement Speed, +30% Projectile Speed, and +30% Area, bringing him to 250 Max Health, +4 Armor, +20% Movement Speed, and negating his Projectile Speed and Area penalties. He gains +1% Might every level. There is no cap on this bonus.\r\n- He starts with a hidden  Night Sword that can only retaliate without taking up any weapon slots and the weapon version can still be offered. It is upgraded every 10 levels starting at level 20, up to level 80 when it is maxed at level 8.\r\n- Defeating 100,000 enemies in a single run with him unlocks Megalo Syuuto as playable character.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -1985,9 +2719,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Mirage Robe"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Ignores weapons cooldown. Weapons fire at a fixed interval when moving.",
-      "notes": "- Babi-Onna starts with +10  Reroll. She ignores the  Cooldown stat, but poses while moving, using one weapon each time she poses. The faster she moves, the lower the Cooldown will be for every weapon the player has.\n- Due to Babi-Onna's unique firing patterns, most weapons do not synergize well with her. In order to be effective, she requires powerful weapons with long cooldowns and big effects.  Santa Water/ La Borra,  Four Seasons/ Godai Shuffle,  Summon Night/ Echo Night,  Shadow Servant/ Ophion,  Science Rocks/ Rocket Science are strong picks.\r\n- Babi-Onna can fire the  Pentagram/ Gorgeous Moon,  Troll Bomb, and  SpellStrom's singularity faster than any character in the game. If using Pentagram, it is best to wait for enemies to move close to your Babi-Onna before moving, so you can quickly pick up experience gems before they are erased. You will want to pick  Clover before Pentagram for  Luck and evolve Pentagram into Gorgeous Moon as soon as possible.\r\n- The unique nature of her cooldown makes  Wings a must-pick item, since higher speed allows her to fire her weapons faster. Conversely, the normally prized  Empty Tome is completely worthless to Babi-Onna, since she completely ignores Cooldown.\r\n- Due to Babi-Onna's only using a single weapon at a time, she can greatly benefit from single weapon runs or picking only a few strong weapons rather than collecting all six weapons.\r\n- Paranormal Scan is an extremely strong weapon with Babi-Onna, as she can use it very quickly to get high amounts of stat boosts. It is best to pick  Lifesign Scan and evolve it as early as possible to maximize this benefit.\r\n- Sword Brothers can be used to become permanently invincible very early into the game.  Soul Steal can also be effective, although it takes more time to kill bosses than  Troll Bomb.\r\n- On the other end of the spectrum, Babi-Onna and  Alucard Shield have possibly one of the worst synergies in the game. This is due to the fact that  Alucard Swords and the rest of the absorbed weapons do so by becoming Hidden weapons, which cannot by activated by Babi-Onna's movement. While the shield itself does high damage and will still be triggered, the six (or more) evolved weapons that were absorbed will effectively be lost for the rest of the run.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2014,9 +2751,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "108 Bocce"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Area temporarily increases at fixed intervals.",
-      "notes": "- McCoy-Oni starts with +8  Max Health, +1  Armor, and +20%  Growth. His  Area temporarily increases by +150% every second.\n- Since the Area increase effect uses the sineArea function,  Boogaloo of Illusions (XVIII) cannot override this effect. However, McCoy-Oni can still benefit from the Area increase every level.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 8,
         "recovery": 0,
@@ -2041,11 +2781,16 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/megalo_menya_moonspell.png",
       "base_name": "Megalo Menya Moonspell",
       "starting_weapons": [
-        "(Hidden) 108 Bocce"
+        "108 Bocce"
       ],
+      "hidden_items": [
+        "108 Bocce"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Cannot be damaged, but disappears after reaching the current Time Limit. Starts with hidden 108 Bocce.",
-      "notes": "- Megalo Menya starts with -20  Max Health, +100%  Move Speed, +100%  Might, -20%  Cooldown, +10%  Luck, and +108  Banish. She cannot be damaged at all but her run ends as soon as the Time Limit is reached.\r\n- She starts with  108 Bocce without taking up any weapon slots and the weapon versions can still be offered. It is upgraded every 10 levels starting at level 20, up to level 80 when it is maxed at level 8.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -20,
         "recovery": 0,
@@ -2072,9 +2817,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Night Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "notes": "- Megalo Syuuto starts with +150  Max Health, +2  Armor, +20%  Move Speed, +50%  Might, +50%  Greed, and +50%  Curse. He gains +1%  Might every level. There is no cap on this bonus.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": null,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 150,
         "recovery": 0,
@@ -2101,9 +2856,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Mille Bolle Blu"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
-      "notes": "- Gav'Et-Oni starts with +20%  Move Speed. They gain +1  Amount every 20 levels until level 80. The maximum Amount gained this way is +4.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2130,9 +2895,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "SpellString"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellStream at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
-      "notes": "- Eleanor starts with -10  Max Health, +20%  Move Speed, +25%  Growth, and +2  Reroll.\n- Upon reaching level 10, 20, and 30,  SpellStream,  SpellStrike, and  Academy Badge will spawn underneath her respectively.\n- Casting the spell \"starpupil\" in the  Forbidden Scrolls of Morbane unlocks two alternative \"skins\" that changes Eleanor's starting weapon to SpellStream or SpellStrike. Her passive bonus at level 10 and 20 are also adjusted accordingly; starting with SpellStream spawns SpellStrike then SpellString, while starting with SpellStrike spawns SpellString then SpellStream.\n- Received weapons from Eleanor's passive effect spawn on the ground, and therefore can be picked up after the max weapon limit, allowing Eleanor to get more than six weapons. This is very useful for uniting them later into  SpellStrom without having to rely on levelling up to get all three weapons and taking up weapon slots in the meantime. As a result, gathering all of a player's desired weapons early instead of levelling them up can be beneficial, as this minimizes the amount of time the player has to wait to fill out their weapon slots.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -10,
         "recovery": 0,
@@ -2159,9 +2927,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "SpellStream"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellStrike at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
-      "notes": "- Eleanor starts with -10  Max Health, +20%  Move Speed, +25%  Growth, and +2  Reroll.\n- Upon reaching level 10, 20, and 30,  SpellStream,  SpellStrike, and  Academy Badge will spawn underneath her respectively.\n- Casting the spell \"starpupil\" in the  Forbidden Scrolls of Morbane unlocks two alternative \"skins\" that changes Eleanor's starting weapon to SpellStream or SpellStrike. Her passive bonus at level 10 and 20 are also adjusted accordingly; starting with SpellStream spawns SpellStrike then SpellString, while starting with SpellStrike spawns SpellString then SpellStream.\n- Received weapons from Eleanor's passive effect spawn on the ground, and therefore can be picked up after the max weapon limit, allowing Eleanor to get more than six weapons. This is very useful for uniting them later into  SpellStrom without having to rely on levelling up to get all three weapons and taking up weapon slots in the meantime. As a result, gathering all of a player's desired weapons early instead of levelling them up can be beneficial, as this minimizes the amount of time the player has to wait to fill out their weapon slots.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -10,
         "recovery": 0,
@@ -2188,9 +2959,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "SpellStrike"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellString at Level 10 and SpellStream at Level 20. Receives Academy Badge at Level 30.",
-      "notes": "- Eleanor starts with -10  Max Health, +20%  Move Speed, +25%  Growth, and +2  Reroll.\n- Upon reaching level 10, 20, and 30,  SpellStream,  SpellStrike, and  Academy Badge will spawn underneath her respectively.\n- Casting the spell \"starpupil\" in the  Forbidden Scrolls of Morbane unlocks two alternative \"skins\" that changes Eleanor's starting weapon to SpellStream or SpellStrike. Her passive bonus at level 10 and 20 are also adjusted accordingly; starting with SpellStream spawns SpellStrike then SpellString, while starting with SpellStrike spawns SpellString then SpellStream.\n- Received weapons from Eleanor's passive effect spawn on the ground, and therefore can be picked up after the max weapon limit, allowing Eleanor to get more than six weapons. This is very useful for uniting them later into  SpellStrom without having to rely on levelling up to get all three weapons and taking up weapon slots in the meantime. As a result, gathering all of a player's desired weapons early instead of levelling them up can be beneficial, as this minimizes the amount of time the player has to wait to fill out their weapon slots.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -10,
         "recovery": 0,
@@ -2217,9 +2991,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Eskizzibur"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains temporary Armor bonus after getting damaged. Receives Academy Badge at Level 30.",
-      "notes": "- Maruto starts with +20  Max Health, +1  Armor, +20%  Might, and +10%  Curse.\r\n- Maruto gains +1 Armor after being damaged, resetting every 10 seconds, getting hit again extends the reset timer by 1 second.\r\n- Upon reaching level 30, an  Academy Badge will spawn underneath him.\n- Divine Bloodline (IX) is the most key Arcana on Maruto, as it synergizes well with his playstyle of boosting his armor upon taking damage. In addition, the evolved form of his weapon, Legionnaire, deals retaliatory damage, which works with Divine Bloodline. With a build optimized for dealing retaliatory damage, Maruto can reach health values in the dozens of thousands over the course of a game. Unlike  Cosmo, he does not have high regeneration, and will therefore be stuck at low health, massively powering up his attacks as a result of the Divine Bloodline bonus.\r\n- Muramasa's self-damage can help trigger Maruto's armor bonus at a rapid rate and keep it at the maximum of 50, massively increasing the output of Legionnaire and other retaliatory damage sources. In addition, it repeatedly triggers  Mazo Familiar, another key item in Divine Bloodline builds. Finally, its healing can help keep Maruto alive at a relatively low health threshold. Now that Muramasa's health drain no longer scales with max Health, this makes it a must-pick item for Maruto.\r\n- If using Muramasa, it is recommended to seal  Sole Solution. This is because both  Victory Sword, a fantastic retaliation weapon, and  Torrona's Box, which feeds more enemies into Maruto's meatgrinder, are both very desirable, but Sole Solution is actively counterproductive, because it provides windows where Maruto cannot take damage from Muramasa, causing his Armor to drop off.\r\n- Using  Crimson Shroud to limit the incoming damage to 10 can trivilise any content due to immense scaling, survivability and retaliatory damage.\r\n- Maruto is an excellent user of all items that increase Curse, as they give him even more targets to kill through retaliatory damage, and consequently more max health and power.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -2246,9 +3023,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Flash Arrow"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Luck-based Charge ability: fires a volley of Flash Arrows. Gains +1% luck every level. Receives Academy Badge at Level 30.",
-      "notes": "Charged while moving over 10 seconds affected by Luck, fire 7 Flash Arrows by stopping when fully charged",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "luck",
+          "value": 0.01,
+          "interval": null,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2275,9 +3062,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Prismatic Missile"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a Rosary when levelling up. Gets a temporary Might, Cooldown, and MoveSpeed bonus after reviving.",
-      "notes": "- Luminaire Foscari starts with +0.5  Recovery, +40%  Move Speed, +7  Revival, and +5  Banish.\n- Upon leveling up, Luminaire triggers a  Rosary. After reviving, she gets a temporary +200%  Might, -100%  Cooldown, and +60% (up to 300%)  Move Speed (to prevent her from moving too fast) bonus. This bonus lasts for (15+2*revived) seocnds, which means it starts at 17 seconds of bonus, then +2 seconds per Revival used. She also gets a longer invincibility frame each time she revives, based on the formula (4+2*revived) seconds..\n- With her extra Revivals,  Phieraggi and  Meal Ticket can be considered her best weapons.\r\n- Awake (IV) is a very strong Arcana on her due to her massive amount of revives. If things go poorly, over the course of many revives, Luminaire can grow into a formidable force, even with her mediocre base stats.\r\n- Wicked Season (XIII) helps scale Luminaire's  Growth and  Curse throughout the game, letting her level up more often and trigger more Rosaries. This means that other items that increase Growth, Curse and Charm ( Crown,  Skull O'Maniac,  Torrona's Box,  Karoma's Mana) can all be useful.\r\n- Luminaire can have at least 13 revives and a few more (+7 base, +1 from shop, +2 from  Tirajisú, +3 from Awake (IV); +2 if  Academy Badge is available, and +1 per  Weapon Power-Up if it is available, which can make it beneficial to pick up some Operation Guns weapons like  C-U-Laser/ Pronto Beam).\r\n- Despite her high movement speed, it is generally not recommended for Luminaire to move around the map a lot. This is because Luminaire wants to level up at a steady rate instead of letting XP gems gather into a single super-gem that would trigger multiple level-ups and thus Rosaries when that may not be necessary.  Attractorb is highly recommended.  Gorgeous Moon can gather XP gems to - Luminaire, but triggering a Rosary immediately after Gorgeous Moon's screen-clearing effect may be overkill.\r\nLuminaire can very easily run a Reaper-killing build, as her Rosary effect helps offset the early disadvantages of  Laurel and  Clock Lancet before they are evolved.\r\n- Vicious Hunger is not recommended, as it greatly affects leveling rate and prevents Luminaire from triggering Rosaries as often.\r\n- Seraphic Cry does not replace the rosary effect triggered by Luminaire leveling up with a soul purifier.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -2304,9 +3094,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Shadow Servant"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a Vacuum when levelling up. Once per life, triggers World Eater after receiving fatal damage.",
-      "notes": "- Genevieve starts with +20%  Move Speed, +50%  Greed, +50%  Magnet, and +5  Reroll.\n- Upon levelling up, Genevieve triggers a  Vacuum. Once per life, she triggers World Eater after receiving fatal damage, becoming invincible for 3 seconds, then killing every enemy on screen like the  Rosary, turning them into  Little Hearts to heal her.\n- Having a built-in vacuum effect allows Genevieve to be more mobile around the map than most other characters.\n- Genevieve has an effect that saves her from death once per life, but does not get any built-in revives like  Luminaire. Stacking  Awake (IV) Arcana,  Tiragisú and PowerUp bonus can allow her to eat the world up to seven times this way, essentially giving her the equivalent of 14 lives.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2333,9 +3126,25 @@ window.VS_DATA = {
       "starting_weapons": [
         "Shadow Servant"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "It will literally eat the world.",
-      "notes": "- Je-Ne-Viv starts with +150  Max Health, +5  Armor, +50%  Might, +50%  Greed, +50%  Magnet, and +7  Reroll. It gains +1%  Might and +0.5%  Curse every level. There is no cap on these bonuses.\n- It starts with  Insatiable without taking up any weapon slots.\n- Upon levelling up, Je-Ne-Viv triggers a  Vacuum. Once per life, it triggers World Eater after receiving fatal damage, becoming invincible for 2 seconds, then killing every enemy on screen like the  Rosary, and turning them into  Little Hearts. Unlike Genevieve, its World Eater can eat through wall tiles, letting the player walk out of bounds, the range being the ground tiles that turn black and smoky when being eaten. The range of this effect is based on the size of Insatiable, which is affected by Magnet. It also triggers World Eater every 6th level, which also physically increases the size of Je-Ne-Viv.\n- Upon reaching level 10, 20, and 30,  SpellString,  SpellStream, and  SpellStrike will spawn underneath it respectively.\n- Having a built-in vacuum effect allows Je-Ne-Viv to be more mobile around the map than most other characters.\r\n- Je-Ne-Viv has an effect that saves it from death once per life but ironically does not get any built-in revives like  Luminaire Foscari. Stacking  Awake (IV),  Tirajisú, and the  Revival PowerUp bonus can allow it to eat the world up to seven times this way, essentially giving it the equivalent of 14 lives.\r\n- The  Crown can help Je-Ne-Viv trigger its Vacuum effect more often.  Luminaire is a recommended weapon for the same reason.\r\n- If you wait until all of Je-Ne-Viv's weapon slots have been filled before taking the SpellString, SpellStream and SpellStrike it spawns, Je-Ne-Viv can have 9 weapons (7 once they fuse into  SpellStrom) instead of the normal 6.\r\n= Wicked Season (XIII) helps scale Je-Ne-Viv's Greed, and with it the damage of her hidden Insatiable aura, as well as its Growth for triggering World Eater more often.\r\n- Je-Ne-Viv has a very strange relationship with  Attractorb. It's an item Je-Ne-Viv should absolutely not need, as it triggers a Vacuum every level-up, but, until other ways of increasing Magnet are implemented, it is the only way (other than eggs) of increasing the range of Je-Ne-Viv's hidden Insatiable and the area of her map-destroying effect upon triggering World Eater. This is not necessarily worth dedicating a whole item to on your average run, but it may be worth picking if Je-Ne-Viv is building Hail from the Future (X), or on maps like Ode to Castlevania, which has plentiful Arma Dio and where Je-Ne-Viv's World Eater can be extremely useful for opening up shortcuts that most other characters may not have access to.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": null,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.005,
+          "interval": null,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 150,
         "recovery": 0,
@@ -2362,9 +3171,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Vicious Hunger"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains XP when picking up Gold Coins and Coin Bags. Starts with temporarily reduced Might.",
-      "notes": "- Sammy starts with +2  Recovery and -60%  Might. It gains +10% Might on levels 2, 3, 5, 8, 13, and 21.\n- Whenever Sammy picks up Coins, it will gain experience as well. The experience gained from coins bypasses Game Killer (0) multiplying  Growth by 0, which means it can still level up with the Arcana. The conversion of gold to experience is 1 to 1, multiplied by the stage gold multiplier,  Greed, and Growth.\n- The exception to this is gold obtained from Chests and Level ups, which does not grant experience.\nUpon reaching level 30, it triggers a Gold Fever automatically and switches the background music to play Happy Birthday once.\n- Sammy has longer Gold Fevers by multiplying its duration cap and duration extension from Gold pickups by 1.25.\n- Sammy modifies the gold Chance of  Vicious Hunger, setting it to a base of 0.165; it would have been between 0.005 to 0.01 based on the damage of Gatti Amari from eating Floor Chicken. Every level, its Vicious Hunger's goldChance will increase by +0.005 until a max of 0.65 at level 98. This chance is multiplied by  Luck to get the final chance of transmuting defeated enemies and pickups into gold. For reference, goldChance of 1 is 100% chance for gold transmutation.\n- Sammy is the best character for gold farming with all of its passive bonuses, almost guaranteeing each enemy drops gold coins when killed with Vicious Hunger, which allows it to level up quickly with all of the gold earned and sustain Gold Fevers.\n- If trying to play Sammy \"normally\" instead of focusing on Limit Breaking Vicious Hunger, it may be a good idea to avoid Wicked Season at least until Sammy has evolved its key weapons. This is because Wicked Season on Sammy results in exponential growth that quickly triggers an uninterrupted chain of continuous level-ups that may last for the entire level.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 2,
@@ -2391,9 +3203,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Party Popper"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
-      "notes": "- Rottin'Ghoul start with +20%  Move Speed. They gain +1  Amount every 20 levels until level 80. The maximum Amount gained this way is +4.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2420,9 +3242,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Report!"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses every time anyones weapon is brought to max level.",
-      "notes": "- Crewmate starts with +20%  Move Speed. Crewmate gains minor stat bonuses every time a unique weapon or passive item is upgraded to its maximum level, with no limit. This passive also includes maximum level items by teammates in multiplayer.\n- Active weapons will randomly provide one the following stats upon reaching max level, multiplied by the number of levels that weapon has: Might: +4%, Speed: +4%, Duration: +4%, Area: +4%; Passive weapons will provide the follow stats upon reaching max level, multiplied by the number of levels that passive has: Max Health: +20, Recovery: +0.1, Armor: +0.2, Move Speed: +8%, Cooldown: -3%, Amount: +0.2, Revival: +0.2, Magnet: +0.5, Luck: +5%, Growth: +5%\n- Crewmate gains bonuses any time they or a teammate upgrades a weapon to maximum level, making them stronger in multiplayer.\r\n- The Darkana  Hail from the Future (X) can provide up to 14 additional sources of stat increases due to the Candyboxes and Arma Dios it spawns.\r\n- In order to maximize on Crewmate's stat bonuses in single player, it is recommended to choose weapons that unite together to open new spaces in the inventory, as this will allow the stat boost to trigger more times per run. Relevant weapons include  SpellString,  SpellStream, and  SpellStrike (uniting into  SpellStrom);  Endo Gears,  Peri Pendulum,  Myo Lift, and  Epi Head (uniting into  Clock Tower);  Dextro Custos,  Sinestro Custos, and  Centralis Custos (uniting into  Trinum Custodem);  Dominus Anger,  Dominus Hatred, and  Dominus Agony (uniting into  Power of Sire); Peachone and Ebony Wings (uniting into Vandalier); Whip and Vento Sacro (uniting into Fuwalafuwaloo); and Phiera Der Tuphello and Eight The Sparrow (uniting into Phieraggi).\r\n- Weapons which evolve multiple times, such as the Bracelet or weapons from the Emerald Diorama DLC, are also recommended.\r\n- Due to upgrading a passive item also triggering Crewmate's effect, weapons from the Emergency Meeting DLC are very effective picks, as their evolution items are subsumed into the evolved weapon, opening up a new spot in the inventory.\r\n- By far the most key weapon for Crewmate is the  Penshin Fatcha, this weapon evolves an unlimited number of times, triggering Crewmate's ability every time one of its forms is upgraded to maximum level. Having this weapon alone mostly negates the need for any of the above weapons.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2449,9 +3274,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Lucky Swipe"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Chooses an extra passive weapon at level 2, 12, and 22",
-      "notes": "- Engineer starts with +20%  Move Speed, +20  Reroll, +20  Skip, and +20  Banish. Engineer can choose an extra passive item at levels 2, 12 and 22.\n- Engineer can guarantee getting the  Crown at level 2, which is very helpful for snowballing near the start of a run.\r\nIf Engineer is already full on passives upon reaching a level where they get an extra passive, the extra passive will be added to their inventory anyway, allowing them to go over the normal limit of 6 if they prioritize filling those slots early.\r\n- Due to its scaling Luck bonuses decreasing the effectiveness of Lucky Swipe, it is not recommended for Engineer to choose Wicked Season as an arcana unless the Lucky Swipe has been evolved.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2478,9 +3306,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Lifesign Scan"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can't be damaged or deal damage, but disappears after reaching the current Time Limit. Ignores walls.",
-      "notes": "- Ghost starts with +156  Max Health, +100%  Luck, and -100%  Might. Ghost cannot be damaged or deal damage directly, but their run ends as soon as the stage Time Limit is reached, even if Endless Mode is turned on.\n- Although the Might modifier can be raised on the character select screen through Powerups or Golden Eggs, it will return to -100% in-game and cannot be increased by any means outside of  Silent Old Sanctuary (XX).\n- Because Ghost has -100% Might, most weapons are completely useless on them, and will deal no damage to enemies. In order to defeat foes, Ghost must rely on sources of damage that are not based on Might.\r\n- Taking the Sarabande of Healing (VI), Divine Bloodline (IX), or Blood Astronomia (XXI) Arcana will allow Ghost to deal damage and level up right off the bat:\r\n- Sarabande of Healing doubles healing and pulses flat damage in a relatively large area equal to healing. Since this is only 1 damage per second with  Recovery Powerups, and can only be increased to 3 with  Pummarola, this Arcana is reliant on  Lifesign Scan for damage, which has likewise low dps until extensively upgraded.\r\n- The immediate cast of  Lifesign Scan after an upgrade can be chained alongside  Pentagram upgrades to help climb up Ghost's otherwise very slow early levels. Ghost's high  Luck can help prevent Pentagram from erasing experience gems and stop it from erasing them completely after reaching weapon level 5, assuming maximum Luck Powerups.\r\n- Sarabande of Healing works with Bloody Tear and Fuwalafuwaloo, which heal on critical hits, but it will not work with weapons that steal hearts on kill such as  Soul Eater, Celestial Dusting,  Silver Wind/Festive Winds and Night Sword/Muramasa, since Ghost will never be able to kill enemies with those weapons.\r\n- Disco of Gold (XV) can massively boost Ghost's damage through Sarabande of Healing. All sources of gold (ground pickups, chests and during Gold Fever) will heal for their respective amount and cause damage via Sarabande of Healing.\r\n- Darkana Crystal Cries (XII) increases health regeneration on killing frozen enemies. Wheter or not the increased regeneration out paces the grow of health of the enemies is another question.\r\n- It is highly recommended to turn on Random Events, as the Pet, Candybox, Rosary, Light Sources and Chicken Bonanza events are all massively helpful for getting through early levels, and none of the events are particularly harmful, with only the Summon II Molise event wasting your time.\r\n- Blood Astronomia gives Ghost's magnet itself (5 x  Amount) flat damage on a 2 second cooldown. Since it is contact-based instead of pulsed, Ghost can use it to mow through weak enemies, allowing for a much faster start than Sarabande. However, besides Duplicator and Clock Lancet, this damage cannot be improved.\r\nBlood Astronomia makes taking Mini Ghost earlier a better proposition. Although not in the list of affected weapons, Mini Ghost will generate damaging zones identical to those created by Clock Lancet. Unfortunately, while it improves how often Clock Lancet zones are created, Clock Lancet and mini Ghost's zones share a cooldown, and will not damage enemies standing in both twice.\r\n- It is not recommended to use  Garlic, Song of Mana, or  Laurel on Ghost, as Blood Astronomia takes player stats into account for these weapons, causing them to deal zero damage.\r\n- Divine Bloodline causes enemies to take (10 x  Armor) flat damage every time they attempt to hit Ghost, and gives flat damage to its listed weapons equal to (5 x Armor). It also gives Ghost 0.5  Max Health every time they defeat an enemy with retaliatory damage (which does not increase current health), and grants all weapons (Missing Health/10) flat damage.\r\n- Turning  Recovery Powerups off and avoiding  Duplicator will reduce the amount of healing Ghost receives, letting them maintain more of the damage bonus. (Although Duplicator might be optimal in the long run depending on chosen weapons)\r\n- Game Killer (0) is the only other Arcana that can directly do damage despite Ghost's limitations. However, it is useless at level 1 if the maps do not offer experience gems or rosaries to start the chain, and it is not recommended as your only method of defeating enemies.\r\n- Instant-kill weapons such as  Pentagram/ Gorgeous Moon, Ophion, Emergency Meeting, Just Vent, and Sanctuary offer other ways for Ghost to defeat enemies.\r\n- Note that Vicious Hunger and Unjust Ejection are not instant-kill weapons, and some enemies that are vulnerable to other instant-kills will not be killed or damaged by Just Vent.\r\n- Infinite Corridor in conjunction with any of the aforementioned damaging Arcana allow Ghost to eventually defeat enemies immune to instant kills, including bosses and Atlanteans, which may otherwise endure Ghost's damage until the time limit runs out.\r\n- Due to Ghost's extremely limited options outside of Divine Bloodline, it's worth noting that Celestial Voulge, Festive Winds, and Luminaire can offer utility by changing Orologions into Starry Heavens, lowering defense on hit, and increasing the value of experience gems and gold, respectively. Of these, only Luminaire is situationally recommended, and only in a six-weapon run, as these weapons offer no damage, all require evolving an otherwise useless weapon, and are not very effective compared to instant-kill weapons or  Infinite Corridor.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 156,
         "recovery": 0,
@@ -2507,9 +3338,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Just Vent"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Leaves behind excess body parts when damaged and may shift forms.",
-      "notes": "-Shapeshifter starts with +1  Recovery and +10%  Move Speed.\n- Shapeshifter leaves behind body parts when damaged and has a chance to change into one of 7 forms: Pinthot & Coldellini Form: Deals 10 damage to all enemies near the character. This damage is affected by  Area and  Might.; Space Apparition Form: Deals 10 damage to all enemies near the character. This damage is affected by  Area and  Might.; Meat Bean Form: Effect Unknown; Suspicio (Trash Bin Variant) Form: Effect Unknown; Suspicio (Lego Toy Variant) Form: Effect Unknown; Suspicio (Chicken Nugget Variant) Form: Effect Unknown; The body parts heal Shapeshifter Nino for 10-20 health. Shapeshifting gives Shapeshifter Nino +1  Max Health\n- Shapeshifter's excess body parts can be weaponized with Sarabande of Healing (VI), though its efficacy diminishes as the run progresses.\r\n- The body parts Shapeshifter drops act similar to Floor Chickens when interacting with Gatti Amari.\r\n- Weapons and Arcana that can retaliate such as  NO FUTURE,  Victory Sword,  Night Sword/ Muramasa, Eskizzibur/ Legionnaire, and Heart of Fire (XIX) can be used to capitalize off of the trigger condition of Shapeshifter's ability. Retaliatory attacks can be further enhanced with Divine Bloodline (IX).\r\n- The evolution of Shapeshifter's starting weapon,  Unjust Ejection, can capture more enemies in its area of effect by moving to the left or right in the opposite direction.  Wings can increase the number of ejected enemies, and horizontal weapons such as Whip/Vento Sacro/Fuwalafuwaloo, Glass Fandango/Celestial Voulge, and  Silver Wind/ Festive Winds can help cleave through incoming enemies while doing so.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -2536,9 +3370,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Clear Debris"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "May gain +1 Revival when anyone revives. Increases Armor and Recovery of nearby characters. Ignores walls.",
-      "notes": "- Guardian starts with +0.1  Recovery, +1  Armor, +20%  Move Speed, and +1  Revival. Guardian provides +1 Armor and +0.3 Recovery to nearby characters. They can walk through walls.\r\n- Guardian has a 50% chance, unaffected by  Luck, to gain +1 Revival when anyone spends a revival, including themselves.\n- In general, Guardian is a much stronger character in multiplayer due to their chance to gain a Revival when anyone revives and their Recovery and Armor benefits to nearby characters.\r\n- Since Revivals are essentially 50% more efficient on Guardian,  Awake (IV) is a strong choice for them, especially in multiplayer.\r\n- Phieraggi and  Meal Ticket are both powerful options for Guardian because of their 50% chance to effectively not consume a Revival when they normally would, and their potential for extra Revives in multiplayer.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.1,
@@ -2565,9 +3402,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Sharp Tongue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Becomes stronger and briefly invincible after defeating a large amount of enemies, or an ally.",
-      "notes": "- Impostor starts with +20  Max Health, +20%  Move Speed, and +20%  Might.\n- Imposter enters a boosted state upon defeating a specific amount of enemies. When this bonus is triggered, all enemies are erased from the screen with the effects of the  Rosary; They gain 6 level 1 Sharp Tongue which is only active during the boosted duration. While inside this state, they cannot be damaged, gains +200% Might, -20% Cooldown, and 80%  Move Speed. This remains active for 30 real seconds (60 in-game seconds if hurry mode is active).\n- Impostor's boosted state is triggered upon reaching the following numbers of total enemies defeated: 500, 1,000, 2,000, 3,000, 5,000, 7,000, 10,000, 15,000; After this, the bonus will continue to trigger every multiple of 10,000 enemies defeated (20,000, 30,000, 40,000, 50,000, etc).\n- The game only checks to see if the player has reached the next number needed when the bonus is not active. For example, say the player was in a bonus triggered by defeating 500 enemies. If they defeated 1,000 total enemies with five seconds remaining in her current bonus, the new bonus would not trigger for five seconds. This guarantees that all bonuses last their full duration.\n- Having more  Curse and  Charm are helpful for Impostor, as it allows them to enter their stronger form more often due to more enemies being present. Taking powerful weapons that benefit from Curse, like Ophion and Crissaegrim Tip, is a good idea so Impostor is able to keep up with the ramped up enemies. Wicked Season (XIII) is an easy way to get lots of Curse, so it's a strong pick for your first Arcana.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -2594,9 +3434,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Science Rocks"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets -10% Luck every 10 levels (max -90%). Can choose a per-level bonus every 10 levels (max 5 times).",
-      "notes": "- Scientist gets -10%  Luck every 10 levels until level 90, losing a maximum of 90% Luck.\n- Every 10 levels until level 50, the Scientist can choose to gain 1%  Might,  Area,  Speed,  Duration,  Recovery,  Growth,  Luck,  Greed,  Curse, or  Move Speed per level. There is no cap on these bonuses. Scientist can select different bonuses or stack the same bonus repeatedly, granting a potential maximum of +5% to any of these stats per level.\n- Despite the wording on the selection screen, selecting 1%  Recovery per level will grant 0.01 Recovery per level instead of a percentage modifier.\n- Scientist's low  Luck can increase the damage of  108 Bocce or Lucky Swipe.\r\n- Scientist's 5 per-level bonuses make them, along with  Blackmore, the highest-scaling character for nine of the ten stats they can select (the exception being Recovery, where they are outclassed by  Cosmo). This allows them to synergize with a variety of weapons and Arcana depending on the focus of their stat bonuses:\r\n- Potentially having the highest scaling  Might, Scientist can make particularly good use of  SpellStrike.\r\n- Potentially having the highest scaling  Area, Scientist can make particularly good use of  SpellStream,  Santa Water,  Lightning Ring, and so on.- Potentially having the highest scaling  Speed, Scientist can make particularly good use of  SpellString,  King Bible, Runetracer, and so on.\r\n- Potentially having the highest scaling  Duration, Scientist can make particularly good use of Runetracer, Bone,  La Robba, and so on.\r\n- Potentially having the highest scaling  Luck, Scientist may be able to make good use of Gatti Amari,  Muramasa,  108 Bocce, and so on. However, Luck-based weapons will be less effective near the beginning of a run due to Scientist's Luck penalty every 10 levels, only consistently staying above net negatives at level 30 after two Luck per-level selections at levels 10 and 20. This breakpoint is further delayed if Growth bonuses are prioritized.\r\n- Potentially having the highest scaling  Curse, Scientist can make particularly good use of  108 Bocce and Twilight Requiem (II).\r\n- Potentially having the highest scaling  Move Speed, Scientist can make particularly good use of Shadow Pinion, Vento Sacro, Celestial Dusting, and so on.\r\n- Regardless of build, selecting  Growth for some of Scientist's bonuses will result in enough additional levels that you will gain more of other stats than if you were to exclusively select another bonus. The value proposition of more Growth bonuses depends on how long you continue your run and how dense with enemies it is.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "luck",
+          "value": 0.1,
+          "interval": 10,
+          "max": 0.9
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2623,9 +3473,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Hats"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
-      "notes": "- Horse start with +20%  Move Speed. It gains +1  Amount every 20 levels until level 80. The maximum Amount gained this way is +4.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2650,11 +3510,16 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/megalo_impostor_rina.png",
       "base_name": "Megalo Impostor Rina",
       "starting_weapons": [
-        "(Hidden) Sharp Tongue"
+        "Sharp Tongue"
       ],
+      "hidden_items": [
+        "Sharp Tongue"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "I'm not the Impostor.",
-      "notes": "- Megalo Impostor Rina starts with +80  Max Health, +80%  Move Speed, +80%  Might, and -10%  Cooldown.\r\n- Additionally, Rina gains another hidden Sharp Tongue every 6 levels, up to 6 total. These Sharp Tongues will also be upgraded along with leveling up of the character.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -2681,9 +3546,31 @@ window.VS_DATA = {
       "starting_weapons": [
         "Long Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receives a bonus to Projectile Speed (max 50%) and to Might when defeating many enemies. Can find special pickups.",
-      "notes": "- Bill starts with +50  Max Health, +20%  Speed, +4  Skip, and +4  Banish.\r\n- Bill gains 2.5% Projectile Speed (up to 50%) and 1%  Might (with no cap) at specific kill thresholds. Bill will not gain Speed if Speed has reached its cap of +400%. Kill thresholds start at 100 total enemies killed, and increase by 1.3x whenever they are reached, meaning Bill will get stat bonuses at 100, 130, 169, 220, etc. total kills.\r\n- Since the kill threshold scales exponentially, it will drastically slow down. In a typical run, the player will not get much more than +30% to +33% Might. By +35%, the kill threshold is just under 1 million.\r\n- Bill can find special Operation Guns pickups from light sources.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "speed",
+          "value": 0.025,
+          "interval": 10,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.025,
+          "interval": 20,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.01,
+          "interval": 10,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -2710,9 +3597,31 @@ window.VS_DATA = {
       "starting_weapons": [
         "Short Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receive a bonus to Projectile Speed (max 50%) and to Cooldown (max-25%) when defeating many enemies. Can find special pickups.",
-      "notes": "- Lance starts with +50  Max Health, +20%  Speed, +4  Skip, and +4  Banish.\n- Lance gains 2.5% Speed and -1%  Cooldown each time he reaches a specific total kill threshold. He can not gain more than +50% and -25% of each stat, respectively. Kill thresholds start at 100 total kills and increase by 1.3x whenever a threshold is reached.\n- Lance's max Speed bonus will be reached at ~19005 kills, while his max Cooldown bonus will be reached at ~70565 total kills.\n- Lance can find special Operation Guns pickups from light sources.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "speed",
+          "value": 0.025,
+          "interval": 10,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.025,
+          "interval": 20,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.01,
+          "interval": 10,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -2739,9 +3648,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spread Shot"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Movement Speed increses Armour. Can find special pickups.",
-      "notes": "- Ariana starts with +20%  Move Speed, +20%  Speed, and +10%  Growth.\r\n- Ariana gains 1  Armor per 10% Move Speed, with a maximum of +10 Armor at +100% Move Speed.\r\n- This does not factor in Move Speed bonus from Stage modifiers and Hyper Mode.\r\n- Ariana will gain -5%  Cooldown for each \"Prototype\" evolution obtained, being  Prototype A,  Prototype B, and  Prototype C.\r\n- Ariana can find special Operation Guns pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2768,9 +3680,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "C-U-Laser"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gain a bonus to all stats after Reviving. Can find special pickups.",
-      "notes": "- Lucia starts with +1  Recovery, +20%  Move Speed, +1  Revival, and +8  Reroll.\r\n- When Lucia uses a Revival, she gains +20  Max Health, +0.1 Recovery, +0.2  Armor, +8% Movement Speed, +4%  Might, +4%  Speed, +4%  Duration, +4%  Area, -3%  Cooldown, +0.2  Amount, +0.2 Revival, +5%  Luck, +5%  Growth, and +1%  Greed for the rest of the run.\r\n- This will not happen if Lucia is a follower nor if she is revived via coffin in co-op mode. The latter prevents Lucia from easily scaling her stats infinitely, as co-op mode allows players to be revived even if they have 0 Revivals.\r\n- Lucia can find special Operation Guns pickups from light sources.\n- Lucia needs  Tirajisú in order to maximize her revivals and evolve her starting weapon.  Phieraggi, which also evolves using Tirajisú and scales with revivals, is highly recommended.\r\n- The Awake (IV) arcana is essentially a must-have as it provides several additional revivals and further scales stats upon revival. Assuming Revival is picked in the shop, the player has both Tirajisú and Awake, and a  Weapon Power-Up is picked to evolve Lucia's main weapon, she can revive up to 8 times.\r\n- Further Revivals are difficult to obtain on most maps.  Paranormal Scan can potentially represent a source of Revivals. On stages from Operation Guns, more Weapon Power-Ups can be obtained for further Revivals. In Abyss Foscari only, Lucia can get 2 extra Revivals by picking up the  Academy Badge on the ground.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -2797,9 +3712,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Firearm"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "When Health is low, Cooldown is decreased and Move Speed and Speed increase. Can find special Pickups.",
-      "notes": "- Brad starts with +100  Max Health and +20%  Might.\n- He gains up to -50%  Cooldown, +10%  Move Speed, and +10%  Speed based on missing percentage of Max Health:\n- Cooldown will decrease by -0.5% per 1% missing health.\nMove Speed and Speed will increase by +1% per missing 10% of max health. Note that this bonus only happens in intervals of 10% missing health - 15% missing health and 19% missing health will both provide the same bonus as 10% missing health.\n- Brad can find special Operation Guns pickups from light sources.\n- Picking up  Hollow Heart is an easy way to receive some of the low health bonuses without having to actually take any damage.\r\n- Thanks to his high starting health and being incentivized to stay at low health percentages, Brad can be a great user of  Divine Bloodline (IX). Not only does it grant a damage bonus, which synergises well with the other bonuses Brad receives at low health, but the extra health means that it's easier to stay at low percentages.\r\n- Weapons that cause health drain such as the  Muramasa This content requires the Legacy of the Moonspell DLC to access, the Dominus weapons, and  Power of Sire This content requires the Ode to Castlevania DLC to access are great for Brad.\r\n- Since so much of Brad's game plan involves self damage,  Wandering the Jet Black (XXI) can be a decent pick for him.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -2826,9 +3744,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Sonic Bloom"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Decreasing Cooldown increases Area. Can find extra explosive props and special pickups.",
-      "notes": "- Browny starts with +40  Max Health, +1  Armor, +40%  Move Speed, and +20%  Luck.\r\n- Browny gains 2%  Area per -1%  Cooldown, up to +100% additional Area at -50% Cooldown.\r\n- Browny can find Explosive Cars that deal 60 Base Damage to a large area around it when they are destroyed.\r\n- Browny can find special Operation Guns pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -2855,9 +3776,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Blade Crossbow"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Move Speed decreases Cooldown. Can find special pickups.",
-      "notes": "- Sheena starts with +1  Recovery, +40%  Move Speed, and +8  Reroll.\r\n- Sheena gains -1%  Cooldown per 2% Movement Speed.\r\n- Sheena can find special Operation Guns pickups from light sources.\n- Sonic Dash is a very potent weapon on Sheena; having  Wings maxed out and Rapidus Fio alone maxes her Cooldown bonus out.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -2884,9 +3808,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Prism Lass"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Armour increses Might. Can find special pickups.",
-      "notes": "- Probotector starts with +100  Max Health, +1  Armor, and +20%  Might.\r\n- He gains +10% Might per +1 Armor.\r\n- He can find special Operation Guns pickups from light sources.\n- Trinum Custodem is the most important weapon for Probotector, giving up to 20 Armor which translates to a massive +200% Might. With  Armor (item), that goes up to 250% Might.\r\n- Weapons that retaliate synergize with the plan of getting as much Armor as possible.  Divine Bloodline (IX) can also be a strong pick.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -2913,9 +3840,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Homing Miss"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Might increases Armour. Can find special pickups.",
-      "notes": "- Stanley starts with +100  Max Health, +1  Armor, and +20%  Might.\r\n- Stanley gains 1 Armor per 10% Might.\r\n- Stanley can find special Operation Guns pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -2942,9 +3872,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Diver Mines"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Projectile Speed increases Might. Can find extra explosive props and special pickups.",
-      "notes": "- Newt starts with +40  Max Health, +50%  Move Speed, and +20%  Luck.\r\n- Newt gains +1%  Might per +1%  Speed, up to a max of +900% Might.\r\n- He can find Explosive Barrels that deal 60 Base Damage to an area around it when they are destroyed. Multiple Explosive Barrels can sometimes spawn next to each other at the same time.\r\n- Newt can find special Operation Guns pickups from light sources.\n- Due to the uncapped nature of Newt's ability  Chaos in the Dark Night (V) also acts as a +1% Might every level.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -2971,9 +3904,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Metal Claw"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Greed and Curse increase Might. Can find special pickups.",
-      "notes": "- Bahamut starts with +100  Max Health, +2  Armor, +80%  Move Speed, +50%  Might, and +25%  Magnet.\n- Bahamut gains +1% Might per +1%  Greed or +1%  Curse. There is no cap on this bonus.\n- Bahamut can find special Operation Guns pickups from light sources.\n-  Wicked Season (XIII) is Bahamut's most key Arcana, as it provides him scaling Might throughout the game in addition to the other benefits it offers.\r\n- SpellStrike and consequently  SpellStrom are very powerful on Bahamut due to his high starting Might that only gets stronger over the course of the game.\r\n- Torrona's Box is highly recommended due to its impressive other benefits in addition to increasing Curse by 100%.\r\n- Having  Gemini (I) and  Nightmare will allow Bahamut to double the effects of the plague balls, easily allowing for Bahamut to reach maximum Might.\r\n- While Bahamut's is generally able to keep up with the high amount of enemies spawned by increased Curse due to his Might bonuses,  Sonic Whip This content requires the Ode to Castlevania DLC to access can be a useful tool as its chance to insta-kill also scales on Curse.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -2998,9 +3934,19 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/simondo_belmont.png",
       "base_name": "Simondo Belmont",
       "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Simondo says he doesn't even need guns. Gets more projectiles every 20 levels (max +4).",
-      "notes": "- Simondo gains +1  Amount every 20 levels until level 80. The maximum Amount gained this way is +4.\n-Simondo has an ability that spawns  Rapid Fire,  Barrier, and  Grenade pickups with base  Cooldown of 30 seconds, visually exploding them on the field. The rate of spawning the pickups is affected by the Cooldown stat. The amount of pickups it spawns is determined by  Amount, up to a maximum of 12 spawns at a time. The ability starts at 0 amount, which still spawns one pickup normally but requires +2 Amount from the player to start increasing the amount spawned. This ability also benefits from  Beginning (X) which provides +3  Amount per spawn.\r\n- Each pickup spawns a different distance away from the player, with Barriers spawning closest while Rapid Fires and Grenades spawning further away from the player.\r\nSimondo has a \"HP-Critical\" skill that activates as soon as his HP drops below 20% of his  Max Health, which triggers the ability immediately with 12 more item spawning. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\r\n- Simondo can find special Operation Guns pickups from light sources.\n- Due to the increase spawns of Grenades, it is possible to beat levels without using any weapons as Simondo. Although, he would still perform much better using weapons.\r\n- Without any weapons, Simondo gets another -8% Cooldown from  Silent Old Sanctuary (XX), however he gains more benefits from Beginning (X) as a starting Arcana.\r\n- Maximizing Cooldown will allow you to fully benefit from his bonuses.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3027,9 +3973,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Alchemy Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
-      "notes": "- Leon starts with +20  Max Health, +1  Armor, +1  Revival and +5  Reroll.\n- Leon receives a hidden  Svarog Statue at Level 5, levelling up whenever Leon's level reaches a multiple of 10.\n- Leon gains additional stats upon evolving the  Vampire Killer Whip, gaining +80  Max Health, +0.1  Recovery, +1  Armor, +1  Amount, +1  Revival, +10%  Move Speed, +10%  Might, +10%  Speed, +10%  Area, +10%  Luck, +10%  Growth, and -5%  Cooldown.\n- Leon can find special Ode to Castlevania pickups from light sources.\n- It is recommended to focus on getting  Vampire Killer as soon as possible to take advantage of Leon's enhanced stats.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3056,9 +4005,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
-      "notes": "- Leon starts with +20  Max Health, +1  Armor, +1  Revival and +5  Reroll.\n- Leon receives a hidden  Svarog Statue at Level 5, levelling up whenever Leon's level reaches a multiple of 10.\n- Leon gains additional stats upon evolving the  Vampire Killer Whip, gaining +80  Max Health, +0.1  Recovery, +1  Armor, +1  Amount, +1  Revival, +10%  Move Speed, +10%  Might, +10%  Speed, +10%  Area, +10%  Luck, +10%  Growth, and -5%  Cooldown.\n- Leon can find special Ode to Castlevania pickups from light sources.\n- It is recommended to focus on getting  Vampire Killer as soon as possible to take advantage of Leon's enhanced stats.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3085,9 +4037,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Sonic Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
-      "notes": "- Sonia starts with +40%  Move Speed and +10%  Luck. Every time she overheals by 8 health points or more, she triggers a  Rapid Fire, lasting for 10 seconds. This bonus can not be triggered more than every 5 seconds, but multiple instances of this bonus can be active at the same time.\n- Sonia can find special Ode to Castlevania pickups from light sources.\n- Sonia synergizes with weapons such as  Lifesign Scan and its Evolution  Paranormal Scan, which keep the ability nearly permanently active without the player needing to do anything. Bloody Tear and Fuwalafuwaloo also have a similar synergy, though rely on getting crits and as such aren't quite as powerful on her.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3114,9 +4069,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
-      "notes": "- Sonia starts with +40%  Move Speed and +10%  Luck. Every time she overheals by 8 health points or more, she triggers a  Rapid Fire, lasting for 10 seconds. This bonus can not be triggered more than every 5 seconds, but multiple instances of this bonus can be active at the same time.\n- Sonia can find special Ode to Castlevania pickups from light sources.\n- Sonia synergizes with weapons such as  Lifesign Scan and its Evolution  Paranormal Scan, which keep the ability nearly permanently active without the player needing to do anything. Bloody Tear and Fuwalafuwaloo also have a similar synergy, though rely on getting crits and as such aren't quite as powerful on her.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3143,9 +4101,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Dragon Water Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
-      "notes": "- Trevor starts with +20%  Move Speed. He gains +1  Amount every 10 levels up to level 30. The maximum Amount gained this way is +3.\r\n- He starts with  Beginning (X).\r\n- Trevor can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 10,
+          "max": 3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3172,9 +4140,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
-      "notes": "- Trevor starts with +20%  Move Speed. He gains +1  Amount every 10 levels up to level 30. The maximum Amount gained this way is +3.\r\n- He starts with  Beginning (X).\r\n- Trevor can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 10,
+          "max": 3
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3201,9 +4179,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Jet Black Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
-      "notes": "- Christopher starts with +20  Max Health, +1  Armor, +1  Revival, and +5  Banish.\n- Whenever Christopher damages an enemy, there is a 50% chance for  Greed to be added to  Might, and to multiply  Armor. Otherwise, nothing happens. Since this is checked every hit, it can rapidly change. Each bonus is independent of the other, and either, both, or neither bonus may be active at a given moment.\n- Christopher can find special Ode to Castlevania pickups from light sources.\n- There is a random chance for Greed to affect Christopher's Might and/or Armor. They are randomized separately, so one could be affected, or both, or neither. It is re-randomized multiple times every second, and isn't affected by  Luck. Each 1% Greed translates to 1% Might, and each 100% Greed translates to +1 Armor.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3230,9 +4211,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
-      "notes": "- Christopher starts with +20  Max Health, +1  Armor, +1  Revival, and +5  Banish.\n- Whenever Christopher damages an enemy, there is a 50% chance for  Greed to be added to  Might, and to multiply  Armor. Otherwise, nothing happens. Since this is checked every hit, it can rapidly change. Each bonus is independent of the other, and either, both, or neither bonus may be active at a given moment.\n- Christopher can find special Ode to Castlevania pickups from light sources.\n- There is a random chance for Greed to affect Christopher's Might and/or Armor. They are randomized separately, so one could be affected, or both, or neither. It is re-randomized multiple times every second, and isn't affected by  Luck. Each 1% Greed translates to 1% Might, and each 100% Greed translates to +1 Armor.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3259,9 +4243,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Wind Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
-      "notes": "- Simon starts with +20  Max Health, +1  Armor, +1  Revival, and +5  Reroll.\r\n- Whenever Simon damages an enemy, there is a 50% chance for  Growth to be added to  Might, and to multiply  Armor. Otherwise, nothing happens. Since this is checked every hit, it can rapidly change. Each bonus is independent of the other, and either, both, or neither bonus may be active at a given moment.\r\n- Simon can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3288,9 +4275,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
-      "notes": "- Simon starts with +20  Max Health, +1  Armor, +1  Revival, and +5  Reroll.\r\n- Whenever Simon damages an enemy, there is a 50% chance for  Growth to be added to  Might, and to multiply  Armor. Otherwise, nothing happens. Since this is checked every hit, it can rapidly change. Each bonus is independent of the other, and either, both, or neither bonus may be active at a given moment.\r\n- Simon can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3317,9 +4307,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Vibhuti Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
-      "notes": "- Juste starts with +20%  Move Speed, +20%  Might, +20%  Duration, +5  Reroll, +5  Skip, and +5  Banish.\n- Until level 7 he will be offered the  Belnades' Spellbook as a fourth level up choice, regardless if the player has Banished or  Sealed it, or if the player is at the maximum number of weapons.\n- Every six levels, Juste will level up equipped featured in the Belnades' Spellbook, except for  Summon Spirit Tornado and  Anura.\n- Juste can find special Ode to Castlevania pickups from light sources.\n- Juste will receive the Belnades' Spellbook as a level-up option every time until he reaches level 7, allowing him to pick any previously used spell. Because of this, the Gemini Arcana is a great choice, as it enhances every spell. Additionally, every 6 levels, Juste will upgrade a spell, making it easier to power up this type of weapon. This strategy allows him to maximize the effectiveness of his spells, with Gemini boosting their impact and upgrades enhancing their power over time.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3346,9 +4339,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
-      "notes": "- Juste starts with +20%  Move Speed, +20%  Might, +20%  Duration, +5  Reroll, +5  Skip, and +5  Banish.\n- Until level 7 he will be offered the  Belnades' Spellbook as a fourth level up choice, regardless if the player has Banished or  Sealed it, or if the player is at the maximum number of weapons.\n- Every six levels, Juste will level up equipped featured in the Belnades' Spellbook, except for  Summon Spirit Tornado and  Anura.\n- Juste can find special Ode to Castlevania pickups from light sources.\n- Juste will receive the Belnades' Spellbook as a level-up option every time until he reaches level 7, allowing him to pick any previously used spell. Because of this, the Gemini Arcana is a great choice, as it enhances every spell. Additionally, every 6 levels, Juste will upgrade a spell, making it easier to power up this type of weapon. This strategy allows him to maximize the effectiveness of his spells, with Gemini boosting their impact and upgrades enhancing their power over time.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3375,9 +4371,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Platinum Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Divine Bloodline (IX)",
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
-      "notes": "- Richter starts with +20%  Move Speed, -10%  Cooldown, and starts with an extra  Divine Bloodline (IX).\r\n- He can find special Ode to Castlevania pickups from light sources.\r\n- While playing as him in the Ode to Castlevania stage, a unique chamber connected by a staircase appears outside the very top of the Clock Tower. Entering this chamber despawns all enemies on the screen and begins a special cutscene with  Dracula which serves as the prelude to the final boss battle of the Ode to Castlevania DLC.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3404,9 +4403,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Divine Bloodline (IX)",
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
-      "notes": "Can find special Castlevania pickups (e.g. Wall Chicken)",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3433,9 +4435,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Vanitas Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
-      "notes": "- Julius starts with +80  Max Health, +40%  Might, +1  Revival, and +10  Banish. He also starts with  Heart of Fire (XIX).\n- His Might increases depending on the missing proportion of his Max Health, with the formula: Might*(1+((1-CurrentHealth/MaxHealth))*Max Health)/180). Thus, missing health will increase Julius's Might more depending on his Max Health.\n- Julius can find special Ode to Castlevania pickups from light sources.\n- Selecting the Arcana Divine Bloodline (IX) pairs exceptionally well with Julius. The explosions triggered by Heart of Fire are considered retaliatory damage, which boosts his max health. Additionally, his passive ability to gain increased might as his health decreases synergizes perfectly with the effects of Divine Bloodline. Moreover, his starting weapon, the Vanitas Whip, scales with max health, which Divine Bloodline enhances, further amplifying its effectiveness.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -3462,9 +4467,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
-      "notes": "- Julius starts with +80  Max Health, +40%  Might, +1  Revival, and +10  Banish. He also starts with  Heart of Fire (XIX).\n- His Might increases depending on the missing proportion of his Max Health, with the formula: Might*(1+((1-CurrentHealth/MaxHealth))*Max Health)/180). Thus, missing health will increase Julius's Might more depending on his Max Health.\n- Julius can find special Ode to Castlevania pickups from light sources.\n- Selecting the Arcana Divine Bloodline (IX) pairs exceptionally well with Julius. The explosions triggered by Heart of Fire are considered retaliatory damage, which boosts his max health. Additionally, his passive ability to gain increased might as his health decreases synergizes perfectly with the effects of Divine Bloodline. Moreover, his starting weapon, the Vanitas Whip, scales with max health, which Divine Bloodline enhances, further amplifying its effectiveness.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -3491,9 +4499,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Curved Knife"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
-      "notes": "- Grant starts with +60%  Move Speed, and +40%  Luck.\r\n- He can find special Ode to Castlevania pickups from light sources.\r\n- Taking damage or overhealing by +8 will trigger  Knife,  Curved Knife, and  Pocket Knife, as well as their evolutions  Thousand Edge,  Bwaka Knife,  Claimh Solais, and  Million Cut.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3520,9 +4531,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
-      "notes": "- Grant starts with +60%  Move Speed, and +40%  Luck.\r\n- He can find special Ode to Castlevania pickups from light sources.\r\n- Taking damage or overhealing by +8 will trigger  Knife,  Curved Knife, and  Pocket Knife, as well as their evolutions  Thousand Edge,  Bwaka Knife,  Claimh Solais, and  Million Cut.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3549,9 +4563,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Iron Ball"
       ],
-      "starting_arcana": "Iron Blue Will (VII)",
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
-      "notes": "- John starts with +30  Max Health, and +20%  Might.\r\n- Upon reaching level 10, John will be granted  Iron Blue Will (VII).\r\n- Every five levels, a  Mirror of Truth will be spawned above him.\r\n- John can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3578,9 +4595,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
-      "starting_arcana": "Iron Blue Will (VII)",
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
-      "notes": "- John starts with +30  Max Health, and +20%  Might.\r\n- Upon reaching level 10, John will be granted  Iron Blue Will (VII).\r\n- Every five levels, a  Mirror of Truth will be spawned above him.\r\n- John can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3607,9 +4627,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
-      "starting_arcana": "Iron Blue Will (VII)",
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
-      "notes": "- John starts with +30  Max Health, and +20%  Might.\r\n- Upon reaching level 10, John will be granted  Iron Blue Will (VII).\r\n- Every five levels, a  Mirror of Truth will be spawned above him.\r\n- John can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3637,9 +4660,12 @@ window.VS_DATA = {
         "Javelin",
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "notes": "- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges by standing still. Upon reaching max charge, all equipped  Coat of Arms weapons are triggered once. This charge time is 15 seconds by default, but can be decreased with  Speed down to a minimum of 3 seconds at +400% Speed.\n- Jonathan can find special Ode to Castlevania pickups from light sources.\n- Jonathan's charge ability is affected by Speed, so  Chaos in the Dark Night (V) is his key Arcana.  Wicked Season (XIII), which massively helps leveling up, is a good complement.\r\n- Troll Bomb This content requires the Ode to Castlevania DLC to access is part of the Coat of Arms, and therefore a must-pick for Jonathan as he can trigger it much more often than most characters. Since Troll Bomb on its own is so powerful, there is no need to carry other Coat of Arms weapons to make full use of Jonathan's ability. It is a good idea to increase the  Amount of Troll Bomb in order to make it last as long as possible and thus minimize the time between attacks. The union  Carnage Heart is not recommended, as it loses out on the massive damage of Troll Bomb.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3667,9 +4693,12 @@ window.VS_DATA = {
         "Morning Star",
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "notes": "- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges by standing still. Upon reaching max charge, all equipped  Coat of Arms weapons are triggered once. This charge time is 15 seconds by default, but can be decreased with  Speed down to a minimum of 3 seconds at +400% Speed.\n- Jonathan can find special Ode to Castlevania pickups from light sources.\n- Jonathan's charge ability is affected by Speed, so  Chaos in the Dark Night (V) is his key Arcana.  Wicked Season (XIII), which massively helps leveling up, is a good complement.\r\n- Troll Bomb This content requires the Ode to Castlevania DLC to access is part of the Coat of Arms, and therefore a must-pick for Jonathan as he can trigger it much more often than most characters. Since Troll Bomb on its own is so powerful, there is no need to carry other Coat of Arms weapons to make full use of Jonathan's ability. It is a good idea to increase the  Amount of Troll Bomb in order to make it last as long as possible and thus minimize the time between attacks. The union  Carnage Heart is not recommended, as it loses out on the massive damage of Troll Bomb.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3697,9 +4726,12 @@ window.VS_DATA = {
         "Coat of Arms",
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "notes": "- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges by standing still. Upon reaching max charge, all equipped  Coat of Arms weapons are triggered once. This charge time is 15 seconds by default, but can be decreased with  Speed down to a minimum of 3 seconds at +400% Speed.\n- Jonathan can find special Ode to Castlevania pickups from light sources.\n- Jonathan's charge ability is affected by Speed, so  Chaos in the Dark Night (V) is his key Arcana.  Wicked Season (XIII), which massively helps leveling up, is a good complement.\r\n- Troll Bomb This content requires the Ode to Castlevania DLC to access is part of the Coat of Arms, and therefore a must-pick for Jonathan as he can trigger it much more often than most characters. Since Troll Bomb on its own is so powerful, there is no need to carry other Coat of Arms weapons to make full use of Jonathan's ability. It is a good idea to increase the  Amount of Troll Bomb in order to make it last as long as possible and thus minimize the time between attacks. The union  Carnage Heart is not recommended, as it loses out on the massive damage of Troll Bomb.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3727,9 +4759,12 @@ window.VS_DATA = {
         "Spectral Sword",
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "notes": "- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges by standing still. Upon reaching max charge, all equipped  Coat of Arms weapons are triggered once. This charge time is 15 seconds by default, but can be decreased with  Speed down to a minimum of 3 seconds at +400% Speed.\n- Jonathan can find special Ode to Castlevania pickups from light sources.\n- Jonathan's charge ability is affected by Speed, so  Chaos in the Dark Night (V) is his key Arcana.  Wicked Season (XIII), which massively helps leveling up, is a good complement.\r\n- Troll Bomb This content requires the Ode to Castlevania DLC to access is part of the Coat of Arms, and therefore a must-pick for Jonathan as he can trigger it much more often than most characters. Since Troll Bomb on its own is so powerful, there is no need to carry other Coat of Arms weapons to make full use of Jonathan's ability. It is a good idea to increase the  Amount of Troll Bomb in order to make it last as long as possible and thus minimize the time between attacks. The union  Carnage Heart is not recommended, as it loses out on the massive damage of Troll Bomb.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -3756,9 +4791,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Hand Grenade"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
-      "notes": "- Soma starts with +20%  Move Speed, +50%  Greed, +5  Reroll, +5  Skip, and +5  Banish. He gains +1%  Might every level.\r\n- Once per life, upon receiving fatal damage, he triggers a hidden  Soul Steal.\r\n- Soma is immune to health drain.\r\n- Soma can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": null,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3785,9 +4830,19 @@ window.VS_DATA = {
       "starting_weapons": [
         "Candybox"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
-      "notes": "- Soma starts with +20%  Move Speed, +50%  Greed, +5  Reroll, +5  Skip, and +5  Banish. He gains +1%  Might every level.\r\n- Once per life, upon receiving fatal damage, he triggers a hidden  Soul Steal.\r\n- Soma is immune to health drain.\r\n- Soma can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": null,
+          "max": null
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3814,11 +4869,27 @@ window.VS_DATA = {
       "starting_weapons": [
         "Candybox"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.Also gains +1 Revival every 100 levels. Enemies drop Blue, Red, or Yellow Souls that increase Growth, Might, or Greed respectively when set amounts are collected.",
-      "notes": "- Dark Lord Soma starts with the  Candybox, all the extra stats of his regular self, as well as +566  Max Health. Additionally, his passive is doubled, gaining 2%  Might per level instead of 1%. Finally, Dark Lord Soma gains +1  Revival every 100 levels. This is distinctly similar to the passive bonuses of  Vlad Tepes Dracula.\n- Dark Lord Soma also has a unique passive. Upon killing an enemy, Soma has a 20% chance to spawn either a red, blue, or yellow Enemy Soul that automatically spiral towards the player. Enemy Souls act like  Crystallized Souls and  Cursed Souls, healing the player and granting them extra  Might,  Growth, or  Greed, respectively. The healing provided by each Soul is 1, and is increased by  Recovery. The chance for an Enemy Soul to drop is unaffected by  Luck, and each type of Enemy Soul has an equal chance to drop. The amount of stats the player receives is dependent on the Base XP value of the enemy that dropped it: Might: 0.075% * Base XP; Growth: 0.075% * Base XP; Greed: 0.15% * Base XP; For example, a  Skelegem, with a Base XP of 3, will drop an Enemy Soul that gives +0.225% Growth and Might, and +0.45% Greed.\n- Additionally, at certain thresholds of each type of Enemy Soul, being 1000, 2000, 3000, then every 3000 Souls after (6000 total, 9000 total, etc.), Soma will received an extra reward depending on how many of that Soul has been collected: Red Souls grant an  Arma Dio; Blue Souls grant a  Candybox; Yellow Souls grant a  Gold Finger.\n- There is no limit on the number of times Soma can receive extra rewards.",
+      "notes": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 2,
+          "interval": null,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
       "stats": {
-        "max_health": 666,
+        "max_health": 566,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -3844,9 +4915,12 @@ window.VS_DATA = {
         "Raging Fire",
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
-      "notes": "- Charlotte starts with +20%  Move Speed, +20%  Duration, +20%  Area, +10  Reroll, +10  Skip, and +10  Banish.\n- She has a charge ability that charges while she is standing still. When fully charged, all weapons featured in the Belnades' Spellbook will be triggered. The default charge time is 15 seconds, but can decreased by  Growth down to a minimum of 3 seconds at +400% Growth.\n- Charlotte can find special Ode to Castlevania pickups from light sources.\n- Triggering all the weapons of the Belnades' Spellbook with her charge ability means that she is encouraged to use weapons from this subset, which all are affected by the Arcana  Gemini (I).\r\n- Because her charge ability is affected by Growth,  Crown is a must-pick item. It is also recommended to use  Wicked Season (XIII) and/or  Crystal Cries (XII) as ways to continuously scale Growth throughout the game. However, due to her weak starting weapon, Charlotte struggles to deal with high-Curse hordes right off the bat if using Wicked Season. Picking the Belnades' Spellbook as a starting weapon instead of Raging Fire and choosing  Hex can help with high amounts of Curse in the early game,  Refectio can also help by providing a bubble of relative safety.\r\n- Sanctuary is almost a must-pick for Charlotte due to her charge ability letting her trigger its very powerful effect far more often than most characters. Because Sanctuary provides a full heal, it can be beneficial, somewhat counterintuitively, to build Charlotte as a tank, with items like  Armor,  Hollow Heart and  Parm Aegis to help her survive while Sanctuary handles the hordes and keeps her healed up.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3874,9 +4948,12 @@ window.VS_DATA = {
         "Belnades' Spellbook",
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
-      "notes": "- Charlotte starts with +20%  Move Speed, +20%  Duration, +20%  Area, +10  Reroll, +10  Skip, and +10  Banish.\n- She has a charge ability that charges while she is standing still. When fully charged, all weapons featured in the Belnades' Spellbook will be triggered. The default charge time is 15 seconds, but can decreased by  Growth down to a minimum of 3 seconds at +400% Growth.\n- Charlotte can find special Ode to Castlevania pickups from light sources.\n- Triggering all the weapons of the Belnades' Spellbook with her charge ability means that she is encouraged to use weapons from this subset, which all are affected by the Arcana  Gemini (I).\r\n- Because her charge ability is affected by Growth,  Crown is a must-pick item. It is also recommended to use  Wicked Season (XIII) and/or  Crystal Cries (XII) as ways to continuously scale Growth throughout the game. However, due to her weak starting weapon, Charlotte struggles to deal with high-Curse hordes right off the bat if using Wicked Season. Picking the Belnades' Spellbook as a starting weapon instead of Raging Fire and choosing  Hex can help with high amounts of Curse in the early game,  Refectio can also help by providing a bubble of relative safety.\r\n- Sanctuary is almost a must-pick for Charlotte due to her charge ability letting her trigger its very powerful effect far more often than most characters. Because Sanctuary provides a full heal, it can be beneficial, somewhat counterintuitively, to build Charlotte as a tank, with items like  Armor,  Hollow Heart and  Parm Aegis to help her survive while Sanctuary handles the hordes and keeps her healed up.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3903,9 +4980,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ice Fang"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
-      "notes": "- Sypha starts with +40%  Move Speed, +40%  Duration, +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Jail of Crystal (XIV).\n- Sypha can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3932,9 +5012,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
-      "notes": "- Sypha starts with +40%  Move Speed, +40%  Duration, +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Jail of Crystal (XIV).\n- Sypha can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3961,9 +5044,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fulgur"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Tragic Princess (III)",
       "description": "Starts with extra Arcana III - Tragic Princess.",
-      "notes": "- Yoko starts with +40%  Move Speed, +40%  Speed, +50%  Magnet, +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Tragic Princess (III).\r\n- Yoko can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3990,9 +5076,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Tragic Princess (III)",
       "description": "Starts with extra Arcana III - Tragic Princess.",
-      "notes": "- Yoko starts with +40%  Move Speed, +40%  Speed, +50%  Magnet, +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Tragic Princess (III).\r\n- Yoko can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4019,9 +5108,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Alucart Sworb"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
-      "notes": "- Alucard starts with +100  Max Health, +2  Armor and +50%  Move Speed. He is immune to health drain.\r\n- He can also trigger various hidden weapons when meeting specific conditions: Standing still will trigger  Soul Steal via a Charge, with a charge time of 30 seconds; Upon levelling up, he will trigger  Dominus Anger; When overhealing by +8, he will trigger  Summon Spirit; Upon reaching a critically low health, being 20% of his max health, Alucard will trigger  Sword Brothers. This can only be triggered again after full healing. Fatal damage that defeats Alucard will not trigger this effect.\r\n- Alucard can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4048,9 +5140,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Candybox"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
-      "notes": "- Alucard starts with +100  Max Health, +2  Armor and +50%  Move Speed. He is immune to health drain.\r\n- He can also trigger various hidden weapons when meeting specific conditions: Standing still will trigger  Soul Steal via a Charge, with a charge time of 30 seconds; Upon levelling up, he will trigger  Dominus Anger; When overhealing by +8, he will trigger  Summon Spirit; Upon reaching a critically low health, being 20% of his max health, Alucard will trigger  Sword Brothers. This can only be triggered again after full healing. Fatal damage that defeats Alucard will not trigger this effect.\r\n- Alucard can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4077,9 +5172,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Alucard Spear"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "notes": "- Eric starts with +20%  Move Speed, +20%  Might, +20%  Speed, +20%  Area, and -5%  Cooldown.\r\n- He has an HP-Critical skill  Burning Alcarde when his health reaches below 20%, where he becomes invulnerable for 20 seconds, gains -20% Cooldown, and gets a flame aura that deals damage to surrounding enemies. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\r\n- He can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4106,9 +5204,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spectral Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "notes": "- Eric starts with +20%  Move Speed, +20%  Might, +20%  Speed, +20%  Area, and -5%  Cooldown.\r\n- He has an HP-Critical skill  Burning Alcarde when his health reaches below 20%, where he becomes invulnerable for 20 seconds, gains -20% Cooldown, and gets a flame aura that deals damage to surrounding enemies. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\r\n- He can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4135,9 +5236,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "notes": "- Eric starts with +20%  Move Speed, +20%  Might, +20%  Speed, +20%  Area, and -5%  Cooldown.\r\n- He has an HP-Critical skill  Burning Alcarde when his health reaches below 20%, where he becomes invulnerable for 20 seconds, gains -20% Cooldown, and gets a flame aura that deals damage to surrounding enemies. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\r\n- He can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4164,9 +5268,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Mace"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
-      "notes": "- Hector starts with +25%  Magnet and +20%  Growth, as well as 20 additional  Rerolls,  Skips and  Banishes. He gains a hidden Familiar every 10 levels until level 40. The maximum number of Familiars gained this way is 4.\r\n- Additionally, he is offered a  Familiar Forge every 7 levels as a 4th level up option up to a max of 16 Familiar Forges, regardless of weapon slot caps. Familiar Forges will stop being offered if the player has no valid weapon or passive weapon level up choices.\r\n- Hector can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4193,9 +5300,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spectral Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
-      "notes": "- Hector starts with +25%  Magnet and +20%  Growth, as well as 20 additional  Rerolls,  Skips and  Banishes. He gains a hidden Familiar every 10 levels until level 40. The maximum number of Familiars gained this way is 4.\r\n- Additionally, he is offered a  Familiar Forge every 7 levels as a 4th level up option up to a max of 16 Familiar Forges, regardless of weapon slot caps. Familiar Forges will stop being offered if the player has no valid weapon or passive weapon level up choices.\r\n- Hector can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4222,9 +5332,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
-      "notes": "- Hector starts with +25%  Magnet and +20%  Growth, as well as 20 additional  Rerolls,  Skips and  Banishes. He gains a hidden Familiar every 10 levels until level 40. The maximum number of Familiars gained this way is 4.\r\n- Additionally, he is offered a  Familiar Forge every 7 levels as a 4th level up option up to a max of 16 Familiar Forges, regardless of weapon slot caps. Familiar Forges will stop being offered if the player has no valid weapon or passive weapon level up choices.\r\n- Hector can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4251,9 +5364,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Guardian's Targe"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
-      "notes": "- Maria starts with +40%  Move Speed, +25%  Might, and +25%  Luck.\n- Overhealing will addivitely increase her Might by log(0.001*OverhealingAmount)\n- At levels 2, 12, 22, and 32 Maria gains a follower, namely the Sacred Cardinal, the Sacred Dragon, the Sacred Tiger, and the Sacred Turtle followers. They will stay at the fixed north, east, south and west positions around her. These familiars won't take damage.\n- Overhealing by +32 will trigger a  Mirror of Truth and  Rapid Fire for all of her followers.\n- She can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4280,9 +5396,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spectral Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
-      "notes": "- Maria starts with +40%  Move Speed, +25%  Might, and +25%  Luck.\n- Overhealing will addivitely increase her Might by log(0.001*OverhealingAmount)\n- At levels 2, 12, 22, and 32 Maria gains a follower, namely the Sacred Cardinal, the Sacred Dragon, the Sacred Tiger, and the Sacred Turtle followers. They will stay at the fixed north, east, south and west positions around her. These familiars won't take damage.\n- Overhealing by +32 will trigger a  Mirror of Truth and  Rapid Fire for all of her followers.\n- She can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4309,9 +5428,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
-      "notes": "- Maria starts with +40%  Move Speed, +25%  Might, and +25%  Luck.\n- Overhealing will addivitely increase her Might by log(0.001*OverhealingAmount)\n- At levels 2, 12, 22, and 32 Maria gains a follower, namely the Sacred Cardinal, the Sacred Dragon, the Sacred Tiger, and the Sacred Turtle followers. They will stay at the fixed north, east, south and west positions around her. These familiars won't take damage.\n- Overhealing by +32 will trigger a  Mirror of Truth and  Rapid Fire for all of her followers.\n- She can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4338,9 +5460,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Confodere"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
-      "notes": "- Shanoa starts with +20  Max Health, +50%  Move Speed, +10  Rerolls,  Skips and  Banishes. She also gains +1%  Might every level. There is no cap on this bonus.\r\n- She also has a 30 second Charge ability that charges by standing still that triggers all equipped weapons from the  Ebony Diabologue.\r\n- Shanoa can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4367,9 +5492,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Candybox"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
-      "notes": "- Shanoa starts with +20  Max Health, +50%  Move Speed, +10  Rerolls,  Skips and  Banishes. She also gains +1%  Might every level. There is no cap on this bonus.\r\n- She also has a 30 second Charge ability that charges by standing still that triggers all equipped weapons from the  Ebony Diabologue.\r\n- Shanoa can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4396,9 +5524,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Shuriken"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
-      "notes": "- Quincy Morris starts with +20%  Move Speed and +4  Revival.\r\n- He has a Charge Ability that triggers a  Neutron Bomb upon standing still for a total of 75 seconds. This Charge time is decreased by  Might, down to a minimum of 15 seconds at +400% Might. Upon activating his Charge, Quincy has a 45% chance to lose either 1 health or 35% of his  Max Health, whichever is higher. The chance to take damage upon activating Quincy's Charge is decreased by  Luck.\r\n- Quincy can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4425,9 +5556,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
-      "notes": "- Quincy Morris starts with +20%  Move Speed and +4  Revival.\r\n- He has a Charge Ability that triggers a  Neutron Bomb upon standing still for a total of 75 seconds. This Charge time is decreased by  Might, down to a minimum of 15 seconds at +400% Might. Upon activating his Charge, Quincy has a 45% chance to lose either 1 health or 35% of his  Max Health, whichever is higher. The chance to take damage upon activating Quincy's Charge is decreased by  Luck.\r\n- Quincy can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4454,9 +5588,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Discus"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
-      "notes": "- Maxim starts with +40  Max Health, and +80%  Move Speed.\n- Maxim gains Speed based on how much he overheals, based on log(OverhealingTotal). However, Maxim does not accumulate overhealing at a 1:1 ratio to normal healing, instead multiplying the amount he overhealed in that instance by 0.001.\n- Maxim's  Might increases while he is invulnerable. During this state, his Might is multiplied by the lower value between 1.5 + his Speed bonus from overhealing, and 2.\n- Maxim can find special Ode to Castlevania pickups from light sources.\n- Using  Chaos in the Dark Night (V) allows for further Speed scaling on top of Maxim's innate ability.\r\n- Melio Confodere scales off Speed and is therefore a fantastic way to weaponize Maxim's passive skill.\r\n- Sacred Beasts Tower Shield provides an invulnerability period when the user overheals, which means it synergizes with both things Maxim wants to be doing.\r\n- Paranormal Scan is an already extremely powerful item that can additionally help trigger Maxim's overheal bonus.\r\n- Sword Brothers provides a brief invulnerability period and can be acquired right off the bat from the Master Librarian, giving Maxim a way to survive the early hordes and use his Might increase. As the game goes on, Sword Brothers can be used to become permanently invulnerable if Cooldown is low enough thanks to Paranormal Scan. This can also be achieved without other DLC with 3 or less total weapons, a level 7 sword brothers, empty tome, and  Silent Old Sanctuary (XX).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -4483,9 +5620,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
-      "notes": "- Maxim starts with +40  Max Health, and +80%  Move Speed.\n- Maxim gains Speed based on how much he overheals, based on log(OverhealingTotal). However, Maxim does not accumulate overhealing at a 1:1 ratio to normal healing, instead multiplying the amount he overhealed in that instance by 0.001.\n- Maxim's  Might increases while he is invulnerable. During this state, his Might is multiplied by the lower value between 1.5 + his Speed bonus from overhealing, and 2.\n- Maxim can find special Ode to Castlevania pickups from light sources.\n- Using  Chaos in the Dark Night (V) allows for further Speed scaling on top of Maxim's innate ability.\r\n- Melio Confodere scales off Speed and is therefore a fantastic way to weaponize Maxim's passive skill.\r\n- Sacred Beasts Tower Shield provides an invulnerability period when the user overheals, which means it synergizes with both things Maxim wants to be doing.\r\n- Paranormal Scan is an already extremely powerful item that can additionally help trigger Maxim's overheal bonus.\r\n- Sword Brothers provides a brief invulnerability period and can be acquired right off the bat from the Master Librarian, giving Maxim a way to survive the early hordes and use his Might increase. As the game goes on, Sword Brothers can be used to become permanently invulnerable if Cooldown is low enough thanks to Paranormal Scan. This can also be achieved without other DLC with 3 or less total weapons, a level 7 sword brothers, empty tome, and  Silent Old Sanctuary (XX).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -4512,9 +5652,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Silver Revolver"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
-      "notes": "- Henry starts with +2  Armor and +20%  Move Speed\r\n- Henry will gain  Luck and  Area based on the proportion of on-screen enemies out of 300, with a maximum bonus of +100% of each stat at 300 on-screen enemies.\r\n- Henry can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4541,9 +5684,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
-      "notes": "- Henry starts with +2  Armor and +20%  Move Speed\r\n- Henry will gain  Luck and  Area based on the proportion of on-screen enemies out of 300, with a maximum bonus of +100% of each stat at 300 on-screen enemies.\r\n- Henry can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4570,9 +5716,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Wine Glass"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "notes": "- Dracula starts with +566  Max Health, +100%  Might, +100%  Greed, and +10  Rerolls,  Banishes, and  Skips. He gains +1% Might every level, and +1  Revival every 100 levels.\n- Each extra 1% of  Curse Dracula possesses will increase his Might stat by 1%.\n- Dracula caps incoming damage at 10, as if he had the  Crimson Shroud, albeit without the retaliation effect. This damage cap is subject to decay in Endless Mode.\n- He is immune to Health Drain.\n- If the  Ebony and Crimson Stones have been obtained, he morphs into a new form,  Megalo Dracula, upon reaching level 80, which increases his size drastically and possesses swiping claws that can damage nearby enemies. This form gains +2  Armor, +50%  Move Speed, +150%  Might, and -20%  Cooldown.\n- He can find special Ode to Castlevania pickups from light sources.\n- The Arcana  Wicked Season (XIII) and items that increase Curse, including  Torrona's Box,  Skull O'Maniac and the evolved weapon  Nightmare, come highly recommended as Dracula can easily negate the downsides of high Curse.\r\n- A few healing items can synergize with his ability to cap out incoming damage to help keep him alive indefinitely. Importantly, his ability applies to even  The Reaper, making him capable of surviving indefinitely without the need for a specific build.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 666,
         "recovery": 0,
@@ -4599,9 +5748,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "notes": "- Dracula starts with +566  Max Health, +100%  Might, +100%  Greed, and +10  Rerolls,  Banishes, and  Skips. He gains +1% Might every level, and +1  Revival every 100 levels.\n- Each extra 1% of  Curse Dracula possesses will increase his Might stat by 1%.\n- Dracula caps incoming damage at 10, as if he had the  Crimson Shroud, albeit without the retaliation effect. This damage cap is subject to decay in Endless Mode.\n- He is immune to Health Drain.\n- If the  Ebony and Crimson Stones have been obtained, he morphs into a new form,  Megalo Dracula, upon reaching level 80, which increases his size drastically and possesses swiping claws that can damage nearby enemies. This form gains +2  Armor, +50%  Move Speed, +150%  Might, and -20%  Cooldown.\n- He can find special Ode to Castlevania pickups from light sources.\n- The Arcana  Wicked Season (XIII) and items that increase Curse, including  Torrona's Box,  Skull O'Maniac and the evolved weapon  Nightmare, come highly recommended as Dracula can easily negate the downsides of high Curse.\r\n- A few healing items can synergize with his ability to cap out incoming damage to help keep him alive indefinitely. Importantly, his ability applies to even  The Reaper, making him capable of surviving indefinitely without the need for a specific build.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 666,
         "recovery": 0,
@@ -4628,9 +5780,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Gale Force"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Sarabande of Healing (VI)",
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
-      "notes": "- Julia starts with +8  Max Health, +3  Recovery, +20%  Move Speed, +50%  Luck, and +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Sarabande of Healing (VI).\r\n- Every 2 levels, a  Heart Refresh will spawn above Julia.\r\n- Julia can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 8,
         "recovery": 3,
@@ -4657,9 +5812,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Sarabande of Healing (VI)",
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
-      "notes": "- Julia starts with +8  Max Health, +3  Recovery, +20%  Move Speed, +50%  Luck, and +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Sarabande of Healing (VI).\r\n- Every 2 levels, a  Heart Refresh will spawn above Julia.\r\n- Julia can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 8,
         "recovery": 3,
@@ -4686,9 +5844,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Rock Riot"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Waltz of Pearls (XI)",
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
-      "notes": "- Carrie starts with +40%  Move Speed, +1  Amount, +50%  Magnet, and +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Waltz of Pearls (XI).\r\n- Carrie can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4715,9 +5876,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Waltz of Pearls (XI)",
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
-      "notes": "- Carrie starts with +40%  Move Speed, +1  Amount, +50%  Magnet, and +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Waltz of Pearls (XI).\r\n- Carrie can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4744,9 +5908,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Keremet Bubbles"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Gemini (I)",
       "description": "Starts with extra Arcana I - Gemini.",
-      "notes": "- Rinaldo starts with +20  Max Health, +1  Armor, +50%  Might, and +10  Rerolls,  Banishes, and  Skips. He also starts with an extra  Gemini (I).\r\n- Rinaldo can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4773,9 +5940,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Gemini (I)",
       "description": "Starts with extra Arcana I - Gemini.",
-      "notes": "- Rinaldo starts with +20  Max Health, +1  Armor, +50%  Might, and +10  Rerolls,  Banishes, and  Skips. He also starts with an extra  Gemini (I).\r\n- Rinaldo can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4802,9 +5972,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Refectio"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Twilight Requiem (II)",
       "description": "Starts with extra Arcana II - Twilight Requiem.",
-      "notes": "- Mina starts with +0.5  Recovery, +20%  Move Speed, -5%  Cooldown, +100%  Luck, and +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Twilight Requiem (II).\r\n- Mina can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -4831,9 +6004,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Twilight Requiem (II)",
       "description": "Starts with extra Arcana II - Twilight Requiem.",
-      "notes": "- Mina starts with +0.5  Recovery, +20%  Move Speed, -5%  Cooldown, +100%  Luck, and +10  Rerolls,  Banishes, and  Skips. She also starts with an extra  Twilight Requiem (II).\r\n- Mina can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -4860,9 +6036,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Hex"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
-      "notes": "- She starts with +100  Max Health, +2  Armor +50%  Move Speed and  Might, +100%  Greed +10  Rerolls,  Banishes, and  Skips, and +50  Charm\n- She also is immune to Health Drain.\n- Elizabeth can find special Ode to Castlevania pickups from light sources.\n- After acquiring the  Ebony and Crimson Stones, at certain kill thresholds, starting at 1,000 kills, she morphs into a more powerful form,  Megalo Elizabeth Bartley, for 30 seconds, similar to  Menya Moonspell and  Impostor Rina. In this form, she gains +200% Might and -50%  Cooldown, and becomes invulnerable. Kill thresholds are as follows: 1,000 kill, 3,000 kills, 5,000 kills, 7,000 kills, 9,000 kills, 11,000 kills, 13,000 kills, 15,000 kills; After this, Elizabeth will continue to morph every 15,000 kills. A new morph will only begin once the current one has ended.\n- Items that increase  Curse or  Charm, like  Torrona's Box and  Karoma's Mana, are important for Elizabeth in order to consistently kill as many enemies as possible.  Wicked Season (XIII) is a good first Arcana. Built properly, Elizabeth can spend most of the run in her Megalo form.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4889,9 +6068,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
-      "notes": "- She starts with +100  Max Health, +2  Armor +50%  Move Speed and  Might, +100%  Greed +10  Rerolls,  Banishes, and  Skips, and +50  Charm\n- She also is immune to Health Drain.\n- Elizabeth can find special Ode to Castlevania pickups from light sources.\n- After acquiring the  Ebony and Crimson Stones, at certain kill thresholds, starting at 1,000 kills, she morphs into a more powerful form,  Megalo Elizabeth Bartley, for 30 seconds, similar to  Menya Moonspell and  Impostor Rina. In this form, she gains +200% Might and -50%  Cooldown, and becomes invulnerable. Kill thresholds are as follows: 1,000 kill, 3,000 kills, 5,000 kills, 7,000 kills, 9,000 kills, 11,000 kills, 13,000 kills, 15,000 kills; After this, Elizabeth will continue to morph every 15,000 kills. A new morph will only begin once the current one has ended.\n- Items that increase  Curse or  Charm, like  Torrona's Box and  Karoma's Mana, are important for Elizabeth in order to consistently kill as many enemies as possible.  Wicked Season (XIII) is a good first Arcana. Built properly, Elizabeth can spend most of the run in her Megalo form.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4918,9 +6100,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
-      "notes": "- She starts with +100  Max Health, +2  Armor +50%  Move Speed and  Might, +100%  Greed +10  Rerolls,  Banishes, and  Skips, and +50  Charm\n- She also is immune to Health Drain.\n- Elizabeth can find special Ode to Castlevania pickups from light sources.\n- After acquiring the  Ebony and Crimson Stones, at certain kill thresholds, starting at 1,000 kills, she morphs into a more powerful form,  Megalo Elizabeth Bartley, for 30 seconds, similar to  Menya Moonspell and  Impostor Rina. In this form, she gains +200% Might and -50%  Cooldown, and becomes invulnerable. Kill thresholds are as follows: 1,000 kill, 3,000 kills, 5,000 kills, 7,000 kills, 9,000 kills, 11,000 kills, 13,000 kills, 15,000 kills; After this, Elizabeth will continue to morph every 15,000 kills. A new morph will only begin once the current one has ended.\n- Items that increase  Curse or  Charm, like  Torrona's Box and  Karoma's Mana, are important for Elizabeth in order to consistently kill as many enemies as possible.  Wicked Season (XIII) is a good first Arcana. Built properly, Elizabeth can spend most of the run in her Megalo form.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4947,9 +6132,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tyrfing"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "notes": "- Reinhardt starts with +40  Max Health, and +20%  Might. He also starts with an extra  Slash (XVI).\n- Reinhardt has an extra +1 Critical Damage multiplier.\n- He can find special Ode to Castlevania pickups from light sources.\n- Some ways of increasing or scaling  Luck are recommended in order to maximize the chance of landing a critical hit.  Wicked Season (XIII) is the most powerful of these, as it continuously scales Luck throughout the entire game while also providing other benefits.\r\n- Not only will Reinhardt increase the damage of  Cavendish This content requires the Ante Chamber DLC to access, but his synergy with critical hits also benefits from the double crit chance this weapon provides.\r\n- Reinhardt can output some of the highest numbers with the  Stamazza, and can start with  Mace if the Spectral Sword starting weapon is selected, which can be useful if one wants to do a limited-slots run with Stamazza and  Silent Old Sanctuary (XX).\r\n- If using the default weapon,  Torrona's Box comes highly recommended, as its Omni is more effective at increasing the critical damage of  Rune Sword compared to the other relevant pickups.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -4976,9 +6164,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "notes": "- Reinhardt starts with +40  Max Health, and +20%  Might. He also starts with an extra  Slash (XVI).\n- Reinhardt has an extra +1 Critical Damage multiplier.\n- He can find special Ode to Castlevania pickups from light sources.\n- Some ways of increasing or scaling  Luck are recommended in order to maximize the chance of landing a critical hit.  Wicked Season (XIII) is the most powerful of these, as it continuously scales Luck throughout the entire game while also providing other benefits.\r\n- Not only will Reinhardt increase the damage of  Cavendish This content requires the Ante Chamber DLC to access, but his synergy with critical hits also benefits from the double crit chance this weapon provides.\r\n- Reinhardt can output some of the highest numbers with the  Stamazza, and can start with  Mace if the Spectral Sword starting weapon is selected, which can be useful if one wants to do a limited-slots run with Stamazza and  Silent Old Sanctuary (XX).\r\n- If using the default weapon,  Torrona's Box comes highly recommended, as its Omni is more effective at increasing the critical damage of  Rune Sword compared to the other relevant pickups.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -5005,9 +6196,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spectral Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "notes": "- Reinhardt starts with +40  Max Health, and +20%  Might. He also starts with an extra  Slash (XVI).\n- Reinhardt has an extra +1 Critical Damage multiplier.\n- He can find special Ode to Castlevania pickups from light sources.\n- Some ways of increasing or scaling  Luck are recommended in order to maximize the chance of landing a critical hit.  Wicked Season (XIII) is the most powerful of these, as it continuously scales Luck throughout the entire game while also providing other benefits.\r\n- Not only will Reinhardt increase the damage of  Cavendish This content requires the Ante Chamber DLC to access, but his synergy with critical hits also benefits from the double crit chance this weapon provides.\r\n- Reinhardt can output some of the highest numbers with the  Stamazza, and can start with  Mace if the Spectral Sword starting weapon is selected, which can be useful if one wants to do a limited-slots run with Stamazza and  Silent Old Sanctuary (XX).\r\n- If using the default weapon,  Torrona's Box comes highly recommended, as its Omni is more effective at increasing the critical damage of  Rune Sword compared to the other relevant pickups.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -5034,9 +6228,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "notes": "- Reinhardt starts with +40  Max Health, and +20%  Might. He also starts with an extra  Slash (XVI).\n- Reinhardt has an extra +1 Critical Damage multiplier.\n- He can find special Ode to Castlevania pickups from light sources.\n- Some ways of increasing or scaling  Luck are recommended in order to maximize the chance of landing a critical hit.  Wicked Season (XIII) is the most powerful of these, as it continuously scales Luck throughout the entire game while also providing other benefits.\r\n- Not only will Reinhardt increase the damage of  Cavendish This content requires the Ante Chamber DLC to access, but his synergy with critical hits also benefits from the double crit chance this weapon provides.\r\n- Reinhardt can output some of the highest numbers with the  Stamazza, and can start with  Mace if the Spectral Sword starting weapon is selected, which can be useful if one wants to do a limited-slots run with Stamazza and  Silent Old Sanctuary (XX).\r\n- If using the default weapon,  Torrona's Box comes highly recommended, as its Omni is more effective at increasing the critical damage of  Rune Sword compared to the other relevant pickups.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -5063,9 +6260,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Trident"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
-      "notes": "- Isaac starts with +20%  Speed, +20%  Area, +25%  Magnet, and +20  Rerolls,  Banishes, and  Skips\r\n- Isaac gains a random Familiar as a follower every 10 levels. This effect caps at 6 followers at level 60. This effect is the exact same as Hector's effect, except that Hector caps out at 4\r\n- Isaac can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5092,9 +6292,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spectral Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
-      "notes": "- Isaac starts with +20%  Speed, +20%  Area, +25%  Magnet, and +20  Rerolls,  Banishes, and  Skips\r\n- Isaac gains a random Familiar as a follower every 10 levels. This effect caps at 6 followers at level 60. This effect is the exact same as Hector's effect, except that Hector caps out at 4\r\n- Isaac can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5121,9 +6324,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
-      "notes": "- Isaac starts with +20%  Speed, +20%  Area, +25%  Magnet, and +20  Rerolls,  Banishes, and  Skips\r\n- Isaac gains a random Familiar as a follower every 10 levels. This effect caps at 6 followers at level 60. This effect is the exact same as Hector's effect, except that Hector caps out at 4\r\n- Isaac can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5150,9 +6356,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Star Flail"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
-      "notes": "- Sara starts with +20%  Move Speed, and +40%  Duration. She gains +0.02  Recovery every level. There is no cap on this bonus.\r\n- Once per life, when she takes fatal damage, she triggers a  Nduja Fritta Tanto for all players in the game. Notably it doesn't prevent her from dying, but if she revives, she will have the firebreathing effect still active.\r\n- When she revives, she evolves the Alchemy Whip into the  Vampire Killer This content requires the Ode to Castlevania DLC to access. The evolution will occur regardless of the whip's level and the  Tirajisú is not required.\r\n- Sara can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5179,9 +6388,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
-      "notes": "- Sara starts with +20%  Move Speed, and +40%  Duration. She gains +0.02  Recovery every level. There is no cap on this bonus.\r\n- Once per life, when she takes fatal damage, she triggers a  Nduja Fritta Tanto for all players in the game. Notably it doesn't prevent her from dying, but if she revives, she will have the firebreathing effect still active.\r\n- When she revives, she evolves the Alchemy Whip into the  Vampire Killer This content requires the Ode to Castlevania DLC to access. The evolution will occur regardless of the whip's level and the  Tirajisú is not required.\r\n- Sara can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5208,9 +6420,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Iron Shield"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Disco of Gold (XV)",
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
-      "notes": "Every 48 Health of overhealing increases Greed by 1%.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5237,9 +6452,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Disco of Gold (XV)",
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
-      "notes": "Every 48 Health of overhealing increases Greed by 1%.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5266,9 +6484,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Optical Shot"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
-      "notes": "Gain up to +40% Might and -20% Cooldown depending on how many enemies are in sight; Can find special Castlevania pickups (e.g. Wall Chicken)",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -5295,9 +6516,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
-      "notes": "Gain up to +40% Might and -20% Cooldown depending on how many enemies are in sight; Can find special Castlevania pickups (e.g. Wall Chicken)",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -5324,9 +6548,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Luminatio"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Silent Old Sanctuary (XX)",
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
-      "notes": "- Lisa starts with +20%  Move Speed and +5  Rerolls,  Banishes, and  Skips. She also gains +1%  Growth every level. There is no cap on this bonus.\n- She also starts with an extra  Silent Old Sanctuary (XX).\n- Lisa can find special Ode to Castlevania pickups from light sources.\n- Even though she starts with Silent Old Sanctuary, which encourages limited-slot builds, it is not recommended to lower her weapon slots below 2 as she cannot build  Universitas without both  Vol Luminatio and  Vol Umbra, although the latter can eventually be obtained from a  Candybox/ Super Candybox II Turbo.\r\n- An optimized build involves limiting weapon slots to 2 and, instead of  Umbra, acquiring  Lifesign Scan to evolve into  Paranormal Scan. Even with an extra weapon slot filled, the massive cooldown reduction from Silent Old Sanctuary combined with an  Empty Tome will rapidly snowball Paranormal Scan to absurd levels, making Vol Umbra and Universitas mostly unnecessary, though they can still eventually be obtained through the Candybox.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5353,9 +6580,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Silent Old Sanctuary (XX)",
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
-      "notes": "- Lisa starts with +20%  Move Speed and +5  Rerolls,  Banishes, and  Skips. She also gains +1%  Growth every level. There is no cap on this bonus.\n- She also starts with an extra  Silent Old Sanctuary (XX).\n- Lisa can find special Ode to Castlevania pickups from light sources.\n- Even though she starts with Silent Old Sanctuary, which encourages limited-slot builds, it is not recommended to lower her weapon slots below 2 as she cannot build  Universitas without both  Vol Luminatio and  Vol Umbra, although the latter can eventually be obtained from a  Candybox/ Super Candybox II Turbo.\r\n- An optimized build involves limiting weapon slots to 2 and, instead of  Umbra, acquiring  Lifesign Scan to evolve into  Paranormal Scan. Even with an extra weapon slot filled, the massive cooldown reduction from Silent Old Sanctuary combined with an  Empty Tome will rapidly snowball Paranormal Scan to absurd levels, making Vol Umbra and Universitas mostly unnecessary, though they can still eventually be obtained through the Candybox.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5382,9 +6612,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Umbra"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "notes": "- He starts with 100  Max Health, +30%  Move Speed, +50%  Duration, +1  Revival, and +10  Banishes. He also gains +1%  Curse every level.\n- When Shaft's health reaches a criticall low level, or 20% of his max health, he will become invulnerable and deal damage to nearby enemies for 20 seconds. During this time, Shaft gains +200%  Might, -20%  Cooldown, and +50%  Curse. The  Shaft Orb that is summoned when reaching critically low health deals 20 base damage and covers most of the screen around the player character. The skill may only be activated again after recovering all HP. Receiving fatal damage resulting in a game-over will not trigger the skill.\n- Shaft can find special Ode to Castlevania pickups from light sources.\n- Since Shaft gets scaling from Curse, weapons that scale off this stat, namely  Nightmare,  Crissaegrim Tip,  Ophion This content requires the Tides of the Foscari DLC to access and  108 Bocce This content requires the Legacy of the Moonspell DLC to access are highly recommended to weaponize a normally partially detrimental stat.\r\n- Shaft works best if he is able to activate his Shaft Orb skill in succession in order to survive the Curse-boosted hordes that he attracts indefinitely. Therefore, some ways of healing to full while Shaft is invulnerable are highly recommended.  Paranormal Scan This content requires the Emergency Meeting DLC to access is a powerful source of healing that has the additional upside of helping scale Shaft's stats to let him keep up with his Curse in the lategame.  Sarabande of Healing (VI) can be helpful if running a healing-heavy build.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5411,9 +6644,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "notes": "While invincible, deal 20 damage to enemies and gain +200% Might, -20% Cooldown, and +50% Curse; Can find special Castlevania pickups (e.g. Wall Chicken)",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5440,9 +6676,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Globus"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
-      "notes": "- Saint Germain starts with 100  Max Health, +100%  Move Speed and +10  Rerolls,  Banishes, and  Skips. He gains -0.2  Cooldown every level. There is no cap on this bonus. He also starts with an extra  Out of Bounds (XII).\r\n- Saint Germain can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5469,9 +6708,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Spectral Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
-      "notes": "- Saint Germain starts with 100  Max Health, +100%  Move Speed and +10  Rerolls,  Banishes, and  Skips. He gains -0.2  Cooldown every level. There is no cap on this bonus. He also starts with an extra  Out of Bounds (XII).\r\n- Saint Germain can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5498,9 +6740,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
-      "notes": "- Saint Germain starts with 100  Max Health, +100%  Move Speed and +10  Rerolls,  Banishes, and  Skips. He gains -0.2  Cooldown every level. There is no cap on this bonus. He also starts with an extra  Out of Bounds (XII).\r\n- Saint Germain can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5527,9 +6772,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Sonic Dash"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
-      "notes": "- Nathan starts with +120  Max Health, +1  Armor, and -5%  Cooldown. He also starts with an extra  Awake (IV).\r\n- Upon reaching 7:00 and 14:00, Nathan will be given an extra selection of an Arcana, much like that at the beginning of the run. This allows Nathan to obtain a total of 6 (7 in Inverse Mode) Arcana throughout a run, including the extra Awake (IV) he starts with.\r\n- Nathan can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 120,
         "recovery": 0,
@@ -5556,9 +6804,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Morning Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
-      "notes": "- Nathan starts with +120  Max Health, +1  Armor, and -5%  Cooldown. He also starts with an extra  Awake (IV).\r\n- Upon reaching 7:00 and 14:00, Nathan will be given an extra selection of an Arcana, much like that at the beginning of the run. This allows Nathan to obtain a total of 6 (7 in Inverse Mode) Arcana throughout a run, including the extra Awake (IV) he starts with.\r\n- Nathan can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 120,
         "recovery": 0,
@@ -5585,9 +6836,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
-      "notes": "- Nathan starts with +120  Max Health, +1  Armor, and -5%  Cooldown. He also starts with an extra  Awake (IV).\r\n- Upon reaching 7:00 and 14:00, Nathan will be given an extra selection of an Arcana, much like that at the beginning of the run. This allows Nathan to obtain a total of 6 (7 in Inverse Mode) Arcana throughout a run, including the extra Awake (IV) he starts with.\r\n- Nathan can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 120,
         "recovery": 0,
@@ -5614,9 +6868,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Dextro Custos"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
-      "notes": "- Cornell starts with 100  Max Health, +1  Amount and +10  Rerolls. He can also transform into  Blue Crescent Moon Cornell by obtaining  Trinum Custodem. In this form, he gains +100 Max Health, +2  Armor, +40%  Move Speed, and +2 Amount.\n- Cornell can pick the Custos weapons he currently does not possess as a 4th leveling up option, as long as they are not in the slot: no matter whether they are unlocked or not, and whether there are weapon slots left or not. These weapons can also appear if they have been  Sealed, but will not appear again once they have been evolved into Trinum Custodem.\n- Cornell can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5643,9 +6900,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Sinestro Custos"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
-      "notes": "- Cornell starts with 100  Max Health, +1  Amount and +10  Rerolls. He can also transform into  Blue Crescent Moon Cornell by obtaining  Trinum Custodem. In this form, he gains +100 Max Health, +2  Armor, +40%  Move Speed, and +2 Amount.\n- Cornell can pick the Custos weapons he currently does not possess as a 4th leveling up option, as long as they are not in the slot: no matter whether they are unlocked or not, and whether there are weapon slots left or not. These weapons can also appear if they have been  Sealed, but will not appear again once they have been evolved into Trinum Custodem.\n- Cornell can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5672,9 +6932,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
-      "notes": "- Cornell starts with 100  Max Health, +1  Amount and +10  Rerolls. He can also transform into  Blue Crescent Moon Cornell by obtaining  Trinum Custodem. In this form, he gains +100 Max Health, +2  Armor, +40%  Move Speed, and +2 Amount.\n- Cornell can pick the Custos weapons he currently does not possess as a 4th leveling up option, as long as they are not in the slot: no matter whether they are unlocked or not, and whether there are weapon slots left or not. These weapons can also appear if they have been  Sealed, but will not appear again once they have been evolved into Trinum Custodem.\n- Cornell can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5701,9 +6964,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Dominus Anger"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "notes": "- Barlowe starts with +200  Max Health, +1  Armor, +20%  Duration, +20%  Area, and +10  Banishes.\n- Barlowe gains  Might and  Curse based on how much he overheals based on log(OverhealingTotal) However, Barlowe does not accumulate overhealing at a 1:1 ratio to normal healing, instead multiplying the amount he overhealed in that instance by 0.001 before adding it to the total.\n- Up until level 11, Barlowe will receive Ebony Diabologue as a guaranteed 4th option when he levels up. Ebony Diabologue can still appear if it has been  Sealed. He can find special Castlevania pickups, like Wall Chicken.\n- Barlowe can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -5730,9 +6996,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Dominus Hatred"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "notes": "- Barlowe starts with +200  Max Health, +1  Armor, +20%  Duration, +20%  Area, and +10  Banishes.\n- Barlowe gains  Might and  Curse based on how much he overheals based on log(OverhealingTotal) However, Barlowe does not accumulate overhealing at a 1:1 ratio to normal healing, instead multiplying the amount he overhealed in that instance by 0.001 before adding it to the total.\n- Up until level 11, Barlowe will receive Ebony Diabologue as a guaranteed 4th option when he levels up. Ebony Diabologue can still appear if it has been  Sealed. He can find special Castlevania pickups, like Wall Chicken.\n- Barlowe can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -5759,9 +7028,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "notes": "- Barlowe starts with +200  Max Health, +1  Armor, +20%  Duration, +20%  Area, and +10  Banishes.\n- Barlowe gains  Might and  Curse based on how much he overheals based on log(OverhealingTotal) However, Barlowe does not accumulate overhealing at a 1:1 ratio to normal healing, instead multiplying the amount he overhealed in that instance by 0.001 before adding it to the total.\n- Up until level 11, Barlowe will receive Ebony Diabologue as a guaranteed 4th option when he levels up. Ebony Diabologue can still appear if it has been  Sealed. He can find special Castlevania pickups, like Wall Chicken.\n- Barlowe can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -5788,9 +7060,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "notes": "- Barlowe starts with +200  Max Health, +1  Armor, +20%  Duration, +20%  Area, and +10  Banishes.\n- Barlowe gains  Might and  Curse based on how much he overheals based on log(OverhealingTotal) However, Barlowe does not accumulate overhealing at a 1:1 ratio to normal healing, instead multiplying the amount he overhealed in that instance by 0.001 before adding it to the total.\n- Up until level 11, Barlowe will receive Ebony Diabologue as a guaranteed 4th option when he levels up. Ebony Diabologue can still appear if it has been  Sealed. He can find special Castlevania pickups, like Wall Chicken.\n- Barlowe can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -5817,9 +7092,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Familiar Forge"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Cannot be damaged, but disappear after reaching the current time limit.",
-      "notes": "- Young Maria Renard starts with the following bonuses: +100  Max Health, +80%  Move Speed, +80%  Luck\r\n- Young Maria Renard cannot take any damage, but will disappear after reaching the time limit of the stage. She also has a fixed 4th leveling-up option, which is followed by order, ignoring whether the weapon slot is available or not: Peachone, Ebony Wings, Familiar Forge - can collect up to 30 Familiar Forges (including the starting one).\r\n- She can find special Castlevania pickups, like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5846,9 +7124,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Refectio"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Familiars start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Familiars can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5875,9 +7156,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Raging Fire"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Familiars start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Familiars can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5904,9 +7188,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fulgur"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Familiars start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Familiars can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5933,9 +7220,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ice Fang"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Familiars start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Familiars can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5962,9 +7252,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Rock Riot"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Familiars start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Familiars can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5987,13 +7280,16 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Ukoback)",
       "icon": "assets/icons/characters/innocent_devil_ukoback.png",
-      "base_name": "Innocent Devil (Ukoback)",
+      "base_name": "Innocent",
       "starting_weapons": [
         "Svarog Statue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Innocent Devils start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Innocent Devils can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6016,13 +7312,16 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Imp)",
       "icon": "assets/icons/characters/innocent_devil_imp.png",
-      "base_name": "Innocent Devil (Imp)",
+      "base_name": "Innocent",
       "starting_weapons": [
         "Trident"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Innocent Devils start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Innocent Devils can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6045,13 +7344,16 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Alleged Ghost)",
       "icon": "assets/icons/characters/innocent_devil_alleged_ghost.png",
-      "base_name": "Innocent Devil (Alleged Ghost)",
+      "base_name": "Innocent",
       "starting_weapons": [
         "Summon Spirit"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Innocent Devils start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Innocent Devils can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6074,13 +7376,16 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Bitterfly)",
       "icon": "assets/icons/characters/innocent_devil_bitterfly.png",
-      "base_name": "Innocent Devil (Bitterfly)",
+      "base_name": "Innocent",
       "starting_weapons": [
         "Summon Spirit"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Innocent Devils start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Innocent Devils can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6103,15 +7408,18 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Wood Rod)",
       "icon": "assets/icons/characters/innocent_devil_wood_rod.png",
-      "base_name": "Innocent Devil (Wood Rod)",
+      "base_name": "Innocent",
       "starting_weapons": [
         "Fire Wand",
         "Lightning Ring",
         "Magic Wand"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Innocent Devils start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Innocent Devils can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6134,14 +7442,17 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Pumpkin)",
       "icon": "assets/icons/characters/innocent_devil_pumpkin.png",
-      "base_name": "Innocent Devil (Pumpkin)",
+      "base_name": "Innocent",
       "starting_weapons": [
         "Curved Knife",
         "Troll Bomb"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "notes": "- All Innocent Devils start with +20%  Move Speed. They gain +1  Amount every 20 levels (up to +3).\r\n- All Innocent Devils can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6169,9 +7480,12 @@ window.VS_DATA = {
         "Trinum Custodem",
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "notes": "- Blue Crescent Moon Cornell starts with +100  Max Health, +2  Armor, +40%  Move Speed, +3  Amount, and +10  Reroll.\r\n- He also gains +1%  Might every level.\r\n- Blue Crescent Moon Cornell is the permanent transformation  Cornell receives upon obtaining  Trinum Custodem.\r\n- Blue Crescent Moon Cornell can also find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6199,9 +7513,12 @@ window.VS_DATA = {
         "Trinum Custodem",
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "notes": "- Blue Crescent Moon Cornell starts with +100  Max Health, +2  Armor, +40%  Move Speed, +3  Amount, and +10  Reroll.\r\n- He also gains +1%  Might every level.\r\n- Blue Crescent Moon Cornell is the permanent transformation  Cornell receives upon obtaining  Trinum Custodem.\r\n- Blue Crescent Moon Cornell can also find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6226,11 +7543,16 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/ferryman.png",
       "base_name": "Ferryman",
       "starting_weapons": [
-        "Hidden (Acquazzone)"
+        "Acquazzone"
       ],
+      "hidden_items": [
+        "Acquazzone"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Water included.",
-      "notes": "- The Ferryman starts with +100  Max Health and with a hidden  Acquazzone. It behaves similarly to  The Drowner's attack, and covers the bottom half of the screen below the Ferryman. It flashes white when it strikes and damages all enemies within its area of effect, and will pulse several times with damage based on  Amount. Acquazzone has a base damage of 10 and base  Cooldown of 5 seconds.\n- The Ferryman possesses Flight.\n- The Ferryman can find special Ode to Castlevania pickups from light sources.\n-  Wings may be useful in the early game to help position the Ferryman over the enemies to let them get wiped out by his Acquazzone.\r\n- Using a combination of Acquazzone and  Dark Rift allows the Ferryman to achieve almost full screen coverage long before any evolution chests are available.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6257,9 +7579,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Rapidus Fio"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Mad Groove (VIII)",
       "description": "Deeply moved by money.",
-      "notes": "- The Master Librarian starts with -100%  Move Speed, +1  Revival, +1000%  Greed, +100  Rerolls, +100  Skips, and +100  Banishes.\n- He gains +80% Move Speed permanently from  Rapidus Fio This content requires the Ode to Castlevania DLC to access once it triggers for the first time and also gains +2% Move Speed per level.\n- He starts with an extra  Mad Groove (VIII) Arcana.\n- The Master Librarian starts with a hidden  Power of Lire.\n- The Master Librarian can find special Ode to Castlevania pickups from light sources.\n- The Master Librarian has longer  Gold Fevers by multiplying its duration cap and duration extension from Gold pickups by 1.25.\nThe Master Librarian's Greed is so massive that it is almost impossible for most characters (except those with massive level scaling, like Gains Boros, and Sammy, who levels up from gold) to ever catch up with  Wicked Season (XIII). This makes him an exceptionally powerful user of  Muramasa.\r\n- Wicked Season (XIII) is also recommended on Master Librarian himself, for the usual reasons and to scale Greed even further for his synergies.\r\n- Victorian Horror (XVIII) is incredibly powerful on the Master Librarian, due to dealing Greed-based damage in addition to helping further scale Greed.\r\n- Power of Lire comes with a slight drawback, as it destroys experience gems and therefore may limit the Master Librarian's ability to level up somewhat. However, as of now, it no longer destroys chests.\r\n- Stake to Your Heart (0) is exceptionally potent on him, since he can very easily and quickly use it to accumulate enormous amounts of gold and become virtually invincible. It is recommended to play on Inverse and get it from the merchant as an extra card, however, because if Stake to Your Heart is picked as his first arcana, his inability to move until Rapidus Fio activates for the first time may get him killed immediately before he can get any gold.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6286,9 +7611,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "The RPG"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (Max +3). Amount is doubled while invulnerable.",
-      "notes": "- Hammer starts with the following bonus: +1  Amount\n- He also gains +1 Amount every 20 levels, up to 3 times for a maximum of +4 Amount at level 60. Also, Amount is doubled while he is invulnerable.\n- Hammer can find special Ode to Castlevania pickups from light sources.\n- A 2-slot limited build with  Sword Brothers This content requires the Ode to Castlevania DLC to access and  Silent Old Sanctuary (XX) alongside  Empty Tome can be used in order to quickly make use of Hammer's passive ability.\r\n- In non-limited weapon builds,  Jetstream This content requires the Emerald Diorama DLC to access can be combined with  Wicked Season (XIII) to achieve permanent or near-permanent invulnerability.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6315,9 +7643,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Aura Blast"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Retaliates with Aura Blast. Triggers Aura Blast and a random equipped weapon from the Coat of Arms when overhealing by +8.",
-      "notes": "-Wind starts with the following bonuses: 100  Max Health, +1.00  Recovery, +20%  Move Speed\r\n-When overhealing by +8 health or more, Wind triggers Aura Blast and a random equipped weapon from the  Coat of Arms.\r\n-While taking damage, Wind will also trigger Aura Blast, with a cooldown of 1 second.\r\n-He can find special Ode to Castlevania pickups like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 1,
@@ -6344,9 +7675,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Valmanway"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Valmanway. Might receive Coat of Arms as 4th level up option until Level 15.",
-      "notes": "- Hugh Baldwin starts with +20  Max Health, +1  Armor, and +40%  Move Speed.\n- He is also adept with  Valmanway This content requires the Ode to Castlevania DLC to access,  Million Cut This content requires the Ode to Castlevania DLC to access,  Tyrfing This content requires the Ode to Castlevania DLC to access, and  Rune Sword This content requires the Ode to Castlevania DLC to access.\n- Hugh may also get  Coat of Arms This content requires the Ode to Castlevania DLC to access as a 4th Level Up option multiple times until Lvl 15 (including when he reaches Lvl 15).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -6373,9 +7707,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Kaiser Knuckle"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
-      "notes": "- Morris Baldwin starts with with +100  Max Health, +2  Armor and +20%  Might.\r\n- Morris is adept with every weapon in the  Coat of Arms This content requires the Ode to Castlevania DLC to access, including their evolutions. The exceptions to this are the unions  Fuwalafuwaloo,  Legacy of Death: Soul River This content requires the Ode to Castlevania DLC to access,  Ninth Circle This content requires the Ode to Castlevania DLC to access, and  Vjaya Sisters This content requires the Ode to Castlevania DLC to access.\r\n- Upon taking damage, Morris Baldwin will fire  Kaiser Knuckle This content requires the Ode to Castlevania DLC to access,  Lapiste Tepisto This content requires the Ode to Castlevania DLC to access, and  Bracelet and its evolutions,  Bi-Bracelet and  Tri-Bracelet. This damage is not considered retaliatory damage, and these weapons can fire regardless of their cooldown.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6402,9 +7739,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Coat of Arms"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
-      "notes": "- Morris Baldwin starts with with +100  Max Health, +2  Armor and +20%  Might.\r\n- Morris is adept with every weapon in the  Coat of Arms This content requires the Ode to Castlevania DLC to access, including their evolutions. The exceptions to this are the unions  Fuwalafuwaloo,  Legacy of Death: Soul River This content requires the Ode to Castlevania DLC to access,  Ninth Circle This content requires the Ode to Castlevania DLC to access, and  Vjaya Sisters This content requires the Ode to Castlevania DLC to access.\r\n- Upon taking damage, Morris Baldwin will fire  Kaiser Knuckle This content requires the Ode to Castlevania DLC to access,  Lapiste Tepisto This content requires the Ode to Castlevania DLC to access, and  Bracelet and its evolutions,  Bi-Bracelet and  Tri-Bracelet. This damage is not considered retaliatory damage, and these weapons can fire regardless of their cooldown.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6431,9 +7771,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Endo Gears"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "notes": "- Annette starts with +1  Recovery and -10%  Cooldown. When entering a stage as Annette, all four clockwork weapons are spawned nearby as Stage Items.  Endo Gears spawns to the north,  Myo Lift to the west,  Peri Pendulum to the east, and  Epi Head to the south.\r\n- The choice of starting weapon does not affect which weapons spawn, so the player is effectively given a free level up for their choice of starting weapon.\r\n- Picking up  Dominus Hatred and upgrading it to level 6 will transform Annette into  Carmilla along with recieving her stats and passive bonuses.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -6460,9 +7803,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Peri Pendulum"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "notes": "- Annette starts with +1  Recovery and -10%  Cooldown. When entering a stage as Annette, all four clockwork weapons are spawned nearby as Stage Items.  Endo Gears spawns to the north,  Myo Lift to the west,  Peri Pendulum to the east, and  Epi Head to the south.\r\n- The choice of starting weapon does not affect which weapons spawn, so the player is effectively given a free level up for their choice of starting weapon.\r\n- Picking up  Dominus Hatred and upgrading it to level 6 will transform Annette into  Carmilla along with recieving her stats and passive bonuses.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -6489,9 +7835,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Myo Lift"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "notes": "- Annette starts with +1  Recovery and -10%  Cooldown. When entering a stage as Annette, all four clockwork weapons are spawned nearby as Stage Items.  Endo Gears spawns to the north,  Myo Lift to the west,  Peri Pendulum to the east, and  Epi Head to the south.\r\n- The choice of starting weapon does not affect which weapons spawn, so the player is effectively given a free level up for their choice of starting weapon.\r\n- Picking up  Dominus Hatred and upgrading it to level 6 will transform Annette into  Carmilla along with recieving her stats and passive bonuses.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -6518,9 +7867,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Epi Head."
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "notes": "- Annette starts with +1  Recovery and -10%  Cooldown. When entering a stage as Annette, all four clockwork weapons are spawned nearby as Stage Items.  Endo Gears spawns to the north,  Myo Lift to the west,  Peri Pendulum to the east, and  Epi Head to the south.\r\n- The choice of starting weapon does not affect which weapons spawn, so the player is effectively given a free level up for their choice of starting weapon.\r\n- Picking up  Dominus Hatred and upgrading it to level 6 will transform Annette into  Carmilla along with recieving her stats and passive bonuses.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -6547,9 +7899,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Grand Cross"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporarily reduced Cooldown. Overhealing slightly decreases Cooldown. Rosaries are easier to find.",
-      "notes": "- Tera starts with -80%  Cooldown, which depreciates to -60% at level 2, -30% at level 3, then entirely gone at level 4. She also starts with +20%  Luck.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6577,9 +7932,12 @@ window.VS_DATA = {
         "Javelin",
         "Raging Fire"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "notes": "- As a duo, Jonathan takes the lead followed by a computer controlled Charlotte. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Both Jonathan and Charlotte retain the passive bonuses from their individual characters; Jonathan Morris and Charlotte Aulin.\n- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges when he is standing still. When fully charged, it triggers all weapons he has equipped from  Coat of Arms This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Speed.\n- Charlotte starts with +20%  Move Speed, +20%  Duration, +20%  Area, +10  Reroll, +10  Skip, and +10  Banish.\n- She has a Charge ability that charges when she is standing still. When fully charged, it triggers all weapons she has equipped from  Belnades' Spellbook This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Growth.\n- Jonathan & Charlotte can find special Castlevania pickups like  Wall Chicken.\n- While Jonathan's stats, weapons, and passive items can be seen anytime by using the pause screen, the player can only see Charlotte's stats and items via the level up screen when selecting an item for Charlotte.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -6607,9 +7965,12 @@ window.VS_DATA = {
         "Morning Star",
         "Raging Fire"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "notes": "- As a duo, Jonathan takes the lead followed by a computer controlled Charlotte. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Both Jonathan and Charlotte retain the passive bonuses from their individual characters; Jonathan Morris and Charlotte Aulin.\n- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges when he is standing still. When fully charged, it triggers all weapons he has equipped from  Coat of Arms This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Speed.\n- Charlotte starts with +20%  Move Speed, +20%  Duration, +20%  Area, +10  Reroll, +10  Skip, and +10  Banish.\n- She has a Charge ability that charges when she is standing still. When fully charged, it triggers all weapons she has equipped from  Belnades' Spellbook This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Growth.\n- Jonathan & Charlotte can find special Castlevania pickups like  Wall Chicken.\n- While Jonathan's stats, weapons, and passive items can be seen anytime by using the pause screen, the player can only see Charlotte's stats and items via the level up screen when selecting an item for Charlotte.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -6637,9 +7998,12 @@ window.VS_DATA = {
         "Coat of Arms",
         "Raging Fire"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "notes": "- As a duo, Jonathan takes the lead followed by a computer controlled Charlotte. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Both Jonathan and Charlotte retain the passive bonuses from their individual characters; Jonathan Morris and Charlotte Aulin.\n- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges when he is standing still. When fully charged, it triggers all weapons he has equipped from  Coat of Arms This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Speed.\n- Charlotte starts with +20%  Move Speed, +20%  Duration, +20%  Area, +10  Reroll, +10  Skip, and +10  Banish.\n- She has a Charge ability that charges when she is standing still. When fully charged, it triggers all weapons she has equipped from  Belnades' Spellbook This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Growth.\n- Jonathan & Charlotte can find special Castlevania pickups like  Wall Chicken.\n- While Jonathan's stats, weapons, and passive items can be seen anytime by using the pause screen, the player can only see Charlotte's stats and items via the level up screen when selecting an item for Charlotte.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -6667,9 +8031,12 @@ window.VS_DATA = {
         "Spectral Sword",
         "Raging Fire"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "notes": "- As a duo, Jonathan takes the lead followed by a computer controlled Charlotte. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Both Jonathan and Charlotte retain the passive bonuses from their individual characters; Jonathan Morris and Charlotte Aulin.\n- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges when he is standing still. When fully charged, it triggers all weapons he has equipped from  Coat of Arms This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Speed.\n- Charlotte starts with +20%  Move Speed, +20%  Duration, +20%  Area, +10  Reroll, +10  Skip, and +10  Banish.\n- She has a Charge ability that charges when she is standing still. When fully charged, it triggers all weapons she has equipped from  Belnades' Spellbook This content requires the Ode to Castlevania DLC to access once. The charge time is 15 seconds by default, which is affected by  Growth.\n- Jonathan & Charlotte can find special Castlevania pickups like  Wall Chicken.\n- While Jonathan's stats, weapons, and passive items can be seen anytime by using the pause screen, the player can only see Charlotte's stats and items via the level up screen when selecting an item for Charlotte.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -6697,9 +8064,12 @@ window.VS_DATA = {
         "Raging Fire",
         "Javelin"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
-      "notes": "- As a duo, Charlotte takes the lead followed by a computer controlled Jonathan. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Jonathan retains the passive bonuses from his individual character Jonathan Morris, while Charlotte has different passive stats than her individual character Charlotte Aulin.\n- Charlotte starts with +20%  Move Speed, +40%  Duration, +40%  Area.\n- She has a Charge ability that charges when she is standing still. When fully charged it triggers all weapons she has equipped from the Belnades' Spellbook once. The charge time is 15 seconds by default, which is affected by  Growth.\n- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges when he is standing still. When fully charged It triggers all weapons he has equipped from the  Coat of Arms once. The charge time is 15 seconds by default, which is affected by  Speed.\n- Charlotte & Jonathan can find special Castlevania pickups like  Wall Chicken.\n- The player can only see Jonathan's stats via the Level up screen when selecting an item for Jonathan.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6727,9 +8097,12 @@ window.VS_DATA = {
         "Belnades' Spellbook",
         "Javelin"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
-      "notes": "- As a duo, Charlotte takes the lead followed by a computer controlled Jonathan. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Jonathan retains the passive bonuses from his individual character Jonathan Morris, while Charlotte has different passive stats than her individual character Charlotte Aulin.\n- Charlotte starts with +20%  Move Speed, +40%  Duration, +40%  Area.\n- She has a Charge ability that charges when she is standing still. When fully charged it triggers all weapons she has equipped from the Belnades' Spellbook once. The charge time is 15 seconds by default, which is affected by  Growth.\n- Jonathan Morris starts with +30  Max Health and +20%  Might.\n- He has a Charge ability that charges when he is standing still. When fully charged It triggers all weapons he has equipped from the  Coat of Arms once. The charge time is 15 seconds by default, which is affected by  Speed.\n- Charlotte & Jonathan can find special Castlevania pickups like  Wall Chicken.\n- The player can only see Jonathan's stats via the Level up screen when selecting an item for Jonathan.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6757,9 +8130,12 @@ window.VS_DATA = {
         "Pneuma Tempestas",
         "Cocytus"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "notes": "- As a duo, Stella takes the lead followed by a computer controlled Loretta. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\r\n- Like  Loretta & Stella,  Stella, and  Loretta, Stella & Loretta are immune to Health Drain and start with +1  Armor, +20%  Move Speed, and +100%  Greed.\r\n- All variations can find special Castlevania pickups like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6787,9 +8163,12 @@ window.VS_DATA = {
         "Cocytus",
         "Pneuma Tempestas"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "notes": "- As a duo, Loretta takes the lead followed by a computer controlled Stella. Both characters can Level up and select their own Weapons and Passive Items, similar to when playing in multiplayer.\n- Like  Stella & Loretta,  Stella, and  Loretta, Loretta & Stella are immune to Health Drain and start with +1  Armor, +20%  Move Speed, and +100%  Greed.\n- All variations can find special Castlevania pickups like  Wall Chicken.\n- While Loretta's Stats, Weapons, and Passive Items can be seen anytime by using the pause screen, the player can only see Stella's stats and items via the Level up screen when selecting an item for Stella.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6816,9 +8195,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Pneuma Tempestas"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "notes": "- Like Stella & Loretta, Loretta & Stella, and Loretta, Stella Lecarde starts with +1  Armor, +20%  Move Speed, and +100%  Greed and is immune to health drain.\r\n- All variations can find special Ode to Castlevania pickups like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6845,9 +8227,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Cocytus"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "notes": "- Like Stella and Loretta, Loretta and Stella, and Stella, Loretta Lecarde starts with 100  Max Health, +1  Armor, +20%  Move Speed, and +100%  Greed and is immune to Health Drain.\r\n- All variations can find special Ode to Castlevania pickups like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6874,9 +8259,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Blood Astronomica (XXI)",
       "description": "Starts with extra Arcana XXI - Blood Astronomia. Immune to health drain.",
-      "notes": "- Brauner starts with 100 Health, +1  Armor, +20%  Move Speed, +100%  Magnet, and +100%  Greed. He is also immune to Health Drain and starts with an extra  Blood Astronomia (XXI) Arcana.\r\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6905,9 +8293,12 @@ window.VS_DATA = {
         "Vibhuti Whip",
         "Vanitas Whip"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Fights well with (and against) his father.",
-      "notes": "- Soleil Belmont starts with +20  Max Health, +1  Armor, and +1  Revival.\n- Upon receiving damage, Soleil will fire his hidden whips in retaliation. This can occur at most every 4 seconds, with the time between attacks decreasing with  Speed until a minimum delay of 0.5 seconds is reached. The damage from this attack is not considered retaliatory damage.\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.\n- Since he starts with three weapons, with extra hidden copies of each, Soleil is the best user for  Beginning (X).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -6934,9 +8325,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Salamender"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increase the base damage of every equipped fire-type weapon when levelling up.",
-      "notes": "- While playing as Dario, the base damage of every equipped Fire-type weapon increases by 0.5 per level. Fire-type weapons include:\n Fire Wand and  Hellfire\n Santa Water and  La Borra\n Valkyrie Turner, but not  Shadow Pinion\n Flames of Misspell and  Ashes of Muspell\n Bracelet,  Bi-Bracelet, and  Tri-Bracelet\n Nduja Fritta Tanto\n Heart of Fire (XIX)\n Firearm This content requires the Operation Guns DLC to access and  Fire-L3GS This content requires the Operation Guns DLC to access\n Alchemy Whip This content requires the Ode to Castlevania DLC to access and  Vampire Killer This content requires the Ode to Castlevania DLC to access\n Raging Fire This content requires the Ode to Castlevania DLC to access,  Salamender This content requires the Ode to Castlevania DLC to access, and  Speculo Raging Fire This content requires the Ode to Castlevania DLC to access\n Dominus Anger This content requires the Ode to Castlevania DLC to access, but not  Power of Sire This content requires the Ode to Castlevania DLC to access\n Dextro Custos This content requires the Ode to Castlevania DLC to access and  Trinum Custodem This content requires the Ode to Castlevania DLC to access, but not  Centralis Custos This content requires the Ode to Castlevania DLC to access nor  Sinestro Custos This content requires the Ode to Castlevania DLC to access\n Svarog Statue This content requires the Ode to Castlevania DLC to access and  Darkness Illusion This content requires the Ode to Castlevania DLC to access\n Kardía Phlegeton This content requires the Ode to Castlevania DLC to access, but not  Aura Blast This content requires the Ode to Castlevania DLC to access\n Dies Irae, but not  Arrow of Goth This content requires the Ode to Castlevania DLC to access nor  Mannajja\n Hydro Pump Climax This content requires the Ode to Castlevania DLC to access, but not  Hydro Storm This content requires the Ode to Castlevania DLC to access\n Punch This content requires the Emerald Diorama DLC to access,  Pressure Point This content requires the Emerald Diorama DLC to access, and  Gilded Hand This content requires the Emerald Diorama DLC to access\n Saber Machine Gun This content requires the Emerald Diorama DLC to access,  Hecaton Machine Gun This content requires the Emerald Diorama DLC to access, and  Divergence This content requires the Emerald Diorama DLC to access\n Spirit Rings This content requires the Emerald Diorama DLC to access and  Rings of Calamity This content requires the Emerald Diorama DLC to access\n Infernolatro This content requires the Ante Chamber DLC to access and  NaneInferno This content requires the Ante Chamber DLC to access\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.\n- As with all characters that gain benefits from leveling up, Dario benefits most from starting with  Wicked Season (XIII). The  Crown and some Curse-boosting items are also advisable. One of those is  Torrona's Box, which naturally synergizes with Dario's playstyle as it evolves the Flames of Misspell.\r\n- Because Dario's ability gives a flat base damage boost, he benefits more from weapons with low base damage that can output attacks quickly than weapons with high base power, which won't scale as well. He is one of the best users of Svarog Statue for this reason, as its main drawback is usually that its damage is extremely weak in the lategame. For the same reason Hellfire may be suboptimal as it's a high-damage, low-hit rate weapon.\r\n- If Svarog Statue is picked, one might also want to consider using  Wings to maximize the trail of fire, which also can evolve the  Shadow Pinion into the fire-based Valkyrie Turner, and then united into the  Darkness Illusion This content requires the Ode to Castlevania DLC to access.\r\n- Heart of Fire (XIX) can be a decent Arcana to pick, as it affects most of the weapons Dario's boost works on, and the explosions given from this arcana are boosted as well, increasing Dario's options for weapons.\r\n- Heir of Fate (XIX) Is an incredibly solid pick, as it synergises greatly with Dario's boost.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6963,9 +8357,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gets a hidden clone of the latest equipped weapon or evolution.",
-      "notes": "- Dmitrii gets a hidden copy of the latest weapon he received. Of note is that if the player gives him  Game Killer (0), he will get a hidden copy of that initially rather than his starting weapon.\r\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6993,9 +8390,12 @@ window.VS_DATA = {
         "Luminatio",
         "Umbra"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Karma Coin every 2 levels.",
-      "notes": "- While playing as Celia, a  Karma Coin appears above her every second level.\r\n- She can find special Ode to Castlevania pickups, like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7022,9 +8422,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Vol Umbra"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Wicked Season (XIII)",
       "description": "Starts with extra Arcana XIII - Wicked Season. Immune to health drain.",
-      "notes": "- Graham Jones starts with 100  Max Health, +1  Armor, +20%  Move Speed, +100%  Magnet, and +100%  Greed, and he also starts with an extra Wicked Season (XIII) Arcana. He is also immune to health drain.\r\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.\n- Graham is a fantastic user of  Victorian Horror (XVIII) as he has naturally very high Greed and Magnet and naturally scales the former via Wicked Season, on top of that, he is incentivized to pick up the  Attractorb in order to increase the power of his starting weapon, further increasing his Magnet area. This can serve as a pseudo-evolved weapon in the early game to help him survive Wicked Season-boosted hordes.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7051,9 +8454,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Pocket Knife"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Totally not Alucard",
-      "notes": "Barring starting weapons, Genya Arikado is functionally identical to  Alucard, thus he has the same starting stats (+100  Max Health, +2  Armor and +50%  Move Speed), hidden weapons, and immunity to Health Drain.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7080,9 +8486,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Rune Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain. Can choose a per-level bonus.",
-      "notes": "- Joachim starts with +1  Armor, +20%  Move Speed, and +100%  Greed. Immune to health drain.\r\n- Can choose a per-level bonus: 1%  Might,  Area,  Speed,  Duration,  Recovery (0.01),  Growth,  Luck,  Greed,  Curse, or  Move Speed.\r\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7109,9 +8518,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Nitesco"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a random equipped weapon from the Ebony Diabologue when overhealing by +8. Immune to health drain.",
-      "notes": "- Walter Bernhard starts with +50  Max Health, +2  Armor, +20%  Move Speed, and +100%  Greed.\r\n- Walter is immune to health drain.\r\n- When overhealing by +8 health or more, Walter will trigger any equipped weapon from the  Ebony Diabologue, but not the evolutions of these weapons.\r\n- Walter can find special Ode to Castlevania pickups from light sources.\n- Thanks to his high health, armor and movement speed, as well as a decently strong weapon, Walter easily supports  Wicked Season (XIII) starts.\r\n- Instead of getting a bunch of Ebony Diabologue weapons, it is actually best to focus on a small number of them and fill the rest of Walter's slots with weapons that heal, like  Fuwalafuwaloo (whose area is similar to Nitesco),  Muramasa This content requires the Legacy of the Moonspell DLC to access (which also synergizes with his impressive Greed and health drain immunity), and  Paranormal Scan, which is arguably the best weapon in the game to begin with.\r\n- Perhaps the best Ebony Diabologue weapon to focus on is  Soul Steal, which kills all normal enemies on screen and heals the user, it is normally hampered by a massively long cooldown, but Walter, like  Babi-Onna This content requires the Legacy of the Moonspell DLC to access, can get around this issue from very early in the game. It is even possible to get Soul Steal to retrigger itself (by healing for 8 or more), at which point Soul Steal will continuously clear the screen of enemies with little to no further input from the player needed.  Pummarola and  Sarabande of Healing (VI) are recommended to achieve this.\r\n- Sword Brothers can also be used to become permanently invincible.\r\n- With his high Greed, Walter can also be run with Wicked Season (XIII) and  Disco of Gold (XV) to trigger the required overhealing. If doing this, prioritize getting  Vicious Hunger to consistently get coins and/or a source of coin bags like  Greatest Jubilee or  Hail from the Future (X).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -7136,9 +8548,12 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/carmilla.png",
       "base_name": "Carmilla",
       "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Curse: triggers all equipped Dominus weapons. Immune to health drain. Can fly.",
-      "notes": "- Carmilla starts with the following bonuses: +100  Max Health, +1  Armor, +80%  Move Speed, +20%  Might, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\r\n- Carmilla has a charging ability whose duration is decreased by  Curse, and when activated, triggers  Dominus Hatred,  Dominus Anger, and  Dominus Agony if they are equipped. Carmilla is also immune to health drain and can also fly over walls and obstacles.\r\n- Carmilla can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7165,9 +8580,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Troll Bomb"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +4).",
-      "notes": "- Cave Troll starts with +20%  Move Speed. They gain +1  Amount every 20 levels until level 80. The maximum Amount gained this way is +4.\r\n- Notably, the Cave Troll cannot find special Ode to Castlevania pickups from light sources.\n- Because  Troll Bomb, its starting weapon, has a 2 minute cooldown, you basically need to either start with an Arcana that can do damage or buy a weapon from one of the merchants in order for this character to function, otherwise you would need to wait two minutes before even making your first attack. Unlike  Christine, whose starting  Pentagram has a similar issue, the Cave Troll does not start with an extra level to select a more useful weapon.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7192,9 +8610,12 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/fleaman.png",
       "base_name": "Fleaman",
       "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Gamekiller (0)",
       "description": "He doesn't understand the game.",
-      "notes": "- The Fleaman starts with no weapon, only 1  Max Health but +100%  Move Speed. He also starts with an extra Game Killer arcana, which prevents him from leveling up and obtaining weapons or passive items normally. At the start of the game a single  Experience Gem will spawn near Fleaman.\r\n- Unlike other Ode to Castlevania characters who can find special Ode to Castlevania pickups from light sources, the Fleaman can only find  Wall Chicken.\n- Playing as Fleaman (either for the challenge or with the intent of unlocking Slogra and Gaibon) is less about making use of his synergies and more about dealing with his weaknesses. With only one health and the inability to level up or obtain any items other than what is on the map, Fleaman is the hardest character to play in the game. However, there are a few strategies that can be used to work around his weaknesses.\r\n- Stake to Your Heart (0) is pretty much a cheat code for Fleaman, allowing him to make his nonexistent health completely irrelevant and to gain new weapons while simultaneously still enjoying the benefits of Game Killer.\r\n- Victorian Horror (XVIII) is one of the ways of increasing Fleaman's health.\r\n- Crystal Cries (XII) is another way of increasing Fleaman's health, as well as scaling his  Growth for the purpose of maximizing Game Killer damage. However, because he dies in one hit, the player must find a way other than Crystal Cries' own effect to freeze enemies. To that end,  Icebrand may be purchased from the Master Librarian. If going for this strategy, consider playing on Inverse in order to additionally acquire  Silent Old Sanctuary (XX) from the merchant to maximize the power of Icebrand in the early game.\r\n- Heir of Fate (XIX) is another possible way of trying to work around Fleaman's health problem. To deal fire damage,  Svarog Statue can be purchased from the Master Librarian.\r\n- Sword Brothers with Silent Old Sanctuary and an  Empty Tome is one of the highest upside builds available to Fleaman, as it can make him permanently invincible if one pulls it off, rendering his nonexistent health irrelevant. However, this cannot easily be accomplished on any stage that does not have an Empty Tome or a  Arma Dio, and requires some time to set up even if the stage does contain one. This strategy also works best on Inverse. Silent Old Sanctuary is mandatory, and as a second Arcana the player must select either  Mad Groove (VIII) or  Moonlight Bolero (VI).\r\n- The former pulls in all stage items, including Arma Dio, but requires some time to set up as Fleaman can only level up his items using chests, which will require waiting for bosses to spawn or seeking out stage bosses, which may be too dangerous for Fleaman to safely handle.\r\n- The latter provides more chests to level up Fleaman's items, but it means he may have to make the dangerous trek to pick up an Arma Dio himself. This method may be preferable, as there is a chance of obtaining an Arcana chest to also acquire Mad Groove. If this strategy is chosen, picking up black item chests early may be ill-advised, as if Fleaman collects passive items other than Empty Tome, it becomes much more difficult to prioritize leveling up only the Empty Tome and Sword Brothers.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 1,
         "recovery": 0,
@@ -7221,9 +8642,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Axe"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Six axes axe axes as axes axe.",
-      "notes": "- The Axe Armor starts with +10  Max Health, +10%  Might, +10%  Move Speed, and +10%  Curse. They gain another 5% Might, 5% Move Speed and 5% Curse every 10 levels, for a max increase of +20% or +30% in total.\r\n- As the description implies, they gain an additional hidden Axe every 10 levels, up to a max of 6.\r\n- The Axe Armor can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 10,
         "recovery": 0,
@@ -7250,9 +8674,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Icebrand"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "She likes her Wall and Floor chicken well frozen.",
-      "notes": "- The Frozenshade starts with +2  Armor and +20%  Move Speed.\r\n- Overhealing by +32 will trigger a  Sorbetto.\r\n- The Frozenshade can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7279,9 +8706,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Arrow of Goth"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Luck every level. Can fly.",
-      "notes": "- The Alamaric Sniper flies over terrain, thus ignoring walls and obstacles. It also starts with +80%  Move Speed, +100%  Luck and gains +1% Luck every level, which makes weapons with a luck-based effect (like his Arrow of Goth) perform well.\r\n- The Alamaric Sniper can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7306,9 +8736,12 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/stone_skull.png",
       "base_name": "Stone Skull",
       "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1 Armor every 5 levels. Horizontally impaired. Retaliates.",
-      "notes": "- Stone Skull starts with with +233  Max Health, +3  Armor, +50%  Greed and +50%  Curse.\n- It gains an additional +1  Armor every 5 levels, starting from level 7.\n- It is immune to Health Drain.\n- Stone Skull will always move at a quarter of its normal, or vertical, speed when moving horizontally. Controls that are not locked to only 8 directions, such as a gamepad's analog stick, make it very difficult to stay on a purely horizontal axis, resulting in a meandering up-and-down motion.\n- Upon receiving damage, Stone Skull will deal retaliatory damage to the enemy that damaged it. This damage is equal to the player's level and is increased by +10% per point of  Armor. This damage will always be at least 1, and can not exceed the damage the enemy dealt. Afterward, any Thorns the player has will be added as extra damage.\n- Unless the player chooses vertical stages such as Gallo Tower,  Wings is a must for improving Stone Skull's horizontal movement speed.  Sonic Dash This content requires the Ode to Castlevania DLC to access may also be considered for periodic speed boosts.\r\n- Amusingly enough, Stone Skull's horizontal movement speed penalty can be used to the player's benefit once excessive  Move Speed comes into play, allowing for precise movement in situations where other characters are usually sent careening off with the slightest nudge.\r\n- As the Stone Skull has innate retaliation damage and extra armor, it is a good candidate for the  Divine Bloodline (IX) Arcana.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 233,
         "recovery": 0,
@@ -7334,11 +8767,16 @@ window.VS_DATA = {
       "base_name": "Ruler Sword",
       "starting_weapons": [
         "Sword Brothers",
-        "Ruler Sword Body (Hidden)"
+        "Ruler Sword Body"
       ],
+      "hidden_items": [
+        "Ruler Sword Body"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Grows additional swords when accumulatively Overhealing by an increasingly larger amount (Max 12 swords).",
-      "notes": "- Ruler Sword starts with +100  Max Health and +1  Armor.\r\n- Ruler Sword posseses flight, allowing it to ignore walls and obstacles.\r\n- Ruler Sword will add 1 sword to its hidden weapon at specific overhealing thresholds. These thresholds are 1, 40, 80, 160, 320, 480, 640, 800, 960, 1120, 1280, and 1440. Any overhealing will contribute to the next threshold, but all stored overhealing is reset when a new sword is added. Swords are added in the order of large, small, small, until the player has reached the maximum of 12 swords.\r\n- After all 12 swords are obtained, overhealing by +32 in a single instance will cause all swords to shoot out and retract, dealing damage to enemies.\r\n- Additionally, after obtaining all 12 swords, overhealing will begin to increase the base damage of Ruler Sword Body by 10*log(0.03*CarryOverOverheal) where \"CarryOverOverheal\" is all overhealing accumulated after the 12th sword is obtained.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7365,9 +8803,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Summon Spirit Tornado"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Her hidden vacuum draws in items, destructibles, and enemies.",
-      "notes": "- Persephone starts with +20%  Move Speed and +100%  Magnet.\n- Persephone is equipped with a vacuum that sucks in all pickups, stage items, enemies, and light sources towards her from the direction she is facing. Its area of effect is a thin rectangle in front of her that stretches to the edge of the screen.\n- Persephone is also able to destroy light sources by touching them.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7394,9 +8835,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Keremet Morbus"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Lost & Found Painting (XVII)",
       "description": "Starts with extra Arcana XVII - Lost & Found Painting. Triggers Keremet Morbus when overhealing by +8.",
-      "notes": "- Keremet starts with the following bonuses: +2.0  Recovery, +20  Armor, -100%  Move Speed\n- Keremet gains +5% Move Speed, +5% Might, and +5% Curse every 10 levels up until level 40. In addition, they gain +1 Armor every 20 levels starting at level 30 until they hit the +50 Amor stat cap. The armor cap is reached at level 610 without Armor PowerUp, level 550 with Armor PowerUp, or sooner with other sources of Armor.\n- Overhealing by +8 or more retriggers Keremet Morbus.\n- He also starts with an extra  Lost & Found Painting (XVII) Arcana.\n- He can find special Ode to Castlevania pickups, like  Wall Chicken.\n- Like  Peppino, Keremet is a character that is normally entirely stationary, although any Speed powerups, including the store-bought ones, will allow him to slowly crawl along the ground.  Wings and  Sonic Dash /  Rapidus Fio come highly recommended to allow Keremet to move at a decent speed, especially since, unlike Peppino, Keremet has no Magnet bonus to help pick up experience gems. The  Attractorb is important for the same reason. Alternatively,  Edge of the Earth (VIII) can be used to lock Keremet's movement at +100%.\n- Keremet has incredibly high Armor, the highest starting amount in the game. This makes him an extremely powerful user of weapons that deal retaliation damage based on Armor, like  Legionnaire This content requires the Tides of the Foscari DLC to access or  Wrecking Ball.  Divine Bloodline (IX) can be powerful for the same reason, though it may be difficult for Keremet to pursue enemies in the early game to collide with them due to his slow movement.\n- Thanks to his extra Arcana, Keremet benefits greatly from weapons that scale well based on  Duration, including powerful options like  Godai Shuffle This content requires the Legacy of the Moonspell DLC to access and  Seraphic Cry.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 2,
@@ -7421,11 +8865,16 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/astarte.png",
       "base_name": "Astarte",
       "starting_weapons": [
-        "Star Flail (Hidden)"
+        "Star Flail"
       ],
+      "hidden_items": [
+        "Star Flail"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with a hidden Star Flail. Enemies have a 15% chance to spawn Defanged. Can turn defeated enemies into followers.",
-      "notes": "- Astarte starts with +20  Max Health, +1  Recovery, +20%  Move Speed, +50%  Greed, and +15%  Defang.\r\n- She is adept with  Star Flail This content requires the Ode to Castlevania DLC to access.\r\n- She starts with a hidden Star Flail. It is upgraded every 7 levels starting at level 7, up to level 49 when it is maxed at level 8.\r\n- She can turn enemies she kills into followers if they can become one. The maximum number of followers is calculated by level/10 rounded to the nearest integer, with a minimum of 1 and a maximum of 10. The following table shows the maximum number of followers by level:\nLevels\tMaximum followers\r\n1-14\t1\r\n15-25\t2\r\n26-34\t3\r\n35-45\t4\r\n46-54\t5\r\n55-65\t6\r\n66-74\t7\r\n75-85\t8\r\n86-94\t9\r\n95+\t10\r\n- Astarte is also able to destroy light sources by touching them.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 1,
@@ -7452,9 +8901,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Anura"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +32 triggers any equipped weapon from the Belnades Spellbook.",
-      "notes": "Drolta Tzuentes starts with +70%  Duration, +5  Reroll, +5  Skip and +5  Banish.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7480,11 +8932,16 @@ window.VS_DATA = {
       "base_name": "Witch Actrise",
       "starting_weapons": [
         "Gemma Torpor",
-        "Runetracer.(Hidden)"
+        "Runetracer"
       ],
+      "hidden_items": [
+        "Runetracer"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Gemma Torpor, Runetracer, Magi-Stone, and Kyra-Stones. Has a hidden Runetracer that grows stronger when levelling up.",
-      "notes": "- Witch Actrise starts with +20  Max Health, +20%  Move Speed, +20%  Duration, +1  Amount and +50%  Greed.\n- Actrise is adept with  Runetracer,  Magi-Stone,  Kyra-Stones, and  Gemma Torpor This content requires the Ode to Castlevania DLC to access.\n- Actrise also has a hidden Runetracer that gains +1 Base Damage each level. This Runetracer will also have a unique projectile visual, appearing as colored crystals.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -7510,11 +8967,16 @@ window.VS_DATA = {
       "base_name": "Atlantis Shrine Wizard",
       "starting_weapons": [
         "Hydro Storm",
-        "(Hidden) Acquazzone."
+        "Acquazzone"
       ],
+      "hidden_items": [
+        "Acquazzone"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +32 triggers any equipped weapon from the Coat of Arms and slowly floods the environment.",
-      "notes": "- Atlantis Shrine Wizard starts with with +40%  Move Speed, +40%  Duration, +5  Reroll, +5  Skip and +5  Banish.\n- Atlantis Shrine Wizard triggers all equipped  Coat of Arms weapons when overhealing by +32. When overhealing by +32 the hidden  Acquazzone will begin to rise from bottom of the screen, with small increases in height after each instance of +32 overhealing. This effect is capped at 50% the height of the screen.\n- An easy way to achieve max height with his passive is to use  Lifesign Scan and  Pummarola with the Arcana  Sarabande of Healing (VI).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7541,9 +9003,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Nightmare"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Boogaloo of Illusions (XVIII)",
       "description": "Starts with extra Arcana XVIII - Boogaloo of Illusions.",
-      "notes": "- The Succubus starts with the following bonuses: 100  Max Health, +80%  Move Speed, -10%  Cooldown, +100%  Greed\r\n- Additionally, the Succubus starts with an extra  Boogaloo of Illusions (XVIII) Arcana.\r\n- She can find special Ode to Castlevania pickups, like  Wall Chicken.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7570,9 +9035,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Bone"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "A trio of zombies posing as vampire hunters.",
-      "notes": "- The chosen main character will be joined by the other two as follower characters. These followers can be damaged and die as normal.\r\n- Each character of the Fake Trio has a different passive and starting stats, mimicking certain characters from Ode to Castlevania.\r\n- Fake Trevor, the  Antonio Belpaese lookalike, has the same starting stats and passive as  Trevor Belmont This content requires the Ode to Castlevania DLC to access.\r\n- Fake Trevor starts with +20%  Move Speed and an extra  Beginning (X). Fake Trevor also gets +1  Amount every 10 Levels, with a max of +3.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7599,9 +9067,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Bracelet"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "A trio of zombies posing as vampire hunters.",
-      "notes": "- The chosen main character will be joined by the other two as follower characters. These followers can be damaged and die as normal.\n- Each character of the Fake Trio has a different passive and starting stats, mimicking certain characters from Ode to Castlevania.\n- Fake Sypha, the  Imelda Belpaese lookalike, has the same starting stats and passive as  Sypha Belnades This content requires the Ode to Castlevania DLC to access.\r\n- Fake Sypha starts with +40%  Move Speed and  Duration, +10  Reroll,  Skip, and  Banish, and an extra  Jail of Crystal (XIV).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7628,9 +9099,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Pocket Knife"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "A trio of zombies posing as vampire hunters.",
-      "notes": "- The chosen main character will be joined by the other two as follower characters. These followers can be damaged and die as normal.\n- Each character of the Fake Trio has a different passive and starting stats, mimicking certain characters from Ode to Castlevania.\n- Fake Grant, the  Gennaro Belpaese lookalike, has the same starting stats and passive as  Grant Danasty This content requires the Ode to Castlevania DLC to access.\r\n- Fake Grant starts with +60%  Move Speed and +40%  Luck. Fake Grant can also trigger any equipped knives ( Knife,  Curved Knife This content requires the Ode to Castlevania DLC to access,  Pocket Knife This content requires the Ode to Castlevania DLC to access, and their evolutions) in retaliation or by overhealing by +8 Health in a single instance.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7657,9 +9131,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Trident"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Trident. Always followed by Gaibon. Gets enraged if its partner dies.",
-      "notes": "- Slogra and Gaibon start with with +100  Max Health, +1  Armor and +30%  Might.\r\n- Slogra will be followed by Gaibon as a secondary character or vice versa, depending on which is chosen as the main character.\r\n- The secondary character can be damaged as normal and if he dies, the remaining character is enraged and gains a temporary -90%  Cooldown bonus for 20 seconds. The bonus is maintained even if the other character is revived.\r\n- Despite his description, Gaibon currently does not possess Flight due to a bug.\r\n- Slogra and Gaibon are adept with  Trident This content requires the Ode to Castlevania DLC to access and  Fire Wand, respectively, but not their evolutions,  Gungnir-Souris This content requires the Ode to Castlevania DLC to access and  Hellfire.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7686,9 +9163,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fire Wand"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Fire Wand. Always followed by Slogra. Gets enraged if its partner dies. Flies.",
-      "notes": "- Slogra and Gaibon start with with +100  Max Health, +1  Armor and +30%  Might.\r\n- Slogra will be followed by Gaibon as a secondary character or vice versa, depending on which is chosen as the main character.\r\n- The secondary character can be damaged as normal and if he dies, the remaining character is enraged and gains a temporary -90%  Cooldown bonus for 20 seconds. The bonus is maintained even if the other character is revived.\r\n- Despite his description, Gaibon currently does not possess Flight due to a bug.\r\n- Slogra and Gaibon are adept with  Trident This content requires the Ode to Castlevania DLC to access and  Fire Wand, respectively, but not their evolutions,  Gungnir-Souris This content requires the Ode to Castlevania DLC to access and  Hellfire.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7715,9 +9195,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Knife"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
-      "notes": "- Zephyr starts with +50%  Move Speed, +20%  Speed and +2  Amount.\n- While an  Orologion is in effect, he gains an additional +100%  Move Speed and -33%  Cooldown. Orologions are also twice as common.\n- Zephyr is adept with  Knife,  Curved Knife This content requires the Ode to Castlevania DLC to access,  Pocket Knife This content requires the Ode to Castlevania DLC to access, their evolutions, and  Million Cut This content requires the Ode to Castlevania DLC to access.\n- Since the boost to Cooldown and Move Speed only applies while the Orologion time stop is in effect,  Out of Bounds (XII) is not a key Arcana for Zephyr despite generating more Orologions as the benefit from it is too situational. Instead, it is usually preferable to run a  Slash (XVI) build backed by  Claimh Solais and possibly  Iron Blue Will (VII) depending on selected weapons.\n- However, it can be useful to make room for  Greatest Jubilee in Zephyr's loadout, as it benefits from Slash and may generate more Orologions.\n- Hail from the Future (X) is also a generically powerful Arcana that can help, among other things, generate additional Orologions.\n- Knife is typically preferable over Curved Knife as the latter does not benefit from Slash and the former can be evolved into the very powerful  Million Cut.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7744,9 +9227,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Curved Knife"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
-      "notes": "- Zephyr starts with +50%  Move Speed, +20%  Speed and +2  Amount.\n- While an  Orologion is in effect, he gains an additional +100%  Move Speed and -33%  Cooldown. Orologions are also twice as common.\n- Zephyr is adept with  Knife,  Curved Knife This content requires the Ode to Castlevania DLC to access,  Pocket Knife This content requires the Ode to Castlevania DLC to access, their evolutions, and  Million Cut This content requires the Ode to Castlevania DLC to access.\n- Since the boost to Cooldown and Move Speed only applies while the Orologion time stop is in effect,  Out of Bounds (XII) is not a key Arcana for Zephyr despite generating more Orologions as the benefit from it is too situational. Instead, it is usually preferable to run a  Slash (XVI) build backed by  Claimh Solais and possibly  Iron Blue Will (VII) depending on selected weapons.\n- However, it can be useful to make room for  Greatest Jubilee in Zephyr's loadout, as it benefits from Slash and may generate more Orologions.\n- Hail from the Future (X) is also a generically powerful Arcana that can help, among other things, generate additional Orologions.\n- Knife is typically preferable over Curved Knife as the latter does not benefit from Slash and the former can be evolved into the very powerful  Million Cut.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7773,9 +9259,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Soul Steal"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a random equipped weapon every 13th hop. Immune to health drain.",
-      "notes": "- Jiangshi starts with -53  Max Health, +1  Recovery, +10%  Move Speed, and +100%  Greed.\n- Jiangshi will trigger a random equipped weapon every 13 \"hops\" while the player is moving. This equates to 65 frames of its walking cycle.\n- Jiangshi is also immune to Health Drain.\n- Jiangshi's ability is very similar to that of  Babi-Onna, so most of the tips that apply to that character also apply to Jiangshi. However, there are a few important differences between the two.\r\n- Unlike Babi-Onna, Jiangshi can also fire weapons normally. This means that, unlike with Babi-Onna, the  Empty Tome is not useless. It also starts with a much more impactful weapon to negate the cooldown of.\r\n- As a tradeoff, Jiangshi must move a much longer distance compared to Babi-Onna in order to get its trigger. Just like with Babi-Onna,  Wings remains useful for maximizing the power of Jiangshi's passive.\r\n- It is harder to build Jiangshi around  Paranormal Scan, as the slower trigger rate for its ability makes the opportunity cost much higher.\r\n- Due to Jiangshi's frailty, it is recommended to run defensive items like  Armor and  Parm Aegis in order to maximize its survivability and give it a better chance of surviving hordes until it can set off a Soul Steal.\r\n- While one weapon runs built around Soul Steal are certainly feasible, it may be a good idea to add  Troll Bomb or  Sanctuary for dealing with bosses. Without these weapons, Jiangshi may struggle to kill certain bosses that are too tough to kill with Soul Steal alone, like the  Levarsee Darkassos spawned by  Moonlight Bolero (VI).\r\n- Jiangshi's high Greed stat allows them to make great use of  Victorian Horror (XVIII).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -63,
         "recovery": 1,
@@ -7802,9 +9291,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Summon Spirit"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Chaos in the Dark Night (V)",
       "description": "Can choose a per-level bonus after defeating a set amount of enemies (max 5 times).",
-      "notes": "- Blackmore starts with +40%  Move Speed, +40%  Duration, and +100%  Greed.\n- He can choose a per-level bonus after defeating a set amount of enemies up to 5 times: 1%  Might,  Area,  Speed,  Duration,  Recovery (0.01),  Growth,  Luck,  Greed,  Curse, or  Move Speed. Bonus selection is available at the 1000, 5000, 9000, 13000, and 17000 kills.\n- Blackmore starts with an extra Chaos in the Dark Night (V) Arcana. Blackmore is also able to gain up to five Arcana.\n- He can find special Castlevania pickups, like  Wall Chicken.\n- Blackmore's 5 per-level bonuses make him, along with  Scientist, the highest scaling character for nine of the ten stats he can select (the exception being Recovery, where they are outclassed by  Cosmo). This allows him to synergize with a variety of weapons and arcana depending on the focus of their stat bonuses:\r\nPotentially having the highest scaling  Might, Blackmore can make particularly good use of SpellStrike.\r\nPotentially having the highest scaling  Area, Blackmore can make particularly good use of SpellStream,  Santa Water,  Lightning Ring, and so on.\r\nPotentially having the highest scaling  Speed, Blackmore can make particularly good use of SpellString, King Bible, Runetracer, and so on.\r\nPotentially having the highest scaling  Duration, Blackmore can make particularly good use of Runetracer, Bone,  La Robba, and so on.\r\nPotentially having the highest scaling  Luck, Blackmore may be able to make good use of Gatti Amari, Muramasa,  108 Bocce, and so on.\r\nPotentially having the highest scaling  Curse, Blackmore can make particularly good use of  108 Bocce and Twilight Requiem (II).\r\nPotentially having the highest scaling  Move Speed, Blackmore can make particularly good use of Shadow Pinion, Vento Sacro, Celestial Dusting, and so on.\r\n- Regardless of build, selecting  Growth for some of Blackmore's bonuses will result in enough additional levels that you will gain more of other stats than if you were to exclusively select another bonus. The value proposition of more Growth bonuses depends on how long you continue your run and how dense with enemies it is.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7831,9 +9323,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Dark Rift"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through the dinner.",
-      "notes": "- Count Olrox starts with the following bonuses: +50  Max Health, +1  Armor, +20%  Move Speed, +20%  Might, +20%  Duration, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\n- Count Olrox is immune to health drain.\n- After obtaining the  Ebony and Crimson Stones, at certain kill thresholds, Count Olrox transforms into a more powerful form, called  Megalo Olrox, starting at 1,000 kills. He gains +200% Might and -50% Cooldown, and becomes invulnerable. He also gains a permanent  Nduja Fritta Tanto for the duration of the effect.\n- Count Olrox can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse or  Charm, like  Torrona's Box and  Karoma's Mana, are important for Olrox in order to consistently kill as many enemies as possible.  Wicked Season (XIII)} should likely be your first Arcana. Built properly, Olrox should be able to spend most of the run in Megalo form.\r\n- Paranormal Scan is recommended. One of Olrox's weaknesses is that, even with high Curse, kill thresholds may be difficult to achieve later into the run, stranding him in his normal form against jacked-up enemies. Due to Olrox's massive Cooldown reduction in Megalo form, he can snowball Paranormal Scan very quickly and this helps build up his stats for the late-game to help him compete with powerful enemies.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -7858,12 +9353,18 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/malphas.png",
       "base_name": "Malphas",
       "starting_weapons": [
-        "(Hidden) Thousand Edge",
-        "(Hidden) Tenebris Tonitrus"
+        "Thousand Edge",
+        "Tenebris Tonitrus"
       ],
+      "hidden_items": [
+        "Thousand Edge",
+        "Tenebris Tonitrus"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Has hidden weapons that grow stronger when leveling up. Can fly.",
-      "notes": "- Malphas starts with +1  Armor, +80%  Move Speed, and +20%  Might. He can also fly over terrain, preventing him from being obstructed by stage obstacles.\r\n- Malphas starts with a hidden  Tenebris Tonitrus and a weaker version of the  Thousand Edge, reskinned as black feathers. His hidden weapons get stronger with each level.\r\n- Malphas can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -7890,9 +9391,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Death Spiral"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
-      "notes": "- Death starts with +155  Max Health, +100%  Move Speed, and +20%  Might. Stat-wise, Death is identical to  Mask of the Red Death.\r\n- Once the  Ebony and Crimson Stones have been obtained, he morphs into a smaller version of his boss form, called  Megalo Death, upon reaching level 80. This transformation gives Death the  Death Hand, two giant skeletal hands that move in tandem with him and create large cracks in the ground that shake the screen and deal 65 base damage to enemies. In this form, he gains +200% Might, -20%  Cooldown, and +100%  Curse. He also cannot die in this form, but instead disappears at the time limit, ending the run automatically, similar to  Megalo Menya Moonspell and  Ghost Lino.\r\n- Death can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 255,
         "recovery": 0,
@@ -7919,9 +9423,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Tenebris Tonitrus"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Bigger is better.",
-      "notes": "- Galamoth starts with the following bonuses: +156  Max Health, +2  Armor, +100%  Might, +100%  Greed, +1  Revival\r\n- He starts gaining hidden  Lightning Ring weapons as he levels up, similar to  Scorej-Oni.\r\n- Galamoth gains an additional hidden  Lightning Ring every 8 levels, up to a max of 6 at level 40, without taking up any weapon slots; the actual weapon can still be obtained from level-up choices, allowing the player to have a total of 7 Lightning Rings. After that, each of the hidden weapons is upgraded after every 12 levels, 7 times, up to level 124, where all rings reach their maximum level at level 8; however, they do not gain Limit Break bonuses. The hidden Lightning Rings also fire whenever the character takes any form of damage.\r\n- Galamoth starts out massive, but upon reviving shrinks to a more reasonable size on screen.\r\n- Galamoth can find special Ode to Castlevania pickups from light sources.\n- Despite the size of Galamoth's sprite, his actual hitbox is just the same as any normal character's. This also means that, despite his unlock description, he can, somehow, fit through normal doors.\r\n- Galamoth has the exact same passive ability as  Scorej-Oni and therefore can run a similar  Muramasa This content requires the Legacy of the Moonspell DLC to access +  Silent Old Sanctuary (XX) limited weapons build as that character to spam his passive Lightning Rings at an insane rate. While Galamoth starts with a weapon and therefore gets a slightly worse cooldown reduction than Scorej-Oni (who can run a self-damage weapon and nothing else), his much beefier stats more than make up for it, in addition, his massive Greed paired with his impressive Might lets him achieve a DPS with the Muramasa almost approaching that of all the Lightning Rings combined.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 256,
         "recovery": 0,
@@ -7948,9 +9455,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Belnades' Spellbook"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
-      "notes": "- Megalo Elizabeth Bartley starts with the following bonuses: +300  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish, +50  Charm\r\n- She is also immune to health drain.\r\n- Megalo Elizabeth Bartley is the transformation  Elizabeth Bartley temporarily assumes upon reaching certain enemy kill thresholds, but playing as Megalo Elizabeth Bartley enables the transformation permanently.\r\n- Notably, Megalo Elizabeth Bartley cannot find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -7977,9 +9487,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
-      "notes": "- Megalo Elizabeth Bartley starts with the following bonuses: +300  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish, +50  Charm\r\n- She is also immune to health drain.\r\n- Megalo Elizabeth Bartley is the transformation  Elizabeth Bartley temporarily assumes upon reaching certain enemy kill thresholds, but playing as Megalo Elizabeth Bartley enables the transformation permanently.\r\n- Notably, Megalo Elizabeth Bartley cannot find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -8006,9 +9519,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Dark Rift"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through dinner.",
-      "notes": "- Megalo Olrox starts with the following bonuses: +300  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\r\n- Megalo Olrox is the transformation  Count Olrox temporarily assumes upon reaching certain enemy kill thresholds, but playing as Megalo Olrox enables the transformation permanently. However, he does not have a permanent  Nduja Fritta Tanto, unlike the temporary transformation.\r\n- Megalo Olrox can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 300,
         "recovery": 0,
@@ -8035,9 +9551,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through dinner.",
-      "notes": "- Megalo Olrox starts with the following bonuses: +300  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\r\n- Megalo Olrox is the transformation  Count Olrox temporarily assumes upon reaching certain enemy kill thresholds, but playing as Megalo Olrox enables the transformation permanently. However, he does not have a permanent  Nduja Fritta Tanto, unlike the temporary transformation.\r\n- Megalo Olrox can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 300,
         "recovery": 0,
@@ -8064,9 +9583,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Death Spiral"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
-      "notes": "- Megalo Death starts with the following bonuses: +300  Max Health, +2  Armor, +100%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\n- Megalo Death is the permanent transformation  Death receives upon reaching level 80. This transformation grants Death the  Death Hand as a hidden weapon, which are two giant skeletal hands that move in tandem with him and create large cracks in the ground that shake the screen and deal 65 base damage to enemies.\n- He cannot die but instead disappears at the time limit and ending the run automatically, similar to  Megalo Menya Moonspell This content requires the Legacy of the Moonspell DLC to access and  Ghost Lino This content requires the Emergency Meeting DLC to access.\n- Megalo Death can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -8093,9 +9615,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
-      "notes": "- Megalo Death starts with the following bonuses: +300  Max Health, +2  Armor, +100%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\n- Megalo Death is the permanent transformation  Death receives upon reaching level 80. This transformation grants Death the  Death Hand as a hidden weapon, which are two giant skeletal hands that move in tandem with him and create large cracks in the ground that shake the screen and deal 65 base damage to enemies.\n- He cannot die but instead disappears at the time limit and ending the run automatically, similar to  Megalo Menya Moonspell This content requires the Legacy of the Moonspell DLC to access and  Ghost Lino This content requires the Emergency Meeting DLC to access.\n- Megalo Death can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -8122,9 +9647,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Wine Glass"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "notes": "- Megalo Dracula starts with the following bonuses: +566  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\r\n- Megalo Dracula is the permanent transformation  Vlad Tepes Dracula receives upon reaching level 80. Like his normal form, he gains +1% Might per level and +1  Revival every 100 levels. There is no cap on these bonuses. Every +1% of  Curse increases his Might by +1%, incoming damage is capped at 10, and he is also immune to health drain. Additionally, the transformation also grants Vlad Tepes Dracula the  Hand of Vlad as a hidden weapon, which grants him two giant claws to his left and right that swipe at nearby enemies.\r\n- Megalo Dracula can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -8153,9 +9681,12 @@ window.VS_DATA = {
         "Dominus Hatred",
         "Dominus Anger"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "notes": "- Megalo Dracula starts with the following bonuses: +566  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\r\n- Megalo Dracula is the permanent transformation  Vlad Tepes Dracula receives upon reaching level 80. Like his normal form, he gains +1% Might per level and +1  Revival every 100 levels. There is no cap on these bonuses. Every +1% of  Curse increases his Might by +1%, incoming damage is capped at 10, and he is also immune to health drain. Additionally, the transformation also grants Vlad Tepes Dracula the  Hand of Vlad as a hidden weapon, which grants him two giant claws to his left and right that swipe at nearby enemies.\r\n- Megalo Dracula can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -8182,9 +9713,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Ebony Diabologue"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "notes": "- Megalo Dracula starts with the following bonuses: +566  Max Health, +2  Armor, +50%  Move Speed, +250%  Might, -20%  Cooldown, +100%  Greed, +10  Reroll, +10  Skip, +10  Banish\r\n- Megalo Dracula is the permanent transformation  Vlad Tepes Dracula receives upon reaching level 80. Like his normal form, he gains +1% Might per level and +1  Revival every 100 levels. There is no cap on these bonuses. Every +1% of  Curse increases his Might by +1%, incoming damage is capped at 10, and he is also immune to health drain. Additionally, the transformation also grants Vlad Tepes Dracula the  Hand of Vlad as a hidden weapon, which grants him two giant claws to his left and right that swipe at nearby enemies.\r\n- Megalo Dracula can find special Ode to Castlevania pickups from light sources.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -8211,9 +9745,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Infinite Corridor"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": "Game Killer (0)",
       "description": "Starts with Arcana I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, and XXI.",
-      "notes": "- Chaos starts with +2097052  Max Health, -99%  Growth, +200%  Magnet, and +65536  Reroll,  Skip, and  Banish, making it virtually invincible. It also starts with every Arcana except for Game Killer (0) and the Darkanas, and no Arcana chests normally spawn for it.\n- Chaos ignores collision, allowing it to pass through walls, obstacles, and gaps in the terrain.\n- Chaos can find special Ode to Castlevania pickups from light sources.\n- When playing as Chaos, a unique background is displayed on top of the stage's terrain, fully obscuring it and moving along with the player's motion. The obscuring effect does not, however, extend to certain stage elements, such as light sources, barriers, and walls, as well as the artificial walls that conceal hidden areas or passages.\n- While Chaos has -99% Growth, naturally starting with  Wicked Season (XIII) means that its Growth will scale throughout the game, though  Crown is still a good pickup to speed up the process.\r\n- In addition to having every Arcana in the game, Chaos still gets one starting Arcana pick.  Crystal Cries (XII) is likely the best pick here, as it can be used to push Chaos's already massive health further, augmenting the power of its synergistic weapons, as well as scale its initially poor Growth much faster.  Moonlight Bolero (VI) can also be used to acquire more Darkana, but this is best done on Inverse Mode, where it can be acquired together with Crystal Cries by buying an Arcana from the Merchant. Crystal Cries should have higher priority on a regular run.\r\n- While Chaos starts with every Arcana in the game and as such can make use of virtually any build, its most notable stat is its absurd Max Health. With  Hollow Heart,  Metaglio Left and Crystal Cries, Chaos can increase this already absurd amount even further. This makes  Mazo Familiar perhaps the absolute best weapon Chaos has access to. Unlike the vampire characters, Chaos does suffer health drain from weapons like  Muramasa This content requires the Legacy of the Moonspell DLC to access and  Power of Sire This content requires the Ode to Castlevania DLC to access, making them good picks for continuously triggering Mazo Familiar.  Vanitas Whip This content requires the Ode to Castlevania DLC to access and its evolution  Aurablaster Tip This content requires the Ode to Castlevania DLC to access also synergize with its massive health.\r\n- Chaos's enormous Max Health also means that if it's increased from its normal amount through items like Hollow Heart and Metaglio Left, a massive gap of several million health will be created that Chaos is unlikely to ever be able to heal off. This is excessively powerful with  Divine Bloodline (IX) that it innately has, adding hundreds of thousands of bonus flat damage to all weapons, making these items must-picks even without selecting Mazo Familiar or Aurablaster Tip.\r\n- Chaos's enormous Magnet bonus makes it a decent idea to pick up some weapons that benefit from  Blood Astronomia (XXI), such as  Garlic.\r\n- Chaos is one of the three characters (along with a level 200  Toastie,  Dracula This content requires the Ode to Castlevania DLC to access, and  Megalo Dracula This content requires the Ode to Castlevania DLC to access) that can withstand attacks from  The Reaper, as the 65,535 damage dealt by The Reaper is nowhere near enough to easily empty out Chaos's massive health pool of over 2 million. This, combined with Chaos's native Infinite Corridor, means that runs using Chaos are almost guaranteed to trigger the  White Hand ending.\r\n- Because one of the Arcana Chaos starts with is  Mad Groove (VIII), it will immediately teleport all items on the map to it and repeat this every 2 minutes. Some care should be taken to avoid accidentally picking up less crucial items, like the Rings and the Metaglios, until Chaos has already acquired its most essential tools by level so that they don't clog up valuable inventory space.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 2097052,
         "recovery": 0,
@@ -8240,9 +9777,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fleuret"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
-      "notes": "- Tsunanori Mido starts with +20%  Move Speed, +20%  Speed, and +20%  Duration\r\n- Tsunanori Mido obtains a  Kugutsu follower every 20 levels (max 4).\r\n- Kugutsu followers will stay close to Tsunanori in fixed north, east, south and west positions around him.\r\n- Every Kugutsu follower will use a different weapon.\r\n- Kugutsu followers will take damage and can only restore health passively.\r\n- Whenever a Kugutsu follower dies, a coffin with a charge bar will occur. A new Kugutsu follower will come out after the coffin fully charged. Coffins will stay in screen.\r\n- He also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.\r\n- Tsunanori has 'Solo' alternatives of both of his starting weapons also via skin selection. These skins do not summon Kugustu followers, but keep the rest of Tsunanori's passive, and are also unlocked once the player fully evolves Fleuret",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8269,9 +9809,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Splashers"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
-      "notes": "- Tsunanori Mido starts with +20%  Move Speed, +20%  Speed, and +20%  Duration\r\n- Tsunanori Mido obtains a  Kugutsu follower every 20 levels (max 4).\r\n- Kugutsu followers will stay close to Tsunanori in fixed north, east, south and west positions around him.\r\n- Every Kugutsu follower will use a different weapon.\r\n- Kugutsu followers will take damage and can only restore health passively.\r\n- Whenever a Kugutsu follower dies, a coffin with a charge bar will occur. A new Kugutsu follower will come out after the coffin fully charged. Coffins will stay in screen.\r\n- He also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.\r\n- Tsunanori has 'Solo' alternatives of both of his starting weapons also via skin selection. These skins do not summon Kugustu followers, but keep the rest of Tsunanori's passive, and are also unlocked once the player fully evolves Fleuret",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8298,9 +9841,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fleuret"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health.",
-      "notes": "- Tsunanori Mido starts with +20%  Move Speed, +20%  Speed, and +20%  Duration\r\n- Tsunanori Mido obtains a  Kugutsu follower every 20 levels (max 4).\r\n- Kugutsu followers will stay close to Tsunanori in fixed north, east, south and west positions around him.\r\n- Every Kugutsu follower will use a different weapon.\r\n- Kugutsu followers will take damage and can only restore health passively.\r\n- Whenever a Kugutsu follower dies, a coffin with a charge bar will occur. A new Kugutsu follower will come out after the coffin fully charged. Coffins will stay in screen.\r\n- He also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.\r\n- Tsunanori has 'Solo' alternatives of both of his starting weapons also via skin selection. These skins do not summon Kugustu followers, but keep the rest of Tsunanori's passive, and are also unlocked once the player fully evolves Fleuret",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8327,9 +9873,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Splashers"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health.",
-      "notes": "- Tsunanori Mido starts with +20%  Move Speed, +20%  Speed, and +20%  Duration\r\n- Tsunanori Mido obtains a  Kugutsu follower every 20 levels (max 4).\r\n- Kugutsu followers will stay close to Tsunanori in fixed north, east, south and west positions around him.\r\n- Every Kugutsu follower will use a different weapon.\r\n- Kugutsu followers will take damage and can only restore health passively.\r\n- Whenever a Kugutsu follower dies, a coffin with a charge bar will occur. A new Kugutsu follower will come out after the coffin fully charged. Coffins will stay in screen.\r\n- He also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.\r\n- Tsunanori has 'Solo' alternatives of both of his starting weapons also via skin selection. These skins do not summon Kugustu followers, but keep the rest of Tsunanori's passive, and are also unlocked once the player fully evolves Fleuret",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8357,9 +9906,12 @@ window.VS_DATA = {
         "Punch",
         "Kick"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
-      "notes": "- Bonnie starts with +40  Max Health and +20%  Move Speed.\r\n- Bonnie gains +0.1%  Might whenever she fires a glimmered tech.\r\n- She also teams up with  Formina Franklyn as her secondary character. Formina will follow Bonnie, but will not take damage. If the player chooses a 'solo' skin, Formina will not be summoned.\r\n- Bonnie will trigger Showstopper when her health falls below 20%:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -8387,9 +9939,12 @@ window.VS_DATA = {
         "Punch",
         "Kick"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
-      "notes": "- Bonnie starts with +40  Max Health and +20%  Move Speed.\r\n- Bonnie gains +0.1%  Might whenever she fires a glimmered tech.\r\n- She also teams up with  Formina Franklyn as her secondary character. Formina will follow Bonnie, but will not take damage. If the player chooses a 'solo' skin, Formina will not be summoned.\r\n- Bonnie will trigger Showstopper when her health falls below 20%:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -8417,9 +9972,12 @@ window.VS_DATA = {
         "Punch",
         "Kick"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
-      "notes": "- Bonnie starts with +40  Max Health and +20%  Move Speed.\r\n- Bonnie gains +0.1%  Might whenever she fires a glimmered tech.\r\n- She also teams up with  Formina Franklyn as her secondary character. Formina will follow Bonnie, but will not take damage. If the player chooses a 'solo' skin, Formina will not be summoned.\r\n- Bonnie will trigger Showstopper when her health falls below 20%:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -8447,9 +10005,12 @@ window.VS_DATA = {
         "Punch",
         "Kick"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
-      "notes": "- Bonnie starts with +40  Max Health and +20%  Move Speed.\r\n- Bonnie gains +0.1%  Might whenever she fires a glimmered tech.\r\n- She also teams up with  Formina Franklyn as her secondary character. Formina will follow Bonnie, but will not take damage. If the player chooses a 'solo' skin, Formina will not be summoned.\r\n- Bonnie will trigger Showstopper when her health falls below 20%:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect to The World's Heartbeat - VS version\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -8476,9 +10037,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Saber Machine Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
-      "notes": "- Formina Franklyn starts with +1  Armor and +20%  Move Speed.\r\n- Formina Franklyn gains +0.1%  Duration whenever she fires a glimmered tech. This bonus caps at +400% Duration,\r\n- Formina Franklyn teams up with  Bonnie as secondary character. Secondary character follows the main character and won't take damage.\r\n- She also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect.\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8505,9 +10069,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Eagle Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
-      "notes": "- Formina Franklyn starts with +1  Armor and +20%  Move Speed.\r\n- Formina Franklyn gains +0.1%  Duration whenever she fires a glimmered tech. This bonus caps at +400% Duration,\r\n- Formina Franklyn teams up with  Bonnie as secondary character. Secondary character follows the main character and won't take damage.\r\n- She also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect.\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8534,9 +10101,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Saber Machine Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Triggers Showstopper at critical health.",
-      "notes": "- Formina Franklyn starts with +1  Armor and +20%  Move Speed.\r\n- Formina Franklyn gains +0.1%  Duration whenever she fires a glimmered tech. This bonus caps at +400% Duration,\r\n- Formina Franklyn teams up with  Bonnie as secondary character. Secondary character follows the main character and won't take damage.\r\n- She also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect.\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8563,9 +10133,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Eagle Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs.Triggers Showstopper at critical health.",
-      "notes": "- Formina Franklyn starts with +1  Armor and +20%  Move Speed.\r\n- Formina Franklyn gains +0.1%  Duration whenever she fires a glimmered tech. This bonus caps at +400% Duration,\r\n- Formina Franklyn teams up with  Bonnie as secondary character. Secondary character follows the main character and won't take damage.\r\n- She also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect.\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8592,9 +10165,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Super Missile"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "notes": "- Different skins (body types) of Diva No. 5 have different stats and passive effects. Every skin can trigger Showstopper at critical health, even if it isn't listed:\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\n- All glimmers will be triggered by every activation.\n- The music will also change during Showstopper effect.\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -8621,9 +10197,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Super Missile"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "notes": "- Different skins (body types) of Diva No. 5 have different stats and passive effects. Every skin can trigger Showstopper at critical health, even if it isn't listed:\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\n- All glimmers will be triggered by every activation.\n- The music will also change during Showstopper effect.\n- Showstopper can be triggered again once restored to full health.\n- Charge ability: fires an array of Super Missiles.\n- The charge abilities of 'Battle Tank' and 'Shanks' increase with movement (not movement speed), and do not charge while the player is standing still. However to use the charge ability the player must stand still. Movespeed does not seem to affect charge distance.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8650,9 +10229,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Super Missile"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "notes": "- Different skins (body types) of Diva No. 5 have different stats and passive effects. Every skin can trigger Showstopper at critical health, even if it isn't listed:\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\n- All glimmers will be triggered by every activation.\n- The music will also change during Showstopper effect.\n- Showstopper can be triggered again once restored to full health.\n- Can Fly.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -50,
         "recovery": 0,
@@ -8679,9 +10261,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Super Missile"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "notes": "- Different skins (body types) of Diva No. 5 have different stats and passive effects. Every skin can trigger Showstopper at critical health, even if it isn't listed:\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\n- All glimmers will be triggered by every activation.\n- The music will also change during Showstopper effect.\n- Showstopper can be triggered again once restored to full health.\n- Charge ability: triggers the Ballistic Missiles tech.\n- The charge abilities of 'Battle Tank' and 'Shanks' increase with movement (not movement speed), and do not charge while the player is standing still. However to use the charge ability the player must stand still. Movespeed does not seem to affect charge distance.\n- Innate and charged techs do not interfere with the activation of techs glimmered normally. Notably, the Ballistic Missile tech 'Shanks' charges often activates at the same time as the one from its weapon, shooting all missiles simultaneously. Also, the innate tech of 'Paradox' has greatly increased area, mostly hitting distant enemies.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -8708,9 +10293,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Super Missile"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "notes": "- Different skins (body types) of Diva No. 5 have different stats and passive effects. Every skin can trigger Showstopper at critical health, even if it isn't listed:\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\n- All glimmers will be triggered by every activation.\n- The music will also change during Showstopper effect.\n- Showstopper can be triggered again once restored to full health.\n- Can Fly. Can innately use the Cosmic Rave tech.\n- Innate and charged techs do not interfere with the activation of techs glimmered normally. Notably, the Ballistic Missile tech 'Shanks' charges often activates at the same time as the one from its weapon, shooting all missiles simultaneously. Also, the innate tech of 'Paradox' has greatly increased area, mostly hitting distant enemies.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -8737,9 +10325,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Twin Dragon"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "notes": "- Different skins (body types) of Diva No. 5 have different stats and passive effects. Every skin can trigger Showstopper at critical health, even if it isn't listed:\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\n- All glimmers will be triggered by every activation.\n- The music will also change during Showstopper effect.\n- Showstopper can be triggered again once restored to full health.\n- Gains bonuses to  Might,  Speed,  Duration,  Area,  Cooldown, and  Recovery, based on the total of glimmered techs. Triggers Showstopper at critical health.\nBonuses are +5%  Might, +5%  Speed (max +100%), +5%  Duration (max +100%), +2.5%  Area (max +50%), -1%  Cooldown (max -10%), and +0.03  Recovery (max +1.00) per glimmered tech learned.\n- Virginia's ability synergizes well with  Spirit Rings due to naturally increasing 3 of the 4 attributes needed to access its techniques. With full powerups, only a  Growth and  Area bonus is required to unlock the full set, due to Area only gaining half the benefit. Do note, however, that the techs from Spirit Rings itself do not count towards Virginia's stats, due to lacking a glimmer cutscene.\r\nThe stat increases 'Virginia' receives differ from those gained using  Torrona's Box by having higher increases in Might, Speed, and Duration, while also increasing Cooldown and Recovery, which the item doesn't.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -8767,9 +10358,12 @@ window.VS_DATA = {
         "Spirit Rings",
         "Intuition"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
-      "notes": "- Ameya Aisling starts with +20%  Move Speed, +5  Reroll, +5  Skip, and +5  Banish.\n- Depending on Ameya's level, more cats will spawn at a higher frequency:\nFrom Lvl. 1 to Lvl. 20, 1 cat spawns every 5 seconds.\nFrom Lvl. 21 to Lvl. 40, 2 cats spawn every 5 seconds.\nFrom Lvl. 41 to Lvl. 60, 2 cats spawn every 4 seconds.\nFrom Lvl. 61 to Lvl. 80, 3 cats spawn every 4 seconds.\nAfter Lvl. 81, 3 cats spawn every 3 seconds.\n- Ameya Aisling gains stat bonuses when collecting her summoned cats. The stat bonuses from the cats are:\nStats        Bonus\n Might        +2%\n Area        +2%\n Speed        +2%\n Duration        +2%\n Cooldown        -1%\n Luck        +2%\n Growth        +2%\n Magnet        +0.2\n- When approached, the cats will run away from Ameya.\n- Occasionally, a rainbow cat will spawn that is much faster than the other cat variants. Collecting this cat will attract all other cats. Otherwise, the variant of cat does not matter.\n- Ameya also triggers Showstopper at critical health:\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\nAll glimmers will be triggered by every activation.\nThe music will also change during Showstopper effect.\nShowstopper can be triggered again once restored to full health.\n- The cats will spawn out of bounds, making levels with narrow passages like Inlaid Library less effective at stat gains, however, due to how cats are dragged towards you while out of bounds it is possible to farm them very easily with a large enough magnet radius and large amounts of surrounding out of bounds space.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8797,9 +10391,12 @@ window.VS_DATA = {
         "Spirit Rings",
         "Intuition"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
-      "notes": "- Ameya Aisling starts with +20%  Move Speed, +5  Reroll, +5  Skip, and +5  Banish.\n- Depending on Ameya's level, more cats will spawn at a higher frequency:\nFrom Lvl. 1 to Lvl. 20, 1 cat spawns every 5 seconds.\nFrom Lvl. 21 to Lvl. 40, 2 cats spawn every 5 seconds.\nFrom Lvl. 41 to Lvl. 60, 2 cats spawn every 4 seconds.\nFrom Lvl. 61 to Lvl. 80, 3 cats spawn every 4 seconds.\nAfter Lvl. 81, 3 cats spawn every 3 seconds.\n- Ameya Aisling gains stat bonuses when collecting her summoned cats. The stat bonuses from the cats are:\nStats        Bonus\n Might        +2%\n Area        +2%\n Speed        +2%\n Duration        +2%\n Cooldown        -1%\n Luck        +2%\n Growth        +2%\n Magnet        +0.2\n- When approached, the cats will run away from Ameya.\n- Occasionally, a rainbow cat will spawn that is much faster than the other cat variants. Collecting this cat will attract all other cats. Otherwise, the variant of cat does not matter.\n- Ameya also triggers Showstopper at critical health:\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\nAll glimmers will be triggered by every activation.\nThe music will also change during Showstopper effect.\nShowstopper can be triggered again once restored to full health.\n- The cats will spawn out of bounds, making levels with narrow passages like Inlaid Library less effective at stat gains, however, due to how cats are dragged towards you while out of bounds it is possible to farm them very easily with a large enough magnet radius and large amounts of surrounding out of bounds space.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8826,9 +10423,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Town Sword"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
-      "notes": "- Siugnas starts with +0.2 Recovery, +20% Move Speed, and +1 Amount.\r\n- Defeated enemies become followers.\r\n- Different enemies may have different behavior as followers. They will take damage, unlike familiars.\r\n- Increasing Max Health increases maximum followers (capped at 4).\r\nBelow 140 HP: Maximum 1 follower\r\nAbove 140 HP: Maximum 2 followers\r\nAbove 200 HP: Maximum 3 followers\r\nAbove 300 HP: Maximum 4 followers\r\n- Triggers Showstopper at critical health:\r\nGains greatly increased stats (+100% Might, -100% Cooldown, +100% Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.\r\n- Though unlisted in his description, he is immune to Health Drain.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.2,
@@ -8855,9 +10455,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Sanguine Star"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
-      "notes": "- Siugnas starts with +0.2 Recovery, +20% Move Speed, and +1 Amount.\r\n- Defeated enemies become followers.\r\n- Different enemies may have different behavior as followers. They will take damage, unlike familiars.\r\n- Increasing Max Health increases maximum followers (capped at 4).\r\nBelow 140 HP: Maximum 1 follower\r\nAbove 140 HP: Maximum 2 followers\r\nAbove 200 HP: Maximum 3 followers\r\nAbove 300 HP: Maximum 4 followers\r\n- Triggers Showstopper at critical health:\r\nGains greatly increased stats (+100% Might, -100% Cooldown, +100% Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.\r\n- Though unlisted in his description, he is immune to Health Drain.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.2,
@@ -8884,9 +10487,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Flamberge"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers glimmered techs more often than normal. Triggers Showstopper at critical health.",
-      "notes": "- Final Emperor starts with +50%  Might and +50%  Greed.\r\n- Final Emperor triggers glimmered techs more often than normal.\r\n- He also triggers Showstopper at critical health:\r\n- Gains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\n- All glimmers will be triggered by every activation.\r\n- The music will also change during Showstopper effect.\r\n- Showstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8913,9 +10519,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Bullova"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health and on revival. Gains a bonus to Cooldown every time Showstopper is triggered (Max - 20%).",
-      "notes": "- Dolores starts with +20%  Move Speed, +20%  Might, +1  Revival, and +20%  Luck.\r\n- Dolores triggers Showstopper at critical health and on revival. She also gains a -0.8% bonus to  Cooldown every time Showstopper is triggered (Max -20%).\r\n- Triggering Showstopper has the following mechanics:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health, or on revival (Dolores only).",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8941,11 +10550,16 @@ window.VS_DATA = {
       "base_name": "Macha Alter Ego",
       "starting_weapons": [
         "Khukuri",
-        "(Hidden) Rings of Calamity"
+        "Rings of Calamity"
       ],
+      "hidden_items": [
+        "Rings of Calamity"
+      ],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Starts with a hidden Rings of Calamity. Increases enemy spawn quantity by 50. Triggers Showstopper at critical health.",
-      "notes": "- Macha Alter Ego starts with +20%  Speed, +20%  Duration, +20%  Area, -10%  Cooldown, +20%  Growth, +5  Reroll, +5  Skip, +5  Banish, and +50  Charm.\r\n- Macha Alter Ego starts with a hidden  Rings of Calamity. She also increases enemy spawn quantity ( Charm) by 50 and triggers Showstopper at critical health.\r\n- During Showstopper:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will change.\r\nShowstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8972,9 +10586,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Glaive"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Heaven's Thunder\" tech. Triggers Showstopper at critical health.",
-      "notes": "- Lita Caryx starts with +100%  Move Speed, +100%  Speed, +1  Amount, +5  Reroll, +5  Skip, and +5  Banish.\r\n- Lita Caryx innately knows the \"Heaven's Thunder\" tech.\r\n- She also triggers Showstopper at critical health:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9001,9 +10618,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Twin Dragon"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "notes": "- Kugutsu starts with +20  Max Health, +1  Armor, and +30%  Move Speed.\r\n- Kugutsu gains 1  Revival and 5%  Growth every time they glimmer a new tech.\r\n- They also trigger Showstopper at critical health:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.\n- Due to their potentially massive amount of Revivals eclipsing that of any other character (even Luminaire and Reborn She-Moon) given a tech-heavy build, they are, as of currently, the strongest user of Meal Ticket and Phieraggi in the game.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9030,9 +10650,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Khukuri"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "notes": "- Kugutsu starts with +20  Max Health, +1  Armor, and +30%  Move Speed.\r\n- Kugutsu gains 1  Revival and 5%  Growth every time they glimmer a new tech.\r\n- They also trigger Showstopper at critical health:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.\n- Due to their potentially massive amount of Revivals eclipsing that of any other character (even Luminaire and Reborn She-Moon) given a tech-heavy build, they are, as of currently, the strongest user of Meal Ticket and Phieraggi in the game.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9059,9 +10682,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Eagle Gun"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "notes": "- Kugutsu starts with +20  Max Health, +1  Armor, and +30%  Move Speed.\r\n- Kugutsu gains 1  Revival and 5%  Growth every time they glimmer a new tech.\r\n- They also trigger Showstopper at critical health:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.\n- Due to their potentially massive amount of Revivals eclipsing that of any other character (even Luminaire and Reborn She-Moon) given a tech-heavy build, they are, as of currently, the strongest user of Meal Ticket and Phieraggi in the game.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9088,9 +10714,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Punch"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "notes": "- Kugutsu starts with +20  Max Health, +1  Armor, and +30%  Move Speed.\r\n- Kugutsu gains 1  Revival and 5%  Growth every time they glimmer a new tech.\r\n- They also trigger Showstopper at critical health:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.\n- Due to their potentially massive amount of Revivals eclipsing that of any other character (even Luminaire and Reborn She-Moon) given a tech-heavy build, they are, as of currently, the strongest user of Meal Ticket and Phieraggi in the game.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9117,9 +10746,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Intuition"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Mr. S will showcase his skills with techs. Gets more projectiles every 20 levels (max +4).",
-      "notes": "- Mr. S starts with +20%  Move Speed. He gains +1  Amount every 20 levels until level 80 (up to +4 amount).\r\n- Additionally, Mr. S will trigger the techs of weapons from Emerald Diorama with every attack once they are glimmered, instead of the techs being placed into rotation.\r\n- Mr.S will also trigger Showstopper at critical health:\r\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nWhile Mr.S will trigger a tech with every weapon activation after the tech is first glimmered, this still helps Mr.S glimmer that tech for the first time.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9146,9 +10778,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Chaos Disaster Tech"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health. Gain a follower whenever Showstopper is triggered.",
-      "notes": "- Lolo, Hiss, Meow, and Purr start with -50  Max Health, +1  Recovery, +40%  Move Speed, -60%  Might, -40%  Area, +8  Revival, and +40%  Luck.\n- Lolo, Hiss, Meow, and Purr trigger Showstopper at critical health:\nGains greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\nAll glimmers will be triggered by every activation.\nThe music will also change during Showstopper effect.\nShowstopper can be triggered again once restored to full health.\n- They also gain a follower whenever Showstopper is triggered. Each follower has a different tech from the weapon  Spirit Rings corresponding to their color:\nRed Cats have the Sunlight tech.\nBlack Cats have the Aqua Spheres tech.\nBlue Cats have the Heaven's Thunder tech.\nYellow Cats have the Hypergravity tech.\nWhite Cats have the Vermillion Sands tech.\n- Upon obtaining one follower, subsequent levels will grant the follower copies of  Spinach,  Bracer,  Spellbinder,  Candelabrador,  Empty Tome, and  Duplicator. Further levels will upgrade these passives, and the stats granted by these stack with copies on the main character, effectively granting the player double bonus stats if they choose the same passives.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": -50,
         "recovery": 1,
@@ -9176,9 +10811,12 @@ window.VS_DATA = {
         "Swallow Slice Tech",
         "Airwave Tech"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Shallow Slice\" and \"Airwave\" tech. Gains bonus Recovery whenever Showstopper is triggered at critical health.",
-      "notes": "- Kina start with +10  Max Health, +20%  Move Speed, and +20%  Speed.\r\n- Kina innately knows the \"Swallow Slice\" and \"Airwave\" techs. They also gain between +0.10 and +1.00 bonus  Recovery whenever Showstopper is triggered at critical health.\r\n- Triggering Showstopper also:\r\nGrants greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 10,
         "recovery": 0,
@@ -9206,9 +10844,12 @@ window.VS_DATA = {
         "Hell's Fury Tech",
         "Blood Rage Tech"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Hell's Fury\" and \"Blood Rage\" tech. Gains bonus Might whenever Showstopper is triggered at critical health.",
-      "notes": "- Imakoo start with +20  Max Health, +10%  Move Speed, +30%  Might, and -40%  Duration.\r\n- Imakoo innately knows the \"Hell's Fury\" and \"Blood Rage\" techs.\r\n- They also gain between +5% and +50% bonus Might whenever Showstopper is triggered at critical health.\r\n- Triggering Showstopper also:\r\nGrants greatly increased stats (+100%  Might, -100%  Cooldown, +100%  Luck).\r\nAll glimmers will be triggered by every activation.\r\nThe music will also change during Showstopper effect.\r\nShowstopper can be triggered again once restored to full health.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9235,9 +10876,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Blood Chalice"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Vermillion Sands\" tech.",
-      "notes": "- Malevolent Door Spirit start with +77  Max Health, +1  Armor, -30%  Move Speed, +30%  Might, +30%  Area, -30%  Luck, +100%  Curse, and +10  Banishes.\n- Malevolent Door Spirit innately knows the \"Vermillion Sands\" tech.\n- Malevolent Door Spirit gains a Might bonuses based on 0.25*log(TotalGlimmersFired) \n- Note that this is different than Glimmering, where the latter will only happen once, while this multiplier increases as a weapon fires its tech.\n- Since the attacks from  Spirit Rings This content requires the Emerald Diorama DLC to access are not considered Glimmers, they will not contribute to this bonus.\n- Unlike the other characters in the Emerald Diorama DLC, the Malevolent Door Spirit does not have access to Showstopper.\n-  108 Bocce pairs well with Malevolent Door Spirit, as its Luck penalty and high Curse creates a large difference that will power up the weapon's damage significantly.\r\n- Try to quickly acquire a defensive weapon such as the  King Bible or  Garlic in order to prevent getting swarmed due to high curse and low movement speed.\r\n- Weapons from Emerald Diorama with techs (other than  Spirit Rings This content requires the Emerald Diorama DLC to access) are preferred in order to maximize Might scaling. Weapons with 3 evolutionary stages are preferable over those with only 2, as they have more techs and therefore lead to faster scaling. Further, weapons whose Glimmers trigger rarely, like  Falconwind This content requires the Emerald Diorama DLC to access, are less effective for Might scaling.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 77,
         "recovery": 0,
@@ -9264,9 +10908,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Infernolatro"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Starts with a Survarot draft. Has a Survarot level Multiplier of 4.",
-      "notes": "- Jimbo starts with +20  Max Health, +20%  Move Speed,  Duration, and  Luck, and +7  Reroll.\n- Jimbo starts each run with a draft of  Survarot, and is able to gain more from Light Sources.\n- The chance to get a Survarot from a Light Source decreases as Jimbo gets more Survarots.\n- Also, Jimbo has a permanent Survarot Multiplier of 4, meaning Survarot cards that appear as him will gain 4 more levels than normal.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9293,9 +10940,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Fibonacci Spritz"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Using Skip when levelling up has a chance to trigger a Survarot draft.",
-      "notes": "- Canio starts with -10%  Cooldown, +20%  Luck, and +7  Reroll.\n- Canio can not find  Survarot from Light Sources and does not start the run with a draft. Instead, Canio has a chance to trigger a Survarot draft by  Skipping a Level Up.\n- The chance for Canio to get a Survarot with each Skip starts at 100%, decreasing by 5% for every Survarot obtained until a minimum of 10% is reached.\n-  Christine Davain's Survarot will provide Canio with a Skip every single Level Up, giving him a free chance to get another Survarot. Multiple copies of this card can lead to the possibility of infinite Survarot being obtained.\r\n- The player can save a stage item for if they decide to obtain more Survarot after being previously unable to Skip, due to their build being fully levelled.\r\n- Preserve can help Canio get more chances at obtaining extra Survarot.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9322,9 +10972,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Gros Michel"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Starts with a Survarot draft. Reduces boss health and blocks some special attacks.",
-      "notes": "- Chicot starts with +20%  Move Speed and  Luck, as well as +7  Reroll.\r\n- Chicot starts each run with a draft of  Survarot, and is able to gain more from Light Sources.\r\n- The chance to get a Survarot from a Light Source decreases as Chicot gets more Survarots.\r\nChicot halves the Health of all Bosses and disables certain special attacks, namely those from the Boss Blinds on Ante Chamber.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9351,9 +11004,12 @@ window.VS_DATA = {
       "starting_weapons": [
         "Celestial Booster"
       ],
+      "hidden_items": [],
+      "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Can equip up to 100 Passive Weapons.",
-      "notes": "- Perkeo starts with +20  Max Health, +20%  Luck, and +7  Reroll.\r\n- Perkeo is able to find  Survarots from Light Sources.\r\n- Notably, Perkeo does not start with a draft, unlike  Jimbo This content requires the Ante Chamber DLC to access,  Chicot This content requires the Ante Chamber DLC to access, and  Secretino Dagsson.\r\n- Perkeo also has 100 slots for Passive Weapons. This allows him to carry every Passive Weapon in the game without issue.",
+      "notes": "",
+      "scaling": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -18239,6 +19895,23 @@ window.VS_DATA = {
         "Max health increases by 20%",
         "Max health increases by 20%",
         "Max health increases by 20%"
+      ],
+      "level_up_values": [
+        {
+          "max_health": 0.2
+        },
+        {
+          "max_health": 0.2
+        },
+        {
+          "max_health": 0.2
+        },
+        {
+          "max_health": 0.2
+        },
+        {
+          "max_health": 0.2
+        }
       ]
     },
     {
@@ -18253,6 +19926,23 @@ window.VS_DATA = {
         "Health recovery increases by 0.2 HP per second.",
         "Health recovery increases by 0.2 HP per second.",
         "Health recovery increases by 0.2 HP per second."
+      ],
+      "level_up_values": [
+        {
+          "recovery": 0.2
+        },
+        {
+          "recovery": 0.2
+        },
+        {
+          "recovery": 0.2
+        },
+        {
+          "recovery": 0.2
+        },
+        {
+          "recovery": 0.2
+        }
       ]
     },
     {
@@ -18262,11 +19952,33 @@ window.VS_DATA = {
       "rarity": 100,
       "description": "Reduces incoming damage by 1. Increases retaliatory damage by 10%.",
       "level_ups": [
-        "Reduces incoming damage by 1. Increases retaliatory damage by 10%.",
-        "Reduces incoming damage by 1.",
-        "Reduces incoming damage by 1.",
-        "Reduces incoming damage by 1.",
-        "Reduces incoming damage by 1."
+        "Reduces incoming damage by 1. Increases retaliatory Damage by 10%.",
+        "Reduces incoming damage by 1. Increases retaliatory Damage by 10%.",
+        "Reduces incoming damage by 1. Increases retaliatory Damage by 10%.",
+        "Reduces incoming damage by 1. Increases retaliatory Damage by 10%.",
+        "Reduces incoming damage by 1. Increases retaliatory Damage by 10%."
+      ],
+      "level_up_values": [
+        {
+          "armor": 1,
+          "retaliation_damage": 0.1
+        },
+        {
+          "armor": 1,
+          "retaliation_damage": 0.1
+        },
+        {
+          "armor": 1,
+          "retaliation_damage": 0.1
+        },
+        {
+          "armor": 1,
+          "retaliation_damage": 0.1
+        },
+        {
+          "armor": 1,
+          "retaliation_damage": 0.1
+        }
       ]
     },
     {
@@ -18281,6 +19993,23 @@ window.VS_DATA = {
         "Movement speed increases by 10%",
         "Movement speed increases by 10%",
         "Movement speed increases by 10%"
+      ],
+      "level_up_values": [
+        {
+          "move_speed": 0.1
+        },
+        {
+          "move_speed": 0.1
+        },
+        {
+          "move_speed": 0.1
+        },
+        {
+          "move_speed": 0.1
+        },
+        {
+          "move_speed": 0.1
+        }
       ]
     },
     {
@@ -18295,6 +20024,23 @@ window.VS_DATA = {
         "Base damage up by 10%",
         "Base damage up by 10%",
         "Base damage up by 10%"
+      ],
+      "level_up_values": [
+        {
+          "might": 0.1
+        },
+        {
+          "might": 0.1
+        },
+        {
+          "might": 0.1
+        },
+        {
+          "might": 0.1
+        },
+        {
+          "might": 0.1
+        }
       ]
     },
     {
@@ -18309,6 +20055,23 @@ window.VS_DATA = {
         "Base speed up by 10%",
         "Base speed up by 10%",
         "Base speed up by 10%"
+      ],
+      "level_up_values": [
+        {
+          "speed": 0.1
+        },
+        {
+          "speed": 0.1
+        },
+        {
+          "speed": 0.1
+        },
+        {
+          "speed": 0.1
+        },
+        {
+          "speed": 0.1
+        }
       ]
     },
     {
@@ -18323,6 +20086,23 @@ window.VS_DATA = {
         "Effect lasts 10% longer",
         "Effect lasts 10% longer",
         "Effect lasts 10% longer"
+      ],
+      "level_up_values": [
+        {
+          "duration": 0.1
+        },
+        {
+          "duration": 0.1
+        },
+        {
+          "duration": 0.1
+        },
+        {
+          "duration": 0.1
+        },
+        {
+          "duration": 0.1
+        }
       ]
     },
     {
@@ -18337,6 +20117,23 @@ window.VS_DATA = {
         "Base area up by 10%",
         "Base area up by 10%",
         "Base area up by 10%"
+      ],
+      "level_up_values": [
+        {
+          "area": 0.1
+        },
+        {
+          "area": 0.1
+        },
+        {
+          "area": 0.1
+        },
+        {
+          "area": 0.1
+        },
+        {
+          "area": 0.1
+        }
       ]
     },
     {
@@ -18351,6 +20148,23 @@ window.VS_DATA = {
         "Cooldown reduced by 8.0%",
         "Cooldown reduced by 8.0%",
         "Cooldown reduced by 8.0%"
+      ],
+      "level_up_values": [
+        {
+          "cooldown": -0.08
+        },
+        {
+          "cooldown": -0.08
+        },
+        {
+          "cooldown": -0.08
+        },
+        {
+          "cooldown": -0.08
+        },
+        {
+          "cooldown": -0.08
+        }
       ]
     },
     {
@@ -18362,6 +20176,14 @@ window.VS_DATA = {
       "level_ups": [
         "Weapons fire more projectiles.",
         "Fires 1 more projectile."
+      ],
+      "level_up_values": [
+        {
+          "amount": 1
+        },
+        {
+          "amount": 1
+        }
       ]
     },
     {
@@ -18373,6 +20195,14 @@ window.VS_DATA = {
       "level_ups": [
         "Revives once with 50% health.",
         "Adds 1 Revival."
+      ],
+      "level_up_values": [
+        {
+          "revival": 1
+        },
+        {
+          "revival": 1
+        }
       ]
     },
     {
@@ -18387,6 +20217,23 @@ window.VS_DATA = {
         "Pickup range increased by 25%.",
         "Pickup range increased by 20%.",
         "Pickup range increased by 33%."
+      ],
+      "level_up_values": [
+        {
+          "magnet": 0.5
+        },
+        {
+          "magnet": 0.33
+        },
+        {
+          "magnet": 0.25
+        },
+        {
+          "magnet": 0.2
+        },
+        {
+          "magnet": 0.33
+        }
       ]
     },
     {
@@ -18401,6 +20248,23 @@ window.VS_DATA = {
         "Chance to get lucky up by 10%",
         "Chance to get lucky up by 10%",
         "Chance to get lucky up by 10%"
+      ],
+      "level_up_values": [
+        {
+          "luck": 0.1
+        },
+        {
+          "luck": 0.1
+        },
+        {
+          "luck": 0.1
+        },
+        {
+          "luck": 0.1
+        },
+        {
+          "luck": 0.1
+        }
       ]
     },
     {
@@ -18415,6 +20279,23 @@ window.VS_DATA = {
         "XP gain increases by 8%.",
         "XP gain increases by 8%.",
         "XP gain increases by 8%."
+      ],
+      "level_up_values": [
+        {
+          "growth": 0.08
+        },
+        {
+          "growth": 0.08
+        },
+        {
+          "growth": 0.08
+        },
+        {
+          "growth": 0.08
+        },
+        {
+          "growth": 0.08
+        }
       ]
     },
     {
@@ -18429,6 +20310,23 @@ window.VS_DATA = {
         "Coins value increases by 10%",
         "Coins value increases by 10%",
         "Coins value increases by 10%"
+      ],
+      "level_up_values": [
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        },
+        {
+          "greed": 0.1
+        }
       ]
     },
     {
@@ -18443,6 +20341,23 @@ window.VS_DATA = {
         "Increases enemy speed, health, quantity, and frequency by 10%.",
         "Increases enemy speed, health, quantity, and frequency by 10%.",
         "Increases enemy speed, health, quantity, and frequency by 10%."
+      ],
+      "level_up_values": [
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        },
+        {
+          "curse": 0.1
+        }
       ]
     },
     {
@@ -18461,6 +20376,59 @@ window.VS_DATA = {
         "Increases Might, Projectile Speed, Duration, and Area by 3%.",
         "Increases Might, Projectile Speed, Duration, and Area by 3%.",
         "Increases enemy speed, health, quantity, and frequency by 100%."
+      ],
+      "level_up_values": [
+        {
+          "might": 0.04,
+          "speed": 0.04,
+          "duration": 0.04,
+          "area": 0.04
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
+        },
+        {
+          "curse": 1
+        }
       ]
     },
     {
@@ -18475,6 +20443,23 @@ window.VS_DATA = {
         "Increases invulnerability time after getting damaged by 50ms.",
         "Increases invulnerability time after getting damaged by 50ms.",
         "Increases invulnerability time after getting damaged by 50ms."
+      ],
+      "level_up_values": [
+        {
+          "invulnerability": 50
+        },
+        {
+          "invulnerability": 50
+        },
+        {
+          "invulnerability": 50
+        },
+        {
+          "invulnerability": 50
+        },
+        {
+          "invulnerability": 50
+        }
       ]
     },
     {
@@ -18489,6 +20474,28 @@ window.VS_DATA = {
         "Increases Charm by 10 and  Fever by 10%",
         "Increases Charm by 10 and  Fever by 10%",
         "Increases Charm by 10 and  Fever by 10%"
+      ],
+      "level_up_values": [
+        {
+          "charm": 0.1,
+          "fever": 0.1
+        },
+        {
+          "charm": 0.1,
+          "fever": 0.1
+        },
+        {
+          "charm": 0.1,
+          "fever": 0.1
+        },
+        {
+          "charm": 0.1,
+          "fever": 0.1
+        },
+        {
+          "charm": 0.1,
+          "fever": 0.1
+        }
       ]
     },
     {
@@ -18507,6 +20514,40 @@ window.VS_DATA = {
         "Base Area up by 5%. Effect lasts 5% longer.",
         "Base Area up by 5%. Effect lasts 5% longer.",
         "Base Area up by 5%. Effect lasts 5% longer."
+      ],
+      "level_up_values": [
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        },
+        {
+          "duration": 0.05,
+          "area": 0.05
+        }
       ]
     },
     {
@@ -18525,6 +20566,32 @@ window.VS_DATA = {
         "Increases enemy speed, health, quantity, and frequency by 5%.",
         "Increases enemy speed, health, quantity, and frequency by 5%.",
         "Increases enemy speed, health, quantity, and frequency by 5%."
+      ],
+      "level_up_values": [
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        }
       ]
     },
     {
@@ -18543,6 +20610,40 @@ window.VS_DATA = {
         "Health recovery increases by 0.1 HP per second. Max Health increases by 5%.",
         "Health recovery increases by 0.1 HP per second. Max Health increases by 5%.",
         "Health recovery increases by 0.1 HP per second. Max Health increases by 5%."
+      ],
+      "level_up_values": [
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        },
+        {
+          "recovery": 0.1,
+          "max_health": 0.05
+        }
       ]
     },
     {
@@ -18561,6 +20662,32 @@ window.VS_DATA = {
         "Increases enemy speed, health, quantity, and frequency by 5%.",
         "Increases enemy speed, health, quantity, and frequency by 5%.",
         "Increases enemy speed, health, quantity, and frequency by 5%."
+      ],
+      "level_up_values": [
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        },
+        {
+          "curse": 0.05
+        }
       ]
     },
     {
@@ -18576,6 +20703,28 @@ window.VS_DATA = {
         "Fires 1 more projectile. XP gain decreases by -3%.",
         "Adds 1 Revival. XP gain decreases by -3%.",
         "Fires 1 more projectile. XP gain decreases by -3%."
+      ],
+      "level_up_values": [
+        {
+          "amount": 1,
+          "growth": 0.03
+        },
+        {
+          "revival": 1,
+          "growth": 0.03
+        },
+        {
+          "amount": 1,
+          "growth": 0.03
+        },
+        {
+          "revival": 1,
+          "growth": 0.03
+        },
+        {
+          "amount": 1,
+          "growth": 0.03
+        }
       ]
     },
     {
@@ -18588,6 +20737,17 @@ window.VS_DATA = {
         "Might occasionally shout at nearby enemies.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_garlic": 1
+        },
+        {
+          "hidden_garlic": 1
+        },
+        {
+          "hidden_garlic": 1
+        }
       ]
     },
     {
@@ -18600,6 +20760,17 @@ window.VS_DATA = {
         "Might occasionally electrocute enemies.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_lightning_ring": 1
+        },
+        {
+          "hidden_lightning_ring": 1
+        },
+        {
+          "hidden_lightning_ring": 1
+        }
       ]
     },
     {
@@ -18612,6 +20783,17 @@ window.VS_DATA = {
         "Might occasionally freeze enemies in fear.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_clock_lancet": 1
+        },
+        {
+          "hidden_clock_lancet": 1
+        },
+        {
+          "hidden_clock_lancet": 1
+        }
       ]
     },
     {
@@ -18624,6 +20806,17 @@ window.VS_DATA = {
         "Might occasionally fling leftover body parts at enemies.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_bone": 1
+        },
+        {
+          "hidden_bone": 1
+        },
+        {
+          "hidden_bone": 1
+        }
       ]
     },
     {
@@ -18636,6 +20829,17 @@ window.VS_DATA = {
         "Might occasionally take a hit for you.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_laurel": 1
+        },
+        {
+          "hidden_laurel": 1
+        },
+        {
+          "hidden_laurel": 1
+        }
       ]
     },
     {
@@ -18648,6 +20852,17 @@ window.VS_DATA = {
         "Might occasionally stab enemies.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_knife": 1
+        },
+        {
+          "hidden_knife": 1
+        },
+        {
+          "hidden_knife": 1
+        }
       ]
     },
     {
@@ -18660,6 +20875,17 @@ window.VS_DATA = {
         "Might occasionally throw science at enemies.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_santa_water": 1
+        },
+        {
+          "hidden_santa_water": 1
+        },
+        {
+          "hidden_santa_water": 1
+        }
       ]
     },
     {
@@ -18672,6 +20898,17 @@ window.VS_DATA = {
         "Might occasionally infect you with its relentless happiness.",
         "Allegedly offers better moral support.",
         "Allegedly offers better moral support."
+      ],
+      "level_up_values": [
+        {
+          "hidden_greatest_jubilee": 1
+        },
+        {
+          "hidden_greatest_jubilee": 1
+        },
+        {
+          "hidden_greatest_jubilee": 1
+        }
       ]
     },
     {
@@ -18682,7 +20919,8 @@ window.VS_DATA = {
       "description": "Levels up a random equipped weapon. Gives +1 Revival. Does not occupy a weapon slot",
       "level_ups": [
         "Levels up a random equipped weapon. Gives +1 Revival. Does not occupy a weapon slot."
-      ]
+      ],
+      "level_up_values": []
     }
   ],
   "arcana": [
