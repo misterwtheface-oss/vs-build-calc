@@ -2,20 +2,17 @@
 
 ## Data Model: Weapon Evolution Requirements
 
-Evolution requirements are stored on the **evolved weapon (child)**, not on the base weapon (parent).
+Evolution requirements are stored on the **transforming weapon (source)**, not the evolved result.
 
-- `base_weapon.trans_result` = name of the evolved weapon
-- `evolved_weapon.requirements` = array of passive/weapon names needed to perform that evolution
+- `weapon.requirements` = array of passive/weapon names needed to evolve this weapon
+- `weapon.trans_result` = name of what this weapon becomes
 
 **Example:**
-- `Whip.trans_result = "Bloody Tear"`
-- `BloodyTear.requirements = ["Hollow Heart"]`
-- → To evolve Whip into Bloody Tear, the player needs Hollow Heart
-
-**Union weapons** (require two evolved weapons):
-- `BloodyTear.trans_result = "Fuwalafuwaloo"`
-- `Fuwalafuwaloo.requirements = ["Bloody Tear", "Vento Sacro"]`
-- → Both Bloody Tear AND Vento Sacro are required to form Fuwalafuwaloo
+- `Whip.requirements = ["Hollow Heart"]`, `Whip.trans_result = "Bloody Tear"`
+- → Whip needs Hollow Heart to become Bloody Tear
+- `BloodyTear.requirements = ["Vento Sacro"]`, `BloodyTear.trans_result = "Fuwalafuwaloo"`
+- → Bloody Tear needs Vento Sacro (union partner) to become Fuwalafuwaloo
+- `Fuwalafuwaloo.requirements = []` — final form, no further evo
 
 **Implication for rendering:**
-When displaying what a base weapon needs to evolve, read `requirements` from the **child** (the evolution), not from the base weapon itself. When showing a union's full chain, evo2.requirements will contain weapon names (not just passives).
+To find what a weapon needs to evolve, read `weapon.requirements` directly. Final forms have empty requirements and null trans_result.

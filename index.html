@@ -1434,14 +1434,26 @@
     return hidden;
   }
 
-  // Auto-devolve any evolution weapons whose passive requirements are no longer met.
-  // Passive requirements live on the BASE weapon (e.g. Whip.requirements = ['Hollow Heart']),
-  // not on the evolved weapon (Bloody Tear.requirements = ['Vento Sacro'] — a union partner).
-  // Iterates until stable so cascading devolves resolve fully.
+  // Auto-devolve any weapon whose full evo chain has an unmet passive requirement.
+  // Works for standard evolutions (Bloody Tear needs Hollow Heart) AND unions
+  // (Fuwalafuwaloo needs Hollow Heart via its Bloody Tear branch). A broken weapon is
+  // replaced by its immediate bases: the earlier in-game branch reclaims the slot in
+  // place; union partners spill into empty slots, or are dropped with a toast when the
+  // loadout is full. Iterates until stable so cascades resolve fully — e.g. dropping
+  // Hollow Heart turns Fuwalafuwaloo → Bloody Tear + Vento Sacro → Whip + Vento Sacro.
   function autoDevolveBrokenEvos() {
+    // Banish-layout index of a weapon's ultimate base — used to order union branches
+    // so the earlier weapon (e.g. Whip) reclaims the slot ahead of a later one (Vento Sacro).
+    const banishRootIdx = name => {
+      let cur = name;
+      while (true) { const b = D.weapons.find(x => x.trans_result === cur); if (!b) break; cur = b.name; }
+      const idx = D.banishLayout.indexOf(cur);
+      return idx < 0 ? 9999 : idx;
+    };
     let changed = true;
     while (changed) {
       changed = false;
+      const counts = SLOT_COUNTS[state.playerCount];
       const allPassiveNames = new Set(
         state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
       );
@@ -1449,17 +1461,23 @@
         for (let i = 0; i < player.weapons.length; i++) {
           const w = player.weapons[i];
           if (!w) continue;
-          // Only auto-devolve weapons produced by a standard evolution (not union)
-          const evoBases = D.weapons.filter(b => b.trans_result === w.name && b.method === 'Evolution');
-          if (!evoBases.length) continue;
-          // Passive reqs are on the BASE weapon (the thing that evolves)
-          const passiveReqs = evoBases.flatMap(b =>
-            (b.requirements || []).filter(r => D.passives.some(p => p.name === r))
-          );
-          if (!passiveReqs.every(r => allPassiveNames.has(r))) {
-            player.weapons[i] = evoBases[0];
-            changed = true;
+          // Immediate bases producing w (Evolution: 1; Union: 2+), earlier branch first.
+          const bases = D.weapons.filter(b => b.trans_result === w.name)
+            .slice().sort((a, b) => banishRootIdx(a.name) - banishRootIdx(b.name));
+          if (!bases.length) continue; // base / standalone weapon — nothing to devolve
+          // Broken if any passive required anywhere in w's full chain is missing.
+          const neededPassives = collectChainPassives(collectWeaponChain(w.name));
+          if ([...neededPassives].every(p => allPassiveNames.has(p))) continue;
+          // Primary base reclaims this slot; remaining union partners fill empty slots.
+          player.weapons[i] = bases[0];
+          for (let k = 1; k < bases.length; k++) {
+            if (player.weapons.some(x => x && x.name === bases[k].name)) continue;
+            let empty = -1;
+            for (let j = 0; j < counts.weapons; j++) { if (!player.weapons[j]) { empty = j; break; } }
+            if (empty >= 0) player.weapons[empty] = bases[k];
+            else showToast(`No room to restore ${bases[k].name}`, 'warn');
           }
+          changed = true;
         }
       }
     }
@@ -1547,7 +1565,7 @@
       : '';
 
     const imgTag = `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.src='${emptyIcon}'">`;
-    const slotAction = hidden ? (item ? 'view-hidden' : '') : locked ? (item ? 'open-slot' : '') : item ? 'view-slot' : 'open-slot';
+    const slotAction = hidden ? (item ? 'view-hidden' : '') : item ? 'view-slot' : (locked ? '' : 'open-slot');
 
     const lockIcon = locked ? `<img class="slot-lock" src="assets/icons/ui/locked.png" alt="">` : '';
     const hiddenAttr = (hidden && item) ? `data-hidden-name="${esc(item.name)}"` : '';
@@ -2047,11 +2065,14 @@
     const usedWeapons = new Set(player.weapons.filter((w, i) => w && i !== slotIdx).map(w => w.name));
     const consumedWeapons = getConsumedWeapons(playerIdx, slotIdx);
     if (!isLockedEvo) {
-      // Block evo descendants of other locked starters — they must be selected via that locked slot.
+      // Block the LINEAR (non-union) evo descendants of other locked starters — those
+      // must be selected via the locked slot. Union results are left selectable here so
+      // a union partner in an unlocked slot can still form the final (it collapses onto
+      // the locked slot in closeOverlay).
       for (let i = 0; i < starterCount; i++) {
         if (i === slotIdx) continue;
         const sw = player.weapons[i];
-        if (sw) collectDescendants(sw.name).forEach(name => consumedWeapons.add(name));
+        if (sw) collectLinearDescendants(sw.name).forEach(name => consumedWeapons.add(name));
       }
     }
 
@@ -2068,8 +2089,9 @@
       return banishOrder.get(base) ?? banishOrder.get(w.name) ?? 9999;
     }
 
-    // In locked-evo mode, only show the starter's future evo forms
-    const weaponFilter = evoOnlySet ? w => evoOnlySet.has(w.name) : () => true;
+    // Locked-evo mode shows the FULL list; non-lineage weapons are dimmed in makeCard
+    // (evoOnlySet still marks the clickable lineage forms).
+    const weaponFilter = () => true;
     const baseWeapons = D.weapons.filter(w => w.category === 'Base' && weaponFilter(w))
       .slice().sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
 
@@ -2083,7 +2105,9 @@
 
     function makeCard(w) {
       const isSel      = sel && sel.name === w.name;
-      // In locked-evo mode: no dimming or consumed styling — all shown options are valid
+      // Locked-evo mode: only this starter's future forms (evoOnlySet) stay clickable;
+      // every other weapon is dimmed. Normal mode uses used/consumed styling instead.
+      const isOffLineage = isLockedEvo && !(evoOnlySet && evoOnlySet.has(w.name));
       const isUsed     = !isLockedEvo && usedWeapons.has(w.name);
       const isConsumed = !isLockedEvo && !isSel && !isUsed && consumedWeapons.has(w.name);
       const isEvo      = w.category !== 'Base';
@@ -2094,7 +2118,7 @@
       else if (isEvo) cls += ' evo';
       if (!isSel && hiChar)   cls += ' hi-char';
       else if (!isSel && hiArcana) cls += ' hi-arcana';
-      if (isUsed) cls += ' dim';
+      if (isUsed || isOffLineage) cls += ' dim';
       else if (isConsumed) cls += ' consumed';
       const title = isConsumed
         ? `${w.name} — consumed in another evo chain`
@@ -2477,22 +2501,51 @@
         state.players[playerIdx].character = sel;
         if (sel) {
           const counts = SLOT_COUNTS[state.playerCount];
+          const pw = state.players[playerIdx].weapons;
           const selHiddenSet = new Set(sel.hidden_items ?? []);
-          const selNormalStarters = sel.starting_weapons.filter(wn => !selHiddenSet.has(wn));
-          // Clear slots locked by the previous character before filling new starters
-          if (oldChar) {
-            const oldHiddenSet = new Set(oldChar.hidden_items ?? []);
-            const oldNormalCount = Math.min(
-              oldChar.starting_weapons.filter(wn => !oldHiddenSet.has(wn)).length,
-              counts.weapons
-            );
-            for (let i = 0; i < oldNormalCount; i++) state.players[playerIdx].weapons[i] = null;
-          }
-          selNormalStarters.slice(0, counts.weapons).forEach((wn, i) => {
-            if (!state.players[playerIdx].weapons[i]) {
-              state.players[playerIdx].weapons[i] = weaponByName(wn) || null;
+          const selNormalStarters = sel.starting_weapons.filter(wn => !selHiddenSet.has(wn)).slice(0, counts.weapons);
+          // Lineage (base + all forward evo forms) for each starter, in slot order.
+          const lineages = selNormalStarters.map(wn => collectDescendants(wn));
+          const allLineageNames = new Set();
+          lineages.forEach(s => s.forEach(n => allLineageNames.add(n)));
+          // Forms locked by the previous character — dropped, they belonged to the
+          // replaced character's starter lineage.
+          const oldHiddenSet = new Set(oldChar?.hidden_items ?? []);
+          const oldStarterLineage = new Set();
+          (oldChar?.starting_weapons ?? []).filter(wn => !oldHiddenSet.has(wn))
+            .forEach(wn => collectDescendants(wn).forEach(n => oldStarterLineage.add(n)));
+
+          // For each starter slot, prefer an already-equipped weapon in that starter's
+          // lineage (e.g. user pre-equipped Fuwalafuwaloo, which is in Whip's lineage →
+          // lock Fuwalafuwaloo into the slot). Otherwise place the base starter weapon.
+          const claimed = new Set(); // pw indices consumed as starter-slot occupants
+          const rebuilt = new Array(counts.weapons).fill(null);
+          selNormalStarters.forEach((wn, si) => {
+            const lineage = lineages[si];
+            let bestIdx = -1, bestSize = Infinity; // smaller descendant set = more evolved
+            for (let i = 0; i < counts.weapons; i++) {
+              const w = pw[i];
+              if (!w || claimed.has(i) || !lineage.has(w.name)) continue;
+              const size = collectDescendants(w.name).size;
+              if (size < bestSize) { bestSize = size; bestIdx = i; }
             }
+            if (bestIdx >= 0) { claimed.add(bestIdx); rebuilt[si] = pw[bestIdx]; }
+            else rebuilt[si] = weaponByName(wn) || null;
           });
+
+          // Preserve the user's other weapons: not claimed as a starter occupant, not part
+          // of any new starter's lineage (already represented / would conflict), and not
+          // part of the replaced character's starter lineage.
+          const preserved = [];
+          for (let i = 0; i < counts.weapons; i++) {
+            if (claimed.has(i)) continue;
+            const w = pw[i];
+            if (!w || allLineageNames.has(w.name) || oldStarterLineage.has(w.name)) continue;
+            preserved.push(w);
+          }
+          let fill = selNormalStarters.length;
+          for (const w of preserved) { if (fill >= counts.weapons) break; rebuilt[fill++] = w; }
+          state.players[playerIdx].weapons = rebuilt;
         }
       } else if (type === 'item') {
         if (sel) {
@@ -2507,24 +2560,52 @@
             const allEquippedPassiveNames = new Set(
               state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
             );
+            const skippedPassives = [];
             for (const pname of collectChainPassives(chain)) {
               if (allEquippedPassiveNames.has(pname)) continue;
-              const emptySlot = player.passives.findIndex(p => !p);
+              // Find the first free passive slot, bounded by the slot count — the
+              // passives array may be empty/sparse, so findIndex alone is unreliable.
+              let emptySlot = -1;
+              for (let i = 0; i < counts.passives; i++) {
+                if (!player.passives[i]) { emptySlot = i; break; }
+              }
               if (emptySlot >= 0) {
                 player.passives[emptySlot] = passiveByName(pname);
                 allEquippedPassiveNames.add(pname);
+              } else {
+                skippedPassives.push(pname);
               }
             }
-            // Place weapon in the selected slot
-            player.weapons[slotIdx] = wDef;
+            if (skippedPassives.length) {
+              showToast(`No passive slot for: ${skippedPassives.join(', ')}`, 'warn');
+            }
+            // Collapse target: if a chain member currently occupies a locked starter
+            // slot, the result lands there (locked slots stay bound to their lineage —
+            // e.g. selecting Million Cut from Valmanway's slot collapses onto the locked
+            // Thousand Edge/Knife slot). Otherwise it lands in the slot selected from.
+            const cHiddenSet = new Set(player.character?.hidden_items ?? []);
+            const starterCount = player.character
+              ? Math.min(player.character.starting_weapons.filter(w => !cHiddenSet.has(w)).length, counts.weapons)
+              : 0;
+            let targetSlot = slotIdx;
+            for (let i = 0; i < starterCount; i++) {
+              const w = player.weapons[i];
+              if (w && chain.has(w.name)) { targetSlot = i; break; }
+            }
+            // Place weapon in the target slot
+            player.weapons[targetSlot] = wDef;
             // Clear other chain members from this player's slots (consumed by this evo)
             for (let i = 0; i < counts.weapons; i++) {
-              if (i === slotIdx) continue;
+              if (i === targetSlot) continue;
               const w = player.weapons[i];
               if (w && chain.has(w.name)) player.weapons[i] = null;
             }
           }
-          if (slotType === 'passive' && isPassive && slotIdx >= 0) state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
+          if (slotType === 'passive' && isPassive && slotIdx >= 0) {
+            // Replacing a passive can remove one an equipped evo depends on — re-check.
+            state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
+            autoDevolveBrokenEvos();
+          }
         }
       } else if (type === 'arcana') {
         state.arcana[slotIdx] = sel;
@@ -3117,6 +3198,19 @@
     return visited;
   }
 
+  // Like collectDescendants, but STOPS at a Union step. Union results require an
+  // external partner from another slot, so they must stay selectable from that
+  // partner's slot — only the purely-linear (Evolution) forms are locked to a
+  // starter's own slot and should be blocked elsewhere.
+  function collectLinearDescendants(targetName, visited = new Set()) {
+    if (visited.has(targetName)) return visited;
+    visited.add(targetName);
+    const w = D.weapons.find(x => x.name === targetName);
+    if (!w || !w.trans_result || w.method === 'Union') return visited;
+    collectLinearDescendants(w.trans_result, visited);
+    return visited;
+  }
+
   // Return all passive names required by any weapon in the given chain set.
   function collectChainPassives(chain) {
     const passives = new Set();
@@ -3341,11 +3435,11 @@
       evoQuickAdd(evoEl.dataset.evoItem, playerIdx);
       return;
     }
-    // Right-click on a slot → open its overlay
+    // Right-click on a slot → open its overlay. Locked starter slots open the
+    // locked-evo selector (openWeaponOverlay detects the locked-evo mode).
     const slot = e.target.closest('[data-action="view-slot"],[data-action="open-slot"]');
     if (!slot) return;
     e.preventDefault();
-    if (slot.classList.contains('slot-locked')) return;
     const playerIdx = parseInt(slot.dataset.player ?? '0');
     const slotIdx   = parseInt(slot.dataset.slot   ?? '0');
     const slotType  = slot.dataset.type;
