@@ -4,6 +4,8 @@ window.VS_DATA = {
     {
       "name": "Antonio Belpaese",
       "icon": "assets/icons/characters/antonio_belpaese.png",
+      "sprite_static": "assets/icons/characters/antonio_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/antonio_belpaese_sprite.gif",
       "base_name": "Antonio Belpaese",
       "starting_weapons": [
         "Whip"
@@ -43,6 +45,8 @@ window.VS_DATA = {
     {
       "name": "Imelda Belpaese",
       "icon": "assets/icons/characters/imelda_belpaese.png",
+      "sprite_static": "assets/icons/characters/imelda_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/imelda_belpaese_sprite.gif",
       "base_name": "Imelda Belpaese",
       "starting_weapons": [
         "Magic Wand"
@@ -82,6 +86,8 @@ window.VS_DATA = {
     {
       "name": "(Unblinded) Imelda Belpaese",
       "icon": "assets/icons/characters/unblinded_imelda_belpaese.png",
+      "sprite_static": "assets/icons/characters/unblinded_imelda_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/unblinded_imelda_belpaese_sprite.gif",
       "base_name": "Imelda Belpaese",
       "starting_weapons": [
         "Magic Wand",
@@ -124,6 +130,8 @@ window.VS_DATA = {
     {
       "name": "Pasqualina Belpaese",
       "icon": "assets/icons/characters/pasqualina_belpaese.png",
+      "sprite_static": "assets/icons/characters/pasqualina_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/pasqualina_belpaese_sprite.gif",
       "base_name": "Pasqualina Belpaese",
       "starting_weapons": [
         "Runetracer"
@@ -163,6 +171,8 @@ window.VS_DATA = {
     {
       "name": "Gennaro Belpaese",
       "icon": "assets/icons/characters/gennaro_belpaese.png",
+      "sprite_static": "assets/icons/characters/gennaro_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/gennaro_belpaese_sprite.gif",
       "base_name": "Gennaro Belpaese",
       "starting_weapons": [
         "Knife"
@@ -195,6 +205,8 @@ window.VS_DATA = {
     {
       "name": "Arca Ladonna",
       "icon": "assets/icons/characters/arca_ladonna.png",
+      "sprite_static": "assets/icons/characters/arca_ladonna_sprite.png",
+      "sprite_gif": "assets/icons/characters/arca_ladonna_sprite.gif",
       "base_name": "Arca Ladonna",
       "starting_weapons": [
         "Fire Wand"
@@ -234,6 +246,8 @@ window.VS_DATA = {
     {
       "name": "Porta Ladonna",
       "icon": "assets/icons/characters/porta_ladonna.png",
+      "sprite_static": "assets/icons/characters/porta_ladonna_sprite.png",
+      "sprite_gif": "assets/icons/characters/porta_ladonna_sprite.gif",
       "base_name": "Porta Ladonna",
       "starting_weapons": [
         "Lightning Ring"
@@ -273,6 +287,8 @@ window.VS_DATA = {
     {
       "name": "Lama Ladonna",
       "icon": "assets/icons/characters/lama_ladonna.png",
+      "sprite_static": "assets/icons/characters/lama_ladonna_sprite.png",
+      "sprite_gif": "assets/icons/characters/lama_ladonna_sprite.gif",
       "base_name": "Lama Ladonna",
       "starting_weapons": [
         "Axe"
@@ -324,6 +340,8 @@ window.VS_DATA = {
     {
       "name": "Poe Ratcho",
       "icon": "assets/icons/characters/poe_ratcho.png",
+      "sprite_static": "assets/icons/characters/poe_ratcho_sprite.png",
+      "sprite_gif": "assets/icons/characters/poe_ratcho_sprite.gif",
       "base_name": "Poe Ratcho",
       "starting_weapons": [
         "Garlic"
@@ -356,6 +374,8 @@ window.VS_DATA = {
     {
       "name": "(Retired) Poe Ratcho",
       "icon": "assets/icons/characters/retired_poe_ratcho.png",
+      "sprite_static": "assets/icons/characters/retired_poe_ratcho_sprite.png",
+      "sprite_gif": "assets/icons/characters/retired_poe_ratcho_sprite.gif",
       "base_name": "Poe Ratcho",
       "starting_weapons": [
         "Garlic",
@@ -391,6 +411,8 @@ window.VS_DATA = {
     {
       "name": "Suor Clerici",
       "icon": "assets/icons/characters/suor_clerici.png",
+      "sprite_static": "assets/icons/characters/suor_clerici_sprite.png",
+      "sprite_gif": "assets/icons/characters/suor_clerici_sprite.gif",
       "base_name": "Suor Clerici",
       "starting_weapons": [
         "Santa Water"
@@ -430,6 +452,8 @@ window.VS_DATA = {
     {
       "name": "Dommario",
       "icon": "assets/icons/characters/dommario.png",
+      "sprite_static": "assets/icons/characters/dommario_sprite.png",
+      "sprite_gif": "assets/icons/characters/dommario_sprite.gif",
       "base_name": "Dommario",
       "starting_weapons": [
         "King Bible"
@@ -462,6 +486,8 @@ window.VS_DATA = {
     {
       "name": "Krochi Freetto",
       "icon": "assets/icons/characters/krochi_freetto.png",
+      "sprite_static": "assets/icons/characters/krochi_freetto_sprite.png",
+      "sprite_gif": "assets/icons/characters/krochi_freetto_sprite.gif",
       "base_name": "Krochi Freetto",
       "starting_weapons": [
         "Cross"
@@ -501,6 +527,8 @@ window.VS_DATA = {
     {
       "name": "Christine Davain",
       "icon": "assets/icons/characters/christine_davain.png",
+      "sprite_static": "assets/icons/characters/christine_davain_sprite.png",
+      "sprite_gif": "assets/icons/characters/christine_davain_sprite.gif",
       "base_name": "Christine Davain",
       "starting_weapons": [
         "Pentagram"
@@ -540,6 +568,8 @@ window.VS_DATA = {
     {
       "name": "Pugnala Provola",
       "icon": "assets/icons/characters/pugnala_provola.png",
+      "sprite_static": "assets/icons/characters/pugnala_provola_sprite.png",
+      "sprite_gif": "assets/icons/characters/pugnala_provola_sprite.gif",
       "base_name": "Pugnala Provola",
       "starting_weapons": [
         "Phiera Der Tuphello",
@@ -553,7 +583,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "might",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -580,6 +610,8 @@ window.VS_DATA = {
     {
       "name": "Giovanna Grana",
       "icon": "assets/icons/characters/giovanna_grana.png",
+      "sprite_static": "assets/icons/characters/giovanna_grana_sprite.png",
+      "sprite_gif": "assets/icons/characters/giovanna_grana_sprite.gif",
       "base_name": "Giovanna Grana",
       "starting_weapons": [
         "Gatti Amari"
@@ -592,7 +624,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "speed",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -619,6 +651,8 @@ window.VS_DATA = {
     {
       "name": "Poppea Pecorina",
       "icon": "assets/icons/characters/poppea_pecorina.png",
+      "sprite_static": "assets/icons/characters/poppea_pecorina_sprite.png",
+      "sprite_gif": "assets/icons/characters/poppea_pecorina_sprite.gif",
       "base_name": "Poppea Pecorina",
       "starting_weapons": [
         "Song of Mana"
@@ -631,7 +665,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "duration",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -658,6 +692,8 @@ window.VS_DATA = {
     {
       "name": "Concetta Caciotta",
       "icon": "assets/icons/characters/concetta_caciotta.png",
+      "sprite_static": "assets/icons/characters/concetta_caciotta_sprite.png",
+      "sprite_gif": "assets/icons/characters/concetta_caciotta_sprite.gif",
       "base_name": "Concetta Caciotta",
       "starting_weapons": [
         "Shadow Pinion"
@@ -670,7 +706,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "area",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -697,6 +733,8 @@ window.VS_DATA = {
     {
       "name": "Mortaccio",
       "icon": "assets/icons/characters/mortaccio.png",
+      "sprite_static": "assets/icons/characters/mortaccio_sprite.png",
+      "sprite_gif": "assets/icons/characters/mortaccio_sprite.gif",
       "base_name": "Mortaccio",
       "starting_weapons": [
         "Bone"
@@ -754,6 +792,8 @@ window.VS_DATA = {
     {
       "name": "Yatta Cavallo",
       "icon": "assets/icons/characters/yatta_cavallo.png",
+      "sprite_static": "assets/icons/characters/yatta_cavallo_sprite.png",
+      "sprite_gif": "assets/icons/characters/yatta_cavallo_sprite.gif",
       "base_name": "Yatta Cavallo",
       "starting_weapons": [
         "Cherry Bomb"
@@ -817,6 +857,8 @@ window.VS_DATA = {
     {
       "name": "Bianca Ramba",
       "icon": "assets/icons/characters/bianca_ramba.png",
+      "sprite_static": "assets/icons/characters/bianca_ramba_sprite.png",
+      "sprite_gif": "assets/icons/characters/bianca_ramba_sprite.gif",
       "base_name": "Bianca Ramba",
       "starting_weapons": [
         "Carréllo"
@@ -856,6 +898,8 @@ window.VS_DATA = {
     {
       "name": "O'Sole Meeo",
       "icon": "assets/icons/characters/osole_meeo.png",
+      "sprite_static": "assets/icons/characters/osole_meeo_sprite.png",
+      "sprite_gif": "assets/icons/characters/osole_meeo_sprite.gif",
       "base_name": "O'Sole Meeo",
       "starting_weapons": [
         "Celestial Dusting"
@@ -913,6 +957,8 @@ window.VS_DATA = {
     {
       "name": "Sir Ambrojoe",
       "icon": "assets/icons/characters/sir_ambrojoe.png",
+      "sprite_static": "assets/icons/characters/sir_ambrojoe_sprite.png",
+      "sprite_gif": "assets/icons/characters/sir_ambrojoe_sprite.gif",
       "base_name": "Sir Ambrojoe",
       "starting_weapons": [
         "La Robba"
@@ -958,6 +1004,8 @@ window.VS_DATA = {
     {
       "name": "Iguana Gallo Valletto",
       "icon": "assets/icons/characters/iguana_gallo_valletto.png",
+      "sprite_static": "assets/icons/characters/iguana_gallo_valletto_sprite.png",
+      "sprite_gif": "assets/icons/characters/iguana_gallo_valletto_sprite.gif",
       "base_name": "Iguana Gallo Valletto",
       "starting_weapons": [
         "Clock Lancet"
@@ -1003,6 +1051,8 @@ window.VS_DATA = {
     {
       "name": "Divano Thelma",
       "icon": "assets/icons/characters/divano_thelma.png",
+      "sprite_static": "assets/icons/characters/divano_thelma_sprite.png",
+      "sprite_gif": "assets/icons/characters/divano_thelma_sprite.gif",
       "base_name": "Divano Thelma",
       "starting_weapons": [
         "Laurel"
@@ -1048,6 +1098,8 @@ window.VS_DATA = {
     {
       "name": "Zi'Assunta Belpaese",
       "icon": "assets/icons/characters/ziassunta_belpaese.png",
+      "sprite_static": "assets/icons/characters/ziassunta_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/ziassunta_belpaese_sprite.gif",
       "base_name": "Zi'Assunta Belpaese",
       "starting_weapons": [
         "Vento Sacro"
@@ -1105,6 +1157,8 @@ window.VS_DATA = {
     {
       "name": "Queen Sigma",
       "icon": "assets/icons/characters/queen_sigma.png",
+      "sprite_static": "assets/icons/characters/queen_sigma_sprite.png",
+      "sprite_gif": "assets/icons/characters/queen_sigma_sprite.gif",
       "base_name": "Queen Sigma",
       "starting_weapons": [
         "Victory Sword"
@@ -1117,13 +1171,13 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "might",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         },
         {
           "key": "growth",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -1150,6 +1204,8 @@ window.VS_DATA = {
     {
       "name": "Bat Robbert",
       "icon": "assets/icons/characters/bat_robbert.png",
+      "sprite_static": "assets/icons/characters/bat_robbert_sprite.png",
+      "sprite_gif": "assets/icons/characters/bat_robbert_sprite.gif",
       "base_name": "Bat Robbert",
       "starting_weapons": [
         "Pako Battiliar"
@@ -1182,6 +1238,8 @@ window.VS_DATA = {
     {
       "name": "Zi'Appunta Belpaese",
       "icon": "assets/icons/characters/ziappunta_belpaese.png",
+      "sprite_static": "assets/icons/characters/ziappunta_belpaese_sprite.png",
+      "sprite_gif": "assets/icons/characters/ziappunta_belpaese_sprite.gif",
       "base_name": "Zi'Appunta Belpaese",
       "starting_weapons": [
         "Ammo Appalate"
@@ -1214,6 +1272,8 @@ window.VS_DATA = {
     {
       "name": "Big Troubler",
       "icon": "assets/icons/characters/big_troubler.png",
+      "sprite_static": "assets/icons/characters/big_troubler_sprite.png",
+      "sprite_gif": "assets/icons/characters/big_troubler_sprite.gif",
       "base_name": "Big Troubler",
       "starting_weapons": [
         "Unearthly Bolt"
@@ -1246,6 +1306,8 @@ window.VS_DATA = {
     {
       "name": "She-Moon Eeta",
       "icon": "assets/icons/characters/she-moon_eeta.png",
+      "sprite_static": "assets/icons/characters/she-moon_eeta_sprite.png",
+      "sprite_gif": "assets/icons/characters/she-moon_eeta_sprite.gif",
       "base_name": "She-Moon Eeta",
       "starting_weapons": [
         "Glass Fandango"
@@ -1278,6 +1340,8 @@ window.VS_DATA = {
     {
       "name": "She-Moon Eeta (Reborn)",
       "icon": "assets/icons/characters/she-moon_eeta_reborn.png",
+      "sprite_static": "assets/icons/characters/she-moon_eeta_reborn_sprite.png",
+      "sprite_gif": "assets/icons/characters/she-moon_eeta_reborn_sprite.gif",
       "base_name": "She-Moon Eeta",
       "starting_weapons": [
         "Glass Fandango",
@@ -1316,6 +1380,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Penshin Fatcha)",
       "icon": "assets/icons/characters/para_kooleo_penshin_fatcha.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_penshin_fatcha_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_penshin_fatcha_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Penshin Fatcha",
@@ -1351,6 +1417,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Tonno Subito)",
       "icon": "assets/icons/characters/para_kooleo_tonno_subito.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_tonno_subito_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_tonno_subito_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Tonno Subito"
@@ -1383,6 +1451,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Tonnado)",
       "icon": "assets/icons/characters/para_kooleo_tonnado.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_tonnado_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_tonnado_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Tonnado"
@@ -1415,6 +1485,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Tonn'omoto)",
       "icon": "assets/icons/characters/para_kooleo_tonnomoto.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_tonnomoto_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_tonnomoto_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Tonn'omoto"
@@ -1447,6 +1519,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Tonn'oddeeo)",
       "icon": "assets/icons/characters/para_kooleo_tonnoddeeo.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_tonnoddeeo_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_tonnoddeeo_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Tonn'oddeeo"
@@ -1479,6 +1553,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Tonne)",
       "icon": "assets/icons/characters/para_kooleo_tonne.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_tonne_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_tonne_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Tonne"
@@ -1511,6 +1587,8 @@ window.VS_DATA = {
     {
       "name": "Para Kooleo (Unsurpassed)",
       "icon": "assets/icons/characters/para_kooleo_unsurpassed.png",
+      "sprite_static": "assets/icons/characters/para_kooleo_unsurpassed_sprite.png",
+      "sprite_gif": "assets/icons/characters/para_kooleo_unsurpassed_sprite.gif",
       "base_name": "Para Kooleo",
       "starting_weapons": [
         "Unsurpassed"
@@ -1543,6 +1621,8 @@ window.VS_DATA = {
     {
       "name": "Santa Ladonna",
       "icon": "assets/icons/characters/santa_ladonna.png",
+      "sprite_static": "assets/icons/characters/santa_ladonna_sprite.png",
+      "sprite_gif": "assets/icons/characters/santa_ladonna_sprite.gif",
       "base_name": "Santa Ladonna",
       "starting_weapons": [
         "Santa Javelin"
@@ -1582,6 +1662,8 @@ window.VS_DATA = {
     {
       "name": "Gazebo",
       "icon": "assets/icons/characters/gazebo.png",
+      "sprite_static": "assets/icons/characters/gazebo_sprite.png",
+      "sprite_gif": "assets/icons/characters/gazebo_sprite.gif",
       "base_name": "Gazebo",
       "starting_weapons": [
         "Gaze of Gaea"
@@ -1614,6 +1696,8 @@ window.VS_DATA = {
     {
       "name": "Chula-Reh",
       "icon": "assets/icons/characters/chula-reh.png",
+      "sprite_static": "assets/icons/characters/chula-reh_sprite.png",
+      "sprite_gif": "assets/icons/characters/chula-reh_sprite.gif",
       "base_name": "Chula-Reh",
       "starting_weapons": [
         "Magi-Stone"
@@ -1646,6 +1730,8 @@ window.VS_DATA = {
     {
       "name": "Space Dude",
       "icon": "assets/icons/characters/space_dude.png",
+      "sprite_static": "assets/icons/characters/space_dude_sprite.png",
+      "sprite_gif": "assets/icons/characters/space_dude_sprite.gif",
       "base_name": "Space Dude",
       "starting_weapons": [
         "Phas3r"
@@ -1678,6 +1764,8 @@ window.VS_DATA = {
     {
       "name": "Exdash Exiviiq",
       "icon": "assets/icons/characters/exdash_exiviiq.png",
+      "sprite_static": "assets/icons/characters/exdash_exiviiq_sprite.png",
+      "sprite_gif": "assets/icons/characters/exdash_exiviiq_sprite.gif",
       "base_name": "Exdash Exiviiq",
       "starting_weapons": [
         "Ebony Wings"
@@ -1717,6 +1805,8 @@ window.VS_DATA = {
     {
       "name": "Toastie",
       "icon": "assets/icons/characters/toastie.png",
+      "sprite_static": "assets/icons/characters/toastie_sprite.png",
+      "sprite_gif": "assets/icons/characters/toastie_sprite.gif",
       "base_name": "Toastie",
       "starting_weapons": [
         "Peachone"
@@ -1768,6 +1858,8 @@ window.VS_DATA = {
     {
       "name": "Smith IV",
       "icon": "assets/icons/characters/smith_iv.png",
+      "sprite_static": "assets/icons/characters/smith_iv_sprite.png",
+      "sprite_gif": "assets/icons/characters/smith_iv_sprite.gif",
       "base_name": "Smith IV",
       "starting_weapons": [
         "Vandalier"
@@ -1780,7 +1872,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "might",
-          "value": 0.07,
+          "value": 0.007,
           "interval": 1,
           "max": null
         },
@@ -1837,6 +1929,8 @@ window.VS_DATA = {
     {
       "name": "Random",
       "icon": "assets/icons/characters/random.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
       "base_name": "Random",
       "starting_weapons": [
         "Random"
@@ -1869,6 +1963,8 @@ window.VS_DATA = {
     {
       "name": "Boon Marrabbio",
       "icon": "assets/icons/characters/boon_marrabbio.png",
+      "sprite_static": "assets/icons/characters/boon_marrabbio_sprite.png",
+      "sprite_gif": "assets/icons/characters/boon_marrabbio_sprite.gif",
       "base_name": "Boon Marrabbio",
       "starting_weapons": [
         "Thousand Edge"
@@ -1901,6 +1997,8 @@ window.VS_DATA = {
     {
       "name": "Avatar Infernas",
       "icon": "assets/icons/characters/avatar_infernas.png",
+      "sprite_static": "assets/icons/characters/avatar_infernas_sprite.png",
+      "sprite_gif": "assets/icons/characters/avatar_infernas_sprite.gif",
       "base_name": "Avatar Infernas",
       "starting_weapons": [
         "Flames of Misspell"
@@ -1958,6 +2056,8 @@ window.VS_DATA = {
     {
       "name": "Minnah Mannarah",
       "icon": "assets/icons/characters/minnah_mannarah.png",
+      "sprite_static": "assets/icons/characters/minnah_mannarah_sprite.png",
+      "sprite_gif": "assets/icons/characters/minnah_mannarah_sprite.gif",
       "base_name": "Minnah Mannarah",
       "starting_weapons": [
         "Bloody Tear"
@@ -1997,6 +2097,8 @@ window.VS_DATA = {
     {
       "name": "Leda",
       "icon": "assets/icons/characters/leda.png",
+      "sprite_static": "assets/icons/characters/leda_sprite.png",
+      "sprite_gif": "assets/icons/characters/leda_sprite.gif",
       "base_name": "Leda",
       "starting_weapons": [
         "Holy Wand"
@@ -2029,6 +2131,8 @@ window.VS_DATA = {
     {
       "name": "Cosmo Pavone",
       "icon": "assets/icons/characters/cosmo_pavone.png",
+      "sprite_static": "assets/icons/characters/cosmo_pavone_sprite.png",
+      "sprite_gif": "assets/icons/characters/cosmo_pavone_sprite.gif",
       "base_name": "Cosmo Pavone",
       "starting_weapons": [
         "Peachone",
@@ -2084,6 +2188,8 @@ window.VS_DATA = {
     {
       "name": "Peppino",
       "icon": "assets/icons/characters/peppino.png",
+      "sprite_static": "assets/icons/characters/peppino_sprite.png",
+      "sprite_gif": "assets/icons/characters/peppino_sprite.gif",
       "base_name": "Peppino",
       "starting_weapons": [
         "Soul Eater"
@@ -2116,6 +2222,8 @@ window.VS_DATA = {
     {
       "name": "Big Trouser",
       "icon": "assets/icons/characters/big_trouser.png",
+      "sprite_static": "assets/icons/characters/big_trouser_sprite.png",
+      "sprite_gif": "assets/icons/characters/big_trouser_sprite.gif",
       "base_name": "Big Trouser",
       "starting_weapons": [
         "Candybox"
@@ -2155,6 +2263,8 @@ window.VS_DATA = {
     {
       "name": "missingN▯",
       "icon": "assets/icons/characters/missingn▯.png",
+      "sprite_static": "assets/icons/characters/missingn▯_sprite.png",
+      "sprite_gif": "assets/icons/characters/missingn▯_sprite.gif",
       "base_name": "missingN▯",
       "starting_weapons": [
         "Axe",
@@ -2188,6 +2298,8 @@ window.VS_DATA = {
     {
       "name": "Gains Boros",
       "icon": "assets/icons/characters/gains_boros.png",
+      "sprite_static": "assets/icons/characters/gains_boros_sprite.png",
+      "sprite_gif": "assets/icons/characters/gains_boros_sprite.gif",
       "base_name": "Gains Boros",
       "starting_weapons": [
         "Heaven Sword"
@@ -2227,6 +2339,8 @@ window.VS_DATA = {
     {
       "name": "Gyorunton",
       "icon": "assets/icons/characters/gyorunton.png",
+      "sprite_static": "assets/icons/characters/gyorunton_sprite.png",
+      "sprite_gif": "assets/icons/characters/gyorunton_sprite.gif",
       "base_name": "Gyorunton",
       "starting_weapons": [
         "Bracelet"
@@ -2266,6 +2380,8 @@ window.VS_DATA = {
     {
       "name": "Mask of the Red Death",
       "icon": "assets/icons/characters/mask_of_the_red_death.png",
+      "sprite_static": "assets/icons/characters/mask_of_the_red_death_sprite.png",
+      "sprite_gif": "assets/icons/characters/mask_of_the_red_death_sprite.gif",
       "base_name": "Mask of the Red Death",
       "starting_weapons": [
         "Death Spiral"
@@ -2298,6 +2414,8 @@ window.VS_DATA = {
     {
       "name": "Bats Bats Bats",
       "icon": "assets/icons/characters/bats_bats_bats.png",
+      "sprite_static": "assets/icons/characters/bats_bats_bats_sprite.png",
+      "sprite_gif": "assets/icons/characters/bats_bats_bats_sprite.gif",
       "base_name": "Bats Bats Bats",
       "starting_weapons": [
         "Mazo Familiar"
@@ -2330,6 +2448,8 @@ window.VS_DATA = {
     {
       "name": "Rose De Infernas",
       "icon": "assets/icons/characters/rose_de_infernas.png",
+      "sprite_static": "assets/icons/characters/rose_de_infernas_sprite.png",
+      "sprite_gif": "assets/icons/characters/rose_de_infernas_sprite.gif",
       "base_name": "Rose De Infernas",
       "starting_weapons": [
         "Fuwalafuwaloo"
@@ -2381,6 +2501,8 @@ window.VS_DATA = {
     {
       "name": "Torino",
       "icon": "assets/icons/characters/torino.png",
+      "sprite_static": "assets/icons/characters/torino_sprite.png",
+      "sprite_gif": "assets/icons/characters/torino_sprite.gif",
       "base_name": "Torino",
       "starting_weapons": [
         "Eskizzibur"
@@ -2482,6 +2604,8 @@ window.VS_DATA = {
     {
       "name": "Scorej-Oni",
       "icon": "assets/icons/characters/scorej-oni.png",
+      "sprite_static": "assets/icons/characters/scorej-oni_sprite.png",
+      "sprite_gif": "assets/icons/characters/scorej-oni_sprite.gif",
       "base_name": "Scorej-Oni",
       "starting_weapons": [
         "Lightning Ring"
@@ -2516,6 +2640,8 @@ window.VS_DATA = {
     {
       "name": "Gyoruntin",
       "icon": "assets/icons/characters/gyoruntin.png",
+      "sprite_static": "assets/icons/characters/gyoruntin_sprite.png",
+      "sprite_gif": "assets/icons/characters/gyoruntin_sprite.gif",
       "base_name": "Gyoruntin",
       "starting_weapons": [
         "NO FUTURE"
@@ -2555,6 +2681,8 @@ window.VS_DATA = {
     {
       "name": "Secretino Dagsson",
       "icon": "assets/icons/characters/secretino_dagsson.png",
+      "sprite_static": "assets/icons/characters/secretino_dagsson_sprite.png",
+      "sprite_gif": "assets/icons/characters/secretino_dagsson_sprite.gif",
       "base_name": "Secretino Dagsson",
       "starting_weapons": [
         "Kyra-Stones"
@@ -2587,6 +2715,8 @@ window.VS_DATA = {
     {
       "name": "Space Dette",
       "icon": "assets/icons/characters/space_dette.png",
+      "sprite_static": "assets/icons/characters/space_dette_sprite.png",
+      "sprite_gif": "assets/icons/characters/space_dette_sprite.gif",
       "base_name": "Space Dette",
       "starting_weapons": [
         "Photonstorm"
@@ -2619,6 +2749,8 @@ window.VS_DATA = {
     {
       "name": "Miang Moonspell",
       "icon": "assets/icons/characters/miang_moonspell.png",
+      "sprite_static": "assets/icons/characters/miang_moonspell_sprite.png",
+      "sprite_gif": "assets/icons/characters/miang_moonspell_sprite.gif",
       "base_name": "Miang Moonspell",
       "starting_weapons": [
         "Silver Wind"
@@ -2651,6 +2783,8 @@ window.VS_DATA = {
     {
       "name": "Menya Moonspell",
       "icon": "assets/icons/characters/menya_moonspell.png",
+      "sprite_static": "assets/icons/characters/menya_moonspell_sprite.png",
+      "sprite_gif": "assets/icons/characters/menya_moonspell_sprite.gif",
       "base_name": "Menya Moonspell",
       "starting_weapons": [
         "Four Seasons"
@@ -2683,6 +2817,8 @@ window.VS_DATA = {
     {
       "name": "Syuuto Moonspell",
       "icon": "assets/icons/characters/syuuto_moonspell.png",
+      "sprite_static": "assets/icons/characters/syuuto_moonspell_sprite.png",
+      "sprite_gif": "assets/icons/characters/syuuto_moonspell_sprite.gif",
       "base_name": "Syuuto Moonspell",
       "starting_weapons": [
         "Summon Night"
@@ -2715,6 +2851,8 @@ window.VS_DATA = {
     {
       "name": "Babi-Onna",
       "icon": "assets/icons/characters/babi-onna.png",
+      "sprite_static": "assets/icons/characters/babi-onna_sprite.png",
+      "sprite_gif": "assets/icons/characters/babi-onna_sprite.gif",
       "base_name": "Babi-Onna",
       "starting_weapons": [
         "Mirage Robe"
@@ -2747,6 +2885,8 @@ window.VS_DATA = {
     {
       "name": "McCoy-Oni",
       "icon": "assets/icons/characters/mccoy-oni.png",
+      "sprite_static": "assets/icons/characters/mccoy-oni_sprite.png",
+      "sprite_gif": "assets/icons/characters/mccoy-oni_sprite.gif",
       "base_name": "McCoy-Oni",
       "starting_weapons": [
         "108 Bocce"
@@ -2779,6 +2919,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Menya Moonspell",
       "icon": "assets/icons/characters/megalo_menya_moonspell.png",
+      "sprite_static": "assets/icons/characters/megalo_menya_moonspell_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_menya_moonspell_sprite.gif",
       "base_name": "Megalo Menya Moonspell",
       "starting_weapons": [
         "108 Bocce"
@@ -2813,6 +2955,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Syuuto Moonspell",
       "icon": "assets/icons/characters/megalo_syuuto_moonspell.png",
+      "sprite_static": "assets/icons/characters/megalo_syuuto_moonspell_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_syuuto_moonspell_sprite.gif",
       "base_name": "Megalo Syuuto Moonspell",
       "starting_weapons": [
         "Night Sword"
@@ -2852,6 +2996,8 @@ window.VS_DATA = {
     {
       "name": "Gav'Et-Oni",
       "icon": "assets/icons/characters/gavet-oni.png",
+      "sprite_static": "assets/icons/characters/gavet-oni_sprite.png",
+      "sprite_gif": "assets/icons/characters/gavet-oni_sprite.gif",
       "base_name": "Gav'Et-Oni",
       "starting_weapons": [
         "Mille Bolle Blu"
@@ -2891,6 +3037,8 @@ window.VS_DATA = {
     {
       "name": "Eleanor Uziron (SpellString)",
       "icon": "assets/icons/characters/eleanor_uziron_spellstring.png",
+      "sprite_static": "assets/icons/characters/eleanor_uziron_sprite.png",
+      "sprite_gif": "assets/icons/characters/eleanor_uziron_sprite.gif",
       "base_name": "Eleanor Uziron",
       "starting_weapons": [
         "SpellString"
@@ -2923,6 +3071,8 @@ window.VS_DATA = {
     {
       "name": "Eleanor Uziron (SpellStream)",
       "icon": "assets/icons/characters/eleanor_uziron_spellstream.png",
+      "sprite_static": "assets/icons/characters/eleanor_uziron_sprite.png",
+      "sprite_gif": "assets/icons/characters/eleanor_uziron_sprite.gif",
       "base_name": "Eleanor Uziron",
       "starting_weapons": [
         "SpellStream"
@@ -2955,6 +3105,8 @@ window.VS_DATA = {
     {
       "name": "Eleanor Uziron (SpellStrike)",
       "icon": "assets/icons/characters/eleanor_uziron_spellstrike.png",
+      "sprite_static": "assets/icons/characters/eleanor_uziron_sprite.png",
+      "sprite_gif": "assets/icons/characters/eleanor_uziron_sprite.gif",
       "base_name": "Eleanor Uziron",
       "starting_weapons": [
         "SpellStrike"
@@ -2987,6 +3139,8 @@ window.VS_DATA = {
     {
       "name": "Maruto Cuts",
       "icon": "assets/icons/characters/maruto_cuts.png",
+      "sprite_static": "assets/icons/characters/maruto_cuts_sprite.png",
+      "sprite_gif": "assets/icons/characters/maruto_cuts_sprite.gif",
       "base_name": "Maruto Cuts",
       "starting_weapons": [
         "Eskizzibur"
@@ -3019,6 +3173,8 @@ window.VS_DATA = {
     {
       "name": "Keitha Muort",
       "icon": "assets/icons/characters/keitha_muort.png",
+      "sprite_static": "assets/icons/characters/keitha_muort_sprite.png",
+      "sprite_gif": "assets/icons/characters/keitha_muort_sprite.gif",
       "base_name": "Keitha Muort",
       "starting_weapons": [
         "Flash Arrow"
@@ -3058,6 +3214,8 @@ window.VS_DATA = {
     {
       "name": "Luminaire Foscari",
       "icon": "assets/icons/characters/luminaire_foscari.png",
+      "sprite_static": "assets/icons/characters/luminaire_foscari_sprite.png",
+      "sprite_gif": "assets/icons/characters/luminaire_foscari_sprite.gif",
       "base_name": "Luminaire Foscari",
       "starting_weapons": [
         "Prismatic Missile"
@@ -3090,6 +3248,8 @@ window.VS_DATA = {
     {
       "name": "Genevieve Gruyère",
       "icon": "assets/icons/characters/genevieve_gruyère.png",
+      "sprite_static": "assets/icons/characters/genevieve_gruyère_sprite.png",
+      "sprite_gif": "assets/icons/characters/genevieve_gruyère_sprite.gif",
       "base_name": "Genevieve Gruyère",
       "starting_weapons": [
         "Shadow Servant"
@@ -3122,6 +3282,8 @@ window.VS_DATA = {
     {
       "name": "Je-Ne-Viv",
       "icon": "assets/icons/characters/je-ne-viv.png",
+      "sprite_static": "assets/icons/characters/je-ne-viv_sprite.png",
+      "sprite_gif": "assets/icons/characters/je-ne-viv_sprite.gif",
       "base_name": "Je-Ne-Viv",
       "starting_weapons": [
         "Shadow Servant"
@@ -3167,6 +3329,8 @@ window.VS_DATA = {
     {
       "name": "Sammy",
       "icon": "assets/icons/characters/sammy.png",
+      "sprite_static": "assets/icons/characters/sammy_sprite.png",
+      "sprite_gif": "assets/icons/characters/sammy_sprite.gif",
       "base_name": "Sammy",
       "starting_weapons": [
         "Vicious Hunger"
@@ -3199,6 +3363,8 @@ window.VS_DATA = {
     {
       "name": "Rottin'Ghoul",
       "icon": "assets/icons/characters/rottinghoul.png",
+      "sprite_static": "assets/icons/characters/rottinghoul_sprite.png",
+      "sprite_gif": "assets/icons/characters/rottinghoul_sprite.gif",
       "base_name": "Rottin'Ghoul",
       "starting_weapons": [
         "Party Popper"
@@ -3238,6 +3404,8 @@ window.VS_DATA = {
     {
       "name": "Crewmate Dino",
       "icon": "assets/icons/characters/crewmate_dino.png",
+      "sprite_static": "assets/icons/characters/crewmate_dino_sprite.png",
+      "sprite_gif": "assets/icons/characters/crewmate_dino_sprite.gif",
       "base_name": "Crewmate Dino",
       "starting_weapons": [
         "Report!"
@@ -3270,6 +3438,8 @@ window.VS_DATA = {
     {
       "name": "Engineer Gino",
       "icon": "assets/icons/characters/engineer_gino.png",
+      "sprite_static": "assets/icons/characters/engineer_gino_sprite.png",
+      "sprite_gif": "assets/icons/characters/engineer_gino_sprite.gif",
       "base_name": "Engineer Gino",
       "starting_weapons": [
         "Lucky Swipe"
@@ -3302,6 +3472,8 @@ window.VS_DATA = {
     {
       "name": "Ghost Lino",
       "icon": "assets/icons/characters/ghost_lino.png",
+      "sprite_static": "assets/icons/characters/ghost_lino_sprite.png",
+      "sprite_gif": "assets/icons/characters/ghost_lino_sprite.gif",
       "base_name": "Ghost Lino",
       "starting_weapons": [
         "Lifesign Scan"
@@ -3334,6 +3506,8 @@ window.VS_DATA = {
     {
       "name": "Shapeshifter Nino",
       "icon": "assets/icons/characters/shapeshifter_nino.png",
+      "sprite_static": "assets/icons/characters/shapeshifter_nino_sprite.png",
+      "sprite_gif": "assets/icons/characters/shapeshifter_nino_sprite.gif",
       "base_name": "Shapeshifter Nino",
       "starting_weapons": [
         "Just Vent"
@@ -3366,6 +3540,8 @@ window.VS_DATA = {
     {
       "name": "Guardian Pina",
       "icon": "assets/icons/characters/guardian_pina.png",
+      "sprite_static": "assets/icons/characters/guardian_pina_sprite.png",
+      "sprite_gif": "assets/icons/characters/guardian_pina_sprite.gif",
       "base_name": "Guardian Pina",
       "starting_weapons": [
         "Clear Debris"
@@ -3398,6 +3574,8 @@ window.VS_DATA = {
     {
       "name": "Impostor Rina",
       "icon": "assets/icons/characters/impostor_rina.png",
+      "sprite_static": "assets/icons/characters/impostor_rina_sprite.png",
+      "sprite_gif": "assets/icons/characters/impostor_rina_sprite.gif",
       "base_name": "Impostor Rina",
       "starting_weapons": [
         "Sharp Tongue"
@@ -3430,6 +3608,8 @@ window.VS_DATA = {
     {
       "name": "Scientist Mina",
       "icon": "assets/icons/characters/scientist_mina.png",
+      "sprite_static": "assets/icons/characters/scientist_mina_sprite.png",
+      "sprite_gif": "assets/icons/characters/scientist_mina_sprite.gif",
       "base_name": "Scientist Mina",
       "starting_weapons": [
         "Science Rocks"
@@ -3469,6 +3649,8 @@ window.VS_DATA = {
     {
       "name": "Horse",
       "icon": "assets/icons/characters/horse.png",
+      "sprite_static": "assets/icons/characters/horse_sprite.png",
+      "sprite_gif": "assets/icons/characters/horse_sprite.gif",
       "base_name": "Horse",
       "starting_weapons": [
         "Hats"
@@ -3508,6 +3690,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Impostor Rina",
       "icon": "assets/icons/characters/megalo_impostor_rina.png",
+      "sprite_static": "assets/icons/characters/megalo_impostor_rina_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_impostor_rina_sprite.gif",
       "base_name": "Megalo Impostor Rina",
       "starting_weapons": [
         "Sharp Tongue"
@@ -3542,6 +3726,8 @@ window.VS_DATA = {
     {
       "name": "Bill Rizer",
       "icon": "assets/icons/characters/bill_rizer.png",
+      "sprite_static": "assets/icons/characters/bill_rizer_sprite.png",
+      "sprite_gif": "assets/icons/characters/bill_rizer_sprite.gif",
       "base_name": "Bill Rizer",
       "starting_weapons": [
         "Long Gun"
@@ -3593,6 +3779,8 @@ window.VS_DATA = {
     {
       "name": "Lance Bean",
       "icon": "assets/icons/characters/lance_bean.png",
+      "sprite_static": "assets/icons/characters/lance_bean_sprite.png",
+      "sprite_gif": "assets/icons/characters/lance_bean_sprite.gif",
       "base_name": "Lance Bean",
       "starting_weapons": [
         "Short Gun"
@@ -3644,6 +3832,8 @@ window.VS_DATA = {
     {
       "name": "Ariana",
       "icon": "assets/icons/characters/ariana.png",
+      "sprite_static": "assets/icons/characters/ariana_sprite.png",
+      "sprite_gif": "assets/icons/characters/ariana_sprite.gif",
       "base_name": "Ariana",
       "starting_weapons": [
         "Spread Shot"
@@ -3676,6 +3866,8 @@ window.VS_DATA = {
     {
       "name": "Lucia Zero",
       "icon": "assets/icons/characters/lucia_zero.png",
+      "sprite_static": "assets/icons/characters/lucia_zero_sprite.png",
+      "sprite_gif": "assets/icons/characters/lucia_zero_sprite.gif",
       "base_name": "Lucia Zero",
       "starting_weapons": [
         "C-U-Laser"
@@ -3708,6 +3900,8 @@ window.VS_DATA = {
     {
       "name": "Brad Fang",
       "icon": "assets/icons/characters/brad_fang.png",
+      "sprite_static": "assets/icons/characters/brad_fang_sprite.png",
+      "sprite_gif": "assets/icons/characters/brad_fang_sprite.gif",
       "base_name": "Brad Fang",
       "starting_weapons": [
         "Firearm"
@@ -3740,6 +3934,8 @@ window.VS_DATA = {
     {
       "name": "Browny",
       "icon": "assets/icons/characters/browny.png",
+      "sprite_static": "assets/icons/characters/browny_sprite.png",
+      "sprite_gif": "assets/icons/characters/browny_sprite.gif",
       "base_name": "Browny",
       "starting_weapons": [
         "Sonic Bloom"
@@ -3772,6 +3968,8 @@ window.VS_DATA = {
     {
       "name": "Sheena Etranzi",
       "icon": "assets/icons/characters/sheena_etranzi.png",
+      "sprite_static": "assets/icons/characters/sheena_etranzi_sprite.png",
+      "sprite_gif": "assets/icons/characters/sheena_etranzi_sprite.gif",
       "base_name": "Sheena Etranzi",
       "starting_weapons": [
         "Blade Crossbow"
@@ -3804,6 +4002,8 @@ window.VS_DATA = {
     {
       "name": "Probotector",
       "icon": "assets/icons/characters/probotector.png",
+      "sprite_static": "assets/icons/characters/probotector_sprite.png",
+      "sprite_gif": "assets/icons/characters/probotector_sprite.gif",
       "base_name": "Probotector",
       "starting_weapons": [
         "Prism Lass"
@@ -3836,6 +4036,8 @@ window.VS_DATA = {
     {
       "name": "Stanley",
       "icon": "assets/icons/characters/stanley.png",
+      "sprite_static": "assets/icons/characters/stanley_sprite.png",
+      "sprite_gif": "assets/icons/characters/stanley_sprite.gif",
       "base_name": "Stanley",
       "starting_weapons": [
         "Homing Miss"
@@ -3868,6 +4070,8 @@ window.VS_DATA = {
     {
       "name": "Newt Plissken",
       "icon": "assets/icons/characters/newt_plissken.png",
+      "sprite_static": "assets/icons/characters/newt_plissken_sprite.png",
+      "sprite_gif": "assets/icons/characters/newt_plissken_sprite.gif",
       "base_name": "Newt Plissken",
       "starting_weapons": [
         "Diver Mines"
@@ -3900,6 +4104,8 @@ window.VS_DATA = {
     {
       "name": "Colonel Bahamut",
       "icon": "assets/icons/characters/colonel_bahamut.png",
+      "sprite_static": "assets/icons/characters/colonel_bahamut_sprite.png",
+      "sprite_gif": "assets/icons/characters/colonel_bahamut_sprite.gif",
       "base_name": "Colonel Bahamut",
       "starting_weapons": [
         "Metal Claw"
@@ -3932,6 +4138,8 @@ window.VS_DATA = {
     {
       "name": "Simondo Belmont",
       "icon": "assets/icons/characters/simondo_belmont.png",
+      "sprite_static": "assets/icons/characters/simondo_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/simondo_belmont_sprite.gif",
       "base_name": "Simondo Belmont",
       "starting_weapons": [],
       "hidden_items": [],
@@ -3969,6 +4177,8 @@ window.VS_DATA = {
     {
       "name": "Leon Belmont (Alchemy Whip)",
       "icon": "assets/icons/characters/leon_belmont_alchemy_whip.png",
+      "sprite_static": "assets/icons/characters/leon_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/leon_belmont_sprite.gif",
       "base_name": "Leon Belmont",
       "starting_weapons": [
         "Alchemy Whip"
@@ -4001,6 +4211,8 @@ window.VS_DATA = {
     {
       "name": "Leon Belmont (Morning Star)",
       "icon": "assets/icons/characters/leon_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/leon_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/leon_belmont_sprite.gif",
       "base_name": "Leon Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4033,6 +4245,8 @@ window.VS_DATA = {
     {
       "name": "Sonia Belmont (Sonic Whip)",
       "icon": "assets/icons/characters/sonia_belmont_sonic_whip.png",
+      "sprite_static": "assets/icons/characters/sonia_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/sonia_belmont_sprite.gif",
       "base_name": "Sonia Belmont",
       "starting_weapons": [
         "Sonic Whip"
@@ -4065,6 +4279,8 @@ window.VS_DATA = {
     {
       "name": "Sonia Belmont (Morning Star)",
       "icon": "assets/icons/characters/sonia_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/sonia_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/sonia_belmont_sprite.gif",
       "base_name": "Sonia Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4097,6 +4313,8 @@ window.VS_DATA = {
     {
       "name": "Trevor Belmont (Dragon Water Whip)",
       "icon": "assets/icons/characters/trevor_belmont_dragon_water_whip.png",
+      "sprite_static": "assets/icons/characters/trevor_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/trevor_belmont_sprite.gif",
       "base_name": "Trevor Belmont",
       "starting_weapons": [
         "Dragon Water Whip"
@@ -4136,6 +4354,8 @@ window.VS_DATA = {
     {
       "name": "Trevor Belmont (Morning Star)",
       "icon": "assets/icons/characters/trevor_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/trevor_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/trevor_belmont_sprite.gif",
       "base_name": "Trevor Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4175,6 +4395,8 @@ window.VS_DATA = {
     {
       "name": "Christopher Belmont (Jet Black Whip)",
       "icon": "assets/icons/characters/christopher_belmont_jet_black_whip.png",
+      "sprite_static": "assets/icons/characters/christopher_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/christopher_belmont_sprite.gif",
       "base_name": "Christopher Belmont",
       "starting_weapons": [
         "Jet Black Whip"
@@ -4207,6 +4429,8 @@ window.VS_DATA = {
     {
       "name": "Christopher Belmont (Morning Star)",
       "icon": "assets/icons/characters/christopher_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/christopher_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/christopher_belmont_sprite.gif",
       "base_name": "Christopher Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4239,6 +4463,8 @@ window.VS_DATA = {
     {
       "name": "Simon Belmont (Wind Whip)",
       "icon": "assets/icons/characters/simon_belmont_wind_whip.png",
+      "sprite_static": "assets/icons/characters/simon_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/simon_belmont_sprite.gif",
       "base_name": "Simon Belmont",
       "starting_weapons": [
         "Wind Whip"
@@ -4271,6 +4497,8 @@ window.VS_DATA = {
     {
       "name": "Simon Belmont (Morning Star)",
       "icon": "assets/icons/characters/simon_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/simon_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/simon_belmont_sprite.gif",
       "base_name": "Simon Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4303,6 +4531,8 @@ window.VS_DATA = {
     {
       "name": "Juste Belmont (Vibhuti Whip)",
       "icon": "assets/icons/characters/juste_belmont_vibhuti_whip.png",
+      "sprite_static": "assets/icons/characters/juste_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/juste_belmont_sprite.gif",
       "base_name": "Juste Belmont",
       "starting_weapons": [
         "Vibhuti Whip"
@@ -4335,6 +4565,8 @@ window.VS_DATA = {
     {
       "name": "Juste Belmont (Morning Star)",
       "icon": "assets/icons/characters/juste_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/juste_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/juste_belmont_sprite.gif",
       "base_name": "Juste Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4367,6 +4599,8 @@ window.VS_DATA = {
     {
       "name": "Richter Belmont (Platinum Whip)",
       "icon": "assets/icons/characters/richter_belmont_platinum_whip.png",
+      "sprite_static": "assets/icons/characters/richter_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/richter_belmont_sprite.gif",
       "base_name": "Richter Belmont",
       "starting_weapons": [
         "Platinum Whip"
@@ -4399,6 +4633,8 @@ window.VS_DATA = {
     {
       "name": "Richter Belmont (Morning Star)",
       "icon": "assets/icons/characters/richter_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/richter_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/richter_belmont_sprite.gif",
       "base_name": "Richter Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4431,6 +4667,8 @@ window.VS_DATA = {
     {
       "name": "Julius Belmont (Vanitas Whip)",
       "icon": "assets/icons/characters/julius_belmont_vanitas_whip.png",
+      "sprite_static": "assets/icons/characters/julius_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/julius_belmont_sprite.gif",
       "base_name": "Julius Belmont",
       "starting_weapons": [
         "Vanitas Whip"
@@ -4463,6 +4701,8 @@ window.VS_DATA = {
     {
       "name": "Julius Belmont (Morning Star)",
       "icon": "assets/icons/characters/julius_belmont_morning_star.png",
+      "sprite_static": "assets/icons/characters/julius_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/julius_belmont_sprite.gif",
       "base_name": "Julius Belmont",
       "starting_weapons": [
         "Morning Star"
@@ -4495,6 +4735,8 @@ window.VS_DATA = {
     {
       "name": "Grant Danasty (Curved Knife)",
       "icon": "assets/icons/characters/grant_danasty_curved_knife.png",
+      "sprite_static": "assets/icons/characters/grant_danasty_sprite.png",
+      "sprite_gif": "assets/icons/characters/grant_danasty_sprite.gif",
       "base_name": "Grant Danasty",
       "starting_weapons": [
         "Curved Knife"
@@ -4527,6 +4769,8 @@ window.VS_DATA = {
     {
       "name": "Grant Danasty (Coat of Arms)",
       "icon": "assets/icons/characters/grant_danasty_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/grant_danasty_sprite.png",
+      "sprite_gif": "assets/icons/characters/grant_danasty_sprite.gif",
       "base_name": "Grant Danasty",
       "starting_weapons": [
         "Coat of Arms"
@@ -4559,6 +4803,8 @@ window.VS_DATA = {
     {
       "name": "John Morris (Iron Ball)",
       "icon": "assets/icons/characters/john_morris_iron_ball.png",
+      "sprite_static": "assets/icons/characters/john_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/john_morris_sprite.gif",
       "base_name": "John Morris (Iron Ball)",
       "starting_weapons": [
         "Iron Ball"
@@ -4591,6 +4837,8 @@ window.VS_DATA = {
     {
       "name": "John Morris (Coat of Arms)",
       "icon": "assets/icons/characters/john_morris_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/john_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/john_morris_sprite.gif",
       "base_name": "John Morris (Coat of Arms)",
       "starting_weapons": [
         "Coat of Arms"
@@ -4623,6 +4871,8 @@ window.VS_DATA = {
     {
       "name": "John Morris (Morning Star)",
       "icon": "assets/icons/characters/john_morris_morning_star.png",
+      "sprite_static": "assets/icons/characters/john_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/john_morris_sprite.gif",
       "base_name": "John Morris (Morning Star)",
       "starting_weapons": [
         "Morning Star"
@@ -4655,6 +4905,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan Morris (Javelin)",
       "icon": "assets/icons/characters/jonathan_morris_javelin.png",
+      "sprite_static": "assets/icons/characters/jonathan_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
         "Javelin",
@@ -4688,6 +4940,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan Morris (Morning Star)",
       "icon": "assets/icons/characters/jonathan_morris_morning_star.png",
+      "sprite_static": "assets/icons/characters/jonathan_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
         "Morning Star",
@@ -4721,6 +4975,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan Morris (Coat of Arms)",
       "icon": "assets/icons/characters/jonathan_morris_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/jonathan_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
         "Coat of Arms",
@@ -4754,6 +5010,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan Morris (Spectral Sword)",
       "icon": "assets/icons/characters/jonathan_morris_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/jonathan_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
         "Spectral Sword",
@@ -4787,6 +5045,8 @@ window.VS_DATA = {
     {
       "name": "Soma Cruz (Hand Grenade)",
       "icon": "assets/icons/characters/soma_cruz_hand_grenade.png",
+      "sprite_static": "assets/icons/characters/soma_cruz_sprite.png",
+      "sprite_gif": "assets/icons/characters/soma_cruz_sprite.gif",
       "base_name": "Soma Cruz",
       "starting_weapons": [
         "Hand Grenade"
@@ -4826,6 +5086,8 @@ window.VS_DATA = {
     {
       "name": "Soma Cruz (Candybox)",
       "icon": "assets/icons/characters/soma_cruz_candybox.png",
+      "sprite_static": "assets/icons/characters/soma_cruz_sprite.png",
+      "sprite_gif": "assets/icons/characters/soma_cruz_sprite.gif",
       "base_name": "Soma Cruz",
       "starting_weapons": [
         "Candybox"
@@ -4865,6 +5127,8 @@ window.VS_DATA = {
     {
       "name": "Soma Cruz (Dark Lord)",
       "icon": "assets/icons/characters/soma_cruz_dark_lord.png",
+      "sprite_static": "assets/icons/characters/soma_cruz_dark_lord_sprite.png",
+      "sprite_gif": "assets/icons/characters/soma_cruz_dark_lord_sprite.gif",
       "base_name": "Soma Cruz",
       "starting_weapons": [
         "Candybox"
@@ -4910,6 +5174,8 @@ window.VS_DATA = {
     {
       "name": "Charlotte Aulin (Raging Fire)",
       "icon": "assets/icons/characters/charlotte_aulin_raging_fire.png",
+      "sprite_static": "assets/icons/characters/charlotte_aulin_sprite.png",
+      "sprite_gif": "assets/icons/characters/charlotte_aulin_sprite.gif",
       "base_name": "Charlotte Aulin",
       "starting_weapons": [
         "Raging Fire",
@@ -4943,6 +5209,8 @@ window.VS_DATA = {
     {
       "name": "Charlotte Aulin (Belnades' Spellbook)",
       "icon": "assets/icons/characters/charlotte_aulin_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/charlotte_aulin_sprite.png",
+      "sprite_gif": "assets/icons/characters/charlotte_aulin_sprite.gif",
       "base_name": "Charlotte Aulin",
       "starting_weapons": [
         "Belnades' Spellbook",
@@ -4976,6 +5244,8 @@ window.VS_DATA = {
     {
       "name": "Sypha Belnades (Ice Fang)",
       "icon": "assets/icons/characters/sypha_belnades_ice_fang.png",
+      "sprite_static": "assets/icons/characters/sypha_belnades_sprite.png",
+      "sprite_gif": "assets/icons/characters/sypha_belnades_sprite.gif",
       "base_name": "Sypha Belnades",
       "starting_weapons": [
         "Ice Fang"
@@ -5008,6 +5278,8 @@ window.VS_DATA = {
     {
       "name": "Sypha Belnades (Belnades' Spellbook)",
       "icon": "assets/icons/characters/sypha_belnades_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/sypha_belnades_sprite.png",
+      "sprite_gif": "assets/icons/characters/sypha_belnades_sprite.gif",
       "base_name": "Sypha Belnades",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -5040,6 +5312,8 @@ window.VS_DATA = {
     {
       "name": "Yoko Belnades (Fulgur)",
       "icon": "assets/icons/characters/yoko_belnades_fulgur.png",
+      "sprite_static": "assets/icons/characters/yoko_belnades_sprite.png",
+      "sprite_gif": "assets/icons/characters/yoko_belnades_sprite.gif",
       "base_name": "Yoko Belnades",
       "starting_weapons": [
         "Fulgur"
@@ -5072,6 +5346,8 @@ window.VS_DATA = {
     {
       "name": "Yoko Belnades (Belnades' Spellbook)",
       "icon": "assets/icons/characters/yoko_belnades_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/yoko_belnades_sprite.png",
+      "sprite_gif": "assets/icons/characters/yoko_belnades_sprite.gif",
       "base_name": "Yoko Belnades",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -5104,6 +5380,8 @@ window.VS_DATA = {
     {
       "name": "Alucard (Alucart Sworb)",
       "icon": "assets/icons/characters/alucard_alucart_sworb.png",
+      "sprite_static": "assets/icons/characters/alucard_sprite.png",
+      "sprite_gif": "assets/icons/characters/alucard_sprite.gif",
       "base_name": "Alucard",
       "starting_weapons": [
         "Alucart Sworb"
@@ -5136,6 +5414,8 @@ window.VS_DATA = {
     {
       "name": "Alucard (Candybox)",
       "icon": "assets/icons/characters/alucard_candybox.png",
+      "sprite_static": "assets/icons/characters/alucard_sprite.png",
+      "sprite_gif": "assets/icons/characters/alucard_sprite.gif",
       "base_name": "Alucard",
       "starting_weapons": [
         "Candybox"
@@ -5168,6 +5448,8 @@ window.VS_DATA = {
     {
       "name": "Eric Lecarde (Alucard Spear)",
       "icon": "assets/icons/characters/eric_lecarde_alucard_spear.png",
+      "sprite_static": "assets/icons/characters/eric_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/eric_lecarde_sprite.gif",
       "base_name": "Eric Lecarde",
       "starting_weapons": [
         "Alucard Spear"
@@ -5200,6 +5482,8 @@ window.VS_DATA = {
     {
       "name": "Eric Lecarde (Spectral Sword)",
       "icon": "assets/icons/characters/eric_lecarde_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/eric_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/eric_lecarde_sprite.gif",
       "base_name": "Eric Lecarde",
       "starting_weapons": [
         "Spectral Sword"
@@ -5232,6 +5516,8 @@ window.VS_DATA = {
     {
       "name": "Eric Lecarde (Coat of Arms)",
       "icon": "assets/icons/characters/eric_lecarde_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/eric_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/eric_lecarde_sprite.gif",
       "base_name": "Eric Lecarde",
       "starting_weapons": [
         "Coat of Arms"
@@ -5264,6 +5550,8 @@ window.VS_DATA = {
     {
       "name": "Hector (Mace)",
       "icon": "assets/icons/characters/hector_mace.png",
+      "sprite_static": "assets/icons/characters/hector_sprite.png",
+      "sprite_gif": "assets/icons/characters/hector_sprite.gif",
       "base_name": "Hector",
       "starting_weapons": [
         "Mace"
@@ -5296,6 +5584,8 @@ window.VS_DATA = {
     {
       "name": "Hector (Spectral Sword)",
       "icon": "assets/icons/characters/hector_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/hector_sprite.png",
+      "sprite_gif": "assets/icons/characters/hector_sprite.gif",
       "base_name": "Hector",
       "starting_weapons": [
         "Spectral Sword"
@@ -5328,6 +5618,8 @@ window.VS_DATA = {
     {
       "name": "Hector (Coat of Arms)",
       "icon": "assets/icons/characters/hector_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/hector_sprite.png",
+      "sprite_gif": "assets/icons/characters/hector_sprite.gif",
       "base_name": "Hector",
       "starting_weapons": [
         "Coat of Arms"
@@ -5360,6 +5652,8 @@ window.VS_DATA = {
     {
       "name": "Maria Renard (Guardian's Targe)",
       "icon": "assets/icons/characters/maria_renard_guardians_targe.png",
+      "sprite_static": "assets/icons/characters/maria_renard_sprite.png",
+      "sprite_gif": "assets/icons/characters/maria_renard_sprite.gif",
       "base_name": "Maria Renard",
       "starting_weapons": [
         "Guardian's Targe"
@@ -5392,6 +5686,8 @@ window.VS_DATA = {
     {
       "name": "Maria Renard (Spectral Sword)",
       "icon": "assets/icons/characters/maria_renard_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/maria_renard_sprite.png",
+      "sprite_gif": "assets/icons/characters/maria_renard_sprite.gif",
       "base_name": "Maria Renard",
       "starting_weapons": [
         "Spectral Sword"
@@ -5424,6 +5720,8 @@ window.VS_DATA = {
     {
       "name": "Maria Renard (Belnades' Spellbook)",
       "icon": "assets/icons/characters/maria_renard_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/maria_renard_sprite.png",
+      "sprite_gif": "assets/icons/characters/maria_renard_sprite.gif",
       "base_name": "Maria Renard",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -5456,6 +5754,8 @@ window.VS_DATA = {
     {
       "name": "Shanoa (Confodere)",
       "icon": "assets/icons/characters/shanoa_confodere.png",
+      "sprite_static": "assets/icons/characters/shanoa_sprite.png",
+      "sprite_gif": "assets/icons/characters/shanoa_sprite.gif",
       "base_name": "Shanoa",
       "starting_weapons": [
         "Confodere"
@@ -5488,6 +5788,8 @@ window.VS_DATA = {
     {
       "name": "Shanoa (Candybox)",
       "icon": "assets/icons/characters/shanoa_candybox.png",
+      "sprite_static": "assets/icons/characters/shanoa_sprite.png",
+      "sprite_gif": "assets/icons/characters/shanoa_sprite.gif",
       "base_name": "Shanoa",
       "starting_weapons": [
         "Candybox"
@@ -5520,6 +5822,8 @@ window.VS_DATA = {
     {
       "name": "Quincy Morris (Shuriken)",
       "icon": "assets/icons/characters/quincy_morris_shuriken.png",
+      "sprite_static": "assets/icons/characters/quincy_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/quincy_morris_sprite.gif",
       "base_name": "Quincy Morris",
       "starting_weapons": [
         "Shuriken"
@@ -5552,6 +5856,8 @@ window.VS_DATA = {
     {
       "name": "Quincy Morris (Coat of Arms)",
       "icon": "assets/icons/characters/quincy_morris_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/quincy_morris_sprite.png",
+      "sprite_gif": "assets/icons/characters/quincy_morris_sprite.gif",
       "base_name": "Quincy Morris",
       "starting_weapons": [
         "Coat of Arms"
@@ -5584,6 +5890,8 @@ window.VS_DATA = {
     {
       "name": "Maxim Kischine (Discus)",
       "icon": "assets/icons/characters/maxim_kischine_discus.png",
+      "sprite_static": "assets/icons/characters/maxim_kischine_sprite.png",
+      "sprite_gif": "assets/icons/characters/maxim_kischine_sprite.gif",
       "base_name": "Maxim Kischine",
       "starting_weapons": [
         "Discus"
@@ -5616,6 +5924,8 @@ window.VS_DATA = {
     {
       "name": "Maxim Kischine (Coat of Arms)",
       "icon": "assets/icons/characters/maxim_kischine_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/maxim_kischine_sprite.png",
+      "sprite_gif": "assets/icons/characters/maxim_kischine_sprite.gif",
       "base_name": "Maxim Kischine",
       "starting_weapons": [
         "Coat of Arms"
@@ -5648,6 +5958,8 @@ window.VS_DATA = {
     {
       "name": "Henry (Silver Revolver)",
       "icon": "assets/icons/characters/henry_silver_revolver.png",
+      "sprite_static": "assets/icons/characters/henry_sprite.png",
+      "sprite_gif": "assets/icons/characters/henry_sprite.gif",
       "base_name": "Henry",
       "starting_weapons": [
         "Silver Revolver"
@@ -5680,6 +5992,8 @@ window.VS_DATA = {
     {
       "name": "Henry (Coat of Arms)",
       "icon": "assets/icons/characters/henry_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/henry_sprite.png",
+      "sprite_gif": "assets/icons/characters/henry_sprite.gif",
       "base_name": "Henry",
       "starting_weapons": [
         "Coat of Arms"
@@ -5712,6 +6026,8 @@ window.VS_DATA = {
     {
       "name": "Vlad Tepes Dracula (Wine Glass)",
       "icon": "assets/icons/characters/vlad_tepes_dracula_wine_glass.png",
+      "sprite_static": "assets/icons/characters/vlad_tepes_dracula_sprite.png",
+      "sprite_gif": "assets/icons/characters/vlad_tepes_dracula_sprite.gif",
       "base_name": "Vlad Tepes Dracula",
       "starting_weapons": [
         "Wine Glass"
@@ -5744,6 +6060,8 @@ window.VS_DATA = {
     {
       "name": "Vlad Tepes Dracula (Ebony Diabologue)",
       "icon": "assets/icons/characters/vlad_tepes_dracula_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/vlad_tepes_dracula_sprite.png",
+      "sprite_gif": "assets/icons/characters/vlad_tepes_dracula_sprite.gif",
       "base_name": "Vlad Tepes Dracula",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -5776,6 +6094,8 @@ window.VS_DATA = {
     {
       "name": "Julia Laforeze (Gale Force)",
       "icon": "assets/icons/characters/julia_laforeze_gale_force.png",
+      "sprite_static": "assets/icons/characters/julia_laforeze_sprite.png",
+      "sprite_gif": "assets/icons/characters/julia_laforeze_sprite.gif",
       "base_name": "Julia Laforeze",
       "starting_weapons": [
         "Gale Force"
@@ -5808,6 +6128,8 @@ window.VS_DATA = {
     {
       "name": "Julia Laforeze (Belnades' Spellbook)",
       "icon": "assets/icons/characters/julia_laforeze_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/julia_laforeze_sprite.png",
+      "sprite_gif": "assets/icons/characters/julia_laforeze_sprite.gif",
       "base_name": "Julia Laforeze",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -5840,6 +6162,8 @@ window.VS_DATA = {
     {
       "name": "Carrie Fernandez (Rock Riot)",
       "icon": "assets/icons/characters/carrie_fernandez_rock_riot.png",
+      "sprite_static": "assets/icons/characters/carrie_fernandez_sprite.png",
+      "sprite_gif": "assets/icons/characters/carrie_fernandez_sprite.gif",
       "base_name": "Carrie Fernandez",
       "starting_weapons": [
         "Rock Riot"
@@ -5872,6 +6196,8 @@ window.VS_DATA = {
     {
       "name": "Carrie Fernandez (Belnades' Spellbook)",
       "icon": "assets/icons/characters/carrie_fernandez_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/carrie_fernandez_sprite.png",
+      "sprite_gif": "assets/icons/characters/carrie_fernandez_sprite.gif",
       "base_name": "Carrie Fernandez",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -5904,6 +6230,8 @@ window.VS_DATA = {
     {
       "name": "Rinaldo Gandolfi (Keremet Bubbles)",
       "icon": "assets/icons/characters/rinaldo_gandolfi_keremet_bubbles.png",
+      "sprite_static": "assets/icons/characters/rinaldo_gandolfi_sprite.png",
+      "sprite_gif": "assets/icons/characters/rinaldo_gandolfi_sprite.gif",
       "base_name": "Rinaldo Gandolfi",
       "starting_weapons": [
         "Keremet Bubbles"
@@ -5936,6 +6264,8 @@ window.VS_DATA = {
     {
       "name": "Rinaldo Gandolfi (Belnades' Spellbook)",
       "icon": "assets/icons/characters/rinaldo_gandolfi_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/rinaldo_gandolfi_sprite.png",
+      "sprite_gif": "assets/icons/characters/rinaldo_gandolfi_sprite.gif",
       "base_name": "Rinaldo Gandolfi",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -5968,6 +6298,8 @@ window.VS_DATA = {
     {
       "name": "Mina Hakuba (Refectio)",
       "icon": "assets/icons/characters/mina_hakuba_refectio.png",
+      "sprite_static": "assets/icons/characters/mina_hakuba_sprite.png",
+      "sprite_gif": "assets/icons/characters/mina_hakuba_sprite.gif",
       "base_name": "Mina Hakuba",
       "starting_weapons": [
         "Refectio"
@@ -6000,6 +6332,8 @@ window.VS_DATA = {
     {
       "name": "Mina Hakuba (Belnades' Spellbook)",
       "icon": "assets/icons/characters/mina_hakuba_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/mina_hakuba_sprite.png",
+      "sprite_gif": "assets/icons/characters/mina_hakuba_sprite.gif",
       "base_name": "Mina Hakuba",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -6032,6 +6366,8 @@ window.VS_DATA = {
     {
       "name": "Elizabeth Bartley (Hex)",
       "icon": "assets/icons/characters/elizabeth_bartley_hex.png",
+      "sprite_static": "assets/icons/characters/elizabeth_bartley_sprite.png",
+      "sprite_gif": "assets/icons/characters/elizabeth_bartley_sprite.gif",
       "base_name": "Elizabeth Bartley",
       "starting_weapons": [
         "Hex"
@@ -6064,6 +6400,8 @@ window.VS_DATA = {
     {
       "name": "Elizabeth Bartley (Belnades' Spellbook)",
       "icon": "assets/icons/characters/elizabeth_bartley_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/elizabeth_bartley_sprite.png",
+      "sprite_gif": "assets/icons/characters/elizabeth_bartley_sprite.gif",
       "base_name": "Elizabeth Bartley",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -6096,6 +6434,8 @@ window.VS_DATA = {
     {
       "name": "Elizabeth Bartley (Ebony Diabologue)",
       "icon": "assets/icons/characters/elizabeth_bartley_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/elizabeth_bartley_sprite.png",
+      "sprite_gif": "assets/icons/characters/elizabeth_bartley_sprite.gif",
       "base_name": "Elizabeth Bartley",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -6128,6 +6468,8 @@ window.VS_DATA = {
     {
       "name": "Reinhardt Schneider (Tyrfing)",
       "icon": "assets/icons/characters/reinhardt_schneider_tyrfing.png",
+      "sprite_static": "assets/icons/characters/reinhardt_schneider_sprite.png",
+      "sprite_gif": "assets/icons/characters/reinhardt_schneider_sprite.gif",
       "base_name": "Reinhardt Schneider",
       "starting_weapons": [
         "Tyrfing"
@@ -6160,6 +6502,8 @@ window.VS_DATA = {
     {
       "name": "Reinhardt Schneider (Morning Star)",
       "icon": "assets/icons/characters/reinhardt_schneider_morning_star.png",
+      "sprite_static": "assets/icons/characters/reinhardt_schneider_sprite.png",
+      "sprite_gif": "assets/icons/characters/reinhardt_schneider_sprite.gif",
       "base_name": "Reinhardt Schneider",
       "starting_weapons": [
         "Morning Star"
@@ -6192,6 +6536,8 @@ window.VS_DATA = {
     {
       "name": "Reinhardt Schneider (Spectral Sword)",
       "icon": "assets/icons/characters/reinhardt_schneider_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/reinhardt_schneider_sprite.png",
+      "sprite_gif": "assets/icons/characters/reinhardt_schneider_sprite.gif",
       "base_name": "Reinhardt Schneider",
       "starting_weapons": [
         "Spectral Sword"
@@ -6224,6 +6570,8 @@ window.VS_DATA = {
     {
       "name": "Reinhardt Schneider (Coat of Arms)",
       "icon": "assets/icons/characters/reinhardt_schneider_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/reinhardt_schneider_sprite.png",
+      "sprite_gif": "assets/icons/characters/reinhardt_schneider_sprite.gif",
       "base_name": "Reinhardt Schneider",
       "starting_weapons": [
         "Coat of Arms"
@@ -6256,6 +6604,8 @@ window.VS_DATA = {
     {
       "name": "Isaac (Trident)",
       "icon": "assets/icons/characters/isaac_trident.png",
+      "sprite_static": "assets/icons/characters/isaac_sprite.png",
+      "sprite_gif": "assets/icons/characters/isaac_sprite.gif",
       "base_name": "Isaac (Trident)",
       "starting_weapons": [
         "Trident"
@@ -6288,6 +6638,8 @@ window.VS_DATA = {
     {
       "name": "Isaac (Spectral Sword)",
       "icon": "assets/icons/characters/isaac_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/isaac_sprite.png",
+      "sprite_gif": "assets/icons/characters/isaac_sprite.gif",
       "base_name": "Isaac (Spectral Sword)",
       "starting_weapons": [
         "Spectral Sword"
@@ -6320,6 +6672,8 @@ window.VS_DATA = {
     {
       "name": "Isaac (Ebony Diabologue)",
       "icon": "assets/icons/characters/isaac_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/isaac_sprite.png",
+      "sprite_gif": "assets/icons/characters/isaac_sprite.gif",
       "base_name": "Isaac (Ebony Diabologue)",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -6352,6 +6706,8 @@ window.VS_DATA = {
     {
       "name": "Sara Trantoul (Star Flail)",
       "icon": "assets/icons/characters/sara_trantoul_star_flail.png",
+      "sprite_static": "assets/icons/characters/sara_trantoul_sprite.png",
+      "sprite_gif": "assets/icons/characters/sara_trantoul_sprite.gif",
       "base_name": "Sara Trantoul",
       "starting_weapons": [
         "Star Flail"
@@ -6384,6 +6740,8 @@ window.VS_DATA = {
     {
       "name": "Sara Trantoul (Belnades' Spellbook)",
       "icon": "assets/icons/characters/sara_trantoul_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/sara_trantoul_sprite.png",
+      "sprite_gif": "assets/icons/characters/sara_trantoul_sprite.gif",
       "base_name": "Sara Trantoul",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -6416,6 +6774,8 @@ window.VS_DATA = {
     {
       "name": "Vincent Dorin (Iron Shield)",
       "icon": "assets/icons/characters/vincent_dorin_iron_shield.png",
+      "sprite_static": "assets/icons/characters/vincent_dorin_sprite.png",
+      "sprite_gif": "assets/icons/characters/vincent_dorin_sprite.gif",
       "base_name": "Vincent Dorin",
       "starting_weapons": [
         "Iron Shield"
@@ -6448,6 +6808,8 @@ window.VS_DATA = {
     {
       "name": "Vincent Dorin (Coat of Arms)",
       "icon": "assets/icons/characters/vincent_dorin_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/vincent_dorin_sprite.png",
+      "sprite_gif": "assets/icons/characters/vincent_dorin_sprite.gif",
       "base_name": "Vincent Dorin",
       "starting_weapons": [
         "Coat of Arms"
@@ -6480,6 +6842,8 @@ window.VS_DATA = {
     {
       "name": "Albus (Optical Shot)",
       "icon": "assets/icons/characters/albus_optical_shot.png",
+      "sprite_static": "assets/icons/characters/albus_sprite.png",
+      "sprite_gif": "assets/icons/characters/albus_sprite.gif",
       "base_name": "Albus",
       "starting_weapons": [
         "Optical Shot"
@@ -6512,6 +6876,8 @@ window.VS_DATA = {
     {
       "name": "Albus (Ebony Diabologue)",
       "icon": "assets/icons/characters/albus_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/albus_sprite.png",
+      "sprite_gif": "assets/icons/characters/albus_sprite.gif",
       "base_name": "Albus",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -6544,6 +6910,8 @@ window.VS_DATA = {
     {
       "name": "Lisa Tepes (Luminatio)",
       "icon": "assets/icons/characters/lisa_tepes_luminatio.png",
+      "sprite_static": "assets/icons/characters/lisa_tepes_sprite.png",
+      "sprite_gif": "assets/icons/characters/lisa_tepes_sprite.gif",
       "base_name": "Lisa Tepes",
       "starting_weapons": [
         "Luminatio"
@@ -6576,6 +6944,8 @@ window.VS_DATA = {
     {
       "name": "Lisa Tepes (Belnades' Spellbook)",
       "icon": "assets/icons/characters/lisa_tepes_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/lisa_tepes_sprite.png",
+      "sprite_gif": "assets/icons/characters/lisa_tepes_sprite.gif",
       "base_name": "Lisa Tepes",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -6608,6 +6978,8 @@ window.VS_DATA = {
     {
       "name": "Shaft (Umbra)",
       "icon": "assets/icons/characters/shaft_umbra.png",
+      "sprite_static": "assets/icons/characters/shaft_sprite.png",
+      "sprite_gif": "assets/icons/characters/shaft_sprite.gif",
       "base_name": "Shaft",
       "starting_weapons": [
         "Umbra"
@@ -6640,6 +7012,8 @@ window.VS_DATA = {
     {
       "name": "Shaft (Ebony Diabologue)",
       "icon": "assets/icons/characters/shaft_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/shaft_sprite.png",
+      "sprite_gif": "assets/icons/characters/shaft_sprite.gif",
       "base_name": "Shaft",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -6672,6 +7046,8 @@ window.VS_DATA = {
     {
       "name": "Saint Germain (Globus)",
       "icon": "assets/icons/characters/saint_germain_globus.png",
+      "sprite_static": "assets/icons/characters/saint_germain_sprite.png",
+      "sprite_gif": "assets/icons/characters/saint_germain_sprite.gif",
       "base_name": "Saint Germain",
       "starting_weapons": [
         "Globus"
@@ -6704,6 +7080,8 @@ window.VS_DATA = {
     {
       "name": "Saint Germain (Spectral Sword)",
       "icon": "assets/icons/characters/saint_germain_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/saint_germain_sprite.png",
+      "sprite_gif": "assets/icons/characters/saint_germain_sprite.gif",
       "base_name": "Saint Germain",
       "starting_weapons": [
         "Spectral Sword"
@@ -6736,6 +7114,8 @@ window.VS_DATA = {
     {
       "name": "Saint Germain (Ebony Diabologue)",
       "icon": "assets/icons/characters/saint_germain_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/saint_germain_sprite.png",
+      "sprite_gif": "assets/icons/characters/saint_germain_sprite.gif",
       "base_name": "Saint Germain",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -6768,6 +7148,8 @@ window.VS_DATA = {
     {
       "name": "Nathan Graves (Sonic Dash)",
       "icon": "assets/icons/characters/nathan_graves_sonic_dash.png",
+      "sprite_static": "assets/icons/characters/nathan_graves_sprite.png",
+      "sprite_gif": "assets/icons/characters/nathan_graves_sprite.gif",
       "base_name": "Nathan Graves",
       "starting_weapons": [
         "Sonic Dash"
@@ -6800,6 +7182,8 @@ window.VS_DATA = {
     {
       "name": "Nathan Graves (Morning Star)",
       "icon": "assets/icons/characters/nathan_graves_morning_star.png",
+      "sprite_static": "assets/icons/characters/nathan_graves_sprite.png",
+      "sprite_gif": "assets/icons/characters/nathan_graves_sprite.gif",
       "base_name": "Nathan Graves",
       "starting_weapons": [
         "Morning Star"
@@ -6832,6 +7216,8 @@ window.VS_DATA = {
     {
       "name": "Nathan Graves (Belnades' Spellbook)",
       "icon": "assets/icons/characters/nathan_graves_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/nathan_graves_sprite.png",
+      "sprite_gif": "assets/icons/characters/nathan_graves_sprite.gif",
       "base_name": "Nathan Graves",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -6864,6 +7250,8 @@ window.VS_DATA = {
     {
       "name": "Cornell (Dextro Custos)",
       "icon": "assets/icons/characters/cornell_dextro_custos.png",
+      "sprite_static": "assets/icons/characters/cornell_sprite.png",
+      "sprite_gif": "assets/icons/characters/cornell_sprite.gif",
       "base_name": "Cornell",
       "starting_weapons": [
         "Dextro Custos"
@@ -6896,6 +7284,8 @@ window.VS_DATA = {
     {
       "name": "Cornell (Sinestro Custos)",
       "icon": "assets/icons/characters/cornell_sinestro_custos.png",
+      "sprite_static": "assets/icons/characters/cornell_sprite.png",
+      "sprite_gif": "assets/icons/characters/cornell_sprite.gif",
       "base_name": "Cornell",
       "starting_weapons": [
         "Sinestro Custos"
@@ -6928,6 +7318,8 @@ window.VS_DATA = {
     {
       "name": "Cornell (Ebony Diabologue)",
       "icon": "assets/icons/characters/cornell_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/cornell_sprite.png",
+      "sprite_gif": "assets/icons/characters/cornell_sprite.gif",
       "base_name": "Cornell",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -6960,6 +7352,8 @@ window.VS_DATA = {
     {
       "name": "Barlowe (Dominus Anger)",
       "icon": "assets/icons/characters/barlowe_dominus_anger.png",
+      "sprite_static": "assets/icons/characters/barlowe_sprite.png",
+      "sprite_gif": "assets/icons/characters/barlowe_sprite.gif",
       "base_name": "Barlowe",
       "starting_weapons": [
         "Dominus Anger"
@@ -6992,6 +7386,8 @@ window.VS_DATA = {
     {
       "name": "Barlowe (Dominus Hatred)",
       "icon": "assets/icons/characters/barlowe_dominus_hatred.png",
+      "sprite_static": "assets/icons/characters/barlowe_sprite.png",
+      "sprite_gif": "assets/icons/characters/barlowe_sprite.gif",
       "base_name": "Barlowe",
       "starting_weapons": [
         "Dominus Hatred"
@@ -7024,6 +7420,8 @@ window.VS_DATA = {
     {
       "name": "Barlowe (Ebony Diabologue)",
       "icon": "assets/icons/characters/barlowe_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/barlowe_sprite.png",
+      "sprite_gif": "assets/icons/characters/barlowe_sprite.gif",
       "base_name": "Barlowe",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -7056,6 +7454,8 @@ window.VS_DATA = {
     {
       "name": "Barlowe (Belnades' Spellbook)",
       "icon": "assets/icons/characters/barlowe_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/barlowe_sprite.png",
+      "sprite_gif": "assets/icons/characters/barlowe_sprite.gif",
       "base_name": "Barlowe",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -7088,6 +7488,8 @@ window.VS_DATA = {
     {
       "name": "Young Maria Renard",
       "icon": "assets/icons/characters/young_maria_renard.png",
+      "sprite_static": "assets/icons/characters/young_maria_renard_sprite.png",
+      "sprite_gif": "assets/icons/characters/young_maria_renard_sprite.gif",
       "base_name": "Young Maria Renard",
       "starting_weapons": [
         "Familiar Forge"
@@ -7120,6 +7522,8 @@ window.VS_DATA = {
     {
       "name": "Familiar (Faerie)",
       "icon": "assets/icons/characters/familiar_faerie.png",
+      "sprite_static": "assets/icons/characters/familiar_faerie_sprite.png",
+      "sprite_gif": "assets/icons/characters/familiar_faerie_sprite.gif",
       "base_name": "Familiar",
       "starting_weapons": [
         "Refectio"
@@ -7152,6 +7556,8 @@ window.VS_DATA = {
     {
       "name": "Familiar (Sacred Cardinal)",
       "icon": "assets/icons/characters/familiar_sacred_cardinal.png",
+      "sprite_static": "assets/icons/characters/familiar_sacred_cardinal_sprite.png",
+      "sprite_gif": "assets/icons/characters/familiar_sacred_cardinal_sprite.gif",
       "base_name": "Familiar",
       "starting_weapons": [
         "Raging Fire"
@@ -7184,6 +7590,8 @@ window.VS_DATA = {
     {
       "name": "Familiar (Sacred Dragon)",
       "icon": "assets/icons/characters/familiar_sacred_dragon.png",
+      "sprite_static": "assets/icons/characters/familiar_sacred_dragon_sprite.png",
+      "sprite_gif": "assets/icons/characters/familiar_sacred_dragon_sprite.gif",
       "base_name": "Familiar",
       "starting_weapons": [
         "Fulgur"
@@ -7216,6 +7624,8 @@ window.VS_DATA = {
     {
       "name": "Familiar (Sacred Tiger)",
       "icon": "assets/icons/characters/familiar_sacred_tiger.png",
+      "sprite_static": "assets/icons/characters/familiar_sacred_tiger_sprite.png",
+      "sprite_gif": "assets/icons/characters/familiar_sacred_tiger_sprite.gif",
       "base_name": "Familiar",
       "starting_weapons": [
         "Ice Fang"
@@ -7248,6 +7658,8 @@ window.VS_DATA = {
     {
       "name": "Familiar (Sacred Turtle)",
       "icon": "assets/icons/characters/familiar_sacred_turtle.png",
+      "sprite_static": "assets/icons/characters/familiar_sacred_turtle_sprite.png",
+      "sprite_gif": "assets/icons/characters/familiar_sacred_turtle_sprite.gif",
       "base_name": "Familiar",
       "starting_weapons": [
         "Rock Riot"
@@ -7280,6 +7692,8 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Ukoback)",
       "icon": "assets/icons/characters/innocent_devil_ukoback.png",
+      "sprite_static": "assets/icons/characters/innocent_devil_ukoback_sprite.png",
+      "sprite_gif": "assets/icons/characters/innocent_devil_ukoback_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
         "Svarog Statue"
@@ -7312,6 +7726,8 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Imp)",
       "icon": "assets/icons/characters/innocent_devil_imp.png",
+      "sprite_static": "assets/icons/characters/innocent_devil_imp_sprite.png",
+      "sprite_gif": "assets/icons/characters/innocent_devil_imp_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
         "Trident"
@@ -7344,6 +7760,8 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Alleged Ghost)",
       "icon": "assets/icons/characters/innocent_devil_alleged_ghost.png",
+      "sprite_static": "assets/icons/characters/innocent_devil_alleged_ghost_sprite.png",
+      "sprite_gif": "assets/icons/characters/innocent_devil_alleged_ghost_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
         "Summon Spirit"
@@ -7376,6 +7794,8 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Bitterfly)",
       "icon": "assets/icons/characters/innocent_devil_bitterfly.png",
+      "sprite_static": "assets/icons/characters/innocent_devil_bitterfly_sprite.png",
+      "sprite_gif": "assets/icons/characters/innocent_devil_bitterfly_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
         "Summon Spirit"
@@ -7408,6 +7828,8 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Wood Rod)",
       "icon": "assets/icons/characters/innocent_devil_wood_rod.png",
+      "sprite_static": "assets/icons/characters/innocent_devil_wood_rod_sprite.png",
+      "sprite_gif": "assets/icons/characters/innocent_devil_wood_rod_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
         "Fire Wand",
@@ -7442,6 +7864,8 @@ window.VS_DATA = {
     {
       "name": "Innocent Devil (Pumpkin)",
       "icon": "assets/icons/characters/innocent_devil_pumpkin.png",
+      "sprite_static": "assets/icons/characters/innocent_devil_pumpkin_sprite.png",
+      "sprite_gif": "assets/icons/characters/innocent_devil_pumpkin_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
         "Curved Knife",
@@ -7475,6 +7899,8 @@ window.VS_DATA = {
     {
       "name": "Blue Crescent Moon Cornell (Trinum Custodem)",
       "icon": "assets/icons/characters/blue_crescent_moon_cornell_trinum.png",
+      "sprite_static": "assets/icons/characters/blue_crescent_moon_cornell_sprite.png",
+      "sprite_gif": "assets/icons/characters/blue_crescent_moon_cornell_sprite.gif",
       "base_name": "Blue Crescent Moon Cornell",
       "starting_weapons": [
         "Trinum Custodem",
@@ -7508,6 +7934,8 @@ window.VS_DATA = {
     {
       "name": "Blue Crescent Moon Cornell (Ebony Diabologue)",
       "icon": "assets/icons/characters/blue_crescent_moon_cornell_ebony.png",
+      "sprite_static": "assets/icons/characters/blue_crescent_moon_cornell_sprite.png",
+      "sprite_gif": "assets/icons/characters/blue_crescent_moon_cornell_sprite.gif",
       "base_name": "Blue Crescent Moon Cornell",
       "starting_weapons": [
         "Trinum Custodem",
@@ -7541,6 +7969,8 @@ window.VS_DATA = {
     {
       "name": "Ferryman",
       "icon": "assets/icons/characters/ferryman.png",
+      "sprite_static": "assets/icons/characters/ferryman_sprite.png",
+      "sprite_gif": "assets/icons/characters/ferryman_sprite.gif",
       "base_name": "Ferryman",
       "starting_weapons": [
         "Acquazzone"
@@ -7575,6 +8005,8 @@ window.VS_DATA = {
     {
       "name": "Master Librarian",
       "icon": "assets/icons/characters/master_librarian.png",
+      "sprite_static": "assets/icons/characters/master_librarian_sprite.png",
+      "sprite_gif": "assets/icons/characters/master_librarian_sprite.gif",
       "base_name": "Master Librarian",
       "starting_weapons": [
         "Rapidus Fio"
@@ -7607,6 +8039,8 @@ window.VS_DATA = {
     {
       "name": "Hammer",
       "icon": "assets/icons/characters/hammer.png",
+      "sprite_static": "assets/icons/characters/hammer_sprite.png",
+      "sprite_gif": "assets/icons/characters/hammer_sprite.gif",
       "base_name": "Hammer",
       "starting_weapons": [
         "The RPG"
@@ -7639,6 +8073,8 @@ window.VS_DATA = {
     {
       "name": "Wind",
       "icon": "assets/icons/characters/wind.png",
+      "sprite_static": "assets/icons/characters/wind_sprite.png",
+      "sprite_gif": "assets/icons/characters/wind_sprite.gif",
       "base_name": "Wind",
       "starting_weapons": [
         "Aura Blast"
@@ -7671,6 +8107,8 @@ window.VS_DATA = {
     {
       "name": "Hugh Baldwin",
       "icon": "assets/icons/characters/hugh_baldwin.png",
+      "sprite_static": "assets/icons/characters/hugh_baldwin_sprite.png",
+      "sprite_gif": "assets/icons/characters/hugh_baldwin_sprite.gif",
       "base_name": "Hugh Baldwin",
       "starting_weapons": [
         "Valmanway"
@@ -7703,6 +8141,8 @@ window.VS_DATA = {
     {
       "name": "Morris Baldwin (Kaiser Knuckle)",
       "icon": "assets/icons/characters/morris_baldwin_kaiser_knuckle.png",
+      "sprite_static": "assets/icons/characters/morris_baldwin_sprite.png",
+      "sprite_gif": "assets/icons/characters/morris_baldwin_sprite.gif",
       "base_name": "Morris Baldwin",
       "starting_weapons": [
         "Kaiser Knuckle"
@@ -7735,6 +8175,8 @@ window.VS_DATA = {
     {
       "name": "Morris Baldwin (Coat of Arms)",
       "icon": "assets/icons/characters/morris_baldwin_coat_of_arms.png",
+      "sprite_static": "assets/icons/characters/morris_baldwin_sprite.png",
+      "sprite_gif": "assets/icons/characters/morris_baldwin_sprite.gif",
       "base_name": "Morris Baldwin",
       "starting_weapons": [
         "Coat of Arms"
@@ -7767,6 +8209,8 @@ window.VS_DATA = {
     {
       "name": "Annette (Endo Gears)",
       "icon": "assets/icons/characters/annette_endo_gears.png",
+      "sprite_static": "assets/icons/characters/annette_sprite.png",
+      "sprite_gif": "assets/icons/characters/annette_sprite.gif",
       "base_name": "Annette",
       "starting_weapons": [
         "Endo Gears"
@@ -7799,6 +8243,8 @@ window.VS_DATA = {
     {
       "name": "Annette (Peri Pendulum)",
       "icon": "assets/icons/characters/annette_peri_pendulum.png",
+      "sprite_static": "assets/icons/characters/annette_sprite.png",
+      "sprite_gif": "assets/icons/characters/annette_sprite.gif",
       "base_name": "Annette",
       "starting_weapons": [
         "Peri Pendulum"
@@ -7831,6 +8277,8 @@ window.VS_DATA = {
     {
       "name": "Annette (Myo Lift)",
       "icon": "assets/icons/characters/annette_myo_lift.png",
+      "sprite_static": "assets/icons/characters/annette_sprite.png",
+      "sprite_gif": "assets/icons/characters/annette_sprite.gif",
       "base_name": "Annette",
       "starting_weapons": [
         "Myo Lift"
@@ -7863,6 +8311,8 @@ window.VS_DATA = {
     {
       "name": "Annette (Epi Head)",
       "icon": "assets/icons/characters/annette_epi_head.png",
+      "sprite_static": "assets/icons/characters/annette_sprite.png",
+      "sprite_gif": "assets/icons/characters/annette_sprite.gif",
       "base_name": "Annette",
       "starting_weapons": [
         "Epi Head."
@@ -7895,6 +8345,8 @@ window.VS_DATA = {
     {
       "name": "Tera",
       "icon": "assets/icons/characters/tera.png",
+      "sprite_static": "assets/icons/characters/tera_sprite.png",
+      "sprite_gif": "assets/icons/characters/tera_sprite.gif",
       "base_name": "Tera",
       "starting_weapons": [
         "Grand Cross"
@@ -7927,6 +8379,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan & Charlotte (Javelin)",
       "icon": "assets/icons/characters/jonathan_&_charlotte_javelin.png",
+      "sprite_static": "assets/icons/characters/jonathan_&_charlotte_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_&_charlotte_sprite.gif",
       "base_name": "Jonathan & Charlotte",
       "starting_weapons": [
         "Javelin",
@@ -7960,6 +8414,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan & Charlotte (Morning Star)",
       "icon": "assets/icons/characters/jonathan_&_charlotte_morning_star.png",
+      "sprite_static": "assets/icons/characters/jonathan_&_charlotte_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_&_charlotte_sprite.gif",
       "base_name": "Jonathan & Charlotte",
       "starting_weapons": [
         "Morning Star",
@@ -7993,6 +8449,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan & Charlotte (Coat of Arms)",
       "icon": "assets/icons/characters/jonathan_&_charlotte_coat_of.png",
+      "sprite_static": "assets/icons/characters/jonathan_&_charlotte_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_&_charlotte_sprite.gif",
       "base_name": "Jonathan & Charlotte",
       "starting_weapons": [
         "Coat of Arms",
@@ -8026,6 +8484,8 @@ window.VS_DATA = {
     {
       "name": "Jonathan & Charlotte (Spectral Sword)",
       "icon": "assets/icons/characters/jonathan_&_charlotte_spectral_sword.png",
+      "sprite_static": "assets/icons/characters/jonathan_&_charlotte_sprite.png",
+      "sprite_gif": "assets/icons/characters/jonathan_&_charlotte_sprite.gif",
       "base_name": "Jonathan & Charlotte",
       "starting_weapons": [
         "Spectral Sword",
@@ -8059,6 +8519,8 @@ window.VS_DATA = {
     {
       "name": "Charlotte & Jonathan (Raging Fire)",
       "icon": "assets/icons/characters/charlotte_&_jonathan_raging_fire.png",
+      "sprite_static": "assets/icons/characters/charlotte_&_jonathan_sprite.png",
+      "sprite_gif": "assets/icons/characters/charlotte_&_jonathan_sprite.gif",
       "base_name": "Charlotte & Jonathan",
       "starting_weapons": [
         "Raging Fire",
@@ -8092,6 +8554,8 @@ window.VS_DATA = {
     {
       "name": "Charlotte & Jonathan (Belnades' Spellbook)",
       "icon": "assets/icons/characters/charlotte_&_jonathan_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/charlotte_&_jonathan_sprite.png",
+      "sprite_gif": "assets/icons/characters/charlotte_&_jonathan_sprite.gif",
       "base_name": "Charlotte & Jonathan",
       "starting_weapons": [
         "Belnades' Spellbook",
@@ -8125,6 +8589,8 @@ window.VS_DATA = {
     {
       "name": "Stella & Loretta Lecarde",
       "icon": "assets/icons/characters/stella_&_loretta_lecarde.png",
+      "sprite_static": "assets/icons/characters/stella_&_loretta_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/stella_&_loretta_lecarde_sprite.gif",
       "base_name": "Stella & Loretta Lecarde",
       "starting_weapons": [
         "Pneuma Tempestas",
@@ -8158,6 +8624,8 @@ window.VS_DATA = {
     {
       "name": "Loretta & Stella Lecarde",
       "icon": "assets/icons/characters/loretta_&_stella_lecarde.png",
+      "sprite_static": "assets/icons/characters/loretta_&_stella_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/loretta_&_stella_lecarde_sprite.gif",
       "base_name": "Loretta & Stella Lecarde",
       "starting_weapons": [
         "Cocytus",
@@ -8191,6 +8659,8 @@ window.VS_DATA = {
     {
       "name": "Stella Lecarde",
       "icon": "assets/icons/characters/stella_lecarde.png",
+      "sprite_static": "assets/icons/characters/stella_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/stella_lecarde_sprite.gif",
       "base_name": "Stella Lecarde",
       "starting_weapons": [
         "Pneuma Tempestas"
@@ -8223,6 +8693,8 @@ window.VS_DATA = {
     {
       "name": "Loretta Lecarde",
       "icon": "assets/icons/characters/loretta_lecarde.png",
+      "sprite_static": "assets/icons/characters/loretta_lecarde_sprite.png",
+      "sprite_gif": "assets/icons/characters/loretta_lecarde_sprite.gif",
       "base_name": "Loretta Lecarde",
       "starting_weapons": [
         "Cocytus"
@@ -8255,6 +8727,8 @@ window.VS_DATA = {
     {
       "name": "Brauner",
       "icon": "assets/icons/characters/brauner.png",
+      "sprite_static": "assets/icons/characters/brauner_sprite.png",
+      "sprite_gif": "assets/icons/characters/brauner_sprite.gif",
       "base_name": "Brauner",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -8287,6 +8761,8 @@ window.VS_DATA = {
     {
       "name": "Soleil Belmont",
       "icon": "assets/icons/characters/soleil_belmont.png",
+      "sprite_static": "assets/icons/characters/soleil_belmont_sprite.png",
+      "sprite_gif": "assets/icons/characters/soleil_belmont_sprite.gif",
       "base_name": "Soleil Belmont",
       "starting_weapons": [
         "Jet Black Whip",
@@ -8321,6 +8797,8 @@ window.VS_DATA = {
     {
       "name": "Dario Bossi",
       "icon": "assets/icons/characters/dario_bossi.png",
+      "sprite_static": "assets/icons/characters/dario_bossi_sprite.png",
+      "sprite_gif": "assets/icons/characters/dario_bossi_sprite.gif",
       "base_name": "Dario Bossi",
       "starting_weapons": [
         "Salamender"
@@ -8353,6 +8831,8 @@ window.VS_DATA = {
     {
       "name": "Dmitrii Blinov",
       "icon": "assets/icons/characters/dmitrii_blinov.png",
+      "sprite_static": "assets/icons/characters/dmitrii_blinov_sprite.png",
+      "sprite_gif": "assets/icons/characters/dmitrii_blinov_sprite.gif",
       "base_name": "Dmitrii Blinov",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -8385,6 +8865,8 @@ window.VS_DATA = {
     {
       "name": "Celia Fortner",
       "icon": "assets/icons/characters/celia_fortner.png",
+      "sprite_static": "assets/icons/characters/celia_fortner_sprite.png",
+      "sprite_gif": "assets/icons/characters/celia_fortner_sprite.gif",
       "base_name": "Celia Fortner",
       "starting_weapons": [
         "Luminatio",
@@ -8418,6 +8900,8 @@ window.VS_DATA = {
     {
       "name": "Graham Jones",
       "icon": "assets/icons/characters/graham_jones.png",
+      "sprite_static": "assets/icons/characters/graham_jones_sprite.png",
+      "sprite_gif": "assets/icons/characters/graham_jones_sprite.gif",
       "base_name": "Graham Jones",
       "starting_weapons": [
         "Vol Umbra"
@@ -8450,6 +8934,8 @@ window.VS_DATA = {
     {
       "name": "Genya Arikado",
       "icon": "assets/icons/characters/genya_arikado.png",
+      "sprite_static": "assets/icons/characters/genya_arikado_sprite.png",
+      "sprite_gif": "assets/icons/characters/genya_arikado_sprite.gif",
       "base_name": "Genya Arikado",
       "starting_weapons": [
         "Pocket Knife"
@@ -8482,6 +8968,8 @@ window.VS_DATA = {
     {
       "name": "Joachim Armster",
       "icon": "assets/icons/characters/joachim_armster.png",
+      "sprite_static": "assets/icons/characters/joachim_armster_sprite.png",
+      "sprite_gif": "assets/icons/characters/joachim_armster_sprite.gif",
       "base_name": "Joachim Armster",
       "starting_weapons": [
         "Rune Sword"
@@ -8514,6 +9002,8 @@ window.VS_DATA = {
     {
       "name": "Walter Bernhard",
       "icon": "assets/icons/characters/walter_bernhard.png",
+      "sprite_static": "assets/icons/characters/walter_bernhard_sprite.png",
+      "sprite_gif": "assets/icons/characters/walter_bernhard_sprite.gif",
       "base_name": "Walter Bernhard",
       "starting_weapons": [
         "Nitesco"
@@ -8546,6 +9036,8 @@ window.VS_DATA = {
     {
       "name": "Carmilla",
       "icon": "assets/icons/characters/carmilla.png",
+      "sprite_static": "assets/icons/characters/carmilla_sprite.png",
+      "sprite_gif": "assets/icons/characters/carmilla_sprite.gif",
       "base_name": "Carmilla",
       "starting_weapons": [],
       "hidden_items": [],
@@ -8576,6 +9068,8 @@ window.VS_DATA = {
     {
       "name": "Cave Troll",
       "icon": "assets/icons/characters/cave_troll.png",
+      "sprite_static": "assets/icons/characters/cave_troll_sprite.png",
+      "sprite_gif": "assets/icons/characters/cave_troll_sprite.gif",
       "base_name": "Cave Troll",
       "starting_weapons": [
         "Troll Bomb"
@@ -8608,6 +9102,8 @@ window.VS_DATA = {
     {
       "name": "Fleaman",
       "icon": "assets/icons/characters/fleaman.png",
+      "sprite_static": "assets/icons/characters/fleaman_sprite.png",
+      "sprite_gif": "assets/icons/characters/fleaman_sprite.gif",
       "base_name": "Fleaman",
       "starting_weapons": [],
       "hidden_items": [],
@@ -8638,6 +9134,8 @@ window.VS_DATA = {
     {
       "name": "Axe Armor",
       "icon": "assets/icons/characters/axe_armor.png",
+      "sprite_static": "assets/icons/characters/axe_armor_sprite.png",
+      "sprite_gif": "assets/icons/characters/axe_armor_sprite.gif",
       "base_name": "Axe Armor",
       "starting_weapons": [
         "Axe"
@@ -8670,6 +9168,8 @@ window.VS_DATA = {
     {
       "name": "Frozenshade",
       "icon": "assets/icons/characters/frozenshade.png",
+      "sprite_static": "assets/icons/characters/frozenshade_sprite.png",
+      "sprite_gif": "assets/icons/characters/frozenshade_sprite.gif",
       "base_name": "Frozenshade",
       "starting_weapons": [
         "Icebrand"
@@ -8702,6 +9202,8 @@ window.VS_DATA = {
     {
       "name": "Alamaric Sniper",
       "icon": "assets/icons/characters/alamaric_sniper.png",
+      "sprite_static": "assets/icons/characters/alamaric_sniper_sprite.png",
+      "sprite_gif": "assets/icons/characters/alamaric_sniper_sprite.gif",
       "base_name": "Alamaric Sniper",
       "starting_weapons": [
         "Arrow of Goth"
@@ -8734,6 +9236,8 @@ window.VS_DATA = {
     {
       "name": "Stone Skull",
       "icon": "assets/icons/characters/stone_skull.png",
+      "sprite_static": "assets/icons/characters/stone_skull_sprite.png",
+      "sprite_gif": "assets/icons/characters/stone_skull_sprite.gif",
       "base_name": "Stone Skull",
       "starting_weapons": [],
       "hidden_items": [],
@@ -8764,6 +9268,8 @@ window.VS_DATA = {
     {
       "name": "Ruler Sword",
       "icon": "assets/icons/characters/ruler_sword.png",
+      "sprite_static": "assets/icons/characters/ruler_sword_sprite.png",
+      "sprite_gif": "assets/icons/characters/ruler_sword_sprite.gif",
       "base_name": "Ruler Sword",
       "starting_weapons": [
         "Sword Brothers",
@@ -8799,6 +9305,8 @@ window.VS_DATA = {
     {
       "name": "Persephone",
       "icon": "assets/icons/characters/persephone.png",
+      "sprite_static": "assets/icons/characters/persephone_sprite.png",
+      "sprite_gif": "assets/icons/characters/persephone_sprite.gif",
       "base_name": "Persephone",
       "starting_weapons": [
         "Summon Spirit Tornado"
@@ -8831,6 +9339,8 @@ window.VS_DATA = {
     {
       "name": "Keremet",
       "icon": "assets/icons/characters/keremet.png",
+      "sprite_static": "assets/icons/characters/keremet_sprite.png",
+      "sprite_gif": "assets/icons/characters/keremet_sprite.gif",
       "base_name": "Keremet",
       "starting_weapons": [
         "Keremet Morbus"
@@ -8863,6 +9373,8 @@ window.VS_DATA = {
     {
       "name": "Astarte",
       "icon": "assets/icons/characters/astarte.png",
+      "sprite_static": "assets/icons/characters/astarte_sprite.png",
+      "sprite_gif": "assets/icons/characters/astarte_sprite.gif",
       "base_name": "Astarte",
       "starting_weapons": [
         "Star Flail"
@@ -8897,6 +9409,8 @@ window.VS_DATA = {
     {
       "name": "Drolta Tzuentes",
       "icon": "assets/icons/characters/drolta_tzuentes.png",
+      "sprite_static": "assets/icons/characters/drolta_tzuentes_sprite.png",
+      "sprite_gif": "assets/icons/characters/drolta_tzuentes_sprite.gif",
       "base_name": "Drolta Tzuentes",
       "starting_weapons": [
         "Anura"
@@ -8929,6 +9443,8 @@ window.VS_DATA = {
     {
       "name": "Witch Actrise",
       "icon": "assets/icons/characters/witch_actrise.png",
+      "sprite_static": "assets/icons/characters/witch_actrise_sprite.png",
+      "sprite_gif": "assets/icons/characters/witch_actrise_sprite.gif",
       "base_name": "Witch Actrise",
       "starting_weapons": [
         "Gemma Torpor",
@@ -8964,6 +9480,8 @@ window.VS_DATA = {
     {
       "name": "Atlantis Shrine Wizard",
       "icon": "assets/icons/characters/atlantis_shrine_wizard.png",
+      "sprite_static": "assets/icons/characters/atlantis_shrine_wizard_sprite.png",
+      "sprite_gif": "assets/icons/characters/atlantis_shrine_wizard_sprite.gif",
       "base_name": "Atlantis Shrine Wizard",
       "starting_weapons": [
         "Hydro Storm",
@@ -8999,6 +9517,8 @@ window.VS_DATA = {
     {
       "name": "Succubus",
       "icon": "assets/icons/characters/succubus.png",
+      "sprite_static": "assets/icons/characters/succubus_sprite.png",
+      "sprite_gif": "assets/icons/characters/succubus_sprite.gif",
       "base_name": "Succubus",
       "starting_weapons": [
         "Nightmare"
@@ -9031,6 +9551,8 @@ window.VS_DATA = {
     {
       "name": "Fake Trio (Trevor)",
       "icon": "assets/icons/characters/fake_trio_trevor.png",
+      "sprite_static": "assets/icons/characters/fake_trio_trevor_sprite.png",
+      "sprite_gif": "assets/icons/characters/fake_trio_trevor_sprite.gif",
       "base_name": "Fake Trio",
       "starting_weapons": [
         "Bone"
@@ -9063,6 +9585,8 @@ window.VS_DATA = {
     {
       "name": "Fake Trio (Sypha)",
       "icon": "assets/icons/characters/fake_trio_sypha.png",
+      "sprite_static": "assets/icons/characters/fake_trio_sypha_sprite.png",
+      "sprite_gif": "assets/icons/characters/fake_trio_sypha_sprite.gif",
       "base_name": "Fake Trio",
       "starting_weapons": [
         "Bracelet"
@@ -9095,6 +9619,8 @@ window.VS_DATA = {
     {
       "name": "Fake Trio (Grant)",
       "icon": "assets/icons/characters/fake_trio_grant.png",
+      "sprite_static": "assets/icons/characters/fake_trio_grant_sprite.png",
+      "sprite_gif": "assets/icons/characters/fake_trio_grant_sprite.gif",
       "base_name": "Fake Trio",
       "starting_weapons": [
         "Pocket Knife"
@@ -9127,6 +9653,8 @@ window.VS_DATA = {
     {
       "name": "Slogra and Gaibon (Slogra)",
       "icon": "assets/icons/characters/slogra_and_gaibon_slogra.png",
+      "sprite_static": "assets/icons/characters/slogra_and_gaibon_slogra_sprite.png",
+      "sprite_gif": "assets/icons/characters/slogra_and_gaibon_slogra_sprite.gif",
       "base_name": "Slogra and Gaibon",
       "starting_weapons": [
         "Trident"
@@ -9159,6 +9687,8 @@ window.VS_DATA = {
     {
       "name": "Slogra and Gaibon (Gaibon)",
       "icon": "assets/icons/characters/slogra_and_gaibon_gaibon.png",
+      "sprite_static": "assets/icons/characters/slogra_and_gaibon_gaibon_sprite.png",
+      "sprite_gif": "assets/icons/characters/slogra_and_gaibon_gaibon_sprite.gif",
       "base_name": "Slogra and Gaibon",
       "starting_weapons": [
         "Fire Wand"
@@ -9191,6 +9721,8 @@ window.VS_DATA = {
     {
       "name": "Zephyr (Knife)",
       "icon": "assets/icons/characters/zephyr_knife.png",
+      "sprite_static": "assets/icons/characters/zephyr_sprite.png",
+      "sprite_gif": "assets/icons/characters/zephyr_sprite.gif",
       "base_name": "Zephyr",
       "starting_weapons": [
         "Knife"
@@ -9223,6 +9755,8 @@ window.VS_DATA = {
     {
       "name": "Zephyr (Curved Knife)",
       "icon": "assets/icons/characters/zephyr_curved_knife.png",
+      "sprite_static": "assets/icons/characters/zephyr_sprite.png",
+      "sprite_gif": "assets/icons/characters/zephyr_sprite.gif",
       "base_name": "Zephyr",
       "starting_weapons": [
         "Curved Knife"
@@ -9255,6 +9789,8 @@ window.VS_DATA = {
     {
       "name": "Jiangshi",
       "icon": "assets/icons/characters/jiangshi.png",
+      "sprite_static": "assets/icons/characters/jiangshi_sprite.png",
+      "sprite_gif": "assets/icons/characters/jiangshi_sprite.gif",
       "base_name": "Jiangshi",
       "starting_weapons": [
         "Soul Steal"
@@ -9287,6 +9823,8 @@ window.VS_DATA = {
     {
       "name": "Blackmore",
       "icon": "assets/icons/characters/blackmore.png",
+      "sprite_static": "assets/icons/characters/blackmore_sprite.png",
+      "sprite_gif": "assets/icons/characters/blackmore_sprite.gif",
       "base_name": "Blackmore",
       "starting_weapons": [
         "Summon Spirit"
@@ -9319,6 +9857,8 @@ window.VS_DATA = {
     {
       "name": "Count Olrox",
       "icon": "assets/icons/characters/count_olrox.png",
+      "sprite_static": "assets/icons/characters/count_olrox_sprite.png",
+      "sprite_gif": "assets/icons/characters/count_olrox_sprite.gif",
       "base_name": "Count Olrox",
       "starting_weapons": [
         "Dark Rift"
@@ -9351,6 +9891,8 @@ window.VS_DATA = {
     {
       "name": "Malphas",
       "icon": "assets/icons/characters/malphas.png",
+      "sprite_static": "assets/icons/characters/malphas_sprite.png",
+      "sprite_gif": "assets/icons/characters/malphas_sprite.gif",
       "base_name": "Malphas",
       "starting_weapons": [
         "Thousand Edge",
@@ -9387,6 +9929,8 @@ window.VS_DATA = {
     {
       "name": "Death",
       "icon": "assets/icons/characters/death.png",
+      "sprite_static": "assets/icons/characters/death_sprite.png",
+      "sprite_gif": "assets/icons/characters/death_sprite.gif",
       "base_name": "Death",
       "starting_weapons": [
         "Death Spiral"
@@ -9419,6 +9963,8 @@ window.VS_DATA = {
     {
       "name": "Galamoth",
       "icon": "assets/icons/characters/galamoth.png",
+      "sprite_static": "assets/icons/characters/galamoth_sprite.png",
+      "sprite_gif": "assets/icons/characters/galamoth_sprite.gif",
       "base_name": "Galamoth",
       "starting_weapons": [
         "Tenebris Tonitrus"
@@ -9451,6 +9997,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Elizabeth Bartley (Belnades' Spellbook)",
       "icon": "assets/icons/characters/megalo_elizabeth_bartley_belnades_spellbook.png",
+      "sprite_static": "assets/icons/characters/megalo_elizabeth_bartley_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_elizabeth_bartley_sprite.gif",
       "base_name": "Megalo Elizabeth Bartley",
       "starting_weapons": [
         "Belnades' Spellbook"
@@ -9483,6 +10031,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Elizabeth Bartley (Ebony Diabologue)",
       "icon": "assets/icons/characters/megalo_elizabeth_bartley_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/megalo_elizabeth_bartley_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_elizabeth_bartley_sprite.gif",
       "base_name": "Megalo Elizabeth Bartley",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -9515,6 +10065,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Olrox (Dark Rift)",
       "icon": "assets/icons/characters/megalo_olrox_dark_rift.png",
+      "sprite_static": "assets/icons/characters/megalo_olrox_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_olrox_sprite.gif",
       "base_name": "Megalo Olrox",
       "starting_weapons": [
         "Dark Rift"
@@ -9547,6 +10099,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Olrox (Ebony Diabologue)",
       "icon": "assets/icons/characters/megalo_olrox_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/megalo_olrox_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_olrox_sprite.gif",
       "base_name": "Megalo Olrox",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -9579,6 +10133,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Death (Death Spiral)",
       "icon": "assets/icons/characters/megalo_death_death_spiral.png",
+      "sprite_static": "assets/icons/characters/megalo_death_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_death_sprite.gif",
       "base_name": "Megalo Death",
       "starting_weapons": [
         "Death Spiral"
@@ -9611,6 +10167,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Death (Ebony Diabologue)",
       "icon": "assets/icons/characters/megalo_death_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/megalo_death_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_death_sprite.gif",
       "base_name": "Megalo Death",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -9643,6 +10201,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Dracula (Wine Glass)",
       "icon": "assets/icons/characters/megalo_dracula_wine_glass.png",
+      "sprite_static": "assets/icons/characters/megalo_dracula_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_dracula_sprite.gif",
       "base_name": "Megalo Dracula",
       "starting_weapons": [
         "Wine Glass"
@@ -9675,6 +10235,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Dracula (Dominus Agony)",
       "icon": "assets/icons/characters/megalo_dracula_dominus_agony.png",
+      "sprite_static": "assets/icons/characters/megalo_dracula_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_dracula_sprite.gif",
       "base_name": "Megalo Dracula",
       "starting_weapons": [
         "Dominus Agony",
@@ -9709,6 +10271,8 @@ window.VS_DATA = {
     {
       "name": "Megalo Dracula (Ebony Diabologue)",
       "icon": "assets/icons/characters/megalo_dracula_ebony_diabologue.png",
+      "sprite_static": "assets/icons/characters/megalo_dracula_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_dracula_sprite.gif",
       "base_name": "Megalo Dracula",
       "starting_weapons": [
         "Ebony Diabologue"
@@ -9741,6 +10305,8 @@ window.VS_DATA = {
     {
       "name": "Chaos",
       "icon": "assets/icons/characters/chaos.png",
+      "sprite_static": "assets/icons/characters/chaos_sprite.png",
+      "sprite_gif": "assets/icons/characters/chaos_sprite.gif",
       "base_name": "Chaos",
       "starting_weapons": [
         "Infinite Corridor"
@@ -9773,6 +10339,8 @@ window.VS_DATA = {
     {
       "name": "Tsunanori Mido (Fleuret)",
       "icon": "assets/icons/characters/tsunanori_mido_fleuret.png",
+      "sprite_static": "assets/icons/characters/tsunanori_mido_fleuret_sprite.png",
+      "sprite_gif": "assets/icons/characters/tsunanori_mido_fleuret_sprite.gif",
       "base_name": "Tsunanori Mido",
       "starting_weapons": [
         "Fleuret"
@@ -9805,6 +10373,8 @@ window.VS_DATA = {
     {
       "name": "Tsunanori Mido (Splashers)",
       "icon": "assets/icons/characters/tsunanori_mido_splashers.png",
+      "sprite_static": "assets/icons/characters/tsunanori_mido_splashers_sprite.png",
+      "sprite_gif": "assets/icons/characters/tsunanori_mido_splashers_sprite.gif",
       "base_name": "Tsunanori Mido",
       "starting_weapons": [
         "Splashers"
@@ -9837,6 +10407,8 @@ window.VS_DATA = {
     {
       "name": "Tsunanori Mido - Solo (Fleuret)",
       "icon": "assets/icons/characters/tsunanori_mido_-_solo_fleuret.png",
+      "sprite_static": "assets/icons/characters/tsunanori_mido_fleuret_sprite.png",
+      "sprite_gif": "assets/icons/characters/tsunanori_mido_fleuret_sprite.gif",
       "base_name": "Tsunanori Mido",
       "starting_weapons": [
         "Fleuret"
@@ -9869,6 +10441,8 @@ window.VS_DATA = {
     {
       "name": "Tsunanori Mido - Solo (Splashers)",
       "icon": "assets/icons/characters/tsunanori_mido_-_solo_splashers.png",
+      "sprite_static": "assets/icons/characters/tsunanori_mido_splashers_sprite.png",
+      "sprite_gif": "assets/icons/characters/tsunanori_mido_splashers_sprite.gif",
       "base_name": "Tsunanori Mido",
       "starting_weapons": [
         "Splashers"
@@ -9901,6 +10475,8 @@ window.VS_DATA = {
     {
       "name": "Bonnie Blair (Punch)",
       "icon": "assets/icons/characters/bonnie_blair_punch.png",
+      "sprite_static": "assets/icons/characters/bonnie_blair_sprite.png",
+      "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
         "Punch",
@@ -9934,6 +10510,8 @@ window.VS_DATA = {
     {
       "name": "Bonnie Blair (Kick)",
       "icon": "assets/icons/characters/bonnie_blair_kick.png",
+      "sprite_static": "assets/icons/characters/bonnie_blair_sprite.png",
+      "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
         "Punch",
@@ -9967,6 +10545,8 @@ window.VS_DATA = {
     {
       "name": "Bonnie Blair - Solo (Punch)",
       "icon": "assets/icons/characters/bonnie_blair_-_solo_punch.png",
+      "sprite_static": "assets/icons/characters/bonnie_blair_sprite.png",
+      "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
         "Punch",
@@ -10000,6 +10580,8 @@ window.VS_DATA = {
     {
       "name": "Bonnie Blair - Solo (Kick)",
       "icon": "assets/icons/characters/bonnie_blair_-_solo_kick.png",
+      "sprite_static": "assets/icons/characters/bonnie_blair_sprite.png",
+      "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
         "Punch",
@@ -10033,6 +10615,8 @@ window.VS_DATA = {
     {
       "name": "Formina Franklyn (Saber Machine Gun)",
       "icon": "assets/icons/characters/formina_franklyn_saber_machine_gun.png",
+      "sprite_static": "assets/icons/characters/formina_franklyn_saber_machine_gun_sprite.png",
+      "sprite_gif": "assets/icons/characters/formina_franklyn_saber_machine_gun_sprite.gif",
       "base_name": "Formina Franklyn",
       "starting_weapons": [
         "Saber Machine Gun"
@@ -10065,6 +10649,8 @@ window.VS_DATA = {
     {
       "name": "Formina Franklyn (Eagle Gun)",
       "icon": "assets/icons/characters/formina_franklyn_eagle_gun.png",
+      "sprite_static": "assets/icons/characters/formina_franklyn_eagle_gun_sprite.png",
+      "sprite_gif": "assets/icons/characters/formina_franklyn_eagle_gun_sprite.gif",
       "base_name": "Formina Franklyn",
       "starting_weapons": [
         "Eagle Gun"
@@ -10097,6 +10683,8 @@ window.VS_DATA = {
     {
       "name": "Formina Franklyn - Solo (Saber Machine Gun)",
       "icon": "assets/icons/characters/formina_franklyn_-_solo_saber.png",
+      "sprite_static": "assets/icons/characters/formina_franklyn_saber_machine_gun_sprite.png",
+      "sprite_gif": "assets/icons/characters/formina_franklyn_saber_machine_gun_sprite.gif",
       "base_name": "Formina Franklyn",
       "starting_weapons": [
         "Saber Machine Gun"
@@ -10129,6 +10717,8 @@ window.VS_DATA = {
     {
       "name": "Formina Franklyn - Solo (Eagle Gun)",
       "icon": "assets/icons/characters/formina_franklyn_-_solo_eagle.png",
+      "sprite_static": "assets/icons/characters/formina_franklyn_eagle_gun_sprite.png",
+      "sprite_gif": "assets/icons/characters/formina_franklyn_eagle_gun_sprite.gif",
       "base_name": "Formina Franklyn",
       "starting_weapons": [
         "Eagle Gun"
@@ -10161,6 +10751,8 @@ window.VS_DATA = {
     {
       "name": "(Retro Pod) Diva No. 5",
       "icon": "assets/icons/characters/retro_pod_diva_no._5.png",
+      "sprite_static": "assets/icons/characters/retro_pod_diva_no._5_sprite.png",
+      "sprite_gif": "assets/icons/characters/retro_pod_diva_no._5_sprite.gif",
       "base_name": "Diva No. 5",
       "starting_weapons": [
         "Super Missile"
@@ -10193,6 +10785,8 @@ window.VS_DATA = {
     {
       "name": "(Battle Tank) Diva No. 5",
       "icon": "assets/icons/characters/battle_tank_diva_no._5.png",
+      "sprite_static": "assets/icons/characters/battle_tank_diva_no._5_sprite.png",
+      "sprite_gif": "assets/icons/characters/battle_tank_diva_no._5_sprite.gif",
       "base_name": "Diva No. 5",
       "starting_weapons": [
         "Super Missile"
@@ -10225,6 +10819,8 @@ window.VS_DATA = {
     {
       "name": "(Mover) Diva No. 5",
       "icon": "assets/icons/characters/mover_diva_no._5.png",
+      "sprite_static": "assets/icons/characters/mover_diva_no._5_sprite.png",
+      "sprite_gif": "assets/icons/characters/mover_diva_no._5_sprite.gif",
       "base_name": "Diva No. 5",
       "starting_weapons": [
         "Super Missile"
@@ -10257,6 +10853,8 @@ window.VS_DATA = {
     {
       "name": "(Shanks) Diva No. 5",
       "icon": "assets/icons/characters/shanks_diva_no._5.png",
+      "sprite_static": "assets/icons/characters/shanks_diva_no._5_sprite.png",
+      "sprite_gif": "assets/icons/characters/shanks_diva_no._5_sprite.gif",
       "base_name": "Diva No. 5",
       "starting_weapons": [
         "Super Missile"
@@ -10289,6 +10887,8 @@ window.VS_DATA = {
     {
       "name": "(Paradox) Diva No. 5",
       "icon": "assets/icons/characters/paradox_diva_no._5.png",
+      "sprite_static": "assets/icons/characters/paradox_diva_no._5_sprite.png",
+      "sprite_gif": "assets/icons/characters/paradox_diva_no._5_sprite.gif",
       "base_name": "Diva No. 5",
       "starting_weapons": [
         "Super Missile"
@@ -10321,6 +10921,8 @@ window.VS_DATA = {
     {
       "name": "(Virginia) Diva No. 5",
       "icon": "assets/icons/characters/virginia_diva_no._5.png",
+      "sprite_static": "assets/icons/characters/virginia_diva_no._5_sprite.png",
+      "sprite_gif": "assets/icons/characters/virginia_diva_no._5_sprite.gif",
       "base_name": "Diva No. 5",
       "starting_weapons": [
         "Twin Dragon"
@@ -10353,6 +10955,8 @@ window.VS_DATA = {
     {
       "name": "Ameya Aisling (Spirit Rings)",
       "icon": "assets/icons/characters/ameya_aisling_spirit_rings.png",
+      "sprite_static": "assets/icons/characters/ameya_aisling_sprite.png",
+      "sprite_gif": "assets/icons/characters/ameya_aisling_sprite.gif",
       "base_name": "Ameya Aisling",
       "starting_weapons": [
         "Spirit Rings",
@@ -10386,6 +10990,8 @@ window.VS_DATA = {
     {
       "name": "Ameya Aisling (Intuition)",
       "icon": "assets/icons/characters/ameya_aisling_intuition.png",
+      "sprite_static": "assets/icons/characters/ameya_aisling_sprite.png",
+      "sprite_gif": "assets/icons/characters/ameya_aisling_sprite.gif",
       "base_name": "Ameya Aisling",
       "starting_weapons": [
         "Spirit Rings",
@@ -10419,6 +11025,8 @@ window.VS_DATA = {
     {
       "name": "Siugnas (Town Sword)",
       "icon": "assets/icons/characters/siugnas_town_sword.png",
+      "sprite_static": "assets/icons/characters/siugnas_town_sword_sprite.png",
+      "sprite_gif": "assets/icons/characters/siugnas_town_sword_sprite.gif",
       "base_name": "Siugnas",
       "starting_weapons": [
         "Town Sword"
@@ -10451,6 +11059,8 @@ window.VS_DATA = {
     {
       "name": "Siugnas (Sanguine Star)",
       "icon": "assets/icons/characters/siugnas_sanguine_star.png",
+      "sprite_static": "assets/icons/characters/siugnas_sanguine_star_sprite.png",
+      "sprite_gif": "assets/icons/characters/siugnas_sanguine_star_sprite.gif",
       "base_name": "Siugnas",
       "starting_weapons": [
         "Sanguine Star"
@@ -10483,6 +11093,8 @@ window.VS_DATA = {
     {
       "name": "Final Emperor",
       "icon": "assets/icons/characters/final_emperor.png",
+      "sprite_static": "assets/icons/characters/final_emperor_sprite.png",
+      "sprite_gif": "assets/icons/characters/final_emperor_sprite.gif",
       "base_name": "Final Emperor",
       "starting_weapons": [
         "Flamberge"
@@ -10515,6 +11127,8 @@ window.VS_DATA = {
     {
       "name": "Dolores",
       "icon": "assets/icons/characters/dolores.png",
+      "sprite_static": "assets/icons/characters/dolores_sprite.png",
+      "sprite_gif": "assets/icons/characters/dolores_sprite.gif",
       "base_name": "Dolores",
       "starting_weapons": [
         "Bullova"
@@ -10547,6 +11161,8 @@ window.VS_DATA = {
     {
       "name": "Macha Alter Ego",
       "icon": "assets/icons/characters/macha_alter_ego.png",
+      "sprite_static": "assets/icons/characters/macha_alter_ego_sprite.png",
+      "sprite_gif": "assets/icons/characters/macha_alter_ego_sprite.gif",
       "base_name": "Macha Alter Ego",
       "starting_weapons": [
         "Khukuri",
@@ -10582,6 +11198,8 @@ window.VS_DATA = {
     {
       "name": "Lita Caryx",
       "icon": "assets/icons/characters/lita_caryx.png",
+      "sprite_static": "assets/icons/characters/lita_caryx_sprite.png",
+      "sprite_gif": "assets/icons/characters/lita_caryx_sprite.gif",
       "base_name": "Lita Caryx",
       "starting_weapons": [
         "Glaive"
@@ -10614,6 +11232,8 @@ window.VS_DATA = {
     {
       "name": "Kugutsu (Musashi)",
       "icon": "assets/icons/characters/kugutsu_musashi.png",
+      "sprite_static": "assets/icons/characters/kugutsu_musashi_sprite.png",
+      "sprite_gif": "assets/icons/characters/kugutsu_musashi_sprite.gif",
       "base_name": "Kugutsu",
       "starting_weapons": [
         "Twin Dragon"
@@ -10646,6 +11266,8 @@ window.VS_DATA = {
     {
       "name": "Kugutsu (Komachi)",
       "icon": "assets/icons/characters/kugutsu_komachi.png",
+      "sprite_static": "assets/icons/characters/kugutsu_komachi_sprite.png",
+      "sprite_gif": "assets/icons/characters/kugutsu_komachi_sprite.gif",
       "base_name": "Kugutsu",
       "starting_weapons": [
         "Khukuri"
@@ -10678,6 +11300,8 @@ window.VS_DATA = {
     {
       "name": "Kugutsu (Boh)",
       "icon": "assets/icons/characters/kugutsu_boh.png",
+      "sprite_static": "assets/icons/characters/kugutsu_boh_sprite.png",
+      "sprite_gif": "assets/icons/characters/kugutsu_boh_sprite.gif",
       "base_name": "Kugutsu",
       "starting_weapons": [
         "Eagle Gun"
@@ -10710,6 +11334,8 @@ window.VS_DATA = {
     {
       "name": "Kugutsu (Sukune)",
       "icon": "assets/icons/characters/kugutsu_sukune.png",
+      "sprite_static": "assets/icons/characters/kugutsu_sukune_sprite.png",
+      "sprite_gif": "assets/icons/characters/kugutsu_sukune_sprite.gif",
       "base_name": "Kugutsu",
       "starting_weapons": [
         "Punch"
@@ -10742,6 +11368,8 @@ window.VS_DATA = {
     {
       "name": "Mr. S",
       "icon": "assets/icons/characters/mr._s.png",
+      "sprite_static": "assets/icons/characters/mr._s_sprite.png",
+      "sprite_gif": "assets/icons/characters/mr._s_sprite.gif",
       "base_name": "Mr. S",
       "starting_weapons": [
         "Intuition"
@@ -10774,6 +11402,8 @@ window.VS_DATA = {
     {
       "name": "Lolo, Hiss, Meow, and Purr",
       "icon": "assets/icons/characters/lolo_hiss_meow_and_purr.png",
+      "sprite_static": "assets/icons/characters/lolo_hiss_meow_and_purr_sprite.png",
+      "sprite_gif": "assets/icons/characters/lolo_hiss_meow_and_purr_sprite.gif",
       "base_name": "Lolo, Hiss, Meow, and Purr",
       "starting_weapons": [
         "Chaos Disaster Tech"
@@ -10806,6 +11436,8 @@ window.VS_DATA = {
     {
       "name": "Kina",
       "icon": "assets/icons/characters/kina.png",
+      "sprite_static": "assets/icons/characters/kina_sprite.png",
+      "sprite_gif": "assets/icons/characters/kina_sprite.gif",
       "base_name": "Kina",
       "starting_weapons": [
         "Swallow Slice Tech",
@@ -10839,6 +11471,8 @@ window.VS_DATA = {
     {
       "name": "Imakoo",
       "icon": "assets/icons/characters/imakoo.png",
+      "sprite_static": "assets/icons/characters/imakoo_sprite.png",
+      "sprite_gif": "assets/icons/characters/imakoo_sprite.gif",
       "base_name": "Imakoo",
       "starting_weapons": [
         "Hell's Fury Tech",
@@ -10872,6 +11506,8 @@ window.VS_DATA = {
     {
       "name": "Malevolent Door Spirit",
       "icon": "assets/icons/characters/malevolent_door_spirit.png",
+      "sprite_static": "assets/icons/characters/malevolent_door_spirit_sprite.png",
+      "sprite_gif": "assets/icons/characters/malevolent_door_spirit_sprite.gif",
       "base_name": "Malevolent Door Spirit",
       "starting_weapons": [
         "Blood Chalice"
@@ -10904,6 +11540,8 @@ window.VS_DATA = {
     {
       "name": "Jimbo",
       "icon": "assets/icons/characters/jimbo.png",
+      "sprite_static": "assets/icons/characters/jimbo_sprite.png",
+      "sprite_gif": "assets/icons/characters/jimbo_sprite.gif",
       "base_name": "Jimbo",
       "starting_weapons": [
         "Infernolatro"
@@ -10936,6 +11574,8 @@ window.VS_DATA = {
     {
       "name": "Canio",
       "icon": "assets/icons/characters/canio.png",
+      "sprite_static": "assets/icons/characters/canio_sprite.png",
+      "sprite_gif": "assets/icons/characters/canio_sprite.gif",
       "base_name": "Canio",
       "starting_weapons": [
         "Fibonacci Spritz"
@@ -10968,6 +11608,8 @@ window.VS_DATA = {
     {
       "name": "Chicot",
       "icon": "assets/icons/characters/chicot.png",
+      "sprite_static": "assets/icons/characters/chicot_sprite.png",
+      "sprite_gif": "assets/icons/characters/chicot_sprite.gif",
       "base_name": "Chicot",
       "starting_weapons": [
         "Gros Michel"
@@ -11000,6 +11642,8 @@ window.VS_DATA = {
     {
       "name": "Perkeo",
       "icon": "assets/icons/characters/perkeo.png",
+      "sprite_static": "assets/icons/characters/perkeo_sprite.png",
+      "sprite_gif": "assets/icons/characters/perkeo_sprite.gif",
       "base_name": "Perkeo",
       "starting_weapons": [
         "Celestial Booster"

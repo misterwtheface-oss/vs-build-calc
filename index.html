@@ -309,6 +309,9 @@
     }
     .info-sidebar .detail-icon { text-align: center; margin-bottom: .5rem; width: 100px; height: 100px; }
     .info-sidebar .detail-icon img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+    /* Character full-body sprites: taller box, contain so no aspect ratio is clipped. */
+    .info-sidebar .detail-icon.char-sprite { width: 100%; height: 132px; }
+    .info-sidebar .detail-icon.char-sprite img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
     .info-sidebar .detail-name {
       font-family: var(--font-title);
       font-size: 1.1rem;
@@ -773,6 +776,9 @@
     /* Arcana cards are portrait 224×320 — override square assumptions */
     .detail-icon.arcana-card { width: 140px; height: 200px; }
     .detail-icon.arcana-card img { object-fit: fill; }
+    /* Character full-body sprites in the selector preview: contain, never clipped. */
+    .ovl-right-top .detail-icon.char-sprite { width: 100%; height: 120px; border-radius: 0; }
+    .ovl-right-top .detail-icon.char-sprite img { object-fit: contain; image-rendering: pixelated; }
     .ovl-center-wide .item-grid { gap: 12px; row-gap: 14px; }
     .arcana-grid {
       display: grid;
@@ -1548,7 +1554,7 @@
             evolved = false, hidden = false, removable = true, locked = false, canUnion = false } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
-    const icon = item ? (isChar ? (item.sprite_gif || item.icon || emptyIcon) : (item.icon || emptyIcon)) : emptyIcon;
+    const icon = item ? (item.icon || emptyIcon) : emptyIcon;
     const classes = [
       'slot',
       isChar ? 'slot-char' : '',
@@ -1657,6 +1663,21 @@
   //  PLANNING PAGE
   // ═══════════════════════════════════════════════════════
 
+  // Character sprite thumbnail with a tiered fallback that steps through each candidate
+  // on load error. animated=true → animated gif first, else static png sprite first;
+  // both then fall back to the grid icon and finally the empty silhouette. The
+  // char-sprite container uses object-fit: contain so no aspect ratio is ever clipped.
+  function charSpriteHTML(item, animated = true) {
+    const empty = EMPTY_ICONS.char;
+    const order = animated
+      ? [item.sprite_gif, item.sprite_static, item.icon, empty]
+      : [item.sprite_static, item.sprite_gif, item.icon, empty];
+    const chain = [...new Set(order.filter(Boolean))];
+    const primary = esc(chain[0] || empty);
+    const fbs = chain.slice(1).map(esc).join('|');
+    return `<div class="detail-icon char-sprite"><img src="${primary}" data-fbs="${fbs}" onerror="var f=(this.dataset.fbs||'').split('|').filter(Boolean);if(f.length){this.src=f.shift();this.dataset.fbs=f.join('|');}else{this.onerror=null;}"></div>`;
+  }
+
   function buildInfoSidebar(panel) {
     if (!panel) {
       return `<div class="info-sidebar">
@@ -1677,9 +1698,15 @@
 
     if (!item) return `<div class="info-sidebar"><div class="sidebar-body"><div class="info-sidebar-empty">Empty slot</div></div></div>`;
 
-    const icon = (item.icon) ? item.icon : (EMPTY_ICONS[type] || EMPTY_ICONS.weapon);
-    const iconClass = type === 'arcana' ? 'detail-icon arcana-card' : 'detail-icon';
-    let top = `<div class="${iconClass}"><img src="${esc(icon)}" onerror="this.src='${EMPTY_ICONS[type]||EMPTY_ICONS.weapon}'"></div>`;
+    const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
+    let top;
+    if (type === 'char') {
+      top = charSpriteHTML(item, true); // animated gif first
+    } else {
+      const icon = item.icon || emptyIcon;
+      const iconClass = type === 'arcana' ? 'detail-icon arcana-card' : 'detail-icon';
+      top = `<div class="${iconClass}"><img src="${esc(icon)}" onerror="this.src='${emptyIcon}'"></div>`;
+    }
     top += `<div class="detail-name">${esc(item.name)}</div>`;
     if (item.description) top += `<div class="detail-desc">${esc(item.description)}</div>`;
     let html = '';
@@ -1973,7 +2000,7 @@
     const charLevel = state.players[playerIdx]?.charLevel ?? 1;
     const left = `${levelRowHTML(playerIdx, charLevel)}${statsHTML(sel, null, charLevel)}`;
     const rightTop = sel
-      ? `<div class="detail-icon"><img src="${esc(sel.sprite_static||sel.icon||EMPTY_ICONS.char)}" onerror="this.src='${EMPTY_ICONS.char}'"></div>
+      ? `${charSpriteHTML(sel, false)}
          <div class="detail-name">${esc(sel.name)}</div>`
       : `<div class="detail-desc" style="text-align:center">Select a character</div>`;
     let rightBody = '';
