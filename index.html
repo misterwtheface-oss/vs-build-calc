@@ -38,10 +38,6 @@
       --text-dim:    #a07848;
       --slot-bg:     #160606;
       --slot-border: #b88820;
-      --hi-char:     #3a7ad9;   /* char-associated */
-      --hi-arcana:   #9b3fd9;   /* arcana-associated */
-      --hi-item:     #2aaa60;   /* item-associated */
-      --evolved:     #e8c000;
       --can-evolve:  #ffe840;
       --font-title:  'Cormorant', Georgia, serif;
       --font-body:   'Cormorant', Georgia, serif;
@@ -451,16 +447,6 @@
     }
     .slot:hover .slot-remove { display: flex; }
     .slot .slot-remove:hover { color: var(--accent); }
-    .slot.evolved   { box-shadow: 0 0 0 2px var(--evolved),    0 0 6px rgba(232,192,0,.4); }
-    .slot.can-union { box-shadow: 0 0 0 2px var(--can-evolve), 0 0 10px rgba(255,232,64,.55); }
-    .slot.evolved::after {
-      content: '⬆';
-      position: absolute; bottom: 1px; left: 2px;
-      font-size: 9px; color: var(--evolved); line-height: 1;
-    }
-    .slot.hi-char  { box-shadow: 0 0 0 2px var(--hi-char),   0 0 6px rgba(58,122,217,.4); }
-    .slot.hi-arcana{ box-shadow: 0 0 0 2px var(--hi-arcana), 0 0 6px rgba(155,63,217,.4); }
-    .slot.hi-item  { box-shadow: 0 0 0 2px var(--hi-item),   0 0 6px rgba(42,170,96,.4); }
     .slot.hidden-weapon { opacity: .4; cursor: default; }
     .slot.hidden-weapon:hover img { filter: none; }
     .slot.hidden-weapon .slot-remove { display: none !important; }
@@ -677,9 +663,6 @@
     .item-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .item-card:hover { box-shadow: 0 0 0 2px var(--border-hi), 0 0 8px rgba(184,136,32,.4); }
     .item-card.selected { box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(232,184,32,.5); }
-    .item-card.hi-char   { box-shadow: 0 0 0 2px var(--hi-char),   0 0 6px rgba(58,122,217,.4); }
-    .item-card.hi-arcana { box-shadow: 0 0 0 2px var(--hi-arcana), 0 0 6px rgba(155,63,217,.4); }
-    .item-card.hi-item   { box-shadow: 0 0 0 2px var(--hi-item),   0 0 6px rgba(42,170,96,.4); }
     .item-card.dim      { opacity: .35; pointer-events: none; }
     .item-card.consumed { opacity: .25; pointer-events: none; filter: grayscale(.7) sepia(.4); }
     .search-dim { display: none !important; }
@@ -701,7 +684,6 @@
     }
     .ovl-search-clear:hover { color: var(--text); }
     .ovl-search:not(:placeholder-shown) + .ovl-search-clear { display: flex; }
-    .item-card.evo { box-shadow: 0 0 0 1px rgba(232,184,32,.3); }
     .req-row { display:flex; align-items:center; gap:.4rem; margin:.2rem 0; }
     .req-icon { width:26px; height:26px; flex-shrink:0; border-radius:4px; overflow:hidden; }
     .req-icon img { width:100%; height:100%; object-fit:cover; display:block; }
@@ -1386,25 +1368,6 @@
     return computeEffectiveWeapon(evolved, player); // chain-evolve
   }
 
-  function getReadyUnions(playerIdx) {
-    const player = state.players[playerIdx];
-    const equippedNames = new Set(player.weapons.filter(Boolean).map(w => w.name));
-    const seen = new Set();
-    const ready = [];
-    for (const [si, base] of player.weapons.entries()) {
-      if (!base || base.method !== 'Union' || !base.trans_result) continue;
-      if (seen.has(base.trans_result)) continue;
-      seen.add(base.trans_result);
-      const allInputs = D.weapons.filter(w => w.method === 'Union' && w.trans_result === base.trans_result);
-      if (!allInputs.every(w => equippedNames.has(w.name))) continue;
-      const result = weaponByName(base.trans_result);
-      if (!result) continue;
-      const inputSlots = allInputs.map(w => player.weapons.findIndex(b => b && b.name === w.name));
-      if (inputSlots.every(s => s >= 0)) ready.push({ result, inputSlots });
-    }
-    return ready;
-  }
-
   function weaponLineage(name) {
     const forms = new Set();
     let w = weaponByName(name);
@@ -1489,58 +1452,6 @@
     }
   }
 
-  function getReadyEvolutions(playerIdx) {
-    const player = state.players[playerIdx];
-    const allPassiveNames = new Set(
-      state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
-    );
-    return player.weapons.map((base, si) => {
-      if (!base || base.method !== 'Evolution' || !base.trans_result) return null;
-      const passiveReqs = (base.requirements || []).filter(r => D.passives.some(p => p.name === r));
-      if (!passiveReqs.every(r => allPassiveNames.has(r))) return null;
-      const result = weaponByName(base.trans_result);
-      return result ? { result, slotIdx: si } : null;
-    }).filter(Boolean);
-  }
-
-  // ═══════════════════════════════════════════════════════
-  //  HIGHLIGHTS: which weapons are associated with char / arcana / items
-  // ═══════════════════════════════════════════════════════
-
-  function getHighlights(playerIdx) {
-    const player = state.players[playerIdx];
-    if (!player) return { weaponHi: new Set(), passiveHi: new Set(), arcanaHi: new Set() };
-    const char = player.character;
-    const selectedWeaponNames = player.weapons.filter(Boolean).map(w => w.name);
-    const selectedArcana = state.arcana.filter(Boolean);
-
-    // weapons highlighted by character
-    const charWeapons = new Set(char ? char.starting_weapons : []);
-
-    // weapons highlighted by selected arcana
-    const arcanaWeapons = new Set();
-    for (const arc of selectedArcana) {
-      if (!arc.weapon_col) continue;
-      for (const w of D.weapons) {
-        if (w.arcana_ratings[arc.weapon_col]) arcanaWeapons.add(w.name);
-      }
-    }
-
-    // passives highlighted: those that are requirements for selected weapons
-    const passiveHi = new Set();
-    for (const w of player.weapons.filter(Boolean)) {
-      for (const req of w.requirements) passiveHi.add(req);
-    }
-
-    // arcana highlighted by selected weapons
-    const arcanaHi = new Set();
-    for (const w of player.weapons.filter(Boolean)) {
-      for (const col of Object.keys(w.arcana_ratings)) arcanaHi.add(col);
-    }
-
-    return { charWeapons, arcanaWeapons, passiveHi, arcanaHi };
-  }
-
   // ═══════════════════════════════════════════════════════
   //  RENDER HELPERS
   // ═══════════════════════════════════════════════════════
@@ -1551,7 +1462,7 @@
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            evolved = false, hidden = false, removable = true, locked = false, canUnion = false } = opts;
+            hidden = false, removable = true, locked = false } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     const icon = item ? (item.icon || emptyIcon) : emptyIcon;
@@ -1560,10 +1471,8 @@
       isChar ? 'slot-char' : '',
       type === 'arcana' ? 'slot-arcana' : '',
       type === 'stage'  ? 'slot-stage'  : '',
-      evolved   ? 'evolved'   : '',
       hidden    ? 'hidden-weapon' : '',
       locked    ? 'slot-locked'   : '',
-      canUnion  ? 'can-union'     : '',
     ].filter(Boolean).join(' ');
 
     const removeBtn = (!hidden && removable && item && !locked)
@@ -1837,19 +1746,12 @@
         : [];
       const starterCount = char ? Math.min(normalStarters.length, counts.weapons) : 0;
       const starterLineages = normalStarters.slice(0, starterCount).map(wn => weaponLineage(wn));
-      const readyUnions = getReadyUnions(idx);
-      const readyEvos   = getReadyEvolutions(idx);
-      const upgradeSlotSet = new Set([
-        ...readyUnions.flatMap(u => u.inputSlots),
-        ...readyEvos.map(e => e.slotIdx),
-      ]);
       const wSlots = Array.from({length: counts.weapons}, (_, si) => {
         const base = player.weapons[si] || null;
-        const isEvolved = base && base.category !== 'Base';
         // Locked only if the weapon belongs to this slot's starter lineage (starter → evo → union result).
         // Empty slots and weapons from outside the lineage are not locked.
         const isLocked = si < starterCount && !!base && (starterLineages[si]?.has(base.name) ?? false);
-        return slotHTML(base, { type:'weapon', playerIdx:idx, slotIdx:si, evolved:isEvolved, locked:isLocked, canUnion: upgradeSlotSet.has(si) });
+        return slotHTML(base, { type:'weapon', playerIdx:idx, slotIdx:si, locked:isLocked });
       }).join('');
 
       // ── Hidden weapons (hidden starters + char overflow + counterparts unlocked by Gemini)
@@ -2071,7 +1973,6 @@
   function weaponOverlayHTML(playerIdx, slotIdx) {
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
-    const { charWeapons, arcanaWeapons } = getHighlights(playerIdx);
     const isLockedEvo = !!state.overlay?.isLockedEvo;
 
     // ── Locked-evo mode: only show future forms of the starter weapon ──────
@@ -2137,14 +2038,8 @@
       const isOffLineage = isLockedEvo && !(evoOnlySet && evoOnlySet.has(w.name));
       const isUsed     = !isLockedEvo && usedWeapons.has(w.name);
       const isConsumed = !isLockedEvo && !isSel && !isUsed && consumedWeapons.has(w.name);
-      const isEvo      = w.category !== 'Base';
-      const hiChar     = charWeapons.has(w.name);
-      const hiArcana   = arcanaWeapons.has(w.name);
       let cls = 'item-card';
       if (isSel) cls += ' selected';
-      else if (isEvo) cls += ' evo';
-      if (!isSel && hiChar)   cls += ' hi-char';
-      else if (!isSel && hiArcana) cls += ' hi-arcana';
       if (isUsed || isOffLineage) cls += ' dim';
       else if (isConsumed) cls += ' consumed';
       const title = isConsumed
@@ -2258,7 +2153,6 @@
   function passiveOverlayHTML(playerIdx, slotIdx) {
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
-    const { passiveHi } = getHighlights(playerIdx);
     // Block passives equipped by this player in other slots, and by any other player.
     const usedPassives = new Set([
       ...player.passives.filter((p, i) => p && i !== slotIdx).map(p => p.name),
@@ -2268,9 +2162,8 @@
     let cards = '';
     for (const p of D.passives) {
       const isSel = sel && sel.name === p.name;
-      const isHi  = passiveHi.has(p.name);
       const isDim = usedPassives.has(p.name);
-      cards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-item' : ''}${isDim ? ' dim' : ''}"
+      cards += `<div class="item-card${isSel ? ' selected' : ''}${isDim ? ' dim' : ''}"
         data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive" data-search="${esc(p.name)}"
         title="${esc(p.name)}">
         <img src="${esc(p.icon||EMPTY_ICON)}" alt="${esc(p.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
@@ -2329,14 +2222,6 @@
     const groups = arcanaGroups();
     const EMPTY_DARKANA = 'assets/icons/arcana/empty_darkana.png';
 
-    // Arcana highlights: union of all players' weapon associations
-    const arcanaHi = new Set();
-    for (const player of state.players) {
-      for (const w of player.weapons.filter(Boolean)) {
-        for (const col of Object.keys(w.arcana_ratings)) arcanaHi.add(col);
-      }
-    }
-
     const otherTab  = tab === 'arcana' ? 'darkana' : 'arcana';
     const tabLabel  = tab === 'arcana' ? 'Arcana' : 'Darkana';
     const switchLabel = tab === 'arcana' ? '→ Darkana' : '→ Arcana';
@@ -2353,7 +2238,6 @@
       const darkana = group.find(a => a.type === 'Darkana');
       const cur     = tab === 'arcana' ? arcana : (darkana || null);
       const isSel   = sel && group.some(a => a.name === sel.name);
-      const isHi    = cur?.weapon_col && arcanaHi.has(cur.weapon_col);
       const searchVal = esc(group.map(a => a.name).join('|'));
 
       if (tab === 'darkana' && !darkana) {
@@ -2363,7 +2247,7 @@
         </div>`;
       } else {
         const display = cur || arcana;
-        cards += `<div class="item-card${isSel ? ' selected' : ''}${isHi ? ' hi-arcana' : ''}"
+        cards += `<div class="item-card${isSel ? ' selected' : ''}"
           data-action="ovl-select-arcana" data-arcana="${esc(display.name)}" data-base="${esc(key)}"
           data-search="${searchVal}" title="${esc(display.name)} (${display.type})">
           <img src="${esc(display.icon||EMPTY_ICON)}" alt="${esc(display.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
