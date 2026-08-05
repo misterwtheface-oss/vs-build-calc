@@ -2123,12 +2123,7 @@
         const wRightTop = `<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(w.name)}</div>
           ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}`;
-        const wRightBody = `${reqHTML}${chainHTML}
-          ${Object.keys(w.arcana_ratings).length ? `<div class="detail-section"><h3>Arcana Synergies</h3>
-            <ul style="padding-left:1rem;margin:.3rem 0">${Object.entries(w.arcana_ratings).slice(0,6).map(([k,v]) =>
-              `<li style="font-size:.72rem">${esc(k.replace(/_/g,' '))}: ${esc(v)}</li>`
-            ).join('')}</ul>
-          </div>` : ''}`;
+        const wRightBody = `${reqHTML}${chainHTML}`;
         rightHTML = `<div class="ovl-right-top">${wRightTop}</div><div class="ovl-right-body">${wRightBody}</div>`;
       }
     } else {
