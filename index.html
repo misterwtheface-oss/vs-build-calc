@@ -924,12 +924,15 @@
     /* arcana overlay two-panel (no left stats) */
     .ovl-center-wide { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 
-    /* stage grid — bordered art tiles, ~4-5 per row, fluid with zoom */
+    /* stage grid — bordered art tiles, ~4 per row, fluid with zoom */
     .stage-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: .7rem;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: .8rem;
     }
+    /* larger stage-item icons in both the selector detail panel and planner sidebar */
+    .req-icons.stage-items { gap: 6px; }
+    .req-icons.stage-items .req-icon { width: 44px; height: 44px; border-radius: 5px; }
     .stage-tile { cursor: pointer; display: flex; flex-direction: column; gap: .3rem; }
     .stage-tile img {
       width: 100%;
@@ -1013,6 +1016,11 @@
     stage:   'assets/icons/stages/empty.png',
   };
   const EMPTY_ICON = EMPTY_ICONS.passive;
+
+  // Icons for special stage-item pickups that aren't weapons/passives in the data.
+  const STAGE_ITEM_ICONS = {
+    'Arcana Treasure Chest': 'assets/icons/affinities/treasure.png',
+  };
 
   // Stages come from D.stages (built from stages.csv); populated on load.
   let STAGES = [];
@@ -1455,6 +1463,28 @@
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
+  // One stage-item icon: a passive, weapon, or special-pickup override; text if unmapped.
+  function stageItemIconHTML(it) {
+    const obj  = passiveByName(it) || weaponByName(it);
+    const icon = obj ? (obj.icon || EMPTY_ICON) : STAGE_ITEM_ICONS[it];
+    return `<div class="req-icon" title="${esc(it)}">
+      ${icon ? `<img src="${esc(icon)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
+    </div>`;
+  }
+
+  // Stage items + arcana-gated groups. `heading` renders each section label so callers can
+  // match their panel style (overlay uses <h3>, planner sidebar uses .detail-section-label).
+  function stageItemsHTML(stage, heading) {
+    if (!stage) return '';
+    const groups = [];
+    if (stage.items?.length) groups.push(['Stage Items', stage.items]);
+    (stage.conditional ?? []).forEach(g => groups.push([`With ${g.arcana}`, g.items]));
+    if (!groups.length) return '<div class="detail-desc" style="margin-top:.5rem">No stage items.</div>';
+    return groups.map(([label, items]) =>
+      `<div class="detail-section">${heading(label)}<div class="req-icons stage-items">${items.map(stageItemIconHTML).join('')}</div></div>`
+    ).join('');
+  }
+
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
             hidden = false, removable = true, locked = false } = opts;
@@ -1606,6 +1636,10 @@
     let top;
     if (type === 'char') {
       top = charSpriteHTML(item, true); // animated gif first
+    } else if (type === 'stage') {
+      // Landscape stage art — fit to its aspect instead of the square cover box (which clips).
+      const icon = item.icon || emptyIcon;
+      top = `<div class="stage-detail-img"><img src="${esc(icon)}" onerror="this.src='${emptyIcon}'"></div>`;
     } else {
       const icon = item.icon || emptyIcon;
       const iconClass = type === 'arcana' ? 'detail-icon arcana-card' : 'detail-icon';
@@ -1715,6 +1749,10 @@
     if (type === 'arcana') {
       const aObj = D.arcana.find(a => a.name === item.name);
       if (aObj) html += `<div class="hi-badge ${aObj.type === 'Arcana' ? 'arcana' : 'item'}" style="text-align:center;margin:.4rem 0">${esc(aObj.type)}</div>`;
+    }
+
+    if (type === 'stage') {
+      html += stageItemsHTML(item, t => `<span class="detail-section-label">${esc(t)}</span>`);
     }
 
     return `<div class="info-sidebar"><div class="sidebar-top">${top}</div><div class="sidebar-body">${html}</div></div>`;
@@ -2303,26 +2341,13 @@
     let rightHTML = '';
     if (sel) {
       const stage = STAGES.find(s => s.name === sel.name);
-      const renderIcons = list => `<div class="req-icons" style="margin-top:.4rem">
-        ${list.map(it => {
-          const pi = passiveByName(it);
-          return `<div class="req-icon" title="${esc(it)}">
-            ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
-          </div>`;
-        }).join('')}
-      </div>`;
-      const sections = [];
-      if (stage && stage.items.length) sections.push(`<div class="detail-section"><h3>Stage Items</h3>${renderIcons(stage.items)}</div>`);
-      (stage?.conditional ?? []).forEach(g => sections.push(
-        `<div class="detail-section"><h3>With ${esc(g.arcana)}</h3>${renderIcons(g.items)}</div>`));
-      const hasItems = (stage?.items?.length || stage?.conditional?.length);
       rightHTML = `<div class="ovl-right-top">
           <div class="stage-detail-img"><img src="${esc(sel.icon || EMPTY_ICONS.stage)}" alt="${esc(sel.name)}" onerror="this.src='${EMPTY_ICONS.stage}'"></div>
           <div class="detail-name">${esc(sel.name)}</div>
         </div>
         <div class="ovl-right-body">
           ${sel.description ? `<div class="detail-desc">${esc(sel.description)}</div>` : ''}
-          ${hasItems ? sections.join('') : '<div class="detail-desc" style="margin-top:.5rem">No stage items.</div>'}
+          ${stageItemsHTML(stage, t => `<h3>${esc(t)}</h3>`)}
         </div>`;
     } else {
       rightHTML = '<div class="ovl-right-top"><div class="detail-desc" style="text-align:center">Select a stage</div></div><div class="ovl-right-body"></div>';
