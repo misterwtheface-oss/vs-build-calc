@@ -375,7 +375,13 @@
       border-radius: 2px; line-height: 1.4; font-family: var(--font-title); }
     .sw-max    { background: var(--gold); color: #1a1209; }
     .sw-hidden { background: #444; color: var(--text-muted); }
+    .sw-arcana { background: #7a3fd9; color: #fff; }
     .sw-is-hidden img { opacity: .55; }
+    /* Arcana are tall portrait cards; crop to fit the square loadout thumbnail. */
+    .sw-arcana-icon img { object-fit: cover; }
+    /* Divider between the 3 shared arcana slots and the extra (starting) arcana. */
+    .arcana-extra-divider { width: 2px; align-self: stretch; margin: 0 .25rem;
+      background: linear-gradient(var(--gold), transparent); opacity: .5; border-radius: 2px; }
     /* Player rows grid — varies by player count */
     /* 1-2 players: one full-width row per player (a card is short, so stacking is
        cheap). 3-4 players: a 2x2 grid to keep them on-screen. Overflow-proof
@@ -933,7 +939,7 @@
     /* larger stage-item icons in both the selector detail panel and planner sidebar */
     .req-icons.stage-items { gap: 6px; }
     .req-icons.stage-items .req-icon { width: 44px; height: 44px; border-radius: 5px; }
-    /* 44px icons (matching stage items) in every .req-row list: Starting Weapons
+    /* 44px icons (matching stage items) in every .req-row list: Starting Loadout
        (selector + info panel), weapon requirements (weapon selector info panel),
        and evo-stage navigation (planner info panel). Placed after the earlier
        .req-icon / .info-sidebar .req-icon rules so it wins the cascade. */
@@ -1079,6 +1085,30 @@
 
   function weaponByName(name) { return D.weapons.find(w => w.name === name) || null; }
   function passiveByName(name) { return D.passives.find(p => p.name === name) || null; }
+  function arcanaByName(name) { return D.arcana.find(a => a.name === name) || null; }
+
+  // A character's starting arcana is "extra": it's locked to the character and does
+  // NOT count toward the 3-arcana pool. Extra arcana are derived from the players'
+  // characters at render time (no pool mutation) and shown as locked slots to the
+  // right of the 3 arcana. De-duplicated because the arcana pool is shared globally.
+  function extraArcanaNames() {
+    return [...new Set(state.players.map(p => p.character?.starting_arcana).filter(Boolean))];
+  }
+
+  // A character's `starting_weapons` list mixes actual weapons and passives (e.g.
+  // Unblinded Imelda starts with Magic Wand + Empty Tome). Partition them so weapon
+  // starters lock into weapon slots and passive starters lock into passive slots.
+  const isPassiveName = n => D.passives.some(p => p.name === n);
+  function starterWeaponNames(char) { // non-hidden weapon-type starters
+    if (!char) return [];
+    const hidden = new Set(char.hidden_items ?? []);
+    return char.starting_weapons.filter(wn => !hidden.has(wn) && !isPassiveName(wn));
+  }
+  function starterPassiveNames(char) { // non-hidden passive-type starters
+    if (!char) return [];
+    const hidden = new Set(char.hidden_items ?? []);
+    return char.starting_weapons.filter(wn => !hidden.has(wn) && isPassiveName(wn));
+  }
 
   // ── Evo path renderer ────────────────────────────────────────────────────
 
@@ -1502,7 +1532,7 @@
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            hidden = false, removable = true, locked = false } = opts;
+            hidden = false, removable = true, locked = false, infoName = null } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     const icon = item ? (item.icon || emptyIcon) : emptyIcon;
@@ -1524,8 +1554,9 @@
 
     const lockIcon = locked ? `<img class="slot-lock" src="assets/icons/ui/locked.png" alt="">` : '';
     const hiddenAttr = (hidden && item) ? `data-hidden-name="${esc(item.name)}"` : '';
+    const infoAttr = infoName ? `data-info-name="${esc(infoName)}"` : '';
     return `<div class="${classes}"
-      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" ${hiddenAttr}
+      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" ${hiddenAttr} ${infoAttr}
       title="${item ? esc(item.name) + (locked ? ' (starter)' : hidden ? ' (hidden)' : '') : 'Empty'}">
       ${imgTag}
       ${removeBtn}
@@ -1638,13 +1669,41 @@
     return `<div class="detail-icon char-sprite"><img src="${primary}" data-fbs="${fbs}" onerror="var f=(this.dataset.fbs||'').split('|').filter(Boolean);if(f.length){this.src=f.shift();this.dataset.fbs=f.join('|');}else{this.onerror=null;}"></div>`;
   }
 
+  // "Starting Loadout" section for a character: starting weapons AND passives
+  // (passives live inside starting_weapons, e.g. Empty Tome), plus the character's
+  // extra starting arcana. Shared by the char selector and the planner info panel.
+  function startingLoadoutHTML(char) {
+    if (!char) return '';
+    const items = char.starting_weapons ?? [];
+    if (!items.length && !char.starting_arcana) return '';
+    let row = '';
+    for (const wn of items) {
+      const obj = weaponByName(wn) || passiveByName(wn);
+      const isHidden = char.hidden_items?.includes(wn);
+      const isMax    = char.max_items?.includes(wn);
+      const badge = isMax ? '<span class="sw-badge sw-max">MAX</span>'
+                  : isHidden ? '<span class="sw-badge sw-hidden">HID</span>' : '';
+      const suffix = isHidden ? ' (Hidden)' : isMax ? ' (Max)' : '';
+      row += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}" title="${esc(wn)}${suffix}">${
+        obj ? `<img src="${esc(obj.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">${badge}`
+            : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
+    }
+    if (char.starting_arcana) {
+      const a = arcanaByName(char.starting_arcana);
+      row += `<div class="req-icon sw-arcana-icon" title="${esc(char.starting_arcana)} (Starting Arcana — extra)">${
+        a ? `<img src="${esc(a.icon||EMPTY_ICONS.arcana)}" onerror="this.src='${EMPTY_ICONS.arcana}'"><span class="sw-badge sw-arcana">ARC</span>`
+          : `<span style="font-size:.55rem">${esc(char.starting_arcana.slice(0,6))}</span>`}</div>`;
+    }
+    return `<div class="detail-section"><span class="detail-section-label">Starting Loadout</span><div class="req-row">${row}</div></div>`;
+  }
+
   function buildInfoSidebar(panel) {
     if (!panel) {
       return `<div class="info-sidebar">
         <div class="sidebar-body"><div class="info-sidebar-empty">Left-click a slot<br>to see details<br><br>Right-click to change</div></div>
       </div>`;
     }
-    const { type, playerIdx, slotIdx, hiddenName } = panel;
+    const { type, playerIdx, slotIdx, hiddenName, refName } = panel;
     const player = state.players[playerIdx];
 
     let item = null;
@@ -1653,7 +1712,7 @@
       item = hiddenName ? weaponByName(hiddenName) : player?.weapons[slotIdx];
     }
     else if (type === 'passive') item = player?.passives[slotIdx];
-    else if (type === 'arcana')  item = state.arcana[slotIdx];
+    else if (type === 'arcana')  item = refName ? arcanaByName(refName) : state.arcana[slotIdx];
     else if (type === 'stage')   item = state.stage;
 
     if (!item) return `<div class="info-sidebar"><div class="sidebar-body"><div class="info-sidebar-empty">Empty slot</div></div></div>`;
@@ -1676,17 +1735,7 @@
     let html = '';
 
     if (type === 'char') {
-      if (item.starting_weapons?.length) {
-        html += `<div class="detail-section"><span class="detail-section-label">Starting Weapons</span><div class="req-row">`;
-        for (const wn of item.starting_weapons) {
-          const w = weaponByName(wn);
-          const isHidden = item.hidden_items?.includes(wn);
-          const isMax    = item.max_items?.includes(wn);
-          const badge = isMax ? '<span class="sw-badge sw-max">MAX</span>' : isHidden ? '<span class="sw-badge sw-hidden">HID</span>' : '';
-          html += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}" title="${esc(wn)}${isHidden ? ' (Hidden)' : isMax ? ' (Max)' : ''}">${w ? `<img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">${badge}` : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
-        }
-        html += `</div></div>`;
-      }
+      html += startingLoadoutHTML(item);
       const charLevel = player?.charLevel ?? 1;
       html += levelRowHTML(playerIdx, charLevel);
       html += statsHTML(item, player, charLevel);
@@ -1795,13 +1844,12 @@
       const charSlot = slotHTML(char, { type:'char', playerIdx:idx, slotIdx:0, removable: !!char });
 
       // ── Weapon slots
-      // Weapons listed in hidden_items start in hidden slots, not regular slots
+      // Weapons listed in hidden_items start in hidden slots, not regular slots.
+      // Passive-type starters (e.g. Empty Tome) are handled in the passive slots below.
       const hiddenItemSet = new Set(char?.hidden_items ?? []);
-      const normalStarters = char
-        ? char.starting_weapons.filter(wn => !hiddenItemSet.has(wn))
-        : [];
+      const normalStarters = starterWeaponNames(char);
       const hiddenStarters = char
-        ? char.starting_weapons.filter(wn => hiddenItemSet.has(wn))
+        ? char.starting_weapons.filter(wn => hiddenItemSet.has(wn) && !isPassiveName(wn))
         : [];
       const starterCount = char ? Math.min(normalStarters.length, counts.weapons) : 0;
       const starterLineages = normalStarters.slice(0, starterCount).map(wn => weaponLineage(wn));
@@ -1829,9 +1877,15 @@
       const hiddenWeaponRow = hiddenSlotRow(allHidden, 'weapon', idx);
 
       // ── Passive slots
-      const pSlots = Array.from({length: counts.passives}, (_, si) =>
-        slotHTML(player.passives[si] || null, { type:'passive', playerIdx:idx, slotIdx:si })
-      ).join('');
+      // Starter passives lock into the front slots, mirroring starter weapons.
+      // Passives have no evo lineage, so a slot is locked purely by name match.
+      const starterPassives = starterPassiveNames(char);
+      const passiveStarterCount = char ? Math.min(starterPassives.length, counts.passives) : 0;
+      const pSlots = Array.from({length: counts.passives}, (_, si) => {
+        const base = player.passives[si] || null;
+        const isLocked = si < passiveStarterCount && !!base && base.name === starterPassives[si];
+        return slotHTML(base, { type:'passive', playerIdx:idx, slotIdx:si, locked:isLocked });
+      }).join('');
 
       // Hidden/extra passives — no data source yet (populated later by mechanics
       // like Emergency Meeting / Weapon Power-Up). Conditional: hidden until filled.
@@ -1863,6 +1917,13 @@
     const gASlots = state.arcana.map((arc, si) =>
       slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si })
     ).join('');
+    // Extra (character starting) arcana: locked, view-only, don't count toward the 3.
+    const gExtraArcana = extraArcanaNames().map(nm =>
+      slotHTML(arcanaByName(nm), { type:'arcana', playerIdx:0, slotIdx:-1, locked:true, removable:false, infoName:nm })
+    ).join('');
+    const gExtraArcanaRow = gExtraArcana
+      ? `<span class="arcana-extra-divider" title="Starting arcana (extra)"></span>${gExtraArcana}`
+      : '';
     const gStageSlot = slotHTML(state.stage ? { name:state.stage.name, icon:state.stage.icon } : null,
       { type:'stage', playerIdx:0, slotIdx:0 });
 
@@ -1889,6 +1950,7 @@
               <div class="global-row-inner">
                 <span class="slot-row-label">Arcana</span>
                 ${gASlots}
+                ${gExtraArcanaRow}
                 <div style="flex:1"></div>
                 <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
                 ${gStageSlot}
@@ -1973,17 +2035,7 @@
     let rightBody = '';
     if (sel) {
       if (sel.description) rightBody += `<div class="detail-desc">${esc(sel.description)}</div>`;
-      if (sel.starting_weapons?.length) {
-        rightBody += `<div class="detail-section"><span class="detail-section-label">Starting Weapons</span><div class="req-row">`;
-        for (const wn of sel.starting_weapons) {
-          const w = weaponByName(wn);
-          const isHidden = sel.hidden_items?.includes(wn);
-          const isMax    = sel.max_items?.includes(wn);
-          const badge = isMax ? '<span class="sw-badge sw-max">MAX</span>' : isHidden ? '<span class="sw-badge sw-hidden">HID</span>' : '';
-          rightBody += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}" title="${esc(wn)}${isHidden ? ' (Hidden)' : isMax ? ' (Max)' : ''}">${w ? `<img src="${esc(w.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">${badge}` : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
-        }
-        rightBody += `</div></div>`;
-      }
+      rightBody += startingLoadoutHTML(sel);
       if (sel.notes) rightBody += `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>`;
     }
 
@@ -2029,7 +2081,13 @@
   }
 
   function openPassiveOverlay(playerIdx, slotIdx) {
-    const prev = state.players[playerIdx].passives[slotIdx];
+    const player = state.players[playerIdx];
+    const prev = player.passives[slotIdx];
+    // Locked starter-passive slot — view-only (passives have no evo lineage to swap to).
+    const counts = SLOT_COUNTS[state.playerCount];
+    const starterPassives = starterPassiveNames(player.character);
+    const passiveStarterCount = Math.min(starterPassives.length, counts.passives);
+    if (slotIdx < passiveStarterCount && prev && prev.name === starterPassives[slotIdx]) return;
     state.overlay = { type:'item', playerIdx, slotIdx, slotType:'passive', fromEmpty: !prev, prevItem: prev };
     state.ovl.selected = prev;
     buildAndShowOverlay(passiveOverlayHTML(playerIdx, slotIdx));
@@ -2291,10 +2349,13 @@
       <span class="arcana-tab-switch">${switchLabel}</span>
     </button>`;
 
-    // Arcana already equipped in OTHER slots — can't be picked again (uniqueness).
-    const equippedElsewhere = new Set(
-      state.arcana.filter((a, i) => a && i !== slotIdx).map(a => a.name)
-    );
+    // Arcana already in the build — can't be picked again (uniqueness). Covers the
+    // other pool slots AND extra (character starting) arcana: an "extra" takes no
+    // pool slot but is still owned, so it must be removed from the selectable pool.
+    const equippedElsewhere = new Set([
+      ...state.arcana.filter((a, i) => a && i !== slotIdx).map(a => a.name),
+      ...extraArcanaNames(),
+    ]);
 
     let cards = tabBtn;
     for (const group of groups) {
@@ -2476,17 +2537,15 @@
         if (sel) {
           const counts = SLOT_COUNTS[state.playerCount];
           const pw = state.players[playerIdx].weapons;
-          const selHiddenSet = new Set(sel.hidden_items ?? []);
-          const selNormalStarters = sel.starting_weapons.filter(wn => !selHiddenSet.has(wn)).slice(0, counts.weapons);
+          const selNormalStarters = starterWeaponNames(sel).slice(0, counts.weapons);
           // Lineage (base + all forward evo forms) for each starter, in slot order.
           const lineages = selNormalStarters.map(wn => collectDescendants(wn));
           const allLineageNames = new Set();
           lineages.forEach(s => s.forEach(n => allLineageNames.add(n)));
           // Forms locked by the previous character — dropped, they belonged to the
           // replaced character's starter lineage.
-          const oldHiddenSet = new Set(oldChar?.hidden_items ?? []);
           const oldStarterLineage = new Set();
-          (oldChar?.starting_weapons ?? []).filter(wn => !oldHiddenSet.has(wn))
+          starterWeaponNames(oldChar)
             .forEach(wn => collectDescendants(wn).forEach(n => oldStarterLineage.add(n)));
 
           // For each starter slot, prefer an already-equipped weapon in that starter's
@@ -2520,6 +2579,38 @@
           let fill = selNormalStarters.length;
           for (const w of preserved) { if (fill >= counts.weapons) break; rebuilt[fill++] = w; }
           state.players[playerIdx].weapons = rebuilt;
+
+          // Starter passives (e.g. Empty Tome) lock into the front passive slots,
+          // mirroring starter weapons. Passives have no evo lineage, so placement is
+          // by name; the user's other passives are preserved after them, and the
+          // replaced character's starter passives are dropped.
+          const pp = state.players[playerIdx].passives;
+          const selStarterPassives = starterPassiveNames(sel).slice(0, counts.passives);
+          const oldStarterPassives = new Set(starterPassiveNames(oldChar));
+          const rebuiltP = new Array(counts.passives).fill(null);
+          const claimedP = new Set();
+          selStarterPassives.forEach((pn, si) => {
+            rebuiltP[si] = passiveByName(pn);
+            const exist = pp.findIndex((p, i) => p && p.name === pn && !claimedP.has(i));
+            if (exist >= 0) claimedP.add(exist);
+          });
+          const preservedP = [];
+          for (let i = 0; i < counts.passives; i++) {
+            if (claimedP.has(i)) continue;
+            const p = pp[i];
+            if (!p || selStarterPassives.includes(p.name) || oldStarterPassives.has(p.name)) continue;
+            preservedP.push(p);
+          }
+          let fillP = selStarterPassives.length;
+          for (const p of preservedP) { if (fillP >= counts.passives) break; rebuiltP[fillP++] = p; }
+          state.players[playerIdx].passives = rebuiltP;
+        }
+        // If the new character's starting arcana already sits in a pool slot, clear
+        // that slot — the extra now owns it and a pool copy would be a duplicate.
+        const newArc = sel?.starting_arcana;
+        if (newArc) {
+          const dupIdx = state.arcana.findIndex(a => a?.name === newArc);
+          if (dupIdx >= 0) state.arcana[dupIdx] = null;
         }
       } else if (type === 'item') {
         if (sel) {
@@ -2582,7 +2673,8 @@
           }
         }
       } else if (type === 'arcana') {
-        if (sel && state.arcana.some((a, i) => a && i !== slotIdx && a.name === sel.name)) {
+        if (sel && (state.arcana.some((a, i) => a && i !== slotIdx && a.name === sel.name)
+                    || extraArcanaNames().includes(sel.name))) {
           showToast(`${sel.name} already equipped`, 'warn');
         } else {
           state.arcana[slotIdx] = sel;
@@ -3222,7 +3314,8 @@
       return;
     }
     if (action === 'view-slot') {
-      state.infoPanel = { type: slotType, playerIdx, slotIdx };
+      const refName = btn.dataset.infoName || null;
+      state.infoPanel = { type: slotType, playerIdx, slotIdx, refName };
       render();
       return;
     }
@@ -3444,7 +3537,7 @@
     // ── Arcana ──
     const arcanaObj = D.arcana.find(a => a.name === name);
     if (arcanaObj) {
-      if (state.arcana.some(a => a?.name === name)) { showToast(`${name} already in build`, 'warn'); return; }
+      if (state.arcana.some(a => a?.name === name) || extraArcanaNames().includes(name)) { showToast(`${name} already in build`, 'warn'); return; }
       const slot = state.arcana.findIndex(a => !a);
       if (slot < 0) { showToast('No arcana slots available', 'err'); return; }
       state.arcana[slot] = arcanaObj;
@@ -3573,6 +3666,9 @@
     const playerIdx = parseInt(slot.dataset.player ?? '0');
     const slotIdx   = parseInt(slot.dataset.slot   ?? '0');
     const slotType  = slot.dataset.type;
+    // Derived/locked reference slots (e.g. extra starting arcana) use slotIdx -1 and
+    // aren't backed by a pool entry — they're view-only, so don't open a change overlay.
+    if (slotIdx < 0) return;
     openSlotOverlay(slotType, playerIdx, slotIdx);
   }
 
