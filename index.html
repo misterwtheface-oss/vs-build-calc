@@ -924,25 +924,36 @@
     /* arcana overlay two-panel (no left stats) */
     .ovl-center-wide { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 
-    /* stage grid */
-    .stage-grid { display: flex; flex-direction: column; gap: 4px; }
-    .stage-row {
-      display: flex; align-items: center; gap: .6rem;
-      padding: .4rem .6rem;
-      border: 1px solid transparent;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background .15s, border-color .15s;
-      font-size: .85rem;
+    /* stage grid — bordered art tiles, ~4-5 per row, fluid with zoom */
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: .7rem;
     }
-    .stage-row:hover { background: var(--surface2); border-color: var(--border); }
-    .stage-row.selected { background: rgba(232,184,32,.1); border-color: var(--gold); color: var(--gold); }
-    .stage-row .stage-icon {
-      width: 32px; height: 32px;
-      border-radius: 4px; overflow: hidden;
-      flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .7rem; color: var(--text-dim);
+    .stage-tile { cursor: pointer; display: flex; flex-direction: column; gap: .3rem; }
+    .stage-tile img {
+      width: 100%;
+      aspect-ratio: 312 / 192;
+      object-fit: fill;
+      image-rendering: pixelated;
+      display: block;
+      transition: filter .15s, box-shadow .15s;
+    }
+    .stage-tile:hover img { filter: brightness(1.2); }
+    .stage-tile.selected img { box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(232,184,32,.55); }
+    .stage-tile-name {
+      font-size: .72rem; text-align: center; line-height: 1.15;
+      color: var(--text-muted);
+    }
+    .stage-tile:hover .stage-tile-name { color: var(--text); }
+    .stage-tile.selected .stage-tile-name { color: var(--gold); }
+    /* stage image in the detail panel — same landscape aspect */
+    .stage-detail-img img {
+      width: 100%;
+      aspect-ratio: 312 / 192;
+      object-fit: fill;
+      image-rendering: pixelated;
+      display: block;
     }
 
     /* scrollbar */
@@ -1792,7 +1803,7 @@
     const gASlots = state.arcana.map((arc, si) =>
       slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si })
     ).join('');
-    const gStageSlot = slotHTML(state.stage ? { name:state.stage.name, icon:'' } : null,
+    const gStageSlot = slotHTML(state.stage ? { name:state.stage.name, icon:state.stage.icon } : null,
       { type:'stage', playerIdx:0, slotIdx:0 });
 
     document.getElementById('app').innerHTML = `
@@ -2279,12 +2290,13 @@
 
   function stageOverlayHTML() {
     const sel = state.ovl.selected;
-    let rows = '';
+    let tiles = '';
     for (const stage of STAGES) {
       const isSel = sel && sel.name === stage.name;
-      rows += `<div class="stage-row${isSel ? ' selected' : ''}" data-action="ovl-select-stage" data-stage="${esc(stage.name)}">
-        <div class="stage-icon">🗺</div>
-        <span>${esc(stage.name)}</span>
+      const icon = stage.icon || EMPTY_ICONS.stage;
+      tiles += `<div class="stage-tile${isSel ? ' selected' : ''}" data-action="ovl-select-stage" data-stage="${esc(stage.name)}" title="${esc(stage.name)}">
+        <img src="${esc(icon)}" alt="${esc(stage.name)}" onerror="this.src='${EMPTY_ICONS.stage}'">
+        <span class="stage-tile-name">${esc(stage.name)}</span>
       </div>`;
     }
 
@@ -2303,10 +2315,17 @@
       if (stage && stage.items.length) sections.push(`<div class="detail-section"><h3>Stage Items</h3>${renderIcons(stage.items)}</div>`);
       (stage?.conditional ?? []).forEach(g => sections.push(
         `<div class="detail-section"><h3>With ${esc(g.arcana)}</h3>${renderIcons(g.items)}</div>`));
-      rightHTML = `<div class="detail-name">${esc(sel.name)}</div>
-        ${sections.length ? sections.join('') : '<div class="detail-desc" style="margin-top:.5rem">No stage items.</div>'}`;
+      const hasItems = (stage?.items?.length || stage?.conditional?.length);
+      rightHTML = `<div class="ovl-right-top">
+          <div class="stage-detail-img"><img src="${esc(sel.icon || EMPTY_ICONS.stage)}" alt="${esc(sel.name)}" onerror="this.src='${EMPTY_ICONS.stage}'"></div>
+          <div class="detail-name">${esc(sel.name)}</div>
+        </div>
+        <div class="ovl-right-body">
+          ${sel.description ? `<div class="detail-desc">${esc(sel.description)}</div>` : ''}
+          ${hasItems ? sections.join('') : '<div class="detail-desc" style="margin-top:.5rem">No stage items.</div>'}
+        </div>`;
     } else {
-      rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a stage</div>';
+      rightHTML = '<div class="ovl-right-top"><div class="detail-desc" style="text-align:center">Select a stage</div></div><div class="ovl-right-body"></div>';
     }
 
     return `<div class="overlay-header">
@@ -2314,7 +2333,7 @@
         <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
       </div>
       <div class="overlay-body">
-        <div class="ovl-center"><div class="stage-grid">${rows}</div></div>
+        <div class="ovl-center"><div class="ovl-center-scroll"><div class="stage-grid">${tiles}</div></div></div>
         <div class="ovl-right">${rightHTML}</div>
       </div>
       <div class="overlay-footer">
