@@ -367,27 +367,34 @@
     }
     .level-clear:hover { color: var(--text); }
     .level-wrap:not([data-at-default]) .level-clear { display: flex; }
-    /* Starting weapon hidden/max badges */
-    .info-sidebar .req-icon { position: relative; }
+    /* Starting weapon hidden/max badges. .req-icon must establish a containing
+       block so the absolutely-positioned .sw-badge anchors to the icon (not to
+       the fixed #overlay-root, which would fling it to the screen corner). */
+    .req-icon { position: relative; }
     .sw-badge { position: absolute; bottom: 0; right: 0; font-size: .6rem; padding: 0 2px;
       border-radius: 2px; line-height: 1.4; font-family: var(--font-title); }
     .sw-max    { background: var(--gold); color: #1a1209; }
     .sw-hidden { background: #444; color: var(--text-muted); }
     .sw-is-hidden img { opacity: .55; }
     /* Player rows grid — varies by player count */
+    /* 1-2 players: one full-width row per player (a card is short, so stacking is
+       cheap). 3-4 players: a 2x2 grid to keep them on-screen. Overflow-proof
+       either way — hidden weapons/passives get their own conditional wrapping row
+       (see .slot-row-hidden), and 3-4p cards only hold 2-3 slots per row. */
     .players-grid {
       display: grid;
+      grid-template-columns: 1fr;
       gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .players-grid.p1 { grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; }
-    .players-grid.p1 + .global-row { max-width: 900px; margin-left: auto; margin-right: auto; }
-    .players-grid.p2 { grid-template-columns: 1fr 1fr; }
-    .players-grid.p3 { grid-template-columns: 1fr 1fr 1fr; }
-    .players-grid.p4 { grid-template-columns: 1fr 1fr; }
+    .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr 1fr; }
 
-    /* ── Global arcana/stage row ── */
+    /* ── Global arcana/stage row (pinned to top so it stays visible when the
+       player list scrolls with 3-4 players) ── */
     .global-row {
-      margin-top: .75rem;
+      margin: 0 auto .75rem;
+      max-width: 900px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -428,7 +435,10 @@
     .slots-col { display: flex; flex-direction: column; gap: .6rem; flex: 1; min-width: 0; }
 
     /* ── Slot rows ── */
-    .slot-row { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
+    .slot-row { display: flex; align-items: center; gap: .4rem; flex-wrap: nowrap; }
+    /* Hidden-item rows only appear when populated and may hold many items, so
+       they wrap (normal weapon/passive rows stay nowrap to keep slots aligned). */
+    .slot-row-hidden { flex-wrap: wrap; }
     .slot-row-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); width: 3.5rem; flex-shrink: 0; }
 
     /* ── Slots ── */
@@ -473,16 +483,6 @@
     .slot-arcana img { height: auto; object-fit: fill; }
     .slot-stage  { width: 120px; height: auto; }
     .slot-stage img { width: 120px; height: auto; object-fit: fill; }
-
-
-
-    /* ── Hidden weapons divider ── */
-    .hidden-divider {
-      width: 1px; height: var(--slot-size);
-      background: var(--border);
-      margin: 0 .25rem;
-      flex-shrink: 0;
-    }
 
     /* ═══════════════════════════════════════════════════
        OVERLAY
@@ -805,7 +805,7 @@
     .evo-path-group { padding-top: .6rem; border-top: 1px solid var(--border); }
     .evo-path-group:first-child { padding-top: 0; border-top: none; }
     .evo-row { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; }
-    .evo-node { width: 28px; height: 28px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
+    .evo-node { width: 44px; height: 44px; flex-shrink: 0; border-radius: 5px; overflow: hidden; }
     .evo-node.current { outline: 1px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.4); }
     .evo-node.evo-hidden { opacity: .4; }
     .evo-node[data-evo-item]:not(.current) { cursor: context-menu; }
@@ -829,7 +829,7 @@
     .evo-max { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .65rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; white-space: nowrap; }
     .evo-sub { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .63rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
     .evo-dash-line { width: 14px; border-top: 1.5px dashed var(--text-dim); flex-shrink: 0; }
-    .evo-gem { width: 14px; height: 14px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
+    .evo-gem { width: 22px; height: 22px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
     .evo-gem img { width: 100%; height: 100%; object-fit: cover; display: block; }
     /* merge-bar: stacked rows on left → bar → output right (dual/Vandalier/Universitas) */
     .evo-merge { display: inline-flex; align-items: stretch; gap: 3px; }
@@ -933,6 +933,11 @@
     /* larger stage-item icons in both the selector detail panel and planner sidebar */
     .req-icons.stage-items { gap: 6px; }
     .req-icons.stage-items .req-icon { width: 44px; height: 44px; border-radius: 5px; }
+    /* 44px icons (matching stage items) in every .req-row list: Starting Weapons
+       (selector + info panel), weapon requirements (weapon selector info panel),
+       and evo-stage navigation (planner info panel). Placed after the earlier
+       .req-icon / .info-sidebar .req-icon rules so it wins the cascade. */
+    .req-row .req-icon { width: 44px; height: 44px; border-radius: 5px; }
     .stage-tile { cursor: pointer; display: flex; flex-direction: column; gap: .3rem; }
     .stage-tile img {
       width: 100%;
@@ -967,8 +972,7 @@
 
     /* ── Responsive ── */
     @media (max-width: 700px) {
-      .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr 1fr; }
-      .players-grid.p2 { grid-template-columns: 1fr; }
+      .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr; }
       .overlay-panel { width: 95vw; }
       .ovl-left, .ovl-right { width: 140px; }
     }
@@ -1529,6 +1533,17 @@
     </div>`;
   }
 
+  // Conditional "Hidden/Extra" row for hidden weapons or passives. Renders
+  // nothing when there are no items, so the row only appears when populated.
+  function hiddenSlotRow(names, type, playerIdx) {
+    if (!names.length) return '';
+    const byName = type === 'passive' ? passiveByName : weaponByName;
+    const slots = names.map(nm => slotHTML(byName(nm), {
+      type, playerIdx, slotIdx: -1, hidden: true
+    })).join('');
+    return `<div class="slot-row slot-row-hidden">${slots}</div>`;
+  }
+
   function statVal(key, val) {
     if (val === 0) return null;
     const pct = PCT_STATS.has(key);
@@ -1809,18 +1824,18 @@
         ...charOverflow,
         ...counterparts,
       ])];
-      let hiddenSlots = '';
-      if (allHidden.length) {
-        hiddenSlots += '<div class="hidden-divider"></div>';
-        hiddenSlots += allHidden.map(wn => slotHTML(weaponByName(wn), {
-          type:'weapon', playerIdx:idx, slotIdx:-1, hidden:true
-        })).join('');
-      }
+      // Hidden/extra weapons get their own conditional row (between Weapons and
+      // Passives) so they never push the Weapons row rightward / overflow.
+      const hiddenWeaponRow = hiddenSlotRow(allHidden, 'weapon', idx);
 
       // ── Passive slots
       const pSlots = Array.from({length: counts.passives}, (_, si) =>
         slotHTML(player.passives[si] || null, { type:'passive', playerIdx:idx, slotIdx:si })
       ).join('');
+
+      // Hidden/extra passives — no data source yet (populated later by mechanics
+      // like Emergency Meeting / Weapon Power-Up). Conditional: hidden until filled.
+      const hiddenPassiveRow = hiddenSlotRow([], 'passive', idx);
 
       return `<div class="player-card">
         <div class="player-header">
@@ -1835,14 +1850,10 @@
         <div class="player-body">
           <div class="char-col">${charSlot}</div>
           <div class="slots-col">
-            <div class="slot-row">
-              <span class="slot-row-label">Weapons</span>
-              ${wSlots}${hiddenSlots}
-            </div>
-            <div class="slot-row">
-              <span class="slot-row-label">Passives</span>
-              ${pSlots}
-            </div>
+            <div class="slot-row">${wSlots}</div>
+            ${hiddenWeaponRow}
+            <div class="slot-row">${pSlots}</div>
+            ${hiddenPassiveRow}
           </div>
         </div>
       </div>`;
@@ -1854,6 +1865,13 @@
     ).join('');
     const gStageSlot = slotHTML(state.stage ? { name:state.stage.name, icon:state.stage.icon } : null,
       { type:'stage', playerIdx:0, slotIdx:0 });
+
+    // Preserve the player-list scroll position across every re-render. With the
+    // single-column layout, stacked tiles (3-4 players) make `.planning-main`
+    // scroll; clicking any icon rebuilds `#app`, so without this the list jumps
+    // back to the top. Mirrors the overlay-scroll handling in refreshOverlay.
+    const prevMain = document.querySelector('.planning-main');
+    const prevScroll = prevMain ? prevMain.scrollTop : 0;
 
     document.getElementById('app').innerHTML = `
       <div id="planning">
@@ -1867,7 +1885,6 @@
         </div>
         <div class="planning-body">
           <div class="planning-main">
-            <div class="players-grid p${playerCount}">${playerCards}</div>
             <div class="global-row">
               <div class="global-row-inner">
                 <span class="slot-row-label">Arcana</span>
@@ -1877,10 +1894,14 @@
                 ${gStageSlot}
               </div>
             </div>
+            <div class="players-grid p${playerCount}">${playerCards}</div>
           </div>
           ${buildInfoSidebar(state.infoPanel)}
         </div>
       </div>`;
+
+    const newMain = document.querySelector('.planning-main');
+    if (newMain) newMain.scrollTop = prevScroll;
   }
 
   // ═══════════════════════════════════════════════════════
