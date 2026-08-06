@@ -1,3 +1,7 @@
 # Local backlog / scratchpad — not tracked in the repo
 PROGRESS.md
 Progress.md
+
+# GitHub Pages requires .nojekyll to serve this vanilla-JS site verbatim
+# (without it the Jekyll build fails). Never ignore it.
+!.nojekyll
