@@ -2,6 +2,21 @@
 
 ---
 
+## TODO — Chaos evo characters: map evo path to sprite
+
+The 4 Chaos-evolution characters (Lolo/Hiss/Meow/Purr, Kina, Imakoo, and the
+Chaos Disaster group) were added as **character tiles** before the sprite system
+existed. Their starting items reference "…Tech" abilities (Chaos Disaster Tech,
+Swallow Slice Tech, Airwave Tech, Hell's Fury Tech, Blood Rage Tech) that aren't
+in the weapons data, so they show as unresolved in cross-refs. Come back and map
+the Chaos **evo path → sprite** for these characters.
+
+Related: weapon icon `chaos_altemanna.png` is still missing (Chaos evo ingredient
+"Chaos Altemanna"); other Chaos ingredients (Malachite/Rosalia/Lazulia) aren't in
+the data yet either.
+
+---
+
 ## Background: Evo Path Patterns & Data Model
 
 ### Requirements data model (CORRECTED — CLAUDE.md is wrong)

@@ -1019,7 +1019,7 @@
 
   // Icons for special stage-item pickups that aren't weapons/passives in the data.
   const STAGE_ITEM_ICONS = {
-    'Arcana Treasure Chest': 'assets/icons/affinities/treasure.png',
+    'Arcana Treasure Chest': 'assets/icons/weapons/arcana_treasure_chest.png',
   };
 
   // Stages come from D.stages (built from stages.csv); populated on load.
@@ -1084,6 +1084,11 @@
 
   function evoIcon(name) {
     if (!name) return EMPTY_ICON;
+    // Glimmer (X) steps (Emerald Diorama) have no in-game icon — reuse Emerald Rapture's.
+    if (/^Glimmer\s*\(/i.test(name)) {
+      const er = D.weapons.find(x => x.name === 'Emerald Rapture');
+      return er ? (er.icon || EMPTY_ICON) : EMPTY_ICON;
+    }
     const w = D.weapons.find(x => x.name === name); if (w) return w.icon || EMPTY_ICON;
     const p = D.passives.find(x => x.name === name); if (p) return p.icon || EMPTY_ICON;
     const a = D.arcana.find(x => x.name === name);   if (a) return a.icon || EMPTY_ICON;
@@ -1248,11 +1253,17 @@
       return eRow(n(b1_3), EA, chaosNode, EA, n(b1_r));
     }
 
+    // Glimmer (X) is a glimmer-attack step (no real icon → Emerald Rapture via evoIcon);
+    // label it with just the attack name so the reused icon stays distinguishable.
+    const glim = raw => { const m = /^Glimmer\s*\((.+)\)$/i.exec(raw || ''); return n(raw, { sub: m ? m[1] : 'Glimmer' }); };
+
     if (pat === 'GlimmerEzEvo>GlimmerEzEvo>Final')
-      return eRow(n(b1_1), EA, n(b1_r), EA, n(b2_r));
+      return eRow(n(b1_1), EP, glim(b1_2), EA, n(b1_r), EP, glim(b2_2), EA, n(b2_r));
 
     if (pat === 'GlimmerEvo>Final')
-      return b1_3 ? eRow(n(b1_1), EP, n(b1_3), EA, n(b1_r)) : eRow(n(b1_1), EA, n(b1_r));
+      return b1_3
+        ? eRow(n(b1_1), EP, glim(b1_2), EP, n(b1_3), EA, n(b1_r))
+        : eRow(n(b1_1), EP, glim(b1_2), EA, n(b1_r));
 
     const COLL_PATS = ['Magic Whip>Final','Vampire-Killing Tool>Final','Magic Weapon>Final',
       "Belnades' Spell>Final",'Ambiguous Power>Final','Familiar>Final','Emerald Diorama>Final'];

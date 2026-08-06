@@ -2262,9 +2262,9 @@ window.VS_DATA = {
     },
     {
       "name": "missingN▯",
-      "icon": "assets/icons/characters/missingn▯.png",
-      "sprite_static": "assets/icons/characters/missingn▯_sprite.png",
-      "sprite_gif": "assets/icons/characters/missingn▯_sprite.gif",
+      "icon": "assets/icons/characters/missingno.png",
+      "sprite_static": "assets/icons/characters/missingno_sprite.png",
+      "sprite_gif": "assets/icons/characters/missingno_sprite.gif",
       "base_name": "missingN▯",
       "starting_weapons": [
         "Axe",
@@ -3247,9 +3247,9 @@ window.VS_DATA = {
     },
     {
       "name": "Genevieve Gruyère",
-      "icon": "assets/icons/characters/genevieve_gruyère.png",
-      "sprite_static": "assets/icons/characters/genevieve_gruyère_sprite.png",
-      "sprite_gif": "assets/icons/characters/genevieve_gruyère_sprite.gif",
+      "icon": "assets/icons/characters/genevieve_gruyere.png",
+      "sprite_static": "assets/icons/characters/genevieve_gruyere_sprite.png",
+      "sprite_gif": "assets/icons/characters/genevieve_gruyere_sprite.gif",
       "base_name": "Genevieve Gruyère",
       "starting_weapons": [
         "Shadow Servant"
@@ -3841,7 +3841,7 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Movement Speed increses Armour. Can find special pickups.",
+      "description": "Movement Speed increases Armour. Can find special pickups.",
       "notes": "",
       "scaling": [],
       "stats": {
@@ -8315,7 +8315,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/annette_sprite.gif",
       "base_name": "Annette",
       "starting_weapons": [
-        "Epi Head."
+        "Epi Head"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -11681,31 +11681,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks horizontally, passes through enemies.",
-      "level_ups": [
-        "Attacks horizontally, passes through enemies.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Base Area up by 10%. Base Damage up by 5.",
-        "Base Damage up by 5.",
-        "Base Area up by 10%. Base Damage up by 5.",
-        "Base Damage up by 5.",
-        "Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Bloody Tear",
       "requirements": [
         "Hollow Heart"
       ],
       "final_state": "Fuwalafuwaloo",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 100
     },
     {
@@ -11714,25 +11697,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolution of the whip. Can deal critical damage and absorb HP.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Fuwalafuwaloo",
       "requirements": [
         "Vento Sacro"
       ],
       "final_state": "Fuwalafuwaloo",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "vi_sarabande_of_healing": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -11741,34 +11713,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Stronger with continuous movement. Can deal critical damage.",
-      "level_ups": [
-        "Stronger with continuous movement. Can deal critical damage.",
-        "Base Damage up by 1.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 1.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 1.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 1."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Fuwalafuwaloo",
       "requirements": [
         "Bloody Tear"
       ],
       "final_state": "Fuwalafuwaloo",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "L",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -11777,25 +11729,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Fuwalafuwaloo",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -11804,33 +11743,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at the nearest enemy.",
-      "level_ups": [
-        "Fires at the nearest enemy.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Passes through 1 more enemy.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Holy Wand",
       "requirements": [
         "Empty Tome"
       ],
       "final_state": "Spirit of Light",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 100
     },
     {
@@ -11839,26 +11759,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolution of the Magic Wand. Fires with no delay.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Spirit of Light",
       "requirements": [
         "Summon Spirit"
       ],
       "final_state": "Spirit of Light",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -11867,33 +11775,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires a homing projectile.",
-      "level_ups": [
-        "Fires a homing projectile.",
-        "Pass through 1 more enemy.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Pass through 1 more enemy.",
-        "Base damage up by 10.",
-        "Pass through 1 more enemy.",
-        "Pass through 1 more enemy.",
-        "Base damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Spirit of Light",
       "requirements": [
         "Holy Wand"
       ],
       "final_state": "Spirit of Light",
-      "arcana_ratings": {
-        "iv_awake": "S+",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S+",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -11902,24 +11791,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Summon Spirit and Holy Wand. Fires homing spirits from a portal of light.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit of Light",
-      "arcana_ratings": {
-        "iv_awake": "S+",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S+",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -11928,32 +11805,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires quickly in the faced direction.",
-      "level_ups": [
-        "Fires quickly in the faced direction.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Fires 1 more projectile.[1]",
-        "Passes through 1 more enemy.",
-        "Fires 1 more projectile.[1]",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Passes through 1 more enemy.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Thousand Edge",
       "requirements": [
         "Bracer"
       ],
       "final_state": "Million Cut",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 100
     },
     {
@@ -11962,26 +11821,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Knife. Fires with no delay.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Million Cut",
       "requirements": [
         "Valmanway"
       ],
       "final_state": "Million Cut",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xiii_wicked_season": "S",
-        "xvi_slash": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -11990,33 +11837,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires faster when moving.",
-      "level_ups": [
-        "Fires faster when moving.",
-        "Base Area up by 10%. Base Damage up by 2.5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 2.5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 2.5.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Million Cut",
       "requirements": [
         "Thousand Edge"
       ],
       "final_state": "Million Cut",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12025,24 +11853,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Valmanway and Thousand Edge. Slashes endlessly. Grows bigger with continuous movement.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Million Cut",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12051,33 +11867,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "High damage, high area scaling.",
-      "level_ups": [
-        "High damage, high Area scaling.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 20.",
-        "Passes through 2 more enemies.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 20.",
-        "Passes through 2 more enemies.",
-        "Base Damage up by 20."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Death Spiral",
       "requirements": [
         "Candelabrador"
       ],
       "final_state": "Legacy of Death: Soul River",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 100
     },
     {
@@ -12086,26 +11883,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Axe. Passes through enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Legacy of Death: Soul River",
       "requirements": [
         "Dark Rift"
       ],
       "final_state": "Legacy of Death: Soul River",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12114,32 +11899,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates vertical damaging zones.",
-      "level_ups": [
-        "Generates vertical damaging zones.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile. Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Legacy of Death: Soul River",
       "requirements": [
         "Death Spiral"
       ],
       "final_state": "Legacy of Death: Soul River",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "A",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12148,24 +11915,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Dark Rift and Death Spiral. Death becomes you.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Legacy of Death: Soul River",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "vi_sarabande_of_healing": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "A",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12174,32 +11929,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Aims at the nearest enemy, has a boomerang effect.",
-      "level_ups": [
-        "Aims at nearest enemy, has boomerang effect.",
-        "Base Damage up by 10.",
-        "Base Area up by 10%. Base Speed up by 25%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Base Area up by 10%. Base Speed up by 25%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Heaven Sword",
       "requirements": [
         "Clover"
       ],
       "final_state": "Arch Angle",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "ix_divine_bloodline": "L",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -12208,25 +11945,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Cross. Can do critical damage.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Arch Angle",
       "requirements": [
         "Grand Cross"
       ],
       "final_state": "Arch Angle",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12235,35 +11961,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons holy light.",
-      "level_ups": [
-        "Summons holy light.",
-        "Cooldown reduced by 3 seconds.",
-        "Cooldown reduced by 3 seconds.",
-        "Cooldown reduced by 3 seconds.",
-        "Fires 3 more projectile.",
-        "Cooldown reduced by 3 seconds.",
-        "Cooldown reduced by 3 seconds.",
-        "Cooldown reduced by 3 seconds. Base Damage up by 70."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Arch Angle",
       "requirements": [
         "Heaven Sword"
       ],
       "final_state": "Arch Angle",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12272,25 +11977,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Grand Cross and Heaven Sword. Central beam pulses when crosses pass through it.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Arch Angle",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12299,32 +11991,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Orbits around the character.",
-      "level_ups": [
-        "Orbits around the character.",
-        "Fires 1 more projectile.",
-        "Base Area up by 25%. Base Speed up by 30%.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 25%. Base Speed up by 30%.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Unholy Vespers",
       "requirements": [
         "Spellbinder"
       ],
       "final_state": "Ninth Circle",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "ix_divine_bloodline": "L",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -12333,25 +12007,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved King Bible. Never Ends.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Ninth Circle",
       "requirements": [
         "Icebrand"
       ],
       "final_state": "Ninth Circle",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12360,28 +12023,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires lingering projectiles. Might freeze enemies.",
-      "level_ups": [
-        "Fires lingering projectiles. Might freeze enemies.",
-        "Fires 1 more projectile. Passes through 1 more enemy.",
-        "Base Area up by 25%. Base Speed up by 30%.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
-        "Fires 1 more projectile. Passes through 1 more enemy.",
-        "Base Area up by 25%. Base Speed up by 30%.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
-        "Fires 1 more projectile. Passes through 1 more enemy."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Ninth Circle",
       "requirements": [
         "Unholy Vespers"
       ],
       "final_state": "Ninth Circle",
-      "arcana_ratings": {
-        "x_bloodline": "A",
-        "xiii_wicked_season": "S",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12390,20 +12039,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Icebrand and Unholy Vespers. Hell truly has frozen over.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ninth Circle",
-      "arcana_ratings": {
-        "0_game_killer": "R",
-        "x_bloodline": "A",
-        "xiii_wicked_season": "A",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12412,34 +12053,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at a random enemy, deals heavy damage.",
-      "level_ups": [
-        "Fires at a random enemy, deals heavy damage.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10. Base Speed up by 20%.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10. Base Speed up by 20%.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10. Base Speed up by 20%.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hellfire",
       "requirements": [
         "Spinach"
       ],
       "final_state": "Kardía Phlegeton",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -12448,28 +12069,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Fire Wand. Passes through enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Kardía Phlegeton",
       "requirements": [
         "Aura Blast"
       ],
       "final_state": "Kardía Phlegeton",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12478,61 +12085,28 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates explosive sideways.",
-      "level_ups": [
-        "Generates explosive sideways.",
-        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Base Area up by 20%. Cooldown reduced by 0.2 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Kardía Phlegeton",
       "requirements": [
         "Hellfire"
       ],
       "final_state": "Kardía Phlegeton",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
       "name": "Kardía Phlegeton",
-      "icon": "assets/icons/weapons/kardía_phlegeton.png",
+      "icon": "assets/icons/weapons/kardia_phlegeton.png",
       "category": "Union",
       "method": null,
       "description": "Union of Aura Blast and Hellfire. Calls forth a massive volcanic eruption.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Kardía Phlegeton",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12541,33 +12115,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damages nearby enemies. Reduces resistance to knockback and freeze.",
-      "level_ups": [
-        "Damages nearby enemies. Reduces resistance to knockback and freeze.",
-        "Base Area up by 40%. Base Damage up by 2.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 1.",
-        "Base Area up by 20%. Base Damage up by 1.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 2.",
-        "Base Area up by 20%. Base Damage up by 1.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 1.",
-        "Base Area up by 20%. Base Damage up by 2."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Soul Eater",
       "requirements": [
         "Pummarola"
       ],
       "final_state": "Dark Frogamorphosis",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "L",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -12576,27 +12131,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Garlic. Steals hearts. Power increases when recovering HP.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dark Frogamorphosis",
       "requirements": [
         "Anura"
       ],
       "final_state": "Dark Frogamorphosis",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S+",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Speculo Anura",
+      "icon": "assets/icons/weapons/speculo_anura.png",
+      "category": "Counterpart",
+      "method": "Arcana",
+      "description": "Summons frogs that damage enemies as they jump.",
+      "level_ups": [],
+      "trans_conditions": "Gemini (I)",
+      "trans_result": "Speculo Anura",
+      "requirements": [
+        "Anura"
+      ],
+      "final_state": "Speculo Anura",
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12605,33 +12163,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons frogs that damage enemies as they jump.",
-      "level_ups": [
-        "Summons frogs that damage enemies as they jump.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.[1]",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.[1]",
-        "Fires 1 more projectile. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dark Frogamorphosis",
       "requirements": [
         "Soul Eater"
       ],
       "final_state": "Dark Frogamorphosis",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S+",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12640,26 +12179,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Anura and Soul Eater. May actually eat enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dark Frogamorphosis",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S+",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12668,34 +12193,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones.",
-      "level_ups": [
-        "Generates damaging zones.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Effect lasts 0.3 seconds longer.[1] Base Damage up by 10.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Effect lasts 0.3 seconds longer.[1] Base Damage up by 5.",
-        "Base Area up by 20%. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "La Borra",
       "requirements": [
         "Attractorb"
       ],
       "final_state": "Hydro Pump Climax",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "L",
-        "x_bloodline": "S+",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 100
     },
     {
@@ -12704,25 +12209,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Santa water. Damaging zones follow you and grow when they move.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydro Pump Climax",
       "requirements": [
         "Hydro Storm"
       ],
       "final_state": "Hydro Pump Climax",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iv_awake": "S+",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12731,33 +12225,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates damaging waves based on Projectile Speed and Duration.",
-      "level_ups": [
-        "Generates damaging waves based on Projectile Speed and Duration.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 1.",
-        "Base Damage up by 1. Base Speed up by 25%.",
-        "Base Damage up by 1.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 1.",
-        "Base Damage up by 1.",
-        "Base Damage up by 1. Base Speed up by 25%.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 1."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydro Pump Climax",
       "requirements": [
         "La Borra"
       ],
       "final_state": "Hydro Pump Climax",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12766,24 +12241,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Hydro Storm and La Borra. It never rains but it pours.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Hydro Pump Climax",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12792,36 +12255,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Passes through enemies, bounces around.",
-      "level_ups": [
-        "Passes through enemies, bounces around.",
-        "Base Damage up by 5. Base Speed up by 20%.",
-        "Effect lasts 0.3 seconds longer.[1] Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5. Base Speed up by 20%.",
-        "Effect lasts 0.3 seconds longer.[1] Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "NO FUTURE",
       "requirements": [
         "Armor"
       ],
       "final_state": "Carnage Heart",
-      "arcana_ratings": {
-        "0_game_killer": "C",
-        "i_gemini": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vi_sarabande_of_healing": "A",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xv_disco_of_gold": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -12830,25 +12271,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Runetracer. Explodes when bouncing and in retaliation.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carnage Heart",
       "requirements": [
         "Troll Bomb"
       ],
       "final_state": "Carnage Heart",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "A",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12857,32 +12287,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "This one doesn't bounce.",
-      "level_ups": [
-        "This one doesn't bounce.",
-        "Cooldown reduced by 10 seconds.",
-        "Cooldown reduced by 10 seconds.",
-        "Cooldown reduced by 10 seconds.",
-        "Cooldown reduced by 10 seconds.",
-        "Cooldown reduced by 10 seconds.",
-        "Cooldown reduced by 10 seconds.",
-        "Base Damage up by 7000."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carnage Heart",
       "requirements": [
         "NO FUTURE"
       ],
       "final_state": "Carnage Heart",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "A",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -12891,24 +12303,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Troll Bomb and NO FUTURE. This one does in fact bounce.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Carnage Heart",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12917,33 +12317,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at random enemies.",
-      "level_ups": [
-        "Strikes at random enemies.",
-        "Fires 1 more projectile.",
-        "Base Area up by 100%. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 100%. Base Damage up by 20.",
-        "Fires 1 more projectile.",
-        "Base Area up by 100%. Base Damage up by 20.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Thunder Loop",
       "requirements": [
         "Duplicator"
       ],
       "final_state": "Vjaya Sisters",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "L",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -12952,23 +12333,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Lightning Ring. Projectiles strike twice.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vjaya Sisters",
       "requirements": [
         "Sword Brothers"
       ],
       "final_state": "Vjaya Sisters",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "xii_out_of_bounds": "L",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -12977,29 +12349,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Grants a brief moment of Invulnerability and generates a damaging wave.",
-      "level_ups": [
-        "Grants a brief moment of Invulnerability and generates a damaging wave.",
-        "Base Damage up by 10.",
-        "Cooldown reduced by 2 seconds.",
-        "Base Damage up by 10.",
-        "Cooldown reduced by 2 seconds.",
-        "Base Damage up by 10.",
-        "Cooldown reduced by 2 seconds.",
-        "Base Damage up by 30."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vjaya Sisters",
       "requirements": [
         "Thunder Loop"
       ],
       "final_state": "Vjaya Sisters",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "xii_out_of_bounds": "UL",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -13008,18 +12365,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Sword Brothers and Thunder Loop. Lightning triggers sword explosions with brief Invulnerability.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vjaya Sisters",
-      "arcana_ratings": {
-        "xiii_wicked_season": "A",
-        "xx_silent_old_sanctuary": "S",
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13028,30 +12379,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Erases everything in sight.",
-      "level_ups": [
-        "Erases everything in sight.",
-        "Cooldown reduced by 10 seconds.",
-        "25% chance not to erase items.",
-        "Cooldown reduced by 10 seconds.",
-        "45% chance not to erase items.",
-        "Cooldown reduced by 5 seconds.",
-        "65% chance not to erase items.",
-        "Cooldown reduced by 5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Gorgeous Moon",
       "requirements": [
         "Crown"
       ],
       "final_state": "Venus Crescent",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -13060,26 +12395,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Pentagram. Generates extra gems and gathers all of them.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Venus Crescent",
       "requirements": [
         "Summon Spirit Tornado"
       ],
       "final_state": "Venus Crescent",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xvi_slash": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13088,34 +12411,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons spirits that will occasionally pick up XP gems for you.",
-      "level_ups": [
-        "Summons spirits that will occasionally pick up XP gems for you.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Speed up by 50%.",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Speed up by 50%.",
-        "Fires 1 more projectile. Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Venus Crescent",
       "requirements": [
         "Gorgeous Moon"
       ],
       "final_state": "Venus Crescent",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vi_sarabande_of_healing": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xvi_slash": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -13124,24 +12427,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Summon Spirit Tornado and Gorgeous Moon. Love, Beauty and Light.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Venus Crescent",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13150,33 +12441,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Bombards in a circular area.",
-      "level_ups": [
-        "Bombards in a circling zone.",
-        "Fires 1 more projectile. Base Area up by 40%.",
-        "Fires 1 more projectile. Base Damage up by 10.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.[1]",
-        "Fires 1 more projectile. Base Area up by 40%.",
-        "Fires 1 more projectile. Base Damage up by 10.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.[1]",
-        "Fires 1 more projectile. Base Area up by 40%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vandalier",
       "requirements": [
         "Ebony Wings"
       ],
       "final_state": "Vandalier",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13185,25 +12457,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Bombards in a circular area.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Cygnus",
       "requirements": [
         "Peachone"
       ],
       "final_state": "Cygnus",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "S",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13212,33 +12473,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Bombards in a circular area.",
-      "level_ups": [
-        "Bombards in a circling zone.",
-        "Fires 1 more projectile. Base Area up by 40%.",
-        "Fires 1 more projectile. Base Damage up by 10.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.[1]",
-        "Fires 1 more projectile. Base Area up by 40%.",
-        "Fires 1 more projectile. Base Damage up by 10.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3.[1]",
-        "Fires 1 more projectile. Base Area up by 40%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vandalier",
       "requirements": [
         "Peachone"
       ],
       "final_state": "Vandalier",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S+",
-        "xiii_wicked_season": "S",
-        "xvi_slash": "UL",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13247,27 +12489,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Bombards in a circular area.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Zhar Ptytsia",
       "requirements": [
         "Ebony Wings"
       ],
       "final_state": "Zhar Ptytsia",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xi_waltz_of_pearls": "L",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13276,30 +12505,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Peachone and Ebony Wings.",
-      "level_ups": [
-        "Union of Ebony Wings and Peachone",
-        "Base Area up by 20%.",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Base Area up by 20%.",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Base Area up by 20%.",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vandalier",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "vi_sarabande_of_healing": "L",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13308,16 +12519,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [
-        "Fires quickly in four fixed directions.",
-        "Fires 1 more projectile.",
-        "Passes through 2 more enemies.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Passes through 2 more enemies.",
-        "Base Damage up by 5. Base Speed up by 50%.",
-        "Passes through 2 more enemies."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Phieraggi",
       "requirements": [
@@ -13325,16 +12527,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Phieraggi",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "UL",
-        "iv_awake": "S",
-        "vi_sarabande_of_healing": "UL",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13343,25 +12536,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Red Muscle",
       "requirements": [
         "Phiera Der Tuphello"
       ],
       "final_state": "Red Muscle",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13370,16 +12552,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [
-        "Fires quickly in four fixed directions.",
-        "Fires 1 more projectile.",
-        "Passes through 2 more enemies.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Passes through 2 more enemies.",
-        "Base Damage up by 5. Base Speed up by 50%.",
-        "Passes through 2 more enemies."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Phieraggi",
       "requirements": [
@@ -13387,17 +12560,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Phieraggi",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xvi_slash": "UL",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "R",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13406,27 +12569,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Twice Upon a Time",
       "requirements": [
         "Eight The Sparrow"
       ],
       "final_state": "Twice Upon a Time",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "L",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13435,26 +12585,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Phieraggi",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "UL",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13463,36 +12599,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Summons capricious projectiles. Might interact with pickups.",
-      "level_ups": [
-        "Summons capricious projectiles. Might interact with pickups.",
-        "Base Speed up by 20%.",
-        "Effect lasts 1.5 seconds longer.",
-        "Base Speed up by 20%.",
-        "Fires 1 more projectile.",
-        "Effect lasts 1.5 seconds longer.",
-        "Base Speed up by 20%.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vicious Hunger",
       "requirements": [
         "Stone Mask"
       ],
       "final_state": "Power of Lire",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "UL",
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xii_out_of_bounds": "A",
-        "xiii_wicked_season": "A",
-        "xiv_jail_of_crystal": "UL",
-        "xvii_lost_and_found_painting": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13501,9 +12615,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Summons capricious projectiles. Might interact with pickups.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Flock Destroyer",
       "requirements": [
@@ -13519,9 +12631,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Gatti Amari. Might turn anything into gold.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Power of Lire",
       "requirements": [
@@ -13537,16 +12647,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Damages all enemies in sight and attempts to turn them into hearts.",
-      "level_ups": [
-        "Damages all enemies in sight and attempts to turn them into hearts.",
-        "50% chance to generate a heart.",
-        "Cooldown reduced by 20 seconds.",
-        "Cooldown reduced by 20 seconds.",
-        "75% chance to generate a heart.",
-        "Base Damage up by 24.",
-        "Cooldown reduced by 20 seconds. Base Damage up by 30.",
-        "100% chance to generate a heart."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Power of Lire",
       "requirements": [
@@ -13562,21 +12663,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Soul Steal and Vicious Hunger. Devours enemies with insatiable greed.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Power of Lire",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13585,25 +12677,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks vertically, passes through enemies.",
-      "level_ups": [
-        "Attacks vertically, passes through enemies.",
-        "Base Area up by 100%.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 0.8 seconds.[1]",
-        "Base Area up by 25%. Base Damage up by 10.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 0.8 seconds.[1]",
-        "Base Area up by 25%. Base Damage up by 10.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 0.8 seconds.[1]",
-        "Base Area up by 25%. Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Mannajja",
       "requirements": [
         "Skull O'Maniac"
       ],
       "final_state": "Dies Irae",
-      "arcana_ratings": {
-        "ix_divine_bloodline": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13612,18 +12693,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Song of Mana. Might slow enemies down.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dies Irae",
       "requirements": [
         "Arrow of Goth"
       ],
       "final_state": "Dies Irae",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13632,16 +12709,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Critical hits maximise amount of projectiles.",
-      "level_ups": [
-        "Critical hits maximise amount of projectiles.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 5. Base Speed up by 50%.",
-        "Base Damage up by 20.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 5. Base Speed up by 50%.",
-        "Base Damage up by 20.",
-        "Fires 2 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dies Irae",
       "requirements": [
@@ -13657,16 +12725,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Arrow of Goth and Mannajja. Alamaric Snipers rain down arrows, even more so on critical hit.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dies Irae",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13675,25 +12739,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generating damaging zones when moving, strikes when stopping.",
-      "level_ups": [
-        "Generates damaging zones when moving, strikes when stopping.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 5.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 5.",
-        "Effect lasts 0.3 seconds longer.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Valkyrie Turner",
       "requirements": [
         "Wings"
       ],
       "final_state": "Darkness Illusion",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -13702,9 +12755,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Shadow Pinion. Bigger, longer, faster, stronger.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Darkness Illusion",
       "requirements": [
@@ -13720,26 +12771,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Geneartes damaging zones when moving.",
-      "level_ups": [
-        "Generates damaging zones when moving.",
-        "Base Area up by 30%.",
-        "Cooldown reduced by 1 second.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Area up by 30%.",
-        "Cooldown reduced by 1 second.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Darkness Illusion",
       "requirements": [
         "Valkyrie Turner"
       ],
       "final_state": "Darkness Illusion",
-      "arcana_ratings": {
-        "xii_out_of_bounds": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -13748,19 +12787,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Svarog Statue and Valkyrie Turner. Crimson clones dance with you in the flames.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Darkness Illusion",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L",
-        "iii_twilight_princess": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13769,15 +12801,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Chance to freeze enemies in time.",
-      "level_ups": [
-        "Chance to freeze enemies in time.",
-        "Effect lasts 1 seconds longer.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 1 seconds longer.",
-        "Effect lasts 1 seconds longer.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 1 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Infinite Corridor",
       "requirements": [
@@ -13785,10 +12809,7 @@ window.VS_DATA = {
         "Gold Ring"
       ],
       "final_state": "Infinite Corridor",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "iii_twilight_princess": "UL"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -13797,19 +12818,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Clock Lancet. Halves enemies' health.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Infinite Corridor",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L",
-        "iii_twilight_princess": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13818,20 +12832,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Shields from damage while active.",
-      "level_ups": [
-        "Shields from damage while active.",
-        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
-        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
-        "Gains 1 additional charge.",
-        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
-        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
-        "Gains 1 additional charge."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Crimson Shroud",
       "requirements": [
         "Metaglio Left",
-        "Metaglio Left"
+        "Metaglio Right"
       ],
       "final_state": "Crimson Shroud",
       "arcana_ratings": {},
@@ -13843,9 +12849,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -13859,25 +12863,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile.",
-      "level_ups": [
-        "Throws a bouncing projectile.",
-        "Base Area up by 20%. Effect lasts 0.2 seconds longer.",
-        "Fires 1 more projectile. Base Damage up by 20.",
-        "Base Area up by 20%. Base Speed up by 50%.",
-        "Fires 1 more projectile. Base Damage up by 20.",
-        "Effect lasts 0.2 seconds longer.",
-        "Base Damage up by 20.",
-        "Effect lasts 0.2 seconds longer. Base Speed increased by 50%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Anima of Mortaccio",
       "requirements": [
         "Chaos Malachite"
       ],
       "final_state": "Anima of Mortaccio",
-      "arcana_ratings": {
-        "x_bloodline": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -13886,16 +12879,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Bone. Projectiles accelerate when bouncing.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Anima of Mortaccio",
-      "arcana_ratings": {
-        "x_bloodline": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -13904,27 +12893,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile that explodes after some time.",
-      "level_ups": [
-        "Throws a bouncing projectile. Explodes, sometimes.",
-        "Base Area up by 25%. Base Speed up by 30%.",
-        "50% chance to explode.",
-        "Fires 1 more projectile.",
-        "Base Area up by 25%. Base Damage up by 5.",
-        "60% chance to explode.",
-        "Base Area up by 25%. Base Speed up by 30%.",
-        "Base Area up by 25%. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Yatta Daikarin",
       "requirements": [
         "Chaos Rosalia"
       ],
       "final_state": "Yatta Daikarin",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "vi_sarabande_of_healing": "L",
-        "x_bloodline": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -13933,44 +12909,28 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Yatta Daikarin",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "vi_sarabande_of_healing": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
       "name": "Carréllo",
-      "icon": "assets/icons/weapons/carréllo.png",
+      "icon": "assets/icons/weapons/carrello.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile. Number of bounces affected by Amount.",
-      "level_ups": [
-        "Throws a bouncing projectile. Number of bounces affected by Amount.",
-        "Base Area up by 20%.",
-        "Cooldown increased by 0.3 seconds. Base Damage up by 30.",
-        "Base Speed up by 50%.",
-        "Cooldown increased by 0.3 seconds. Base Damage up by 30.",
-        "Base Area up by 20%.",
-        "Cooldown increased by 0.3 seconds. Base Damage up by 30.",
-        "Base Speed up by 50%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carozza!",
       "requirements": [
         "Chaos Lazulia"
       ],
       "final_state": "Carozza!",
-      "arcana_ratings": {
-        "x_bloodline": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -13979,9 +12939,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Carréllo. Duration, Speed, and Area affect damage instead.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -13995,25 +12953,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile. Cooldown reduces when moving.",
-      "level_ups": [
-        "Throws a bouncing projectile. Cooldown reduces when moving.",
-        "Effect lasts 1 seconds longer.",
-        "Base Speed up by 30%.",
-        "Base Damage up by 5.",
-        "Base Speed up by 30%.",
-        "Fires 1 more projectile.",
-        "Base Speed up by 30%.",
-        "Defeated enemies might drop hearts."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Profusione D'Amore",
       "requirements": [
         "Chaos Altemanna"
       ],
       "final_state": "Profusione D'Amore",
-      "arcana_ratings": {
-        "x_bloodline": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -14022,9 +12969,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14038,24 +12983,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Generates bouncing projectiles.",
-      "level_ups": [
-        "Generates bouncing projectiles.",
-        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 10. Base Speed up by 50%.",
-        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "La Robba",
-      "arcana_ratings": {
-        "x_bloodline": "L",
-        "xii_out_of_bounds": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -14064,24 +12997,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Has a chance to summon light sources.",
-      "level_ups": [
-        "Has a chance to summon light sources.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 25%. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 25%. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile.",
-        "Enables finisher."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Greatest Jubilee",
-      "arcana_ratings": {
-        "xii_out_of_bounds": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -14090,14 +13011,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
-      "level_ups": [
-        "Fires three projectiles at a random enemy.",
-        "Base Damage up by 10.",
-        "Passes through 1 more enemy.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Passes through 1 more enemy.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Bi-Bracelet",
       "requirements": [],
@@ -14111,14 +13025,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
-      "level_ups": [
-        "Fires three projectiles at a random enemy.",
-        "Passes through 1 more enemy.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Effect lasts 0.2 seconds longer. Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Passes through 1 more enemy."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Tri-Bracelet",
       "requirements": [],
@@ -14132,23 +13039,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Fires three projectiles at a random enemy.",
-      "level_ups": [
-        "Fires three projectiles at a random enemy.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Effect lasts 0.2 seconds longer. Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile. Base Damage up by 20.",
-        "Effect lasts 0.2 seconds longer. Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile. Base Area up by 10%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lapiste Tepisto",
       "requirements": [
         "Kaiser Knuckle"
       ],
       "final_state": "Lapiste Tepisto",
-      "arcana_ratings": {
-        "vi_sarabande_of_healing": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14157,26 +13055,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Throws a flurry of close-range punches.",
-      "level_ups": [
-        "Throws a flurry of close-range punches.",
-        "Fires 2 more projectile.",
-        "Base Damage up by 10.",
-        "Base Area up by 20%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
-        "Base Area up by 20%.",
-        "Base Damage up by 10.",
-        "Base Area up by 10%. Cooldown reduced by 0.3 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lapiste Tepisto",
       "requirements": [
         "Tri-Bracelet"
       ],
       "final_state": "Lapiste Tepisto",
-      "arcana_ratings": {
-        "vi_sarabande_of_healing": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -14185,9 +13071,7 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Kaiser Knuckle and Tri-Bracelet. Launches a barrage of stony fists.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14201,9 +13085,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Gift",
       "description": "Allows you to choose any unlocked base weapon.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Use Once",
       "trans_result": "Super Candybox II Turbo",
       "requirements": [],
@@ -14217,9 +13099,7 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Candybox. Allows to choose among a selection of advanced weapons.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14233,16 +13113,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "May retaliate when losing health.",
-      "level_ups": [
-        "\"May retaliate when losing health.\"",
-        "Passes through 1 more enemy. Base Speed up by 30%.",
-        "Fires 1 more projectiles. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectiles. Base Damage up by 10.",
-        "Passes through 2 more enemies. Base Speed up by 30%.",
-        "Fires 1 more projectiles. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectiles. Passes through 3 more enemies.",
-        "Fires 1 more projectiles. Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Mazo Familiar",
       "requirements": [
@@ -14258,9 +13129,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pako Battiliar. Damage and Amount affected by Max Health.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14274,26 +13143,31 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
-      "level_ups": [
-        "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
-        "Base Area up by 10%. Passes through 3 more enemies.",
-        "Fires 1 more projectile. Base Damage up by 1.",
-        "Fires 1 more projectile. Base Damage up by 1.",
-        "Base Area up by 10%. Passes through 3 more enemies.",
-        "Fires 1 more projectile. Base Damage up by 1.",
-        "Base Damage up by 3.",
-        "Fires 2 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Gunastrophe",
       "requirements": [
         "Bracer"
       ],
       "final_state": "Gunastrophe",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
+    },
+    {
+      "name": "Horse Cartridge",
+      "icon": "assets/icons/weapons/horse_cartridge.png",
+      "category": "Counterpart",
+      "method": "Arcana",
+      "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
+      "level_ups": [],
+      "trans_conditions": "Gemini (I)",
+      "trans_result": "Horse Cartridge",
+      "requirements": [
+        "Ammo Appalate"
+      ],
+      "final_state": "Horse Cartridge",
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Gunastrophe",
@@ -14301,16 +13175,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gunastrophe",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14319,31 +13189,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Gift",
       "description": "Strikes with a combo attack at the nearest enemy. Retaliates.",
-      "level_ups": [
-        "Strikes with a combo attack at the nearest enemy. Retaliates.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Enables critical hits and combo finisher.",
-        "Base Damage up by 10.",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Cooldown reduced by 0.3 seconds.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Sole Solution",
       "requirements": [
-        "Torona's Box"
+        "Torrona's Box"
       ],
       "final_state": "Victory Sword",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 30
     },
     {
@@ -14352,17 +13205,12 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Victory Sword. The more enemies are defeated, the stronger it grows.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sole Solution",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14371,27 +13219,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Emits cones of flames.",
-      "level_ups": [
-        "Emits cones of flames.",
-        "Base Speed up by 25%.",
-        "Base Damage up by 10.",
-        "Base Area up by 50%. Cooldown reduced by 0.5 seconds.",
-        "Base Speed up by 25%.",
-        "Base Damage up by 10.",
-        "Base Area up by 50%. Cooldown reduced by 0.5 seconds.",
-        "Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": "Ashes of Muspell",
       "requirements": [
-        "Torona's Box"
+        "Torrona's Box"
       ],
       "final_state": "Ashes of Muspell",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xiv_jail_of_crystal": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 30
     },
     {
@@ -14400,18 +13235,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ashes of Muspell",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xiv_jail_of_crystal": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14420,25 +13249,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
-      "level_ups": [
-        "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
-        "Fires 1 more projectile.[1]",
-        "Fires 1 more projectile. Base Area up by 10%.[1]",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 5.",
-        "Fires 1 more projectile.[1]",
-        "Fires 1 more projectile. Base Area up by 10%.[1]",
-        "Fires 1 more projectile.[1]",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Spirit Disturbance",
       "requirements": [
         "Tirajisú"
       ],
       "final_state": "Spirit Disturbance",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -14447,16 +13265,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Unearthly Bolt. Always deals critical hits.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Disturbance",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14465,25 +13279,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Stronger with movement, Orologions, and against frozen enemies",
-      "level_ups": [
-        "Stronger with movement, Orologions, and against frozen enemies.",
-        "Base Area up by 10%. Base Damage up by 2.5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 2.5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 2.5.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Base Damage up by 2.5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Celestial Voulge",
       "requirements": [
         "Wings"
       ],
       "final_state": "Celestial Voulge",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -14492,16 +13295,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Celestial Voulge",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14509,17 +13308,13 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/penshin_fatcha.png",
       "category": "Base",
       "method": "Evolution",
-      "description": "A selection of aquatic armaments that can evolve endlessly. (Default)|\r\nChoose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved",
-      "level_ups": [
-        "-"
-      ],
+      "description": "A selection of aquatic armaments that can evolve endlessly. (Default)|\nChoose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved",
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -14528,14 +13323,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Basic tuna. Level up bonuses focus on Speed.",
-      "level_ups": [
-        "Basic tuna. Level up bonuses focus on Speed.",
-        "Base Speed up by 10%.",
-        "Base Damage up by 10.",
-        "Base Speed up by 10%.",
-        "Fires 1 more projectile.",
-        "Base Speed up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -14549,14 +13337,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Whipped tuna. Level up bonuses focus on Duration.",
-      "level_ups": [
-        "Whipped tuna. Level up bonuses focus on Duration.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 10.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Speed up by 10%.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -14570,14 +13351,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Freshwater tuna. Level up bonuses focus on Cooldown.",
-      "level_ups": [
-        "Freshwater tuna. Level up bonuses focus on Cooldown.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Base Damage up by 10.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Cooldown reduced by 0.4 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -14591,14 +13365,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Heavenly tuna. Level up bonuses focus on Amount.",
-      "level_ups": [
-        "Heavenly tuna. Level up bonuses focus on Amount.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%.",
-        "Fires 2 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -14612,21 +13379,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
-      "level_ups": [
-        "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
-        "Base Area up by 10%.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Area up by 10%.",
-        "Base Damage up by 10.",
-        "Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {
-        "vi_sarabande_of_healing": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -14635,21 +13393,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Premium tuna. Level up bonuses focus on Might.",
-      "level_ups": [
-        "Premium tuna. Level up bonuses focus on Might.",
-        "Base Damage up by 10.",
-        "Base Speed up by 10%.",
-        "Base Damage up by 10.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Base Damage up by 20."
-      ],
+      "level_ups": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
-      "arcana_ratings": {
-        "vi_sarabande_of_healing": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -14658,9 +13407,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve.",
-      "level_ups": [
-        "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14674,16 +13421,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Duration affects Amount. Can deal critical damage.",
-      "level_ups": [
-        "Duration affects amount. Can deal critical damage.",
-        "Base Area up by 50%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 10.",
-        "Base Area up by 50%. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base damage up by 10.",
-        "Base damage up by 30."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Seraphic Cry",
       "requirements": [
@@ -14699,9 +13437,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Duration affects Amount. Can deal critical damage.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Levelin'Eh",
       "requirements": [
@@ -14717,9 +13453,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14733,25 +13467,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Might Defang enemies.",
-      "level_ups": [
-        "Might Defang enemies.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.2 seconds longer.",
-        "Base Area up by 15%.[1]",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.2 seconds longer.",
-        "Base Area up by 15%.[2]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Embrace of Gaea",
       "requirements": [
         "Parm Aegis"
       ],
       "final_state": "Embrace of Gaea",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14760,16 +13483,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Embrace of Gaea",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14778,26 +13497,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Deals fixed damage based on Weapon Level.",
-      "level_ups": [
-        "\"Deals fixed damage based on Weapon Level.\"",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Speed up by 20%.[1]",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Speed up by 20%.[1]",
-        "Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Kyra-Stones",
       "requirements": [
         "Karoma's Mana"
       ],
       "final_state": "Kyra-Stones",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -14806,9 +13513,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -14822,16 +13527,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates thin damaging zones. High Amount scaling.",
-      "level_ups": [
-        "Generates thin damaging zones. High Amount scaling.",
-        "Fires 1 more projectile.",
-        "Base Area up by 50%. Base Damage up by 3.",
-        "Fires 1 more projectile.",
-        "Base Area up by 50%. Base Damage up by 3.",
-        "Fires 1 more projectile.",
-        "Base Area up by 50%. Base Damage up by 4.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Photonstorm",
       "requirements": [
@@ -14847,16 +13543,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Phas3r. Fires 2 to 5 times more projectiles depending on Luck.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Photonstorm",
-      "arcana_ratings": {
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14865,23 +13557,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose an extra passive weapon.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Arma Dio",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xiii_wicked_season": "A",
-        "xviii_boogaloo_of_illusions": "S",
-        "xix_heart_of_fire": "L",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -14890,26 +13571,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Speed and Duration affect the number of hit boxes instead.",
-      "level_ups": [
-        "Speed and Duration affect the number of hit boxes instead.",
-        "Fires 1 more projectile.",
-        "Passes through 1 more enemy.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Passes through 1 more enemy.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Wicked Ruler",
       "requirements": [
         "Spellbinder"
       ],
       "final_state": "Wicked Ruler",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 40
     },
     {
@@ -14918,16 +13587,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Chaos Rune. Exerts control over wild magical forces.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wicked Ruler",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14936,27 +13601,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Defeated enemies might drop hearts.",
-      "level_ups": [
-        "\"Defeated enemies might drop hearts.\"",
-        "Fires 2 more projectiles.[2]",
-        "Base Damage up by 5. Base Speed up by 10%.",
-        "Effect lasts 0.3 seconds longer.[1] Base Damage up by 5.",
-        "Fires 2 more projectiles.[2]",
-        "Base Damage up by 5. Base Speed up by 10%.",
-        "Effect lasts 0.3 seconds longer.[1] Base Damage up by 5.",
-        "Fires 2 more projectiles.[2]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Festive Winds",
       "requirements": [
         "Pummarola"
       ],
       "final_state": "Festive Winds",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L",
-        "ix_divine_bloodline": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -14965,16 +13617,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Silver Wind. Weakens enemies defenses.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Festive Winds",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -14983,26 +13631,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates 4 explosions. Amount and Duration affect damage instead.",
-      "level_ups": [
-        "Generates 4 explosions. Amount and Duration affect damage instead.",
-        "Base Area up by 100%.",
-        "Base Area up by 50%.",
-        "Base Area up by 50%. Cooldown increased by 0.5 seconds.[1]",
-        "Base Area up by 50%.",
-        "Base Area up by 50%.",
-        "Base Area up by 50%. Cooldown increased by 0.5 seconds.[1]",
-        "Base Area up by 50%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Godai Shuffle",
       "requirements": [
         "Candelabrador"
       ],
       "final_state": "Godai Shuffle",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15011,17 +13647,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Four Seasons. Generates an additional explosion.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Godai Shuffle",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15030,26 +13661,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones above the character.",
-      "level_ups": [
-        "\"Generates damaging zones above the character.\"",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.3 seconds longer.[1]",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Echo Night",
       "requirements": [
         "Duplicator"
       ],
       "final_state": "Echo Night",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15058,16 +13677,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Summon Night. Generates damaging zones below the character.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Echo Night",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15076,25 +13691,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates freezing static projectiles with a chance to explode.",
-      "level_ups": [
-        "\"Generates freezing mines with a chance to explode.\"",
-        "Effect lasts 1 seconds longer.",
-        "Effect lasts 1 seconds longer. Base Damage up by 10.",
-        "10% chance to explode.",
-        "Effect lasts 1 seconds longer.",
-        "Effect lasts 1 seconds longer. Base Damage up by 10.",
-        "20% chance to explode.",
-        "Base Damage up by 20."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "J'Odore",
       "requirements": [
         "Attractorb"
       ],
       "final_state": "J'Odore",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15103,16 +13707,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mirage Robe. Projectiles move and confuse enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "J'Odore",
-      "arcana_ratings": {
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15121,25 +13721,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
-      "level_ups": [
-        "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Muramasa",
       "requirements": [
         "Stone Mask"
       ],
       "final_state": "Muramasa",
-      "arcana_ratings": {
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 30
     },
     {
@@ -15148,16 +13737,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Muramasa",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15166,25 +13751,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires lingering projectiles.",
-      "level_ups": [
-        "\"Fires lingering projectiles.\"",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Boo Roo Boolle",
       "requirements": [
         "Spellbinder"
       ],
       "final_state": "Boo Roo Boolle",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -15193,9 +13767,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -15209,16 +13781,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Actually it's just 8. Damage affected by the difference between Curse and Luck.",
-      "level_ups": [
-        "\"Actually it's just 8. Damages nearby enemies.\"",
-        "Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Damage up by 4."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -15232,14 +13795,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Strikes at nearby enemies. Damage multiplied by Speed.",
-      "level_ups": [
-        "\"Strikes at nearby enemies. Damage multiplied by Speed.\"",
-        "Fires 1 more projectile.[1]",
-        "Fires 1 more projectile. Base Damage up by 1.[1]",
-        "Fires 1 more projectile.[1]",
-        "Fires 1 more projectile. Base Damage up by 1.[1]",
-        "Fires 1 more projectile.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "SpellStrom",
       "requirements": [
@@ -15256,14 +13812,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates an expanding damaging zone. Damage multiplied by Area.",
-      "level_ups": [
-        "\"Generates an expanding damaging zone. Damage multiplied by Area.\"",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Base Area up by 20%. Effect lasts 0.3 seconds longer.[1]",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Base Area up by 20%. Effect lasts 0.3 seconds longer.[1]",
-        "Base Area up by 20%. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "SpellStrom",
       "requirements": [
@@ -15280,14 +13829,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Strikes at the nearest enemy. Damage further multiplied by Might.",
-      "level_ups": [
-        "\"Stikes at the nearest enemy. Damage further multiplied by Might.\"",
-        "Cooldown reduced by 0.3 seconds.",
-        "Base Damage up by 40.",
-        "Cooldown reduced by 0.3 seconds.",
-        "Base Damage up by 40.",
-        "Cooldown reduced by 0.3 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "SpellStrom",
       "requirements": [
@@ -15295,11 +13837,7 @@ window.VS_DATA = {
         "SpellStream"
       ],
       "final_state": "SpellStrom",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xii_out_of_bounds": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -15308,18 +13846,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "SpellStrom",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "xii_out_of_bounds": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15328,26 +13860,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks nearby enemies. Retaliates.",
-      "level_ups": [
-        "\"Attacks nearby enemies. Retaliates.\"",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Base Area up by 10%. Base Damage up by 5.",
-        "Every fifth activation has a combo finisher.",
-        "Base Area up by 10%. Base Damage up by 5.",
-        "Base Damage up by 5.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Legionnaire",
       "requirements": [
         "Armor"
       ],
       "final_state": "Legionnaire",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xii_out_of_bounds": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -15356,9 +13876,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -15372,16 +13890,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Can deal critical damage. Amount affects damage instead.",
-      "level_ups": [
-        "\"Can deal critical damage. Amount affects damage instead\"",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 25%.",
-        "Passes through 7 more enemies. Base Damage up by 10.",
-        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
-        "Passes through 7 more enemies. Base Damage up by 10.",
-        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
-        "Passes through 7 more enemies. Base Damage up by 10.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 25%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Millionaire",
       "requirements": [
@@ -15397,16 +13906,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Millionaire",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15415,26 +13920,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
-      "level_ups": [
-        "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
-        "Fires 1 more projectile. Base Area up by 40%.",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Fires 1 more projectile. Base Area up by 40%.",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Cooldown reduced by 0.3 seconds.[1]",
-        "Fires 1 more projectile. Base Speed up by 40%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Luminaire",
       "requirements": [
         "Crown"
       ],
       "final_state": "Luminaire",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -15443,16 +13936,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Prismatic Missile. Increases the value of gems and coins on the ground.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Luminaire",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15461,25 +13950,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Has a chance to slow enemies down.",
-      "level_ups": [
-        "Has a chance to slow enemies down.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10.",
-        "Base Area up by 50%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Ophion",
       "requirements": [
         "Skull O'Maniac"
       ],
       "final_state": "Ophion",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -15488,18 +13966,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Counterpart to Shadow Servant and Ophion from Arcana I - Gemini",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Silver Sliver",
       "requirements": [
         "Shadow Servant"
       ],
       "final_state": "Silver Sliver",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15508,16 +13982,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Shadow Servant. Has a chance to instantly kill enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ophion",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15526,24 +13996,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Throws bouncing projectiles.",
-      "level_ups": [
-        "Throws bouncing projectiles.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Speed up by 20%.",
-        "Base Damage up by 10.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Speed up by 20%.",
-        "Base Damage up by 10.",
-        "Effect lasts 1 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Party Popper",
-      "arcana_ratings": {
-        "xiv_jail_of_crystal": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 1
     },
     {
@@ -15552,19 +14010,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Counterpart to Party Popper from Arcana I - Gemini",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Party Pooper",
       "requirements": [
         "Party Popper"
       ],
       "final_state": "Party Pooper",
-      "arcana_ratings": {
-        "xiv_jail_of_crystal": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15573,25 +14026,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damages enemies and pushes them away.",
-      "level_ups": [
-        "\"Damages enemies and pushes them away.\"",
-        "Base Damage up by 5.",
-        "Knockback factor increased by 10.[1]",
-        "Base damage up by 10.",
-        "Knockback factor increased by 10.[1]",
-        "Base Damage up by 10.",
-        "Knockback factor increased by 10.[1]",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Emergency Meeting",
       "requirements": [
         "Mini Crewmate"
       ],
       "final_state": "Emergency Meeting",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15600,16 +14042,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Report! Occasionally destroys all of one type of enemy.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Emergency Meeting",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15618,26 +14056,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "The amount of Luck is affected by Amount and by low Luck.",
-      "level_ups": [
-        "\"The amount of attacks is affected by Amount and by low luck.\"",
-        "Base Area up by 25%.[1]",
-        "Base Damage up by 5. Base Speed up by 10%.[1]",
-        "Fires 1 more projectile. Base Damage up by 5.[1]",
-        "Base Damage up by 5. Base Speed up by 10%.[1]",
-        "Fires 1 more projectile. Base Damage up by 5.[1]",
-        "Base Damage up by 5. Base Speed up by 10%.[1]",
-        "Fires 1 more projectile. Base Area up by 25%.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Crossed Wires",
       "requirements": [
         "Mini Engineer"
       ],
       "final_state": "Crossed Wires",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15646,17 +14072,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lucky Swipe. Attacks in up to four directions.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Crossed Wires",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15665,25 +14086,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Restores HP based on Amount and Recovery.",
-      "level_ups": [
-        "\"Restores HP based on Amount and Recovery.\"",
-        "Fires 1 more projectile. Cooldown reduced by 2 seconds.",
-        "Cooldown reduced by 2 seconds.",
-        "Fires 1 more projectile. Cooldown reduced by 2 seconds.",
-        "Cooldown reduced by 2 seconds.",
-        "Fires 1 more projectile. Cooldown reduced by 2 seconds.",
-        "Cooldown reduced by 2 seconds.",
-        "Cooldown reduced by 3 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Paranormal Scan",
       "requirements": [
         "Mini Ghost"
       ],
       "final_state": "Paranormal Scan",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 40
     },
     {
@@ -15692,16 +14102,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lifesign Scan. Periodically grants a random stat boost for the rest of the run.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Paranormal Scan",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15710,26 +14116,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Destroys or heavily damages enemies. Amount affects how many times it can trigger.",
-      "level_ups": [
-        "\"Destroys or heavily damages enemies. Amount affects how many times it can trigger.\"",
-        "Vent uses increased by 1.",
-        "Base Area up by 50%.",
-        "Vent uses increased by 2.",
-        "Cooldown reduced by 1 seconds.",
-        "Vent uses increased by 2.",
-        "Base Area up by 50%.",
-        "Vent uses increased by 2."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Unjust Ejection",
       "requirements": [
         "Mini Shapeshifter"
       ],
       "final_state": "Unjust Ejection",
-      "arcana_ratings": {
-        "xvi_slash": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15738,17 +14132,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Just Vent. Sucks in enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Unjust Ejection",
-      "arcana_ratings": {
-        "xvi_slash": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15757,25 +14146,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates projectile spawning zones that follow the player.",
-      "level_ups": [
-        "\"Generates projectile spawning zones that follow the player.\"",
-        "Effects last 0.5 seconds longer. Passes through 2 more enemies.",
-        "Base Damage up by 2. Base Speed up by 30%.",
-        "Effects last 0.5 seconds longer. Passes through 2 more enemies.",
-        "Base Damage up by 2. Base Speed up by 30%.",
-        "Effects last 0.5 seconds longer. Passes through 2 more enemies.",
-        "Fires 5 more projectiles. Base Damage up by 2.[1]",
-        "Fires 5 more projectiles. Passes through 2 more enemies.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Clear Asteroids",
       "requirements": [
         "Mini Guardian"
       ],
       "final_state": "Clear Asteroids",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15784,16 +14162,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Clear Debris. Amount creates cluster explosions.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Clear Asteroids",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15802,25 +14176,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes enemies in front of you. Damage multiplied by Recovery.",
-      "level_ups": [
-        "\"Licks enemies in front of you. Damage multiplied by Recovery.\"",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile. Base Area up by 20%.",
-        "Base Damage up by 10.",
-        "Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Impostongue",
       "requirements": [
         "Mini Impostor"
       ],
       "final_state": "Impostongue",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15829,18 +14192,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Strikes enemies behind you. Damage multiplied by Recovery.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Silver Tongue",
       "requirements": [
         "Sharp Tongue"
       ],
       "final_state": "Silver Tongue",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15849,16 +14208,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sharp Tongue. Deals high damage to the strongest enemy and anything in its path.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Impostongue",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15867,25 +14222,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.",
-      "level_ups": [
-        "\"Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.\"",
-        "Fires 1 more projectile. Base Area up by 30%.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Base Area up by 30%.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Base Area up by 30%.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Rocket Science",
       "requirements": [
         "Mini Scientist"
       ],
       "final_state": "Rocket Science",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15894,9 +14238,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Science Rocks. Triggers a finisher when the right conditions are met.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -15910,16 +14252,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Throws cute bouncing projectiles with random properties.",
-      "level_ups": [
-        "Throws cute bouncing projectiles with random properties.",
-        "Base Area up by 10%. Effect lasts 0.4 seconds longer.",
-        "Fires 1 more projectiles. Base Damage up by 5.",
-        "Base Area up by 10%. Effect lasts 0.4 seconds longer.",
-        "Fires 1 more projectiles. Base Damage up by 5.",
-        "Base Area up by 10%. Effect lasts 0.4 seconds longer.",
-        "Fires 1 more projectiles. Base Damage up by 5.",
-        "Base Speed up by 50%."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -15933,25 +14266,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires constantly in the faced direction.",
-      "level_ups": [
-        "Fires constantly in the faced direction.",
-        "Cooldown reduced by 20ms.",
-        "Cooldown reduced by 20ms.",
-        "Cooldown reduced by 20ms.",
-        "Base Damage up by 5.",
-        "Cooldown reduced by 20ms.",
-        "Passes through 1 more enemy.",
-        "Cooldown reduced by 20ms."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Prototype A",
       "requirements": [
         "Weapon Power-Up"
       ],
       "final_state": "Prototype A",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -15960,16 +14282,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Long Gun. Calls forth 2 drones for support fire.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype A",
-      "arcana_ratings": {
-        "vii_iron_blue_will": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -15978,16 +14296,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires bursts of decaying projectiles horizontally.",
-      "level_ups": [
-        "Fires bursts of decaying projectiles horizontally.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 10.",
-        "Passes through 1 more enemy.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 10.",
-        "Passes through 1 more enemy.",
-        "Base Damage up by 20."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Prototype B",
       "requirements": [
@@ -15995,9 +14304,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Prototype B",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16006,16 +14313,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Short Gun. Calls forth 2 drones for support fire.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype B",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16024,16 +14327,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires in a wide spread in the faced direction.",
-      "level_ups": [
-        "Fires in a wide spread in the faced direction.",
-        "Fires 2 more projectiles.",
-        "Fires 2 more projectiles. Base Speed up by 50%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.",
-        "Fires 2 more projectiles. Base Speed up by 50%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.",
-        "Fires 2 more projectiles. Base Speed up by 50%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Prototype C",
       "requirements": [
@@ -16050,9 +14344,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Spread Shot. Calls forth 2 drones for support fire.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16066,16 +14358,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a piercing projectile in the faced direction.",
-      "level_ups": [
-        "Fires a piercing projectile in the faced direction.",
-        "Base Damage up by 5. Base Speed up by 20%.",
-        "Effect lasts 0.2 seconds longer. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5. Base Speed up by 20%.",
-        "Effect lasts 0.2 seconds longer. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.4 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "C-U-Laser",
       "requirements": [
@@ -16083,10 +14366,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Pronto Beam",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16095,17 +14375,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved C-U-Laser. Lasers split into multiple beams when they hit.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pronto Beam",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "xix_heart_of_fire": "UL"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16114,16 +14389,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles at the nearest enemy.",
-      "level_ups": [
-        "Fires spinning projectiles at the nearest enemy.",
-        "Fires 1 more projectiles.",
-        "Base Speed up by 30%",
-        "Base Damage up by 10.",
-        "Fires 1 more projectiles.",
-        "Base Speed up by 30%.",
-        "Base Damage up by 10.",
-        "Base Speed up by 40%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Fire-L3GS",
       "requirements": [
@@ -16131,10 +14397,7 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "Fire-L3GS",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16143,17 +14406,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Firearm. Fires again when destroying a light source or destructible item.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Fire-L3GS",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16162,16 +14420,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires growing projectiles in the faced direction.",
-      "level_ups": [
-        "Fires growing projectiles in the faced direction.",
-        "Base Area up by 50%. Passes through 1 more enemy.",
-        "Fires 1 more projectile. Effect lasts 4 seconds longer.",
-        "Base Area up by 50%. Base Damage up by 5.",
-        "Cooldown reduced by 0.5 seconds. Passes through 1 more enemy.",
-        "Fires 1 more projectile. Effect lasts 4 seconds longer.",
-        "Base Area up by 50%. Base Damage up by 5.",
-        "Effect lasts 4 seconds longer. Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Wave Beam",
       "requirements": [
@@ -16179,10 +14428,7 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Wave Beam",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "xiv_jail_of_crystal": "UL"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16191,17 +14437,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wave Beam",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16210,16 +14451,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires exploding projectiles that home in on enemies.",
-      "level_ups": [
-        "Fires exploding projectiles that home in on enemies.",
-        "Fires 1 more projectiles.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Passes through 1 more enemy.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectiles.",
-        "Passes through 1 more enemy.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Multistage Missiles",
       "requirements": [
@@ -16227,10 +14459,7 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Multistage Missiles",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16239,16 +14468,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Homing Miss. Projectiles split into smaller ones when they hit.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Multistage Missiles",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16257,16 +14482,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires explosive projectiles that travel along walls.",
-      "level_ups": [
-        "Fires explosive projectiles that travel along walls.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 10.",
-        "Fires 1 more projectile. Base Speed up by 40%.",
-        "Base Area up by 30%. Base Damage up by 10.",
-        "Fires 1 more projectile. Effect lasts 5 seconds longer.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 10.",
-        "Fires 1 more projectile. Effect lasts 5 seconds longer.",
-        "Effect lasts 10 seconds longer. Base Speed up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Atmo-Torpedo",
       "requirements": [
@@ -16274,10 +14490,7 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "Atmo-Torpedo",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16286,17 +14499,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Diver Mines. Creates damaging zones that attract enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Atmo-Torpedo",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16305,16 +14513,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires homing projectiles that spin in place when they hit.",
-      "level_ups": [
-        "Fires homing projectiles that spin in place when they hit.",
-        "Baase Damage up by 10.",
-        "Effect lasts 0.1 seconds longer.[1] Base Speed up by 25%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.1 seconds.",
-        "Base Damage up by 10.",
-        "Effect lasts 0.1 seconds longer.[1] Base Speed up by 25%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.1 seconds.",
-        "Effect lasts 0.2 seconds longer.[2]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "BFC2000-AD",
       "requirements": [
@@ -16322,9 +14521,7 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "BFC2000-AD",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16333,17 +14530,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "BFC2000-AD",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xi_waltz_of_pearls": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16352,16 +14544,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Has a small chance to freeze enemies.",
-      "level_ups": [
-        "Has a small chance to freeze enemies.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.[1]",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 5.",
-        "Base Area up by 20%. Base Speed up by 20%.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Time Warp",
       "requirements": [
@@ -16369,10 +14552,7 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Time Warp",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iii_twilight_princess": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16381,18 +14561,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Has a small chance to freeze enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Prism Damsel",
       "requirements": [
         "Prism Lass"
       ],
       "final_state": "Prism Damsel",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16401,17 +14577,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Prism Lass. May freeze, slow down, or DeFang enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Time Warp",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iii_twilight_princess": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16420,16 +14591,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Cooldown is affected by missing health.",
-      "level_ups": [
-        "Cooldown is affected by missing health.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
-        "Base Area up by 50%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
-        "Base Area up by 50%. Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Area up by 50%. Base Damage up by 5.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Big Fuzzy Fist",
       "requirements": [
@@ -16437,10 +14599,7 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Big Fuzzy Fist",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iii_twilight_princess": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -16449,16 +14608,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Metal Claw. Pummels the most powerful enemies in sight.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Big Fuzzy Fist",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16467,26 +14622,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Grows stronger every time a boss enemy is defeated.",
-      "level_ups": [
-        "Grows stronger every time a boss enemy is defeated.",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Base Damage up by 10.",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Base Damage up by 10.",
-        "Base Area up by 20%. Base Damage up by 5.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vampire Killer",
       "requirements": [
         "Tirajisú"
       ],
       "final_state": "Vampire Killer",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "iii_twilight_princess": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -16495,17 +14638,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Alchemy Whip. Every 3rd activation fires additional projectiles. Intense sunlught incinerates boss enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vampire Killer",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16514,26 +14652,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damage affected by growth.",
-      "level_ups": [
-        "Damage affected by growth.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Base Area up by 20%.",
-        "Base Damage up by 5.",
-        "Base Area up by 20%.",
-        "Base Damage up by 5.",
-        "Cooldown reduced by 0.2 seconds.[1]"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Spirit Tornado Tip",
       "requirements": [
         "Crown"
       ],
       "final_state": "Spirit Tornado Tip",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "ii_twilight_requiem": "UL"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -16542,17 +14668,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Wind Whip. Every 7th activation summons a spirit that violently collects XP gems for you.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Tornado Tip",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16561,26 +14682,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Every 3rd activation fires projectiles in fixed directions.",
-      "level_ups": [
-        "Every 3rd activation fires projectiles in fixed directions.",
-        "Fires 1 more projectile. Passes through 2 more enemies.",
-        "Base Area up by 20%. Base Damage up by 10.",
-        "Fires 1 more projectile. Passes through 2 more enemies.",
-        "Base Damage up by 10. Base Speed up by 20%.",
-        "Fires 1 more projectile. Passes through 2 more enemies.",
-        "Cooldown reduced by 1 seconds. Base Damage up by 10.",
-        "Passes through 6 more enemies."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Cross Crasher Tip",
       "requirements": [
         "Clover"
       ],
       "final_state": "Cross Crasher Tip",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -16589,17 +14698,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Platinum Whip. Every 7th activation also fires special projectiles.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cross Crasher Tip",
-      "arcana_ratings": {
-        "i_gemini": "X",
-        "ii_twilight_requiem": "UL"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -16608,26 +14712,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Every 7th activation fires a snaking dragon projectile.",
-      "level_ups": [
-        "Every 7th activation fires a snaking dragon projectile.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.3 seconds longer.",
-        "Base area up by 20%.",
-        "Base damage up by 10.",
-        "Effect lasts 0.3 seconds longer.",
-        "Base area up by 20%.",
-        "Base damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydrostormer Tip",
       "requirements": [
         "Attractorb"
       ],
       "final_state": "Hydrostormer Tip",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -16636,9 +14728,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Dragon Water Whip. Every 13th activation generates damaging waves based on Projectile Speed and Duration.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16652,16 +14742,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Chance to instant kill based on curse.",
-      "level_ups": [
-        "\"Chance to instant kill based on curse.\"",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 30%.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Area up by 30%.",
-        "Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Crissaegrim Tip",
       "requirements": [
@@ -16677,9 +14758,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Whip. Every 5th activation also triggers a blast of damaging waves.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16693,16 +14772,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a linear damaging zone.",
-      "level_ups": [
-        "Strikes at the nearest enemy and generates a linear damaging zone.",
-        "Base damage up by 10.",
-        "Fires 2 more projectile.",
-        "Base area up by 30%.",
-        "Base damage up by 10.",
-        "Fires 2 more projectile.",
-        "Cooldown reduced by 1 seconds.",
-        "Fires 2 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Mormegil Tip",
       "requirements": [
@@ -16718,9 +14788,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Jet Black Whip. Every 8th activation also triggers damaging zones.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16734,16 +14802,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a cluster of explosions.",
-      "level_ups": [
-        "\"Strikes at the nearest enemy and generates a cluster of explosions.\"",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Daybreaker Tip",
       "requirements": [
@@ -16759,9 +14818,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Vibhuti Whip. Critical hits maximise amount of projectiles.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16775,16 +14832,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
-      "level_ups": [
-        "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
-        "Base Area up by 20%.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 10.",
-        "Fires 2 more projectiles.Base Area up by 20%.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 10. Base Area up by 20%.",
-        "Fires 2 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Aurablaster Tip",
       "requirements": [
@@ -16800,9 +14848,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Vanitas Whip. Every 7th activation generates an explosion.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16816,16 +14862,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires projectiles in the faced direction.",
-      "level_ups": [
-        "Fires projectiles in the faced direction.",
-        "Fires 1 more projectile.",
-        "Pass through 1 more enemy.",
-        "Fires 1 more projectile. Base damage up by 5.",
-        "Pass through 1 more enemy.",
-        "Fires 1 more projectile.",
-        "Pass through 1 more enemy. Base damage up by 5.",
-        "Fires 2 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Yagyu Shuriken",
       "requirements": [
@@ -16841,9 +14878,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Shuriken. Fires with no delay.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16857,16 +14892,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a spinning projectile at random enemy.",
-      "level_ups": [
-        "Fires a spinning projectile at random enemy.",
-        "Passes through 1 more enemy.",
-        "Effect lasts 0.5 second longer. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Passes through 1 more enemy.",
-        "Effect lasts 0.5 seconds longer.",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Passes through 2 more enemies."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Bwaka Knife",
       "requirements": [
@@ -16882,9 +14908,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Curved Knife. Projectiles bounce forever until Duration expires.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16898,16 +14922,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a penetrating projectile in a fixed direction.",
-      "level_ups": [
-        "Fires a penetrating projectile in a fixed direction.",
-        "Passes through 2 more enemies.",
-        "Fires 1 more projectile.",
-        "Base damage up by 10.",
-        "Passes through 2 more enemies.",
-        "Fires 1 more projectile.",
-        "Passes through 2 more enemies. Base damage up by 10.",
-        "Fires 1 more projectile. Passes through 2 more enemies."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Long Inus",
       "requirements": [
@@ -16923,9 +14938,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Javelin. Projectiles reappear after leaving the screen.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16939,16 +14952,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a defensive projectile.",
-      "level_ups": [
-        "Fires a defensive projectile.",
-        "Base damage up by 5.",
-        "Base area up by 20%. Cooldown reduced by 0.3 seconds.",
-        "Fires 1 more projectile.",
-        "Base damage up by 5.",
-        "Base area up by 20%. Cooldown reduced by 0.3 seconds.",
-        "Fires 1 more projectile.",
-        "Base damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Stellar Blade",
       "requirements": [
@@ -16964,9 +14968,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Discus. Travels along walls. Deals critical damage if the user is invulnerable.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -16980,25 +14982,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damage affected by Armor.",
-      "level_ups": [
-        "Damage affected by Armor",
-        "Base area up by 25%. Cooldown reduced by 0.2 seconds.",
-        "Base damage up by 10.",
-        "Base area up by 25%. Cooldown reduced by 0.2 seconds.",
-        "Base damage up by 10.",
-        "Base area up by 25%. Cooldown reduced by 0.2 seconds.",
-        "Base damage up by 10.",
-        "Base damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Wrecking Ball",
       "requirements": [
         "Armor"
       ],
       "final_state": "Wrecking Ball",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -17007,16 +14998,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Iron Ball. Fires a very heavy projectile.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wrecking Ball",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17025,25 +15012,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a powerful projectiles, six times.",
-      "level_ups": [
-        "Fires a powerful projectile, six times.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 20.",
-        "Fires 2 more projectiles.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 20.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 20."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Jewel Gun",
       "requirements": [
         "Karoma's Mana"
       ],
       "final_state": "Jewel Gun",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -17052,16 +15028,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Silver Revolver. Critical hits instantly kill enemies and turn them into Jewels.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Jewel Gun",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17070,25 +15042,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires an exploding projectile.",
-      "level_ups": [
-        "Fires an exploding projectile.",
-        "Fires 1 more projectile.",
-        "Base area up by 20%.",
-        "Base damage up by 10.",
-        "Cooldown reduced by 1 seconds.",
-        "Base damage up by 20.",
-        "Fires 1 more projectile.",
-        "Base damage up by 20."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "The RPG",
       "requirements": [
         "Candelabrador"
       ],
       "final_state": "The RPG",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -17097,9 +15058,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hand Grenade. Explosions propagate.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17113,16 +15072,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws an exploding projectile.",
-      "level_ups": [
-        "Throws an exploding projectile.",
-        "Fires 1 more projectile.",
-        "Base Speed up by 30%.",
-        "Base Area up by 20%. Base Damage up by 2.[1]",
-        "Fires 1 more projectile.",
-        "Base Speed up by 30%.",
-        "Base Area up by 20%. Base Damage up by 2.[1]",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Meal Ticket",
       "requirements": [
@@ -17138,9 +15088,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Wine Glass. Soulful food deals Revival-based damage to unrefined palates.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17154,16 +15102,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates an exploding damaging zone.",
-      "level_ups": [
-        "Generates an exploding damaging zone.",
-        "Base area up by 20%.Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.3 seconds longer.Base damage up by 10.",
-        "Base area up by 30%.Base damage up by 10.",
-        "Base area up by 20%.Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.3 seconds longer.Base damage up by 10.",
-        "Base area up by 30%.Base damage up by 10.",
-        "Fires 3 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Salamender",
       "requirements": [
@@ -17179,9 +15118,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Raging Fire and Salamender",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Raging Fire",
       "requirements": [
@@ -17197,9 +15134,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Raging Fire. Also summons a snake of fire.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17213,16 +15148,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones in a straight line.",
-      "level_ups": [
-        "Generates damaging zones in a straight line.",
-        "Base area up by 15%. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile. Base damage up by 5.",
-        "Base area up by 15%. Base damage up by 5.",
-        "Base area up by 15%. Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.5 seconds longer. Base damage up by 5.",
-        "Base damage up by 5.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Cocytus",
       "requirements": [
@@ -17238,18 +15164,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Ice Fang and Cocytus",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Ice Fang",
       "requirements": [
         "Ice Fang"
       ],
       "final_state": "Speculo Ice Fang",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17258,16 +15180,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Ice Fang. Also triggers a freezing wind.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cocytus",
-      "arcana_ratings": {
-        "i_gemini": "X"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17276,25 +15194,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires light-hitting projectiles backwards.",
-      "level_ups": [
-        "Fires light-hitting projectiles backwards.",
-        "Base Damage up by 2. Base Speed up by 50%.",
-        "Fires 1 more Projectile. Base Area up by 30%.",
-        "Base Damage up by 2. Base Speed up by 50%.",
-        "Fires 1 more Projectile. Base Area up by 30%.",
-        "Base Damage up by 2. Base Speed up by 50%.",
-        "Fires 1 more Projectile. Base Area up by 30%.",
-        "Base Damage up by 4."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Pneuma Tempestas",
       "requirements": [
         "Bracer"
       ],
       "final_state": "Pneuma Tempestas",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -17303,18 +15210,14 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Point symmetries both Gale Force and Pneuma Tempestas upside down",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Gale Force",
       "requirements": [
         "Gale Force"
       ],
       "final_state": "Speculo Gale Force",
-      "arcana_ratings": {
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17323,16 +15226,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gale Force. Also triggers a spinning tornado.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pneuma Tempestas",
-      "arcana_ratings": {
-        "xxi_blood_astronomica": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17341,16 +15240,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires projectiles from a fixed location.",
-      "level_ups": [
-        "Fires projectiles from a fixed location.",
-        "Base Area up by 20%. Cooldown reduce by 0.5 seconds.",
-        "Effects lasts 0.5 seconds longer. Base damage up by 10.",
-        "Base Area up by 20%. Base damage up by 10.",
-        "Base Area up by 10%. Cooldown reduce by 0.5 seconds.",
-        "Effects lasts 0.3 seconds longer. Base damage up by 10.",
-        "Base Area up by 30%. Base damage up by 10.",
-        "Fires 3 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Gemma Torpor",
       "requirements": [
@@ -17366,9 +15256,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Rock Riot and Gemma Torpor",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Rock Riot",
       "requirements": [
@@ -17384,9 +15272,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Rock Riot. Also triggers a rain of crystals that can turn enemies into valuable jewels.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17400,16 +15286,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at fixed locations.",
-      "level_ups": [
-        "Strikes at fixed locations.",
-        "Base area up by 10%. Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.3 seconds longer. Base damage up by 3.",
-        "Fires 3 more projectiles.",
-        "Base area up by 10%. Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.3 seconds longer. Base damage up by 3.",
-        "Fires 3 more projectiles.",
-        "Base area up by 10%. Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Tenebris Tonitrus",
       "requirements": [
@@ -17425,9 +15302,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors Fulgur and doubles Tenebris Tonitrus",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Fulgur",
       "requirements": [
@@ -17443,9 +15318,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Fulgur. Also triggers ball lightnings.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17459,16 +15332,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires slow moving damaging zones.",
-      "level_ups": [
-        "Fires slow moving damaging zones.",
-        "Effect lasts 0.3 seconds longer. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile. Base Damage up by 2.5.",
-        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile. Base Damage up by 2.5.",
-        "Effect lasts 0.3 seconds longer.",
-        "Base Damage up by 2.5. Base Speed up by 20%.",
-        "Fires 1 more projectile. Base Damage up by 2.5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Keremet Morbus",
       "requirements": [
@@ -17484,9 +15348,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Copies Keremet Bubbles. Has no effect on Keremet Morbus.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Keremet Bubbles",
       "requirements": [
@@ -17502,9 +15364,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Keremet Bubbles. Also triggers a slimy swarm that chases enemies down.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17518,16 +15378,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates a moving damaging zone. Damage affected by Curse.",
-      "level_ups": [
-        "Generates a moving damaging zone. Damage affected by Curse.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
-        "Base Area up by 10%. Base Speed up by 10%.",
-        "Fires 3 more projectiles.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
-        "Base Area up by 10%. Base Speed up by 10%.",
-        "Effect lasts 1 seconds longer.",
-        "Cooldown reduced by 0.5 seconds. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Nightmare",
       "requirements": [
@@ -17543,9 +15394,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Hex and Nightmare",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Hex",
       "requirements": [
@@ -17561,9 +15410,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hex. Also tirggers a negative energy zone that doubles Curse when stepped into.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17577,16 +15424,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates a damaging zone that also provides light healing.",
-      "level_ups": [
-        "Generates a damaging zone that also provides light healing.",
-        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.3 seconds longer. Base Damage up by 10.",
-        "Base Area up by 30%. Base Damage up by 10.",
-        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.3 seconds longer. Base Damage up by 10.",
-        "Base Area up by 30%. Base Damage up by 10.",
-        "Fires 3 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Sanctuary",
       "requirements": [
@@ -17602,9 +15440,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Point symmetries Refectio. Has no effect on Sanctuary.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Refectio",
       "requirements": [
@@ -17620,9 +15456,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Refectio. At fixed intervals, also fully heals characters and purifies all enemies in sight.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17636,16 +15470,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Amount affects number of hits.",
-      "level_ups": [
-        "Amount affects number of hits.",
-        "Effect lasts 0.2 seconds longer.",
-        "Base damage up by 20.",
-        "Base Area up by 20%.",
-        "Effect lasts 0.2 seconds longer.",
-        "Effect lasts 0.1 seconds longer. Base damage up by 10.",
-        "Base Area up by 10%. Base damage up by 10.",
-        "Base Area up by 10%. Effect lasts 0.1 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Stamazza",
       "requirements": [
@@ -17661,9 +15486,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mace. Has a catastrophically high critical damage multiplier.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17677,16 +15500,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires lingering projectiles. Damage multiplied by Recovery.",
-      "level_ups": [
-        "Fires lingering projectiles. Damage multiplied by Recovery.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 30%.",
-        "Base Area up by 10%. Effect lasts 0.5 seconds longer.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 30%.",
-        "Base Area up by 10%. Effect lasts 0.5 seconds longer.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Moon Rod",
       "requirements": [
@@ -17702,9 +15516,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Star Flail. Projectiles are shot in the faced direction.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17718,16 +15530,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Executes a spinning attack when changing horizontal direction.",
-      "level_ups": [
-        "Executes a spinning attack when changing horizontal direction.",
-        "Base area up by 30%. Base damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base damage up by 10.",
-        "Base area up by 30%. Base damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base damage up by 10.",
-        "Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Thunderbolt Spear",
       "requirements": [
@@ -17743,17 +15546,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Alucard Spear. Every 7th activation triggers a special attack based on speed.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Thunderbolt Spear",
-      "arcana_ratings": {
-        "xii_out_of_bounds": "UL",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17762,16 +15560,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at fixed locations.",
-      "level_ups": [
-        "Strikes at fixed locations.",
-        "Fires 1 more projectiles.",
-        "Base Area up by 20%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.[1]",
-        "Fires 1 more projectiles.",
-        "Base Area up by 20%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.[1]",
-        "Fires 1 more projectile. Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Gungnir-Souris",
       "requirements": [
@@ -17787,16 +15576,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Trident. Critical hits also fire a damaging beam.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gungnir-Souris",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -17805,25 +15590,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Retaliates by shooting lingering projectiles.",
-      "level_ups": [
-        "Retaliates by shooting lingering projectiles.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.5 seconds longer.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Speed up by 20%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dark Iron Shield",
       "requirements": [
         "Parm Aegis"
       ],
       "final_state": "Dark Iron Shield",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -17832,9 +15606,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Iron Shield. Critical hits retaliate with spinning swords.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17848,16 +15620,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Summons defensive followers. Overhealing triggers additional follower's attacks.",
-      "level_ups": [
-        "Summons defensive followers. Overhealing triggers additional follower's attacks.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.5 seconds longer.",
-        "Fires 1 more projectile.",
-        "Base Area up by 20%. Base Speed up by 20%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Sacred Beasts Tower Shield",
       "requirements": [
@@ -17873,9 +15636,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Guardian's Targe. Overhealing also triggers a period of invulnerability.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17889,16 +15650,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Has boomerang effect, can deal critical damage.",
-      "level_ups": [
-        "Has boomerang effect, can deal critical damage.",
-        "Base Area up by 20%. Base Speed up by 25%",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Area up by 20%. Base Speed up by 25%.",
-        "Fires 1 more projectile. Base Damage up by 5.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Rune Sword",
       "requirements": [
@@ -17914,9 +15666,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Tyrfing. Critical damage also affected by Area, Speed, and Duration.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17930,16 +15680,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Allegedly strikes at the nearest enemy.",
-      "level_ups": [
-        "Allegedly strikes at the nearest enemy.",
-        "Base damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": "Alucard Swords",
       "requirements": [],
@@ -17953,16 +15694,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
-      "level_ups": [
-        "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
-        "Base damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base area up by 25%.",
-        "Fires 1 more projectile.",
-        "Base damage up by 10.",
-        "Fires 1 more projectile.",
-        "Base area up by 25%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Special",
       "trans_result": "Alucard Shield",
       "requirements": [],
@@ -17976,9 +15708,7 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Alucard Swords. Absorbs and triggers all other equipped evolutions. Hovering shield damages enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -17992,22 +15722,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects damage.",
-      "level_ups": [
-        "Attack nearby enemies. Speed affects damage.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 4.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vol Confodere",
       "requirements": [],
       "final_state": "Melio Confodere",
-      "arcana_ratings": {
-        "xii_out_of_bounds": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -18016,22 +15736,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects Damage.",
-      "level_ups": [
-        "Attack nearby enemies. Speed affects damage.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 4.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Melio Confodere",
       "requirements": [],
       "final_state": "Melio Confodere",
-      "arcana_ratings": {
-        "xii_out_of_bounds": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18040,22 +15750,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Attack nearby enemies. Speed affects Cooldown and Damage.",
-      "level_ups": [
-        "Attack nearby enemies. Speed affects Cooldown and Damage.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 4.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Melio Confodere",
-      "arcana_ratings": {
-        "xii_out_of_bounds": "L",
-        "xiv_jail_of_crystal": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18064,16 +15764,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires two bouncing projectiles. Amount affects Duration.",
-      "level_ups": [
-        "Fires two bouncing projectiles. Amount affects Duration.",
-        "Base Damage up by 3. Base Speed up by 50%.",
-        "Effect lasts 0.3 seconds longer. Base Damage up by 3.",
-        "Base Area up by 25%. Base Speed up by 50%.",
-        "Base Damage up by 3. Base Speed up by 50%.",
-        "Effect lasts 0.3 seconds longer. Base Damage up by 3.",
-        "Base Area up by 25%. Base Speed up by 50%.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Nitesco",
       "requirements": [
@@ -18089,9 +15780,7 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Speculo Globus",
       "requirements": [
@@ -18107,16 +15796,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Globus. Fires a piercing energy beam in the faced direction.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Nitesco",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18125,26 +15810,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires two penetrating projectiles.",
-      "level_ups": [
-        "Fires two penetrating projectiles.",
-        "Fires 1 more projectile.",
-        "Base Area up by 25%. Base Speed up by 20%.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10.",
-        "Base Damage up by 10.",
-        "Base Area up by 25%. Base Speed up by 20%.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Acerbatus",
       "requirements": [
         "Karoma's Mana"
       ],
       "final_state": "Acerbatus",
-      "arcana_ratings": {
-        "xiv_jail_of_crystal": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -18153,17 +15826,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Optical Shot. Damage is affected by the amount of defeated enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Acerbatus",
-      "arcana_ratings": {
-        "xiv_jail_of_crystal": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18172,14 +15840,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' fiery head in faced direction.",
-      "level_ups": [
-        "Summons Cerberus' fiery head in faced direction.",
-        "Base Area up by 10%.",
-        "Base Damage up by 20.[1]",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 20.[1]",
-        "Fires 1 more projectile. Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Trinum Custodem",
       "requirements": [
@@ -18187,9 +15848,7 @@ window.VS_DATA = {
         "Centralis Custos"
       ],
       "final_state": "Trinum Custodem",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -18198,14 +15857,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' icy head in faced direction.",
-      "level_ups": [
-        "Summons Cerberus' icy head in faced direction.",
-        "Base Area up by 10%.",
-        "Base Damage up by 20.[1]",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 20.[1]",
-        "Fires 1 more projectile. Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Trinum Custodem",
       "requirements": [
@@ -18213,9 +15865,7 @@ window.VS_DATA = {
         "Centralis Custos"
       ],
       "final_state": "Trinum Custodem",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -18224,14 +15874,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
-      "level_ups": [
-        "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Area up by 10%. Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Area up by 20%. Cooldown reduced by 0.1 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Trinum Custodem",
       "requirements": [
@@ -18239,9 +15882,7 @@ window.VS_DATA = {
         "Dextro Custos"
       ],
       "final_state": "Trinum Custodem",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 70
     },
     {
@@ -18250,16 +15891,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Dextro Custos, Sinestro Custos, and Centralis Custos.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Trinum Custodem",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18268,14 +15905,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires a penetrating projectile. Drains health.",
-      "level_ups": [
-        "Fires a penetrating projectile. Drains health.",
-        "Base Speed up by 50%.",
-        "Base Damage up by 20.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 20.",
-        "Cooldown reduced by 1 second."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Power of Sire",
       "requirements": [
@@ -18283,9 +15913,7 @@ window.VS_DATA = {
         "Dominus Agony"
       ],
       "final_state": "Power of Sire",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -18294,14 +15922,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires projectiles from above. Drains health.",
-      "level_ups": [
-        "Fires projectiles from above. Drains Health.",
-        "Passes through 1 more enemy. Base Speed up by 50%.",
-        "Passes through 2 more enemies. Base Damage up by 20.",
-        "Base Area up by 30%. Passes through 3 more enemies.",
-        "Fires 2 more projectiles. Passes through 4 more enemies.",
-        "Cooldown reduced by 1 seconds. Passes through 5 more enemies."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Power of Sire",
       "requirements": [
@@ -18309,9 +15930,7 @@ window.VS_DATA = {
         "Dominus Agony"
       ],
       "final_state": "Power of Sire",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -18320,14 +15939,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Increases Might, Speed, Duration, and Area. Drains Health.",
-      "level_ups": [
-        "Increases Might, Speed, Duration, and Area. Drains Health.",
-        "Increases total Area, Might, Speed and Duration by 8%",
-        "Increases total Area, Might, Speed and Duration by 8%",
-        "Increases total Area, Might, Speed and Duration by 8%",
-        "Increases total Area, Might, Speed and Duration by 8%",
-        "Increases total Area, Might, Speed and Duration by 8%"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Power of Sire",
       "requirements": [
@@ -18335,9 +15947,7 @@ window.VS_DATA = {
         "Dominus Hatred"
       ],
       "final_state": "Power of Sire",
-      "arcana_ratings": {
-        "iii_twilight_princess": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -18346,18 +15956,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Dominus Anger, Dominus Hatred and Dominus Agony. Deals critical damage to anything in sight. Drains health.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Power of Sire",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xiv_jail_of_crystal": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18366,27 +15970,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
-      "level_ups": [
-        "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.5 seconds longer. Base damage up by 2.5.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Effect lasts 0.5 seconds longer. Base damage up by 2.5.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Rapidus Fio",
       "requirements": [
         "Wings"
       ],
       "final_state": "Rapidus Fio",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L",
-        "xiv_jail_of_crystal": "L",
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 50
     },
     {
@@ -18395,16 +15986,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Dash. Also triggers a single shield charge.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rapidus Fio",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18413,23 +16000,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles made of light.",
-      "level_ups": [
-        "Fires spinning projects made of light.",
-        "Base Damage up by 2.",
-        "Base Area up by 20%.",
-        "Base Speed up by 20%.",
-        "Effect lasts 0.4 seconds longer.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Vol Luminatio",
       "requirements": [
         "Crown"
       ],
       "final_state": "Vol Luminatio",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 60
     },
     {
@@ -18438,20 +16016,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
-      "level_ups": [
-        "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
-        "Base Area up by 20%. Base Speed up by 20%.",
-        "Fires 1 more projectile. Base Damage up by 3."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": "Universitas",
       "requirements": [
         "Vol Umbra"
       ],
       "final_state": "Vol Luminatio",
-      "arcana_ratings": {
-        "xix_heart_of_fire": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18460,14 +16032,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles made of darkness.",
-      "level_ups": [
-        "Fires spinning projects made of darkness.",
-        "Base Damage up by 2.",
-        "Base Area up by 20%.",
-        "Base Speed up by 20%.",
-        "Effect lasts 0.4 seconds longer.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Vol Umbra",
       "requirements": [
@@ -18483,11 +16048,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
-      "level_ups": [
-        "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
-        "Base Area up by 20%. Base Speed up by 20%.",
-        "Fires 1 more projectile. Base Damage up by 3."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": "Universitas",
       "requirements": [
@@ -18503,9 +16064,7 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Vol Luminatio and Vol Umbra. Meteors rain down on enemies at fixed intervals.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -18519,9 +16078,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of magic whips.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -18535,9 +16092,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of vampire-killing tools.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -18551,16 +16106,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of magic weapons.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spectral Sword",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 2
     },
     {
@@ -18569,16 +16120,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of spells.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Belnades' Spellbook",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 2
     },
     {
@@ -18587,16 +16134,12 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of ambiguous powers.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ebony Diabologue",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 2
     },
     {
@@ -18605,25 +16148,14 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a short-lived knife in the faced direction.",
-      "level_ups": [
-        "Throws a short-lived knife in the faced direction.",
-        "Fires 1 more projectile.",
-        "Passes throuch 1 more enemy. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Passes through 1 more enemy. Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Passes through 1 more enemy. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Claimh Solais",
       "requirements": [
         "Torrona's Box"
       ],
       "final_state": "Claimh Solais",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 80
     },
     {
@@ -18632,16 +16164,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pocket Knife. Globally increases Might, Armor and Crit Damage for each enemy in sight.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Claimh Solais",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18650,17 +16178,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [
-        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
-        "Base Area up by 10%.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -18669,9 +16187,7 @@ window.VS_DATA = {
         "Epi Head"
       ],
       "final_state": "Clock Tower",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -18680,17 +16196,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [
-        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
-        "Base Area up by 10%.",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -18699,9 +16205,7 @@ window.VS_DATA = {
         "Epi Head"
       ],
       "final_state": "Clock Tower",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -18710,17 +16214,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [
-        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-        "Base Damage up by 10.",
-        "Base Speed up by 50%.",
-        "Base Damage up by 10.",
-        "Base Speed up by 50%.",
-        "Base Damage up by 10.",
-        "Base Speed up by 50%.",
-        "Base Damage up by 10.",
-        "Base Speed up by 50%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -18729,9 +16223,7 @@ window.VS_DATA = {
         "Epi Head"
       ],
       "final_state": "Clock Tower",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -18740,17 +16232,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [
-        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-        "Effect lasts 0.5 seconds longer.[1]",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 20%.",
-        "Effect lasts 0.5 seconds longer.[1]",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 20%.",
-        "Effect lasts 0.5 seconds longer.[1]",
-        "Cooldown reduced by 0.5 seconds. Base Speed up by 20%.",
-        "Effect lasts 0.5 seconds longer.[2]",
-        "Base Damage up by 10."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -18759,9 +16241,7 @@ window.VS_DATA = {
         "Myo Lift"
       ],
       "final_state": "Clock Tower",
-      "arcana_ratings": {
-        "ii_twilight_requiem": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 20
     },
     {
@@ -18770,16 +16250,12 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Endo Gears, Peri Pendulum, Myo Lift, and Epi Heads.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Clock Tower",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18788,17 +16264,167 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to summon a familiar.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Familiar Forge",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 6
+    },
+    {
+      "name": "Ukoback",
+      "icon": "assets/icons/weapons/ukoback.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Runs toward and distract enemies. Attacks with a Svarog Statue (level 3)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Ukoback",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Bitterfly",
+      "icon": "assets/icons/weapons/bitterfly.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to the character. Attacks with a Garlic (level 7)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Bitterfly",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Alleged Ghost",
+      "icon": "assets/icons/weapons/alleged_ghost.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Moves opposite to the character's movement and distract enemies. Attacks with a Summon Spirit (level 7)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Alleged Ghost",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Imp",
+      "icon": "assets/icons/weapons/imp.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to enemies. Attacks with a Trident (level 8)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Imp",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Wood Rod",
+      "icon": "assets/icons/weapons/wood_rod.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Follows the character's moving path. Attacks with a Fire Wand (level 2),  Lightning Ring (level 2), and Magic Wand (level 2)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Wood Rod",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Pumpkin",
+      "icon": "assets/icons/weapons/pumpkin.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Runs away from the character and distract enemies. Attacks with a Curved Knife (level 8) and  Troll Bomb (level 1)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Pumpkin",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Faerie",
+      "icon": "assets/icons/weapons/faerie.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to the character. Attacks with a Refectio (level 3)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Faerie",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Sacred Cardinal",
+      "icon": "assets/icons/weapons/sacred_cardinal.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to the character. Attacks with a Raging Fire (level 3)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Sacred Cardinal",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Sacred Dragon",
+      "icon": "assets/icons/weapons/sacred_dragon.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to the character. Attacks with a Fulgur (level 3)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Sacred Dragon",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Sacred Tiger",
+      "icon": "assets/icons/weapons/sacred_tiger.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to the character. Attacks with a Ice Fang (level 3)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Sacred Tiger",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Sacred Turtle",
+      "icon": "assets/icons/weapons/sacred_turtle.png",
+      "category": "Gift",
+      "method": null,
+      "description": "Stays close to the character. Attacks with a Rock Riot (level 3)",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Sacred Turtle",
+      "arcana_ratings": {},
+      "rarity": 0
     },
     {
       "name": "Fleuret",
@@ -18806,24 +16432,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.",
-      "level_ups": [
-        "\"Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.\"",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 3.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 3.",
-        "Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dress Sword",
       "requirements": [
         "Crystalline Carve"
       ],
       "final_state": "Espada Ropera",
-      "arcana_ratings": {
-        "xvi_slash": "L"
-      },
-      "rarity": 0
+      "arcana_ratings": {},
+      "rarity": 50
     },
     {
       "name": "Dress Sword",
@@ -18831,14 +16448,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
-      "level_ups": [
-        "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
-        "Fires 1 more projectiles.",
-        "Base Area up by 20%.",
-        "Base Damage up by 6.",
-        "Base Area up by 20%.",
-        "Fires 1 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Espada Ropera",
       "requirements": [
@@ -18854,9 +16464,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -18870,14 +16478,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
-      "level_ups": [
-        "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 3.",
-        "Base Area up by 20%.",
-        "Base Damage up by 3.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lordstar",
       "requirements": [
@@ -18885,7 +16486,7 @@ window.VS_DATA = {
       ],
       "final_state": "Dayblade",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Lordstar",
@@ -18893,23 +16494,14 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
-      "level_ups": [
-        "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
-        "Fires 2 more projectiles.",
-        "Base Damage up by 3.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 3.",
-        "Fires 2 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dayblade",
       "requirements": [
         "Airwave"
       ],
       "final_state": "Dayblade",
-      "arcana_ratings": {
-        "i_gemini": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18918,17 +16510,12 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dayblade",
-      "arcana_ratings": {
-        "i_gemini": "L",
-        "xii_out_of_bounds": "L"
-      },
+      "arcana_ratings": {},
       "rarity": 0
     },
     {
@@ -18937,16 +16524,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
-      "level_ups": [
-        "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
-        "Base Area up by 25%.",
-        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds.",
-        "Base Area up by 25%. Base Damage up by 10.",
-        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds.",
-        "Base Area up by 25%. Base Damage up by 10.",
-        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds.",
-        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pursuant Blades",
       "requirements": [
@@ -18955,7 +16533,7 @@ window.VS_DATA = {
       ],
       "final_state": "Pursuant Blades",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Pursuant Blades",
@@ -18963,16 +16541,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
-      "level_ups": [
-        "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
-        "Base Area up by 25%.",
-        "Base Speed up by 25%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Base Area up by 25%.",
-        "Base Speed up by 25%.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -18986,14 +16555,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
-      "level_ups": [
-        "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Base Area up by 20%.",
-        "Base Damage up by 5.",
-        "Base Area up by 20%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Zweihander",
       "requirements": [
@@ -19001,7 +16563,7 @@ window.VS_DATA = {
       ],
       "final_state": "Galatyn",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Zweihander",
@@ -19009,14 +16571,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
-      "level_ups": [
-        "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
-        "Critical chance increased by 4%.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Critical chance increased by 4%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Galatyn",
       "requirements": [
@@ -19032,9 +16587,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Zweihander. Can glimmer the \"Vandalize\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19048,14 +16601,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks sideways. Can glimmer the \"Raksha\" tech.",
-      "level_ups": [
-        "Attacks sideways. Can glimmer the \"Raksha\" tech.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.4 seconds.",
-        "Base Area up by 10%.",
-        "Cooldown reduced by 0.4 seconds.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pressure Point",
       "requirements": [
@@ -19063,7 +16609,7 @@ window.VS_DATA = {
       ],
       "final_state": "Gilded Hand",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Pressure Point",
@@ -19071,14 +16617,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
-      "level_ups": [
-        "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
-        "Base Damage up by 5.",
-        "Base Area up by 10%, Cooldown reduced by 0.2 seconds.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%, Cooldown reduced by 0.2 seconds.",
-        "Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Gilded Hand",
       "requirements": [
@@ -19094,9 +16633,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19110,16 +16647,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
-      "level_ups": [
-        "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
-        "Fires 1 more projectile.",
-        "Base damage up by 2.",
-        "Base Area up by 10%. Base damage up by 2.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base damage up by 2.",
-        "Base damage up by 2.",
-        "Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Triangle Kick",
       "requirements": [
@@ -19128,7 +16656,7 @@ window.VS_DATA = {
       ],
       "final_state": "Triangle Kick",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Triangle Kick",
@@ -19136,16 +16664,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
-      "level_ups": [
-        "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 2.",
-        "Base Damage up by 2.",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 2.",
-        "Base Damage up by 2.",
-        "Fires 1 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19159,14 +16678,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
-      "level_ups": [
-        "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds",
-        "Projectiles last 12ms longer.",
-        "Base Damage up by 0.5.",
-        "Projectiles last 12ms longer.",
-        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds"
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hecaton Machine Gun",
       "requirements": [
@@ -19174,7 +16686,7 @@ window.VS_DATA = {
       ],
       "final_state": "Divergence",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 60
     },
     {
       "name": "Hecaton Machine Gun",
@@ -19182,14 +16694,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
-      "level_ups": [
-        "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
-        "Projectiles last 25ms longer.",
-        "Fires 1 more projectiles. Cooldown increased by 0.5 seconds",
-        "Base Damage up by 1.",
-        "Fires 1 more projectiles. Cooldown increased by 0.5 seconds",
-        "Passes through 1 more enemy."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Divergence",
       "requirements": [
@@ -19205,9 +16710,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19221,14 +16724,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
-      "level_ups": [
-        "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
-        "Base Damage up by 5.",
-        "Pass through 1 more enemy.",
-        "Base Speed up by 10%.",
-        "Base Damage up by 5.",
-        "Cooldown reduced by 0.3 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydra Cannon",
       "requirements": [
@@ -19236,7 +16732,7 @@ window.VS_DATA = {
       ],
       "final_state": "Hyperion Bazooka",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Hydra Cannon",
@@ -19244,14 +16740,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
-      "level_ups": [
-        "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
-        "Base Damage up by 5.",
-        "Pass through 2 more enemies.",
-        "Base Speed up by 20%.",
-        "Base Damage up by 5.",
-        "Cooldown reduced by 0.5 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hyperion Bazooka",
       "requirements": [
@@ -19267,9 +16756,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19283,16 +16770,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
-      "level_ups": [
-        "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
-        "Fires 1 more projectile. Base Area up by 25%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
-        "Fires 1 more projectile. Base Damage up by 2.5.",
-        "Fires 1 more projectile. Base Area up by 25%.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
-        "Fires 1 more projectile. Base Damage up by 2.5.",
-        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pendragon",
       "requirements": [
@@ -19301,7 +16779,7 @@ window.VS_DATA = {
       ],
       "final_state": "Pendragon",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Pendragon",
@@ -19309,16 +16787,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
-      "level_ups": [
-        "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 5.",
-        "Base Damage up by 5.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19332,16 +16801,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
-      "level_ups": [
-        "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
-        "Base Area up by 25%.",
-        "Effect lasts 0.1 seconds longer. Cooldown reduced by 0.1 seconds.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 10.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.1 seconds longer. Cooldown reduced by 0.1 seconds.",
-        "Base Area up by 25%."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Jetstream",
       "requirements": [
@@ -19350,7 +16810,7 @@ window.VS_DATA = {
       ],
       "final_state": "Jetstream",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Jetstream",
@@ -19358,16 +16818,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
-      "level_ups": [
-        "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
-        "Base Damage up by 2.5.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Area up by 25%.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Area up by 25%.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Area up by 25%."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19381,16 +16832,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
-      "level_ups": [
-        "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectile.",
-        "Base Area up by 10%. Base Damage up by 5.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 5.",
-        "Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Gekkabijin",
       "requirements": [
@@ -19399,7 +16841,7 @@ window.VS_DATA = {
       ],
       "final_state": "Gekkabijin",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Gekkabijin",
@@ -19407,16 +16849,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
-      "level_ups": [
-        "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 5.",
-        "Base Damage up by 5.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Fires 1 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19430,16 +16863,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
-      "level_ups": [
-        "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer. Base Damage up by 5."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Falconwind",
       "requirements": [
@@ -19448,7 +16872,7 @@ window.VS_DATA = {
       ],
       "final_state": "Falconwind",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Falconwind",
@@ -19456,16 +16880,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
-      "level_ups": [
-        "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Damage up by 5.",
-        "Cooldown reduced by 0.2 seconds.",
-        "Effect lasts 0.5 seconds longer.",
-        "Base Damage up by 5.",
-        "Critical damage increases by an additional 100%.",
-        "Effect lasts 0.5 seconds longer."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19479,16 +16894,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
-      "level_ups": [
-        "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 4.",
-        "Fires 1 more projectiles.",
-        "Cooldown reduced by 1 seconds.",
-        "Fires 1 more projectiles.",
-        "Base Damage up by 4.",
-        "Fires 1 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Intuition",
       "requirements": [
@@ -19497,7 +16903,7 @@ window.VS_DATA = {
       ],
       "final_state": "Blood Chalice",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Blood Chalice",
@@ -19505,16 +16911,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
-      "level_ups": [
-        "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
-        "Fires 2 more projectiles.",
-        "Base Area up by 10%. Base Damage up by 2.",
-        "Fires 1 more projectiles.",
-        "Cooldown reduced by 0.5 seconds.",
-        "Fires 2 more projectiles.",
-        "Base Area up by 10%. Base Damage up by 2.",
-        "Fires 1 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19528,14 +16925,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
-      "level_ups": [
-        "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 3.",
-        "Base Speed up by 20%.",
-        "Fires 1 more projectile.",
-        "Base Damage up by 3."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Feather Spear",
       "requirements": [
@@ -19543,7 +16933,7 @@ window.VS_DATA = {
       ],
       "final_state": "Lohengrin",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Feather Spear",
@@ -19551,14 +16941,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
-      "level_ups": [
-        "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
-        "Fires 1 more projectiles.",
-        "Base Area up by 10%.",
-        "Base Damage up by 6.",
-        "Base Area up by 10%.",
-        "Fires 1 more projectiles."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lohengrin",
       "requirements": [
@@ -19574,9 +16957,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19590,22 +16971,13 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
-      "level_ups": [
-        "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.3 seconds longer.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile.",
-        "Effect lasts 0.3 seconds longer.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectile."
-      ],
+      "level_ups": [],
       "trans_conditions": "Special",
       "trans_result": "Rings of Calamity",
       "requirements": [],
       "final_state": "Rings of Calamity",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 50
     },
     {
       "name": "Rings of Calamity",
@@ -19613,9 +16985,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19629,16 +16999,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Picks random enemies to teleport away, but they might not drop XP gems.",
-      "level_ups": [
-        "Picks random enemies to teleport away, but they might not drop XP gems.",
-        "Strikes more often. 5% better chance to leave XP intact.",
-        "Strikes more often. 5% better chance to leave XP intact.",
-        "Strikes more often. 5% better chance to leave XP intact.",
-        "Strikes more often. 5% better chance to leave XP intact.",
-        "Strikes more often. 5% better chance to leave XP intact.",
-        "Strikes more often. 5% better chance to leave XP intact.",
-        "Strikes more often. 5% better chance to leave XP intact."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Emerald Wave",
       "requirements": [
@@ -19646,7 +17007,7 @@ window.VS_DATA = {
       ],
       "final_state": "Emerald Wave",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 1
     },
     {
       "name": "Emerald Wave",
@@ -19654,9 +17015,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19670,15 +17029,13 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of weapons from Emerald Diorama.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Intuition",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 2
     },
     {
       "name": "Infernolatro",
@@ -19686,17 +17043,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
-      "level_ups": [
-        "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds.",
-        "Base Damage up by 5.",
-        "Base Area up by 20%.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds.",
-        "Base Damage up by 5.",
-        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "NaneInferno",
       "requirements": [
@@ -19712,9 +17059,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19728,17 +17073,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
-      "level_ups": [
-        "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
-        "Fires 1 more projectiles.",
-        "Base Speed up by 20%.",
-        "Base Damage up by 5.",
-        "Fires 1 more projectiles. Cooldown reduced by 0.1 seconds.",
-        "Base Speed up by 20%.",
-        "Base Damage up by 5.",
-        "Base Speed up by 20%.",
-        "Fires 1 more projectiles. Cooldown reduced by 0.1 seconds."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Cavendish",
       "requirements": [
@@ -19768,17 +17103,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
-      "level_ups": [
-        "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
-        "Fires 1 more projectile. 1% chance to fire another weapon.",
-        "Cooldown reduced by 0.3 seconds. 2% chance to fire another weapon.",
-        "Base Damage up by 5. 3% chance to fire another weapon.",
-        "Base Area up by 20%. 5% chance to fire another weapon.",
-        "Fires 1 more projectile. 8% chance to fire another weapon.",
-        "Base Damage up by 5. 13% chance to fire another weapon.",
-        "Cooldown reduced by 0.3 seconds. 21% chance to fire another weapon.",
-        "Base Damage up by 5. 34% chance to fire another weapon."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Royal Flush",
       "requirements": [
@@ -19794,9 +17119,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19810,17 +17133,7 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Planets orbit around you. Damage increases by amount of coins collected this run.",
-      "level_ups": [
-        "Planets orbit around you. Damage increases by amount of coins collected this run.",
-        "Fires 1 more projectile.",
-        "Fires 1 more projectile. Base Damage up by 2.",
-        "Fires 1 more projectile. Base Speed up by 10%.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Fires 1 more projectile. Base Damage up by 2.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Fires 1 more projectile. Base Speed up by 10%.",
-        "Fires 1 more projectile. Base Damage up by 3."
-      ],
+      "level_ups": [],
       "trans_conditions": "Max Required",
       "trans_result": "Negative Space",
       "requirements": [
@@ -19836,9 +17149,7 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19852,9 +17163,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Increases experience.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19868,9 +17177,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 1 to your gold coins total.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19884,29 +17191,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 10 to your gold coins total.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Coin Bag",
-      "arcana_ratings": {},
-      "rarity": 0
-    },
-    {
-      "name": "Big Coin Bag",
-      "icon": "assets/icons/weapons/big_coin_bag.png",
-      "category": "Special",
-      "method": "Pickup",
-      "description": "Adds 25 to your gold coins total.",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "-",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Big Coin Bag",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19916,13 +17205,25 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 100 to your gold coins total.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rich Coin Bag",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Treasure Chest",
+      "icon": "assets/icons/weapons/treasure_chest.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Awards coins and power ups. Dropped by strong enemies",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Treasure Chest",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19932,9 +17233,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Destroys all enemies in sight.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19948,13 +17247,25 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily emits cones of flames. Affected by player stats.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Nduja Fritta Tanto",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Sorbetto",
+      "icon": "assets/icons/weapons/sorbetto.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Temporarily emits freezing cones. Affected by player stats.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Sorbetto",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19964,9 +17275,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Freezes all enemies in time for 10 seconds.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19980,9 +17289,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Gathers all experience gems left on the ground.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -19996,9 +17303,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Restores 30 health points.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20012,9 +17317,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Gathers all gold left on the ground and starts a Gold Fever.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20028,13 +17331,25 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get 10% luckier.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Little Clover",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Rerollo",
+      "icon": "assets/icons/weapons/rerollo.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Pick up to get +1 Reroll.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Rerollo",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20044,9 +17359,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Gives temporary invulnerability, bonus Charm, and minimum Cooldown. Defeat as many enemies as possible to win a prize.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20060,9 +17373,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Every player gets a level up for one of their existing weapons.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20071,50 +17382,16 @@ window.VS_DATA = {
       "rarity": 0
     },
     {
-      "name": "Sorbetto",
-      "icon": "assets/icons/weapons/sorbetto.png",
+      "name": "Golden Egg",
+      "icon": "assets/icons/weapons/golden_egg.png",
       "category": "Special",
       "method": "Pickup",
-      "description": "Temporarily emits freezing cones. Affected by player stats.",
-      "level_ups": [
-        "-"
-      ],
+      "description": "Permanently improves a random stat for the current character, by a tiny amount.",
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
-      "final_state": "Sorbetto",
-      "arcana_ratings": {},
-      "rarity": 0
-    },
-    {
-      "name": "Treasure Chest",
-      "icon": "assets/icons/weapons/treasure_chest.png",
-      "category": "Special",
-      "method": "Pickup",
-      "description": "Awards coins and power ups. Dropped by strong enemies",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "-",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Treasure Chest",
-      "arcana_ratings": {},
-      "rarity": 0
-    },
-    {
-      "name": "Body Part",
-      "icon": "assets/icons/weapons/body_part.png",
-      "category": "Special",
-      "method": "Pickup",
-      "description": "Body parts heal for 10-20 health.",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "-",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Body Part",
+      "final_state": "Golden Egg",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20124,9 +17401,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily doubles Speed and halves Cooldown.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20140,9 +17415,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily prevents all damage, but allows for retaliatory attacks.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20156,9 +17429,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Deals high damage to all visible enemies.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20172,9 +17443,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Typical Castlevania pot roast. Restores 60 Health points.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20188,9 +17457,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily gives +5 Recovery.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20204,9 +17471,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Has a 50% chance to trigger a Soul Steal, which destroys all enemies in line of sight and turns them into hearts.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20220,9 +17485,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily doubles Amount. Activates all equipped weapons at once when picked up.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20236,9 +17499,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Deals high damage in a large area.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20247,66 +17508,16 @@ window.VS_DATA = {
       "rarity": 0
     },
     {
-      "name": "Little Heart",
-      "icon": "assets/icons/weapons/little_heart.png",
+      "name": "Big Coin Bag",
+      "icon": "assets/icons/weapons/big_coin_bag.png",
       "category": "Special",
       "method": "Pickup",
-      "description": "Pick up to recover 1 HP.",
-      "level_ups": [
-        "-"
-      ],
+      "description": "Adds 25 to your gold coins total.",
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
-      "final_state": "Little Heart",
-      "arcana_ratings": {},
-      "rarity": 0
-    },
-    {
-      "name": "Crystallized Soul",
-      "icon": "assets/icons/weapons/crystallized_soul.png",
-      "category": "Special",
-      "method": "Pickup",
-      "description": "Increases Growth, Recovery, and Max Health by a miniscule amount, but increases the more are collected.",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "-",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Crystallized Soul",
-      "arcana_ratings": {},
-      "rarity": 0
-    },
-    {
-      "name": "Golden Egg",
-      "icon": "assets/icons/weapons/golden_egg.png",
-      "category": "Special",
-      "method": "Pickup",
-      "description": "Permanently improves a random stat for the current character, by a tiny amount.",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "-",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Golden Egg",
-      "arcana_ratings": {},
-      "rarity": 0
-    },
-    {
-      "name": "Pie",
-      "icon": "assets/icons/weapons/pie.png",
-      "category": "Special",
-      "method": "Pickup",
-      "description": "Heals 30 HP.",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "-",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Pie",
+      "final_state": "Big Coin Bag",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20316,9 +17527,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP, summons werewolves.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20332,13 +17541,151 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
       "final_state": "Corn",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Crystallized Soul",
+      "icon": "assets/icons/weapons/crystallized_soul.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Increases Growth, Recovery, and Max Health by a miniscule amount, but increases the more are collected.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Crystallized Soul",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Cursed Soul",
+      "icon": "assets/icons/weapons/cursed_soul.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Pick up to get a minor bonus to MaxHealth, Greed, and Curse.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Cursed Soul",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Gold Pile",
+      "icon": "assets/icons/weapons/gold_pile.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Adds a lot to your Gold coins total.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Gold Pile",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Lavatrix Machina",
+      "icon": "assets/icons/weapons/lavatrix_machina.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "All pickups, light sources, and stage items are pulled to the player. Spins enemies around the screen.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Lavatrix Machina",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Little Heart",
+      "icon": "assets/icons/weapons/little_heart.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Pick up to recover 1 HP.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Little Heart",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Pie",
+      "icon": "assets/icons/weapons/pie.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Heals 30 HP.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Pie",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Scorched Soul",
+      "icon": "assets/icons/weapons/scorched_soul.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Pick up to get a minor bonus to MaxHealth and Might.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Scorched Soul",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Starry Heavens",
+      "icon": "assets/icons/weapons/starry_heavens.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "All enemies are frozen for 10 seconds and take damage periodically, unable to damage the player. They still move towards the player.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Starry Heavens",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Survarot",
+      "icon": "assets/icons/weapons/survarot.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Brings up a Survarot draft.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Survarot",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Weird Souls Purifier",
+      "icon": "assets/icons/weapons/weird_souls_purifier.png",
+      "category": "Special",
+      "method": "Pickup",
+      "description": "Kills all enemies that are not immune to it.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Weird Souls Purifier",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20348,9 +17695,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Destroys all enemies in sight and turn them into Little Hearts.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "-",
       "trans_result": null,
       "requirements": [],
@@ -20364,9 +17709,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "All healing triggers an Area-of-Effect damage pulse within a fixed range, dealing damage equal to the amount healed.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Sarabande of Healing (VI)",
       "trans_result": null,
       "requirements": [],
@@ -20380,9 +17723,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "All experience gems act as exploding projectiles that hurl themselves to the closest enemy when collected.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Game Killer (0)",
       "trans_result": null,
       "requirements": [],
@@ -20396,9 +17737,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Projectiles from affected weapons create an explosion on impact, dealing 50% of base damage.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Heart of Fire (XIX)",
       "trans_result": null,
       "requirements": [],
@@ -20412,9 +17751,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Freezing Enemies generates explosions.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Out of Bounds (XII)",
       "trans_result": null,
       "requirements": [],
@@ -20428,9 +17765,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Enemies that touch the character take 10 flat damage per Armor.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Divine Bloodline (IX)",
       "trans_result": null,
       "requirements": [],
@@ -20444,9 +17779,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Turns the character's Magnet area into a zone to damage enemies",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Blood Astronomia (XXI)",
       "trans_result": null,
       "requirements": [],
@@ -20460,9 +17793,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Darkana",
       "description": "Generates projectiles that circle the character and deal damage based on total recovered Health and Magnet.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Wandering the Jet Black (XXI)",
       "trans_result": null,
       "requirements": [],
@@ -20476,9 +17807,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Creates a purple zone with a skull centered slightly above the character.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Je-Ne-Viv",
       "trans_result": null,
       "requirements": [],
@@ -20492,9 +17821,7 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Attacks enemies on the lower half of the screen.",
-      "level_ups": [
-        "-"
-      ],
+      "level_ups": [],
       "trans_conditions": "Ferryman",
       "trans_result": null,
       "requirements": [],
@@ -20503,26 +17830,157 @@ window.VS_DATA = {
       "rarity": 0
     },
     {
-      "name": "Power Of Lire",
-      "icon": "assets/icons/weapons/power_of_lire.png",
+      "name": "Shaft Orb",
+      "icon": "assets/icons/weapons/shaft_orb.png",
       "category": "Special",
       "method": "Hidden",
-      "description": "Periodically trigger starting a Gold Fever, magnetize gold bags and converted pickups.",
-      "level_ups": [
-        "-"
-      ],
-      "trans_conditions": "Master Librarian",
+      "description": "-",
+      "level_ups": [],
+      "trans_conditions": "Shaft",
       "trans_result": null,
       "requirements": [],
-      "final_state": "Power Of Lire",
-      "arcana_ratings": {
-        "iv_awake": "S",
-        "v_chaos_in_the_dark_night": "S",
-        "ix_divine_bloodline": "S",
-        "x_bloodline": "S",
-        "xviii_boogaloo_of_illusions": "S",
-        "xx_silent_old_sanctuary": "S"
-      },
+      "final_state": "Shaft Orb",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Burning Alcarde",
+      "icon": "assets/icons/weapons/burning_alcarde.png",
+      "category": "Special",
+      "method": "Hidden",
+      "description": "Creates a damaging aura when health is low.",
+      "level_ups": [],
+      "trans_conditions": "Eric Lacarde",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Burning Alcarde",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Death Hand",
+      "icon": "assets/icons/weapons/death_hand.png",
+      "category": "Special",
+      "method": "Hidden",
+      "description": "Deadly digits",
+      "level_ups": [],
+      "trans_conditions": "Megalo Death",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Death Hand",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Hand of Vlad",
+      "icon": "assets/icons/weapons/hand_of_vlad.png",
+      "category": "Special",
+      "method": "Hidden",
+      "description": "Bloody Hands",
+      "level_ups": [],
+      "trans_conditions": "Megalo Dracula",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Hand of Vlad",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Ruler Sword Body",
+      "icon": "assets/icons/weapons/ruler_sword_body.png",
+      "category": "Special",
+      "method": "Hidden",
+      "description": "-",
+      "level_ups": [],
+      "trans_conditions": "Ruler Sword",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Ruler Sword Body",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Bananastrophe",
+      "icon": "assets/icons/weapons/bananastrophe.png",
+      "category": "Special",
+      "method": "Hidden",
+      "description": "-",
+      "level_ups": [],
+      "trans_conditions": "Gros Michel",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Bananastrophe",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Sossoldi",
+      "icon": "assets/icons/weapons/sossoldi.png",
+      "category": "Special",
+      "method": "Hidden",
+      "description": "-",
+      "level_ups": [],
+      "trans_conditions": "Outer Saboteur",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Sossoldi",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Chaos Malachite",
+      "icon": "assets/icons/weapons/chaos_malachite.png",
+      "category": "-",
+      "method": null,
+      "description": "Allows Mortaccio to morph when reaching Level 80.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "-",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Chaos Rosalia",
+      "icon": "assets/icons/weapons/chaos_rosalia.png",
+      "category": "-",
+      "method": null,
+      "description": "Allows Yatta Cavallo to morph when reaching Level 80.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "-",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Chaos Lazulia",
+      "icon": "assets/icons/weapons/chaos_lazulia.png",
+      "category": "-",
+      "method": null,
+      "description": "Allows Bianca Ramba to morph when reaching Level 80.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "-",
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Chaos Altemanna",
+      "icon": "assets/icons/weapons/chaos_altemanna.png",
+      "category": "-",
+      "method": null,
+      "description": "Allows O'Sole Meeo to morph when reaching Level 80.",
+      "level_ups": [],
+      "trans_conditions": "-",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "-",
+      "arcana_ratings": {},
       "rarity": 0
     }
   ],
@@ -20832,7 +18290,7 @@ window.VS_DATA = {
     },
     {
       "name": "Tirajisú",
-      "icon": "assets/icons/passives/tirajisú.png",
+      "icon": "assets/icons/passives/tirajisu.png",
       "max_level": 2,
       "rarity": 40,
       "description": "Character revives with 50% health once.",
@@ -23115,7 +20573,7 @@ window.VS_DATA = {
       "icon": "assets/icons/stats/invulnerability_time.png",
       "description": "Determines how long the player is immune after receiving damage or a source of immunity.",
       "base_value": 240,
-      "base_raw": "240 milliseconds",
+      "base_raw": "240",
       "max_value": null,
       "stacking": "additive",
       "levels": [],
@@ -23412,7 +20870,7 @@ window.VS_DATA = {
     },
     {
       "evo_path": "Phieraggi",
-      "pattern": "Dual(Counterpart):Union>Final",
+      "pattern": "Dual(Counterpart):UnionEvo>Final",
       "b1_1": "Phiera Der Tuphello",
       "b1_2": "Gemini (I)",
       "b1_3": null,
@@ -23748,7 +21206,7 @@ window.VS_DATA = {
       "evo_path": "Sole Solution",
       "pattern": "Evo(Max)>HiddenFinal",
       "b1_1": "Victory Sword",
-      "b1_2": "Torona's Box",
+      "b1_2": "Torrona's Box",
       "b1_3": null,
       "b1_4": null,
       "b1_r": "Sole Solution",
@@ -23768,7 +21226,7 @@ window.VS_DATA = {
       "evo_path": "Ashes of Muspell",
       "pattern": "Evo(Max)>Final",
       "b1_1": "Flames of Misspell",
-      "b1_2": "Torona's Box",
+      "b1_2": "Torrona's Box",
       "b1_3": null,
       "b1_4": null,
       "b1_r": "Ashes of Muspell",
@@ -25584,17 +23042,17 @@ window.VS_DATA = {
       "b1_2": "Glimmer (Swallow Slice)",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": "Dress Sword",
-      "b2_1": "Dress Sword",
+      "b1_r": "Lordstar",
+      "b2_1": "Lordstar",
       "b2_2": "Glimmer (Airwave)",
       "b2_r": "Dayblade",
       "b3_1": null,
       "b3_2": null,
       "b3_r": null,
       "related_to": [
-        "Fleuret",
-        "Dress Sword",
-        "Espada Ropera"
+        "Town Sword",
+        "Lordstar",
+        "Dayblade"
       ]
     },
     {
@@ -25624,8 +23082,8 @@ window.VS_DATA = {
       "b1_2": "Glimmer (Bull Crush)",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": "Dress Sword",
-      "b2_1": "Dress Sword",
+      "b1_r": "Zweihander",
+      "b2_1": "Zweihander",
       "b2_2": "Glimmer (Absetzen)",
       "b2_r": "Galatyn",
       "b3_1": null,
@@ -25644,8 +23102,8 @@ window.VS_DATA = {
       "b1_2": "Glimmer (Raksha)",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": "Dress Sword",
-      "b2_1": "Dress Sword",
+      "b1_r": "Pressure Point",
+      "b2_1": "Pressure Point",
       "b2_2": "Glimmer (Shenlong Firefist)",
       "b2_r": "Gilded Hand",
       "b3_1": null,
@@ -25684,8 +23142,8 @@ window.VS_DATA = {
       "b1_2": "Glimmer (Shockwave)",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": "Dress Sword",
-      "b2_1": "Dress Sword",
+      "b1_r": "Hecaton Machine Gun",
+      "b2_1": "Hecaton Machine Gun",
       "b2_2": "Glimmer (Bombarding Fire)",
       "b2_r": "Divergence",
       "b3_1": null,
@@ -25704,8 +23162,8 @@ window.VS_DATA = {
       "b1_2": "Glimmer (Ballistic Missiles)",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": "Dress Sword",
-      "b2_1": "Dress Sword",
+      "b1_r": "Hydra Cannon",
+      "b2_1": "Hydra Cannon",
       "b2_2": "Glimmer (Artificial Hailstorm)",
       "b2_r": "Hyperion Bazooka",
       "b3_1": null,
@@ -25824,8 +23282,8 @@ window.VS_DATA = {
       "b1_2": "Glimmer (Divine Lancer)",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": "Dress Sword",
-      "b2_1": "Dress Sword",
+      "b1_r": "Feather Spear",
+      "b2_1": "Feather Spear",
       "b2_2": "Glimmer (Stardust)",
       "b2_r": "Lohengrin",
       "b3_1": null,
