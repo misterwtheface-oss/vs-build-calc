@@ -214,12 +214,12 @@
     .planning-header h1 { font-size: 1.1rem; }
     .planning-header-actions { display: flex; gap: .5rem; align-items: center; }
 
-    /* ── Banish overlay ── */
-    .banish-panel {
+    /* ── Seal overlay ── */
+    .seal-panel {
       max-width: 520px;
       width: 95vw;
     }
-    .banish-controls {
+    .seal-controls {
       display: flex;
       align-items: center;
       gap: .65rem;
@@ -229,30 +229,35 @@
       flex-wrap: wrap;
       flex-shrink: 0;
     }
-    .banish-controls label { display: flex; align-items: center; gap: .35rem; font-size: .78rem; cursor: pointer; user-select: none; }
-    .banish-rarity-ctrl { display: flex; align-items: center; gap: .4rem; font-size: .78rem; }
-    .banish-rarity-ctrl input[type=range] { width: 90px; accent-color: var(--gold); }
-    .banish-rarity-val { font-family: var(--font-title); color: var(--gold); min-width: 2.2rem; }
-    .banish-grid-wrap { overflow-y: auto; padding: .65rem; flex: 1; }
-    .banish-grid {
+    .seal-controls label { display: flex; align-items: center; gap: .35rem; font-size: .78rem; cursor: pointer; user-select: none; }
+    .seal-rarity-ctrl { display: flex; align-items: center; gap: .4rem; font-size: .78rem; }
+    .seal-rarity-ctrl input[type=range] { width: 90px; accent-color: var(--gold); }
+    .seal-rarity-val { font-family: var(--font-title); color: var(--gold); min-width: 2.2rem; }
+    .seal-grid-wrap { overflow-y: auto; padding: .65rem; flex: 1; }
+    .seal-grid {
       display: grid;
       grid-template-columns: repeat(8, var(--slot-size));
       gap: 3px;
       width: fit-content;
       margin: 0 auto;
     }
-    .banish-cell {
+    .seal-cell {
       position: relative;
       width: var(--slot-size); height: var(--slot-size);
       cursor: pointer;
     }
-    .banish-cell:hover .banish-icon { filter: brightness(1.25); }
-    .banish-cell.empty { cursor: default; }
-    .banish-cell.in-build { box-shadow: 0 0 0 2px var(--gold); cursor: default; }
-    .banish-cell.in-build:hover .banish-icon { filter: none; }
-    .banish-cell.passive-off { opacity: .3; cursor: default; pointer-events: none; }
-    .banish-icon { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; display: block; }
-    .banish-seal {
+    .seal-cell:hover .seal-icon { filter: brightness(1.25); }
+    .seal-cell.empty { cursor: default; }
+    .seal-cell.in-build { box-shadow: 0 0 0 2px var(--gold); cursor: default; }
+    .seal-cell.in-build:hover .seal-icon { filter: none; }
+    /* Lineage component that must drop to build an equipped weapon — locked from sealing */
+    .seal-cell.needed { box-shadow: 0 0 0 2px #3fb7d6; cursor: default; }
+    .seal-cell.needed:hover .seal-icon { filter: none; }
+    /* Free on the selected stage — not auto-recommended, but still sealable manually */
+    .seal-cell.stage-item { box-shadow: 0 0 0 2px #5fa84a; }
+    .seal-cell.passive-off { opacity: .3; cursor: default; pointer-events: none; }
+    .seal-icon { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; display: block; }
+    .seal-mark {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
       image-rendering: pixelated;
@@ -260,7 +265,7 @@
       opacity: 0;
       pointer-events: none;
     }
-    .banish-cell.banished .banish-seal { opacity: .5; }
+    .seal-cell.sealed .seal-mark { opacity: .5; }
     .planning-body {
       flex: 1;
       min-height: 0;
@@ -998,29 +1003,8 @@
   };
   const EMPTY_ICON = EMPTY_ICONS.passive;
 
-  // Hardcoded stages (pending stages.csv)
-  const STAGES = [
-    { name: 'Mad Forest',       items: ['Hollow Heart','Pummarola','Candelabrador','Bracer'] },
-    { name: 'Inlaid Library',   items: ['Metaglio Left','Metaglio Right','Spellbinder','Crown'] },
-    { name: 'Dairy Plant',      items: ['Silver Ring','Gold Ring','Attractorb','Clover'] },
-    { name: 'Gallo Tower',      items: ['Clock Lancet','Laurel','Spinach','Wings'] },
-    { name: 'Cappella Magna',   items: ['Pentagram Crown','Empty Tome','Stone Mask'] },
-    { name: 'The Bone Zone',    items: ['Skull O\'Maniac','Armor'] },
-    { name: 'Holy Forbidden',   items: [] },
-    { name: 'Moongolow',        items: [] },
-    { name: 'Boss Rash',        items: [] },
-    { name: 'Il Molise',        items: [] },
-    { name: 'Green Acres',      items: [] },
-    { name: 'Bat Country',      items: [] },
-    { name: 'Tiny Bridge',      items: [] },
-    { name: 'Misty Mountains',  items: [] },
-    { name: 'Lake Foscari',     items: ['Parm Aegis','Torrona\'s Box'] },
-    { name: 'Abyss Foscari',    items: [] },
-    { name: 'Forest Foscari',   items: [] },
-    { name: 'Mt. Moonspell',    items: [] },
-    { name: 'Starroad',         items: [] },
-    { name: 'Eudaimonia M.',    items: [] },
-  ];
+  // Stages come from D.stages (built from stages.csv); populated on load.
+  let STAGES = [];
 
   // ═══════════════════════════════════════════════════════
   //  STATE
@@ -1045,11 +1029,11 @@
     },
     puActive: false,
     powerUps: {}, // stat name → current level (initialized from D.stats on load)
-    banish: {
+    seal: {
       active: false,
       selected: new Set(),
       minRarity: 50,     // default: recommend weapons rarity >= 50
-      banishPassives: false,
+      sealPassives: false,
     },
   };
 
@@ -1817,7 +1801,7 @@
           <h1>Vampire Survivors Build Calculator</h1>
           <div class="planning-header-actions">
             <button class="btn" data-action="open-power-ups">Power-Ups</button>
-            <button class="btn" data-action="open-banish">Banish Advisor</button>
+            <button class="btn" data-action="open-seal">Seal Advisor</button>
             <button class="btn btn-back" data-action="change-player-count">⟵ Change Player Count</button>
           </div>
         </div>
@@ -2226,6 +2210,11 @@
       <span class="arcana-tab-switch">${switchLabel}</span>
     </button>`;
 
+    // Arcana already equipped in OTHER slots — can't be picked again (uniqueness).
+    const equippedElsewhere = new Set(
+      state.arcana.filter((a, i) => a && i !== slotIdx).map(a => a.name)
+    );
+
     let cards = tabBtn;
     for (const group of groups) {
       const key     = group[0].base_num;
@@ -2242,9 +2231,10 @@
         </div>`;
       } else {
         const display = cur || arcana;
-        cards += `<div class="item-card${isSel ? ' selected' : ''}"
-          data-action="ovl-select-arcana" data-arcana="${esc(display.name)}" data-base="${esc(key)}"
-          data-search="${searchVal}" title="${esc(display.name)} (${display.type})">
+        const isUsed  = !isSel && equippedElsewhere.has(display.name);
+        cards += `<div class="item-card${isSel ? ' selected' : ''}${isUsed ? ' consumed' : ''}"
+          ${isUsed ? '' : 'data-action="ovl-select-arcana"'} data-arcana="${esc(display.name)}" data-base="${esc(key)}"
+          data-search="${searchVal}" title="${esc(display.name)} (${display.type})${isUsed ? ' — already equipped' : ''}">
           <img src="${esc(display.icon||EMPTY_ICON)}" alt="${esc(display.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
         </div>`;
       }
@@ -2301,18 +2291,20 @@
     let rightHTML = '';
     if (sel) {
       const stage = STAGES.find(s => s.name === sel.name);
+      const renderIcons = list => `<div class="req-icons" style="margin-top:.4rem">
+        ${list.map(it => {
+          const pi = passiveByName(it);
+          return `<div class="req-icon" title="${esc(it)}">
+            ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
+          </div>`;
+        }).join('')}
+      </div>`;
+      const sections = [];
+      if (stage && stage.items.length) sections.push(`<div class="detail-section"><h3>Stage Items</h3>${renderIcons(stage.items)}</div>`);
+      (stage?.conditional ?? []).forEach(g => sections.push(
+        `<div class="detail-section"><h3>With ${esc(g.arcana)}</h3>${renderIcons(g.items)}</div>`));
       rightHTML = `<div class="detail-name">${esc(sel.name)}</div>
-        ${stage && stage.items.length ? `<div class="detail-section">
-          <h3>Stage Items</h3>
-          <div class="req-icons" style="margin-top:.4rem">
-            ${stage.items.map(it => {
-              const pi = passiveByName(it);
-              return `<div class="req-icon" title="${esc(it)}">
-                ${pi ? `<img src="${esc(pi.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
-              </div>`;
-            }).join('')}
-          </div>
-        </div>` : '<div class="detail-desc" style="margin-top:.5rem">No item data yet.</div>'}`;
+        ${sections.length ? sections.join('') : '<div class="detail-desc" style="margin-top:.5rem">No stage items.</div>'}`;
     } else {
       rightHTML = '<div class="detail-desc" style="margin-top:1rem;text-align:center">Select a stage</div>';
     }
@@ -2514,7 +2506,11 @@
           }
         }
       } else if (type === 'arcana') {
-        state.arcana[slotIdx] = sel;
+        if (sel && state.arcana.some((a, i) => a && i !== slotIdx && a.name === sel.name)) {
+          showToast(`${sel.name} already equipped`, 'warn');
+        } else {
+          state.arcana[slotIdx] = sel;
+        }
       } else if (type === 'stage') {
         state.stage = sel;
       }
@@ -2702,10 +2698,10 @@
   }
 
   // ═══════════════════════════════════════════════════════
-  //  BANISH OVERLAY
+  //  SEAL OVERLAY
   // ═══════════════════════════════════════════════════════
 
-  function banishBuildItems() {
+  function sealBuildItems() {
     const items = new Set();
     state.players.forEach(p => {
       p.weapons.forEach(w => w && items.add(w.name));
@@ -2714,103 +2710,254 @@
     return items;
   }
 
-  function applyBanishRecommend() {
-    const buildItems = banishBuildItems();
-    const passiveNames = new Set(D.passives.map(p => p.name));
-    const minRarity = state.banish.minRarity;
+  // Items actually reachable on the selected stage: its always-present items plus any
+  // arcana-gated groups whose gating arcana is currently equipped (e.g. Boss Rash's items
+  // only count when Mad Groove (VIII) is in the build).
+  function stageItemSet() {
+    const stage = state.stage;
+    if (!stage) return new Set();
+    const set = new Set(stage.items ?? []);
+    (stage.conditional ?? []).forEach(group => {
+      if (state.arcana.some(a => a && a.name === group.arcana)) {
+        group.items.forEach(i => set.add(i));
+      }
+    });
+    return set;
+  }
 
-    state.banish.selected.clear();
+  // Items the seal advisor must NEVER recommend sealing, because they must be able to
+  // drop for the build to come together. This is the acutal-consumed lineage, not the
+  // abstract one: for each equipped weapon we take its full backward chain (the weapons
+  // and passives consumed to reach it), then prune the parts a character's STARTER made
+  // unnecessary. Minnah starts with Bloody Tear, so Whip (and its ingredient Hollow
+  // Heart) were never pulled from the pool — they stay sealable. A weapon kept in an
+  // early form (Bloody Tear, not Fuwalafuwaloo) does not protect its forward union
+  // partner, so that partner (and the union result) can be sealed to lock the form.
+  //
+  // Returns { protectedSet, equippedWeapons } — equippedWeapons drives the recommend
+  // logic that seals a union/evolution only when the build can actually form it.
+  function sealProtectedItems() {
+    const passiveNames    = new Set(D.passives.map(p => p.name));
+    const protectedSet    = new Set();
+    const equippedWeapons = new Set();
+
+    state.players.forEach(p => p.weapons.forEach(w => w && equippedWeapons.add(w.name)));
+
+    state.players.forEach(player => {
+      const char    = player.character;
+      const hidden  = new Set(char?.hidden_items ?? []);
+      const starters = new Set((char?.starting_weapons ?? []).filter(sw => !hidden.has(sw)));
+
+      // Equipped passives are part of the desired build — always protected.
+      player.passives.forEach(p => p && protectedSet.add(p.name));
+
+      player.weapons.forEach(w => {
+        if (!w) return;
+        const chain = collectWeaponChain(w.name); // w + every weapon consumed to reach it
+
+        // Upstream bases a starter-provided evolved weapon skipped (never dropped).
+        const skipped = new Set();
+        starters.forEach(sw => {
+          if (chain.has(sw) && D.weapons.some(b => b.trans_result === sw)) {
+            collectWeaponChain(sw).forEach(anc => {
+              if (anc !== sw && !equippedWeapons.has(anc)) skipped.add(anc);
+            });
+          }
+        });
+
+        // Protect every weapon that must still drop (chain minus starter-skipped bases).
+        chain.forEach(n => { if (!skipped.has(n)) protectedSet.add(n); });
+
+        // Protect passives consumed by transforms that actually occur: every chain weapon
+        // except the equipped form itself (whose requirement points beyond the build) and
+        // the starter-skipped bases (whose transform never happened).
+        chain.forEach(n => {
+          if (skipped.has(n) || n === w.name) return;
+          const wo = D.weapons.find(x => x.name === n);
+          if (!wo) return;
+          (wo.requirements || []).forEach(req => {
+            if (passiveNames.has(req)) protectedSet.add(req);
+          });
+        });
+      });
+    });
+
+    return { protectedSet, equippedWeapons };
+  }
+
+  // ── Seal advisor strategy constants ──
+  // Free-pick enabler weapons — never auto-seal. Candybox/Turbo grant a free weapon pick,
+  // Arma Dio a free passive; sealing them throws those picks away. (Arma Dio is rarity 50,
+  // so it would otherwise be caught by the default threshold.)
+  const SEAL_FREE_PICKS = new Set(['Candybox', 'Super Candybox II Turbo', 'Arma Dio']);
+  // Arcana that hand you passives outside the normal pool, making passive-sealing
+  // counterproductive: Hail from the Future drops Arma Dios; Moonlight Bolero's chests hold
+  // passives even with full slots. With either equipped, don't auto-seal passives at all.
+  const SEAL_PASSIVE_BLOCKING_ARCANA = new Set(['Moonlight Bolero (VI)', 'Hail from the Future (X)']);
+  // Keep weapons at/below this rarity unsealed so regular Candybox (and Hail's Candybox
+  // drops) still have cheap picks — these barely surface as normal level-ups anyway.
+  const SEAL_CANDYBOX_RESERVE_RARITY = 1;
+  // Priority order for the one passive left unsealed for Arma Dio to grant (the routine
+  // extra passive in single player). Reserve the highest-ranked one not already in the build.
+  const SEAL_ARMA_PASSIVE_PRIORITY = [
+    'Duplicator', 'Empty Tome', 'Spinach', 'Candelabrador', 'Spellbinder', 'Bracer',
+    'Attractorb', 'Tirajisú', 'Clover', 'Crown', 'Pummarola', 'Hollow Heart', 'Armor',
+    'Wings', 'Stone Mask', "Skull O'Maniac",
+  ];
+
+  function applySealRecommend() {
+    const { protectedSet, equippedWeapons } = sealProtectedItems();
+    const passiveNames = new Set(D.passives.map(p => p.name));
+    const minRarity = state.seal.minRarity;
+
+    // Arcana context can veto passive sealing entirely (see SEAL_PASSIVE_BLOCKING_ARCANA).
+    const blockingArcana = state.arcana.find(a => a && SEAL_PASSIVE_BLOCKING_ARCANA.has(a.name));
+    const sealPassives = state.seal.sealPassives && !blockingArcana;
+
+    // Items reachable on the selected stage — usually not worth sealing (you can grab them
+    // as a late 7th/8th slot). Never auto-recommend; the user can still seal manually.
+    const stageItems = stageItemSet();
+
+    // Reserve one high-value passive (not already in the build, and not free on this stage)
+    // for Arma Dio to fill.
+    const armaReserve = sealPassives
+      ? SEAL_ARMA_PASSIVE_PRIORITY.find(pn =>
+          passiveNames.has(pn) && !protectedSet.has(pn) && !stageItems.has(pn))
+      : null;
+
+    state.seal.selected.clear();
 
     D.banishLayout.forEach(name => {
       if (!name) return;
+      if (protectedSet.has(name)) return;
+      if (SEAL_FREE_PICKS.has(name)) return; // Candybox / Turbo / Arma Dio — keep the free picks
+      if (stageItems.has(name)) return;      // free on the selected stage — leave for pickup
+
       const isPassive = passiveNames.has(name);
-      if (isPassive && !state.banish.banishPassives) return;
-      if (buildItems.has(name)) return;
+
+      if (isPassive) {
+        if (!sealPassives) return;
+        if (name === armaReserve) return;    // leave one valuable passive for Arma Dio
+        const passive = D.passives.find(p => p.name === name);
+        if (passive && passive.rarity >= minRarity) state.seal.selected.add(name);
+        return;
+      }
 
       const weapon = D.weapons.find(w => w.name === name);
-      const passive = isPassive ? D.passives.find(p => p.name === name) : null;
-      const rarity = weapon ? weapon.rarity : (passive ? passive.rarity : 0);
+      if (!weapon) return;
 
-      if (rarity > 0 && rarity >= minRarity) {
-        state.banish.selected.add(name);
+      if (weapon.rarity > 0) {
+        // Offerable weapon. Leave the cheapest tier unsealed for Candybox picks.
+        if (weapon.rarity <= SEAL_CANDYBOX_RESERVE_RARITY) return;
+        if (weapon.rarity >= minRarity) state.seal.selected.add(name);
+      } else {
+        // Evolutions/unions (rarity 0) never drop but auto-form from their parts. Seal one
+        // only when the build holds a component that could form it — locks an equipped weapon
+        // in its current stage (e.g. seal Vandalier to keep Peachone + Ebony Wings). We don't
+        // blanket-seal evolutions: Turbo Candybox picks from the evolved pool, so keeping
+        // them available matters.
+        const parts = collectWeaponChain(name);
+        let formable = false;
+        parts.forEach(part => { if (part !== name && equippedWeapons.has(part)) formable = true; });
+        if (formable) state.seal.selected.add(name);
       }
     });
+
+    // Report whether the arcana veto suppressed passive sealing, so the UI can explain it.
+    return { blockedByArcana: state.seal.sealPassives && blockingArcana ? blockingArcana.name : null };
   }
 
-  function renderBanishOverlay() {
+  function renderSealOverlay() {
     const passiveNames = new Set(D.passives.map(p => p.name));
     const weaponMap   = Object.fromEntries(D.weapons.map(w => [w.name, w]));
     const passiveMap  = Object.fromEntries(D.passives.map(p => [p.name, p]));
-    const buildItems  = banishBuildItems();
+    const buildItems  = sealBuildItems();
+    const { protectedSet } = sealProtectedItems();
+    const stageItems  = stageItemSet();
 
     const rarityValues = [...new Set(
       D.weapons.map(w => w.rarity).filter(r => r > 0)
     )].sort((a, b) => a - b);
 
     const sliderMax = rarityValues.length - 1;
-    const curIdx    = Math.max(0, rarityValues.indexOf(state.banish.minRarity));
-    const dispVal   = rarityValues[curIdx] ?? state.banish.minRarity;
+    const curIdx    = Math.max(0, rarityValues.indexOf(state.seal.minRarity));
+    const dispVal   = rarityValues[curIdx] ?? state.seal.minRarity;
 
     const cells = D.banishLayout.map(name => {
-      if (!name) return `<div class="banish-cell empty"></div>`;
+      if (!name) return `<div class="seal-cell empty"></div>`;
 
       const isPassive = passiveNames.has(name);
       const inBuild   = buildItems.has(name);
-      const banished  = state.banish.selected.has(name);
-      const passiveOff = isPassive && !state.banish.banishPassives;
+      const sealed  = state.seal.selected.has(name);
+      const passiveOff = isPassive && !state.seal.sealPassives;
 
       const item  = weaponMap[name] || passiveMap[name];
       const icon  = item ? item.icon : (isPassive ? EMPTY_ICONS.passive : EMPTY_ICONS.weapon);
       const fallback = isPassive ? EMPTY_ICONS.passive : EMPTY_ICONS.weapon;
 
-      const classes = ['banish-cell',
-        inBuild   ? 'in-build'   : '',
-        banished  ? 'banished'   : '',
-        passiveOff ? 'passive-off' : '',
+      // Lineage component that must still drop to build an equipped weapon (e.g. Peachone
+      // when Vandalier is equipped). Locked — sealing it would break the build.
+      const needed = !inBuild && protectedSet.has(name);
+      // Free on the selected stage — flagged but still sealable if the user insists.
+      const stageItem = !inBuild && !needed && stageItems.has(name);
+
+      const classes = ['seal-cell',
+        inBuild    ? 'in-build'     : '',
+        needed     ? 'needed'       : '',
+        stageItem  ? 'stage-item'   : '',
+        sealed   ? 'sealed'     : '',
+        passiveOff ? 'passive-off'  : '',
       ].filter(Boolean).join(' ');
 
-      const actionAttr = (!inBuild && !passiveOff)
-        ? `data-action="banish-toggle" data-name="${esc(name)}"` : '';
+      const lockToggle = inBuild || needed || passiveOff;
+      const actionAttr = lockToggle
+        ? '' : `data-action="seal-toggle" data-name="${esc(name)}"`;
 
-      return `<div class="${classes}" ${actionAttr} title="${esc(name)}${inBuild ? ' (in build)' : ''}">
-        <img class="banish-icon" src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${fallback}'">
-        <img class="banish-seal" src="assets/icons/ui/seal.png" alt="">
+      const tip = esc(name)
+        + (item ? ` — rarity ${item.rarity}` : '')
+        + (inBuild ? ' (in build)' : '')
+        + (needed ? ' (needed for lineage)' : '')
+        + (stageItem ? ' (free on stage)' : '');
+
+      return `<div class="${classes}" ${actionAttr} title="${tip}">
+        <img class="seal-icon" src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${fallback}'">
+        <img class="seal-mark" src="assets/icons/ui/seal.png" alt="">
       </div>`;
     }).join('');
 
     const root = document.getElementById('overlay-root');
     root.innerHTML = `
-      <div class="overlay-panel banish-panel">
+      <div class="overlay-panel seal-panel">
         <div class="overlay-header">
-          <h2>Banish Advisor</h2>
-          <button class="btn btn-icon overlay-close" data-action="banish-close">✕</button>
+          <h2>Seal Advisor</h2>
+          <button class="btn btn-icon overlay-close" data-action="seal-close">✕</button>
         </div>
-        <div class="banish-controls">
+        <div class="seal-controls">
           <label>
-            <input type="checkbox" id="banish-passives-chk" ${state.banish.banishPassives ? 'checked' : ''}>
-            Banish Passives
+            <input type="checkbox" id="seal-passives-chk" ${state.seal.sealPassives ? 'checked' : ''}>
+            Seal Passives
           </label>
-          <div class="banish-rarity-ctrl">
+          <div class="seal-rarity-ctrl">
             <span>Min Rarity</span>
-            <input type="range" id="banish-rarity-slider"
+            <input type="range" id="seal-rarity-slider"
               min="0" max="${sliderMax}" value="${curIdx}"
               data-rarities="${rarityValues.join(',')}">
-            <span class="banish-rarity-val" id="banish-rarity-val">${dispVal}</span>
+            <span class="seal-rarity-val" id="seal-rarity-val">${dispVal}</span>
           </div>
-          <button class="btn btn-confirm btn-sm" data-action="banish-recommend">Recommend</button>
-          <button class="btn btn-sm" data-action="banish-clear">Clear All</button>
+          <button class="btn btn-confirm btn-sm" data-action="seal-recommend">Recommend</button>
+          <button class="btn btn-sm" data-action="seal-clear">Clear All</button>
         </div>
-        <div class="banish-grid-wrap">
-          <div class="banish-grid">${cells}</div>
+        <div class="seal-grid-wrap">
+          <div class="seal-grid">${cells}</div>
         </div>
       </div>`;
     root.classList.remove('hidden');
-    state.banish.active = true;
+    state.seal.active = true;
   }
 
-  function closeBanishOverlay() {
+  function closeSealOverlay() {
     document.getElementById('overlay-root').classList.add('hidden');
-    state.banish.active = false;
+    state.seal.active = false;
   }
 
   // ═══════════════════════════════════════════════════════
@@ -2822,7 +2969,7 @@
     if (!btn) {
       if (e.target === document.getElementById('overlay-root')) {
         if (state.puActive) closePowerUpOverlay();
-        else if (state.banish.active) closeBanishOverlay();
+        else if (state.seal.active) closeSealOverlay();
         else closeOverlay(false);
       }
       return;
@@ -2861,23 +3008,24 @@
       return;
     }
 
-    // ── Banish overlay actions ──
-    if (action === 'banish-close') { closeBanishOverlay(); return; }
-    if (action === 'banish-toggle') {
+    // ── Seal overlay actions ──
+    if (action === 'seal-close') { closeSealOverlay(); return; }
+    if (action === 'seal-toggle') {
       const name = btn.dataset.name;
-      if (state.banish.selected.has(name)) state.banish.selected.delete(name);
-      else state.banish.selected.add(name);
-      btn.classList.toggle('banished', state.banish.selected.has(name));
+      if (state.seal.selected.has(name)) state.seal.selected.delete(name);
+      else state.seal.selected.add(name);
+      btn.classList.toggle('sealed', state.seal.selected.has(name));
       return;
     }
-    if (action === 'banish-recommend') {
-      applyBanishRecommend();
-      renderBanishOverlay();
+    if (action === 'seal-recommend') {
+      const { blockedByArcana } = applySealRecommend();
+      renderSealOverlay();
+      if (blockedByArcana) showToast(`Passives left unsealed — ${blockedByArcana} grants passives outside the pool`, 'warn');
       return;
     }
-    if (action === 'banish-clear') {
-      state.banish.selected.clear();
-      renderBanishOverlay();
+    if (action === 'seal-clear') {
+      state.seal.selected.clear();
+      renderSealOverlay();
       return;
     }
 
@@ -2965,8 +3113,8 @@
       renderPowerUpOverlay();
       return;
     }
-    if (action === 'open-banish') {
-      renderBanishOverlay();
+    if (action === 'open-seal') {
+      renderSealOverlay();
       return;
     }
     if (action === 'change-player-count') {
@@ -3357,7 +3505,7 @@
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
     if (state.puActive) { closePowerUpOverlay(); return; }
-    if (state.banish.active) { closeBanishOverlay(); return; }
+    if (state.seal.active) { closeSealOverlay(); return; }
     if (!state.overlay) return;
     const { fromEmpty } = state.overlay;
     const hasSelection = !!state.ovl.selected;
@@ -3377,6 +3525,7 @@
       return;
     }
     D = window.VS_DATA;
+    STAGES = D.stages || [];
     D.stats.forEach(s => { state.powerUps[s.name] = s.max_level; });
     render();
     // Bind once to persistent elements — survives innerHTML replacements
@@ -3392,11 +3541,11 @@
     const ovlRoot = document.getElementById('overlay-root');
     ovlRoot.addEventListener('click', handleOverlayClick);
     ovlRoot.addEventListener('input', e => {
-      if (e.target.id === 'banish-rarity-slider') {
+      if (e.target.id === 'seal-rarity-slider') {
         const rarities = e.target.dataset.rarities.split(',').map(Number);
         const val = rarities[parseInt(e.target.value)] ?? 0;
-        state.banish.minRarity = val;
-        const disp = document.getElementById('banish-rarity-val');
+        state.seal.minRarity = val;
+        const disp = document.getElementById('seal-rarity-val');
         if (disp) disp.textContent = val;
         return;
       }
@@ -3413,9 +3562,9 @@
         refreshOverlay();
         return;
       }
-      if (e.target.id !== 'banish-passives-chk') return;
-      state.banish.banishPassives = e.target.checked;
-      renderBanishOverlay();
+      if (e.target.id !== 'seal-passives-chk') return;
+      state.seal.sealPassives = e.target.checked;
+      renderSealOverlay();
     });
   });
   </script>

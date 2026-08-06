@@ -25909,5 +25909,517 @@ window.VS_DATA = {
         "Negative Space"
       ]
     }
+  ],
+  "stages": [
+    {
+      "name": "Mad Forest",
+      "icon": "assets/icons/stages/mad_forest.png",
+      "description": "Once a thriving haven, now a dumping ground for evil. A vampire is said to be the root of this evil, but we can find only mayhem and roast chicken.",
+      "items": [
+        "Skull O'Maniac",
+        "Hollow Heart",
+        "Spinach",
+        "Pummarola",
+        "Clover",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Inlaid Library",
+      "icon": "assets/icons/stages/inlaid_library.png",
+      "description": "The Futile Scribe was cursed to know all and understand nothing. His endless library may gift us insight... or damnation. A mask of stone whispers endlessly within.",
+      "items": [
+        "Empty Tome",
+        "Stone Mask",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Dairy Plant",
+      "icon": "assets/icons/stages/dairy_plant.png",
+      "description": "The birthplace of Milk Magic churns with chaos. Here, it's not just blood that curdles. A secret map awaits the hero brave enough to enter this overthrown factory.",
+      "items": [
+        "Attractorb",
+        "Armor",
+        "Wings",
+        "Candelabrador",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Gallo Tower",
+      "icon": "assets/icons/stages/gallo_tower.png",
+      "description": "An edifice of science and sorcery where horror was made manifest in the name of progress. Its many artifacts and experiments may lead us to what we seek.",
+      "items": [
+        "Bracer",
+        "Spellbinder",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Cappella Magna",
+      "icon": "assets/icons/stages/cappella_magna.png",
+      "description": "Conceited were they that ruled from so high yet stooped so low. This nexus of debased purity is the perfect place to find a vampire. Probably.",
+      "items": [
+        "Crown",
+        "Tirajisú",
+        "Duplicator",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Il Molise",
+      "icon": "assets/icons/stages/il_molise.png",
+      "description": "The flowers seem to sing here, calling out to weary heroes. Is such an unspoilt place even real? Does it matter? Is there roast chicken?",
+      "items": [
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Moongolow",
+      "icon": "assets/icons/stages/moongolow.png",
+      "description": "Legend tells of a city swallowed by the sea under a full moon's callous watch. Home to mysteries unknown, we ought to see what lies within its walls.",
+      "items": [
+        "Hollow Heart",
+        "Pummarola",
+        "Armor",
+        "Wings",
+        "Spinach",
+        "Bracer",
+        "Spellbinder",
+        "Candelabrador",
+        "Empty Tome",
+        "Duplicator",
+        "Tirajisú",
+        "Attractorb",
+        "Clover",
+        "Crown",
+        "Stone Mask",
+        "Skull O'Maniac",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Holy Forbidden",
+      "icon": "assets/icons/stages/holy_forbidden.png",
+      "description": "Wait, you can see this too? This isn't right...",
+      "items": [],
+      "conditional": []
+    },
+    {
+      "name": "Green Acres",
+      "icon": "assets/icons/stages/green_acres.png",
+      "description": "Fate changes by the minute in a realm where mortals can only trespass. What rewards wait those who challenge its rules? Treasure? Glory? Poultry?",
+      "items": [
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "The Bone Zone",
+      "icon": "assets/icons/stages/the_bone_zone.png",
+      "description": "Calcified carnage awaits where the dead go to live. If we speak unholy vespers we will open the way, but should we not go home? Have we not dug too deep?",
+      "items": [
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Boss Rash",
+      "icon": "assets/icons/stages/boss_rash.png",
+      "description": "The monsters want entertainment, and if we win their game, the loot is ours for the taking. Let us face these recycled assets and do what we do best... survive!",
+      "items": [],
+      "conditional": [
+        {
+          "arcana": "Mad Groove (VIII)",
+          "items": [
+            "Hollow Heart",
+            "Pummarola",
+            "Armor",
+            "Wings",
+            "Spinach",
+            "Bracer",
+            "Spellbinder",
+            "Candelabrador",
+            "Empty Tome",
+            "Duplicator",
+            "Tirajisú",
+            "Attractorb",
+            "Clover",
+            "Crown",
+            "Stone Mask",
+            "Skull O'Maniac",
+            "Silver Ring",
+            "Gold Ring",
+            "Metaglio Left",
+            "Metaglio Right"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Whiteout",
+      "icon": "assets/icons/stages/whiteout.png",
+      "description": "Arctic mirages and a slow, constant snowstorm make this great glacier a hostile environment. Nonetheless, the myths of a powerful weapon, a mysterious potion, and a cursed woman who hates hot springs, make for strong lures.",
+      "items": [
+        "Glass Fandango",
+        "Skull O'Maniac",
+        "Spinach",
+        "Wings",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "The Lycaeum",
+      "icon": "assets/icons/stages/the_lycaeum.png",
+      "description": "Myths are murmured of a school submerged beneath a sunlit lake. In silent depths strange fish survive, while at its peak vile evil thrives.",
+      "items": [
+        "Attractorb",
+        "Penshin Fatcha",
+        "Wings",
+        "Spellbinder",
+        "Empty Tome",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "The Coop",
+      "icon": "assets/icons/stages/the_coop.png",
+      "description": "A farm for fear itself, the beasts reared here have turned from tasty morsels to terrifying monsters after realising the deadly power of cooperation.",
+      "items": [
+        "Parm Aegis",
+        "Fire Wand",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Space 54",
+      "icon": "assets/icons/stages/space_54.png",
+      "description": "The 54th ritual is complete, and space itself has folded under the weight of an otherworldly will. This veil between cosmic planes is dimensionally misaligned, phasing in unlikely friends, nightmarish foes, and a curio of immense chaotic potential.",
+      "items": [
+        "Candelabrador",
+        "Empty Tome",
+        "Phas3r",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Carlo Cart",
+      "icon": "assets/icons/stages/carlo_cart.png",
+      "description": "Once known as the “King Bible” underground train station, these tunnels beneath the Laborratory now host chaotic, clandestine, and incredibly dangerous go-kart races run by the lizardman King Carlo.",
+      "items": [],
+      "conditional": []
+    },
+    {
+      "name": "Laborratory",
+      "icon": "assets/icons/stages/laborratory.png",
+      "description": "Formerly the foundry where the famed anti-vampiric weaponologist Santa Ladonna created many trinkets, the Laborratory now lies abandoned. Whispers echo that Santa fled from this makeshift workshop when her experimental alchemy somehow opened a door that was never supposed to be breached.",
+      "items": [
+        "Santa Javelin",
+        "Arma Dio",
+        "Cross",
+        "King Bible",
+        "Clover",
+        "Spellbinder",
+        "Santa Water",
+        "Attractorb",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Westwoods",
+      "icon": "assets/icons/stages/westwoods.png",
+      "description": "Greed's gone green. Arcane avarice is transforming these once serene woods into a ghoulish gambling den. Welcome to the Cursino, where you need not be a vampire to fear the stakes.",
+      "items": [
+        "Magi-Stone",
+        "Gatti Amari",
+        "Pentagram",
+        "Karoma's Mana"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Bat Country",
+      "icon": "assets/icons/stages/bat_country.png",
+      "description": "We can't stop here.",
+      "items": [
+        "Gold Ring"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Astral Stair",
+      "icon": "assets/icons/stages/astral_stair.png",
+      "description": "A highway used to reach other worlds and dimensions. It's dangerous to venture through alone, but you probably won't listen to me anyway, will you?",
+      "items": [
+        "Phiera Der Tuphello",
+        "Eight The Sparrow"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Mazerella",
+      "icon": "assets/icons/stages/mazerella.png",
+      "description": "A lactose labyrinth lies buried in the buttery basement of the Dairy Plant. Home to minotaurs and governed by Trickle-down milkonomics. Grabbing the bull by the horns and cheesing it through this mad maze is the only winning formula.",
+      "items": [
+        "Axe",
+        "Knife",
+        "Clock Lancet",
+        "Laurel",
+        "Armor",
+        "Wings",
+        "Attractorb",
+        "Candelabrador",
+        "Carréllo",
+        "Arma Dio"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Tiny Bridge",
+      "icon": "assets/icons/stages/tiny_bridge.png",
+      "description": "Two opposing factions abruptly stopped fighting over this little bridge. No doubt the source of this cessation will turn out to be harmless.",
+      "items": [
+        "Wings",
+        "Vento Sacro",
+        "Attractorb",
+        "Lightning Ring"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Eudaimonia Machine",
+      "icon": "assets/icons/stages/eudaimonia_machine.png",
+      "description": "A space between spaces. The culmination of something, or simply another beginning? Tag, you're it.",
+      "items": [],
+      "conditional": []
+    },
+    {
+      "name": "Room 1665",
+      "icon": "assets/icons/stages/room_1665.png",
+      "description": "Seemingly bottomless, the down-reaching doors of this huge, infernal contraption open only when fed the blood of monsters. Summoned by the baneful behavior of a long forgotten clan, the unfathomable depths of these haunted halls whisper with a putrid power that yearns for innocent souls to play with.",
+      "items": [],
+      "conditional": []
+    },
+    {
+      "name": "Mt.Moonspell",
+      "icon": "assets/icons/stages/mt.moonspell.png",
+      "description": "Ancestral home of a fallen clan, now overrun by yokai and oni. In this world where the sun doesn't shine, the night is victorious.",
+      "items": [
+        "Spinach",
+        "Pummarola",
+        "Candelabrador",
+        "Duplicator",
+        "Attractorb",
+        "Stone Mask",
+        "Night Sword"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Lake Foscari",
+      "icon": "assets/icons/stages/lake_foscari.png",
+      "description": "An enchanted forest stuffed with fae mysteries and mythological entities. The perfect place to have an average adventure with zero complications.",
+      "items": [
+        "Armor",
+        "Bracer",
+        "Clover",
+        "Crown",
+        "Skull O'Maniac",
+        "Academy Badge",
+        "Arcana Treasure Chest",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Abyss Foscari",
+      "icon": "assets/icons/stages/abyss_foscari.png",
+      "description": "Sealed by Luminaire in ancient times to contain the darkness within, these underground ruins are now accessible, but so is the outside world to the evil from the depths.",
+      "items": [
+        "Armor",
+        "Empty Tome",
+        "Attractorb",
+        "Crown",
+        "Stone Mask",
+        "Skull O'Maniac",
+        "Torrona's Box",
+        "Academy Badge",
+        "Prismatic Missile",
+        "Shadow Servant",
+        "Arcana Treasure Chest"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Polus Replica",
+      "icon": "assets/icons/stages/polus_replica.png",
+      "description": "Summoned to a mysterious science station amongst the stars, survival is far from certain. Extraterrestrial evil and inter-dimensional duplicity lurk behind every space rock.",
+      "items": [
+        "Lifesign Scan",
+        "Mini Crewmate",
+        "Mini Engineer",
+        "Mini Ghost",
+        "Mini Shapeshifter",
+        "Mini Guardian",
+        "Mini Impostor",
+        "Mini Scientist"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Neo Galuga",
+      "icon": "assets/icons/stages/neo_galuga.png",
+      "description": "Join Contra Force to run and gun across the relentlessly horizontal width of Galuga, from the jungle to Neo City and through the horrors lurking beyond. Let's survive determinedly!",
+      "items": [
+        "Arcana Treasure Chest",
+        "Arma Dio",
+        "Homing Miss",
+        "Metal Claw",
+        "Weapon Power-Ups",
+        "Prism Lass",
+        "Wings"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Hectic Highway",
+      "icon": "assets/icons/stages/hectic_highway.png",
+      "description": "Contra Force, rev your jetbikes – its time to drive fast, and fire faster. Red falcon traitors are invading the C-1 Highway for some treasonable reason, and we need you to defend our crucial infrastructure.",
+      "items": [],
+      "conditional": []
+    },
+    {
+      "name": "Ode to Castlevania",
+      "icon": "assets/icons/stages/ode_to_castlevania.png",
+      "description": "As myriad humans from all over the world joined their vespers in unison, the forces of chaos resonated and granted them their dark wish. The King of Terror raises yet again, and with him his demon castle: Castlevania.",
+      "items": [
+        "Sinestro Custos",
+        "Arma Dio",
+        "Sonic Dash",
+        "Dextro Custos",
+        "Dominus Anger",
+        "Curved Knife",
+        "Endo Gears",
+        "Tirajisú",
+        "Epi Head",
+        "Shuriken",
+        "Dominus Hatred",
+        "Parm Aegis",
+        "Peri Pendulum",
+        "Karoma's Mana",
+        "Myo Lift",
+        "Familiar Forge",
+        "Discus",
+        "Rock Riot",
+        "Ice Fang",
+        "Gale Force",
+        "Fulgur",
+        "Keremet Bubbles",
+        "Hex",
+        "Refectio",
+        "Bone",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Emerald Diorama",
+      "icon": "assets/icons/stages/emerald_diorama.png",
+      "description": "A miniature replica of a system of interconnected worlds. Emerald Waves guide travellers to their destined paths.",
+      "items": [
+        "Emerald Rapture",
+        "Pummarola",
+        "Bullova",
+        "Silver Ring",
+        "Spellbinder",
+        "Stone Mask",
+        "Parm Aegis",
+        "Glaive",
+        "Metaglio Left",
+        "Karoma's Mana",
+        "Khukuri",
+        "Metaglio Right",
+        "Spinach",
+        "Flamberge",
+        "Gold Ring",
+        "Crown",
+        "Skull O'Maniac"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Ante Chamber",
+      "icon": "assets/icons/stages/ante_chamber.png",
+      "description": "Fearsome fools flock to this extradimensional card carnival, where survival is a high-stakes game. The beastly buffoons that prowl this floating funhouse aren’t bluffing, so play your cards right or the joke will be on you.",
+      "items": [
+        "Outer Saboteur",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "conditional": []
+    }
   ]
 };
