@@ -248,13 +248,19 @@
     }
     .seal-cell:hover .seal-icon { filter: brightness(1.25); }
     .seal-cell.empty { cursor: default; }
-    .seal-cell.in-build { box-shadow: 0 0 0 2px var(--gold); cursor: default; }
-    .seal-cell.in-build:hover .seal-icon { filter: none; }
+    /* "Protected from sealing" states — shown as ICON TINTS, not just a thin colored
+       border (borders vanished against the icons' own baked-in borders in the dense grid).
+       Hue encodes the reason; a matching INSET ring keeps the edge crisp. */
+    .seal-cell.in-build   { box-shadow: inset 0 0 0 2px var(--gold); cursor: default; }
+    .seal-cell.in-build   .seal-icon { filter: sepia(1) saturate(3) hue-rotate(2deg)   brightness(1.05); }
+    .seal-cell.in-build:hover .seal-icon { filter: sepia(1) saturate(3) hue-rotate(2deg) brightness(1.05); }
     /* Lineage component that must drop to build an equipped weapon — locked from sealing */
-    .seal-cell.needed { box-shadow: 0 0 0 2px #3fb7d6; cursor: default; }
-    .seal-cell.needed:hover .seal-icon { filter: none; }
+    .seal-cell.needed     { box-shadow: inset 0 0 0 2px #3fb7d6; cursor: default; }
+    .seal-cell.needed     .seal-icon { filter: sepia(1) saturate(5) hue-rotate(150deg) brightness(1.02); }
+    .seal-cell.needed:hover .seal-icon { filter: sepia(1) saturate(5) hue-rotate(150deg) brightness(1.02); }
     /* Free on the selected stage — not auto-recommended, but still sealable manually */
-    .seal-cell.stage-item { box-shadow: 0 0 0 2px #5fa84a; }
+    .seal-cell.stage-item { box-shadow: inset 0 0 0 2px #5fa84a; }
+    .seal-cell.stage-item .seal-icon { filter: sepia(1) saturate(4) hue-rotate(75deg)  brightness(1.02); }
     .seal-cell.passive-off { opacity: .3; cursor: default; pointer-events: none; }
     .seal-icon { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; display: block; }
     .seal-mark {
@@ -265,7 +271,9 @@
       opacity: 0;
       pointer-events: none;
     }
-    .seal-cell.sealed .seal-mark { opacity: .5; }
+    /* Seal mark reads clearly against the busy grid but at .75 so a little of the icon
+       behind peeks through (user preference). Icon itself stays untinted. */
+    .seal-cell.sealed .seal-mark { opacity: .75; }
     .planning-body {
       flex: 1;
       min-height: 0;
@@ -679,7 +687,15 @@
     }
     .item-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .item-card:hover { box-shadow: 0 0 0 2px var(--border-hi), 0 0 8px rgba(184,136,32,.4); }
-    .item-card.selected { box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(232,184,32,.5); }
+    /* Selection reads through busy grids: an INSET ring (sits on top of the icon's own
+       baked-in border, not outside it) + a gold wash tint over the img + a brightness
+       lift — icons already carry a bold border, so a thin outer ring alone disappears. */
+    .item-card.selected { box-shadow: inset 0 0 0 2px var(--gold), 0 0 12px rgba(232,184,32,.6); }
+    .item-card.selected img { filter: brightness(1.12) saturate(1.15); }
+    .item-card.selected::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: rgba(232,184,32,.30); mix-blend-mode: overlay;
+    }
     .item-card.dim      { opacity: .35; pointer-events: none; }
     .item-card.consumed { opacity: .25; pointer-events: none; filter: grayscale(.7) sepia(.4); }
     .search-dim { display: none !important; }
@@ -820,6 +836,11 @@
     .evo-node { width: 44px; height: 44px; flex-shrink: 0; border-radius: 5px; overflow: hidden; }
     .evo-node.current { outline: 1px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.4); }
     .evo-node.evo-hidden { opacity: .4; }
+    /* Glimmer tech: scale the reused Emerald Rapture art to crop its baked-in frame
+       (overflow:hidden on .evo-node clips the overscan) so the node looks borderless. */
+    .evo-node.evo-glimmer img { transform: scale(1.24); }
+    /* Chaos-morph character sprite: show the full character art, not a cropped portrait. */
+    .evo-node.evo-char-sprite img { object-fit: contain; image-rendering: pixelated; }
     .evo-node[data-evo-item]:not(.current) { cursor: context-menu; }
     .evo-node[data-evo-item]:not(.current):hover { outline: 1px solid var(--border-hi); }
     .evo-gem[data-evo-item] { cursor: context-menu; }
@@ -837,12 +858,17 @@
     @keyframes toast-out { to   { opacity:0; transform:translateX(-50%) translateY(6px); } }
     .evo-node img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .evo-op { font-size: .8rem; color: var(--text-muted); flex-shrink: 0; }
+    /* Level-up pipe: gold and bold so it reads as a connector, not stray punctuation. */
+    .evo-op-lvl { color: var(--gold-dim); font-weight: 700; font-size: 1.05rem; line-height: 1; }
     .evo-nw { display: inline-flex; align-items: center; flex-shrink: 0; position: relative; }
     .evo-max { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .65rem; font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: .02em; white-space: nowrap; }
     .evo-sub { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 2px; font-size: .63rem; color: var(--text-muted); line-height: 1; text-align: center; white-space: nowrap; }
+    /* Glimmer attack names can be long — let them wrap instead of overflowing the row. */
+    .evo-sub.evo-sub-wrap { white-space: normal; max-width: 60px; line-height: 1.05; }
     .evo-dash-line { width: 14px; border-top: 1.5px dashed var(--text-dim); flex-shrink: 0; }
-    .evo-gem { width: 22px; height: 22px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
-    .evo-gem img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* Gemini gem uses the Arcana card aspect (~0.7, i.e. 224x320) instead of a square. */
+    .evo-gem { width: 22px; height: 31px; flex-shrink: 0; border-radius: 3px; overflow: hidden; }
+    .evo-gem img { width: 100%; height: 100%; object-fit: fill; display: block; }
     /* merge-bar: stacked rows on left → bar → output right (dual/Vandalier/Universitas) */
     .evo-merge { display: inline-flex; align-items: stretch; gap: 3px; }
     .evo-merge-rows { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
@@ -865,6 +891,9 @@
     .evo-pentagram { position: relative; width: 110px; height: 110px; margin: .4rem 0; }
     .evo-pentagram .ep-item { position: absolute; transform: translate(-50%,-50%); }
     .evo-pentagram .ep-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    /* Alucard gift: 3-over-2 example-evo block to the right of Alucard Shield */
+    .alucard-evos { display: inline-flex; flex-direction: column; gap: 2px; opacity: .5; margin-left: 2px; }
+    .alucard-evos-row { display: flex; gap: 2px; justify-content: center; }
     /* hexagram (Tuna) */
     .evo-hexagram { position: relative; width: 160px; height: 150px; margin: .4rem 0; }
     .evo-hexagram .eh-item { position: absolute; transform: translate(-50%,-50%); }
@@ -1138,21 +1167,30 @@
     return EMPTY_ICON;
   }
 
-  function eNode(name, { cur = false, max = false, hidden = false, sub = null } = {}) {
+  function eNode(name, { cur = false, max = false, hidden = false, sub = null, glimmer = false } = {}) {
     if (!name) return '';
     const icon = evoIcon(name);
     let cls = 'evo-node'; if (cur) cls += ' current'; if (hidden) cls += ' evo-hidden';
+    // Glimmer-tech steps reuse Emerald Rapture's icon as a placeholder — strip its baked-in
+    // frame so it reads as a tech node, not the actual weapon, and let its attack-name wrap.
+    if (glimmer) cls += ' evo-glimmer';
     const img = `<img src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${esc(EMPTY_ICON)}'">`;
     const nd = `<div class="${cls}" title="${esc(name)}" data-evo-item="${esc(name)}">${img}</div>`;
     const extras = [];
     if (max) extras.push(`<div class="evo-max">MAX</div>`);
-    if (sub) extras.push(`<div class="evo-sub">${esc(sub)}</div>`);
+    if (sub) extras.push(`<div class="evo-sub${glimmer ? ' evo-sub-wrap' : ''}">${esc(sub)}</div>`);
     if (!extras.length) return nd;
     return `<div class="evo-nw">${nd}${extras.join('')}</div>`;
   }
 
-  const EP = `<span class="evo-op">+</span>`;
+  // Combination connector — intentionally empty: adjacency implies combination, so we drop
+  // the '+' everywhere. Kept as a token so call sites read as "these nodes combine". The
+  // flex row/cell gap provides the visual spacing between the now-adjacent icons.
+  const EP = ``;
   const EA = `<span class="evo-op">→</span>`;
+  // Level-up connector (EzEvo): the weapon auto-evolves as it LEVELS — no passive, no
+  // union. Piped to read distinctly from '+' (add a passive) and '→' (evolve/union into).
+  const EL = `<span class="evo-op evo-op-lvl" title="Auto-evolves as the weapon levels up">|</span>`;
 
   // Small Gemini connector node — replaces ← [gem] + between counterpart and base.
   // pos: 'top' = align-self:flex-start, 'bot' = flex-end, 'center' = center
@@ -1172,6 +1210,28 @@
   // Grid layout: base-evo left | bar | mid(top) + union-partner(bot) | final(centered)
   function u2f(leftHTML, midHTML, partHTML, finalHTML) {
     return `<div class="evo-u2f"><div class="u2l">${leftHTML}</div><div class="u2b"></div><div class="u2t">${midHTML}</div><div class="u2m">${partHTML}</div><div class="u2f">${finalHTML}</div></div>`;
+  }
+
+  // Passive requirements of wObj that this player can't currently satisfy.
+  // Shared by the info-panel Evolve and Union readiness checks — a union can also
+  // carry a passive requirement (Phieraggi needs Tirajisú), not just partner weapons.
+  function missingPassiveReqs(wObj, player) {
+    const allPassives = new Set([
+      ...state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
+      ...state.players.flatMap(p => p.extraPassives || []),
+    ]);
+    const passiveReqs = (wObj.requirements || []).filter(r => D.passives.some(p => p.name === r));
+    return passiveReqs.filter(r => {
+      if (isExtraPassive(r)) {
+        // Weapon Power-Up binds 1:1 (needs an UNBOUND instance or room to add).
+        if (r === WEAPON_POWER_UP) return !(wpuCount(player) > evolvedOGCount(player) || wpuCount(player) < wpuCap(player));
+        // Consumable (Mini) is consumed on evolve, so it must be in hand now.
+        if (isConsumableExtra(r)) return !(extraCount(player, r) >= 1);
+        // Shared (Outer Saboteur): present or addable.
+        return !(extraCount(player, r) >= 1 || extraCap(player, r) > 0);
+      }
+      return !allPassives.has(r);
+    });
   }
 
   function buildEvoChainHTML(w) {
@@ -1242,17 +1302,26 @@
     }
 
     if (pat === 'EzEvo>EzEvo>Final')
-      return eRow(n(b1_1), EA, n(b1_r), EA, n(b3_1));
+      // Both hops are auto level-ups (piped). Final form is in b2_r (b3_1 is unused/null).
+      return eRow(n(b1_1), EL, n(b1_r), EL, n(b2_r));
 
     if (pat === 'EzEvo>EzEvo>Union>Final') {
-      // left: [b1_1]→[b1_r] | mid: [b2_r] | bot: [b3_2] (aligned) | final: +→[b3_r]
-      return u2f(n(b1_1) + EA + n(b1_r), n(b2_r), n(b3_2), EP + EA + n(b3_r));
+      // left: [b1_1]|[b1_r] (auto level-up, piped) | mid: [b2_r] | bot: [b3_2] | final: +→[b3_r]
+      return u2f(n(b1_1) + EL + n(b1_r), n(b2_r), n(b3_2), EP + EA + n(b3_r));
     }
 
     if (pat === 'EzEvo>AlucardGiftFinal') {
+      // Alucart Sworb |(level-up) Alucard Swords →(gift) Alucard Shield. The gift also
+      // needs any FIVE max-level evolutions — shown as a 3-over-2 example block to the
+      // right of the Shield. (Data lineage is correct; the final node uses b2_r, the
+      // Shield — the old render mistakenly re-showed b2_1/Alucard Swords here.)
       const examples = ['Bloody Tear','Holy Wand','Thousand Edge','Death Spiral','Heaven Sword'];
-      const dimRow = `<div class="evo-row" style="gap:2px;opacity:.45">${examples.map(nm => n(nm, { hidden: true })).join('')}<span class="evo-sub" style="align-self:center;margin-left:4px">+5 evos</span></div>`;
-      return eRow(n(b1_1), EA, n(b1_r), EA, n(b2_1, { hidden: true, sub: 'Hidden' })) + dimRow;
+      const ex = examples.map(nm => n(nm, { hidden: true }));
+      const block = `<div class="alucard-evos" title="Plus any 5 max-level evolutions">
+        <div class="alucard-evos-row">${ex.slice(0, 3).join('')}</div>
+        <div class="alucard-evos-row">${ex.slice(3).join('')}</div>
+      </div>`;
+      return `<div class="evo-row" style="gap:6px">${n(b1_1)}${EL}${n(b1_r)}${EA}${n(b2_r, { hidden: true, sub: 'Hidden' })}${block}</div>`;
     }
 
     if (pat === 'Counterpart:Final')
@@ -1275,10 +1344,24 @@
       return eRow(n(b1_r), gemNode(b1_2), n(b1_1), EP, n(b2_2), EA, n(b2_r));
 
     if (pat === 'Dual(Counterpart):Union>Final') {
-      // gem in row 1 sits toward top, row 2 toward bottom — visually anchors each to its row
+      // Gems centered within each swim lane.
       return mergeBar(
-        [n(b1_r) + gemNode(b1_2, 'top') + n(b1_1) + EA, n(b2_r) + gemNode(b2_2, 'bot') + n(b2_1) + EA],
+        [n(b1_r) + gemNode(b1_2, 'center') + n(b1_1) + EA, n(b2_r) + gemNode(b2_2, 'center') + n(b2_1) + EA],
         n(b3_r)
+      );
+    }
+
+    if (pat === 'Dual(Counterpart):UnionEvo>Final') {
+      // Like Dual(Counterpart):Union but the union ALSO needs a passive (Phieraggi
+      // needs Tirajisú). Passive isn't in the evo-path fields, so read it off the
+      // union inputs' requirements and show it feeding into the final.
+      const unionInputs = D.weapons.filter(b => b.trans_result === ep.evo_path && b.method === 'Union');
+      const passiveReq = unionInputs
+        .flatMap(u => (u.requirements || []).filter(r => D.passives.some(p => p.name === r)))[0];
+      const finalHTML = passiveReq ? n(passiveReq) + EP + n(b3_r) : n(b3_r);
+      return mergeBar(
+        [n(b1_r) + gemNode(b1_2, 'center') + n(b1_1) + EA, n(b2_r) + gemNode(b2_2, 'center') + n(b2_1) + EA],
+        finalHTML
       );
     }
 
@@ -1290,14 +1373,20 @@
     }
 
     if (pat === 'ChaosEvolution>Final') {
-      // b1_1=chaos item, b1_2=character, b1_3=base weapon, b1_r=final
-      const chaosNode = `<div class="evo-nw">${n(b1_2)}<div class="evo-sub">Lv.80</div></div>`;
-      return eRow(n(b1_3), EA, chaosNode, EA, n(b1_r));
+      // b1_2=character, b1_3=base weapon, b1_r=final. The chaos item (b1_1) is deliberately
+      // NOT shown/checked — it's a permanent out-of-game unlock, not an in-run component
+      // (its requirement is stripped from the base weapon in data too). Evo condition
+      // (modeled later in Manage Collection): equipped by this character AND level ≥ 80.
+      // Show the character's full _sprite.png rather than the small portrait icon.
+      const chr = D.characters.find(c => c.name === b1_2);
+      const spriteSrc = (chr && (chr.sprite_static || chr.icon)) || evoIcon(b1_2);
+      const charNode = `<div class="evo-nw"><div class="evo-node evo-char-sprite" title="${esc(b1_2)}" data-evo-item="${esc(b1_2)}"><img src="${esc(spriteSrc)}" alt="${esc(b1_2)}" onerror="this.src='${esc(EMPTY_ICON)}'"></div><div class="evo-sub">Lv.80</div></div>`;
+      return eRow(n(b1_3), EA, charNode, EA, n(b1_r));
     }
 
     // Glimmer (X) is a glimmer-attack step (no real icon → Emerald Rapture via evoIcon);
     // label it with just the attack name so the reused icon stays distinguishable.
-    const glim = raw => { const m = /^Glimmer\s*\((.+)\)$/i.exec(raw || ''); return n(raw, { sub: m ? m[1] : 'Glimmer' }); };
+    const glim = raw => { const m = /^Glimmer\s*\((.+)\)$/i.exec(raw || ''); return n(raw, { sub: m ? m[1] : 'Glimmer', glimmer: true }); };
 
     if (pat === 'GlimmerEzEvo>GlimmerEzEvo>Final')
       return eRow(n(b1_1), EP, glim(b1_2), EA, n(b1_r), EP, glim(b2_2), EA, n(b2_r));
@@ -1320,36 +1409,42 @@
       let rows = '';
       for (let i = 0; i < inputs.length; i += MAX_ROW)
         rows += `<div class="evo-coll-inputs">${inputs.slice(i, i + MAX_ROW).map(nm => n(nm)).join('')}</div>`;
-      return `<div class="evo-coll-wrap">${rows}<div class="evo-row" style="margin-top:2px">${EA}${n(ep.evo_path)}</div></div>`;
+      // Base item → a pool of many: this weapon behaves like a candybox drawing from a
+      // limited pool, so lead with the item and point INTO the pool below it.
+      return `<div class="evo-coll-wrap"><div class="evo-row" style="margin-bottom:2px">${n(ep.evo_path)}${EA}</div>${rows}</div>`;
     }
 
     if (pat === 'Gift(Treasure)>Final')
-      return eRow(n(b1_1), EA, n(b1_2), `<span class="evo-op" title="Luck roll">🍀</span>`, EA, n(b1_r));
+      return eRow(n(b1_1), EA, n(b1_2), EA, n(b1_r));
 
     if (pat === 'FivePassive>Final') {
+      // Spirit Rings + 5 stat passives → Rings of Calamity. The passives aren't in the
+      // evo-path data, so name them explicitly (Max Health, Might, Area, Speed, Duration).
+      // Layout: [Spirit Rings]  (5-passive ring)  |  [Rings of Calamity].
+      const passives = ['Hollow Heart', 'Spinach', 'Candelabrador', 'Bracer', 'Spellbinder'];
       const angles = [270, 342, 54, 126, 198];
       const r = 36, cx = 55, cy = 55;
-      const items = angles.map(deg => {
+      const items = angles.map((deg, i) => {
         const rd = deg * Math.PI / 180;
-        return `<div class="ep-item" style="left:${cx + r * Math.cos(rd)}px;top:${cy + r * Math.sin(rd)}px">${n(b1_1)}</div>`;
+        return `<div class="ep-item" style="left:${cx + r * Math.cos(rd)}px;top:${cy + r * Math.sin(rd)}px">${n(passives[i])}</div>`;
       }).join('');
-      return `<div class="evo-pentagram">${items}<div class="ep-center">${n(b1_r)}</div></div>`;
+      const ring = `<div class="evo-pentagram">${items}</div>`;
+      return `<div class="evo-row" style="gap:6px">${n(b1_1)}${ring}${EL}${n(b1_r)}</div>`;
     }
 
     if (pat === 'Tuna>Final') {
+      // Penshin Fatcha (base) sits to the LEFT of the hexagon of 6 tuna forms; Miracle of
+      // Multiplication (final) sits to the RIGHT. The ring holds only the 6 forms.
       const forms = [b1_2, b1_3, b2_1, b2_2, b3_1, b3_2];
       const r = 52, cx = 80, cy = 75;
       const hexItems = forms.map((nm, i) => {
         const rd = (i * 60 - 90) * Math.PI / 180;
         return `<div class="eh-item" style="left:${cx + r * Math.cos(rd)}px;top:${cy + r * Math.sin(rd)}px">${n(nm)}</div>`;
       }).join('');
-      const labelX = cx + 18, labelY = cy + 18;
-      return `<div class="evo-hexagram">
-        ${hexItems}
-        <div class="eh-item" style="left:${cx - 18}px;top:${cy}px">${n(b1_1)}</div>
-        <div class="eh-item" style="left:${cx + 18}px;top:${cy}px">${n(b3_r)}</div>
-        <div class="eh-label" style="left:${labelX}px;top:${labelY}px">6 Evolutions</div>
+      const hex = `<div class="evo-hexagram">${hexItems}
+        <div class="eh-label" style="left:${cx}px;top:${cy}px;transform:translate(-50%,-50%)">6 Evolutions</div>
       </div>`;
+      return `<div class="evo-row" style="gap:6px">${n(b1_1)}${EA}${hex}${EA}${n(b3_r)}</div>`;
     }
 
     return '';
@@ -1460,7 +1555,12 @@
     for (const ep of (D.evoPaths || [])) {
       if (!ep.pattern.includes('Counterpart')) continue;
       checkBase(ep.b1_1, ep.b1_r);
-      if (ep.pattern === 'Dual(Counterpart):Union>Final') checkBase(ep.b2_1, ep.b2_r);
+      // Dual(Counterpart) patterns carry a SECOND independent base→counterpart pair in
+      // b2 (Vandalier: Ebony Wings→Zhar Ptytsia; Phieraggi: Eight→Twice Upon a Time).
+      // Match the whole family, not just the exact Union> string — UnionEvo> was excluded,
+      // so Eight's counterpart never surfaced. (Non-dual Counterpart patterns reuse b2 for
+      // the evolved final, not a counterpart, so they stay b1-only.)
+      if (ep.pattern.startsWith('Dual(Counterpart)')) checkBase(ep.b2_1, ep.b2_r);
     }
     return hidden;
   }
@@ -1785,29 +1885,17 @@
                 name: u.name,
                 slot: player.weapons.findIndex(w => w && w.name === u.name),
               }));
-              const missing = otherPairs.filter(p => p.slot < 0).map(p => p.name);
+              const missingWeapons  = otherPairs.filter(p => p.slot < 0).map(p => p.name);
+              // A union can ALSO require a passive (Phieraggi needs Tirajisú); enforce it.
+              const missingPassives = missingPassiveReqs(wObj, player);
+              const missing = [...missingWeapons, ...missingPassives];
               ready = missing.length === 0;
               missingText = missing.length ? `Missing: ${missing.map(esc).join(', ')}` : '';
               const inputSlots = [slotIdx, ...otherPairs.filter(p => p.slot >= 0).map(p => p.slot)];
               dataAction = 'perform-union';
               extraAttrs = `data-input-slots="${inputSlots.join(',')}"`;
             } else {
-              const allPassives = new Set([
-                ...state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
-                ...state.players.flatMap(p => p.extraPassives || []),
-              ]);
-              const passiveReqs = (wObj.requirements || []).filter(r => D.passives.some(p => p.name === r));
-              const missing = passiveReqs.filter(r => {
-                if (isExtraPassive(r)) {
-                  // Weapon Power-Up binds 1:1 (needs an UNBOUND instance or room to add).
-                  if (r === WEAPON_POWER_UP) return !(wpuCount(player) > evolvedOGCount(player) || wpuCount(player) < wpuCap(player));
-                  // Consumable (Mini) is consumed on evolve, so it must be in hand now.
-                  if (isConsumableExtra(r)) return !(extraCount(player, r) >= 1);
-                  // Shared (Outer Saboteur): present or addable.
-                  return !(extraCount(player, r) >= 1 || extraCap(player, r) > 0);
-                }
-                return !allPassives.has(r);
-              });
+              const missing = missingPassiveReqs(wObj, player);
               ready = missing.length === 0;
               missingText = missing.length ? `Missing: ${missing.map(n => esc(n)).join(', ')}` : '';
               dataAction = 'perform-evolve';
@@ -2203,7 +2291,12 @@
 
     // Locked-evo mode shows the FULL list; non-lineage weapons are dimmed in makeCard
     // (evoOnlySet still marks the clickable lineage forms).
-    const weaponFilter = () => true;
+    // Exclude the 'Special' category — pickups/consumables (Experience Gem, Gold Coin,
+    // Rosary, Grenade, Floor Chicken…) that are never a level-up weapon CHOICE. They
+    // never evolve and never appear in an evo lineage, so hiding them from the grid is
+    // safe; the few characters that START with one still get it auto-placed (locked),
+    // independent of this list. ('-' / Chaos weapons are left in — separate backlog.)
+    const weaponFilter = w => w.category !== 'Special';
     const baseWeapons = D.weapons.filter(w => w.category === 'Base' && weaponFilter(w))
       .slice().sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
 
@@ -2793,8 +2886,8 @@
       let bonus;
       if (s.interval === 0) {
         bonus = s.value;
-      } else if (s.interval === null) {
-        // "per level" (no N) — starts at level 2
+      } else if (s.interval === null || s.interval === 1) {
+        // "per level" (no N, or N=1) — first increment lands at level 2, not level 1
         bonus = s.value * Math.max(0, level - 1);
       } else {
         // "per N level" — increments at N, 2N, 3N, …

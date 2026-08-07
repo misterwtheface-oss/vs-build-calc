@@ -16007,9 +16007,7 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Anima of Mortaccio",
-      "requirements": [
-        "Chaos Malachite"
-      ],
+      "requirements": [],
       "final_state": "Anima of Mortaccio",
       "arcana_ratings": {},
       "rarity": 1
@@ -16037,9 +16035,7 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Yatta Daikarin",
-      "requirements": [
-        "Chaos Rosalia"
-      ],
+      "requirements": [],
       "final_state": "Yatta Daikarin",
       "arcana_ratings": {},
       "rarity": 1
@@ -16067,9 +16063,7 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carozza!",
-      "requirements": [
-        "Chaos Lazulia"
-      ],
+      "requirements": [],
       "final_state": "Carozza!",
       "arcana_ratings": {},
       "rarity": 1
@@ -16097,9 +16091,7 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Profusione D'Amore",
-      "requirements": [
-        "Chaos Altemanna"
-      ],
+      "requirements": [],
       "final_state": "Profusione D'Amore",
       "arcana_ratings": {},
       "rarity": 1
@@ -21071,7 +21063,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Malachite",
       "icon": "assets/icons/weapons/chaos_malachite.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows Mortaccio to morph when reaching Level 80.",
       "level_ups": [],
@@ -21085,7 +21077,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Rosalia",
       "icon": "assets/icons/weapons/chaos_rosalia.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows Yatta Cavallo to morph when reaching Level 80.",
       "level_ups": [],
@@ -21099,7 +21091,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Lazulia",
       "icon": "assets/icons/weapons/chaos_lazulia.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows Bianca Ramba to morph when reaching Level 80.",
       "level_ups": [],
@@ -21113,7 +21105,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Altemanna",
       "icon": "assets/icons/weapons/chaos_altemanna.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows O'Sole Meeo to morph when reaching Level 80.",
       "level_ups": [],
