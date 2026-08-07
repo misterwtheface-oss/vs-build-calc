@@ -471,6 +471,12 @@
     .slot.hidden-weapon { opacity: .4; cursor: default; }
     .slot.hidden-weapon:hover img { filter: none; }
     .slot.hidden-weapon .slot-remove { display: none !important; }
+    /* Extra passive instances (e.g. Weapon Power-Up) — active, not dimmed like hidden. */
+    .slot.slot-extra { border-color: rgba(155,63,217,.55); box-shadow: inset 0 0 0 1px rgba(155,63,217,.25); }
+    /* ×N count badge for collapsed duplicate instances (bottom-right, clear of the × button). */
+    .dupe-badge { position: absolute; bottom: 1px; right: 1px; padding: 0 3px;
+      font-size: .62rem; line-height: 1.35; font-family: var(--font-title); font-weight: 600;
+      background: rgba(155,63,217,.9); color: #fff; border-radius: 3px; pointer-events: none; }
     .slot.slot-locked { cursor: default; }
     .slot.slot-locked:hover img { filter: none; }
     .slot .slot-lock {
@@ -1067,7 +1073,9 @@
   };
 
   function makePlayer() {
-    return { character: null, weapons: [], passives: [], charLevel: 1 };
+    // extraPassives: passive instances that don't occupy a core slot (e.g. Weapon
+    // Power-Up), rendered in the hidden/extra bar; duplicates allowed for this type.
+    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [] };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -1359,6 +1367,12 @@
     );
     for (const req of (selW.requirements || [])) {
       if (!D.passives.some(p => p.name === req)) continue; // weapon req, skip
+      if (isExtraPassive(req)) {
+        // Extra-bar passive (no core slot): adding this weapon raises the cap, so an
+        // instance is always addable — pending, never "no room".
+        pending.push({ name: req, slot: -1 });
+        continue;
+      }
       if (allEquippedPassives.has(req)) continue; // satisfied by any player
       // Passive is missing entirely — find an empty slot on this player to add it.
       let emptySlot = -1;
@@ -1471,9 +1485,12 @@
     while (changed) {
       changed = false;
       const counts = SLOT_COUNTS[state.playerCount];
-      const allPassiveNames = new Set(
-        state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
-      );
+      // Include extra-bar passives (e.g. Weapon Power-Up) so evolved OG weapons aren't
+      // seen as "missing" their requirement — syncExtraPassives owns the precise 1:1 binding.
+      const allPassiveNames = new Set([
+        ...state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
+        ...state.players.flatMap(p => p.extraPassives || []),
+      ]);
       for (const player of state.players) {
         for (let i = 0; i < player.weapons.length; i++) {
           const w = player.weapons[i];
@@ -1711,7 +1728,7 @@
     else if (type === 'weapon')  {
       item = hiddenName ? weaponByName(hiddenName) : player?.weapons[slotIdx];
     }
-    else if (type === 'passive') item = player?.passives[slotIdx];
+    else if (type === 'passive') item = refName ? passiveByName(refName) : player?.passives[slotIdx];
     else if (type === 'arcana')  item = refName ? arcanaByName(refName) : state.arcana[slotIdx];
     else if (type === 'stage')   item = state.stage;
 
@@ -1775,9 +1792,22 @@
               dataAction = 'perform-union';
               extraAttrs = `data-input-slots="${inputSlots.join(',')}"`;
             } else {
-              const allPassives = new Set(state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)));
+              const allPassives = new Set([
+                ...state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
+                ...state.players.flatMap(p => p.extraPassives || []),
+              ]);
               const passiveReqs = (wObj.requirements || []).filter(r => D.passives.some(p => p.name === r));
-              const missing = passiveReqs.filter(r => !allPassives.has(r));
+              const missing = passiveReqs.filter(r => {
+                if (isExtraPassive(r)) {
+                  // Weapon Power-Up binds 1:1 (needs an UNBOUND instance or room to add).
+                  if (r === WEAPON_POWER_UP) return !(wpuCount(player) > evolvedOGCount(player) || wpuCount(player) < wpuCap(player));
+                  // Consumable (Mini) is consumed on evolve, so it must be in hand now.
+                  if (isConsumableExtra(r)) return !(extraCount(player, r) >= 1);
+                  // Shared (Outer Saboteur): present or addable.
+                  return !(extraCount(player, r) >= 1 || extraCap(player, r) > 0);
+                }
+                return !allPassives.has(r);
+              });
               ready = missing.length === 0;
               missingText = missing.length ? `Missing: ${missing.map(n => esc(n)).join(', ')}` : '';
               dataAction = 'perform-evolve';
@@ -1836,6 +1866,9 @@
   function renderPlanning() {
     const { playerCount, players, infoPanel } = state;
     const counts = SLOT_COUNTS[playerCount];
+    // Normalize Weapon Power-Up invariants for every weapon-mutation path (remove,
+    // devolve, union, character change) — idempotent, so a per-render sweep is safe.
+    players.forEach(syncExtraPassives);
 
     const playerCards = players.map((player, idx) => {
       const char = player.character;
@@ -1867,10 +1900,21 @@
         ? normalStarters.slice(counts.weapons).filter(wn => !occupied.has(wn))
         : [];
       const counterparts = getHiddenCounterparts(idx);
+      // Hidden weapons spawned by equipped passives (slots + extra bar), e.g. each Mini
+      // passive adds a hidden weapon. Derived from present passives, so removing the
+      // passive (or consuming a Mini on evolve) removes its hidden weapon automatically.
+      const passiveHidden = [];
+      [...player.passives.filter(Boolean), ...(player.extraPassives || []).map(passiveByName).filter(Boolean)]
+        .forEach(pv => (pv.grants || []).forEach(g => {
+          if (g.op === 'add_hidden' && g.kind === 'weapon') {
+            for (let i = 0; i < (g.amount || 1); i++) passiveHidden.push(g.name);
+          }
+        }));
       const allHidden = [...new Set([
         ...hiddenStarters.filter(wn => !occupied.has(wn)),
         ...charOverflow,
         ...counterparts,
+        ...passiveHidden,
       ])];
       // Hidden/extra weapons get their own conditional row (between Weapons and
       // Passives) so they never push the Weapons row rightward / overflow.
@@ -1887,9 +1931,26 @@
         return slotHTML(base, { type:'passive', playerIdx:idx, slotIdx:si, locked:isLocked });
       }).join('');
 
-      // Hidden/extra passives — no data source yet (populated later by mechanics
-      // like Emergency Meeting / Weapon Power-Up). Conditional: hidden until filled.
-      const hiddenPassiveRow = hiddenSlotRow([], 'passive', idx);
+      // Hidden/extra passives — instances that don't occupy a core slot. Identical
+      // instances collapse to ONE icon with an ×N badge to save space; the × removes a
+      // single instance (which may devolve a bound OG weapon). Consumable passives (Mini)
+      // are weapon-bound (auto consumed/restored on evolve/devolve), so they show no ×.
+      const extraCounts = {};
+      (player.extraPassives || []).forEach(nm => { extraCounts[nm] = (extraCounts[nm] || 0) + 1; });
+      const hiddenPassiveRow = Object.keys(extraCounts).length
+        ? `<div class="slot-row slot-row-hidden">${Object.entries(extraCounts).map(([nm, count]) => {
+            const p = passiveByName(nm);
+            const icon = p ? (p.icon || EMPTY_ICONS.passive) : EMPTY_ICONS.passive;
+            const badge = count > 1 ? `<span class="dupe-badge">×${count}</span>` : '';
+            const removeBtn = isConsumableExtra(nm) ? ''
+              : `<button class="slot-remove" data-action="remove-extra-passive" data-player="${idx}" data-extra-name="${esc(nm)}" title="Remove one">×</button>`;
+            return `<div class="slot slot-extra" data-action="view-extra-passive" data-player="${idx}" data-extra-name="${esc(nm)}" data-type="passive" title="${esc(nm)} (extra ×${count})">
+              <img src="${esc(icon)}" alt="${esc(nm)}" onerror="this.src='${EMPTY_ICONS.passive}'">
+              ${badge}
+              ${removeBtn}
+            </div>`;
+          }).join('')}</div>`
+        : '';
 
       return `<div class="player-card">
         <div class="player-header">
@@ -2221,7 +2282,11 @@
               const icon = obj ? obj.icon : '';
               let statusHTML = '';
               if (pObj) {
-                if (player.passives.some(p => p && p.name === r))
+                if (isExtraPassive(r))
+                  statusHTML = extraCount(player, r) > 0
+                    ? '<span class="req-status ok">✓ Extra bar</span>'
+                    : '<span class="req-status add">+ Auto-add</span>';
+                else if (player.passives.some(p => p && p.name === r))
                   statusHTML = '<span class="req-status ok">✓ Equipped</span>';
                 else if (pendingNames.has(r))
                   statusHTML = '<span class="req-status add">+ Auto-add</span>';
@@ -2279,8 +2344,12 @@
 
     let cards = '';
     for (const p of D.passives) {
+      // Extra-bar passives (Weapon Power-Up, Outer Saboteur, Mini …) live outside the core
+      // slots, capped by their enabling weapons. Kept in the list but dimmed/unselectable
+      // when at cap or with no enabling weapon (never filtered out).
+      const isExtra = isExtraPassive(p.name);
       const isSel = sel && sel.name === p.name;
-      const isDim = usedPassives.has(p.name);
+      const isDim = isExtra ? (extraCount(player, p.name) >= extraCap(player, p.name)) : usedPassives.has(p.name);
       cards += `<div class="item-card${isSel ? ' selected' : ''}${isDim ? ' dim' : ''}"
         data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive" data-search="${esc(p.name)}"
         title="${esc(p.name)}">
@@ -2627,6 +2696,7 @@
             );
             const skippedPassives = [];
             for (const pname of collectChainPassives(chain)) {
+              if (isExtraPassive(pname)) continue; // extra-bar passive; backed after placement
               if (allEquippedPassiveNames.has(pname)) continue;
               // Find the first free passive slot, bounded by the slot count — the
               // passives array may be empty/sparse, so findIndex alone is unreliable.
@@ -2665,11 +2735,31 @@
               const w = player.weapons[i];
               if (w && chain.has(w.name)) player.weapons[i] = null;
             }
+            // Extra-passive auto-add: adding a weapon contributes one instance of each
+            // extra-bar passive it requires (Weapon Power-Up, Outer Saboteur, Mini …) to
+            // the extra bar, up to that passive's cap, when auto-add is on. Unbacked
+            // evolved OG weapons are devolved by syncExtraPassives.
+            const extraAutoAdd = state.ovl.autoAdd ?? true;
+            if (extraAutoAdd) {
+              for (const pname of collectChainPassives(chain)) {
+                if (!isExtraPassive(pname)) continue;
+                if (extraCount(player, pname) < extraCap(player, pname)) player.extraPassives.push(pname);
+              }
+            }
+            syncExtraPassives(player);
           }
           if (slotType === 'passive' && isPassive && slotIdx >= 0) {
-            // Replacing a passive can remove one an equipped evo depends on — re-check.
-            state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
-            autoDevolveBrokenEvos();
+            // Extra-bar passives never occupy a core slot — add an instance to the extra
+            // bar (up to their cap) instead of the selected slot.
+            if (isExtraPassive(sel.name)) {
+              const player = state.players[playerIdx];
+              if (extraCount(player, sel.name) < extraCap(player, sel.name)) player.extraPassives.push(sel.name);
+              syncExtraPassives(player);
+            } else {
+              // Replacing a passive can remove one an equipped evo depends on — re-check.
+              state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
+              autoDevolveBrokenEvos();
+            }
           }
         }
       } else if (type === 'arcana') {
@@ -2738,8 +2828,10 @@
     let multiplierSum = 0;
     if (!player) return { additive, multiplierSum };
     const isMultStat = D.stats.find(s => s.key === charStatKey)?.stacking === 'multiplicative';
-    player.passives.filter(Boolean).forEach(p => {
-      const passive = D.passives.find(d => d.name === p.name);
+    // Slotted passives + extra-passive instances (e.g. Weapon Power-Up) — the latter
+    // may repeat, so each instance contributes the passive's real stats once.
+    const contribute = name => {
+      const passive = D.passives.find(d => d.name === name);
       if (!passive?.level_up_values?.length) return;
       passive.level_up_values.forEach(lvl => {
         const val = lvl[charStatKey];
@@ -2747,8 +2839,122 @@
         if (isMultStat) multiplierSum += val;
         else additive += val;
       });
-    });
+    };
+    player.passives.filter(Boolean).forEach(p => contribute(p.name));
+    (player.extraPassives || []).forEach(contribute);
     return { additive, multiplierSum };
+  }
+
+  // ── Character grant instances (count engine for the later dupe-badge render) ──
+  // Character `add_item` grants can add multiple copies over levels (Scorej-Oni gains
+  // a hidden Lightning Ring every 8 levels). Instance COUNT logic; visuals come later.
+  function grantInstanceCount(grant, player) {
+    const level  = player?.charLevel ?? 1;
+    const amount = grant.amount ?? 1;
+    if (grant.interval) {
+      return Math.max(0, Math.min(Math.floor(level / grant.interval), grant.max ?? Infinity)) * amount;
+    }
+    if (grant.at?.length) return grant.at.filter(l => level >= l).length * amount;
+    return amount; // static
+  }
+
+  // ── Extra-bar passives (don't occupy a core slot; gated/capped by the weapons that
+  //    require them). Three mechanics today:
+  //    • Weapon Power-Up (OG weapons): `perWeapon` cap, one instance per OG weapon,
+  //      bound 1:1 to each EVOLVED OG weapon (removing one devolves a weapon).
+  //    • Outer Saboteur (AC weapons): `single` shared instance enables all AC evolutions.
+  //    • Mini <X> (EM weapons): `consumable` — bound to its EM weapon AT BASE stage;
+  //      consumed when the weapon evolves, restored when it devolves. (Hidden-weapon
+  //      spawning is still deferred.)
+  const WEAPON_POWER_UP = 'Weapon Power-Up';
+  function extraPassiveCapMode(name) {
+    if (name === WEAPON_POWER_UP) return 'perWeapon';
+    if (name === 'Outer Saboteur') return 'single';
+    if (/^Mini /.test(name)) return 'consumable';
+    return null; // not an extra-bar passive
+  }
+  const isExtraPassive = name => extraPassiveCapMode(name) !== null;
+  const isConsumableExtra = name => extraPassiveCapMode(name) === 'consumable';
+
+  // Ultimate base of a weapon's evo chain (follow trans_result backward). Guards against
+  // cycles / self-references in the data so a bad trans_result can't infinite-loop.
+  function ogBaseName(name) {
+    let cur = name; const seen = new Set();
+    while (!seen.has(cur)) {
+      seen.add(cur);
+      const b = D.weapons.find(w => w.trans_result === cur && w.name !== cur);
+      if (!b) break;
+      cur = b.name;
+    }
+    return cur;
+  }
+  // A weapon "requires" an extra passive if its ultimate base lists it as a requirement.
+  function weaponRequiresExtra(weaponName, passiveName) {
+    const base = weaponByName(ogBaseName(weaponName));
+    return !!base && (base.requirements || []).includes(passiveName);
+  }
+  const isOperationGunsWeapon = name => weaponRequiresExtra(name, WEAPON_POWER_UP);
+  // Equipped weapons that enable a given extra passive. Consumable passives (Mini) only
+  // count their EM weapon while it's AT BASE — an evolved one has consumed its instance.
+  function enablingWeaponCount(player, passiveName) {
+    const baseOnly = isConsumableExtra(passiveName);
+    return (player?.weapons || []).filter(w =>
+      w && weaponRequiresExtra(w.name, passiveName) && (!baseOnly || w.name === ogBaseName(w.name))
+    ).length;
+  }
+  // Max instances of an extra passive: perWeapon = one per enabling weapon; single/consumable = 1 if any.
+  function extraCap(player, passiveName) {
+    const n = enablingWeaponCount(player, passiveName);
+    return extraPassiveCapMode(passiveName) === 'perWeapon' ? n : (n > 0 ? 1 : 0);
+  }
+  const extraCount = (player, passiveName) => (player?.extraPassives || []).filter(n => n === passiveName).length;
+  // WPU convenience aliases (its 1:1 binding logic is Weapon-Power-Up-specific).
+  const wpuCap   = player => extraCap(player, WEAPON_POWER_UP);
+  const wpuCount = player => extraCount(player, WEAPON_POWER_UP);
+  function evolvedOGCount(player) {
+    return (player?.weapons || []).filter(w => w && isOperationGunsWeapon(w.name) && w.name !== ogBaseName(w.name)).length;
+  }
+  function lastEvolvedOGIndex(player) {
+    const counts = SLOT_COUNTS[state.playerCount];
+    for (let i = counts.weapons - 1; i >= 0; i--) {
+      const w = player.weapons[i];
+      if (w && isOperationGunsWeapon(w.name) && w.name !== ogBaseName(w.name)) return i;
+    }
+    return -1;
+  }
+  // Enforce extra-passive invariants after any weapon/instance change: clamp every extra
+  // passive to its cap, then apply Weapon Power-Up's 1:1 binding — while there are fewer
+  // instances than evolved OG weapons, devolve the last evolved OG weapon one stage.
+  function syncExtraPassives(player) {
+    if (!player) return;
+    if (!player.extraPassives) player.extraPassives = [];
+    // Clamp every extra passive to its cap (this also CONSUMES a Mini when its EM weapon
+    // evolves: the evolved weapon no longer counts, so the cap drops to 0).
+    for (const nm of new Set(player.extraPassives)) {
+      for (let over = extraCount(player, nm) - extraCap(player, nm); over > 0; over--) {
+        const i = player.extraPassives.lastIndexOf(nm);
+        if (i < 0) break;
+        player.extraPassives.splice(i, 1);
+      }
+    }
+    // Consumable passives (Mini) are RESTORED to their base EM weapon — devolving back to
+    // base raises the cap to 1, so a missing instance is re-added.
+    const wantConsumable = new Set();
+    (player.weapons || []).filter(Boolean).forEach(w => {
+      const base = weaponByName(ogBaseName(w.name));
+      (base?.requirements || []).forEach(r => { if (isConsumableExtra(r)) wantConsumable.add(r); });
+    });
+    for (const nm of wantConsumable) {
+      while (extraCount(player, nm) < extraCap(player, nm)) player.extraPassives.push(nm);
+    }
+    let guard = 0;
+    while (wpuCount(player) < evolvedOGCount(player) && guard++ < 30) {
+      const idx = lastEvolvedOGIndex(player);
+      if (idx < 0) break;
+      const cur = player.weapons[idx];
+      const prev = D.weapons.find(w => w.trans_result === cur.name);
+      player.weapons[idx] = prev || weaponByName(ogBaseName(cur.name));
+    }
   }
 
   function calcStatTotal(charStatKey, charStats, player, char, level) {
@@ -3324,10 +3530,34 @@
       render();
       return;
     }
+    if (action === 'view-extra-passive') {
+      state.infoPanel = { type: 'passive', playerIdx, slotIdx: -1, refName: btn.dataset.extraName };
+      render();
+      return;
+    }
+    if (action === 'remove-extra-passive') {
+      e.stopPropagation();
+      const p = state.players[playerIdx];
+      const i = p.extraPassives.indexOf(btn.dataset.extraName); // remove ONE instance
+      if (i >= 0) p.extraPassives.splice(i, 1);
+      // Removing a shared requirement (Outer Saboteur / Mini) can break other evolutions;
+      // syncExtraPassives handles Weapon Power-Up's 1:1 devolve, autoDevolve the rest.
+      autoDevolveBrokenEvos();
+      syncExtraPassives(p);
+      state.infoPanel = null;
+      render();
+      return;
+    }
     if (action === 'perform-evolve') {
       const resultW = weaponByName(btn.dataset.result);
       if (resultW) {
-        state.players[playerIdx].weapons[slotIdx] = resultW;
+        const p = state.players[playerIdx];
+        p.weapons[slotIdx] = resultW;
+        // Back the evolved weapon with any extra-bar passive it requires (capped).
+        for (const pname of collectChainPassives(collectWeaponChain(resultW.name))) {
+          if (isExtraPassive(pname) && extraCount(p, pname) < extraCap(p, pname)) p.extraPassives.push(pname);
+        }
+        syncExtraPassives(p);
         state.infoPanel = { type: 'weapon', playerIdx, slotIdx };
       }
       render();
@@ -3547,6 +3777,14 @@
     // ── Passive ──
     const passiveObj = D.passives.find(p => p.name === name);
     if (passiveObj) {
+      if (isExtraPassive(name)) {
+        // Extra-bar passive (no core slot), capped by its enabling weapons.
+        if (extraCap(player, name) === 0) { showToast(`${name} needs a matching weapon`, 'warn'); return; }
+        if (extraCount(player, name) >= extraCap(player, name)) { showToast(`${name} already at max`, 'warn'); return; }
+        player.extraPassives.push(name);
+        syncExtraPassives(player);
+        showToast(`Added ${name}`); render(); return;
+      }
       if (player.passives.some(p => p?.name === name)) { showToast(`${name} already equipped`, 'warn'); return; }
       let slot = -1;
       for (let i = 0; i < counts.passives; i++) { if (!player.passives[i]) { slot = i; break; } }
@@ -3585,7 +3823,8 @@
 
     const chain = collectWeaponChain(name);
     const requiredPassives = collectChainPassives(chain);
-    const missingPassives  = [...requiredPassives].filter(p => !equippedP.has(p));
+    // Extra-bar passives are never slot passives — backed via the extra bar after placement.
+    const missingPassives  = [...requiredPassives].filter(p => !isExtraPassive(p) && !equippedP.has(p));
 
     // Find anchor: first equipped weapon slot belonging to this chain
     let anchorSlot = -1;
@@ -3633,7 +3872,15 @@
           player.weapons[i] = null;
         }
       }
+      // Back the weapon with any extra-bar passive it requires (extra bar, capped).
+      for (const pname of requiredPassives) {
+        if (isExtraPassive(pname) && extraCount(player, pname) < extraCap(player, pname)) {
+          player.extraPassives.push(pname);
+          added.push(pname);
+        }
+      }
     }
+    syncExtraPassives(player);
 
     if (!added.length) {
       const label = failed.length === 1 ? failed[0] : failed.slice(0, 2).join(', ') + (failed.length > 2 ? '…' : '');

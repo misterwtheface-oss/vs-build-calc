@@ -18,7 +18,12 @@ const DATA_OUT    = join(REPO_ROOT, 'data');
 
 // ─── RFC 4180 CSV parser ──────────────────────────────────────────────────
 
-function parseCsv(raw) {
+// `bracketAware` (opt-in per file): treat a comma/newline as a field delimiter only
+// when outside quotes AND at {}/[]-depth 0, so hand-authored `{rule|blocks}` and
+// `[lists]` may contain commas without a quote wrapper. Requires balanced wrappers
+// per row; a stray brace shows up as a wrong field count (warned below). Other CSVs
+// keep plain RFC 4180 (bracketAware=false) so their unquoted brackets can't regress.
+function parseCsv(raw, bracketAware = false) {
   const results = [];
   let headers = null;
   let pos = 0;
@@ -39,8 +44,14 @@ function parseCsv(raw) {
       }
       return field;
     }
-    let field = '';
-    while (pos < n && raw[pos] !== ',' && raw[pos] !== '\n' && raw[pos] !== '\r') field += raw[pos++];
+    let field = '', depth = 0;
+    while (pos < n) {
+      const c = raw[pos];
+      if (bracketAware && (c === '{' || c === '[')) depth++;
+      else if (bracketAware && (c === '}' || c === ']')) depth = Math.max(0, depth - 1);
+      else if (depth === 0 && (c === ',' || c === '\n' || c === '\r')) break;
+      field += raw[pos++];
+    }
     return field.trim();
   }
 
@@ -59,6 +70,9 @@ function parseCsv(raw) {
     if (!headers) {
       headers = fields.map(h => h.trim());
     } else if (fields.some(f => f !== '')) {
+      if (fields.length !== headers.length) {
+        console.warn(`CSV: row "${fields[0]}" has ${fields.length} fields, expected ${headers.length} — likely an unbalanced {}/[] wrapper.`);
+      }
       const obj = {};
       headers.forEach((h, i) => { obj[h] = (fields[i] ?? '').trim(); });
       results.push(obj);
@@ -67,9 +81,9 @@ function parseCsv(raw) {
   return results;
 }
 
-function readCsv(filename) {
+function readCsv(filename, bracketAware = false) {
   try {
-    return parseCsv(readFileSync(join(SKILL_DATA, filename), 'utf8'));
+    return parseCsv(readFileSync(join(SKILL_DATA, filename), 'utf8'), bracketAware);
   } catch (err) {
     console.warn(`Warning: could not read ${filename} — ${err.message}`);
     return [];
@@ -135,26 +149,97 @@ const ARCANA_COL_KEYS = Object.values(NUM_TO_COL);
 // interval=N    → "per N level", starts at level N:     bonus = value × floor(level / N)
 // interval=0    → flat, level-independent
 
+// Per-level stat scaling from the `level_scaling` column. Brace grammar (pipe-separated):
+//   { key: value per N level max M | … }
+// interval=N → per N levels · interval=null → per level (no N) · interval=0 → flat (no `per`).
+// "level(s)" is optional; value/max may be signed. Emits the legacy scaling shape.
 function parseScaling(raw) {
-  if (!raw || raw.trim() === '-') return [];
-  return raw.split('|').map(s => s.trim()).filter(Boolean).flatMap(part => {
+  const cell = (raw || '').replace(/^\{|\}$/g, '').trim();
+  if (!cell || cell === '-') return [];
+  return cell.split('|').map(s => s.trim()).filter(Boolean).flatMap(part => {
     const colonIdx = part.indexOf(':');
     if (colonIdx < 0) return [];
     const key  = part.slice(0, colonIdx).trim();
     const rest = part.slice(colonIdx + 1).trim();
-    const perMatch = rest.match(/^([-\d.]+)\s+per\s+(\d+\s+)?level(?:\s*,\s*max:\s*([-\d.]+))?/i);
-    if (perMatch) {
-      const value       = parseFloat(perMatch[1]);
-      const intervalStr = perMatch[2] ? perMatch[2].trim() : null;
-      const interval    = intervalStr !== null ? parseInt(intervalStr) : null;
-      const max         = perMatch[3] !== undefined ? parseFloat(perMatch[3]) : null;
-      return [{ key, value, interval, max }];
-    }
-    const flatMatch = rest.match(/^([-\d.]+)$/);
-    if (flatMatch) return [{ key, value: parseFloat(flatMatch[1]), interval: 0, max: null }];
-    return [];
+    const valM = rest.match(/^(-?\d+(?:\.\d+)?)/);
+    if (!valM) return [];
+    const value = parseFloat(valM[1]);
+    const maxM  = rest.match(/max\s+(-?\d+(?:\.\d+)?)/i);
+    const max   = maxM ? parseFloat(maxM[1]) : null;
+    const perM  = rest.match(/per\s+(?:levels?\s+)?(\d+)?(?:\s+levels?)?/i);
+    if (!perM) return [{ key, value, interval: 0, max }];           // flat, no `per`
+    const interval = perM[1] !== undefined ? parseInt(perM[1]) : null; // null = per level
+    return [{ key, value, interval, max }];
   });
 }
+
+// ─── Parse item-grant / effect rule blocks ────────────────────────────────
+// Shared project rule grammar (see docs): a cell is one or more `{ … }` blocks,
+// pipe-separated. Inside a block:
+//     { op: amount [Ref]  per N level   max M   at K }
+//   {} = one rule block            | = separates blocks
+//   [] = a reference OR comma-list of references (display names, applied per-member)
+//   ,  = list-member separator (only meaning)      - = empty / no data
+//   keywords: `per N level` → interval | `max M` → per-rule cap | `at K…` → fixed level(s)
+//   a lone leading number = amount (copies granted per fire; default 1)
+// `op` maps to placement. `max` caps THIS rule only; sources sum at render time.
+// kind (weapon|passive|arcana) is inferred from the reference; unresolved refs warn.
+// <<PARSE_RULE_BLOCKS_START>>
+const GRANT_OP_PLACE = { add_hidden: 'hidden', add_extra: 'extra' };
+
+// Split on `delim` only at bracket depth 0 (so a delimiter inside [] is literal).
+function splitOutsideBrackets(str, delim) {
+  const parts = []; let depth = 0, cur = '';
+  for (const ch of str) {
+    if (ch === '[') depth++;
+    else if (ch === ']') depth = Math.max(0, depth - 1);
+    if (ch === delim && depth === 0) { parts.push(cur); cur = ''; }
+    else cur += ch;
+  }
+  parts.push(cur);
+  return parts;
+}
+
+function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
+  if (!raw || raw.trim() === '-') return [];
+  // Braces only wrap the block; the rules live inside, pipe-separated. Strip the
+  // wrapper braces and split rules on top-level `|` (a `|` inside [] is literal).
+  const cell = raw.replace(/[{}]/g, ' ');
+  const out = [];
+  for (const seg of splitOutsideBrackets(cell, '|')) {
+    const rule = seg.trim();
+    if (!rule || rule === '-') continue; // empty cell was `{-}` → `-`
+    const colon = rule.indexOf(':');
+    if (colon < 0) { console.warn(`grants: rule missing "op:" — "${rule}" (${ctx})`); continue; }
+    const op = rule.slice(0, colon).trim();
+    const place = GRANT_OP_PLACE[op];
+    if (!place) { console.warn(`grants: unknown op "${op}" — "${rule}" (${ctx})`); continue; }
+    const rest = rule.slice(colon + 1).trim();
+    // References: [Name] or [A, B, C] — applied element-wise.
+    const refMatch = rest.match(/\[([^\]]*)\]/);
+    const refs = refMatch ? refMatch[1].split(',').map(s => s.trim()).filter(Boolean) : [];
+    if (!refs.length) { console.warn(`grants: no [reference] in "${rule}" (${ctx})`); continue; }
+    // Strip the item [refs], then flatten any remaining brackets so a bracketed level
+    // list (`at [12, 22]`) parses like the bare form. Params are keyword-anchored, so
+    // the optional "level(s)" (either side of the number) can't be misread as amount.
+    let work = rest.replace(/\[[^\]]*\]/, ' ').replace(/[\[\]]/g, ' ');
+    const per = work.match(/per\s+(?:levels?\s+)?(\d+)(?:\s+levels?)?/i); if (per) work = work.replace(per[0], ' ');
+    const max = work.match(/max\s+(\d+(?:\.\d+)?)/i);                     if (max) work = work.replace(max[0], ' ');
+    const at  = work.match(/at\s+(?:levels?\s+)?([\d\s,]+)/i);            if (at)  { work = work.replace(at[0], ' ').replace(/\blevels?\b/i, ' '); }
+    const amt = work.match(/(\d+(?:\.\d+)?)/); // remaining lone number = amount
+    for (const name of refs) {
+      const kind = kindOf(name);
+      if (!kind) console.warn(`grants: unresolved reference "${name}" — "${rule}" (${ctx})`);
+      const g = { op, name, kind, place, amount: amt ? parseFloat(amt[1]) : 1 };
+      if (per) g.interval = parseInt(per[1]);
+      if (max) g.max = parseFloat(max[1]);
+      if (at)  g.at = at[1].trim().split(/[\s,]+/).filter(Boolean).map(Number);
+      out.push(g);
+    }
+  }
+  return out;
+}
+// <<PARSE_RULE_BLOCKS_END>>
 
 // ─── Process characters ───────────────────────────────────────────────────
 
@@ -162,7 +247,14 @@ function splitItems(raw) {
   return (raw || '').split('|').map(s => s.trim()).filter(s => s && s !== '-');
 }
 
-const rawChars = readCsv('characters.csv');
+// Strip a `{ … }` wrapper (used by the brace-DSL columns) and normalize `{-}`/`-` to ''.
+function unwrap(raw) {
+  let s = (raw || '').trim();
+  if (s.startsWith('{') && s.endsWith('}')) s = s.slice(1, -1).trim();
+  return s === '-' ? '' : s;
+}
+
+const rawChars = readCsv('characters.csv', true);
 const characters = rawChars.map(r => ({
   name: r.name,
   icon: iconPath(r.icon_path),
@@ -174,9 +266,16 @@ const characters = rawChars.map(r => ({
   hidden_items:  splitItems(r.hidden_items),
   max_items:     splitItems(r.max_items),
   starting_arcana: (r.starting_arcana || '').trim().replace(/^-$/, '') || null,
-  description: (r.character_description || '').trim(),
-  notes: (r.additional_effects_clarification || '').trim(),
-  scaling: parseScaling(r.scaling),
+  description: unwrap(r.character_description),
+  custom_description: unwrap(r.custom_description), // shown in the UI later (extra context)
+  notes: '',                                        // no source column in the new schema
+  affinity: (r.affinity || '').trim().replace(/^-$/, ''), // → future affinities.csv mapping
+  scaling: parseScaling(r.level_scaling),
+  // Phase-2 rule columns, passed through unparsed until their runtime features exist.
+  reference_scaling: unwrap(r.reference_scaling),
+  manual_scaling: unwrap(r.manual_scaling),
+  charge_ability: unwrap(r.charge_ability),
+  grants: [], // filled in a second pass below (needs weapon/passive/arcana names for kind)
   stats: {
     max_health: parseFloat(r.max_health)  || 0,
     recovery:   parseFloat(r.recovery)    || 0,
@@ -207,17 +306,24 @@ const weapons = rawWeapons.filter(r => r.weapon && r.weapon !== '-').map(r => {
   });
   const reqs = [r.requirement_1, r.requirement_2, r.requirement_3]
     .map(x => (x || '').trim()).filter(x => x && x !== '-');
+  const name = r.weapon;
+  const final_state = (r.final_state || '').trim();
+  // A self-referencing trans_result (== own name) is a source-data artifact that would
+  // create an evo-chain cycle (infinite loop in chain walkers). Recover the real
+  // evolution from final_state when it's distinct, otherwise treat it as a final form.
+  let trans_result = nullIfDash(r.trans_result);
+  if (trans_result === name) trans_result = (final_state && final_state !== name) ? final_state : null;
   return {
-    name: r.weapon,
+    name,
     icon: iconPath(r.icon_path),
     category: (r.category || 'Base').trim(),
     method: nullIfDash(r.method),
     description: (r.description || '').trim(),
     level_ups: (r.level_ups || '').split('|').map(s => s.trim()).filter(Boolean),
     trans_conditions: (r.trans_conditions || '').trim(),
-    trans_result: nullIfDash(r.trans_result),
+    trans_result,
     requirements: reqs,
-    final_state: (r.final_state || '').trim(),
+    final_state,
     arcana_ratings,
     rarity: parseInt(r.rarity) || 0,
   };
@@ -225,16 +331,41 @@ const weapons = rawWeapons.filter(r => r.weapon && r.weapon !== '-').map(r => {
 
 // ─── Process passives ─────────────────────────────────────────────────────
 
-const rawPassives = readCsv('passives.csv');
-const passives = rawPassives.filter(r => r.item).map(r => ({
-  name: r.item,
-  icon: iconPath(r.icon_path),
-  max_level: parseInt(r.max_level) || 0,
-  rarity: parseInt(r.rarity) || 0,
-  description: (r.description || '').trim(),
-  level_ups: (r['level_up_text'] || '').split('|').map(s => s.trim().replace(/^"|"$/g, '')).filter(Boolean),
-  level_up_values: parsePowerUpLevels(r['level_up_value']),
-}));
+// Parse a passive's brace-wrapped `level_up_value`: pipe-separated per level, each a
+// stat (`key: value`), a grant (`add_hidden: 1 [Garlic]` — a hidden-weapon effect), or
+// `-`. Stats go to level_up_values (empty {} for grant/`-` levels); grant segments are
+// returned raw for the second pass (which resolves their `kind`).
+function parsePassiveLevelValue(raw) {
+  const cell = unwrap(raw);
+  if (!cell || cell === '-') return { levels: [], grantRaw: '' };
+  const levels = [], grantSegs = [];
+  for (const part of splitOutsideBrackets(cell, '|')) {
+    const p = part.trim();
+    if (!p || p === '-') { levels.push({}); continue; }
+    const ci = p.indexOf(':');
+    const key = ci >= 0 ? p.slice(0, ci).trim() : p;
+    if (GRANT_OP_PLACE[key]) { grantSegs.push('{' + p + '}'); levels.push({}); }
+    else { const v = parseFloat(p.slice(ci + 1)); levels.push(isNaN(v) ? {} : { [key]: v }); }
+  }
+  return { levels, grantRaw: grantSegs.join('|') };
+}
+
+const rawPassives = readCsv('passives.csv', true);
+const passives = rawPassives.filter(r => r.item).map(r => {
+  const { levels, grantRaw } = parsePassiveLevelValue(r['level_up_value']);
+  return {
+    name: r.item,
+    icon: iconPath(r.icon_path),
+    max_level: parseInt(r.max_level) || 0,
+    rarity: parseInt(r.rarity) || 0,
+    description: unwrap(r.description),
+    level_ups: unwrap(r['level_up_text']).split('|').map(s => s.trim().replace(/^"|"$/g, '')).filter(Boolean),
+    level_up_values: levels,
+    consumed_on_evo: /^true$/i.test((r.consumed_on_evo || '').trim()),
+    grants: [],           // hidden-weapon / item grants; resolved in the second pass
+    _grantRaw: grantRaw,
+  };
+});
 
 // ─── Process arcana ───────────────────────────────────────────────────────
 
@@ -258,6 +389,23 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
     notes: (r.additional_effects_clarification || '').trim(),
   };
 });
+
+// ─── Attach character grants (second pass) ────────────────────────────────
+// Runs after weapons/passives/arcana exist so `kind` resolves. `Passive Slot` /
+// `Arcana Slot` are synthetic "add an empty slot" grants → kind:"slot".
+{
+  const SLOT_REFS = new Set(['Passive Slot', 'Arcana Slot']);
+  const wN = new Set(weapons.map(w => w.name));
+  const pN = new Set(passives.map(p => p.name));
+  const aN = new Set(arcana.map(a => a.name));
+  const kindOf = n => SLOT_REFS.has(n) ? 'slot'
+    : wN.has(n) ? 'weapon' : pN.has(n) ? 'passive' : aN.has(n) ? 'arcana' : null;
+  characters.forEach((c, i) => {
+    c.grants = parseRuleBlocks(rawChars[i].add_item, kindOf, c.name);
+  });
+  // Passive grants (e.g. Mini <X> → a hidden weapon) resolved with the same kindOf.
+  passives.forEach(p => { p.grants = parseRuleBlocks(p._grantRaw, kindOf, p.name); delete p._grantRaw; });
+}
 
 // ─── Process stats (power-ups) ───────────────────────────────────────────
 

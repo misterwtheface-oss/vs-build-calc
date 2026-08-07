@@ -14,7 +14,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more damage every 10 levels (max +50%).",
+      "custom_description": "As a starting character, Antonio's innate bonuses are too shallow to define a unique Character identity.",
       "notes": "",
+      "affinity": "Might",
       "scaling": [
         {
           "key": "might",
@@ -23,6 +25,10 @@ window.VS_DATA = {
           "max": 0.5
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -55,7 +61,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
+      "custom_description": "As a starting character, Imelda's innate bonuses are too shallow to define a unique Character identity.",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "growth",
@@ -64,6 +72,10 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -99,7 +111,9 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
+      "custom_description": "Growth bonus is capped at **level 15**.",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "growth",
@@ -108,6 +122,10 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -140,7 +158,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Projectiles get 10% faster every 5 levels (max +30%).",
+      "custom_description": "As a starting character, Pasqualina's innate bonuses are too shallow to define a unique Character identity.",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "speed",
@@ -149,6 +169,10 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -181,8 +205,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +1 projectile (all weapons).",
+      "custom_description": "As a starting character, Genarro's innate bonuses are too shallow to define a unique Character identity.",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -215,7 +245,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Weapon cooldown is reduced by 5% every 10 levels (max -15%).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "cooldown",
@@ -224,6 +256,10 @@ window.VS_DATA = {
           "max": -0.15
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -256,7 +292,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +30% Area. Starts with temporary cooldown bonus.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "cooldown",
@@ -265,6 +303,10 @@ window.VS_DATA = {
           "max": 0.9
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -297,7 +339,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +5% Might, MoveSpeed, and Curse every 10 levels (max +20%).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -318,6 +362,10 @@ window.VS_DATA = {
           "max": 0.2
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 10,
         "recovery": 0,
@@ -350,8 +398,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -30,
         "recovery": 0,
@@ -387,8 +441,14 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 5,
@@ -421,7 +481,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +0.5 HP/s and +50 Max Health. Starts with temporary area bonus.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "area",
@@ -430,6 +492,10 @@ window.VS_DATA = {
           "max": -4
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0.5,
@@ -462,8 +528,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +40% duration and speed, -40% move speed.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -496,15 +568,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with 1 Revival. Gains 1 more Revival at level 33.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "revival",
           "value": 1,
-          "interval": 33,
-          "max": 1
+          "interval": 0,
+          "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -537,15 +615,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with 1 extra Level.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [
-        {
-          "key": "level",
-          "value": 1,
-          "interval": 0,
-          "max": null
-        }
-      ],
+      "affinity": "",
+      "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -50,
         "recovery": 0,
@@ -579,7 +656,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -588,6 +667,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -620,7 +703,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Projectile Speed every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "speed",
@@ -629,6 +714,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -661,7 +750,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Duration every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "duration",
@@ -670,6 +761,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -702,7 +797,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Area every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "area",
@@ -711,6 +808,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -743,7 +844,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -754,22 +857,26 @@ window.VS_DATA = {
         {
           "key": "armor",
           "value": 2,
-          "interval": 80,
-          "max": 2
+          "interval": 0,
+          "max": null
         },
         {
           "key": "amount",
           "value": 1,
-          "interval": 80,
-          "max": 1
+          "interval": 0,
+          "max": null
         },
         {
           "key": "max_health_flat",
           "value": 100,
-          "interval": 80,
-          "max": 100
+          "interval": 0,
+          "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -802,7 +909,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
+      "custom_description": "In Constellation Beast form, Yatta Daikarin gains 100% explosion chance.",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -813,28 +922,32 @@ window.VS_DATA = {
         {
           "key": "armor",
           "value": 2,
-          "interval": 80,
-          "max": 2
+          "interval": 0,
+          "max": null
         },
         {
           "key": "amount",
           "value": 1,
-          "interval": 80,
-          "max": 1
+          "interval": 0,
+          "max": null
         },
         {
           "key": "max_health_flat",
           "value": 100,
-          "interval": 80,
-          "max": 100
+          "interval": 0,
+          "max": null
         },
         {
           "key": "luck",
           "value": 0.25,
-          "interval": 80,
-          "max": 0.25
+          "interval": 0,
+          "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -867,7 +980,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -876,6 +991,10 @@ window.VS_DATA = {
           "max": 3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -908,7 +1027,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -919,22 +1040,26 @@ window.VS_DATA = {
         {
           "key": "armor",
           "value": 2,
-          "interval": 80,
-          "max": 2
+          "interval": 0,
+          "max": null
         },
         {
           "key": "amount",
           "value": 1,
-          "interval": 80,
-          "max": 1
+          "interval": 0,
+          "max": null
         },
         {
           "key": "max_health_flat",
           "value": 100,
-          "interval": 80,
-          "max": 100
+          "interval": 0,
+          "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -967,7 +1092,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3). Starts with temporary Amount bonus.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -982,6 +1109,10 @@ window.VS_DATA = {
           "max": 3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1014,14 +1145,10 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with one extra level. Gains 10% Growth every 5 levels (max +50%).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
-        {
-          "key": "level",
-          "value": 1,
-          "interval": 0,
-          "max": null
-        },
         {
           "key": "growth",
           "value": 0.1,
@@ -1029,6 +1156,10 @@ window.VS_DATA = {
           "max": 0.5
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1061,14 +1192,10 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with one extra level. Gains +1 Armor every 5 levels (max +5).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
-        {
-          "key": "level",
-          "value": 1,
-          "interval": 0,
-          "max": null
-        },
         {
           "key": "armor",
           "value": 1,
@@ -1076,6 +1203,10 @@ window.VS_DATA = {
           "max": 5
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -1108,7 +1239,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.5% Might, Projectile Speed, Duration, and Area every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -1135,6 +1268,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1167,7 +1304,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "She owns everything.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -1182,6 +1321,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 233,
         "recovery": 3,
@@ -1214,8 +1357,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Recovers 25% Max Health and gains +32 Max Health (Max +665) when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Overheal min 32 max 665 by 32",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -1248,8 +1397,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can find extra explosive props that might drop Treasure Chests. Can destroy light sources by touching them.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1282,8 +1437,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Activates his main weapon when picking up Gold Coins. Uses Gold Coins as damage barrier. Has a 4X chance of drafting FOIL Survarots.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1316,8 +1477,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Freezes all enemies for 10 seconds when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1356,8 +1523,14 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Also starts with a Level 5 Wings and a hidden Valkyrie Turner.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1393,8 +1566,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1427,8 +1606,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1461,8 +1646,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1495,8 +1686,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1529,8 +1726,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1563,8 +1766,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1597,8 +1806,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1631,15 +1846,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporary Cooldown bonus. Triggers a Rosary when Health reaches a critically low level. Likes to keep secrets.",
+      "custom_description": "- Gifted an Arma Dio at Level 40 and a Candybox at Level 80\n- Can find evolved weapons and Arcana in any Treasure Chest, ignoring Arcana limits\n- Evolves and hides max level Santa Water, King Bible, and Cross; this does **not** activate if any of these weapons are evolved before this effect resolves (e.g. Through normal evolution)\n-",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "cooldown",
           "value": 0.2,
           "interval": 1,
-          "max": null
+          "max": 0.6
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1672,8 +1893,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +30 gives a cumulative bonus to a random stat.",
+      "custom_description": "Overhealing bonuses cap at: \n- Max Health: 220\n- Recovery: 2\n- Armor: 2\n- Move Speed: 50%\n- Might: 50%\n- Speed: 50%\n- Duration: 50%\n- Area: 50%\n- Cooldown: -25%\n- Amount: 2\n- Revival: 3\n- Magnet: 16",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Overheal min 0 max 220 by pct|\nrecovery: source Overheal min 0 max 2 by pct|\narmor: source Overheal min 0 max 2 by pct|\nmove_speed: source Overheal min 0 max 0.5 by pct|\nmight: source Overheal min 0 max 0.5 by pct|\nspeed: source Overheal min 0 max 0.5 by pct|\nduration: source Overheal min 0 max 0.5 by pct|\narea: source Overheal min 0 max 0.5 by pct|\ncooldown: source Overheal min 0 max -0.25 by pct|\namount: source Overheal min 0 max 2 by pct|\nrevival: source Overheal min 0 max 3 by pct|\nmagnet: source Overheal min 0 max 16 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1706,8 +1933,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Chances his luck every 30 seconds or when picking up a Rerollo.",
+      "custom_description": "Rolls a dice when \"chancing his luck\":\n- On a 6: **\"Lucky!\"** Gains a bonus of +777%  Luck and +77%  Move Speed for 30 seconds and spawn light sources\n- On a 2,3,4, or 5: Gain that amount of Luck permanently\n- On a 1: \"Unlucky!\" Gains +77%  Curse and -777%  Luck for 30 seconds then trigger Shooting Stars to land on him.",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "luck: source Lucky! min 0 max 9999 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1740,8 +1973,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "May occasionally activate all weapons twice depending on Cooldown.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1774,7 +2013,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "At least they're lucky.",
+      "custom_description": "Gains 10% more luck every 10 levels (max +50%).",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "luck",
@@ -1783,6 +2024,10 @@ window.VS_DATA = {
           "max": 0.5
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -23,
         "recovery": 0,
@@ -1815,7 +2060,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "So much potential.",
+      "custom_description": "Gains 20% more luck every 10 levels (max +50%). Also gains 9899 Max Health at level 100 and 65520 Armor at level 200.",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "luck",
@@ -1826,16 +2073,20 @@ window.VS_DATA = {
         {
           "key": "max_health_flat",
           "value": 9899,
-          "interval": 100,
-          "max": 9899
+          "interval": 0,
+          "max": null
         },
         {
           "key": "armor",
           "value": 65520,
-          "interval": 200,
-          "max": 65520
+          "interval": 0,
+          "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -99,
         "recovery": 0,
@@ -1868,8 +2119,16 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "The quirky white bear.",
+      "custom_description": "Gains 1% Luck, 0.25% cooldown, 0.01  recovery, and 0.7% might, area, projectile speed, and duration every level.",
       "notes": "",
+      "affinity": "",
       "scaling": [
+        {
+          "key": "recovery",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
         {
           "key": "might",
           "value": 0.007,
@@ -1907,6 +2166,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -93,
         "recovery": 0,
@@ -1939,8 +2202,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Random.",
+      "custom_description": "**Under Construction**",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1972,9 +2241,15 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "-",
+      "description": "",
+      "custom_description": "Marrabbio uniquely has a negative Projectile Speed before Power Up, Passive, and Golden Egg bonuses are considered:\n- With a **negative** Projectile Speed: Projectiles are fired backward from the character.\n- With a **0** Projectile Speed: Projectiles are stationary. \nWeapons with high pool limit and unlimited duration are complimentary to Marrabbio's bonuses.",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -2007,7 +2282,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of Fire. Grows stronger with every level, but also loses control.",
+      "custom_description": "Gains 2% move speed, 0.5% might and curse, and 0.25% cooldown every level.",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "move_speed",
@@ -2034,6 +2311,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 60,
         "recovery": 0,
@@ -2066,7 +2347,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Might, Projectile Speed, Duration, Area, and Cooldown change every minute.",
+      "custom_description": "Listed stats oscillate between 200% and 50% with two extremes:\n- High Area, Duration, and Cooldown | Low Speed and Might\n- High Speed and Might | Low Area, Duration, and Cooldown",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -2075,6 +2358,10 @@ window.VS_DATA = {
           "max": 0.8
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0.5,
@@ -2106,9 +2393,15 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "-",
+      "description": "",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2145,7 +2438,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1 Recovery and +1% Luck every level. Gains +1 Revival every 100 levels. Has hidden weapons.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "recovery",
@@ -2166,6 +2461,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -80,
         "recovery": 1,
@@ -2198,8 +2497,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporarily reduced area.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "area",
+          "value": 0.1,
+          "interval": 0,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -2232,7 +2544,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Greed every level. Gold Fever lasts longer.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "greed",
@@ -2241,6 +2555,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2274,8 +2592,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "M(▯▯)",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2308,7 +2632,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +2% Growth every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "growth",
@@ -2317,6 +2643,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2349,7 +2679,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Can find evolutions in any Treasure.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "curse",
@@ -2358,6 +2690,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -2390,8 +2726,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "A blasphemous mockery.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 155,
         "recovery": 0,
@@ -2424,8 +2766,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon gets stronger when levelling up. Revivals also affect Amount. Receives a follower after reviving.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "amount: 1 per 1 revival",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -2458,7 +2806,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 100.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -2470,15 +2820,19 @@ window.VS_DATA = {
           "key": "growth",
           "value": 0.1,
           "interval": 12,
-          "max": null
+          "max": 0.5
         },
         {
           "key": "growth",
           "value": 0.15,
           "interval": 12,
-          "max": null
+          "max": 0.3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2513,7 +2867,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Evolves into JoyaTauro at lv16, and into AccumulaTori at lv36. Retaliates.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "move_speed",
@@ -2582,6 +2938,10 @@ window.VS_DATA = {
           "max": 0.2
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2616,8 +2976,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a hidden Lightning Ring every 8 levels (max 6) that also fires when losing health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Lightning Ring",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "interval": 8,
+          "max": 5
+        }
+      ],
       "stats": {
         "max_health": 8,
         "recovery": 0,
@@ -2650,7 +3026,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon grows stronger when levelling up. Gains +1% Curse every level. Ignores Walls.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "curse",
@@ -2659,6 +3037,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -2691,8 +3073,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Gets a Survarot Multiplier equal to Log10 Golden Eggs (max x10).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2725,8 +3113,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon grows stronger when levelling up. Gets more fans from defeating a large amount of enemies.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2759,8 +3153,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Overheal min 0 max 9999 by 0.2",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 1,
@@ -2793,8 +3193,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes stronger and invincible for a fixed interval after defeating a large amount of enemies.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 0.5 by boolean|\nmove_speed: source Megalo State min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -20,
         "recovery": 0,
@@ -2827,8 +3233,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with hidden Night Sword. Morphs into a stronger version when his base weapon evolves.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nspeed: source Megalo State min 0 max 0.3 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\narea: source Megalo State min 0 max 0.3 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -2855,14 +3274,23 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/babi-onna_sprite.gif",
       "base_name": "Babi-Onna",
       "starting_weapons": [
-        "Mirage Robe"
+        "Mirage Robe",
+        "Night Sword"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Night Sword"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Ignores weapons cooldown. Weapons fire at a fixed interval when moving.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -2895,8 +3323,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Area temporarily increases at fixed intervals.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "multiply_area: source Expansion min 1 max 1.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 8,
         "recovery": 0,
@@ -2931,8 +3365,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Cannot be damaged, but disappears after reaching the current Time Limit. Starts with hidden 108 Bocce.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -20,
         "recovery": 0,
@@ -2965,7 +3405,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "Might",
       "scaling": [
         {
           "key": "might",
@@ -2974,6 +3416,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 150,
         "recovery": 0,
@@ -3006,7 +3452,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -3015,6 +3463,10 @@ window.VS_DATA = {
           "max": 4
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3047,8 +3499,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellStream at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "SpellStream",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "SpellStrike",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            20
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Academy Badge",
+          "kind": "passive",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            30
+          ]
+        }
+      ],
       "stats": {
         "max_health": -10,
         "recovery": 0,
@@ -3081,8 +3570,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellStrike at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "SpellStrike",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "SpellString",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            20
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Academy Badge",
+          "kind": "passive",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            30
+          ]
+        }
+      ],
       "stats": {
         "max_health": -10,
         "recovery": 0,
@@ -3115,8 +3641,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellString at Level 10 and SpellStream at Level 20. Receives Academy Badge at Level 30.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "SpellString",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "SpellStream",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            20
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Academy Badge",
+          "kind": "passive",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            30
+          ]
+        }
+      ],
       "stats": {
         "max_health": -10,
         "recovery": 0,
@@ -3149,8 +3712,25 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains temporary Armor bonus after getting damaged. Receives Academy Badge at Level 30.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "armor: source Damage Taken min 0 max 50 by 1",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Academy Badge",
+          "kind": "passive",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            30
+          ]
+        }
+      ],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3183,13 +3763,30 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Luck-based Charge ability: fires a volley of Flash Arrows. Gains +1% luck every level. Receives Academy Badge at Level 30.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "luck",
           "value": 0.01,
           "interval": null,
           "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Flash Arrow Volley cooldown 10 charge by Moving reduce by luck min 2",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Academy Badge",
+          "kind": "passive",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            30
+          ]
         }
       ],
       "stats": {
@@ -3224,8 +3821,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a Rosary when levelling up. Gets a temporary Might, Cooldown, and MoveSpeed bonus after reviving.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Revived min 0 max 2 by boolean|\ncooldown: source Revived min 0 max -1 by boolean|\nmove_speed: source Revived min 0 max 0.6 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -3258,8 +3861,27 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a Vacuum when levelling up. Once per life, triggers World Eater after receiving fatal damage.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.005,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3292,7 +3914,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "It will literally eat the world.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
@@ -3305,6 +3929,41 @@ window.VS_DATA = {
           "value": 0.005,
           "interval": null,
           "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "SpellString",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "SpellStream",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            20
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "SpellStrike",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            30
+          ]
         }
       ],
       "stats": {
@@ -3339,8 +3998,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains XP when picking up Gold Coins and Coin Bags. Starts with temporarily reduced Might.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.1,
+          "interval": 0,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 2,
@@ -3373,7 +4045,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -3382,6 +4056,10 @@ window.VS_DATA = {
           "max": 4
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3414,8 +4092,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses every time anyones weapon is brought to max level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3448,8 +4132,26 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Chooses an extra passive weapon at level 2, 12, and 22",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Passive Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            12,
+            22
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3482,8 +4184,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can't be damaged or deal damage, but disappears after reaching the current Time Limit. Ignores walls.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 156,
         "recovery": 0,
@@ -3516,8 +4224,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Leaves behind excess body parts when damaged and may shift forms.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Body Parts min 0 max 999 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -3550,8 +4264,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "May gain +1 Revival when anyone revives. Increases Armor and Recovery of nearby characters. Ignores walls.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "revival: source Revived min 0 max 10 by 1",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.1,
@@ -3584,8 +4304,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes stronger and briefly invincible after defeating a large amount of enemies, or an ally.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\nmove_speed: source Megalo State min 0 max 0.8 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -3618,15 +4344,51 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets -10% Luck every 10 levels (max -90%). Can choose a per-level bonus every 10 levels (max 5 times).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "luck",
-          "value": 0.1,
+          "value": -0.1,
           "interval": 10,
-          "max": 0.9
+          "max": -0.9
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3659,7 +4421,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -3668,6 +4432,10 @@ window.VS_DATA = {
           "max": 4
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3702,8 +4470,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "I'm not the Impostor.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -3736,27 +4510,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a bonus to Projectile Speed (max 50%) and to Might when defeating many enemies. Can find special pickups.",
+      "custom_description": "Scaling calc uses levels in place of kills for engine consistency.",
       "notes": "",
-      "scaling": [
-        {
-          "key": "speed",
-          "value": 0.025,
-          "interval": 10,
-          "max": null
-        },
-        {
-          "key": "speed",
-          "value": 0.025,
-          "interval": 20,
-          "max": null
-        },
-        {
-          "key": "speed",
-          "value": 0.01,
-          "interval": 10,
-          "max": null
-        }
-      ],
+      "affinity": "",
+      "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\nmight: source Kills min 0 max 0.25 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -3789,27 +4550,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receive a bonus to Projectile Speed (max 50%) and to Cooldown (max-25%) when defeating many enemies. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [
-        {
-          "key": "speed",
-          "value": 0.025,
-          "interval": 10,
-          "max": null
-        },
-        {
-          "key": "speed",
-          "value": 0.025,
-          "interval": 20,
-          "max": null
-        },
-        {
-          "key": "cooldown",
-          "value": -0.01,
-          "interval": 10,
-          "max": null
-        }
-      ],
+      "affinity": "",
+      "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\ncooldown: source Kills min 0 max -0.25 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -3842,8 +4590,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Movement Speed increases Armour. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "armor: 1 per 0.1 move_speed|cooldown: -0.05 per [Prototype A,Prototype B,Prototype C]",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -3876,8 +4630,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gain a bonus to all stats after Reviving. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Revived min 0 max revival*20 by 20|\nrecovery: source Revived min 0 max revival*0.1 by 0.1|\narmor: source Revived min 0 max revival*0.2 by 0.2|\nmove_speed: source Revived min 0 max revival*0.08 by 0.08|\nmight: source Revived min 0 max revival*0.04 by 0.04|\nspeed: source Revived min 0 max revival*0.04 by 0.04|\nduration: source Revived min 0 max revival*0.04 by 0.04|\narea: source Revived min 0 max revival*0.04 by 0.04|\ncooldown: source Revived min 0 max revival*-0.03 by -0.03|\namount: source Revived min 0 max revival*0.2 by 0.2|\nluck: source Revived min 0 max revival*0.05 by 0.05|\ngrowth: source Revived min 0 max revival*0.05 by 0.05|\ngreed: source Revived min 0 max revival*0.01 by 0.01",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -3910,8 +4670,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "When Health is low, Cooldown is decreased and Move Speed and Speed increase. Can find special Pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "cooldown: source Missing Health min 0 max -0.5 by pct|\nmove_speed: source Missing Health min 0 max 0.1 by pct|\nspeed: source Missing Health min 0 max 0.1 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -3944,8 +4710,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Decreasing Cooldown increases Area. Can find extra explosive props and special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "area: 0.02 per -0.01 cooldown max 0.5",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -3978,8 +4750,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Move Speed decreases Cooldown. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "cooldown: -0.01 per 0.02 move_speed",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -4012,8 +4790,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Armour increses Might. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "might: 0.1 per 1 armor",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4046,8 +4830,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Might increases Armour. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "armor: 1 per 0.1 might",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4080,8 +4870,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Projectile Speed increases Might. Can find extra explosive props and special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "might: 0.01 per 0.01 speed max 9",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -4114,8 +4910,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Greed and Curse increase Might. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "might: 0.01 per 0.01 greed|might: 0.01 per 0.01 curse",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -4146,7 +4948,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Simondo says he doesn't even need guns. Gets more projectiles every 20 levels (max +4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -4155,6 +4959,10 @@ window.VS_DATA = {
           "max": 4
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4187,8 +4995,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4221,8 +5035,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4255,8 +5075,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4289,8 +5115,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4323,7 +5155,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -4332,6 +5166,10 @@ window.VS_DATA = {
           "max": 3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4364,7 +5202,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "amount",
@@ -4373,6 +5213,10 @@ window.VS_DATA = {
           "max": 3
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4405,8 +5249,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4439,8 +5289,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4473,8 +5329,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4507,8 +5369,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -4541,8 +5409,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4575,8 +5449,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4609,8 +5489,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Divine Bloodline (IX)",
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4643,8 +5529,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Divine Bloodline (IX)",
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4677,8 +5569,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -4711,8 +5609,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -4745,8 +5649,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4779,8 +5689,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -4813,8 +5729,25 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Iron Blue Will (VII)",
+          "kind": "arcana",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        }
+      ],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -4847,8 +5780,25 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Iron Blue Will (VII)",
+          "kind": "arcana",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        }
+      ],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -4881,8 +5831,25 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Iron Blue Will (VII)",
+          "kind": "arcana",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            10
+          ]
+        }
+      ],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -4916,8 +5883,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -4951,8 +5924,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -4986,8 +5965,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -5021,8 +6006,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -5055,15 +6046,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
-          "value": 1,
-          "interval": null,
+          "value": 0.01,
+          "interval": 1,
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5096,15 +6093,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
-          "value": 1,
-          "interval": null,
+          "value": 0.01,
+          "interval": 1,
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5137,12 +6140,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.Also gains +1 Revival every 100 levels. Enemies drop Blue, Red, or Yellow Souls that increase Growth, Might, or Greed respectively when set amounts are collected.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [
         {
           "key": "might",
-          "value": 2,
-          "interval": null,
+          "value": 0.02,
+          "interval": 1,
           "max": null
         },
         {
@@ -5152,6 +6157,10 @@ window.VS_DATA = {
           "max": null
         }
       ],
+      "reference_scaling": "",
+      "manual_scaling": "greed: source Soul Collector min 0 max 4.5 by pct|\nmight: source Soul Collector min 0 max 2.25 by pct|\ngrowth: source Soul Collector min 0 max 2.25 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -5185,8 +6194,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5220,8 +6235,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5254,8 +6275,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5288,8 +6315,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5322,8 +6355,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Tragic Princess (III)",
       "description": "Starts with extra Arcana III - Tragic Princess.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5356,8 +6395,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Tragic Princess (III)",
       "description": "Starts with extra Arcana III - Tragic Princess.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5390,8 +6435,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5424,8 +6475,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -5458,8 +6515,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5492,8 +6555,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5526,8 +6595,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5560,8 +6635,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 10,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5594,8 +6685,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 10,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5628,8 +6735,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 10,
+          "max": 4
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5662,8 +6785,55 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Sacred Cardinal",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            2
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Dragon",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            12
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Tiger",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            22
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Turtle",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            32
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5696,8 +6866,55 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Sacred Cardinal",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            2
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Dragon",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            12
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Tiger",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            22
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Turtle",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            32
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5730,8 +6947,55 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Sacred Cardinal",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            2
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Dragon",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            12
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Tiger",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            22
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Sacred Turtle",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            32
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5764,8 +7028,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -5798,8 +7075,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -5832,8 +7122,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Neutron Bomb cooldown 75 charge by Standing reduce by might min 15",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5866,8 +7162,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Neutron Bomb cooldown 75 charge by Standing reduce by might min 15",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -5900,8 +7202,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -5934,8 +7242,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -5968,8 +7282,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6002,8 +7322,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6036,8 +7362,27 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
+      "reference_scaling": "might: 0.01 per 0.01 curse",
+      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\nmight: source Megalo State min 0 max 1.5 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 666,
         "recovery": 0,
@@ -6070,8 +7415,27 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
+      "reference_scaling": "might: 0.01 per 0.01 curse",
+      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\nmight: source Megalo State min 0 max 1.5 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 666,
         "recovery": 0,
@@ -6104,8 +7468,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Sarabande of Healing (VI)",
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 8,
         "recovery": 3,
@@ -6138,8 +7508,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Sarabande of Healing (VI)",
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 8,
         "recovery": 3,
@@ -6172,8 +7548,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Waltz of Pearls (XI)",
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6206,8 +7588,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Waltz of Pearls (XI)",
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6240,8 +7628,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Gemini (I)",
       "description": "Starts with extra Arcana I - Gemini.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -6274,8 +7668,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Gemini (I)",
       "description": "Starts with extra Arcana I - Gemini.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -6308,8 +7708,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Twilight Requiem (II)",
       "description": "Starts with extra Arcana II - Twilight Requiem.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -6342,8 +7748,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Twilight Requiem (II)",
       "description": "Starts with extra Arcana II - Twilight Requiem.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.5,
@@ -6376,8 +7788,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6410,8 +7828,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6444,8 +7868,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -6478,8 +7908,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -6512,8 +7948,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -6546,8 +7988,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -6580,8 +8028,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -6614,8 +8068,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 10,
+          "max": 6
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6648,8 +8118,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 10,
+          "max": 6
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6682,8 +8168,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 10,
+          "max": 6
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6716,8 +8218,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "recovery",
+          "value": 0.02,
+          "interval": null,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6750,8 +8265,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "recovery",
+          "value": 0.02,
+          "interval": null,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6784,8 +8312,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Disco of Gold (XV)",
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6818,8 +8352,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Disco of Gold (XV)",
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6852,8 +8392,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -6886,8 +8432,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -6920,8 +8472,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Silent Old Sanctuary (XX)",
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "growth",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6954,8 +8519,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Silent Old Sanctuary (XX)",
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "growth",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -6988,8 +8566,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "curse",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\ncooldown: source HP Critical min 0 max -0.2 by boolean|\ncurse: source HP Critical min 0 max 0.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7022,8 +8613,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "curse",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\ncooldown: source HP Critical min 0 max -0.2 by boolean|\ncurse: source HP Critical min 0 max 0.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7056,8 +8660,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": -0.002,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7090,8 +8707,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": -0.002,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7124,8 +8754,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": -0.002,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7158,8 +8801,35 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            50
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            100
+          ]
+        }
+      ],
       "stats": {
         "max_health": 120,
         "recovery": 0,
@@ -7192,8 +8862,35 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            50
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            100
+          ]
+        }
+      ],
       "stats": {
         "max_health": 120,
         "recovery": 0,
@@ -7226,8 +8923,35 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            50
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            100
+          ]
+        }
+      ],
       "stats": {
         "max_health": 120,
         "recovery": 0,
@@ -7260,8 +8984,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7294,8 +9024,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7328,8 +9064,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7362,8 +9104,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -7396,8 +9144,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -7430,8 +9184,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -7464,8 +9224,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 200,
         "recovery": 0,
@@ -7498,8 +9264,44 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Cannot be damaged, but disappear after reaching the current time limit.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Peachone",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            2
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Ebony Wings",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            3
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Familiar Forge",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "interval": 1,
+          "max": 30
+        }
+      ],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7532,8 +9334,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7566,8 +9381,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7600,8 +9428,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7634,8 +9475,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7668,8 +9522,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7702,8 +9569,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7736,8 +9616,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7770,8 +9663,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7804,8 +9710,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7840,8 +9759,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7875,8 +9807,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7910,8 +9855,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7945,8 +9903,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -7981,8 +9952,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Water included.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8009,19 +9986,35 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/master_librarian_sprite.gif",
       "base_name": "Master Librarian",
       "starting_weapons": [
-        "Rapidus Fio"
+        "Rapidus Fio",
+        "Power of Lire"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Power of Lire"
+      ],
       "max_items": [],
       "starting_arcana": "Mad Groove (VIII)",
       "description": "Deeply moved by money.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "move_speed",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
         "armor": 0,
-        "move_speed": -1,
+        "move_speed": -0.2,
         "might": 0,
         "speed": 0,
         "duration": 0,
@@ -8049,8 +10042,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (Max +3). Amount is doubled while invulnerable.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "multiply_amount: source Invulnerable min 1 max 2 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8083,8 +10089,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Retaliates with Aura Blast. Triggers Aura Blast and a random equipped weapon from the Coat of Arms when overhealing by +8.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 1,
@@ -8117,8 +10129,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Valmanway. Might receive Coat of Arms as 4th level up option until Level 15.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -8151,8 +10169,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8185,8 +10209,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8219,8 +10249,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Peri Pendulum",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Myo Lift",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Epi Head",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -8253,8 +10320,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Endo Gears",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Myo Lift",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Epi Head",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -8287,8 +10391,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Endo Gears",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Peri Pendulum",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Epi Head",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -8321,8 +10462,45 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Endo Gears",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Peri Pendulum",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Myo Lift",
+          "kind": "weapon",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            1
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 1,
@@ -8355,8 +10533,33 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporarily reduced Cooldown. Overhealing slightly decreases Cooldown. Rosaries are easier to find.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "Level 1",
+      "scaling": [
+        {
+          "key": "cooldown",
+          "value": 0.2,
+          "interval": 0,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": 0.3,
+          "interval": 0,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": 0.3,
+          "interval": 0,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8390,8 +10593,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -8425,8 +10634,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -8460,8 +10675,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -8495,8 +10716,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 30,
         "recovery": 0,
@@ -8530,8 +10757,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8565,8 +10798,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8600,8 +10839,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8635,8 +10880,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8669,8 +10920,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8703,8 +10960,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8737,8 +11000,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Blood Astronomia (XXI)",
       "description": "Starts with extra Arcana XXI - Blood Astronomia. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8773,8 +11042,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Fights well with (and against) his father.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -8807,8 +11082,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increase the base damage of every equipped fire-type weapon when levelling up.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8841,8 +11122,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets a hidden clone of the latest equipped weapon or evolution.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8876,8 +11163,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Karma Coin every 2 levels.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -8910,8 +11203,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Wicked Season (XIII)",
       "description": "Starts with extra Arcana XIII - Wicked Season. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8944,8 +11243,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Totally not Alucard",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -8978,8 +11283,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain. Can choose a per-level bonus.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9012,8 +11330,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a random equipped weapon from the Ebony Diabologue when overhealing by +8. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -9044,8 +11368,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Curse: triggers all equipped Dominus weapons. Immune to health drain. Can fly.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "name: Dominus Volley cooldown 15 charge by Always reduce by curse min 3",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -9078,8 +11408,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +4).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -9110,8 +11453,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Game Killer (0)",
       "description": "He doesn't understand the game.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 1,
         "recovery": 0,
@@ -9144,8 +11493,43 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Six axes axe axes as axes axe.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "move_speed",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "curse",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Axe",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "interval": 10,
+          "max": 6
+        }
+      ],
       "stats": {
         "max_health": 10,
         "recovery": 0,
@@ -9178,8 +11562,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "She likes her Wall and Floor chicken well frozen.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9212,8 +11602,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Luck every level. Can fly.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "luck",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9244,8 +11647,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1 Armor every 5 levels. Horizontally impaired. Retaliates.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "armor",
+          "value": 1,
+          "interval": 5,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 233,
         "recovery": 0,
@@ -9281,8 +11697,35 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Grows additional swords when accumulatively Overhealing by an increasingly larger amount (Max 12 swords).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Ruler Sword Body",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "at": [
+            40,
+            80,
+            160,
+            320,
+            480,
+            640,
+            800,
+            960,
+            1120,
+            1280,
+            1440
+          ]
+        }
+      ],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -9315,8 +11758,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Her hidden vacuum draws in items, destructibles, and enemies.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9349,8 +11798,39 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Lost & Found Painting (XVII)",
       "description": "Starts with extra Arcana XVII - Lost & Found Painting. Triggers Keremet Morbus when overhealing by +8.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "move_speed",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "curse",
+          "value": 0.05,
+          "interval": 10,
+          "max": 0.2
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "interval": 20,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 2,
@@ -9385,8 +11865,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with a hidden Star Flail. Enemies have a 15% chance to spawn Defanged. Can turn defeated enemies into followers.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 1,
@@ -9419,8 +11905,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +32 triggers any equipped weapon from the Belnades Spellbook.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9456,8 +11948,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Gemma Torpor, Runetracer, Magi-Stone, and Kyra-Stones. Has a hidden Runetracer that grows stronger when levelling up.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -9493,8 +11991,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +32 triggers any equipped weapon from the Coat of Arms and slowly floods the environment.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9527,8 +12031,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Boogaloo of Illusions (XVIII)",
       "description": "Starts with extra Arcana XVIII - Boogaloo of Illusions.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -9559,10 +12069,23 @@ window.VS_DATA = {
       ],
       "hidden_items": [],
       "max_items": [],
-      "starting_arcana": null,
+      "starting_arcana": "Beginning (X)",
       "description": "A trio of zombies posing as vampire hunters.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 10,
+          "max": 3
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9593,10 +12116,16 @@ window.VS_DATA = {
       ],
       "hidden_items": [],
       "max_items": [],
-      "starting_arcana": null,
+      "starting_arcana": "Jail of Crystal (XIV)",
       "description": "A trio of zombies posing as vampire hunters.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9604,7 +12133,7 @@ window.VS_DATA = {
         "move_speed": 0.4,
         "might": 0,
         "speed": 0,
-        "duration": 0.2,
+        "duration": 0.4,
         "area": 0,
         "cooldown": 0,
         "amount": 0,
@@ -9629,8 +12158,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "A trio of zombies posing as vampire hunters.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9663,8 +12198,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Trident. Always followed by Gaibon. Gets enraged if its partner dies.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "cooldown: source Enraged min 0 max -0.9 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -9697,8 +12238,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Fire Wand. Always followed by Slogra. Gets enraged if its partner dies. Flies.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "cooldown: source Enraged min 0 max -0.9 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -9731,8 +12278,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9765,8 +12318,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9799,8 +12358,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a random equipped weapon every 13th hop. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -63,
         "recovery": 1,
@@ -9833,8 +12398,56 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Chaos in the Dark Night (V)",
       "description": "Can choose a per-level bonus after defeating a set amount of enemies (max 5 times).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "stat_choice",
+          "value": 0.01,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Arcana Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 2,
+          "at": [
+            1
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9867,8 +12480,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through the dinner.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 50,
         "recovery": 0,
@@ -9905,8 +12524,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Has hidden weapons that grow stronger when leveling up. Can fly.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -9939,8 +12564,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 255,
         "recovery": 0,
@@ -9973,8 +12604,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Bigger is better.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Lightning Ring",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "interval": 8,
+          "max": 5
+        }
+      ],
       "stats": {
         "max_health": 256,
         "recovery": 0,
@@ -10007,8 +12654,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -10041,8 +12694,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -10075,8 +12734,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through dinner.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 300,
         "recovery": 0,
@@ -10109,8 +12774,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through dinner.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 300,
         "recovery": 0,
@@ -10143,8 +12814,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -10177,8 +12854,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 400,
         "recovery": 0,
@@ -10211,8 +12894,27 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
+      "reference_scaling": "might: 0.01 per 0.01 curse",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -10247,8 +12949,27 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
+      "reference_scaling": "might: 0.01 per 0.01 curse",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -10281,8 +13002,27 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "interval": 100,
+          "max": null
+        }
+      ],
+      "reference_scaling": "might: 0.01 per 0.01 curse",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 566,
         "recovery": 0,
@@ -10313,10 +13053,16 @@ window.VS_DATA = {
       ],
       "hidden_items": [],
       "max_items": [],
-      "starting_arcana": "Game Killer (0)",
+      "starting_arcana": "Gemini (I)|Twilight Requiem (II)|Tragic Princess (III)|Awake (IV)|Chaos in the Dark Night (V)|Sarabande of Healing (VI)|Iron Blue Will (VII)|Mad Groove (VIII)|Divine Bloodline (IX)|Beginning (X)|Waltz of Pearls (XI)|Out of Bounds (XII)|Wicked Season (XIII)|Jail of Crystal (XIV)|Disco of Gold (XV)|Slash (XVI)|Lost & Found Painting (XVII)|Boogaloo of Illusions (XVIII)|Heart of Fire (XIX)|Silent Old Sanctuary (XX)|Blood Astronomia (XXI)",
       "description": "Starts with Arcana I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, and XXI.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 2097052,
         "recovery": 0,
@@ -10349,8 +13095,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10383,8 +13135,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10417,8 +13175,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10451,8 +13215,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10486,8 +13256,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -10521,8 +13304,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -10556,8 +13352,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -10591,8 +13400,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -10625,8 +13447,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "duration",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10659,8 +13494,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "duration",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10693,8 +13541,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "duration",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10727,8 +13588,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs.Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "duration",
+          "value": 0.001,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -10761,8 +13635,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -10795,8 +13675,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 100,
         "recovery": 0,
@@ -10829,8 +13715,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -50,
         "recovery": 0,
@@ -10863,8 +13755,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -10897,8 +13795,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 40,
         "recovery": 0,
@@ -10931,8 +13835,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "might: 0.05 per [Glimmer Tech]|\nspeed: 0.05 per [Glimmer Tech] max 1|\nduration: 0.05 per [Glimmer Tech] max 1|\narea: 0.025 per [Glimmer Tech] max 0.5|\ncooldown: -0.01 per [Glimmer Tech] max -0.1|\nrecovery: 0.003 per [Glimmer Tech] max 1",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -10966,8 +13876,63 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11001,8 +13966,63 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "might",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.01,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.02,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11035,8 +14055,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.2,
@@ -11069,8 +14095,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0.2,
@@ -11103,8 +14135,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers glimmered techs more often than normal. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11137,8 +14175,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health and on revival. Gains a bonus to Cooldown every time Showstopper is triggered (Max - 20%).",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11174,8 +14218,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with a hidden Rings of Calamity. Increases enemy spawn quantity by 50. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11208,8 +14258,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Heaven's Thunder\" tech. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11242,8 +14298,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -11276,8 +14338,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -11310,8 +14378,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -11344,8 +14418,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -11378,8 +14458,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Mr. S will showcase his skills with techs. Gets more projectiles every 20 levels (max +4).",
+      "custom_description": "",
       "notes": "",
-      "scaling": [],
+      "affinity": "",
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11412,8 +14505,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health. Gain a follower whenever Showstopper is triggered.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": -50,
         "recovery": 1,
@@ -11447,8 +14546,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Shallow Slice\" and \"Airwave\" tech. Gains bonus Recovery whenever Showstopper is triggered at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean|\nrecovery: source HP Critical min 0 max 10",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 10,
         "recovery": 0,
@@ -11482,8 +14587,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Hell's Fury\" and \"Blood Rage\" tech. Gains bonus Might whenever Showstopper is triggered at critical health.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "might: source HP Critical min 0 max 6 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -11516,8 +14627,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Vermillion Sands\" tech.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "multiply_might: source Glimmers Fired min 1 max 5 by pct",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 77,
         "recovery": 0,
@@ -11550,8 +14667,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Starts with a Survarot draft. Has a Survarot level Multiplier of 4.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -11584,8 +14707,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Using Skip when levelling up has a chance to trigger a Survarot draft.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11618,8 +14747,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Starts with a Survarot draft. Reduces boss health and blocks some special attacks.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -11652,8 +14787,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Can equip up to 100 Passive Weapons.",
+      "custom_description": "",
       "notes": "",
+      "affinity": "",
       "scaling": [],
+      "reference_scaling": "",
+      "manual_scaling": "",
+      "charge_ability": "",
+      "grants": [],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -12149,7 +15290,7 @@ window.VS_DATA = {
       "description": "Summons frogs that damage enemies as they jump.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Anura",
+      "trans_result": null,
       "requirements": [
         "Anura"
       ],
@@ -12459,7 +15600,7 @@ window.VS_DATA = {
       "description": "Bombards in a circular area.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Cygnus",
+      "trans_result": null,
       "requirements": [
         "Peachone"
       ],
@@ -12491,7 +15632,7 @@ window.VS_DATA = {
       "description": "Bombards in a circular area.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Zhar Ptytsia",
+      "trans_result": null,
       "requirements": [
         "Ebony Wings"
       ],
@@ -12538,7 +15679,7 @@ window.VS_DATA = {
       "description": "Fires quickly in four fixed directions.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Red Muscle",
+      "trans_result": null,
       "requirements": [
         "Phiera Der Tuphello"
       ],
@@ -12571,7 +15712,7 @@ window.VS_DATA = {
       "description": "Fires quickly in four fixed directions.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Twice Upon a Time",
+      "trans_result": null,
       "requirements": [
         "Eight The Sparrow"
       ],
@@ -12617,7 +15758,7 @@ window.VS_DATA = {
       "description": "Summons capricious projectiles. Might interact with pickups.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Flock Destroyer",
+      "trans_result": null,
       "requirements": [
         "Gatti Amari"
       ],
@@ -13161,7 +16302,7 @@ window.VS_DATA = {
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Horse Cartridge",
+      "trans_result": null,
       "requirements": [
         "Ammo Appalate"
       ],
@@ -13439,7 +16580,7 @@ window.VS_DATA = {
       "description": "Duration affects Amount. Can deal critical damage.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Levelin'Eh",
+      "trans_result": null,
       "requirements": [
         "Santa Javelin"
       ],
@@ -13968,7 +17109,7 @@ window.VS_DATA = {
       "description": "Counterpart to Shadow Servant and Ophion from Arcana I - Gemini",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Silver Sliver",
+      "trans_result": null,
       "requirements": [
         "Shadow Servant"
       ],
@@ -14012,7 +17153,7 @@ window.VS_DATA = {
       "description": "Counterpart to Party Popper from Arcana I - Gemini",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Party Pooper",
+      "trans_result": null,
       "requirements": [
         "Party Popper"
       ],
@@ -14194,7 +17335,7 @@ window.VS_DATA = {
       "description": "Strikes enemies behind you. Damage multiplied by Recovery.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Silver Tongue",
+      "trans_result": null,
       "requirements": [
         "Sharp Tongue"
       ],
@@ -14360,7 +17501,7 @@ window.VS_DATA = {
       "description": "Fires a piercing projectile in the faced direction.",
       "level_ups": [],
       "trans_conditions": "Max Weapon",
-      "trans_result": "C-U-Laser",
+      "trans_result": "Pronto Beam",
       "requirements": [
         "Weapon Power-Up",
         "Tirajisú"
@@ -14563,7 +17704,7 @@ window.VS_DATA = {
       "description": "Has a small chance to freeze enemies.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Prism Damsel",
+      "trans_result": null,
       "requirements": [
         "Prism Lass"
       ],
@@ -15120,7 +18261,7 @@ window.VS_DATA = {
       "description": "Mirrors both Raging Fire and Salamender",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Raging Fire",
+      "trans_result": null,
       "requirements": [
         "Raging Fire"
       ],
@@ -15166,7 +18307,7 @@ window.VS_DATA = {
       "description": "Mirrors both Ice Fang and Cocytus",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Ice Fang",
+      "trans_result": null,
       "requirements": [
         "Ice Fang"
       ],
@@ -15212,7 +18353,7 @@ window.VS_DATA = {
       "description": "Point symmetries both Gale Force and Pneuma Tempestas upside down",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Gale Force",
+      "trans_result": null,
       "requirements": [
         "Gale Force"
       ],
@@ -15258,7 +18399,7 @@ window.VS_DATA = {
       "description": "Mirrors both Rock Riot and Gemma Torpor",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Rock Riot",
+      "trans_result": null,
       "requirements": [
         "Rock Riot"
       ],
@@ -15304,7 +18445,7 @@ window.VS_DATA = {
       "description": "Mirrors Fulgur and doubles Tenebris Tonitrus",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Fulgur",
+      "trans_result": null,
       "requirements": [
         "Fulgur"
       ],
@@ -15350,7 +18491,7 @@ window.VS_DATA = {
       "description": "Copies Keremet Bubbles. Has no effect on Keremet Morbus.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Keremet Bubbles",
+      "trans_result": null,
       "requirements": [
         "Keremet Bubbles"
       ],
@@ -15396,7 +18537,7 @@ window.VS_DATA = {
       "description": "Mirrors both Hex and Nightmare",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Hex",
+      "trans_result": null,
       "requirements": [
         "Hex"
       ],
@@ -15442,7 +18583,7 @@ window.VS_DATA = {
       "description": "Point symmetries Refectio. Has no effect on Sanctuary.",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Refectio",
+      "trans_result": null,
       "requirements": [
         "Refectio"
       ],
@@ -15782,7 +18923,7 @@ window.VS_DATA = {
       "description": "",
       "level_ups": [],
       "trans_conditions": "Gemini (I)",
-      "trans_result": "Speculo Globus",
+      "trans_result": "Nitesco",
       "requirements": [
         "Globus"
       ],
@@ -18014,7 +21155,9 @@ window.VS_DATA = {
         {
           "max_health": 0.2
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Pummarola",
@@ -18045,7 +21188,9 @@ window.VS_DATA = {
         {
           "recovery": 0.2
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Armor",
@@ -18062,26 +21207,23 @@ window.VS_DATA = {
       ],
       "level_up_values": [
         {
-          "armor": 1,
-          "retaliation_damage": 0.1
+          "armor": 1
         },
         {
-          "armor": 1,
-          "retaliation_damage": 0.1
+          "armor": 1
         },
         {
-          "armor": 1,
-          "retaliation_damage": 0.1
+          "armor": 1
         },
         {
-          "armor": 1,
-          "retaliation_damage": 0.1
+          "armor": 1
         },
         {
-          "armor": 1,
-          "retaliation_damage": 0.1
+          "armor": 1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Wings",
@@ -18112,7 +21254,9 @@ window.VS_DATA = {
         {
           "move_speed": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Spinach",
@@ -18143,7 +21287,9 @@ window.VS_DATA = {
         {
           "might": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Bracer",
@@ -18174,7 +21320,9 @@ window.VS_DATA = {
         {
           "speed": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Spellbinder",
@@ -18205,7 +21353,9 @@ window.VS_DATA = {
         {
           "duration": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Candelabrador",
@@ -18236,7 +21386,9 @@ window.VS_DATA = {
         {
           "area": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Empty Tome",
@@ -18267,7 +21419,9 @@ window.VS_DATA = {
         {
           "cooldown": -0.08
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Duplicator",
@@ -18286,7 +21440,9 @@ window.VS_DATA = {
         {
           "amount": 1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Tirajisú",
@@ -18305,7 +21461,9 @@ window.VS_DATA = {
         {
           "revival": 1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Attractorb",
@@ -18336,7 +21494,9 @@ window.VS_DATA = {
         {
           "magnet": 0.33
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Clover",
@@ -18367,7 +21527,9 @@ window.VS_DATA = {
         {
           "luck": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Crown",
@@ -18398,7 +21560,9 @@ window.VS_DATA = {
         {
           "growth": 0.08
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Stone Mask",
@@ -18429,7 +21593,9 @@ window.VS_DATA = {
         {
           "greed": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Skull O'Maniac",
@@ -18460,7 +21626,9 @@ window.VS_DATA = {
         {
           "curse": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Torrona's Box",
@@ -18481,57 +21649,35 @@ window.VS_DATA = {
       ],
       "level_up_values": [
         {
-          "might": 0.04,
-          "speed": 0.04,
-          "duration": 0.04,
-          "area": 0.04
+          "might": 0.04
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
-          "might": 0.03,
-          "speed": 0.03,
-          "duration": 0.03,
-          "area": 0.03
+          "might": 0.03
         },
         {
           "curse": 1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Parm Aegis",
@@ -18562,7 +21708,9 @@ window.VS_DATA = {
         {
           "invulnerability": 50
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Karoma's Mana",
@@ -18579,26 +21727,23 @@ window.VS_DATA = {
       ],
       "level_up_values": [
         {
-          "charm": 0.1,
-          "fever": 0.1
+          "charm": 0.1
         },
         {
-          "charm": 0.1,
-          "fever": 0.1
+          "charm": 0.1
         },
         {
-          "charm": 0.1,
-          "fever": 0.1
+          "charm": 0.1
         },
         {
-          "charm": 0.1,
-          "fever": 0.1
+          "charm": 0.1
         },
         {
-          "charm": 0.1,
-          "fever": 0.1
+          "charm": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Silver Ring",
@@ -18618,39 +21763,34 @@ window.VS_DATA = {
         "Base Area up by 5%. Effect lasts 5% longer."
       ],
       "level_up_values": [
+        {},
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         },
         {
-          "duration": 0.05,
-          "area": 0.05
+          "duration": 0.05
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Gold Ring",
@@ -18670,6 +21810,7 @@ window.VS_DATA = {
         "Increases enemy speed, health, quantity, and frequency by 5%."
       ],
       "level_up_values": [
+        {},
         {
           "curse": 0.05
         },
@@ -18694,7 +21835,9 @@ window.VS_DATA = {
         {
           "curse": 0.05
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Metaglio Left",
@@ -18714,39 +21857,34 @@ window.VS_DATA = {
         "Health recovery increases by 0.1 HP per second. Max Health increases by 5%."
       ],
       "level_up_values": [
+        {},
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         },
         {
-          "recovery": 0.1,
-          "max_health": 0.05
+          "recovery": 0.1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Metaglio Right",
@@ -18766,6 +21904,7 @@ window.VS_DATA = {
         "Increases enemy speed, health, quantity, and frequency by 5%."
       ],
       "level_up_values": [
+        {},
         {
           "curse": 0.05
         },
@@ -18790,7 +21929,9 @@ window.VS_DATA = {
         {
           "curse": 0.05
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Academy Badge",
@@ -18807,27 +21948,25 @@ window.VS_DATA = {
         "Fires 1 more projectile. XP gain decreases by -3%."
       ],
       "level_up_values": [
+        {},
         {
-          "amount": 1,
-          "growth": 0.03
+          "amount": 1
         },
         {
-          "revival": 1,
-          "growth": 0.03
+          "revival": 1
         },
         {
-          "amount": 1,
-          "growth": 0.03
+          "amount": 1
         },
         {
-          "revival": 1,
-          "growth": 0.03
+          "revival": 1
         },
         {
-          "amount": 1,
-          "growth": 0.03
+          "amount": 1
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     },
     {
       "name": "Mini Crewmate",
@@ -18841,14 +21980,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_garlic": 1
-        },
-        {
-          "hidden_garlic": 1
-        },
-        {
-          "hidden_garlic": 1
+          "op": "add_hidden",
+          "name": "Garlic",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -18864,14 +22007,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_lightning_ring": 1
-        },
-        {
-          "hidden_lightning_ring": 1
-        },
-        {
-          "hidden_lightning_ring": 1
+          "op": "add_hidden",
+          "name": "Lightning Ring",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -18887,14 +22034,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_clock_lancet": 1
-        },
-        {
-          "hidden_clock_lancet": 1
-        },
-        {
-          "hidden_clock_lancet": 1
+          "op": "add_hidden",
+          "name": "Clock Lancet",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -18910,14 +22061,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_bone": 1
-        },
-        {
-          "hidden_bone": 1
-        },
-        {
-          "hidden_bone": 1
+          "op": "add_hidden",
+          "name": "Bone",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -18933,14 +22088,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_laurel": 1
-        },
-        {
-          "hidden_laurel": 1
-        },
-        {
-          "hidden_laurel": 1
+          "op": "add_hidden",
+          "name": "Knife",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -18956,14 +22115,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_knife": 1
-        },
-        {
-          "hidden_knife": 1
-        },
-        {
-          "hidden_knife": 1
+          "op": "add_hidden",
+          "name": "Knife",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -18979,14 +22142,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_santa_water": 1
-        },
-        {
-          "hidden_santa_water": 1
-        },
-        {
-          "hidden_santa_water": 1
+          "op": "add_hidden",
+          "name": "Santa Water",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -19002,14 +22169,18 @@ window.VS_DATA = {
         "Allegedly offers better moral support."
       ],
       "level_up_values": [
+        {},
+        {},
+        {}
+      ],
+      "consumed_on_evo": true,
+      "grants": [
         {
-          "hidden_greatest_jubilee": 1
-        },
-        {
-          "hidden_greatest_jubilee": 1
-        },
-        {
-          "hidden_greatest_jubilee": 1
+          "op": "add_hidden",
+          "name": "Greatest Jubilee",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1
         }
       ]
     },
@@ -19025,11 +22196,10 @@ window.VS_DATA = {
       "level_up_values": [
         {
           "revival": 1
-        },
-        {
-          "hidden": 1
         }
-      ]
+      ],
+      "consumed_on_evo": true,
+      "grants": []
     },
     {
       "name": "Outer Saboteur",
@@ -19049,6 +22219,7 @@ window.VS_DATA = {
         "Gain 900 gold coins."
       ],
       "level_up_values": [
+        {},
         {
           "gold": 200
         },
@@ -19073,7 +22244,9 @@ window.VS_DATA = {
         {
           "gold": 900
         }
-      ]
+      ],
+      "consumed_on_evo": false,
+      "grants": []
     }
   ],
   "arcana": [
