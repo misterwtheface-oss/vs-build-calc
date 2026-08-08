@@ -485,6 +485,11 @@
     .slot.slot-absorbed:hover { opacity: 1; outline: 1px solid var(--gold-dim); }
     /* Extra passive instances (e.g. Weapon Power-Up) — active, not dimmed like hidden. */
     .slot.slot-extra { border-color: rgba(155,63,217,.55); box-shadow: inset 0 0 0 1px rgba(155,63,217,.25); }
+    /* Gift slot (Candybox Turbo / Arma Dio) — extra slot appended to the main row. */
+    .slot.slot-gift { border-color: var(--gold); border-style: dashed; box-shadow: inset 0 0 0 1px rgba(212,175,55,.3); }
+    /* Familiar (picked via Familiar Forge) — sits in the hidden/extra row but is removable. */
+    .slot.slot-familiar { opacity: .85; border-color: rgba(90,180,120,.6); }
+    .slot.slot-familiar:hover { opacity: 1; }
     /* ×N count badge for collapsed duplicate instances (bottom-right, clear of the × button). */
     .dupe-badge { position: absolute; bottom: 1px; right: 1px; padding: 0 3px;
       font-size: .62rem; line-height: 1.35; font-family: var(--font-title); font-weight: 600;
@@ -1119,7 +1124,13 @@
     // "hid" when it formed (Clock Tower hides its 4 clockwork bases; Alucard Shield
     // hides the 5 evolutions Alucard Swords consumed). These render in the Hidden row
     // while the result is equipped and are restored to normal slots on devolve/removal.
-    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {} };
+    // giftWeapon / giftPassive: the extra "gift" slot from Super Candybox II Turbo (weapon)
+    // and Arma Dio (passive) — a free-pick chooser initially, the chosen item after picking.
+    // Appended to the main weapons/passives row (no new row); one of EACH per whole build.
+    // familiars: familiar weapons picked via Familiar Forge — they live in the hidden/extra
+    // row, never a normal weapon slot (a Familiar Forge STARTER slot clears once one is picked,
+    // and is restored by syncFamiliarStarter when no familiars remain).
+    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {}, giftWeapon: null, giftPassive: null, familiars: [] };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -1221,6 +1232,22 @@
     for (const resultName of Object.keys(player.absorbed)) {
       if (!equipped.has(resultName)) delete player.absorbed[resultName];
     }
+  }
+
+  // A Familiar Forge STARTER slot (Young Maria) holds the Forge until a familiar is picked,
+  // then clears (the familiar moves to the hidden/extra row). Restored once no familiar
+  // remains. Idempotent → safe as a per-render sweep. Only starter Forge slots are managed.
+  function syncFamiliarStarter(player) {
+    if (!player.familiars) player.familiars = [];
+    const starters = starterWeaponNames(player.character);
+    starters.forEach((name, i) => {
+      if (name !== 'Familiar Forge') return;
+      if (player.familiars.length > 0) {
+        if (player.weapons[i]?.name === 'Familiar Forge') player.weapons[i] = null;
+      } else if (!player.weapons[i]) {
+        player.weapons[i] = weaponByName('Familiar Forge');
+      }
+    });
   }
 
   // The weapons an absorb-union hides when it forms. Clock Tower = its 4 fixed clockwork
@@ -1387,6 +1414,93 @@
   function evoPathsFor(name) {
     return (D.evoPaths || []).filter(ep => ep.related_to.includes(name) || ep.evo_path === name);
   }
+
+  // ── Free-pick items (Candybox-like) ──────────────────────────────────────
+  // Items that DON'T evolve — their evo path is decoration only. Instead they let you
+  // CHOOSE one weapon/passive from a limited pool (rendered as the full grid with only the
+  // pool undimmed). Two families:
+  //  • Pool-driven: pool = weapons sharing an `ode_category` (Coat of Arms →
+  //    "Vampire-Killing Tool", Morning Star → "Magic Whip", …). Such an item's OWN evo
+  //    path has pattern "<ode_category>>Final". Clock Tower's "Clockwork Weapon" pool is
+  //    excluded — it's an absorb-union handled elsewhere.
+  //  • Category-driven (ode = N/A): Candybox → any Base weapon; Super Candybox II Turbo →
+  //    advanced (evolved) weapons; Arma Dio → a passive.
+  // Arma Dio and Super Candybox II Turbo are GIFT items — not any character's starter; they
+  // get their own extra slot (player.giftWeapon / giftPassive), one of EACH per build.
+  const TURBO = 'Super Candybox II Turbo', ARMA = 'Arma Dio', CANDYBOX = 'Candybox';
+
+  // ode_category → Set(member weapon names). Excludes the Clockwork Weapon absorb-union pool.
+  // Lazy + memoized: D isn't populated until after load, so we can't build these eagerly.
+  let _odePools = null;
+  function odePools() {
+    if (_odePools) return _odePools;
+    _odePools = new Map();
+    for (const w of D.weapons) {
+      const k = w.ode_category;
+      if (!k || k === 'Clockwork Weapon') continue;
+      if (!_odePools.has(k)) _odePools.set(k, new Set());
+      _odePools.get(k).add(w.name);
+    }
+    return _odePools;
+  }
+
+  // The ode pool a weapon OWNS via its own evo path pattern "<key>>Final", or null.
+  function ownedPoolKey(name) {
+    const pools = odePools();
+    for (const ep of evoPathsFor(name)) {
+      if (ep.evo_path !== name) continue;
+      const pat = ep.pattern || '';
+      if (!pat.endsWith('>Final')) continue;
+      const key = pat.slice(0, -'>Final'.length);
+      if (pools.has(key)) return key;
+    }
+    return null;
+  }
+
+  let _freePickNames = null;
+  function freePickNames() {
+    if (_freePickNames) return _freePickNames;
+    _freePickNames = new Set([CANDYBOX, TURBO, ARMA]);
+    for (const w of D.weapons) if (ownedPoolKey(w.name)) _freePickNames.add(w.name);
+    return _freePickNames;
+  }
+  const isFreePick = name => freePickNames().has(name);
+
+  // Arma Dio's passive pool excludes rings/metaglios/Academy Badge, extra-bar mechanic
+  // passives (Weapon Power-Up, Outer Saboteur, every Mini…), and Familiars (Familiar Forge).
+  const ARMA_EXCLUDE_NAMES = new Set([
+    'Silver Ring', 'Gold Ring', 'Metaglio Left', 'Metaglio Right', 'Academy Badge',
+  ]);
+  function armaPassivePool() {
+    const familiarPool = odePools().get('Familiar') || new Set();
+    return new Set(D.passives.map(p => p.name).filter(nm =>
+      !ARMA_EXCLUDE_NAMES.has(nm) && !isExtraPassive(nm) && !familiarPool.has(nm)));
+  }
+
+  // { kind:'weapon'|'passive', pool:Set<string>, source } for a free-pick item, else null.
+  function freePickInfo(name) {
+    if (!isFreePick(name)) return null;
+    if (name === ARMA) return { kind: 'passive', pool: armaPassivePool(), source: name };
+    if (name === CANDYBOX) {
+      const pool = new Set(D.weapons
+        .filter(w => w.category === 'Base' && !isFreePick(w.name)).map(w => w.name));
+      return { kind: 'weapon', pool, source: name };
+    }
+    if (name === TURBO) {
+      // "advanced weapons" — evolved forms. Tunable: Evolution/Union/Counterpart categories.
+      const ADV = new Set(['Evolution', 'Union', 'Counterpart']);
+      const pool = new Set(D.weapons
+        .filter(w => ADV.has(w.category) && !isFreePick(w.name)).map(w => w.name));
+      return { kind: 'weapon', pool, source: name };
+    }
+    const key = ownedPoolKey(name);
+    // Exclude any chooser from its own pool (e.g. Intuition is itself an Emerald Diorama member).
+    return key ? { kind: 'weapon', pool: new Set([...odePools().get(key)].filter(n => !isFreePick(n))), source: name } : null;
+  }
+
+  // Gift consumption is derived from player state (one Turbo + one Arma per build, global).
+  const turboConsumed = () => state.players.some(p => p.giftWeapon);
+  const armaConsumed  = () => state.players.some(p => p.giftPassive);
 
   function evoIcon(name) {
     if (!name) return EMPTY_ICON;
@@ -1896,7 +2010,7 @@
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            hidden = false, removable = true, locked = false, infoName = null } = opts;
+            hidden = false, removable = true, locked = false, infoName = null, gift = null } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     const icon = item ? (item.icon || emptyIcon) : emptyIcon;
@@ -1907,10 +2021,11 @@
       type === 'stage'  ? 'slot-stage'  : '',
       hidden    ? 'hidden-weapon' : '',
       locked    ? 'slot-locked'   : '',
+      gift      ? 'slot-gift'     : '',
     ].filter(Boolean).join(' ');
 
     const removeBtn = (!hidden && removable && item && !locked)
-      ? `<button class="slot-remove" data-action="remove-slot" data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" title="Remove">×</button>`
+      ? `<button class="slot-remove" data-action="remove-slot" data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}"${gift ? ` data-gift="${gift}"` : ''} title="Remove">×</button>`
       : '';
 
     const imgTag = `<img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.src='${emptyIcon}'">`;
@@ -1919,9 +2034,11 @@
     const lockIcon = locked ? `<img class="slot-lock" src="assets/icons/ui/locked.png" alt="">` : '';
     const hiddenAttr = (hidden && item) ? `data-hidden-name="${esc(item.name)}"` : '';
     const infoAttr = infoName ? `data-info-name="${esc(infoName)}"` : '';
+    const giftAttr = gift ? `data-gift="${gift}"` : '';
+    const giftTitle = gift ? ` (${gift === 'passive' ? 'Arma Dio' : 'Candybox Turbo'} gift)` : '';
     return `<div class="${classes}"
-      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" ${hiddenAttr} ${infoAttr}
-      title="${item ? esc(item.name) + (locked ? ' (starter)' : hidden ? ' (hidden)' : '') : 'Empty'}">
+      ${slotAction ? `data-action="${slotAction}"` : ''} data-player="${playerIdx}" data-slot="${slotIdx}" data-type="${type}" ${hiddenAttr} ${infoAttr} ${giftAttr}
+      title="${item ? esc(item.name) + (locked ? ' (starter)' : hidden ? ' (hidden)' : gift ? giftTitle : '') : 'Empty'}">
       ${imgTag}
       ${removeBtn}
       ${lockIcon}
@@ -2127,7 +2244,7 @@
         <div class="sidebar-body"><div class="info-sidebar-empty">Left-click a slot<br>to see details<br><br>Right-click to change</div></div>
       </div>`;
     }
-    const { type, playerIdx, slotIdx, hiddenName, refName, absorbedResult, absorbedIdx } = panel;
+    const { type, playerIdx, slotIdx, hiddenName, refName, absorbedResult, absorbedIdx, gift } = panel;
     const player = state.players[playerIdx];
     // An editable absorbed weapon (Alucard Shield's hidden evolutions) is addressed by its
     // container result + index into that result's absorbed list.
@@ -2136,11 +2253,13 @@
     let item = null;
     if (type === 'char')    item = player?.character;
     else if (type === 'weapon')  {
-      item = absorbedName ? weaponByName(absorbedName)
+      item = gift === 'weapon' ? player?.giftWeapon
+           : absorbedName ? weaponByName(absorbedName)
            : hiddenName ? weaponByName(hiddenName)
            : player?.weapons[slotIdx];
     }
-    else if (type === 'passive') item = refName ? passiveByName(refName) : player?.passives[slotIdx];
+    else if (type === 'passive') item = gift === 'passive' ? player?.giftPassive
+           : refName ? passiveByName(refName) : player?.passives[slotIdx];
     else if (type === 'arcana')  item = refName ? arcanaByName(refName) : state.arcana[slotIdx];
     else if (type === 'stage')   item = state.stage;
 
@@ -2174,6 +2293,20 @@
       const wObj = D.weapons.find(w => w.name === item.name);
       if (wObj) html += buildEvoChainHTML(wObj);
 
+      if (isFreePick(item.name)) {
+        // Free-pick chooser (Candybox-like weapon, or the Turbo gift): a Choose button opens
+        // the pool selector. These never evolve — no stage controls.
+        const tgt = gift === 'weapon' ? 'giftWeapon' : String(slotIdx);
+        html += `<div class="detail-section"><span class="detail-section-label">Choose</span>
+          <button class="btn btn-sm btn-stage" data-action="open-freepick" data-player="${playerIdx}"
+            data-slot="${slotIdx}" data-source="${esc(item.name)}" data-target="${tgt}">Choose ▸</button></div>`;
+      } else if (gift === 'weapon') {
+        // Converted Turbo gift weapon: removing it destroys the gift slot (does NOT devolve to
+        // a base form) and frees the Turbo for reuse.
+        html += `<div class="detail-section"><span class="detail-section-label">Stage</span>
+          <button class="btn btn-sm btn-devolve" data-action="perform-devolve" data-player="${playerIdx}"
+            data-slot="${slotIdx}" data-gift="weapon">← Remove gift</button></div>`;
+      } else
       // Stage controls — only for real slots, not hidden weapon views
       if (wObj && slotIdx >= 0) {
         const player = state.players[playerIdx];
@@ -2269,7 +2402,20 @@
     }
 
     if (type === 'passive') {
-      html += buildPassiveEvoHTML(item.name, playerIdx);
+      if (gift === 'passive' && isFreePick(item.name)) {
+        // Arma Dio gift chooser → Choose a passive from its pool.
+        html += `<div class="detail-section"><span class="detail-section-label">Choose</span>
+          <button class="btn btn-sm btn-stage" data-action="open-freepick" data-player="${playerIdx}"
+            data-slot="${slotIdx}" data-source="${esc(item.name)}" data-target="giftPassive">Choose ▸</button></div>`;
+      } else if (gift === 'passive') {
+        // Converted Arma gift passive → removing it destroys the gift slot and frees Arma.
+        html += `<div class="detail-section"><span class="detail-section-label">Stage</span>
+          <button class="btn btn-sm btn-devolve" data-action="remove-slot" data-player="${playerIdx}"
+            data-slot="${slotIdx}" data-type="passive" data-gift="passive">← Remove gift</button></div>`;
+        html += buildPassiveEvoHTML(item.name, playerIdx);
+      } else {
+        html += buildPassiveEvoHTML(item.name, playerIdx);
+      }
     }
 
     if (type === 'arcana') {
@@ -2292,6 +2438,8 @@
     players.forEach(syncExtraPassives);
     // Drop stale absorb-union entries (result no longer equipped) before deriving hidden.
     players.forEach(syncAbsorbed);
+    // Restore/clear a Familiar Forge starter slot based on whether a familiar is held.
+    players.forEach(syncFamiliarStarter);
 
     const playerCards = players.map((player, idx) => {
       const char = player.character;
@@ -2340,8 +2488,20 @@
         ...passiveHidden,
       ])];
       // Hidden/extra weapons get their own conditional row (between Weapons and
-      // Passives) so they never push the Weapons row rightward / overflow.
-      const hiddenWeaponRow = hiddenSlotRow(allHidden, 'weapon', idx);
+      // Passives) so they never push the Weapons row rightward / overflow. Familiars
+      // (picked via Familiar Forge) share this row but are REMOVABLE (× → remove-familiar).
+      const hiddenCells = allHidden.map(nm =>
+        slotHTML(weaponByName(nm), { type:'weapon', playerIdx:idx, slotIdx:-1, hidden:true })).join('');
+      const familiarCells = (player.familiars || []).map((nm, fi) => {
+        const w = weaponByName(nm);
+        const icon = w ? (w.icon || EMPTY_ICONS.weapon) : EMPTY_ICONS.weapon;
+        return `<div class="slot hidden-weapon slot-familiar" data-action="view-hidden" data-player="${idx}" data-type="weapon" data-hidden-name="${esc(nm)}" title="${esc(nm)} (familiar)">
+          <img src="${esc(icon)}" alt="${esc(nm)}" onerror="this.src='${EMPTY_ICONS.weapon}'">
+          <button class="slot-remove" data-action="remove-familiar" data-player="${idx}" data-fam-idx="${fi}" title="Remove">×</button>
+        </div>`;
+      }).join('');
+      const hiddenWeaponRow = (hiddenCells || familiarCells)
+        ? `<div class="slot-row slot-row-hidden">${hiddenCells}${familiarCells}</div>` : '';
       // Weapons hidden by an equipped absorb-union (Clock Tower's 4 bases / Alucard
       // Shield's 5 evolutions) render their own row: Alucard's stay evolvable (editable),
       // Clock Tower's are read-only.
@@ -2357,6 +2517,16 @@
         const isLocked = si < passiveStarterCount && !!base && base.name === starterPassives[si];
         return slotHTML(base, { type:'passive', playerIdx:idx, slotIdx:si, locked:isLocked });
       }).join('');
+
+      // Gift slots (Turbo → weapons row, Arma → passives row): a free-pick chooser until
+      // the user picks from its pool. Appended to the MAIN row as one extra slot (never a
+      // new row); one of each per whole build.
+      const giftWeaponSlot = player.giftWeapon
+        ? slotHTML(player.giftWeapon, { type:'weapon', playerIdx:idx, slotIdx:counts.weapons, gift:'weapon' })
+        : '';
+      const giftPassiveSlot = player.giftPassive
+        ? slotHTML(player.giftPassive, { type:'passive', playerIdx:idx, slotIdx:counts.passives, gift:'passive' })
+        : '';
 
       // Hidden/extra passives — instances that don't occupy a core slot. Identical
       // instances collapse to ONE icon with an ×N badge to save space; the × removes a
@@ -2392,10 +2562,10 @@
         <div class="player-body">
           <div class="char-col">${charSlot}</div>
           <div class="slots-col">
-            <div class="slot-row">${wSlots}</div>
+            <div class="slot-row">${wSlots}${giftWeaponSlot}</div>
             ${hiddenWeaponRow}
             ${absorbedWeaponRow}
-            <div class="slot-row">${pSlots}</div>
+            <div class="slot-row">${pSlots}${giftPassiveSlot}</div>
             ${hiddenPassiveRow}
           </div>
         </div>
@@ -2582,6 +2752,21 @@
     buildAndShowOverlay(passiveOverlayHTML(playerIdx, slotIdx));
   }
 
+  // Open the pool selector for a Candybox-like free-pick slot. Shows the FULL grid with only
+  // the item's pool undimmed (no filtering). `target` is where the pick lands: a normal
+  // weapon slotIdx, 'giftWeapon', or 'giftPassive'.
+  function openFreePickOverlay(playerIdx, slotIdx, sourceName, target) {
+    const info = freePickInfo(sourceName);
+    if (!info) return;
+    const fp = { kind: info.kind, poolSet: info.pool, sourceName, target };
+    const slotType = info.kind === 'passive' ? 'passive' : 'weapon';
+    state.overlay = { type:'item', playerIdx, slotIdx, slotType, fromEmpty:false, prevItem:null, freePick: fp };
+    state.ovl.selected = null;
+    buildAndShowOverlay(info.kind === 'passive'
+      ? passiveOverlayHTML(playerIdx, slotIdx)
+      : weaponOverlayHTML(playerIdx, slotIdx));
+  }
+
   function weaponOverlayHTML(playerIdx, slotIdx) {
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
@@ -2601,6 +2786,8 @@
       evoOnlySet = collectDescendants(player.weapons[slotIdx].name);
       evoOnlySet.delete(player.weapons[slotIdx].name); // don't show the current form itself
     }
+    // Free-pick mode: show the FULL grid, dim everything outside the item's pool.
+    const freePickPool = state.overlay?.freePick?.kind === 'weapon' ? state.overlay.freePick.poolSet : null;
 
     const usedWeapons = new Set(player.weapons.filter((w, i) => w && i !== slotIdx).map(w => w.name));
     const consumedWeapons = getConsumedWeapons(playerIdx, slotIdx);
@@ -2636,7 +2823,11 @@
     // never evolve and never appear in an evo lineage, so hiding them from the grid is
     // safe; the few characters that START with one still get it auto-placed (locked),
     // independent of this list. ('-' / Chaos weapons are left in — separate backlog.)
-    const weaponFilter = w => w.category !== 'Special';
+    // Familiars (ode_category 'Familiar') aren't direct grid picks either — they're chosen via
+    // Familiar Forge (its free-pick pool, where they're shown) and live in the hidden/extra row.
+    const isFamiliar = w => w.ode_category === 'Familiar';
+    const weaponFilter = w => w.category !== 'Special'
+      && (!isFamiliar(w) || (freePickPool && freePickPool.has(w.name)));
     const baseWeapons = D.weapons.filter(w => w.category === 'Base' && weaponFilter(w))
       .slice().sort((a, b) => weaponSortKey(a) - weaponSortKey(b));
 
@@ -2652,12 +2843,15 @@
       const isSel      = sel && sel.name === w.name;
       // Locked-evo mode: only this starter's future forms (evoOnlySet) stay clickable;
       // every other weapon is dimmed. Normal mode uses used/consumed styling instead.
-      const isOffLineage = isLockedEvo && !(evoOnlySet && evoOnlySet.has(w.name));
+      const isOffLineage = (isLockedEvo && !(evoOnlySet && evoOnlySet.has(w.name)))
+                        || (freePickPool && !freePickPool.has(w.name));
       const isUsed     = !isLockedEvo && usedWeapons.has(w.name);
       const isConsumed = !isLockedEvo && !isSel && !isUsed && consumedWeapons.has(w.name);
+      // Gift items are one-of-each per build — dim once their gift is already consumed.
+      const isGiftUsed = !freePickPool && ((w.name === TURBO && turboConsumed()) || (w.name === ARMA && armaConsumed()));
       let cls = 'item-card';
       if (isSel) cls += ' selected';
-      if (isUsed || isOffLineage) cls += ' dim';
+      if (isUsed || isOffLineage || isGiftUsed) cls += ' dim';
       else if (isConsumed) cls += ' consumed';
       const title = isConsumed
         ? `${w.name} — consumed in another evo chain`
@@ -2775,6 +2969,8 @@
       ...state.players.filter((_, i) => i !== playerIdx).flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
     ]);
 
+    // Free-pick mode (Arma Dio): show the FULL grid, dim everything outside the pool.
+    const freePickPool = state.overlay?.freePick?.kind === 'passive' ? state.overlay.freePick.poolSet : null;
     let cards = '';
     for (const p of D.passives) {
       // Extra-bar passives (Weapon Power-Up, Outer Saboteur, Mini …) live outside the core
@@ -2782,7 +2978,8 @@
       // when at cap or with no enabling weapon (never filtered out).
       const isExtra = isExtraPassive(p.name);
       const isSel = sel && sel.name === p.name;
-      const isDim = isExtra ? (extraCount(player, p.name) >= extraCap(player, p.name)) : usedPassives.has(p.name);
+      const isDim = (freePickPool && !freePickPool.has(p.name))
+        || (isExtra ? (extraCount(player, p.name) >= extraCap(player, p.name)) : usedPassives.has(p.name));
       cards += `<div class="item-card${isSel ? ' selected' : ''}${isDim ? ' dim' : ''}"
         data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive" data-search="${esc(p.name)}"
         title="${esc(p.name)}">
@@ -3033,7 +3230,29 @@
 
     if (confirmed || (fromEmpty && sel)) {
       // Apply selection
-      if (type === 'char') {
+      const fp = state.overlay.freePick;
+      if (fp) {
+        // Free-pick pool selection: route the chosen pool member to its target — a normal
+        // Candybox-like weapon slot, or a gift slot — with NO evo/chain handling.
+        if (sel) {
+          const player = state.players[playerIdx];
+          if (fp.sourceName === 'Familiar Forge') {
+            // Familiars live in the hidden/extra row, not a weapon slot. Add the pick there and
+            // clear the Forge from its slot; a Forge STARTER slot is restored by
+            // syncFamiliarStarter once no familiars remain.
+            player.familiars = player.familiars || [];
+            player.familiars.push(sel.name);
+            if (typeof fp.target === 'number') player.weapons[fp.target] = null;
+          } else {
+            const pick = fp.kind === 'passive' ? passiveByName(sel.name) : weaponByName(sel.name);
+            if (pick) {
+              if (fp.target === 'giftWeapon') player.giftWeapon = pick;
+              else if (fp.target === 'giftPassive') player.giftPassive = pick;
+              else player.weapons[slotIdx] = pick;
+            }
+          }
+        }
+      } else if (type === 'char') {
         const oldChar = state.players[playerIdx].character;
         state.players[playerIdx].character = sel;
         if (sel) {
@@ -3153,6 +3372,25 @@
               player.weapons[slotIdx] = weaponByName(cInfo.base);
               showToast(`${wDef.name} needs ${cInfo.character} — added ${cInfo.base}`, 'warn');
               syncExtraPassives(player);
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
+            // Free-pick choosers (Candybox-like) never evolve — no chain-consume, no passive
+            // auto-add. Gift items (Turbo/Arma) take their own extra slot (one of EACH per
+            // build); other free-pick items occupy the clicked normal slot as a chooser.
+            if (isFreePick(wDef.name)) {
+              if (wDef.name === TURBO) {
+                if (turboConsumed()) showToast('Only one Candybox Turbo per build', 'warn');
+                else player.giftWeapon = wDef;
+              } else if (wDef.name === ARMA) {
+                if (armaConsumed()) showToast('Only one Arma Dio per build', 'warn');
+                else player.giftPassive = wDef;
+              } else {
+                player.weapons[slotIdx] = wDef;
+              }
               state.overlay = null;
               state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
               document.getElementById('overlay-root').classList.add('hidden');
@@ -3980,13 +4218,26 @@
     if (action === 'remove-slot') {
       e.stopPropagation();
       const p = state.players[playerIdx];
+      // Gift slots (Turbo/Arma): removing destroys the extra slot and frees the gift for
+      // reuse — never leaves an empty slot behind.
+      if (btn.dataset.gift === 'weapon')  { p.giftWeapon = null; state.infoPanel = null; render(); return; }
+      if (btn.dataset.gift === 'passive') { p.giftPassive = null; state.infoPanel = null; render(); return; }
       if (slotType === 'char')    { p.character = null; autoDevolveBrokenEvos(); }
       else if (slotType === 'weapon')  {
         const removed = p.weapons[slotIdx];
-        p.weapons[slotIdx] = null;
-        // Removing an absorb-union restores its hidden weapons to real slots rather than
-        // silently dropping them (mirrors devolve).
-        if (removed && isAbsorbUnion(removed.name)) releaseAbsorbed(p, removed.name);
+        // Free-pick STARTER slot (e.g. Soma Cruz's Candybox): once a weapon was picked from
+        // its pool the slot unlocked, but deleting that weapon must RESTORE the original
+        // free-pick starter (re-locks), not leave the slot empty.
+        const starters = starterWeaponNames(p.character);
+        const starterName = slotIdx < starters.length ? starters[slotIdx] : null;
+        if (starterName && isFreePick(starterName)) {
+          p.weapons[slotIdx] = weaponByName(starterName);
+        } else {
+          p.weapons[slotIdx] = null;
+          // Removing an absorb-union restores its hidden weapons to real slots rather than
+          // silently dropping them (mirrors devolve).
+          if (removed && isAbsorbUnion(removed.name)) releaseAbsorbed(p, removed.name);
+        }
       }
       else if (slotType === 'passive') { p.passives[slotIdx] = null; autoDevolveBrokenEvos(); }
       else if (slotType === 'arcana')  state.arcana[slotIdx] = null;
@@ -3995,10 +4246,26 @@
       render();
       return;
     }
+    if (action === 'remove-familiar') {
+      e.stopPropagation();
+      const p = state.players[playerIdx];
+      const fi = parseInt(btn.dataset.famIdx);
+      if (p.familiars && fi >= 0) p.familiars.splice(fi, 1);
+      // syncFamiliarStarter (per-render) restores the Familiar Forge starter when none remain.
+      state.infoPanel = null;
+      render();
+      return;
+    }
     if (action === 'view-slot') {
       const refName = btn.dataset.infoName || null;
-      state.infoPanel = { type: slotType, playerIdx, slotIdx, refName };
+      state.infoPanel = { type: slotType, playerIdx, slotIdx, refName, gift: btn.dataset.gift || null };
       render();
+      return;
+    }
+    if (action === 'open-freepick') {
+      const rawTarget = btn.dataset.target;
+      const target = (rawTarget === 'giftWeapon' || rawTarget === 'giftPassive') ? rawTarget : parseInt(rawTarget);
+      openFreePickOverlay(playerIdx, slotIdx, btn.dataset.source, target);
       return;
     }
     if (action === 'view-hidden') {
@@ -4066,6 +4333,9 @@
     }
     if (action === 'perform-devolve') {
       const player = state.players[playerIdx];
+      // Converted Turbo gift weapon: devolving destroys the gift slot and frees the Turbo —
+      // it does NOT devolve to a base form.
+      if (btn.dataset.gift === 'weapon') { player.giftWeapon = null; state.infoPanel = null; render(); return; }
       const current = player.weapons[slotIdx];
       if (current && isAbsorbUnion(current.name)) {
         // Absorb-union devolve: restore the hidden set to real slots. If the data-base
@@ -4467,6 +4737,21 @@
     // Derived/locked reference slots (e.g. extra starting arcana) use slotIdx -1 and
     // aren't backed by a pool entry — they're view-only, so don't open a change overlay.
     if (slotIdx < 0) return;
+    const player = state.players[playerIdx];
+    // Gift slots (Turbo/Arma): open the pool selector while still a free-pick chooser;
+    // once converted to a real weapon/passive there's nothing to re-pick.
+    const gift = slot.dataset.gift;
+    if (gift) {
+      const item = gift === 'passive' ? player.giftPassive : player.giftWeapon;
+      if (item && isFreePick(item.name))
+        openFreePickOverlay(playerIdx, slotIdx, item.name, gift === 'passive' ? 'giftPassive' : 'giftWeapon');
+      return;
+    }
+    // Candybox-like weapon in a normal slot → pool selector (full grid, only pool undimmed).
+    if (slotType === 'weapon') {
+      const w = player.weapons[slotIdx];
+      if (w && isFreePick(w.name)) { openFreePickOverlay(playerIdx, slotIdx, w.name, slotIdx); return; }
+    }
     openSlotOverlay(slotType, playerIdx, slotIdx);
   }
 

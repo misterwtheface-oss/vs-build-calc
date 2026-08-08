@@ -324,6 +324,9 @@ const weapons = rawWeapons.filter(r => r.weapon && r.weapon !== '-').map(r => {
     trans_result,
     requirements: reqs,
     final_state,
+    // Collection/free-pick pool tag (Candybox-like items): pool members share the pool's
+    // name here (e.g. the 8 whips = "Magic Whip"). N/A / - / empty → null.
+    ode_category: (() => { const v = (r.ode_category || '').trim(); return (!v || v === '-' || v === 'N/A') ? null : v; })(),
     arcana_ratings,
     rarity: parseInt(r.rarity) || 0,
   };

@@ -14829,6 +14829,7 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Fuwalafuwaloo",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 100
     },
@@ -14845,6 +14846,7 @@ window.VS_DATA = {
         "Vento Sacro"
       ],
       "final_state": "Fuwalafuwaloo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -14861,6 +14863,7 @@ window.VS_DATA = {
         "Bloody Tear"
       ],
       "final_state": "Fuwalafuwaloo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -14875,6 +14878,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Fuwalafuwaloo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -14891,6 +14895,7 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Spirit of Light",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 100
     },
@@ -14907,6 +14912,7 @@ window.VS_DATA = {
         "Summon Spirit"
       ],
       "final_state": "Spirit of Light",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -14923,6 +14929,7 @@ window.VS_DATA = {
         "Holy Wand"
       ],
       "final_state": "Spirit of Light",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -14937,6 +14944,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit of Light",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -14953,6 +14961,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Million Cut",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 100
     },
@@ -14969,6 +14978,7 @@ window.VS_DATA = {
         "Valmanway"
       ],
       "final_state": "Million Cut",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -14985,6 +14995,7 @@ window.VS_DATA = {
         "Thousand Edge"
       ],
       "final_state": "Million Cut",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -14999,6 +15010,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Million Cut",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15015,6 +15027,7 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "Legacy of Death: Soul River",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 100
     },
@@ -15031,6 +15044,7 @@ window.VS_DATA = {
         "Dark Rift"
       ],
       "final_state": "Legacy of Death: Soul River",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15047,6 +15061,7 @@ window.VS_DATA = {
         "Death Spiral"
       ],
       "final_state": "Legacy of Death: Soul River",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15061,6 +15076,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Legacy of Death: Soul River",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15077,6 +15093,7 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "Arch Angle",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -15093,6 +15110,7 @@ window.VS_DATA = {
         "Grand Cross"
       ],
       "final_state": "Arch Angle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15109,6 +15127,7 @@ window.VS_DATA = {
         "Heaven Sword"
       ],
       "final_state": "Arch Angle",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15123,6 +15142,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Arch Angle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15139,6 +15159,7 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Ninth Circle",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -15155,6 +15176,7 @@ window.VS_DATA = {
         "Icebrand"
       ],
       "final_state": "Ninth Circle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15171,6 +15193,7 @@ window.VS_DATA = {
         "Unholy Vespers"
       ],
       "final_state": "Ninth Circle",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15185,6 +15208,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Ninth Circle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15201,6 +15225,7 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Kardía Phlegeton",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -15217,6 +15242,7 @@ window.VS_DATA = {
         "Aura Blast"
       ],
       "final_state": "Kardía Phlegeton",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15233,6 +15259,7 @@ window.VS_DATA = {
         "Hellfire"
       ],
       "final_state": "Kardía Phlegeton",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15247,6 +15274,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Kardía Phlegeton",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15263,6 +15291,7 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Dark Frogamorphosis",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -15279,6 +15308,7 @@ window.VS_DATA = {
         "Anura"
       ],
       "final_state": "Dark Frogamorphosis",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15295,6 +15325,7 @@ window.VS_DATA = {
         "Anura"
       ],
       "final_state": "Speculo Anura",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15311,6 +15342,7 @@ window.VS_DATA = {
         "Soul Eater"
       ],
       "final_state": "Dark Frogamorphosis",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15325,6 +15357,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Dark Frogamorphosis",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15341,6 +15374,7 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "Hydro Pump Climax",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 100
     },
@@ -15357,6 +15391,7 @@ window.VS_DATA = {
         "Hydro Storm"
       ],
       "final_state": "Hydro Pump Climax",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15373,6 +15408,7 @@ window.VS_DATA = {
         "La Borra"
       ],
       "final_state": "Hydro Pump Climax",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15387,6 +15423,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Hydro Pump Climax",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15403,6 +15440,7 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Carnage Heart",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -15419,6 +15457,7 @@ window.VS_DATA = {
         "Troll Bomb"
       ],
       "final_state": "Carnage Heart",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15435,6 +15474,7 @@ window.VS_DATA = {
         "NO FUTURE"
       ],
       "final_state": "Carnage Heart",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15449,6 +15489,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Carnage Heart",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15465,6 +15506,7 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Vjaya Sisters",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -15481,6 +15523,7 @@ window.VS_DATA = {
         "Sword Brothers"
       ],
       "final_state": "Vjaya Sisters",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15497,6 +15540,7 @@ window.VS_DATA = {
         "Thunder Loop"
       ],
       "final_state": "Vjaya Sisters",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15511,6 +15555,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Vjaya Sisters",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15527,6 +15572,7 @@ window.VS_DATA = {
         "Crown"
       ],
       "final_state": "Venus Crescent",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -15543,6 +15589,7 @@ window.VS_DATA = {
         "Summon Spirit Tornado"
       ],
       "final_state": "Venus Crescent",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15559,6 +15606,7 @@ window.VS_DATA = {
         "Gorgeous Moon"
       ],
       "final_state": "Venus Crescent",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15573,6 +15621,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Venus Crescent",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15589,6 +15638,7 @@ window.VS_DATA = {
         "Ebony Wings"
       ],
       "final_state": "Vandalier",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15605,6 +15655,7 @@ window.VS_DATA = {
         "Peachone"
       ],
       "final_state": "Cygnus",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15621,6 +15672,7 @@ window.VS_DATA = {
         "Peachone"
       ],
       "final_state": "Vandalier",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15637,6 +15689,7 @@ window.VS_DATA = {
         "Ebony Wings"
       ],
       "final_state": "Zhar Ptytsia",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15651,6 +15704,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Vandalier",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15668,6 +15722,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Phieraggi",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15684,6 +15739,7 @@ window.VS_DATA = {
         "Phiera Der Tuphello"
       ],
       "final_state": "Red Muscle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15701,6 +15757,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Phieraggi",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15717,6 +15774,7 @@ window.VS_DATA = {
         "Eight The Sparrow"
       ],
       "final_state": "Twice Upon a Time",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15731,6 +15789,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Phieraggi",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15747,6 +15806,7 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Power of Lire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15763,6 +15823,7 @@ window.VS_DATA = {
         "Gatti Amari"
       ],
       "final_state": "Flock Destroyer",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15779,6 +15840,7 @@ window.VS_DATA = {
         "Soul Steal"
       ],
       "final_state": "Power of Lire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15795,6 +15857,7 @@ window.VS_DATA = {
         "Vicious Hunger"
       ],
       "final_state": "Power of Lire",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -15809,6 +15872,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Power of Lire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15825,6 +15889,7 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Dies Irae",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15841,6 +15906,7 @@ window.VS_DATA = {
         "Arrow of Goth"
       ],
       "final_state": "Dies Irae",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15857,6 +15923,7 @@ window.VS_DATA = {
         "Mannajja"
       ],
       "final_state": "Dies Irae",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15871,6 +15938,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Dies Irae",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15887,6 +15955,7 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Darkness Illusion",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -15903,6 +15972,7 @@ window.VS_DATA = {
         "Svarog Statue"
       ],
       "final_state": "Darkness Illusion",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15919,6 +15989,7 @@ window.VS_DATA = {
         "Valkyrie Turner"
       ],
       "final_state": "Darkness Illusion",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -15933,6 +16004,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Darkness Illusion",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15950,6 +16022,7 @@ window.VS_DATA = {
         "Gold Ring"
       ],
       "final_state": "Infinite Corridor",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -15964,6 +16037,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Infinite Corridor",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -15981,6 +16055,7 @@ window.VS_DATA = {
         "Metaglio Right"
       ],
       "final_state": "Crimson Shroud",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -15995,6 +16070,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Crimson Shroud",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16007,8 +16083,11 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Anima of Mortaccio",
-      "requirements": [],
+      "requirements": [
+        "Chaos Malachite"
+      ],
       "final_state": "Anima of Mortaccio",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -16023,6 +16102,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Anima of Mortaccio",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16035,8 +16115,11 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Yatta Daikarin",
-      "requirements": [],
+      "requirements": [
+        "Chaos Rosalia"
+      ],
       "final_state": "Yatta Daikarin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -16051,6 +16134,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Yatta Daikarin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16063,8 +16147,11 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carozza!",
-      "requirements": [],
+      "requirements": [
+        "Chaos Lazulia"
+      ],
       "final_state": "Carozza!",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -16079,6 +16166,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Carozza!",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16091,8 +16179,11 @@ window.VS_DATA = {
       "level_ups": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Profusione D'Amore",
-      "requirements": [],
+      "requirements": [
+        "Chaos Altemanna"
+      ],
       "final_state": "Profusione D'Amore",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -16107,6 +16198,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Profusione D'Amore",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16121,6 +16213,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "La Robba",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -16135,6 +16228,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Greatest Jubilee",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -16149,6 +16243,7 @@ window.VS_DATA = {
       "trans_result": "Bi-Bracelet",
       "requirements": [],
       "final_state": "Lapiste Tepisto",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 40
     },
@@ -16163,6 +16258,7 @@ window.VS_DATA = {
       "trans_result": "Tri-Bracelet",
       "requirements": [],
       "final_state": "Lapiste Tepisto",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16179,6 +16275,7 @@ window.VS_DATA = {
         "Kaiser Knuckle"
       ],
       "final_state": "Lapiste Tepisto",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16195,6 +16292,7 @@ window.VS_DATA = {
         "Tri-Bracelet"
       ],
       "final_state": "Lapiste Tepisto",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -16209,6 +16307,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Lapiste Tepisto",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16223,6 +16322,7 @@ window.VS_DATA = {
       "trans_result": "Super Candybox II Turbo",
       "requirements": [],
       "final_state": "Candybox",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -16237,6 +16337,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Super Candybox II Turbo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16253,6 +16354,7 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Mazo Familiar",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -16267,6 +16369,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Mazo Familiar",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16283,6 +16386,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Gunastrophe",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -16299,6 +16403,7 @@ window.VS_DATA = {
         "Ammo Appalate"
       ],
       "final_state": "Horse Cartridge",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16313,6 +16418,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gunastrophe",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16329,6 +16435,7 @@ window.VS_DATA = {
         "Torrona's Box"
       ],
       "final_state": "Victory Sword",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 30
     },
@@ -16343,6 +16450,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sole Solution",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16359,6 +16467,7 @@ window.VS_DATA = {
         "Torrona's Box"
       ],
       "final_state": "Ashes of Muspell",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 30
     },
@@ -16373,6 +16482,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Ashes of Muspell",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16389,6 +16499,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Spirit Disturbance",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -16403,6 +16514,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Disturbance",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16419,6 +16531,7 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Celestial Voulge",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16433,6 +16546,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Celestial Voulge",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16447,6 +16561,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16461,6 +16576,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16475,6 +16591,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16489,6 +16606,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16503,6 +16621,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16517,6 +16636,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16531,6 +16651,7 @@ window.VS_DATA = {
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16545,6 +16666,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Miracle of Multiplication",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16561,6 +16683,7 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "Seraphic Cry",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -16577,6 +16700,7 @@ window.VS_DATA = {
         "Santa Javelin"
       ],
       "final_state": "Levelin'Eh",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16591,6 +16715,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Seraphic Cry",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16607,6 +16732,7 @@ window.VS_DATA = {
         "Parm Aegis"
       ],
       "final_state": "Embrace of Gaea",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16621,6 +16747,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Embrace of Gaea",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16637,6 +16764,7 @@ window.VS_DATA = {
         "Karoma's Mana"
       ],
       "final_state": "Kyra-Stones",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -16651,6 +16779,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Kyra-Stones",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16667,6 +16796,7 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Photonstorm",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16681,6 +16811,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Photonstorm",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16695,6 +16826,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Arma Dio",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16711,6 +16843,7 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Wicked Ruler",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 40
     },
@@ -16725,6 +16858,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Wicked Ruler",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16741,6 +16875,7 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Festive Winds",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16755,6 +16890,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Festive Winds",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16771,6 +16907,7 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "Godai Shuffle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16785,6 +16922,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Godai Shuffle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16801,6 +16939,7 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Echo Night",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16815,6 +16954,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Echo Night",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16831,6 +16971,7 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "J'Odore",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -16845,6 +16986,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "J'Odore",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16861,6 +17003,7 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Muramasa",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 30
     },
@@ -16875,6 +17018,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Muramasa",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16891,6 +17035,7 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Boo Roo Boolle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -16905,6 +17050,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Boo Roo Boolle",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -16919,6 +17065,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "108 Bocce",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 10
     },
@@ -16936,6 +17083,7 @@ window.VS_DATA = {
         "SpellStrike"
       ],
       "final_state": "SpellStrom",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -16953,6 +17101,7 @@ window.VS_DATA = {
         "SpellStrike"
       ],
       "final_state": "SpellStrom",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -16970,6 +17119,7 @@ window.VS_DATA = {
         "SpellStream"
       ],
       "final_state": "SpellStrom",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -16984,6 +17134,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "SpellStrom",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17000,6 +17151,7 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Legionnaire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -17014,6 +17166,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Legionnaire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17030,6 +17183,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Millionaire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -17044,6 +17198,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Millionaire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17060,6 +17215,7 @@ window.VS_DATA = {
         "Crown"
       ],
       "final_state": "Luminaire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -17074,6 +17230,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Luminaire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17090,6 +17247,7 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Ophion",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -17106,6 +17264,7 @@ window.VS_DATA = {
         "Shadow Servant"
       ],
       "final_state": "Silver Sliver",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17120,6 +17279,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Ophion",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17134,6 +17294,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Party Popper",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -17150,6 +17311,7 @@ window.VS_DATA = {
         "Party Popper"
       ],
       "final_state": "Party Pooper",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17166,6 +17328,7 @@ window.VS_DATA = {
         "Mini Crewmate"
       ],
       "final_state": "Emergency Meeting",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17180,6 +17343,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Emergency Meeting",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17196,6 +17360,7 @@ window.VS_DATA = {
         "Mini Engineer"
       ],
       "final_state": "Crossed Wires",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17210,6 +17375,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Crossed Wires",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17226,6 +17392,7 @@ window.VS_DATA = {
         "Mini Ghost"
       ],
       "final_state": "Paranormal Scan",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 40
     },
@@ -17240,6 +17407,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Paranormal Scan",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17256,6 +17424,7 @@ window.VS_DATA = {
         "Mini Shapeshifter"
       ],
       "final_state": "Unjust Ejection",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17270,6 +17439,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Unjust Ejection",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17286,6 +17456,7 @@ window.VS_DATA = {
         "Mini Guardian"
       ],
       "final_state": "Clear Asteroids",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17300,6 +17471,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Clear Asteroids",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17316,6 +17488,7 @@ window.VS_DATA = {
         "Mini Impostor"
       ],
       "final_state": "Impostongue",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17332,6 +17505,7 @@ window.VS_DATA = {
         "Sharp Tongue"
       ],
       "final_state": "Silver Tongue",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17346,6 +17520,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Impostongue",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17362,6 +17537,7 @@ window.VS_DATA = {
         "Mini Scientist"
       ],
       "final_state": "Rocket Science",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17376,6 +17552,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rocket Science",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17390,6 +17567,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Hats",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -17406,6 +17584,7 @@ window.VS_DATA = {
         "Weapon Power-Up"
       ],
       "final_state": "Prototype A",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17420,6 +17599,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype A",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17437,6 +17617,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Prototype B",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17451,6 +17632,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype B",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17468,6 +17650,7 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Prototype C",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17482,6 +17665,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype C",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17499,6 +17683,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Pronto Beam",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17513,6 +17698,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Pronto Beam",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17530,6 +17716,7 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "Fire-L3GS",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17544,6 +17731,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Fire-L3GS",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17561,6 +17749,7 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Wave Beam",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17575,6 +17764,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Wave Beam",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17592,6 +17782,7 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Multistage Missiles",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17606,6 +17797,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Multistage Missiles",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17623,6 +17815,7 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "Atmo-Torpedo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17637,6 +17830,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Atmo-Torpedo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17654,6 +17848,7 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "BFC2000-AD",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17668,6 +17863,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "BFC2000-AD",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17685,6 +17881,7 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Time Warp",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17701,6 +17898,7 @@ window.VS_DATA = {
         "Prism Lass"
       ],
       "final_state": "Prism Damsel",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17715,6 +17913,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Time Warp",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17732,6 +17931,7 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Big Fuzzy Fist",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -17746,6 +17946,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Big Fuzzy Fist",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17762,6 +17963,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Vampire Killer",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17776,6 +17978,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Vampire Killer",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17792,6 +17995,7 @@ window.VS_DATA = {
         "Crown"
       ],
       "final_state": "Spirit Tornado Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17806,6 +18010,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Tornado Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17822,6 +18027,7 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "Cross Crasher Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17836,6 +18042,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Cross Crasher Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17852,6 +18059,7 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "Hydrostormer Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17866,6 +18074,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Hydrostormer Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17882,6 +18091,7 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Crissaegrim Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17896,6 +18106,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Crissaegrim Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17912,6 +18123,7 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Mormegil Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17926,6 +18138,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Mormegil Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17942,6 +18155,7 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "Daybreaker Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17956,6 +18170,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Daybreaker Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -17972,6 +18187,7 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Aurablaster Tip",
+      "ode_category": "Magic Whip",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -17986,6 +18202,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Aurablaster Tip",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18002,6 +18219,7 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Yagyu Shuriken",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -18016,6 +18234,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Yagyu Shuriken",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18032,6 +18251,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Bwaka Knife",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -18046,6 +18266,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Bwaka Knife",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18062,6 +18283,7 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Long Inus",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -18076,6 +18298,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Long Inus",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18092,6 +18315,7 @@ window.VS_DATA = {
         "Parm Aegis"
       ],
       "final_state": "Stellar Blade",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -18106,6 +18330,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Stellar Blade",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18122,6 +18347,7 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Wrecking Ball",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18136,6 +18362,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Wrecking Ball",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18152,6 +18379,7 @@ window.VS_DATA = {
         "Karoma's Mana"
       ],
       "final_state": "Jewel Gun",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18166,6 +18394,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Jewel Gun",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18182,6 +18411,7 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "final_state": "The RPG",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -18196,6 +18426,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "The RPG",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18212,6 +18443,7 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "final_state": "Meal Ticket",
+      "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -18226,6 +18458,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Meal Ticket",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18242,6 +18475,7 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Salamender",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18258,6 +18492,7 @@ window.VS_DATA = {
         "Raging Fire"
       ],
       "final_state": "Speculo Raging Fire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18272,6 +18507,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Salamender",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18288,6 +18524,7 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Cocytus",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18304,6 +18541,7 @@ window.VS_DATA = {
         "Ice Fang"
       ],
       "final_state": "Speculo Ice Fang",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18318,6 +18556,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Cocytus",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18334,6 +18573,7 @@ window.VS_DATA = {
         "Bracer"
       ],
       "final_state": "Pneuma Tempestas",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18350,6 +18590,7 @@ window.VS_DATA = {
         "Gale Force"
       ],
       "final_state": "Speculo Gale Force",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18364,6 +18605,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Pneuma Tempestas",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18380,6 +18622,7 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Gemma Torpor",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18396,6 +18639,7 @@ window.VS_DATA = {
         "Rock Riot"
       ],
       "final_state": "Speculo Rock Riot",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18410,6 +18654,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gemma Torpor",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18426,6 +18671,7 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Tenebris Tonitrus",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18442,6 +18688,7 @@ window.VS_DATA = {
         "Fulgur"
       ],
       "final_state": "Speculo Fulgur",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18456,6 +18703,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Tenebris Tonitrus",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18472,6 +18720,7 @@ window.VS_DATA = {
         "Armor"
       ],
       "final_state": "Keremet Morbus",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18488,6 +18737,7 @@ window.VS_DATA = {
         "Keremet Bubbles"
       ],
       "final_state": "Speculo Keremet Bubbles",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18502,6 +18752,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Keremet Morbus",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18518,6 +18769,7 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Nightmare",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18534,6 +18786,7 @@ window.VS_DATA = {
         "Hex"
       ],
       "final_state": "Speculo Hex",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18548,6 +18801,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Nightmare",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18564,6 +18818,7 @@ window.VS_DATA = {
         "Clover"
       ],
       "final_state": "Sanctuary",
+      "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18580,6 +18835,7 @@ window.VS_DATA = {
         "Refectio"
       ],
       "final_state": "Speculo Refectio",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18594,6 +18850,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sanctuary",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18610,6 +18867,7 @@ window.VS_DATA = {
         "Hollow Heart"
       ],
       "final_state": "Stamazza",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18624,6 +18882,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Stamazza",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18640,6 +18899,7 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Moon Rod",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18654,6 +18914,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Moon Rod",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18670,6 +18931,7 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Thunderbolt Spear",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18684,6 +18946,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Thunderbolt Spear",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18700,6 +18963,7 @@ window.VS_DATA = {
         "Duplicator"
       ],
       "final_state": "Gungnir-Souris",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18714,6 +18978,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gungnir-Souris",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18730,6 +18995,7 @@ window.VS_DATA = {
         "Parm Aegis"
       ],
       "final_state": "Dark Iron Shield",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -18744,6 +19010,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Dark Iron Shield",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18760,6 +19027,7 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Sacred Beasts Tower Shield",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -18774,6 +19042,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Beasts Tower Shield",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18790,6 +19059,7 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Rune Sword",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -18804,6 +19074,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rune Sword",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18818,6 +19089,7 @@ window.VS_DATA = {
       "trans_result": "Alucard Swords",
       "requirements": [],
       "final_state": "Alucard Shield",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -18832,6 +19104,7 @@ window.VS_DATA = {
       "trans_result": "Alucard Shield",
       "requirements": [],
       "final_state": "Alucard Shield",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18846,6 +19119,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Alucard Shield",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18860,6 +19134,7 @@ window.VS_DATA = {
       "trans_result": "Vol Confodere",
       "requirements": [],
       "final_state": "Melio Confodere",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -18874,6 +19149,7 @@ window.VS_DATA = {
       "trans_result": "Melio Confodere",
       "requirements": [],
       "final_state": "Melio Confodere",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18888,6 +19164,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Melio Confodere",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18904,6 +19181,7 @@ window.VS_DATA = {
         "Empty Tome"
       ],
       "final_state": "Nitesco",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18920,6 +19198,7 @@ window.VS_DATA = {
         "Globus"
       ],
       "final_state": "Nitesco",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18934,6 +19213,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Nitesco",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18950,6 +19230,7 @@ window.VS_DATA = {
         "Karoma's Mana"
       ],
       "final_state": "Acerbatus",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -18964,6 +19245,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Acerbatus",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -18981,6 +19263,7 @@ window.VS_DATA = {
         "Centralis Custos"
       ],
       "final_state": "Trinum Custodem",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -18998,6 +19281,7 @@ window.VS_DATA = {
         "Centralis Custos"
       ],
       "final_state": "Trinum Custodem",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -19015,6 +19299,7 @@ window.VS_DATA = {
         "Dextro Custos"
       ],
       "final_state": "Trinum Custodem",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 70
     },
@@ -19029,6 +19314,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Trinum Custodem",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19046,6 +19332,7 @@ window.VS_DATA = {
         "Dominus Agony"
       ],
       "final_state": "Power of Sire",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19063,6 +19350,7 @@ window.VS_DATA = {
         "Dominus Agony"
       ],
       "final_state": "Power of Sire",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19080,6 +19368,7 @@ window.VS_DATA = {
         "Dominus Hatred"
       ],
       "final_state": "Power of Sire",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19094,6 +19383,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Power of Sire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19110,6 +19400,7 @@ window.VS_DATA = {
         "Wings"
       ],
       "final_state": "Rapidus Fio",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19124,6 +19415,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rapidus Fio",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19140,6 +19432,7 @@ window.VS_DATA = {
         "Crown"
       ],
       "final_state": "Vol Luminatio",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -19156,6 +19449,7 @@ window.VS_DATA = {
         "Vol Umbra"
       ],
       "final_state": "Vol Luminatio",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19172,6 +19466,7 @@ window.VS_DATA = {
         "Attractorb"
       ],
       "final_state": "Vol Umbra",
+      "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -19188,6 +19483,7 @@ window.VS_DATA = {
         "Vol Luminatio"
       ],
       "final_state": "Vol Umbra",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19202,6 +19498,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Universitas",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19216,6 +19513,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Morning Star",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -19230,6 +19528,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Coat of Arms",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -19244,6 +19543,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Spectral Sword",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -19258,6 +19558,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Belnades' Spellbook",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -19272,6 +19573,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Ebony Diabologue",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -19288,6 +19590,7 @@ window.VS_DATA = {
         "Torrona's Box"
       ],
       "final_state": "Claimh Solais",
+      "ode_category": "Magic Weapon",
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -19302,6 +19605,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Claimh Solais",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19320,6 +19624,7 @@ window.VS_DATA = {
         "Epi Head"
       ],
       "final_state": "Clock Tower",
+      "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -19338,6 +19643,7 @@ window.VS_DATA = {
         "Epi Head"
       ],
       "final_state": "Clock Tower",
+      "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -19356,6 +19662,7 @@ window.VS_DATA = {
         "Epi Head"
       ],
       "final_state": "Clock Tower",
+      "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -19374,6 +19681,7 @@ window.VS_DATA = {
         "Myo Lift"
       ],
       "final_state": "Clock Tower",
+      "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
       "rarity": 20
     },
@@ -19388,6 +19696,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Clock Tower",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19402,6 +19711,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Familiar Forge",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 6
     },
@@ -19416,6 +19726,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Ukoback",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19430,6 +19741,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Bitterfly",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19444,6 +19756,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Alleged Ghost",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19458,6 +19771,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Imp",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19472,6 +19786,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Wood Rod",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19486,6 +19801,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Pumpkin",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19500,6 +19816,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Faerie",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19514,6 +19831,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Cardinal",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19528,6 +19846,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Dragon",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19542,6 +19861,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Tiger",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19556,6 +19876,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Turtle",
+      "ode_category": "Familiar",
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19572,6 +19893,7 @@ window.VS_DATA = {
         "Crystalline Carve"
       ],
       "final_state": "Espada Ropera",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19588,6 +19910,7 @@ window.VS_DATA = {
         "Shocking Rush"
       ],
       "final_state": "Espada Ropera",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19602,6 +19925,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Espada Ropera",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19618,6 +19942,7 @@ window.VS_DATA = {
         "Swallow Slice"
       ],
       "final_state": "Dayblade",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19634,6 +19959,7 @@ window.VS_DATA = {
         "Airwave"
       ],
       "final_state": "Dayblade",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19648,6 +19974,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Dayblade",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19665,6 +19992,7 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "final_state": "Pursuant Blades",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19679,6 +20007,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Pursuant Blades",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19695,6 +20024,7 @@ window.VS_DATA = {
         "Bull Crush"
       ],
       "final_state": "Galatyn",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19711,6 +20041,7 @@ window.VS_DATA = {
         "Absetzen"
       ],
       "final_state": "Galatyn",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19725,6 +20056,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Galatyn",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19741,6 +20073,7 @@ window.VS_DATA = {
         "Raksha"
       ],
       "final_state": "Gilded Hand",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19757,6 +20090,7 @@ window.VS_DATA = {
         "Shenlong Firefist"
       ],
       "final_state": "Gilded Hand",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19771,6 +20105,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gilded Hand",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19788,6 +20123,7 @@ window.VS_DATA = {
         "Pummarola"
       ],
       "final_state": "Triangle Kick",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19802,6 +20138,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Triangle Kick",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19818,6 +20155,7 @@ window.VS_DATA = {
         "Shockwave"
       ],
       "final_state": "Divergence",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 60
     },
@@ -19834,6 +20172,7 @@ window.VS_DATA = {
         "Bombarding Fire"
       ],
       "final_state": "Divergence",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19848,6 +20187,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Divergence",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19864,6 +20204,7 @@ window.VS_DATA = {
         "Ballistic Missiles"
       ],
       "final_state": "Hyperion Bazooka",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19880,6 +20221,7 @@ window.VS_DATA = {
         "Artificial Hailstorm"
       ],
       "final_state": "Hyperion Bazooka",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19894,6 +20236,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Hyperion Bazooka",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19911,6 +20254,7 @@ window.VS_DATA = {
         "Spinach"
       ],
       "final_state": "Pendragon",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19925,6 +20269,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Pendragon",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19942,6 +20287,7 @@ window.VS_DATA = {
         "Parm Aegis"
       ],
       "final_state": "Jetstream",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19956,6 +20302,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Jetstream",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -19973,6 +20320,7 @@ window.VS_DATA = {
         "Karoma's Mana"
       ],
       "final_state": "Gekkabijin",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -19987,6 +20335,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gekkabijin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20004,6 +20353,7 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "final_state": "Falconwind",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -20018,6 +20368,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Falconwind",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20035,6 +20386,7 @@ window.VS_DATA = {
         "Stone Mask"
       ],
       "final_state": "Blood Chalice",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -20049,6 +20401,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Blood Chalice",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20065,6 +20418,7 @@ window.VS_DATA = {
         "Divine Lancer"
       ],
       "final_state": "Lohengrin",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -20081,6 +20435,7 @@ window.VS_DATA = {
         "Stardust"
       ],
       "final_state": "Lohengrin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20095,6 +20450,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Lohengrin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20109,6 +20465,7 @@ window.VS_DATA = {
       "trans_result": "Rings of Calamity",
       "requirements": [],
       "final_state": "Rings of Calamity",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 50
     },
@@ -20123,6 +20480,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rings of Calamity",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20139,6 +20497,7 @@ window.VS_DATA = {
         "Crown"
       ],
       "final_state": "Emerald Wave",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 1
     },
@@ -20153,6 +20512,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Emerald Wave",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20167,6 +20527,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Intuition",
+      "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 2
     },
@@ -20183,6 +20544,7 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "NaneInferno",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -20197,6 +20559,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "NaneInferno",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20213,6 +20576,7 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "Cavendish",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -20227,6 +20591,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Cavendish",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20243,6 +20608,7 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "Royal Flush",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -20257,6 +20623,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Royal Flush",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20273,6 +20640,7 @@ window.VS_DATA = {
         "Outer Saboteur"
       ],
       "final_state": "Negative Space",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 80
     },
@@ -20287,6 +20655,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Negative Space",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20301,6 +20670,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Experience Gem",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20315,6 +20685,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gold Coin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20329,6 +20700,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Coin Bag",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20343,6 +20715,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rich Coin Bag",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20357,6 +20730,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Treasure Chest",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20371,6 +20745,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rosary",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20385,6 +20760,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Nduja Fritta Tanto",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20399,6 +20775,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sorbetto",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20413,6 +20790,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Orologion",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20427,6 +20805,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Vacuum",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20441,6 +20820,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Floor Chicken",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20455,6 +20835,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gilded Clover",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20469,6 +20850,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Little Clover",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20483,6 +20865,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rerollo",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20497,6 +20880,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gold Finger",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20511,6 +20895,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Friendship Amulet",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20525,6 +20910,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Golden Egg",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20539,6 +20925,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Rapid Fire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20553,6 +20940,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Barrier",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20567,6 +20955,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Grenade",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20581,6 +20970,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Wall Chicken",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20595,6 +20985,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Heart Refresh",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20609,6 +21000,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Karma Coin",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20623,6 +21015,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Mirror of Truth",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20637,6 +21030,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Neutron Bomb",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20651,6 +21045,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Big Coin Bag",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20665,6 +21060,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Cheese",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20679,6 +21075,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Corn",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20693,6 +21090,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Crystallized Soul",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20707,6 +21105,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Cursed Soul",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20721,6 +21120,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Gold Pile",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20735,6 +21135,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Lavatrix Machina",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20749,6 +21150,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Little Heart",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20763,6 +21165,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Pie",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20777,6 +21180,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Scorched Soul",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20791,6 +21195,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Starry Heavens",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20805,6 +21210,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Survarot",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20819,6 +21225,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Weird Souls Purifier",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20833,6 +21240,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "World Eater",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20847,6 +21255,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sarabande of Healing",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20861,6 +21270,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Game Killer",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20875,6 +21285,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Heart of Fire",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20889,6 +21300,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Out of Bounds",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20903,6 +21315,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Divine Bloodline",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20917,6 +21330,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Blood Astronomia",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20931,6 +21345,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Wandering the Jet Black",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20945,6 +21360,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Insatiable",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20959,6 +21375,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Acquazzone",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20973,6 +21390,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Shaft Orb",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -20987,6 +21405,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Burning Alcarde",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -21001,6 +21420,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Death Hand",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -21015,6 +21435,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Hand of Vlad",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -21029,6 +21450,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Ruler Sword Body",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -21043,6 +21465,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Bananastrophe",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
@@ -21057,13 +21480,14 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "Sossoldi",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
     {
       "name": "Chaos Malachite",
       "icon": "assets/icons/weapons/chaos_malachite.png",
-      "category": "Special",
+      "category": "-",
       "method": null,
       "description": "Allows Mortaccio to morph when reaching Level 80.",
       "level_ups": [],
@@ -21071,13 +21495,14 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "-",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
     {
       "name": "Chaos Rosalia",
       "icon": "assets/icons/weapons/chaos_rosalia.png",
-      "category": "Special",
+      "category": "-",
       "method": null,
       "description": "Allows Yatta Cavallo to morph when reaching Level 80.",
       "level_ups": [],
@@ -21085,13 +21510,14 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "-",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
     {
       "name": "Chaos Lazulia",
       "icon": "assets/icons/weapons/chaos_lazulia.png",
-      "category": "Special",
+      "category": "-",
       "method": null,
       "description": "Allows Bianca Ramba to morph when reaching Level 80.",
       "level_ups": [],
@@ -21099,13 +21525,14 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "-",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     },
     {
       "name": "Chaos Altemanna",
       "icon": "assets/icons/weapons/chaos_altemanna.png",
-      "category": "Special",
+      "category": "-",
       "method": null,
       "description": "Allows O'Sole Meeo to morph when reaching Level 80.",
       "level_ups": [],
@@ -21113,6 +21540,7 @@ window.VS_DATA = {
       "trans_result": null,
       "requirements": [],
       "final_state": "-",
+      "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
     }
