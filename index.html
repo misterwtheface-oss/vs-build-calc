@@ -479,6 +479,10 @@
     .slot.hidden-weapon { opacity: .4; cursor: default; }
     .slot.hidden-weapon:hover img { filter: none; }
     .slot.hidden-weapon .slot-remove { display: none !important; }
+    /* Absorbed weapons stay editable (Alucard Shield's hidden evolutions) — brighter than a
+       plain hidden weapon, with a pointer + gold hover to signal they respond to clicks. */
+    .slot.slot-absorbed { opacity: .7; cursor: pointer; }
+    .slot.slot-absorbed:hover { opacity: 1; outline: 1px solid var(--gold-dim); }
     /* Extra passive instances (e.g. Weapon Power-Up) — active, not dimmed like hidden. */
     .slot.slot-extra { border-color: rgba(155,63,217,.55); box-shadow: inset 0 0 0 1px rgba(155,63,217,.25); }
     /* ×N count badge for collapsed duplicate instances (bottom-right, clear of the × button). */
@@ -829,7 +833,7 @@
     .detail-section ul { list-style: none; padding: 0; }
     .detail-section li { font-size: .85rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
     .detail-section li::before { content: '▸ '; color: var(--gold-dim); }
-    .evo-flow { display: flex; flex-direction: column; gap: 14px; margin-top: .35rem; }
+    .evo-flow { display: flex; flex-direction: column; gap: 18px; margin-top: .35rem; }
     .evo-path-group { padding-top: .6rem; border-top: 1px solid var(--border); }
     .evo-path-group:first-child { padding-top: 0; border-top: none; }
     .evo-row { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; }
@@ -871,11 +875,14 @@
     .evo-gem img { width: 100%; height: 100%; object-fit: fill; display: block; }
     /* merge-bar: stacked rows on left → bar → output right (dual/Vandalier/Universitas) */
     .evo-merge { display: inline-flex; align-items: stretch; gap: 3px; }
-    .evo-merge-rows { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+    /* Stacked branches need enough vertical gap that a top-branch MAX/sub label (absolutely
+       positioned below its node) clears the branch beneath it, without reserving per-node room
+       (which would offset icon centering within a row). */
+    .evo-merge-rows { display: flex; flex-direction: column; gap: 18px; justify-content: center; }
     .evo-merge-bar { width: 2px; background: var(--border); border-radius: 1px; flex-shrink: 0; min-height: 24px; }
     .evo-merge-out { display: flex; align-items: center; gap: 4px; }
     /* u2f grid: base-evo on left | bar | mid on right-top, union-partner on right-bot | final (centered) */
-    .evo-u2f { display: grid; grid-template-columns: auto 2px auto auto; grid-template-rows: auto auto; gap: 4px 3px; align-items: center; justify-content: start; }
+    .evo-u2f { display: grid; grid-template-columns: auto 2px auto auto; grid-template-rows: auto auto; gap: 16px 3px; align-items: center; justify-content: start; }
     .evo-u2f > .u2l { grid-column:1; grid-row:1; display:flex; align-items:center; gap:4px; }
     .evo-u2f > .u2b { grid-column:2; grid-row:1/3; background:var(--border); align-self:stretch; border-radius:1px; }
     .evo-u2f > .u2t { grid-column:3; grid-row:1; display:flex; align-items:center; gap:4px; }
@@ -884,6 +891,10 @@
     /* triple/quad union: stacked inputs + bar + final */
     .evo-multi-union { display: inline-flex; align-items: stretch; gap: 3px; }
     .evo-multi-inputs { display: flex; flex-direction: column; gap: 4px; justify-content: center; }
+    /* absorb-union: the hidden bases shown a 2nd time to the right of the result. */
+    .evo-absorb-col { display: flex; flex-direction: column; align-items: center; gap: 3px; margin-left: 8px; justify-content: center; }
+    .evo-absorb-label { font-size: .6rem; letter-spacing: .04em; color: var(--text-muted); text-transform: uppercase; }
+    .evo-absorb-col .evo-multi-inputs { gap: 3px; }
     /* collection finals */
     .evo-coll-wrap { display: flex; flex-direction: column; gap: 4px; }
     .evo-coll-inputs { display: flex; flex-wrap: wrap; gap: 3px; }
@@ -1104,7 +1115,11 @@
   function makePlayer() {
     // extraPassives: passive instances that don't occupy a core slot (e.g. Weapon
     // Power-Up), rendered in the hidden/extra bar; duplicates allowed for this type.
-    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [] };
+    // absorbed: map of an equipped union-result weapon name → the weapon names it
+    // "hid" when it formed (Clock Tower hides its 4 clockwork bases; Alucard Shield
+    // hides the 5 evolutions Alucard Swords consumed). These render in the Hidden row
+    // while the result is equipped and are restored to normal slots on devolve/removal.
+    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {} };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -1145,6 +1160,226 @@
     if (!char) return [];
     const hidden = new Set(char.hidden_items ?? []);
     return char.starting_weapons.filter(wn => !hidden.has(wn) && isPassiveName(wn));
+  }
+
+  // ── Absorb-unions ────────────────────────────────────────────────────────
+  // Union results that HIDE their inputs instead of consuming them: the inputs move to
+  // the Hidden row and the result takes a single slot. Clock Tower hides its 4 clockwork
+  // bases; Alucard Shield hides the 5 evolutions Alucard Swords consumed to form it.
+  const ABSORB_UNIONS = new Set(['Clock Tower', 'Alucard Shield']);
+  const isAbsorbUnion = name => ABSORB_UNIONS.has(name);
+  const ALUCARD_ABSORB_COUNT = 5; // Alucard Swords consumes any 5 other non-base weapons
+
+  // The 4 clockwork weapons that union into Clock Tower (data-derived, fixed order).
+  function clockworkInputs() {
+    return D.weapons.filter(w => w.trans_result === 'Clock Tower' && w.method === 'Union').map(w => w.name);
+  }
+
+  // Chaos-morph evolutions are CHARACTER-GATED: a base weapon (b1_3) only evolves into its
+  // final (b1_r) while equipped by the mapped character (b1_2) — e.g. Bone → Anima of Mortaccio
+  // only as Mortaccio. Derived (cached) from the ChaosEvolution>Final evo paths.
+  let _chaosEvoCache = null;
+  function chaosEvos() {
+    if (!_chaosEvoCache) {
+      const byFinal = {}, byBase = {};
+      (D.evoPaths || []).filter(ep => ep.pattern === 'ChaosEvolution>Final').forEach(ep => {
+        const info = { character: ep.b1_2, base: ep.b1_3, final: ep.b1_r };
+        byFinal[ep.b1_r] = info; byBase[ep.b1_3] = info;
+      });
+      _chaosEvoCache = { byFinal, byBase };
+    }
+    return _chaosEvoCache;
+  }
+  // If finalName is a chaos final the player's character can't currently make, return its
+  // info (for a toast / gating); otherwise null.
+  function chaosBlocked(finalName, player) {
+    const info = chaosEvos().byFinal[finalName];
+    return info && player?.character?.name !== info.character ? info : null;
+  }
+
+  // Restore a result's absorbed weapons into empty weapon slots (dropping any that don't
+  // fit, with a toast) and clear the entry. Does not touch the result slot itself.
+  function releaseAbsorbed(player, resultName) {
+    const names = player.absorbed?.[resultName];
+    if (player.absorbed) delete player.absorbed[resultName];
+    if (!names || !names.length) return;
+    const counts = SLOT_COUNTS[state.playerCount];
+    for (const nm of names) {
+      if (player.weapons.some(w => w && w.name === nm)) continue; // already present
+      let empty = -1;
+      for (let j = 0; j < counts.weapons; j++) { if (!player.weapons[j]) { empty = j; break; } }
+      if (empty >= 0) player.weapons[empty] = weaponByName(nm);
+      else showToast(`No room to restore ${nm}`, 'warn');
+    }
+  }
+
+  // Drop absorbed entries whose result weapon is no longer equipped (replaced/removed
+  // outside the devolve path). Idempotent — safe to run every render.
+  function syncAbsorbed(player) {
+    if (!player.absorbed) { player.absorbed = {}; return; }
+    const equipped = new Set(player.weapons.filter(Boolean).map(w => w.name));
+    for (const resultName of Object.keys(player.absorbed)) {
+      if (!equipped.has(resultName)) delete player.absorbed[resultName];
+    }
+  }
+
+  // The weapons an absorb-union hides when it forms. Clock Tower = its 4 fixed clockwork
+  // bases; Alucard Shield = up to 5 OTHER equipped non-base (evolved) weapons.
+  function absorbHiddenSet(player, resultName, excludeSlot, counts) {
+    if (resultName === 'Clock Tower') return clockworkInputs();
+    if (resultName === 'Alucard Shield') {
+      const names = [];
+      for (let i = 0; i < counts.weapons; i++) {
+        if (i === excludeSlot) continue;
+        const w = player.weapons[i];
+        if (w && w.category !== 'Base' && w.name !== 'Alucard Swords' && w.name !== resultName) names.push(w.name);
+        if (names.length >= ALUCARD_ABSORB_COUNT) break;
+      }
+      return names;
+    }
+    return [];
+  }
+
+  // Place an absorb-union result directly (selector path): the result takes slotIdx, its
+  // hidden set is pulled out of the real slots and remembered, so it renders in the Hidden
+  // row. Used when a user picks Clock Tower / Alucard Shield straight from the selector.
+  function placeAbsorbUnion(player, wDef, slotIdx, counts) {
+    const hiddenNames = absorbHiddenSet(player, wDef.name, slotIdx, counts);
+    for (let i = 0; i < counts.weapons; i++) {
+      if (i === slotIdx) continue;
+      const w = player.weapons[i];
+      if (w && hiddenNames.includes(w.name)) player.weapons[i] = null;
+    }
+    player.weapons[slotIdx] = wDef;
+    player.absorbed[wDef.name] = hiddenNames;
+  }
+
+  const isEvolvedWeapon = nm => { const w = weaponByName(nm); return !!w && w.category !== 'Base'; };
+
+  // Weapons/passives an absorbed weapon still needs to advance one stage (empty = ready).
+  function absorbedAdvanceMissing(cur, player) {
+    if (cur.method === 'Union') {
+      const missingWeapons = D.weapons
+        .filter(b => b.trans_result === cur.trans_result && b.method === 'Union' && b.name !== cur.name)
+        .filter(u => player.weapons.findIndex(w => w && w.name === u.name) < 0)
+        .map(u => u.name);
+      return [...missingWeapons, ...missingPassiveReqs(cur, player)];
+    }
+    return missingPassiveReqs(cur, player);
+  }
+
+  // Bring an absorbed weapon's missing advance ingredients into REAL slots so it can evolve
+  // within the hidden row: union partners → empty weapon slots (skipping any consumed
+  // elsewhere), required passives → empty passive/extra slots. Used when the user right-clicks
+  // a later stage ("it knows the partner can be added and unioned").
+  function acquireForAbsorbed(player, cur) {
+    const counts = SLOT_COUNTS[state.playerCount];
+    if (cur.method === 'Union') {
+      const consumed = getConsumedWeapons();
+      D.weapons
+        .filter(b => b.trans_result === cur.trans_result && b.method === 'Union' && b.name !== cur.name)
+        .forEach(u => {
+          if (player.weapons.some(w => w && w.name === u.name)) return;
+          if (consumed.has(u.name)) { showToast(`${u.name} is unavailable`, 'warn'); return; }
+          let empty = -1;
+          for (let j = 0; j < counts.weapons; j++) { if (!player.weapons[j]) { empty = j; break; } }
+          if (empty >= 0) player.weapons[empty] = weaponByName(u.name);
+          else showToast(`No slot for ${u.name}`, 'warn');
+        });
+    }
+    for (const pn of missingPassiveReqs(cur, player)) {
+      if (isExtraPassive(pn)) { if (extraCount(player, pn) < extraCap(player, pn)) player.extraPassives.push(pn); continue; }
+      if (player.passives.some(p => p && p.name === pn)) continue;
+      let empty = -1;
+      for (let j = 0; j < counts.passives; j++) { if (!player.passives[j]) { empty = j; break; } }
+      if (empty >= 0) player.passives[empty] = passiveByName(pn);
+      else showToast(`No passive slot for ${pn}`, 'warn');
+    }
+  }
+
+  // Advance an absorbed (hidden) weapon one evo stage IN PLACE (updates the absorbed array),
+  // mirroring the stage arrow: evolve/gift keeps passives; union consumes its partner from a
+  // normal slot. With autoAcquire, missing partners/passives are first pulled into real slots
+  // (right-click-a-later-stage flow); otherwise a missing requirement just toasts.
+  function advanceAbsorbed(player, result, idx, { autoAcquire = false } = {}) {
+    const arr = player.absorbed?.[result];
+    if (!arr || !arr[idx]) return;
+    const cur = weaponByName(arr[idx]);
+    const nextW = cur?.trans_result ? weaponByName(cur.trans_result) : null;
+    if (!nextW) return;
+    let missing = absorbedAdvanceMissing(cur, player);
+    if (missing.length && autoAcquire) { acquireForAbsorbed(player, cur); missing = absorbedAdvanceMissing(cur, player); }
+    if (missing.length) { showToast(`Missing: ${missing.map(esc).join(', ')}`, 'warn'); return; }
+    if (cur.method === 'Union') {
+      D.weapons
+        .filter(b => b.trans_result === cur.trans_result && b.method === 'Union' && b.name !== cur.name)
+        .forEach(u => { const si = player.weapons.findIndex(w => w && w.name === u.name); if (si >= 0) player.weapons[si] = null; });
+    }
+    arr[idx] = nextW.name;
+  }
+
+  // Right-click a node in an absorbed weapon's evo path:
+  //  - a PRIOR (backward-chain) stage was consumed forming the container union → blocked.
+  //  - a LATER (forward) stage advances the hidden weapon one step in place (like the arrow),
+  //    consuming any required partner already sitting in a real slot.
+  //  - an OPPOSITE-BRANCH node (a union partner / requirement that's neither ancestor nor
+  //    descendant of the hidden weapon, e.g. Vento Sacro for a hidden Bloody Tear) is added to
+  //    a REAL slot via the normal quick-add, so it's available to union the hidden weapon up.
+  function handleAbsorbedEvoRightClick(panel, clickedName) {
+    const { playerIdx, absorbedResult, absorbedIdx } = panel;
+    const player = state.players[playerIdx];
+    const arr = player.absorbed?.[absorbedResult];
+    const curName = arr?.[absorbedIdx];
+    if (!curName || clickedName === curName) return;
+    if (collectWeaponChain(curName).has(clickedName)) {
+      showToast(`${clickedName} was consumed forming ${absorbedResult}`, 'warn');
+      return;
+    }
+    if (collectDescendants(curName).has(clickedName)) {
+      // Later stage — advance the hidden weapon, pulling any missing partner/passive into a
+      // real slot as needed (it knows the partner can be added and unioned).
+      advanceAbsorbed(player, absorbedResult, absorbedIdx, { autoAcquire: true });
+      state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1, absorbedResult, absorbedIdx };
+      render();
+      return;
+    }
+    // Opposite-branch partner / requirement — add it to a real slot (quick-add handles its
+    // own chain, consumed and duplicate checks).
+    evoQuickAdd(clickedName, playerIdx);
+  }
+
+  // Keep Alucard Shield valid after a hidden weapon devolves. If an absorbed entry is now a
+  // Base (no longer evolved), first try to SWAP it with a still-evolved weapon sitting in a
+  // normal slot (Shield stays unioned); if none is available the condition is broken, so the
+  // Shield devolves back to Alucard Swords and all absorbed weapons are released.
+  function reconcileAbsorbShield(player) {
+    const RESULT = 'Alucard Shield';
+    const names = player.absorbed?.[RESULT];
+    if (!names || !names.length) return;
+    const shieldSlot = player.weapons.findIndex(w => w && w.name === RESULT);
+    if (shieldSlot < 0) return; // syncAbsorbed prunes the orphaned entry
+    const counts = SLOT_COUNTS[state.playerCount];
+    for (let k = 0; k < names.length; k++) {
+      if (isEvolvedWeapon(names[k])) continue;
+      // names[k] devolved to a Base — look for an evolved weapon in a normal slot to swap in.
+      let swapIdx = -1;
+      for (let i = 0; i < counts.weapons; i++) {
+        if (i === shieldSlot) continue;
+        const w = player.weapons[i];
+        if (w && w.category !== 'Base' && w.name !== 'Alucard Swords' && !isAbsorbUnion(w.name)) { swapIdx = i; break; }
+      }
+      if (swapIdx >= 0) {
+        const evolvedName = player.weapons[swapIdx].name;
+        player.weapons[swapIdx] = weaponByName(names[k]); // the base takes the normal slot
+        names[k] = evolvedName;                            // the evolved weapon joins the hidden set
+      } else {
+        // No swap candidate — condition broken. Devolve the Shield and restore everything.
+        player.weapons[shieldSlot] = weaponByName('Alucard Swords');
+        releaseAbsorbed(player, RESULT);
+        showToast('Alucard Shield needs 5 evolved weapons — devolved', 'warn');
+        return;
+      }
+    }
   }
 
   // ── Evo path renderer ────────────────────────────────────────────────────
@@ -1298,7 +1533,13 @@
     }
 
     if (pat === 'QuadUnion>HiddenFinal') {
-      return `<div class="evo-multi-union"><div class="evo-multi-inputs">${[b1_1,b1_2,b1_3,b1_4].map(nm => `<div class="evo-row">${n(nm)}</div>`).join('')}</div><div class="evo-merge-bar"></div><div class="evo-merge-out">${EA}${n(b1_r, { hidden: true, sub: 'Hidden' })}</div></div>`;
+      // Inputs shown twice: once pre-union (left, as the 4 components) and once post-union
+      // (right of the result, marked hidden) — the union hides its 4 bases and itself takes
+      // a single slot. The result node is NOT tagged 'Hidden'; the bases to its right are.
+      const inputs = [b1_1, b1_2, b1_3, b1_4];
+      const preCol = `<div class="evo-multi-inputs">${inputs.map(nm => `<div class="evo-row">${n(nm)}</div>`).join('')}</div>`;
+      const hiddenCol = `<div class="evo-absorb-col"><div class="evo-absorb-label">Hidden</div><div class="evo-multi-inputs">${inputs.map(nm => `<div class="evo-row">${n(nm, { hidden: true })}</div>`).join('')}</div></div>`;
+      return `<div class="evo-multi-union">${preCol}<div class="evo-merge-bar"></div><div class="evo-merge-out">${EA}${n(b1_r)}${hiddenCol}</div></div>`;
     }
 
     if (pat === 'EzEvo>EzEvo>Final')
@@ -1601,9 +1842,13 @@
           const bases = D.weapons.filter(b => b.trans_result === w.name)
             .slice().sort((a, b) => banishRootIdx(a.name) - banishRootIdx(b.name));
           if (!bases.length) continue; // base / standalone weapon — nothing to devolve
-          // Broken if any passive required anywhere in w's full chain is missing.
+          // Broken if any passive required anywhere in w's full chain is missing, OR w is a
+          // chaos-morph final whose mapped character isn't the one equipped (e.g. Anima of
+          // Mortaccio while no longer Mortaccio → devolves back to Bone).
           const neededPassives = collectChainPassives(collectWeaponChain(w.name));
-          if ([...neededPassives].every(p => allPassiveNames.has(p))) continue;
+          const passivesOk = [...neededPassives].every(p => allPassiveNames.has(p));
+          const chaosOk = !chaosBlocked(w.name, player);
+          if (passivesOk && chaosOk) continue;
           // Primary base reclaims this slot; remaining union partners fill empty slots.
           player.weapons[i] = bases[0];
           for (let k = 1; k < bases.length; k++) {
@@ -1692,6 +1937,66 @@
       type, playerIdx, slotIdx: -1, hidden: true
     })).join('');
     return `<div class="slot-row slot-row-hidden">${slots}</div>`;
+  }
+
+  // Row of weapons hidden by absorb-unions. Alucard Shield's evolutions stay EDITABLE
+  // (view-absorbed → info panel evolve/union/devolve on the absorbed array); Clock Tower's
+  // clockwork bases are read-only (view-hidden).
+  function absorbedSlotRow(player, playerIdx) {
+    const cells = [];
+    for (const [result, names] of Object.entries(player.absorbed || {})) {
+      const editable = result === 'Alucard Shield';
+      names.forEach((nm, idx) => {
+        const item = weaponByName(nm);
+        const icon = item ? (item.icon || EMPTY_ICONS.weapon) : EMPTY_ICONS.weapon;
+        if (editable) {
+          cells.push(`<div class="slot hidden-weapon slot-absorbed" data-action="view-absorbed" data-player="${playerIdx}" data-type="weapon" data-absorbed-result="${esc(result)}" data-absorbed-idx="${idx}" title="${item ? esc(item.name) + ' (hidden — evolvable)' : 'Empty'}">
+            <img src="${esc(icon)}" alt="${item ? esc(item.name) : ''}" onerror="this.src='${EMPTY_ICONS.weapon}'">
+          </div>`);
+        } else {
+          cells.push(slotHTML(item, { type: 'weapon', playerIdx, slotIdx: -1, hidden: true }));
+        }
+      });
+    }
+    if (!cells.length) return '';
+    return `<div class="slot-row slot-row-hidden">${cells.join('')}</div>`;
+  }
+
+  // Evolve/Union/Devolve controls for an absorbed (hidden, editable) weapon. Advance is
+  // gated the same way a real slot is (passive reqs, or union partners present in a normal
+  // slot); the action operates on the absorbed array instead of player.weapons.
+  function absorbedStageControls(wObj, player, playerIdx, result, idx) {
+    const nextW = wObj.trans_result ? weaponByName(wObj.trans_result) : null;
+    const bases = D.weapons.filter(b => b.trans_result === wObj.name);
+    if (!nextW && !bases.length) return '';
+    let inner = '';
+    if (nextW && wObj.method) {
+      const methodStr = wObj.method;
+      let label = methodStr === 'Evolution' ? 'Evolve' : methodStr;
+      const missing = absorbedAdvanceMissing(wObj, player);
+      const ready = missing.length === 0;
+      const missingText = missing.length ? `Missing: ${missing.map(esc).join(', ')}` : '';
+      const labelColor = ready ? 'color:var(--can-evolve)' : '';
+      inner += `<div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.3rem">
+        <div class="req-icon" title="${esc(nextW.name)}"><img src="${esc(nextW.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
+        <span style="font-size:.75rem;${labelColor}">${esc(nextW.name)}${ready ? ' — Ready' : ''}</span>
+      </div>
+      <button class="btn btn-sm btn-stage" ${ready ? '' : 'disabled'}
+              data-action="perform-absorbed-advance"
+              data-player="${playerIdx}"
+              data-absorbed-result="${esc(result)}"
+              data-absorbed-idx="${idx}"
+              data-result="${esc(nextW.name)}">${esc(label)} →</button>
+      ${missingText ? `<div class="stage-missing">${missingText}</div>` : ''}`;
+    }
+    if (bases.length > 0) {
+      inner += `<button class="btn btn-sm btn-devolve"
+              data-action="perform-absorbed-devolve"
+              data-player="${playerIdx}"
+              data-absorbed-result="${esc(result)}"
+              data-absorbed-idx="${idx}">← Devolve</button>`;
+    }
+    return `<div class="detail-section"><span class="detail-section-label">Stage (hidden)</span>${inner}</div>`;
   }
 
   function statVal(key, val) {
@@ -1822,13 +2127,18 @@
         <div class="sidebar-body"><div class="info-sidebar-empty">Left-click a slot<br>to see details<br><br>Right-click to change</div></div>
       </div>`;
     }
-    const { type, playerIdx, slotIdx, hiddenName, refName } = panel;
+    const { type, playerIdx, slotIdx, hiddenName, refName, absorbedResult, absorbedIdx } = panel;
     const player = state.players[playerIdx];
+    // An editable absorbed weapon (Alucard Shield's hidden evolutions) is addressed by its
+    // container result + index into that result's absorbed list.
+    const absorbedName = absorbedResult ? player?.absorbed?.[absorbedResult]?.[absorbedIdx] : null;
 
     let item = null;
     if (type === 'char')    item = player?.character;
     else if (type === 'weapon')  {
-      item = hiddenName ? weaponByName(hiddenName) : player?.weapons[slotIdx];
+      item = absorbedName ? weaponByName(absorbedName)
+           : hiddenName ? weaponByName(hiddenName)
+           : player?.weapons[slotIdx];
     }
     else if (type === 'passive') item = refName ? passiveByName(refName) : player?.passives[slotIdx];
     else if (type === 'arcana')  item = refName ? arcanaByName(refName) : state.arcana[slotIdx];
@@ -1877,10 +2187,22 @@
           // ── Advance (Evolve / Union / Gift / …) ────────────
           if (nextW && wObj.method) {
             const methodStr = wObj.method;
-            const label     = methodStr === 'Evolution' ? 'Evolve' : methodStr;
+            const counts = SLOT_COUNTS[state.playerCount];
+            let label     = methodStr === 'Evolution' ? 'Evolve' : methodStr;
             let ready = false, missingText = '', dataAction, extraAttrs = '';
 
-            if (methodStr === 'Union') {
+            if (isAbsorbUnion(nextW.name) && methodStr !== 'Union') {
+              // Alucard Swords → Alucard Shield: consumes any 5 OTHER equipped non-base
+              // (evolved) weapons, which then move to the Hidden row. placeAbsorbUnion
+              // (via perform-union) computes the exact set from the current loadout.
+              const available = absorbHiddenSet(player, nextW.name, slotIdx, counts).length;
+              ready = available >= ALUCARD_ABSORB_COUNT;
+              const need = ALUCARD_ABSORB_COUNT - available;
+              missingText = ready ? '' : `Needs ${need} more evolved weapon${need === 1 ? '' : 's'}`;
+              dataAction = 'perform-union';
+              extraAttrs = `data-input-slots="${slotIdx}"`;
+              label = 'Form Shield';
+            } else if (methodStr === 'Union') {
               const allInputs  = D.weapons.filter(b => b.trans_result === wObj.trans_result && b.method === 'Union');
               const others     = allInputs.filter(u => u.name !== wObj.name);
               const otherPairs = others.map(u => ({
@@ -1898,8 +2220,12 @@
               extraAttrs = `data-input-slots="${inputSlots.join(',')}"`;
             } else {
               const missing = missingPassiveReqs(wObj, player);
-              ready = missing.length === 0;
-              missingText = missing.length ? `Missing: ${missing.map(n => esc(n)).join(', ')}` : '';
+              // Chaos-morph finals also require the mapped character (e.g. Bone → Anima of
+              // Mortaccio only as Mortaccio) — disable the arrow otherwise.
+              const cInfo = chaosBlocked(nextW.name, player);
+              ready = missing.length === 0 && !cInfo;
+              missingText = cInfo ? `Requires ${esc(cInfo.character)}`
+                : missing.length ? `Missing: ${missing.map(n => esc(n)).join(', ')}` : '';
               dataAction = 'perform-evolve';
             }
 
@@ -1935,6 +2261,11 @@
           </div>`;
         }
       }
+
+      // Stage controls for an editable absorbed weapon (Alucard Shield's hidden evolutions).
+      if (wObj && absorbedName) {
+        html += absorbedStageControls(wObj, player, playerIdx, absorbedResult, absorbedIdx);
+      }
     }
 
     if (type === 'passive') {
@@ -1959,6 +2290,8 @@
     // Normalize Weapon Power-Up invariants for every weapon-mutation path (remove,
     // devolve, union, character change) — idempotent, so a per-render sweep is safe.
     players.forEach(syncExtraPassives);
+    // Drop stale absorb-union entries (result no longer equipped) before deriving hidden.
+    players.forEach(syncAbsorbed);
 
     const playerCards = players.map((player, idx) => {
       const char = player.character;
@@ -2009,6 +2342,10 @@
       // Hidden/extra weapons get their own conditional row (between Weapons and
       // Passives) so they never push the Weapons row rightward / overflow.
       const hiddenWeaponRow = hiddenSlotRow(allHidden, 'weapon', idx);
+      // Weapons hidden by an equipped absorb-union (Clock Tower's 4 bases / Alucard
+      // Shield's 5 evolutions) render their own row: Alucard's stay evolvable (editable),
+      // Clock Tower's are read-only.
+      const absorbedWeaponRow = absorbedSlotRow(player, idx);
 
       // ── Passive slots
       // Starter passives lock into the front slots, mirroring starter weapons.
@@ -2057,6 +2394,7 @@
           <div class="slots-col">
             <div class="slot-row">${wSlots}</div>
             ${hiddenWeaponRow}
+            ${absorbedWeaponRow}
             <div class="slot-row">${pSlots}</div>
             ${hiddenPassiveRow}
           </div>
@@ -2776,6 +3114,9 @@
           const dupIdx = state.arcana.findIndex(a => a?.name === newArc);
           if (dupIdx >= 0) state.arcana[dupIdx] = null;
         }
+        // A chaos-morph final still equipped after the character no longer matches (e.g.
+        // character removed, or a survivor of the rebuild) devolves back to its base.
+        autoDevolveBrokenEvos();
       } else if (type === 'item') {
         if (sel) {
           const isWeapon = D.weapons.some(w => w.name === sel.name);
@@ -2784,6 +3125,40 @@
             const wDef = D.weapons.find(w => w.name === sel.name);
             const counts = SLOT_COUNTS[state.playerCount];
             const player = state.players[playerIdx];
+            // Absorb-unions picked straight from the selector place the result in one slot
+            // and move their hidden set (Clock Tower's 4 bases / Alucard Shield's 5 evos)
+            // to the Hidden row — no chain-consume, no passive auto-add.
+            if (isAbsorbUnion(wDef.name)) {
+              // Alucard Shield can't exist without its 5-evolved condition. If it isn't met
+              // at placement (e.g. nothing else slotted), drop in Alucard Swords (auto-
+              // devolved) so the user forms the Shield once they meet the condition.
+              if (wDef.name === 'Alucard Shield'
+                  && absorbHiddenSet(player, 'Alucard Shield', slotIdx, counts).length < ALUCARD_ABSORB_COUNT) {
+                player.weapons[slotIdx] = weaponByName('Alucard Swords');
+                showToast('Alucard Shield needs 5 evolved weapons — added Alucard Swords', 'warn');
+              } else {
+                placeAbsorbUnion(player, wDef, slotIdx, counts);
+              }
+              syncExtraPassives(player);
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
+            // Chaos-morph final picked without its mapped character — drop in the base weapon
+            // instead (mirrors Alucard Shield's unmet-condition fallback).
+            const cInfo = chaosBlocked(wDef.name, player);
+            if (cInfo) {
+              player.weapons[slotIdx] = weaponByName(cInfo.base);
+              showToast(`${wDef.name} needs ${cInfo.character} — added ${cInfo.base}`, 'warn');
+              syncExtraPassives(player);
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
             // Add all passives required by the full evo chain that aren't already equipped
             const chain = collectWeaponChain(wDef.name);
             const allEquippedPassiveNames = new Set(
@@ -3605,8 +3980,14 @@
     if (action === 'remove-slot') {
       e.stopPropagation();
       const p = state.players[playerIdx];
-      if (slotType === 'char')    p.character = null;
-      else if (slotType === 'weapon')  p.weapons[slotIdx] = null;
+      if (slotType === 'char')    { p.character = null; autoDevolveBrokenEvos(); }
+      else if (slotType === 'weapon')  {
+        const removed = p.weapons[slotIdx];
+        p.weapons[slotIdx] = null;
+        // Removing an absorb-union restores its hidden weapons to real slots rather than
+        // silently dropping them (mirrors devolve).
+        if (removed && isAbsorbUnion(removed.name)) releaseAbsorbed(p, removed.name);
+      }
       else if (slotType === 'passive') { p.passives[slotIdx] = null; autoDevolveBrokenEvos(); }
       else if (slotType === 'arcana')  state.arcana[slotIdx] = null;
       else if (slotType === 'stage')   state.stage = null;
@@ -3622,6 +4003,12 @@
     }
     if (action === 'view-hidden') {
       state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1, hiddenName: btn.dataset.hiddenName };
+      render();
+      return;
+    }
+    if (action === 'view-absorbed') {
+      state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1,
+        absorbedResult: btn.dataset.absorbedResult, absorbedIdx: +btn.dataset.absorbedIdx };
       render();
       return;
     }
@@ -3661,10 +4048,17 @@
     if (action === 'perform-union') {
       const inputSlots = (btn.dataset.inputSlots || '').split(',').map(Number);
       const resultW = weaponByName(btn.dataset.result);
+      const player = state.players[playerIdx];
+      const counts = SLOT_COUNTS[state.playerCount];
       if (resultW && inputSlots.length) {
-        inputSlots.forEach((si, i) => {
-          state.players[playerIdx].weapons[si] = i === 0 ? resultW : null;
-        });
+        if (isAbsorbUnion(resultW.name)) {
+          // Absorb-unions HIDE their inputs (they move to the Hidden row) rather than
+          // consuming them. placeAbsorbUnion computes the exact hidden set (Clock Tower's
+          // 4 bases; Alucard Shield's 5 OTHER non-base weapons, excluding Alucard Swords).
+          placeAbsorbUnion(player, resultW, inputSlots[0], counts);
+        } else {
+          inputSlots.forEach((si, i) => { player.weapons[si] = i === 0 ? resultW : null; });
+        }
         state.infoPanel = { type: 'weapon', playerIdx, slotIdx: inputSlots[0] };
       }
       render();
@@ -3673,6 +4067,19 @@
     if (action === 'perform-devolve') {
       const player = state.players[playerIdx];
       const current = player.weapons[slotIdx];
+      if (current && isAbsorbUnion(current.name)) {
+        // Absorb-union devolve: restore the hidden set to real slots. If the data-base
+        // isn't itself part of the absorbed set, it devolves into the slot (Alucard
+        // Shield → Alucard Swords); Clock Tower's bases ARE its absorbed inputs, so the
+        // slot is left empty for releaseAbsorbed to refill with one of them.
+        const absorbedNames = player.absorbed?.[current.name] || [];
+        const bases = D.weapons.filter(b => b.trans_result === current.name);
+        player.weapons[slotIdx] = (bases.length && !absorbedNames.includes(bases[0].name)) ? bases[0] : null;
+        releaseAbsorbed(player, current.name);
+        state.infoPanel = { type: 'weapon', playerIdx, slotIdx };
+        render();
+        return;
+      }
       if (current) {
         const counts = SLOT_COUNTS[state.playerCount];
         // All weapons that produced the current weapon (one for evo, two+ for union)
@@ -3692,6 +4099,34 @@
           }
           state.infoPanel = { type: 'weapon', playerIdx, slotIdx };
         }
+      }
+      render();
+      return;
+    }
+    if (action === 'perform-absorbed-advance') {
+      const result = btn.dataset.absorbedResult;
+      const idx = +btn.dataset.absorbedIdx;
+      const player = state.players[playerIdx];
+      advanceAbsorbed(player, result, idx);
+      state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1, absorbedResult: result, absorbedIdx: idx };
+      render();
+      return;
+    }
+    if (action === 'perform-absorbed-devolve') {
+      const result = btn.dataset.absorbedResult;
+      const idx = +btn.dataset.absorbedIdx;
+      const player = state.players[playerIdx];
+      const arr = player.absorbed?.[result];
+      if (arr && arr[idx]) {
+        const cur = weaponByName(arr[idx]);
+        const bases = D.weapons.filter(b => b.trans_result === cur.name);
+        if (bases.length) {
+          arr[idx] = bases[0].name; // devolve to primary base (union partners not restored)
+          // May have broken Alucard Shield's 5-evolved condition — swap or devolve the Shield.
+          reconcileAbsorbShield(player);
+        }
+        // The absorbed slot may have moved/vanished after reconcile — drop the panel focus.
+        state.infoPanel = null;
       }
       render();
       return;
@@ -3806,6 +4241,14 @@
         collectWeaponChain(w.name).forEach(name => consumed.add(name));
         allEquipped.add(w.name);
       });
+
+      // Absorbed (hidden) weapons are equipped-but-hidden — they and their full backward
+      // chains are out of the shared pool just like real slots (Clock Tower's clockwork
+      // bases, Alucard Shield's 5 consumed evolutions and everything they were built from).
+      Object.values(player.absorbed || {}).flat().forEach(nm => {
+        collectWeaponChain(nm).forEach(name => consumed.add(name));
+        allEquipped.add(nm);
+      });
     });
 
     // Un-consume upstream bases of starter-evolved weapons (they were never picked up).
@@ -3895,6 +4338,11 @@
     // as extra slots — transient weapons in the chain are never added separately.
     const weaponObj = D.weapons.find(w => w.name === name);
     if (!weaponObj) { showToast(`${name} not found`, 'err'); return; }
+
+    // Chaos-morph finals are character-gated — can't quick-add (or right-click into) them
+    // unless the player is the mapped character.
+    const cInfo = chaosBlocked(name, player);
+    if (cInfo) { showToast(`${name} needs ${cInfo.character}`, 'warn'); return; }
 
     const equippedW = new Set(player.weapons.filter(Boolean).map(w => w.name));
     // Cross-player evo: a passive equipped by any player satisfies the condition.
@@ -3996,7 +4444,15 @@
     const evoEl = e.target.closest('[data-evo-item]');
     if (evoEl) {
       e.preventDefault();
-      const playerIdx = state.infoPanel?.playerIdx ?? 0;
+      const panel = state.infoPanel;
+      const playerIdx = panel?.playerIdx ?? 0;
+      // When the panel is an editable absorbed (hidden) weapon, its evo path acts ON the
+      // hidden weapon, not the shared pool: prior stages were consumed (blocked), later
+      // stages advance the hidden weapon in place — never add a new weapon to a real slot.
+      if (panel && panel.absorbedResult != null && panel.absorbedIdx != null) {
+        handleAbsorbedEvoRightClick(panel, evoEl.dataset.evoItem);
+        return;
+      }
       evoQuickAdd(evoEl.dataset.evoItem, playerIdx);
       return;
     }
