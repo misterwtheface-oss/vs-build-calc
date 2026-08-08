@@ -274,6 +274,34 @@
     /* Seal mark reads clearly against the busy grid but at .75 so a little of the icon
        behind peeks through (user preference). Icon itself stays untinted. */
     .seal-cell.sealed .seal-mark { opacity: .75; }
+
+    /* ── Manage Collection overlay ── */
+    .collection-panel { max-width: 560px; width: 95vw; }
+    .collection-tabs { display: flex; gap: .3rem; margin-right: auto; }
+    .collection-tab {
+      padding: .3rem .6rem; font-size: .75rem; cursor: pointer;
+      border: 1px solid var(--border); background: var(--surface2);
+      color: var(--text-muted); border-radius: 4px; user-select: none;
+    }
+    .collection-tab.active { color: var(--gold); border-color: var(--gold); background: var(--surface); }
+    .collection-hint { font-size: .72rem; color: var(--text-muted); padding: .35rem .9rem 0; }
+    .collection-grid-wrap { overflow-y: auto; padding: .65rem; flex: 1; }
+    /* Collection Characters tab: 8 small tiles per row (the selector's own .char-grid is
+       untouched — it lives in a narrow center column and stays 4-up). Scoped under
+       .collection-grid-wrap so it out-specifies the later base .char-grid rule. */
+    .collection-grid-wrap .collection-char-grid { grid-template-columns: repeat(8, 1fr); gap: 5px; }
+    .collection-char-grid .variant-count { font-size: 7px; padding: 0 2px; }
+    .collection-char-grid .stack-btn { font-size: .8rem; }
+    .collection-derived { cursor: default; }
+    /* Unowned marker — reused by the collection grid AND by selectors/seal grid as the
+       "not accessible" dim. Dims but KEEPS pointer-events so the item is still clickable
+       to view its info panel (only committing it to a tile is blocked elsewhere). */
+    .uncollected { position: relative; filter: grayscale(.7) brightness(.5); opacity: .6; }
+    .uncollected::after {
+      content: '🔒'; position: absolute; bottom: 0; right: 1px;
+      font-size: .62rem; line-height: 1; opacity: .95; pointer-events: none;
+      text-shadow: 0 0 2px #000, 0 0 2px #000;
+    }
     .planning-body {
       flex: 1;
       min-height: 0;
@@ -1115,7 +1143,49 @@
       minRarity: 50,     // default: recommend weapons rarity >= 50
       sealPassives: false,
     },
+    // Manage Collection: which items the user OWNS. Default assumes everything is owned
+    // (current behavior) and gates nothing until `enabled` is turned on. We persist the
+    // EXCEPTIONS (unowned) since the default is owned → tiny payload. When enabled, unowned
+    // items are dimmed (never filtered) everywhere and cannot be committed to a tile.
+    collection: {
+      active: false,
+      enabled: false,
+      tab: 'wp',   // 'wp' | 'characters' | 'arcana'
+      unowned: { weapons: new Set(), passives: new Set(), characters: new Set(), arcana: new Set() },
+    },
   };
+
+  // ── Collection persistence (localStorage; first persisted state in the app) ──
+  const COLLECTION_STORAGE_KEY = 'vsbc.collection';
+  function saveCollection() {
+    try {
+      const u = state.collection.unowned;
+      localStorage.setItem(COLLECTION_STORAGE_KEY, JSON.stringify({
+        enabled: state.collection.enabled,
+        unowned: {
+          weapons:    [...u.weapons],
+          passives:   [...u.passives],
+          characters: [...u.characters],
+          arcana:     [...u.arcana],
+        },
+      }));
+    } catch (e) { /* file:// or private mode — persistence just no-ops */ }
+  }
+  function loadCollection() {
+    try {
+      const raw = localStorage.getItem(COLLECTION_STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+      state.collection.enabled = !!data.enabled;
+      const u = data.unowned || {};
+      state.collection.unowned = {
+        weapons:    new Set(Array.isArray(u.weapons)    ? u.weapons    : []),
+        passives:   new Set(Array.isArray(u.passives)   ? u.passives   : []),
+        characters: new Set(Array.isArray(u.characters) ? u.characters : []),
+        arcana:     new Set(Array.isArray(u.arcana)     ? u.arcana     : []),
+      };
+    } catch (e) { /* malformed — ignore, keep defaults */ }
+  }
 
   function makePlayer() {
     // extraPassives: passive instances that don't occupy a core slot (e.g. Weapon
@@ -1149,6 +1219,51 @@
   function weaponByName(name) { return D.weapons.find(w => w.name === name) || null; }
   function passiveByName(name) { return D.passives.find(p => p.name === name) || null; }
   function arcanaByName(name) { return D.arcana.find(a => a.name === name) || null; }
+
+  // ── Collection accessibility ──────────────────────────────────────────────
+  // Only BASE weapons, passives, characters and arcana are unlock atoms. Evolved/union
+  // forms aren't separately owned — they derive from whether their whole ingredient tree
+  // (bases + required passives) is owned. All checks are a no-op while tracking is off.
+  function collectionEnabled() { return state.collection.enabled; }
+  function isOwned(kind, name) { return !state.collection.unowned[kind].has(name); }
+  function passiveAccessible(name) { return !collectionEnabled() || isOwned('passives', name); }
+  function charAccessible(name)    { return !collectionEnabled() || isOwned('characters', name); }
+  function arcanaAccessible(name)  { return !collectionEnabled() || isOwned('arcana', name); }
+  // Arcana + its Darkana variant share one unlock, keyed on the Arcana name. Resolve any
+  // variant name to that key before checking (a Darkana is accessible iff its Arcana is).
+  function arcanaAccessibleByAny(name) {
+    const a = arcanaByName(name);
+    if (!a) return true;
+    const key = D.arcana.find(x => x.base_num === a.base_num && x.type === 'Arcana') || a;
+    return arcanaAccessible(key.name);
+  }
+  // A weapon is accessible iff every BASE in its full backward chain (incl. union
+  // partners — they share the final as their trans_result) is owned AND every passive
+  // any chain member requires is owned. Reuses collectWeaponChain + collectChainPassives.
+  function weaponAccessible(name) {
+    return !collectionEnabled() || weaponOwnedChain(name);
+  }
+  // Raw chain-ownership check, independent of the enabled flag — used by the collection
+  // overlay to show derived (evolved/union) cells' accessibility while editing.
+  function weaponOwnedChain(name) {
+    const chain = collectWeaponChain(name); // Set: target + all backward predecessors
+    // Every BASE weapon needed to reach `name` must be owned.
+    for (const wn of chain) {
+      const w = weaponByName(wn);
+      if (w && w.category === 'Base' && !isOwned('weapons', wn)) return false;
+    }
+    // A chain member's `requirements` are what it needs to evolve FORWARD. Only count them
+    // when that forward step is itself in the chain (i.e. a step toward `name`); a base's
+    // own forward-evo requirement (e.g. Whip → Hollow Heart) must NOT gate owning the base.
+    for (const wn of chain) {
+      const w = weaponByName(wn);
+      if (!w || !w.trans_result || !chain.has(w.trans_result)) continue;
+      for (const req of (w.requirements || [])) {
+        if (passiveByName(req) && !isOwned('passives', req)) return false;
+      }
+    }
+    return true;
+  }
 
   // A character's starting arcana is "extra": it's locked to the character and does
   // NOT count toward the 3-arcana pool. Extra arcana are derived from the players'
@@ -2362,6 +2477,12 @@
               dataAction = 'perform-evolve';
             }
 
+            // Collection gate: can't advance to a form whose result/ingredients aren't owned.
+            if (ready && collectionEnabled() && !weaponAccessible(nextW.name)) {
+              ready = false;
+              missingText = 'Locked — not in your collection';
+            }
+
             const labelColor = ready ? 'color:var(--can-evolve)' : '';
             stageInner += `<div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.3rem">
               <div class="req-icon" title="${esc(nextW.name)}"><img src="${esc(nextW.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
@@ -2600,6 +2721,7 @@
           <div class="planning-header-actions">
             <button class="btn" data-action="open-power-ups">Power-Ups</button>
             <button class="btn" data-action="open-seal">Seal Advisor</button>
+            <button class="btn" data-action="open-collection">Manage Collection</button>
             <button class="btn btn-back" data-action="change-player-count">⟵ Change Player Count</button>
           </div>
         </div>
@@ -2665,11 +2787,13 @@
       const cur = group[vi];
       const isSelected = sel && group.some(c => c.name === sel.name);
       const isTaken    = takenBaseNames.has(group[0].base_name);
+      const inaccessible = !charAccessible(cur.name);
+      const uncls = inaccessible && !isSelected ? ' uncollected' : '';
       const hasVariants = group.length > 1;
       const searchVal = esc(group.map(c => c.name).join('|'));
       if (hasVariants) {
         cards += `<div class="stack-wrapper${isTaken ? ' dim' : ''}" data-search="${searchVal}">
-          <div class="char-card stacked${isSelected ? ' selected' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}">
+          <div class="char-card stacked${isSelected ? ' selected' : ''}${uncls}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" title="${esc(cur.name)}${inaccessible ? ' — not in your collection' : ''}">
             <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
             <div class="variant-count">${vi+1}/${group.length}</div>
           </div>
@@ -2679,7 +2803,7 @@
           </div>
         </div>`;
       } else {
-        cards += `<div class="char-card${isSelected ? ' selected' : ''}${isTaken ? ' dim' : ''}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" data-search="${searchVal}">
+        cards += `<div class="char-card${isSelected ? ' selected' : ''}${isTaken ? ' dim' : ''}${uncls}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" data-search="${searchVal}" title="${esc(cur.name)}${inaccessible ? ' — not in your collection' : ''}">
           <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
         </div>`;
       }
@@ -2849,10 +2973,13 @@
       const isConsumed = !isLockedEvo && !isSel && !isUsed && consumedWeapons.has(w.name);
       // Gift items are one-of-each per build — dim once their gift is already consumed.
       const isGiftUsed = !freePickPool && ((w.name === TURBO && turboConsumed()) || (w.name === ARMA && armaConsumed()));
+      // Unowned per the collection: dim but stay clickable (view-only; confirm is blocked).
+      const inaccessible = !weaponAccessible(w.name);
       let cls = 'item-card';
       if (isSel) cls += ' selected';
       if (isUsed || isOffLineage || isGiftUsed) cls += ' dim';
       else if (isConsumed) cls += ' consumed';
+      if (inaccessible && !isSel) cls += ' uncollected';
       const title = isConsumed
         ? `${w.name} — consumed in another evo chain`
         : w.name;
@@ -2980,9 +3107,10 @@
       const isSel = sel && sel.name === p.name;
       const isDim = (freePickPool && !freePickPool.has(p.name))
         || (isExtra ? (extraCount(player, p.name) >= extraCap(player, p.name)) : usedPassives.has(p.name));
-      cards += `<div class="item-card${isSel ? ' selected' : ''}${isDim ? ' dim' : ''}"
+      const inaccessible = !passiveAccessible(p.name);
+      cards += `<div class="item-card${isSel ? ' selected' : ''}${isDim ? ' dim' : ''}${inaccessible && !isSel ? ' uncollected' : ''}"
         data-action="ovl-select-item" data-item="${esc(p.name)}" data-item-type="passive" data-search="${esc(p.name)}"
-        title="${esc(p.name)}">
+        title="${esc(p.name)}${inaccessible ? ' — not in your collection' : ''}">
         <img src="${esc(p.icon||EMPTY_ICON)}" alt="${esc(p.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
       </div>`;
     }
@@ -3073,9 +3201,11 @@
       } else {
         const display = cur || arcana;
         const isUsed  = !isSel && equippedElsewhere.has(display.name);
-        cards += `<div class="item-card${isSel ? ' selected' : ''}${isUsed ? ' consumed' : ''}"
+        // Arcana/Darkana share one unlock (keyed on the Arcana name in the collection).
+        const inaccessible = !arcanaAccessible((arcana || display).name);
+        cards += `<div class="item-card${isSel ? ' selected' : ''}${isUsed ? ' consumed' : ''}${inaccessible && !isSel && !isUsed ? ' uncollected' : ''}"
           ${isUsed ? '' : 'data-action="ovl-select-arcana"'} data-arcana="${esc(display.name)}" data-base="${esc(key)}"
-          data-search="${searchVal}" title="${esc(display.name)} (${display.type})${isUsed ? ' — already equipped' : ''}">
+          data-search="${searchVal}" title="${esc(display.name)} (${display.type})${isUsed ? ' — already equipped' : inaccessible ? ' — not in your collection' : ''}">
           <img src="${esc(display.icon||EMPTY_ICON)}" alt="${esc(display.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
         </div>`;
       }
@@ -3227,6 +3357,17 @@
   function closeOverlay(confirmed) {
     const { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem } = state.overlay;
     const sel = state.ovl.selected;
+
+    // Collection gate: an unowned item can still be selected to VIEW its info, but it
+    // cannot be committed to a tile. Block the commit (keep the overlay open) with a toast.
+    if (sel && collectionEnabled() && (confirmed || (fromEmpty && sel))) {
+      let ok = true;
+      if (type === 'char')             ok = charAccessible(sel.name);
+      else if (type === 'arcana')      ok = arcanaAccessibleByAny(sel.name);
+      else if (slotType === 'weapon')  ok = weaponAccessible(sel.name);
+      else if (slotType === 'passive') ok = passiveAccessible(sel.name);
+      if (!ok) { showToast(`${sel.name} is not in your collection`, 'err'); return; }
+    }
 
     if (confirmed || (fromEmpty && sel)) {
       // Apply selection
@@ -3914,6 +4055,8 @@
       if (protectedSet.has(name)) return;
       if (SEAL_FREE_PICKS.has(name)) return; // Candybox / Turbo / Arma Dio — keep the free picks
       if (stageItems.has(name)) return;      // free on the selected stage — leave for pickup
+      // Never recommend sealing something the user doesn't own — it isn't in their pool.
+      if (collectionEnabled() && (passiveNames.has(name) ? !passiveAccessible(name) : !weaponAccessible(name))) return;
 
       const isPassive = passiveNames.has(name);
 
@@ -3982,6 +4125,8 @@
       const needed = !inBuild && protectedSet.has(name);
       // Free on the selected stage — flagged but still sealable if the user insists.
       const stageItem = !inBuild && !needed && stageItems.has(name);
+      // Unowned per the collection — not in the pool, so nothing to seal. Dim + lock it.
+      const uncollected = collectionEnabled() && (isPassive ? !passiveAccessible(name) : !weaponAccessible(name));
 
       const classes = ['seal-cell',
         inBuild    ? 'in-build'     : '',
@@ -3989,9 +4134,10 @@
         stageItem  ? 'stage-item'   : '',
         sealed   ? 'sealed'     : '',
         passiveOff ? 'passive-off'  : '',
+        uncollected ? 'uncollected' : '',
       ].filter(Boolean).join(' ');
 
-      const lockToggle = inBuild || needed || passiveOff;
+      const lockToggle = inBuild || needed || passiveOff || uncollected;
       const actionAttr = lockToggle
         ? '' : `data-action="seal-toggle" data-name="${esc(name)}"`;
 
@@ -3999,7 +4145,8 @@
         + (item ? ` — rarity ${item.rarity}` : '')
         + (inBuild ? ' (in build)' : '')
         + (needed ? ' (needed for lineage)' : '')
-        + (stageItem ? ' (free on stage)' : '');
+        + (stageItem ? ' (free on stage)' : '')
+        + (uncollected ? ' (not in your collection)' : '');
 
       return `<div class="${classes}" ${actionAttr} title="${tip}">
         <img class="seal-icon" src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${fallback}'">
@@ -4042,6 +4189,117 @@
     state.seal.active = false;
   }
 
+  // ── Manage Collection overlay ──────────────────────────────────────────────
+  function collectionGridHTML() {
+    const tab = state.collection.tab;
+    const u   = state.collection.unowned;
+
+    if (tab === 'characters') {
+      const cells = charGroups().map(group => {
+        const vi  = (state.ovl.variantIdx[group[0].base_name] ?? 0) % group.length;
+        const cur = group[vi];
+        const owned = !u.characters.has(cur.name);
+        const searchVal = esc(group.map(c => c.name).join('|'));
+        const nav = group.length > 1
+          ? `<div class="stack-nav">
+               <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="-1">‹</div>
+               <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="1">›</div>
+             </div>` : '';
+        return `<div class="stack-wrapper" data-search="${searchVal}">
+          <div class="char-card${group.length > 1 ? ' stacked' : ''}${owned ? '' : ' uncollected'}"
+            data-action="collection-toggle" data-kind="characters" data-name="${esc(cur.name)}"
+            title="${esc(cur.name)}${owned ? '' : ' — not in your collection'}">
+            <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
+            ${group.length > 1 ? `<div class="variant-count">${vi+1}/${group.length}</div>` : ''}
+          </div>
+          ${nav}
+        </div>`;
+      }).join('');
+      return `<div class="char-grid collection-char-grid">${cells}</div>`;
+    }
+
+    if (tab === 'arcana') {
+      const cells = arcanaGroups().map(group => {
+        const arcana  = group.find(a => a.type === 'Arcana') || group[0];
+        const owned = !u.arcana.has(arcana.name);
+        const searchVal = esc(group.map(a => a.name).join('|'));
+        return `<div class="item-card${owned ? '' : ' uncollected'}"
+          data-action="collection-toggle" data-kind="arcana" data-name="${esc(arcana.name)}"
+          data-search="${searchVal}" title="${esc(arcana.name)}${owned ? '' : ' — not in your collection'}">
+          <img src="${esc(arcana.icon||EMPTY_ICON)}" alt="${esc(arcana.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
+        </div>`;
+      }).join('');
+      // Reuse the arcana selector's grid (8-up, arcana-card aspect ratio, object-fit:fill).
+      return `<div class="arcana-grid">${cells}</div>`;
+    }
+
+    // wp — banish layout of base weapons + passives. Only atoms (bases/passives) are
+    // toggleable; evolved/union forms render read-only, dimmed when their chain isn't owned.
+    const passiveNames = new Set(D.passives.map(p => p.name));
+    const weaponMap  = Object.fromEntries(D.weapons.map(w => [w.name, w]));
+    const passiveMap = Object.fromEntries(D.passives.map(p => [p.name, p]));
+    const cells = D.banishLayout.map(name => {
+      if (!name) return `<div class="seal-cell empty"></div>`;
+      const isPassive = passiveNames.has(name);
+      const item = weaponMap[name] || passiveMap[name];
+      const icon = item ? item.icon : (isPassive ? EMPTY_ICONS.passive : EMPTY_ICONS.weapon);
+      const fallback = isPassive ? EMPTY_ICONS.passive : EMPTY_ICONS.weapon;
+      const isBase = isPassive || (item && item.category === 'Base');
+      const kind = isPassive ? 'passives' : 'weapons';
+      const owned = isBase
+        ? !u[kind].has(name)
+        : weaponOwnedChain(name); // derived form: accessible iff its chain is owned
+      const derived = !isBase;
+      const cls = ['seal-cell', derived ? 'collection-derived' : '', owned ? '' : 'uncollected'].filter(Boolean).join(' ');
+      const actionAttr = derived ? '' : `data-action="collection-toggle" data-kind="${kind}" data-name="${esc(name)}"`;
+      const tip = esc(name) + (derived ? ' (auto — derives from its parts)' : (owned ? '' : ' — not in your collection'));
+      return `<div class="${cls}" ${actionAttr} title="${tip}">
+        <img class="seal-icon" src="${esc(icon)}" alt="${esc(name)}" onerror="this.src='${fallback}'">
+      </div>`;
+    }).join('');
+    return `<div class="seal-grid">${cells}</div>`;
+  }
+
+  function renderCollectionOverlay() {
+    const tab = state.collection.tab;
+    const tabDef = [['wp', 'Weapons & Passives'], ['characters', 'Characters'], ['arcana', 'Arcana']];
+    const tabs = tabDef.map(([id, label]) =>
+      `<button class="collection-tab${tab === id ? ' active' : ''}" data-action="collection-tab" data-tab="${id}">${label}</button>`
+    ).join('');
+
+    const root = document.getElementById('overlay-root');
+    root.innerHTML = `
+      <div class="overlay-panel collection-panel">
+        <div class="overlay-header">
+          <h2>Manage Collection</h2>
+          <button class="btn btn-icon overlay-close" data-action="collection-close">✕</button>
+        </div>
+        <div class="seal-controls">
+          <label>
+            <input type="checkbox" id="collection-enable-chk" ${state.collection.enabled ? 'checked' : ''}>
+            Enable collection tracking
+          </label>
+          <div class="collection-tabs">${tabs}</div>
+          <button class="btn btn-sm" data-action="collection-mark-all" data-owned="1">Mark All Owned</button>
+          <button class="btn btn-sm" data-action="collection-mark-all" data-owned="0">Mark All Unowned</button>
+        </div>
+        <div class="collection-hint">Click an item to toggle owned / unowned.${state.collection.enabled ? '' : ' Tracking is OFF — marks are saved but not enforced until enabled.'}</div>
+        <div class="collection-grid-wrap">${collectionGridHTML()}</div>
+      </div>`;
+    root.classList.remove('hidden');
+    state.collection.active = true;
+  }
+
+  function refreshCollectionGrid() {
+    const wrap = document.querySelector('.collection-grid-wrap');
+    if (wrap) wrap.innerHTML = collectionGridHTML();
+  }
+
+  function closeCollectionOverlay() {
+    document.getElementById('overlay-root').classList.add('hidden');
+    state.collection.active = false;
+  }
+
   // ═══════════════════════════════════════════════════════
   //  EVENT HANDLERS
   // ═══════════════════════════════════════════════════════
@@ -4052,6 +4310,7 @@
       if (e.target === document.getElementById('overlay-root')) {
         if (state.puActive) closePowerUpOverlay();
         else if (state.seal.active) closeSealOverlay();
+        else if (state.collection.active) closeCollectionOverlay();
         else closeOverlay(false);
       }
       return;
@@ -4088,6 +4347,37 @@
         btns[1].disabled = next >= stat.max_level;
       }
       return;
+    }
+
+    // ── Collection overlay actions ──
+    if (action === 'collection-close') { closeCollectionOverlay(); return; }
+    if (action === 'collection-tab') {
+      state.collection.tab = btn.dataset.tab;
+      renderCollectionOverlay(); return;
+    }
+    if (action === 'collection-toggle') {
+      const kind = btn.dataset.kind, name = btn.dataset.name;
+      const set = state.collection.unowned[kind];
+      if (set.has(name)) set.delete(name); else set.add(name);
+      saveCollection();
+      refreshCollectionGrid(); return;
+    }
+    if (action === 'collection-mark-all') {
+      const owned = btn.dataset.owned === '1';
+      const tab = state.collection.tab;
+      const apply = (kind, names) => {
+        const set = state.collection.unowned[kind];
+        if (owned) names.forEach(n => set.delete(n));
+        else       names.forEach(n => set.add(n));
+      };
+      if (tab === 'characters') apply('characters', D.characters.map(c => c.name));
+      else if (tab === 'arcana') apply('arcana', D.arcana.filter(a => a.type === 'Arcana').map(a => a.name));
+      else { // wp — only atoms (base weapons + passives)
+        apply('weapons',  D.weapons.filter(w => w.category === 'Base').map(w => w.name));
+        apply('passives', D.passives.map(p => p.name));
+      }
+      saveCollection();
+      refreshCollectionGrid(); return;
     }
 
     // ── Seal overlay actions ──
@@ -4135,7 +4425,10 @@
       const cur = state.ovl.variantIdx[base] ?? 0;
       const dir = parseInt(btn.dataset.dir) || 1;
       state.ovl.variantIdx[base] = (cur + dir + grp.length) % grp.length;
-      refreshOverlay(); return;
+      // The collection overlay reuses the variant stacks but isn't a standard selector,
+      // so refresh its grid rather than refreshOverlay (which needs state.overlay).
+      if (state.collection.active) refreshCollectionGrid(); else refreshOverlay();
+      return;
     }
 
     if (action === 'ovl-select-item') {
@@ -4197,6 +4490,10 @@
     }
     if (action === 'open-seal') {
       renderSealOverlay();
+      return;
+    }
+    if (action === 'open-collection') {
+      renderCollectionOverlay();
       return;
     }
     if (action === 'change-player-count') {
@@ -4575,6 +4872,7 @@
     // ── Arcana ──
     const arcanaObj = D.arcana.find(a => a.name === name);
     if (arcanaObj) {
+      if (collectionEnabled() && !arcanaAccessibleByAny(name)) { showToast(`${name} is not in your collection`, 'err'); return; }
       if (state.arcana.some(a => a?.name === name) || extraArcanaNames().includes(name)) { showToast(`${name} already in build`, 'warn'); return; }
       const slot = state.arcana.findIndex(a => !a);
       if (slot < 0) { showToast('No arcana slots available', 'err'); return; }
@@ -4585,6 +4883,7 @@
     // ── Passive ──
     const passiveObj = D.passives.find(p => p.name === name);
     if (passiveObj) {
+      if (collectionEnabled() && !passiveAccessible(name)) { showToast(`${name} is not in your collection`, 'err'); return; }
       if (isExtraPassive(name)) {
         // Extra-bar passive (no core slot), capped by its enabling weapons.
         if (extraCap(player, name) === 0) { showToast(`${name} needs a matching weapon`, 'warn'); return; }
@@ -4608,6 +4907,7 @@
     // as extra slots — transient weapons in the chain are never added separately.
     const weaponObj = D.weapons.find(w => w.name === name);
     if (!weaponObj) { showToast(`${name} not found`, 'err'); return; }
+    if (collectionEnabled() && !weaponAccessible(name)) { showToast(`${name} is not in your collection`, 'err'); return; }
 
     // Chaos-morph finals are character-gated — can't quick-add (or right-click into) them
     // unless the player is the mapped character.
@@ -4761,6 +5061,7 @@
     if (e.key !== 'Escape') return;
     if (state.puActive) { closePowerUpOverlay(); return; }
     if (state.seal.active) { closeSealOverlay(); return; }
+    if (state.collection.active) { closeCollectionOverlay(); return; }
     if (!state.overlay) return;
     const { fromEmpty } = state.overlay;
     const hasSelection = !!state.ovl.selected;
@@ -4782,6 +5083,7 @@
     D = window.VS_DATA;
     STAGES = D.stages || [];
     D.stats.forEach(s => { state.powerUps[s.name] = s.max_level; });
+    loadCollection();
     render();
     // Bind once to persistent elements — survives innerHTML replacements
     document.getElementById('app').addEventListener('click', handleAppClick);
@@ -4815,6 +5117,12 @@
         const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
         state.players[playerIdx].charLevel = val;
         refreshOverlay();
+        return;
+      }
+      if (e.target.id === 'collection-enable-chk') {
+        state.collection.enabled = e.target.checked;
+        saveCollection();
+        renderCollectionOverlay();
         return;
       }
       if (e.target.id !== 'seal-passives-chk') return;
