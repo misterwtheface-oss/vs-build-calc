@@ -888,12 +888,12 @@
     .evo-coll-wrap { display: flex; flex-direction: column; gap: 4px; }
     .evo-coll-inputs { display: flex; flex-wrap: wrap; gap: 3px; }
     /* pentagram (FivePassive) */
-    .evo-pentagram { position: relative; width: 110px; height: 110px; margin: .4rem 0; }
+    .evo-pentagram { position: relative; width: 136px; height: 136px; margin: .4rem 0; }
     .evo-pentagram .ep-item { position: absolute; transform: translate(-50%,-50%); }
     .evo-pentagram .ep-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
     /* Alucard gift: 3-over-2 example-evo block to the right of Alucard Shield */
-    .alucard-evos { display: inline-flex; flex-direction: column; gap: 2px; opacity: .5; margin-left: 2px; }
-    .alucard-evos-row { display: flex; gap: 2px; justify-content: center; }
+    .alucard-evos { display: inline-flex; align-items: center; gap: 2px; opacity: .5; margin-left: 2px; }
+    .alucard-evos-col { display: flex; flex-direction: column; gap: 2px; align-items: center; }
     /* hexagram (Tuna) */
     .evo-hexagram { position: relative; width: 160px; height: 150px; margin: .4rem 0; }
     .evo-hexagram .eh-item { position: absolute; transform: translate(-50%,-50%); }
@@ -1317,9 +1317,11 @@
       // Shield — the old render mistakenly re-showed b2_1/Alucard Swords here.)
       const examples = ['Bloody Tear','Holy Wand','Thousand Edge','Death Spiral','Heaven Sword'];
       const ex = examples.map(nm => n(nm, { hidden: true }));
+      // Two vertical columns to the right of the Shield: a 3-icon column (its middle icon
+      // lines up with the evo row) then a 2-icon column vertically centered against the 3.
       const block = `<div class="alucard-evos" title="Plus any 5 max-level evolutions">
-        <div class="alucard-evos-row">${ex.slice(0, 3).join('')}</div>
-        <div class="alucard-evos-row">${ex.slice(3).join('')}</div>
+        <div class="alucard-evos-col">${ex.slice(0, 3).join('')}</div>
+        <div class="alucard-evos-col">${ex.slice(3).join('')}</div>
       </div>`;
       return `<div class="evo-row" style="gap:6px">${n(b1_1)}${EL}${n(b1_r)}${EA}${n(b2_r, { hidden: true, sub: 'Hidden' })}${block}</div>`;
     }
@@ -1423,7 +1425,7 @@
       // Layout: [Spirit Rings]  (5-passive ring)  |  [Rings of Calamity].
       const passives = ['Hollow Heart', 'Spinach', 'Candelabrador', 'Bracer', 'Spellbinder'];
       const angles = [270, 342, 54, 126, 198];
-      const r = 36, cx = 55, cy = 55;
+      const r = 45, cx = 68, cy = 68;
       const items = angles.map((deg, i) => {
         const rd = deg * Math.PI / 180;
         return `<div class="ep-item" style="left:${cx + r * Math.cos(rd)}px;top:${cy + r * Math.sin(rd)}px">${n(passives[i])}</div>`;
