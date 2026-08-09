@@ -866,6 +866,17 @@
     .detail-section ul { list-style: none; padding: 0; }
     .detail-section li { font-size: .85rem; color: var(--text-muted); padding: 2px 0; line-height: 1.4; }
     .detail-section li::before { content: '▸ '; color: var(--gold-dim); }
+    .lb-table { width: 100%; border-collapse: collapse; margin-top: .3rem; font-size: .9rem; }
+    .lb-table th, .lb-table td { padding: 2px 6px; text-align: left; border-bottom: 1px solid var(--border); }
+    .lb-table th { color: var(--gold-dim); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; font-size: .8rem; }
+    .lb-table td { color: var(--text-muted); }
+    .lb-table td:first-child { color: var(--text); }
+    .lb-table tbody tr:last-child td { border-bottom: none; }
+    .lb-table .lb-none { color: var(--gold-dim); opacity: .6; }
+    /* Left selector panel scaled up ~25% for readability (headers + placeholder;
+       level-up rows and .lb-table carry their own bumped sizes). */
+    .ovl-left h3 { font-size: 1.12rem; }
+    .ovl-left .detail-desc { font-size: 1.1rem; }
     .evo-flow { display: flex; flex-direction: column; gap: 18px; margin-top: .35rem; }
     .evo-path-group { padding-top: .6rem; border-top: 1px solid var(--border); }
     .evo-path-group:first-child { padding-top: 0; border-top: none; }
@@ -2952,6 +2963,34 @@
       : weaponOverlayHTML(playerIdx, slotIdx));
   }
 
+  // Limit Break table (weapon selector left panel). Limit Break = a weapon keeps leveling
+  // past its last level, rolling one of these stats each time (Rarity = selection weight,
+  // Max = cap; blank = uncapped). Data comes from weapon.limit_break (built by build-data.mjs).
+  function limitBreakTableHTML(w) {
+    if (!w.limit_break || !w.limit_break.length) return '';
+    const none = '<span class="lb-none">—</span>';
+    const cell = v => (v === '' || v == null) ? none : esc(v);
+    // Rarity weight → % chance of rolling that stat, normalized over the pool's total
+    // weight (we don't model max-reached rows dropping out of the pool). Rows with no
+    // weight (source didn't provide one) fall back to a dash.
+    const weights = w.limit_break.map(r => { const n = parseFloat(r.rarity); return isNaN(n) ? 0 : n; });
+    const total = weights.reduce((a, b) => a + b, 0);
+    const chance = (i, r) => (total > 0 && weights[i] > 0)
+      ? `<td title="weight ${esc(r.rarity)}">${(weights[i] / total * 100).toFixed(2)}%</td>`
+      : `<td>${none}</td>`;
+    const rows = w.limit_break.map((r, i) => `<tr>
+        <td>${esc(r.stat)}</td>
+        <td>${cell(r.value)}</td>
+        ${chance(i, r)}
+        <td>${cell(r.max)}</td>
+      </tr>`).join('');
+    return `<div class="detail-section"><h3>Limit Break</h3>
+      <table class="lb-table">
+        <thead><tr><th>Stat</th><th>Value</th><th title="Chance to roll this stat when the weapon limit-breaks">Chance</th><th>Max</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`;
+  }
+
   function weaponOverlayHTML(playerIdx, slotIdx) {
     const player = state.players[playerIdx];
     const sel    = state.ovl.selected;
@@ -3067,10 +3106,9 @@
     if (sel) {
       const w = D.weapons.find(w => w.name === sel.name);
       if (w) {
-        leftHTML = `<div class="detail-desc" style="margin:.2rem 0">${esc(w.description)}</div>
-          ${w.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
-            ${w.level_ups.map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+1}: ${esc(l)}</li>`).join('')}
-          </ul></div>` : ''}`;
+        leftHTML = `${w.level_ups.length ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
+            ${w.level_ups.map((l,i) => `<li style="font-size:.94rem;margin-bottom:.15rem">${i === 0 ? '' : `Lv${i+1}: `}${esc(l)}</li>`).join('')}
+          </ul></div>` : ''}${limitBreakTableHTML(w)}`;
 
         // Requirements with status
         let reqHTML = '';
@@ -3125,7 +3163,8 @@
 
         const wRightTop = `<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(w.name)}</div>
-          ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}`;
+          ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}
+          ${w.description ? `<div class="detail-desc" style="margin-top:.4rem">${esc(w.description)}</div>` : ''}`;
         const wRightBody = `${reqHTML}${chainHTML}`;
         rightHTML = `<div class="ovl-right-top">${wRightTop}</div><div class="ovl-right-body">${wRightBody}</div>`;
       }

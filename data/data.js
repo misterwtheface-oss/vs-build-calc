@@ -14,9 +14,13 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more damage every 10 levels (max +50%).",
-      "custom_description": "As a starting character, Antonio's innate bonuses are too shallow to define a unique Character identity.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "Might",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -61,9 +65,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
-      "custom_description": "As a starting character, Imelda's innate bonuses are too shallow to define a unique Character identity.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth"
+      ],
       "scaling": [
         {
           "key": "growth",
@@ -111,9 +117,14 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
-      "custom_description": "Growth bonus is capped at **level 15**.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Move Speed",
+        "Speed",
+        "Cooldown"
+      ],
       "scaling": [
         {
           "key": "growth",
@@ -158,9 +169,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Projectiles get 10% faster every 5 levels (max +30%).",
-      "custom_description": "As a starting character, Pasqualina's innate bonuses are too shallow to define a unique Character identity.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed"
+      ],
       "scaling": [
         {
           "key": "speed",
@@ -205,9 +218,12 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +1 projectile (all weapons).",
-      "custom_description": "As a starting character, Genarro's innate bonuses are too shallow to define a unique Character identity.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -247,7 +263,10 @@ window.VS_DATA = {
       "description": "Weapon cooldown is reduced by 5% every 10 levels (max -15%).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Might"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -294,7 +313,11 @@ window.VS_DATA = {
       "description": "Permanent +30% Area. Starts with temporary cooldown bonus.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Halted XP",
+        "Cooldown",
+        "Area"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -341,7 +364,12 @@ window.VS_DATA = {
       "description": "Gains +5% Might, MoveSpeed, and Curse every 10 levels (max +20%).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Move Speed",
+        "Curse",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -400,7 +428,9 @@ window.VS_DATA = {
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -443,7 +473,10 @@ window.VS_DATA = {
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Magnet"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -483,7 +516,12 @@ window.VS_DATA = {
       "description": "Permanent +0.5 HP/s and +50 Max Health. Starts with temporary area bonus.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Halted XP",
+        "Area",
+        "Max Health",
+        "Recovery"
+      ],
       "scaling": [
         {
           "key": "area",
@@ -530,7 +568,10 @@ window.VS_DATA = {
       "description": "Permanent +40% duration and speed, -40% move speed.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -570,7 +611,10 @@ window.VS_DATA = {
       "description": "Starts with 1 Revival. Gains 1 more Revival at level 33.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "revival",
@@ -617,7 +661,10 @@ window.VS_DATA = {
       "description": "Starts with 1 extra Level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -658,7 +705,10 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -705,7 +755,10 @@ window.VS_DATA = {
       "description": "Gains +1% Projectile Speed every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "speed",
@@ -752,7 +805,10 @@ window.VS_DATA = {
       "description": "Gains +1% Duration every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "duration",
@@ -799,7 +855,11 @@ window.VS_DATA = {
       "description": "Gains +1% Area every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Area",
+        "Move Speed",
+        "Curse"
+      ],
       "scaling": [
         {
           "key": "area",
@@ -846,7 +906,11 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -909,9 +973,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "custom_description": "In Constellation Beast form, Yatta Daikarin gains 100% explosion chance.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Luck",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -982,7 +1051,11 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -1029,7 +1102,11 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -1094,7 +1171,13 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3). Starts with temporary Amount bonus.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Magnet",
+        "Luck",
+        "Greed",
+        "Halted XP"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -1147,7 +1230,11 @@ window.VS_DATA = {
       "description": "Starts with one extra level. Gains 10% Growth every 5 levels (max +50%).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Duration",
+        "Cooldown"
+      ],
       "scaling": [
         {
           "key": "growth",
@@ -1194,7 +1281,11 @@ window.VS_DATA = {
       "description": "Starts with one extra level. Gains +1 Armor every 5 levels (max +5).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Armor",
+        "Luck",
+        "Recovery"
+      ],
       "scaling": [
         {
           "key": "armor",
@@ -1241,7 +1332,14 @@ window.VS_DATA = {
       "description": "Gains +0.5% Might, Projectile Speed, Duration, and Area every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Move Speed",
+        "Curse"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -1306,7 +1404,20 @@ window.VS_DATA = {
       "description": "She owns everything.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Growth",
+        "Max Health",
+        "Recovery",
+        "Armor",
+        "Move Speed",
+        "Duration",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Magnet",
+        "Luck"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -1356,10 +1467,15 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Recovers 25% Max Health and gains +32 Max Health (Max +665) when health reaches a critically low level.",
+      "description": "Recovers 30% Max Health and gains +32 Max Health (Max +665) when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Move Speed",
+        "Armor",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Overheal min 32 max 665 by 32",
@@ -1399,7 +1515,14 @@ window.VS_DATA = {
       "description": "Can find extra explosive props that might drop Treasure Chests. Can destroy light sources by touching them.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Light Source",
+        "Luck",
+        "Move Speed",
+        "Magnet",
+        "Speed",
+        "Duration"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1439,7 +1562,12 @@ window.VS_DATA = {
       "description": "Activates his main weapon when picking up Gold Coins. Uses Gold Coins as damage barrier. Has a 4X chance of drafting FOIL Survarots.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Gold Coin",
+        "Light Source",
+        "Greed",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1479,7 +1607,11 @@ window.VS_DATA = {
       "description": "Freezes all enemies for 10 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Freeze",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1525,7 +1657,13 @@ window.VS_DATA = {
       "description": "Also starts with a Level 5 Wings and a hidden Valkyrie Turner.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Revival",
+        "Luck",
+        "Freeze",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1568,7 +1706,11 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1608,7 +1750,13 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Limited",
+        "Limit Break",
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1648,7 +1796,13 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Limited",
+        "Limit Break",
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1688,7 +1842,13 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Limited",
+        "Limit Break",
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1728,7 +1888,13 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Limited",
+        "Limit Break",
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1768,7 +1934,13 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Limited",
+        "Limit Break",
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1808,7 +1980,13 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Limited",
+        "Limit Break",
+        "Duration",
+        "Move Speed",
+        "Vacuum"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1846,9 +2024,16 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporary Cooldown bonus. Triggers a Rosary when Health reaches a critically low level. Likes to keep secrets.",
-      "custom_description": "- Gifted an Arma Dio at Level 40 and a Candybox at Level 80\n- Can find evolved weapons and Arcana in any Treasure Chest, ignoring Arcana limits\n- Evolves and hides max level Santa Water, King Bible, and Cross; this does **not** activate if any of these weapons are evolved before this effect resolves (e.g. Through normal evolution)\n-",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Santa",
+        "Halted XP",
+        "Cooldown",
+        "Rosary",
+        "Luck",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -1860,7 +2045,28 @@ window.VS_DATA = {
       "reference_scaling": "",
       "manual_scaling": "",
       "charge_ability": "",
-      "grants": [],
+      "grants": [
+        {
+          "op": "add_extra",
+          "name": "Passive Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            40
+          ]
+        },
+        {
+          "op": "add_extra",
+          "name": "Weapon Slot",
+          "kind": "slot",
+          "place": "extra",
+          "amount": 1,
+          "at": [
+            80
+          ]
+        }
+      ],
       "stats": {
         "max_health": 0,
         "recovery": 0,
@@ -1893,9 +2099,23 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +30 gives a cumulative bonus to a random stat.",
-      "custom_description": "Overhealing bonuses cap at: \n- Max Health: 220\n- Recovery: 2\n- Armor: 2\n- Move Speed: 50%\n- Might: 50%\n- Speed: 50%\n- Duration: 50%\n- Area: 50%\n- Cooldown: -25%\n- Amount: 2\n- Revival: 3\n- Magnet: 16",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Move Speed",
+        "Max Health",
+        "Recovery",
+        "Armor",
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Magnet"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Overheal min 0 max 220 by pct|\nrecovery: source Overheal min 0 max 2 by pct|\narmor: source Overheal min 0 max 2 by pct|\nmove_speed: source Overheal min 0 max 0.5 by pct|\nmight: source Overheal min 0 max 0.5 by pct|\nspeed: source Overheal min 0 max 0.5 by pct|\nduration: source Overheal min 0 max 0.5 by pct|\narea: source Overheal min 0 max 0.5 by pct|\ncooldown: source Overheal min 0 max -0.25 by pct|\namount: source Overheal min 0 max 2 by pct|\nrevival: source Overheal min 0 max 3 by pct|\nmagnet: source Overheal min 0 max 16 by pct",
@@ -1933,9 +2153,15 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Chances his luck every 30 seconds or when picking up a Rerollo.",
-      "custom_description": "Rolls a dice when \"chancing his luck\":\n- On a 6: **\"Lucky!\"** Gains a bonus of +777%  Luck and +77%  Move Speed for 30 seconds and spawn light sources\n- On a 2,3,4, or 5: Gain that amount of Luck permanently\n- On a 1: \"Unlucky!\" Gains +77%  Curse and -777%  Luck for 30 seconds then trigger Shooting Stars to land on him.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Light Source",
+        "Move Speed",
+        "Magnet",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "luck: source Lucky! min 0 max 9999 by pct",
@@ -1975,7 +2201,9 @@ window.VS_DATA = {
       "description": "May occasionally activate all weapons twice depending on Cooldown.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2013,9 +2241,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "At least they're lucky.",
-      "custom_description": "Gains 10% more luck every 10 levels (max +50%).",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck"
+      ],
       "scaling": [
         {
           "key": "luck",
@@ -2060,9 +2290,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "So much potential.",
-      "custom_description": "Gains 20% more luck every 10 levels (max +50%). Also gains 9899 Max Health at level 100 and 65520 Armor at level 200.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Growth",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "luck",
@@ -2119,9 +2354,17 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "The quirky white bear.",
-      "custom_description": "Gains 1% Luck, 0.25% cooldown, 0.01  recovery, and 0.7% might, area, projectile speed, and duration every level.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Might",
+        "Area",
+        "Duration",
+        "Cooldown",
+        "Recovery",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "recovery",
@@ -2202,9 +2445,9 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Random.",
-      "custom_description": "**Under Construction**",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2242,9 +2485,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "",
-      "custom_description": "Marrabbio uniquely has a negative Projectile Speed before Power Up, Passive, and Golden Egg bonuses are considered:\n- With a **negative** Projectile Speed: Projectiles are fired backward from the character.\n- With a **0** Projectile Speed: Projectiles are stationary. \nWeapons with high pool limit and unlimited duration are complimentary to Marrabbio's bonuses.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Move Speed",
+        "Might",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2282,9 +2530,19 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of Fire. Grows stronger with every level, but also loses control.",
-      "custom_description": "Gains 2% move speed, 0.5% might and curse, and 0.25% cooldown every level.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Fire",
+        "Move Speed",
+        "Might",
+        "Curse",
+        "Cooldown",
+        "Magnet",
+        "Luck",
+        "Max Health",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "move_speed",
@@ -2347,9 +2605,16 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Might, Projectile Speed, Duration, Area, and Cooldown change every minute.",
-      "custom_description": "Listed stats oscillate between 200% and 50% with two extremes:\n- High Area, Duration, and Cooldown | Low Speed and Might\n- High Speed and Might | Low Area, Duration, and Cooldown",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -2396,7 +2661,12 @@ window.VS_DATA = {
       "description": "",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Armor",
+        "Might",
+        "Area",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2440,7 +2710,12 @@ window.VS_DATA = {
       "description": "Gains +1 Recovery and +1% Luck every level. Gains +1 Revival every 100 levels. Has hidden weapons.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Luck",
+        "Revival",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "recovery",
@@ -2499,7 +2774,11 @@ window.VS_DATA = {
       "description": "Starts with temporarily reduced area.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Armor",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "area",
@@ -2546,7 +2825,11 @@ window.VS_DATA = {
       "description": "Gains +1% Greed every level. Gold Fever lasts longer.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Gold Fever",
+        "Greed",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "greed",
@@ -2594,7 +2877,7 @@ window.VS_DATA = {
       "description": "M(▯▯)",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2634,7 +2917,9 @@ window.VS_DATA = {
       "description": "Gains +2% Growth every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth"
+      ],
       "scaling": [
         {
           "key": "growth",
@@ -2681,7 +2966,12 @@ window.VS_DATA = {
       "description": "Gains +1% Curse every level. Can find evolutions in any Treasure.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Curse",
+        "Max Health",
+        "Revival",
+        "Might"
+      ],
       "scaling": [
         {
           "key": "curse",
@@ -2728,7 +3018,11 @@ window.VS_DATA = {
       "description": "A blasphemous mockery.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2768,7 +3062,11 @@ window.VS_DATA = {
       "description": "Starting weapon gets stronger when levelling up. Revivals also affect Amount. Receives a follower after reviving.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Revival",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "amount: 1 per 1 revival",
       "manual_scaling": "",
@@ -2808,7 +3106,13 @@ window.VS_DATA = {
       "description": "Increases enemy spawn quantity by 100.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Growth",
+        "Might",
+        "Move Speed",
+        "Curse"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -2869,7 +3173,13 @@ window.VS_DATA = {
       "description": "Evolves into JoyaTauro at lv16, and into AccumulaTori at lv36. Retaliates.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Retaliation",
+        "Max Health",
+        "Armor",
+        "Duration",
+        "Might"
+      ],
       "scaling": [
         {
           "key": "move_speed",
@@ -2978,7 +3288,11 @@ window.VS_DATA = {
       "description": "Gains a hidden Lightning Ring every 8 levels (max 6) that also fires when losing health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Area",
+        "Max Health",
+        "Retaliation"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3028,7 +3342,12 @@ window.VS_DATA = {
       "description": "Starting weapon grows stronger when levelling up. Gains +1% Curse every level. Ignores Walls.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Curse",
+        "Move Speed",
+        "Armor",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "curse",
@@ -3075,7 +3394,11 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Gets a Survarot Multiplier equal to Log10 Golden Eggs (max x10).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Light Source",
+        "Luck",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3115,7 +3438,11 @@ window.VS_DATA = {
       "description": "Starting weapon grows stronger when levelling up. Gets more fans from defeating a large amount of enemies.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Move Speed",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3155,7 +3482,11 @@ window.VS_DATA = {
       "description": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Max Health",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Overheal min 0 max 9999 by 0.2",
@@ -3195,7 +3526,15 @@ window.VS_DATA = {
       "description": "Becomes stronger and invincible for a fixed interval after defeating a large amount of enemies.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Move Speed",
+        "Rosary",
+        "Curse",
+        "Cooldown",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 0.5 by boolean|\nmove_speed: source Megalo State min 0 max 1 by boolean",
@@ -3229,13 +3568,21 @@ window.VS_DATA = {
       "starting_weapons": [
         "Summon Night"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Night Sword"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with hidden Night Sword. Morphs into a stronger version when his base weapon evolves.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Armor",
+        "Curse",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -3277,15 +3624,15 @@ window.VS_DATA = {
         "Mirage Robe",
         "Night Sword"
       ],
-      "hidden_items": [
-        "Night Sword"
-      ],
+      "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Ignores weapons cooldown. Weapons fire at a fixed interval when moving.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3325,7 +3672,12 @@ window.VS_DATA = {
       "description": "Area temporarily increases at fixed intervals.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Area",
+        "Growth",
+        "Armor",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_area: source Expansion min 1 max 1.5 by boolean",
@@ -3367,7 +3719,12 @@ window.VS_DATA = {
       "description": "Cannot be damaged, but disappears after reaching the current Time Limit. Starts with hidden 108 Bocce.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Move Speed",
+        "Cooldown",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3407,7 +3764,14 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "Might",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Greed",
+        "Curse",
+        "Armor",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -3454,7 +3818,10 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -3501,7 +3868,10 @@ window.VS_DATA = {
       "description": "Receives SpellStream at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3572,7 +3942,10 @@ window.VS_DATA = {
       "description": "Receives SpellStrike at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3643,7 +4016,10 @@ window.VS_DATA = {
       "description": "Receives SpellString at Level 10 and SpellStream at Level 20. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3714,7 +4090,12 @@ window.VS_DATA = {
       "description": "Gains temporary Armor bonus after getting damaged. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Armor",
+        "Might",
+        "Max Health",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "armor: source Damage Taken min 0 max 50 by 1",
@@ -3765,7 +4146,13 @@ window.VS_DATA = {
       "description": "Luck-based Charge ability: fires a volley of Flash Arrows. Gains +1% luck every level. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Move Speed",
+        "Cooldown",
+        "Speed",
+        "Curse"
+      ],
       "scaling": [
         {
           "key": "luck",
@@ -3823,7 +4210,12 @@ window.VS_DATA = {
       "description": "Triggers a Rosary when levelling up. Gets a temporary Might, Cooldown, and MoveSpeed bonus after reviving.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Revival",
+        "Might",
+        "Move Speed",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Revived min 0 max 2 by boolean|\ncooldown: source Revived min 0 max -1 by boolean|\nmove_speed: source Revived min 0 max 0.6 by boolean",
@@ -3863,7 +4255,12 @@ window.VS_DATA = {
       "description": "Triggers a Vacuum when levelling up. Once per life, triggers World Eater after receiving fatal damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vacuum",
+        "Magnet",
+        "Greed",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -3910,13 +4307,23 @@ window.VS_DATA = {
       "starting_weapons": [
         "Shadow Servant"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Insatiable"
+      ],
       "max_items": [],
-      "starting_arcana": null,
+      "starting_arcana": "Insatiable",
       "description": "It will literally eat the world.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Curse",
+        "Magnet",
+        "Greed",
+        "Armor",
+        "Max Health",
+        "Vacuum"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -4000,7 +4407,12 @@ window.VS_DATA = {
       "description": "Gains XP when picking up Gold Coins and Coin Bags. Starts with temporarily reduced Might.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Greed",
+        "Gold Fever",
+        "Recovery"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -4047,7 +4459,10 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -4094,7 +4509,10 @@ window.VS_DATA = {
       "description": "Gains stat bonuses every time anyones weapon is brought to max level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Crewmate",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -4134,7 +4552,9 @@ window.VS_DATA = {
       "description": "Chooses an extra passive weapon at level 2, 12, and 22",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -4186,7 +4606,10 @@ window.VS_DATA = {
       "description": "Can't be damaged or deal damage, but disappears after reaching the current Time Limit. Ignores walls.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Ghost",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -4226,7 +4649,12 @@ window.VS_DATA = {
       "description": "Leaves behind excess body parts when damaged and may shift forms.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Retaliation",
+        "Max Health",
+        "Recovery",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Body Parts min 0 max 999 by pct",
@@ -4266,7 +4694,12 @@ window.VS_DATA = {
       "description": "May gain +1 Revival when anyone revives. Increases Armor and Recovery of nearby characters. Ignores walls.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Revival",
+        "Move Speed",
+        "Armor",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "revival: source Revived min 0 max 10 by 1",
@@ -4306,7 +4739,13 @@ window.VS_DATA = {
       "description": "Becomes stronger and briefly invincible after defeating a large amount of enemies, or an ally.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Move Speed",
+        "Cooldown",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\nmove_speed: source Megalo State min 0 max 0.8 by boolean",
@@ -4346,7 +4785,18 @@ window.VS_DATA = {
       "description": "Gets -10% Luck every 10 levels (max -90%). Can choose a per-level bonus every 10 levels (max 5 times).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Area",
+        "Speed",
+        "Duration",
+        "Recovery",
+        "Growth",
+        "Luck",
+        "Greed",
+        "Curse",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "luck",
@@ -4423,7 +4873,10 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -4472,12 +4925,26 @@ window.VS_DATA = {
       "description": "I'm not the Impostor.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Move Speed",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
       "charge_ability": "",
-      "grants": [],
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Sharp Tongue",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "interval": 6,
+          "max": 6
+        }
+      ],
       "stats": {
         "max_health": 80,
         "recovery": 0,
@@ -4510,9 +4977,13 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a bonus to Projectile Speed (max 50%) and to Might when defeating many enemies. Can find special pickups.",
-      "custom_description": "Scaling calc uses levels in place of kills for engine consistency.",
+      "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\nmight: source Kills min 0 max 0.25 by pct",
@@ -4552,7 +5023,11 @@ window.VS_DATA = {
       "description": "Receive a bonus to Projectile Speed (max 50%) and to Cooldown (max-25%) when defeating many enemies. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Cooldown",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\ncooldown: source Kills min 0 max -0.25 by pct",
@@ -4592,7 +5067,14 @@ window.VS_DATA = {
       "description": "Movement Speed increases Armour. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Armor",
+        "Ariana",
+        "Cooldown",
+        "Speed",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "armor: 1 per 0.1 move_speed|cooldown: -0.05 per [Prototype A,Prototype B,Prototype C]",
       "manual_scaling": "",
@@ -4632,7 +5114,22 @@ window.VS_DATA = {
       "description": "Gain a bonus to all stats after Reviving. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Revival",
+        "Move Speed",
+        "Cooldown",
+        "Luck",
+        "Growth",
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Max Health",
+        "Amount",
+        "Greed",
+        "Armor",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Revived min 0 max revival*20 by 20|\nrecovery: source Revived min 0 max revival*0.1 by 0.1|\narmor: source Revived min 0 max revival*0.2 by 0.2|\nmove_speed: source Revived min 0 max revival*0.08 by 0.08|\nmight: source Revived min 0 max revival*0.04 by 0.04|\nspeed: source Revived min 0 max revival*0.04 by 0.04|\nduration: source Revived min 0 max revival*0.04 by 0.04|\narea: source Revived min 0 max revival*0.04 by 0.04|\ncooldown: source Revived min 0 max revival*-0.03 by -0.03|\namount: source Revived min 0 max revival*0.2 by 0.2|\nluck: source Revived min 0 max revival*0.05 by 0.05|\ngrowth: source Revived min 0 max revival*0.05 by 0.05|\ngreed: source Revived min 0 max revival*0.01 by 0.01",
@@ -4672,7 +5169,14 @@ window.VS_DATA = {
       "description": "When Health is low, Cooldown is decreased and Move Speed and Speed increase. Can find special Pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Cooldown",
+        "Max Health",
+        "Might",
+        "Speed",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source Missing Health min 0 max -0.5 by pct|\nmove_speed: source Missing Health min 0 max 0.1 by pct|\nspeed: source Missing Health min 0 max 0.1 by pct",
@@ -4712,7 +5216,14 @@ window.VS_DATA = {
       "description": "Decreasing Cooldown increases Area. Can find extra explosive props and special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Area",
+        "Move Speed",
+        "Max Health",
+        "Luck",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "area: 0.02 per -0.01 cooldown max 0.5",
       "manual_scaling": "",
@@ -4752,7 +5263,11 @@ window.VS_DATA = {
       "description": "Move Speed decreases Cooldown. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "cooldown: -0.01 per 0.02 move_speed",
       "manual_scaling": "",
@@ -4792,7 +5307,11 @@ window.VS_DATA = {
       "description": "Armour increses Might. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Armor",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "might: 0.1 per 1 armor",
       "manual_scaling": "",
@@ -4832,7 +5351,11 @@ window.VS_DATA = {
       "description": "Might increases Armour. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Armor",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "armor: 1 per 0.1 might",
       "manual_scaling": "",
@@ -4872,7 +5395,12 @@ window.VS_DATA = {
       "description": "Projectile Speed increases Might. Can find extra explosive props and special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Might",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "might: 0.01 per 0.01 speed max 9",
       "manual_scaling": "",
@@ -4912,7 +5440,15 @@ window.VS_DATA = {
       "description": "Greed and Curse increase Might. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Curse",
+        "Might",
+        "Move Speed",
+        "Magnet",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "might: 0.01 per 0.01 greed|might: 0.01 per 0.01 curse",
       "manual_scaling": "",
@@ -4950,7 +5486,13 @@ window.VS_DATA = {
       "description": "Simondo says he doesn't even need guns. Gets more projectiles every 20 levels (max +4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Cooldown",
+        "Light Source",
+        "Luck",
+        "Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -4997,12 +5539,35 @@ window.VS_DATA = {
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Revival",
+        "Armor",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Might",
+        "Speed",
+        "Area",
+        "Luck",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
       "manual_scaling": "",
       "charge_ability": "",
-      "grants": [],
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Svarog Statue",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "at": [
+            5
+          ]
+        }
+      ],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -5037,12 +5602,35 @@ window.VS_DATA = {
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Revival",
+        "Armor",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Might",
+        "Speed",
+        "Area",
+        "Luck",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
       "manual_scaling": "",
       "charge_ability": "",
-      "grants": [],
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Svarog Statue",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "at": [
+            5
+          ]
+        }
+      ],
       "stats": {
         "max_health": 20,
         "recovery": 0,
@@ -5077,7 +5665,12 @@ window.VS_DATA = {
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Cooldown",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5117,7 +5710,12 @@ window.VS_DATA = {
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Cooldown",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5157,7 +5755,10 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -5204,7 +5805,10 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -5251,7 +5855,13 @@ window.VS_DATA = {
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Might",
+        "Armor",
+        "Revival",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
@@ -5291,7 +5901,13 @@ window.VS_DATA = {
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Might",
+        "Armor",
+        "Revival",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
@@ -5331,7 +5947,13 @@ window.VS_DATA = {
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Might",
+        "Armor",
+        "Revival",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
@@ -5371,7 +5993,13 @@ window.VS_DATA = {
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Might",
+        "Armor",
+        "Revival",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
@@ -5411,7 +6039,12 @@ window.VS_DATA = {
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Move Speed",
+        "Might",
+        "Duration"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5451,7 +6084,12 @@ window.VS_DATA = {
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Move Speed",
+        "Might",
+        "Duration"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5491,7 +6129,10 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5531,7 +6172,10 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5571,7 +6215,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Might",
+        "Max Health",
+        "Revival"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
@@ -5611,7 +6260,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Might",
+        "Max Health",
+        "Revival"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
@@ -5651,7 +6305,13 @@ window.VS_DATA = {
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Knives",
+        "Retaliation",
+        "Recovery",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5691,7 +6351,13 @@ window.VS_DATA = {
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Knives",
+        "Retaliation",
+        "Recovery",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5728,10 +6394,14 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
+      "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5779,10 +6449,14 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
+      "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5830,10 +6504,14 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Gains an extra Arcana VII — Iron Blue Will at level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
+      "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5876,8 +6554,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
-        "Javelin",
-        "Morning Star"
+        "Javelin"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -5885,7 +6562,12 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5917,7 +6599,6 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
-        "Morning Star",
         "Morning Star"
       ],
       "hidden_items": [],
@@ -5926,7 +6607,12 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5958,8 +6644,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
-        "Coat of Arms",
-        "Morning Star"
+        "Coat of Arms"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -5967,7 +6652,12 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5999,8 +6689,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/jonathan_morris_sprite.gif",
       "base_name": "Jonathan Morris",
       "starting_weapons": [
-        "Spectral Sword",
-        "Morning Star"
+        "Spectral Sword"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -6008,7 +6697,12 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6048,7 +6742,11 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Greed",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -6095,7 +6793,11 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Greed",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -6142,7 +6844,14 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.Also gains +1 Revival every 100 levels. Enemies drop Blue, Red, or Yellow Souls that increase Growth, Might, or Greed respectively when set amounts are collected.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Greed",
+        "Growth",
+        "Max Health",
+        "Revival",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -6196,7 +6905,13 @@ window.VS_DATA = {
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Growth",
+        "Move Speed",
+        "Duration",
+        "Area"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6237,7 +6952,13 @@ window.VS_DATA = {
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Growth",
+        "Move Speed",
+        "Duration",
+        "Area"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6277,7 +6998,10 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Duration"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6317,7 +7041,10 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Duration"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6357,7 +7084,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana III - Tragic Princess.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Move Speed",
+        "Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6397,7 +7128,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana III - Tragic Princess.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Move Speed",
+        "Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6437,7 +7172,12 @@ window.VS_DATA = {
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Move Speed",
+        "Recovery",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6477,7 +7217,12 @@ window.VS_DATA = {
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Move Speed",
+        "Recovery",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6517,7 +7262,14 @@ window.VS_DATA = {
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Invulnerable",
+        "Move Speed",
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
@@ -6557,7 +7309,14 @@ window.VS_DATA = {
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Invulnerable",
+        "Move Speed",
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
@@ -6597,7 +7356,14 @@ window.VS_DATA = {
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Invulnerable",
+        "Move Speed",
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
@@ -6637,7 +7403,11 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Familiar",
+        "Magnet",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6687,7 +7457,11 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Familiar",
+        "Magnet",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6737,7 +7511,11 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Familiar",
+        "Magnet",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6787,7 +7565,12 @@ window.VS_DATA = {
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6868,7 +7651,12 @@ window.VS_DATA = {
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6949,7 +7737,12 @@ window.VS_DATA = {
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Move Speed",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7030,7 +7823,12 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Ambiguous Power",
+        "Might",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -7077,7 +7875,12 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Ambiguous Power",
+        "Might",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -7124,7 +7927,11 @@ window.VS_DATA = {
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Revival",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7164,7 +7971,11 @@ window.VS_DATA = {
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Revival",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7204,7 +8015,13 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Invulnerable",
+        "Might",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
@@ -7244,7 +8061,13 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Invulnerable",
+        "Might",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
@@ -7284,7 +8107,14 @@ window.VS_DATA = {
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Area",
+        "Luck",
+        "Move Speed",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
@@ -7324,7 +8154,14 @@ window.VS_DATA = {
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Area",
+        "Luck",
+        "Move Speed",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
@@ -7364,7 +8201,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Curse",
+        "Max Health",
+        "Greed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -7417,7 +8260,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Curse",
+        "Max Health",
+        "Greed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -7470,7 +8319,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Luck",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7510,7 +8364,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Luck",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7550,7 +8409,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Move Speed",
+        "Amount"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7590,7 +8453,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Move Speed",
+        "Amount"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7630,7 +8497,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana I - Gemini.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Counterpart",
+        "Might",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7670,7 +8542,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana I - Gemini.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Counterpart",
+        "Might",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7710,7 +8587,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana II - Twilight Requiem.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Move Speed",
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7750,7 +8632,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana II - Twilight Requiem.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Move Speed",
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7790,7 +8677,16 @@ window.VS_DATA = {
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Greed",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -7830,7 +8726,16 @@ window.VS_DATA = {
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Greed",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -7870,7 +8775,16 @@ window.VS_DATA = {
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Greed",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -7910,7 +8824,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Critical Damage",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7950,7 +8868,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Critical Damage",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7990,7 +8912,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Critical Damage",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8030,7 +8956,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Critical Damage",
+        "Max Health",
+        "Might"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8070,7 +9000,12 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Area",
+        "Magnet",
+        "Familiar"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8120,7 +9055,12 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Area",
+        "Magnet",
+        "Familiar"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8170,7 +9110,12 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Speed",
+        "Area",
+        "Magnet",
+        "Familiar"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8220,7 +9165,11 @@ window.VS_DATA = {
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Duration",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "recovery",
@@ -8267,7 +9216,11 @@ window.VS_DATA = {
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Duration",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "recovery",
@@ -8314,7 +9267,11 @@ window.VS_DATA = {
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Greed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
@@ -8354,7 +9311,11 @@ window.VS_DATA = {
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Greed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
@@ -8391,10 +9352,17 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
+      "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Move Speed",
+        "Max Health",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
@@ -8431,10 +9399,17 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
+      "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Move Speed",
+        "Max Health",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
@@ -8474,7 +9449,10 @@ window.VS_DATA = {
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "growth",
@@ -8521,7 +9499,10 @@ window.VS_DATA = {
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "growth",
@@ -8568,7 +9549,16 @@ window.VS_DATA = {
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Curse",
+        "Invulnerable",
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Max Health",
+        "Move Speed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "curse",
@@ -8615,7 +9605,16 @@ window.VS_DATA = {
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Curse",
+        "Invulnerable",
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Max Health",
+        "Move Speed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "curse",
@@ -8662,7 +9661,11 @@ window.VS_DATA = {
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -8709,7 +9712,11 @@ window.VS_DATA = {
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -8756,7 +9763,11 @@ window.VS_DATA = {
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -8803,7 +9814,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Armor",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8864,7 +9879,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Armor",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8925,7 +9944,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Armor",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8986,7 +10009,12 @@ window.VS_DATA = {
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Amount",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
@@ -9026,7 +10054,12 @@ window.VS_DATA = {
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Amount",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
@@ -9066,7 +10099,12 @@ window.VS_DATA = {
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Amount",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
@@ -9106,7 +10144,15 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Curse",
+        "Max Health",
+        "Duration",
+        "Area",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -9146,7 +10192,15 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Curse",
+        "Max Health",
+        "Duration",
+        "Area",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -9186,7 +10240,15 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Curse",
+        "Max Health",
+        "Duration",
+        "Area",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -9226,7 +10288,15 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Might",
+        "Curse",
+        "Max Health",
+        "Duration",
+        "Area",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -9266,7 +10336,11 @@ window.VS_DATA = {
       "description": "Cannot be damaged, but disappear after reaching the current time limit.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Familiar",
+        "Luck",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9336,7 +10410,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9383,7 +10460,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9430,7 +10510,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9477,7 +10560,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9524,7 +10610,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9571,7 +10660,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9618,7 +10710,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9665,7 +10760,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9712,7 +10810,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9761,7 +10862,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9809,7 +10913,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -9857,7 +10964,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Amount",
+        "Max Health",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -9905,7 +11018,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Amount",
+        "Max Health",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -9954,7 +11073,7 @@ window.VS_DATA = {
       "description": "Water included.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9997,7 +11116,11 @@ window.VS_DATA = {
       "description": "Deeply moved by money.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Gold Fever",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "move_speed",
@@ -10044,7 +11167,10 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (Max +3). Amount is doubled while invulnerable.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Invulnerable",
+        "Amount"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -10091,7 +11217,12 @@ window.VS_DATA = {
       "description": "Retaliates with Aura Blast. Triggers Aura Blast and a random equipped weapon from the Coat of Arms when overhealing by +8.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Recovery",
+        "Retaliate",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10131,7 +11262,12 @@ window.VS_DATA = {
       "description": "Adept with Valmanway. Might receive Coat of Arms as 4th level up option until Level 15.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Hugh",
+        "Move Speed",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10171,7 +11307,14 @@ window.VS_DATA = {
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Morris",
+        "Retaliation",
+        "Max Health",
+        "Might",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10211,7 +11354,14 @@ window.VS_DATA = {
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Morris",
+        "Retaliation",
+        "Max Health",
+        "Might",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10251,7 +11401,10 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10322,7 +11475,10 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10393,7 +11549,10 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10464,7 +11623,10 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10535,7 +11697,11 @@ window.VS_DATA = {
       "description": "Starts with temporarily reduced Cooldown. Overhealing slightly decreases Cooldown. Rosaries are easier to find.",
       "custom_description": "",
       "notes": "",
-      "affinity": "Level 1",
+      "affinity": [
+        "Halted XP",
+        "Cooldown",
+        "Luck"
+      ],
       "scaling": [
         {
           "key": "cooldown",
@@ -10589,13 +11755,20 @@ window.VS_DATA = {
         "Javelin",
         "Raging Fire"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Raging Fire"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10630,13 +11803,20 @@ window.VS_DATA = {
         "Morning Star",
         "Raging Fire"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Raging Fire"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10671,13 +11851,20 @@ window.VS_DATA = {
         "Coat of Arms",
         "Raging Fire"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Raging Fire"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10712,13 +11899,20 @@ window.VS_DATA = {
         "Spectral Sword",
         "Raging Fire"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Raging Fire"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Speed",
+        "Might",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10753,13 +11947,21 @@ window.VS_DATA = {
         "Raging Fire",
         "Javelin"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Javelin"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Growth",
+        "Move Speed",
+        "Duration",
+        "Area"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10794,13 +11996,21 @@ window.VS_DATA = {
         "Belnades' Spellbook",
         "Javelin"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Javelin"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Growth",
+        "Move Speed",
+        "Duration",
+        "Area"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10835,13 +12045,19 @@ window.VS_DATA = {
         "Pneuma Tempestas",
         "Cocytus"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Cocytus"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10876,13 +12092,19 @@ window.VS_DATA = {
         "Cocytus",
         "Pneuma Tempestas"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Pneuma Tempestas"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10922,7 +12144,11 @@ window.VS_DATA = {
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10962,7 +12188,11 @@ window.VS_DATA = {
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11002,7 +12232,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XXI - Blood Astronomia. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Greed",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11044,7 +12279,13 @@ window.VS_DATA = {
       "description": "Fights well with (and against) his father.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Retaliation",
+        "Speed",
+        "Armor",
+        "Revival",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11084,7 +12325,9 @@ window.VS_DATA = {
       "description": "Increase the base damage of every equipped fire-type weapon when levelling up.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Fire"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11124,7 +12367,7 @@ window.VS_DATA = {
       "description": "Gets a hidden clone of the latest equipped weapon or evolution.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11165,7 +12408,10 @@ window.VS_DATA = {
       "description": "Obtains a Karma Coin every 2 levels.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11205,7 +12451,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIII - Wicked Season. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Magnet",
+        "Greed",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11245,7 +12496,12 @@ window.VS_DATA = {
       "description": "Totally not Alucard",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Move Speed",
+        "Recovery",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11285,7 +12541,18 @@ window.VS_DATA = {
       "description": "Immune to health drain. Can choose a per-level bonus.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Area",
+        "Speed",
+        "Duration",
+        "Recovery",
+        "Growth",
+        "Luck",
+        "Greed",
+        "Curse",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "stat_choice",
@@ -11332,7 +12599,14 @@ window.VS_DATA = {
       "description": "Triggers a random equipped weapon from the Ebony Diabologue when overhealing by +8. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Ambiguous Power",
+        "Recovery",
+        "Greed",
+        "Armor",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11364,13 +12638,22 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/carmilla_sprite.gif",
       "base_name": "Carmilla",
       "starting_weapons": [],
-      "hidden_items": [],
+      "hidden_items": [
+        "Dominus Hatred"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Curse: triggers all equipped Dominus weapons. Immune to health drain. Can fly.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Dominus",
+        "Curse",
+        "Greed",
+        "Move Speed",
+        "Might",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11410,7 +12693,10 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -11455,7 +12741,10 @@ window.VS_DATA = {
       "description": "He doesn't understand the game.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Halted XP",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11495,7 +12784,12 @@ window.VS_DATA = {
       "description": "Six axes axe axes as axes axe.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Move Speed",
+        "Curse",
+        "Max Health"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -11564,7 +12858,12 @@ window.VS_DATA = {
       "description": "She likes her Wall and Floor chicken well frozen.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Freeze",
+        "Recovery",
+        "Move Speed",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11604,7 +12903,10 @@ window.VS_DATA = {
       "description": "Gains +1% Luck every level. Can fly.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Luck",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "luck",
@@ -11649,7 +12951,13 @@ window.VS_DATA = {
       "description": "Gains +1 Armor every 5 levels. Horizontally impaired. Retaliates.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Armor",
+        "Retaliation",
+        "Max Health",
+        "Greed",
+        "Curse"
+      ],
       "scaling": [
         {
           "key": "armor",
@@ -11699,7 +13007,11 @@ window.VS_DATA = {
       "description": "Grows additional swords when accumulatively Overhealing by an increasingly larger amount (Max 12 swords).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Recovery",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11760,7 +13072,11 @@ window.VS_DATA = {
       "description": "Her hidden vacuum draws in items, destructibles, and enemies.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vacuum",
+        "Magnet",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11800,7 +13116,12 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVII - Lost & Found Painting. Triggers Keremet Morbus when overhealing by +8.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Armor",
+        "Might",
+        "Curse",
+        "Recovery"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -11867,7 +13188,13 @@ window.VS_DATA = {
       "description": "Starts with a hidden Star Flail. Enemies have a 15% chance to spawn Defanged. Can turn defeated enemies into followers.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Defang",
+        "Greed",
+        "Move Speed",
+        "Max Health",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11907,7 +13234,11 @@ window.VS_DATA = {
       "description": "Overhealing by +32 triggers any equipped weapon from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Belnades' Spell",
+        "Recovery",
+        "Duration"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11950,7 +13281,14 @@ window.VS_DATA = {
       "description": "Adept with Gemma Torpor, Runetracer, Magi-Stone, and Kyra-Stones. Has a hidden Runetracer that grows stronger when levelling up.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Actrise",
+        "Greed",
+        "Amount",
+        "Duration",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11993,7 +13331,12 @@ window.VS_DATA = {
       "description": "Overhealing by +32 triggers any equipped weapon from the Coat of Arms and slowly floods the environment.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Vampire-Killing Tool",
+        "Recovery",
+        "Duration",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12033,7 +13376,11 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVIII - Boogaloo of Illusions.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Move Speed",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12073,7 +13420,10 @@ window.VS_DATA = {
       "description": "A trio of zombies posing as vampire hunters.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -12120,7 +13470,10 @@ window.VS_DATA = {
       "description": "A trio of zombies posing as vampire hunters.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12160,7 +13513,13 @@ window.VS_DATA = {
       "description": "A trio of zombies posing as vampire hunters.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Knives",
+        "Recovery",
+        "Retaliation",
+        "Luck",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12200,7 +13559,10 @@ window.VS_DATA = {
       "description": "Adept with Trident. Always followed by Gaibon. Gets enraged if its partner dies.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source Enraged min 0 max -0.9 by boolean",
@@ -12240,7 +13602,10 @@ window.VS_DATA = {
       "description": "Adept with Fire Wand. Always followed by Slogra. Gets enraged if its partner dies. Flies.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source Enraged min 0 max -0.9 by boolean",
@@ -12280,7 +13645,14 @@ window.VS_DATA = {
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Knives",
+        "Light Source",
+        "Move Speed",
+        "Cooldown",
+        "Amount",
+        "Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
@@ -12320,7 +13692,14 @@ window.VS_DATA = {
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Knives",
+        "Light Source",
+        "Move Speed",
+        "Cooldown",
+        "Amount",
+        "Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
@@ -12360,7 +13739,11 @@ window.VS_DATA = {
       "description": "Triggers a random equipped weapon every 13th hop. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Greed",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12400,7 +13783,18 @@ window.VS_DATA = {
       "description": "Can choose a per-level bonus after defeating a set amount of enemies (max 5 times).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Area",
+        "Speed",
+        "Duration",
+        "Recovery",
+        "Growth",
+        "Luck",
+        "Greed",
+        "Curse",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "stat_choice",
@@ -12482,7 +13876,18 @@ window.VS_DATA = {
       "description": "Count on him to change halfway through the dinner.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Greed",
+        "Cooldown",
+        "Fire",
+        "Duration",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -12526,7 +13931,11 @@ window.VS_DATA = {
       "description": "Has hidden weapons that grow stronger when leveling up. Can fly.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Might",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12566,7 +13975,13 @@ window.VS_DATA = {
       "description": "Doesn't appreciate getting blasphemously mockered.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Move Speed",
+        "Curse",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 1 by boolean",
@@ -12606,7 +14021,13 @@ window.VS_DATA = {
       "description": "Bigger is better.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Greed",
+        "Might",
+        "Max Health",
+        "Armor",
+        "Revival"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12656,7 +14077,16 @@ window.VS_DATA = {
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Greed",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12696,7 +14126,16 @@ window.VS_DATA = {
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Cooldown",
+        "Greed",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12736,7 +14175,18 @@ window.VS_DATA = {
       "description": "Count on him to change halfway through dinner.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Greed",
+        "Cooldown",
+        "Fire",
+        "Duration",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12776,7 +14226,18 @@ window.VS_DATA = {
       "description": "Count on him to change halfway through dinner.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Might",
+        "Greed",
+        "Cooldown",
+        "Fire",
+        "Duration",
+        "Move Speed",
+        "Max Health",
+        "Armor",
+        "Curse"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12816,7 +14277,13 @@ window.VS_DATA = {
       "description": "Doesn't appreciate getting blasphemously mockered.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Move Speed",
+        "Curse",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12856,7 +14323,13 @@ window.VS_DATA = {
       "description": "Doesn't appreciate getting blasphemously mockered.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Move Speed",
+        "Curse",
+        "Cooldown"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12896,7 +14369,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Curse",
+        "Max Health",
+        "Greed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -12951,7 +14430,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Curse",
+        "Max Health",
+        "Greed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13004,7 +14489,13 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Curse",
+        "Max Health",
+        "Greed",
+        "Revival"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13057,7 +14548,10 @@ window.VS_DATA = {
       "description": "Starts with Arcana I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, and XXI.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Magnet"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -13097,7 +14591,11 @@ window.VS_DATA = {
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Speed",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13137,7 +14635,11 @@ window.VS_DATA = {
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Speed",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13177,7 +14679,11 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Speed",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13217,7 +14723,11 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Speed",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13258,7 +14768,11 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13306,7 +14820,12 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Might",
+        "Max Health",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13354,7 +14873,12 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Might",
+        "Max Health",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13402,7 +14926,12 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Might",
+        "Max Health",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13449,7 +14978,12 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Duration",
+        "Armor",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "duration",
@@ -13496,7 +15030,12 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Duration",
+        "Armor",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "duration",
@@ -13543,7 +15082,12 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Duration",
+        "Armor",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "duration",
@@ -13590,7 +15134,12 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs.Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Duration",
+        "Armor",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "duration",
@@ -13637,7 +15186,10 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13677,7 +15229,10 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13717,7 +15272,10 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Magnet"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13757,7 +15315,12 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Area",
+        "Speed",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13797,7 +15360,12 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Duration",
+        "Might",
+        "Max Health",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13837,7 +15405,15 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "might: 0.05 per [Glimmer Tech]|\nspeed: 0.05 per [Glimmer Tech] max 1|\nduration: 0.05 per [Glimmer Tech] max 1|\narea: 0.025 per [Glimmer Tech] max 0.5|\ncooldown: -0.01 per [Glimmer Tech] max -0.1|\nrecovery: 0.003 per [Glimmer Tech] max 1",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -13878,7 +15454,17 @@ window.VS_DATA = {
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Might",
+        "Area",
+        "Speed",
+        "Duration",
+        "Cooldown",
+        "Luck",
+        "Growth",
+        "Magnet"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -13968,7 +15554,17 @@ window.VS_DATA = {
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Might",
+        "Area",
+        "Speed",
+        "Duration",
+        "Cooldown",
+        "Luck",
+        "Growth",
+        "Magnet"
+      ],
       "scaling": [
         {
           "key": "might",
@@ -14057,7 +15653,12 @@ window.VS_DATA = {
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Amount",
+        "Move Speed",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14097,7 +15698,12 @@ window.VS_DATA = {
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Max Health",
+        "Amount",
+        "Move Speed",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14137,7 +15743,11 @@ window.VS_DATA = {
       "description": "Triggers glimmered techs more often than normal. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Might",
+        "Greed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14177,7 +15787,14 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health and on revival. Gains a bonus to Cooldown every time Showstopper is triggered (Max - 20%).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Revival",
+        "Cooldown",
+        "Might",
+        "Luck",
+        "Move Speed"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14220,7 +15837,14 @@ window.VS_DATA = {
       "description": "Starts with a hidden Rings of Calamity. Increases enemy spawn quantity by 50. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Charm",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14260,7 +15884,11 @@ window.VS_DATA = {
       "description": "Innately knows the \"Heaven's Thunder\" tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Move Speed",
+        "Speed",
+        "Amount"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14300,7 +15928,11 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Revival",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14340,7 +15972,11 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Revival",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14380,7 +16016,11 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Revival",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14420,7 +16060,11 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Revival",
+        "Growth"
+      ],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14460,7 +16104,11 @@ window.VS_DATA = {
       "description": "Mr. S will showcase his skills with techs. Gets more projectiles every 20 levels (max +4).",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Amount",
+        "Move Speed"
+      ],
       "scaling": [
         {
           "key": "amount",
@@ -14498,16 +16146,20 @@ window.VS_DATA = {
       "sprite_static": "assets/icons/characters/lolo_hiss_meow_and_purr_sprite.png",
       "sprite_gif": "assets/icons/characters/lolo_hiss_meow_and_purr_sprite.gif",
       "base_name": "Lolo, Hiss, Meow, and Purr",
-      "starting_weapons": [
-        "Chaos Disaster Tech"
-      ],
+      "starting_weapons": [],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health. Gain a follower whenever Showstopper is triggered.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Revival",
+        "Luck",
+        "Move Speed",
+        "Recovery"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14538,17 +16190,20 @@ window.VS_DATA = {
       "sprite_static": "assets/icons/characters/kina_sprite.png",
       "sprite_gif": "assets/icons/characters/kina_sprite.gif",
       "base_name": "Kina",
-      "starting_weapons": [
-        "Swallow Slice Tech",
-        "Airwave Tech"
-      ],
+      "starting_weapons": [],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Shallow Slice\" and \"Airwave\" tech. Gains bonus Recovery whenever Showstopper is triggered at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Recovery",
+        "Speed",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean|\nrecovery: source HP Critical min 0 max 10",
@@ -14579,17 +16234,19 @@ window.VS_DATA = {
       "sprite_static": "assets/icons/characters/imakoo_sprite.png",
       "sprite_gif": "assets/icons/characters/imakoo_sprite.gif",
       "base_name": "Imakoo",
-      "starting_weapons": [
-        "Hell's Fury Tech",
-        "Blood Rage Tech"
-      ],
+      "starting_weapons": [],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Hell's Fury\" and \"Blood Rage\" tech. Gains bonus Might whenever Showstopper is triggered at critical health.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Low Health",
+        "Might",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 6 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -14629,7 +16286,14 @@ window.VS_DATA = {
       "description": "Innately knows the \"Vermillion Sands\" tech.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Glimmer Tech",
+        "Might",
+        "Curse",
+        "Max Health",
+        "Area",
+        "Armor"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_might: source Glimmers Fired min 1 max 5 by pct",
@@ -14669,7 +16333,13 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Starts with a Survarot draft. Has a Survarot level Multiplier of 4.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Light Source",
+        "Luck",
+        "Duration",
+        "Move Speed",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14709,7 +16379,11 @@ window.VS_DATA = {
       "description": "Using Skip when levelling up has a chance to trigger a Survarot draft.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Growth",
+        "Cooldown",
+        "Luck"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14749,7 +16423,12 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Starts with a Survarot draft. Reduces boss health and blocks some special attacks.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Boss",
+        "Light Source",
+        "Luck",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14789,7 +16468,11 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Can equip up to 100 Passive Weapons.",
       "custom_description": "",
       "notes": "",
-      "affinity": "",
+      "affinity": [
+        "Light Source",
+        "Luck",
+        "Max Health"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14822,7 +16505,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks horizontally, passes through enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Attacks horizontally, passes through enemies.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Base Area up by 10%. Base Damage up by 5.",
+        "Base Damage up by 5.",
+        "Base Area up by 10%. Base Damage up by 5.",
+        "Base Damage up by 5.",
+        "Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Bloody Tear",
       "requirements": [
@@ -14839,7 +16551,35 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolution of the whip. Can deal critical damage and absorb HP.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolution of the whip. Can deal critical damage and absorb HP."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Fuwalafuwaloo",
       "requirements": [
@@ -14856,7 +16596,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Stronger with continuous movement. Can deal critical damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Stronger with continuous movement. Can deal critical damage.",
+        "Base Damage up by 1.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 1.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 1.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 1."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Fuwalafuwaloo",
       "requirements": [
@@ -14873,8 +16654,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions"
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Fuwalafuwaloo",
@@ -14888,7 +16703,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at the nearest enemy.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires at the nearest enemy.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Passes through 1 more enemy.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Holy Wand",
       "requirements": [
@@ -14905,7 +16761,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolution of the Magic Wand. Fires with no delay.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolution of the Magic Wand. Fires with no delay."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Spirit of Light",
       "requirements": [
@@ -14922,7 +16812,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires a homing projectile.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a homing projectile.",
+        "Pass through 1 more enemy.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Pass through 1 more enemy.",
+        "Base damage up by 10.",
+        "Pass through 1 more enemy.",
+        "Pass through 1 more enemy.",
+        "Base damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Spirit of Light",
       "requirements": [
@@ -14939,8 +16870,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Summon Spirit and Holy Wand. Fires homing spirits from a portal of light.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Summon Spirit and Holy Wand. Fires homing spirits from a portal of light."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit of Light",
@@ -14954,7 +16919,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires quickly in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires quickly in the faced direction.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Passes through 1 more enemy.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Passes through 1 more enemy."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Thousand Edge",
       "requirements": [
@@ -14971,7 +16977,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Knife. Fires with no delay.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Knife. Fires with no delay."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Million Cut",
       "requirements": [
@@ -14988,7 +17028,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires faster when moving.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires faster when moving.",
+        "Base Area up by 10%. Base Damage up by 2.5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 2.5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 2.5.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Million Cut",
       "requirements": [
@@ -15005,8 +17074,30 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Valmanway and Thousand Edge. Slashes endlessly. Grows bigger with continuous movement.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Valmanway and Thousand Edge. Slashes endlessly. Grows bigger with continuous movement."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Million Cut",
@@ -15020,7 +17111,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "High damage, high area scaling.",
-      "level_ups": [],
+      "level_ups": [
+        "High damage, high Area scaling.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 20.",
+        "Passes through 2 more enemies.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 20.",
+        "Passes through 2 more enemies.",
+        "Base Damage up by 20."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Death Spiral",
       "requirements": [
@@ -15037,7 +17169,35 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Axe. Passes through enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Axe. Passes through enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Legacy of Death: Soul River",
       "requirements": [
@@ -15054,7 +17214,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates vertical damaging zones.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates vertical damaging zones.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile. Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.20.05",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Legacy of Death: Soul River",
       "requirements": [
@@ -15071,8 +17260,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Dark Rift and Death Spiral. Death becomes you.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Dark Rift and Death Spiral. Death becomes you."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Legacy of Death: Soul River",
@@ -15086,7 +17309,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Aims at the nearest enemy, has a boomerang effect.",
-      "level_ups": [],
+      "level_ups": [
+        "Aims at nearest enemy, has boomerang effect.",
+        "Base Damage up by 10.",
+        "Base Area up by 10%. Base Speed up by 25%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Base Area up by 10%. Base Speed up by 25%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Heaven Sword",
       "requirements": [
@@ -15103,7 +17367,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Cross. Can do critical damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Cross. Can do critical damage."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Arch Angle",
       "requirements": [
@@ -15120,7 +17418,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons holy light.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons holy light.",
+        "Cooldown reduced by 3 seconds.",
+        "Cooldown reduced by 3 seconds.",
+        "Cooldown reduced by 3 seconds.",
+        "Fires 3 more projectile.",
+        "Cooldown reduced by 3 seconds.",
+        "Cooldown reduced by 3 seconds.",
+        "Cooldown reduced by 3 seconds. Base Damage up by 70."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Arch Angle",
       "requirements": [
@@ -15137,8 +17464,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Grand Cross and Heaven Sword. Central beam pulses when crosses pass through it.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Grand Cross and Heaven Sword. Central beam pulses when crosses pass through it."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Arch Angle",
@@ -15152,7 +17513,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Orbits around the character.",
-      "level_ups": [],
+      "level_ups": [
+        "Orbits around the character.",
+        "Fires 1 more projectile.",
+        "Base Area up by 25%. Base Speed up by 30%.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 25%. Base Speed up by 30%.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Unholy Vespers",
       "requirements": [
@@ -15169,7 +17571,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved King Bible. Never Ends.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved King Bible. Never Ends."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Ninth Circle",
       "requirements": [
@@ -15186,7 +17622,54 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires lingering projectiles. Might freeze enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires lingering projectiles. Might freeze enemies.",
+        "Fires 1 more projectile. Passes through 1 more enemy.",
+        "Base Area up by 25%. Base Speed up by 30%.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
+        "Fires 1 more projectile. Passes through 1 more enemy.",
+        "Base Area up by 25%. Base Speed up by 30%.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
+        "Fires 1 more projectile. Passes through 1 more enemy."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Ninth Circle",
       "requirements": [
@@ -15203,8 +17686,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Icebrand and Unholy Vespers. Hell truly has frozen over.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Icebrand and Unholy Vespers. Hell truly has frozen over."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ninth Circle",
@@ -15218,7 +17735,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at a random enemy, deals heavy damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires at a random enemy, deals heavy damage.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10. Base Speed up by 20%.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10. Base Speed up by 20%.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10. Base Speed up by 20%.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hellfire",
       "requirements": [
@@ -15235,7 +17787,35 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Fire Wand. Passes through enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Fire Wand. Passes through enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Kardía Phlegeton",
       "requirements": [
@@ -15252,7 +17832,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates explosive sideways.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates explosive sideways.",
+        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Base Area up by 20%. Cooldown reduced by 0.2 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Kardía Phlegeton",
       "requirements": [
@@ -15269,8 +17878,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Aura Blast and Hellfire. Calls forth a massive volcanic eruption.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Aura Blast and Hellfire. Calls forth a massive volcanic eruption."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Kardía Phlegeton",
@@ -15284,7 +17927,30 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damages nearby enemies. Reduces resistance to knockback and freeze.",
-      "level_ups": [],
+      "level_ups": [
+        "Damages nearby enemies. Reduces resistance to knockback and freeze.",
+        "Base Area up by 40%. Base Damage up by 2.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 1.",
+        "Base Area up by 20%. Base Damage up by 1.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 2.",
+        "Base Area up by 20%. Base Damage up by 1.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 1.",
+        "Base Area up by 20%. Base Damage up by 2."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Soul Eater",
       "requirements": [
@@ -15301,7 +17967,23 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Garlic. Steals hearts. Power increases when recovering HP.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Garlic. Steals hearts. Power increases when recovering HP."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dark Frogamorphosis",
       "requirements": [
@@ -15318,7 +18000,41 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Summons frogs that damage enemies as they jump.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons frogs that damage enemies as they jump."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "100",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -15335,7 +18051,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons frogs that damage enemies as they jump.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons frogs that damage enemies as they jump.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
+        "Fires 1 more projectile. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "100",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dark Frogamorphosis",
       "requirements": [
@@ -15352,8 +18109,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Anura and Soul Eater. May actually eat enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Anura and Soul Eater. May actually eat enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "100",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dark Frogamorphosis",
@@ -15367,7 +18158,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates damaging zones.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 10.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 10.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 5.",
+        "Base Area up by 20%. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "La Borra",
       "requirements": [
@@ -15384,7 +18210,35 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Santa water. Damaging zones follow you and grow when they move.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Santa water. Damaging zones follow you and grow when they move."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydro Pump Climax",
       "requirements": [
@@ -15401,7 +18255,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates damaging waves based on Projectile Speed and Duration.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates damaging waves based on Projectile Speed and Duration.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 1.",
+        "Base Damage up by 1. Base Speed up by 25%.",
+        "Base Damage up by 1.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 1.",
+        "Base Damage up by 1.",
+        "Base Damage up by 1. Base Speed up by 25%.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 1."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydro Pump Climax",
       "requirements": [
@@ -15418,8 +18301,48 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Hydro Storm and La Borra. It never rains but it pours.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Hydro Storm and La Borra. It never rains but it pours."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Hydro Pump Climax",
@@ -15433,7 +18356,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Passes through enemies, bounces around.",
-      "level_ups": [],
+      "level_ups": [
+        "Passes through enemies, bounces around.",
+        "Base Damage up by 5. Base Speed up by 20%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5. Base Speed up by 20%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "NO FUTURE",
       "requirements": [
@@ -15450,7 +18414,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Runetracer. Explodes when bouncing and in retaliation.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Runetracer. Explodes when bouncing and in retaliation."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carnage Heart",
       "requirements": [
@@ -15467,7 +18465,30 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "This one doesn't bounce.",
-      "level_ups": [],
+      "level_ups": [
+        "This one doesn't bounce.",
+        "Cooldown reduced by 10 seconds.",
+        "Cooldown reduced by 10 seconds.",
+        "Cooldown reduced by 10 seconds.",
+        "Cooldown reduced by 10 seconds.",
+        "Cooldown reduced by 10 seconds.",
+        "Cooldown reduced by 10 seconds.",
+        "Base Damage up by 7000."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carnage Heart",
       "requirements": [
@@ -15484,8 +18505,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Troll Bomb and NO FUTURE. This one does in fact bounce.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Troll Bomb and NO FUTURE. This one does in fact bounce."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Carnage Heart",
@@ -15499,7 +18554,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at random enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes at random enemies.",
+        "Fires 1 more projectile.",
+        "Base Area up by 100%. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 100%. Base Damage up by 20.",
+        "Fires 1 more projectile.",
+        "Base Area up by 100%. Base Damage up by 20.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Thunder Loop",
       "requirements": [
@@ -15516,7 +18600,29 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Lightning Ring. Projectiles strike twice.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Lightning Ring. Projectiles strike twice."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vjaya Sisters",
       "requirements": [
@@ -15533,7 +18639,24 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Grants a brief moment of Invulnerability and generates a damaging wave.",
-      "level_ups": [],
+      "level_ups": [
+        "Grants a brief moment of Invulnerability and generates a damaging wave.",
+        "Base Damage up by 10.",
+        "Cooldown reduced by 2 seconds.",
+        "Base Damage up by 10.",
+        "Cooldown reduced by 2 seconds.",
+        "Base Damage up by 10.",
+        "Cooldown reduced by 2 seconds.",
+        "Base Damage up by 30."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vjaya Sisters",
       "requirements": [
@@ -15550,8 +18673,30 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Sword Brothers and Thunder Loop. Lightning triggers sword explosions with brief Invulnerability.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Sword Brothers and Thunder Loop. Lightning triggers sword explosions with brief Invulnerability."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vjaya Sisters",
@@ -15565,7 +18710,24 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Erases everything in sight.",
-      "level_ups": [],
+      "level_ups": [
+        "Erases everything in sight.",
+        "Cooldown reduced by 10 seconds.",
+        "25% chance not to erase items.",
+        "Cooldown reduced by 10 seconds.",
+        "45% chance not to erase items.",
+        "Cooldown reduced by 5 seconds.",
+        "65% chance not to erase items.",
+        "Cooldown reduced by 5 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Chance",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Gorgeous Moon",
       "requirements": [
@@ -15582,7 +18744,17 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Pentagram. Generates extra gems and gathers all of them.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Pentagram. Generates extra gems and gathers all of them."
+      ],
+      "limit_break": [
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": ""
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Venus Crescent",
       "requirements": [
@@ -15599,7 +18771,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons spirits that will occasionally pick up XP gems for you.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons spirits that will occasionally pick up XP gems for you.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Speed up by 50%.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Speed up by 50%.",
+        "Fires 1 more projectile. Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Venus Crescent",
       "requirements": [
@@ -15616,8 +18823,18 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Summon Spirit Tornado and Gorgeous Moon. Love, Beauty and Light.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Summon Spirit Tornado and Gorgeous Moon. Love, Beauty and Light."
+      ],
+      "limit_break": [
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Venus Crescent",
@@ -15631,7 +18848,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Bombards in a circular area.",
-      "level_ups": [],
+      "level_ups": [
+        "Bombards in a circling zone.",
+        "Fires 1 more projectile. Base Area up by 40%.",
+        "Fires 1 more projectile. Base Damage up by 10.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Area up by 40%.",
+        "Fires 1 more projectile. Base Damage up by 10.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Area up by 40%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vandalier",
       "requirements": [
@@ -15648,7 +18906,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Bombards in a circular area.",
-      "level_ups": [],
+      "level_ups": [
+        "Bombards in a circular area."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -15665,7 +18926,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Bombards in a circular area.",
-      "level_ups": [],
+      "level_ups": [
+        "Bombards in a circling zone.",
+        "Fires 1 more projectile. Base Area up by 40%.",
+        "Fires 1 more projectile. Base Damage up by 10.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Area up by 40%.",
+        "Fires 1 more projectile. Base Damage up by 10.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3.",
+        "Fires 1 more projectile. Base Area up by 40%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vandalier",
       "requirements": [
@@ -15682,7 +18984,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Bombards in a circular area.",
-      "level_ups": [],
+      "level_ups": [
+        "Bombards in a circular area."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -15699,8 +19004,49 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Peachone and Ebony Wings.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Ebony Wings and Peachone",
+        "Base Area up by 20%.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Base Area up by 20%.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Base Area up by 20%.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vandalier",
@@ -15714,7 +19060,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires quickly in four fixed directions.",
+        "Fires 1 more projectile.",
+        "Passes through 2 more enemies.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Passes through 2 more enemies.",
+        "Base Damage up by 5. Base Speed up by 50%.",
+        "Passes through 2 more enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Phieraggi",
       "requirements": [
@@ -15732,7 +19119,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires quickly in four fixed directions."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -15749,7 +19139,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires quickly in four fixed directions.",
+        "Fires 1 more projectile.",
+        "Passes through 2 more enemies.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Passes through 2 more enemies.",
+        "Base Damage up by 5. Base Speed up by 50%.",
+        "Passes through 2 more enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Phieraggi",
       "requirements": [
@@ -15767,7 +19198,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires quickly in four fixed directions."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -15784,8 +19218,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Phieraggi",
@@ -15799,7 +19267,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Summons capricious projectiles. Might interact with pickups.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons capricious projectiles. Might interact with pickups.",
+        "Base Speed up by 20%.",
+        "Effect lasts 1.5 seconds longer.",
+        "Base Speed up by 20%.",
+        "Fires 1 more projectile.",
+        "Effect lasts 1.5 seconds longer.",
+        "Base Speed up by 20%.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "10 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vicious Hunger",
       "requirements": [
@@ -15816,7 +19325,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Summons capricious projectiles. Might interact with pickups.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons capricious projectiles. Might interact with pickups."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -15833,7 +19345,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Gatti Amari. Might turn anything into gold.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Gatti Amari. Might turn anything into gold."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "15 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Power of Lire",
       "requirements": [
@@ -15850,7 +19396,30 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Damages all enemies in sight and attempts to turn them into hearts.",
-      "level_ups": [],
+      "level_ups": [
+        "Damages all enemies in sight and attempts to turn them into hearts.",
+        "50% chance to generate a heart.",
+        "Cooldown reduced by 20 seconds.",
+        "Cooldown reduced by 20 seconds.",
+        "75% chance to generate a heart.",
+        "Base Damage up by 24.",
+        "Cooldown reduced by 20 seconds. Base Damage up by 30.",
+        "100% chance to generate a heart."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Power of Lire",
       "requirements": [
@@ -15867,8 +19436,11 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Soul Steal and Vicious Hunger. Devours enemies with insatiable greed.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Soul Steal and Vicious Hunger. Devours enemies with insatiable greed."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Power of Lire",
@@ -15882,7 +19454,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks vertically, passes through enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Attacks vertically, passes through enemies.",
+        "Base Area up by 100%.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 0.8 seconds.",
+        "Base Area up by 25%. Base Damage up by 10.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 0.8 seconds.",
+        "Base Area up by 25%. Base Damage up by 10.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 0.8 seconds.",
+        "Base Area up by 25%. Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Mannajja",
       "requirements": [
@@ -15899,7 +19500,29 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Song of Mana. Might slow enemies down.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Song of Mana. Might slow enemies down."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dies Irae",
       "requirements": [
@@ -15916,7 +19539,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Critical hits maximise amount of projectiles.",
-      "level_ups": [],
+      "level_ups": [
+        "Critical hits maximise amount of projectiles.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 5. Base Speed up by 50%.",
+        "Base Damage up by 20.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 5. Base Speed up by 50%.",
+        "Base Damage up by 20.",
+        "Fires 2 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Critical chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dies Irae",
       "requirements": [
@@ -15933,8 +19591,48 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Arrow of Goth and Mannajja. Alamaric Snipers rain down arrows, even more so on critical hit.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Arrow of Goth and Mannajja. Alamaric Snipers rain down arrows, even more so on critical hit."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "1",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dies Irae",
@@ -15948,7 +19646,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generating damaging zones when moving, strikes when stopping.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates damaging zones when moving, strikes when stopping.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.3 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Valkyrie Turner",
       "requirements": [
@@ -15965,7 +19704,41 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Shadow Pinion. Bigger, longer, faster, stronger.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Shadow Pinion. Bigger, longer, faster, stronger."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Darkness Illusion",
       "requirements": [
@@ -15982,7 +19755,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Geneartes damaging zones when moving.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates damaging zones when moving.",
+        "Base Area up by 30%.",
+        "Cooldown reduced by 1 second.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Area up by 30%.",
+        "Cooldown reduced by 1 second.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Darkness Illusion",
       "requirements": [
@@ -15999,8 +19807,42 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Svarog Statue and Valkyrie Turner. Crimson clones dance with you in the flames.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Svarog Statue and Valkyrie Turner. Crimson clones dance with you in the flames."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Darkness Illusion",
@@ -16014,7 +19856,23 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Chance to freeze enemies in time.",
-      "level_ups": [],
+      "level_ups": [
+        "Chance to freeze enemies in time.",
+        "Effect lasts 1 seconds longer.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 1 seconds longer.",
+        "Effect lasts 1 seconds longer.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 1 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "10 seconds"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Infinite Corridor",
       "requirements": [
@@ -16032,8 +19890,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Clock Lancet. Halves enemies' health.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Clock Lancet. Halves enemies' health."
+      ],
+      "limit_break": [
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "10 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Infinite Corridor",
@@ -16047,7 +19915,16 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Shields from damage while active.",
-      "level_ups": [],
+      "level_ups": [
+        "Shields from damage while active.",
+        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
+        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
+        "Gains 1 additional charge.",
+        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
+        "Cooldown reduced by 0.5 seconds. Shield invulnerability increased by 0.2 seconds.",
+        "Gains 1 additional charge."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Crimson Shroud",
       "requirements": [
@@ -16065,8 +19942,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Crimson Shroud",
@@ -16080,7 +19979,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws a bouncing projectile.",
+        "Base Area up by 20%. Effect lasts 0.2 seconds longer.",
+        "Fires 1 more projectile. Base Damage up by 20.",
+        "Base Area up by 20%. Base Speed up by 50%.",
+        "Fires 1 more projectile. Base Damage up by 20.",
+        "Effect lasts 0.2 seconds longer.",
+        "Base Damage up by 20.",
+        "Effect lasts 0.2 seconds longer. Base Speed increased by 50%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Anima of Mortaccio",
       "requirements": [
@@ -16097,8 +20037,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Bone. Projectiles accelerate when bouncing.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Bone. Projectiles accelerate when bouncing."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Anima of Mortaccio",
@@ -16112,7 +20086,54 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile that explodes after some time.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws a bouncing projectile. Explodes, sometimes.",
+        "Base Area up by 25%. Base Speed up by 30%.",
+        "50% chance to explode.",
+        "Fires 1 more projectile.",
+        "Base Area up by 25%. Base Damage up by 5.",
+        "60% chance to explode.",
+        "Base Area up by 25%. Base Speed up by 30%.",
+        "Base Area up by 25%. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Yatta Daikarin",
       "requirements": [
@@ -16129,8 +20150,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Yatta Daikarin",
@@ -16144,7 +20199,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile. Number of bounces affected by Amount.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws a bouncing projectile. Number of bounces affected by Amount.",
+        "Base Area up by 20%.",
+        "Cooldown increased by 0.3 seconds. Base Damage up by 30.",
+        "Base Speed up by 50%.",
+        "Cooldown increased by 0.3 seconds. Base Damage up by 30.",
+        "Base Area up by 20%.",
+        "Cooldown increased by 0.3 seconds. Base Damage up by 30.",
+        "Base Speed up by 50%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Carozza!",
       "requirements": [
@@ -16161,8 +20257,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Carréllo. Duration, Speed, and Area affect damage instead.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Carréllo. Duration, Speed, and Area affect damage instead."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Carozza!",
@@ -16176,7 +20294,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile. Cooldown reduces when moving.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws a bouncing projectile. Cooldown reduces when moving.",
+        "Effect lasts 1 seconds longer.",
+        "Base Speed up by 30%.",
+        "Base Damage up by 5.",
+        "Base Speed up by 30%.",
+        "Fires 1 more projectile.",
+        "Base Speed up by 30%.",
+        "Defeated enemies might drop hearts."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Profusione D'Amore",
       "requirements": [
@@ -16193,8 +20352,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Profusione D'Amore",
@@ -16208,8 +20401,49 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Generates bouncing projectiles.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Generates bouncing projectiles.",
+        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 10. Base Speed up by 50%.",
+        "Fires 1 more projectile. Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile. Effect lasts 0.3 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "La Robba",
@@ -16223,8 +20457,50 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Has a chance to summon light sources.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Has a chance to summon light sources.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 25%. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 25%. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile.",
+        "Enables finisher."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "20",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "2 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Greatest Jubilee",
@@ -16238,7 +20514,40 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires three projectiles at a random enemy.",
+        "Base Damage up by 10.",
+        "Passes through 1 more enemy.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Passes through 1 more enemy.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Bi-Bracelet",
       "requirements": [],
@@ -16253,7 +20562,40 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires three projectiles at a random enemy.",
+        "Passes through 1 more enemy.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Effect lasts 0.2 seconds longer. Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Passes through 1 more enemy."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Tri-Bracelet",
       "requirements": [],
@@ -16268,7 +20610,40 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Union",
       "description": "Fires three projectiles at a random enemy.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires three projectiles at a random enemy.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Effect lasts 0.2 seconds longer. Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile. Base Damage up by 20.",
+        "Effect lasts 0.2 seconds longer. Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile. Base Area up by 10%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lapiste Tepisto",
       "requirements": [
@@ -16285,7 +20660,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Throws a flurry of close-range punches.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws a flurry of close-range punches.",
+        "Fires 2 more projectile.",
+        "Base Damage up by 10.",
+        "Base Area up by 20%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
+        "Base Area up by 20%.",
+        "Base Damage up by 10.",
+        "Base Area up by 10%. Cooldown reduced by 0.3 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lapiste Tepisto",
       "requirements": [
@@ -16302,8 +20706,36 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Kaiser Knuckle and Tri-Bracelet. Launches a barrage of stony fists.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Kaiser Knuckle and Tri-Bracelet. Launches a barrage of stony fists."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Lapiste Tepisto",
@@ -16317,7 +20749,10 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Gift",
       "description": "Allows you to choose any unlocked base weapon.",
-      "level_ups": [],
+      "level_ups": [
+        "Allows you to choose any unlocked base weapon."
+      ],
+      "limit_break": [],
       "trans_conditions": "Use Once",
       "trans_result": "Super Candybox II Turbo",
       "requirements": [],
@@ -16332,8 +20767,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Candybox. Allows to choose among a selection of advanced weapons.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gift of Candybox. Allows to choose among a selection of advanced weapons."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Super Candybox II Turbo",
@@ -16347,7 +20785,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "May retaliate when losing health.",
-      "level_ups": [],
+      "level_ups": [
+        "\"May retaliate when losing health.\"",
+        "Passes through 1 more enemy. Base Speed up by 30%.",
+        "Fires 1 more projectiles. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectiles. Base Damage up by 10.",
+        "Passes through 2 more enemies. Base Speed up by 30%.",
+        "Fires 1 more projectiles. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectiles. Passes through 3 more enemies.",
+        "Fires 1 more projectiles. Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Mazo Familiar",
       "requirements": [
@@ -16364,8 +20837,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pako Battiliar. Damage and Amount affected by Max Health.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Pako Battiliar. Damage and Amount affected by Max Health."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Mazo Familiar",
@@ -16379,7 +20880,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
-      "level_ups": [],
+      "level_ups": [
+        "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
+        "Base Area up by 10%. Passes through 3 more enemies.",
+        "Fires 1 more projectile. Base Damage up by 1.",
+        "Fires 1 more projectile. Base Damage up by 1.",
+        "Base Area up by 10%. Passes through 3 more enemies.",
+        "Fires 1 more projectile. Base Damage up by 1.",
+        "Base Damage up by 3.",
+        "Fires 2 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Gunastrophe",
       "requirements": [
@@ -16396,7 +20938,41 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
-      "level_ups": [],
+      "level_ups": [
+        "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -16413,8 +20989,24 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gunastrophe",
@@ -16428,7 +21020,40 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Gift",
       "description": "Strikes with a combo attack at the nearest enemy. Retaliates.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes with a combo attack at the nearest enemy. Retaliates.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Enables critical hits and combo finisher.",
+        "Base Damage up by 10.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Cooldown reduced by 0.3 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "20",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Sole Solution",
       "requirements": [
@@ -16445,8 +21070,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Victory Sword. The more enemies are defeated, the stronger it grows.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gift of Victory Sword. The more enemies are defeated, the stronger it grows."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sole Solution",
@@ -16460,8 +21088,43 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Emits cones of flames.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Emits cones of flames.",
+        "Base Speed up by 25%.",
+        "Base Damage up by 10.",
+        "Base Area up by 50%. Cooldown reduced by 0.5 seconds.",
+        "Base Speed up by 25%.",
+        "Base Damage up by 10.",
+        "Base Area up by 50%. Cooldown reduced by 0.5 seconds.",
+        "Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "20",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "2 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": "Ashes of Muspell",
       "requirements": [
         "Torrona's Box"
@@ -16477,8 +21140,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "20",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "2 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ashes of Muspell",
@@ -16492,7 +21183,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
-      "level_ups": [],
+      "level_ups": [
+        "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Spirit Disturbance",
       "requirements": [
@@ -16509,8 +21235,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Unearthly Bolt. Always deals critical hits.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Unearthly Bolt. Always deals critical hits."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Disturbance",
@@ -16524,7 +21272,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Stronger with movement, Orologions, and against frozen enemies",
-      "level_ups": [],
+      "level_ups": [
+        "Stronger with movement, Orologions, and against frozen enemies.",
+        "Base Area up by 10%. Base Damage up by 2.5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 2.5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 2.5.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 2.5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "30"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Celestial Voulge",
       "requirements": [
@@ -16541,8 +21318,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "30"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Celestial Voulge",
@@ -16555,8 +21354,12 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/penshin_fatcha.png",
       "category": "Base",
       "method": "Evolution",
-      "description": "A selection of aquatic armaments that can evolve endlessly. (Default)|\nChoose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved",
-      "level_ups": [],
+      "description": "A selection of aquatic armaments that can evolve endlessly. (Default)|\r\nChoose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved",
+      "level_ups": [
+        "A selection of aquatic armaments that can evolve endlessly. (Default)",
+        "Choose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved"
+      ],
+      "limit_break": [],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16571,7 +21374,64 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Basic tuna. Level up bonuses focus on Speed.",
-      "level_ups": [],
+      "level_ups": [
+        "Basic tuna. Level up bonuses focus on Speed.",
+        "Base Speed up by 10%.",
+        "Base Damage up by 10.",
+        "Base Speed up by 10%.",
+        "Fires 1 more projectile.",
+        "Base Speed up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.02",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "0.4",
+          "rarity": "5",
+          "max": "6.0 seconds;Might 0.01"
+        },
+        {
+          "stat": "Area",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.1",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "2",
+          "rarity": "5",
+          "max": "12.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "2",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16586,7 +21446,64 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Whipped tuna. Level up bonuses focus on Duration.",
-      "level_ups": [],
+      "level_ups": [
+        "Whipped tuna. Level up bonuses focus on Duration.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 10.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Speed up by 10%.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.02",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "0.4",
+          "rarity": "5",
+          "max": "6.0 seconds;Might 0.01"
+        },
+        {
+          "stat": "Area",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.1",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "2",
+          "rarity": "5",
+          "max": "12.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "2",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16601,7 +21518,64 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Freshwater tuna. Level up bonuses focus on Cooldown.",
-      "level_ups": [],
+      "level_ups": [
+        "Freshwater tuna. Level up bonuses focus on Cooldown.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Base Damage up by 10.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Effect lasts 0.3 seconds longer.",
+        "Cooldown reduced by 0.4 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.02",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "0.4",
+          "rarity": "5",
+          "max": "6.0 seconds;Might 0.01"
+        },
+        {
+          "stat": "Area",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.1",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "2",
+          "rarity": "5",
+          "max": "12.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "2",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16616,7 +21590,64 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Heavenly tuna. Level up bonuses focus on Amount.",
-      "level_ups": [],
+      "level_ups": [
+        "Heavenly tuna. Level up bonuses focus on Amount.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%.",
+        "Fires 2 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.02",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "0.4",
+          "rarity": "5",
+          "max": "6.0 seconds;Might 0.01"
+        },
+        {
+          "stat": "Area",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.1",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "2",
+          "rarity": "5",
+          "max": "12.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "2",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16631,7 +21662,64 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
-      "level_ups": [],
+      "level_ups": [
+        "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
+        "Base Area up by 10%.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Area up by 10%.",
+        "Base Damage up by 10.",
+        "Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.02",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "0.4",
+          "rarity": "5",
+          "max": "6.0 seconds;Might 0.01"
+        },
+        {
+          "stat": "Area",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.1",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "2",
+          "rarity": "5",
+          "max": "12.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "2",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16646,7 +21734,64 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Premium tuna. Level up bonuses focus on Might.",
-      "level_ups": [],
+      "level_ups": [
+        "Premium tuna. Level up bonuses focus on Might.",
+        "Base Damage up by 10.",
+        "Base Speed up by 10%.",
+        "Base Damage up by 10.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Base Damage up by 20."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.02",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "0.4",
+          "rarity": "5",
+          "max": "6.0 seconds;Might 0.01"
+        },
+        {
+          "stat": "Area",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.1",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "2",
+          "rarity": "5",
+          "max": "12.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "2",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Six Evolutions",
       "trans_result": "Miracle of Multiplication",
       "requirements": [],
@@ -16661,8 +21806,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Miracle of Multiplication",
@@ -16676,7 +21855,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Duration affects Amount. Can deal critical damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Duration affects amount. Can deal critical damage.",
+        "Base Area up by 50%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 10.",
+        "Base Area up by 50%. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base damage up by 10.",
+        "Base damage up by 30."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "10.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Seraphic Cry",
       "requirements": [
@@ -16693,7 +21913,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Duration affects Amount. Can deal critical damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Duration affects Amount. Can deal critical damage."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -16710,8 +21933,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "10.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Seraphic Cry",
@@ -16725,7 +21982,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Might Defang enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Might Defang enemies.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.2 seconds longer.",
+        "Base Area up by 15%.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.2 seconds longer.",
+        "Base Area up by 15%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "1",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Embrace of Gaea",
       "requirements": [
@@ -16742,8 +22040,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates"
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.01",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "6.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "1",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Embrace of Gaea",
@@ -16757,7 +22089,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Deals fixed damage based on Weapon Level.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Deals fixed damage based on Weapon Level.\"",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Speed up by 20%.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Speed up by 20%.",
+        "Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Kyra-Stones",
       "requirements": [
@@ -16774,8 +22135,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Kyra-Stones",
@@ -16789,7 +22172,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates thin damaging zones. High Amount scaling.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates thin damaging zones. High Amount scaling.",
+        "Fires 1 more projectile.",
+        "Base Area up by 50%. Base Damage up by 3.",
+        "Fires 1 more projectile.",
+        "Base Area up by 50%. Base Damage up by 3.",
+        "Fires 1 more projectile.",
+        "Base Area up by 50%. Base Damage up by 4.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "30"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Photonstorm",
       "requirements": [
@@ -16806,8 +22218,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Phas3r. Fires 2 to 5 times more projectiles depending on Luck.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Phas3r. Fires 2 to 5 times more projectiles depending on Luck."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.003",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.02",
+          "rarity": "10",
+          "max": "4"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "30"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Photonstorm",
@@ -16821,8 +22255,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose an extra passive weapon.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose an extra passive weapon."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Arma Dio",
@@ -16836,7 +22273,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Speed and Duration affect the number of hit boxes instead.",
-      "level_ups": [],
+      "level_ups": [
+        "Speed and Duration affect the number of hit boxes instead.",
+        "Fires 1 more projectile.",
+        "Passes through 1 more enemy.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Passes through 1 more enemy.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Wicked Ruler",
       "requirements": [
@@ -16853,8 +22331,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Chaos Rune. Exerts control over wild magical forces.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Chaos Rune. Exerts control over wild magical forces."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wicked Ruler",
@@ -16868,7 +22380,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Defeated enemies might drop hearts.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Defeated enemies might drop hearts.\"",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 5. Base Speed up by 10%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 5.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 5. Base Speed up by 10%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 5.",
+        "Fires 2 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Festive Winds",
       "requirements": [
@@ -16885,8 +22438,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Silver Wind. Weakens enemies defenses.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Silver Wind. Weakens enemies defenses."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Festive Winds",
@@ -16900,7 +22487,30 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates 4 explosions. Amount and Duration affect damage instead.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates 4 explosions. Amount and Duration affect damage instead.",
+        "Base Area up by 100%.",
+        "Base Area up by 50%.",
+        "Base Area up by 50%. Cooldown increased by 0.5 seconds.",
+        "Base Area up by 50%.",
+        "Base Area up by 50%.",
+        "Base Area up by 50%. Cooldown increased by 0.5 seconds.",
+        "Base Area up by 50%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Godai Shuffle",
       "requirements": [
@@ -16917,8 +22527,24 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Four Seasons. Generates an additional explosion.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Four Seasons. Generates an additional explosion."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Godai Shuffle",
@@ -16932,7 +22558,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones above the character.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Generates damaging zones above the character.\"",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "5"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Echo Night",
       "requirements": [
@@ -16949,8 +22610,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Summon Night. Generates damaging zones below the character.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Summon Night. Generates damaging zones below the character."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "5"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Echo Night",
@@ -16964,7 +22653,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates freezing static projectiles with a chance to explode.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Generates freezing mines with a chance to explode.\"",
+        "Effect lasts 1 seconds longer.",
+        "Effect lasts 1 seconds longer. Base Damage up by 10.",
+        "10% chance to explode.",
+        "Effect lasts 1 seconds longer.",
+        "Effect lasts 1 seconds longer. Base Damage up by 10.",
+        "20% chance to explode.",
+        "Base Damage up by 20."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "J'Odore",
       "requirements": [
@@ -16981,8 +22705,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mirage Robe. Projectiles move and confuse enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Mirage Robe. Projectiles move and confuse enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "J'Odore",
@@ -16996,7 +22754,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
-      "level_ups": [],
+      "level_ups": [
+        "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "20",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Muramasa",
       "requirements": [
@@ -17013,8 +22800,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "20",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Muramasa",
@@ -17028,7 +22843,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires lingering projectiles.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Fires lingering projectiles.\"",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "10",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Boo Roo Boolle",
       "requirements": [
@@ -17045,8 +22901,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "10",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Boo Roo Boolle",
@@ -17060,8 +22950,31 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Actually it's just 8. Damage affected by the difference between Curse and Luck.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "\"Actually it's just 8. Damages nearby enemies.\"",
+        "Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Damage up by 4."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "108 Bocce",
@@ -17075,7 +22988,28 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Strikes at nearby enemies. Damage multiplied by Speed.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Strikes at nearby enemies. Damage multiplied by Speed.\"",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 1.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 1.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "SpellStrom",
       "requirements": [
@@ -17093,7 +23027,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Generates an expanding damaging zone. Damage multiplied by Area.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Generates an expanding damaging zone. Damage multiplied by Area.\"",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Base Area up by 20%. Effect lasts 0.3 seconds longer.",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Base Area up by 20%. Effect lasts 0.3 seconds longer.",
+        "Base Area up by 20%. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "SpellStrom",
       "requirements": [
@@ -17111,7 +23072,28 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Strikes at the nearest enemy. Damage further multiplied by Might.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Stikes at the nearest enemy. Damage further multiplied by Might.\"",
+        "Cooldown reduced by 0.3 seconds.",
+        "Base Damage up by 40.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Base Damage up by 40.",
+        "Cooldown reduced by 0.3 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "SpellStrom",
       "requirements": [
@@ -17129,8 +23111,36 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "SpellStrom",
@@ -17144,7 +23154,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks nearby enemies. Retaliates.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Attacks nearby enemies. Retaliates.\"",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Base Area up by 10%. Base Damage up by 5.",
+        "Every fifth activation has a combo finisher.",
+        "Base Area up by 10%. Base Damage up by 5.",
+        "Base Damage up by 5.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Legionnaire",
       "requirements": [
@@ -17161,8 +23200,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Legionnaire",
@@ -17176,7 +23243,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Can deal critical damage. Amount affects damage instead.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Can deal critical damage. Amount affects damage instead\"",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 25%.",
+        "Passes through 7 more enemies. Base Damage up by 10.",
+        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
+        "Passes through 7 more enemies. Base Damage up by 10.",
+        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
+        "Passes through 7 more enemies. Base Damage up by 10.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 25%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Millionaire",
       "requirements": [
@@ -17193,8 +23301,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Millionaire",
@@ -17208,7 +23350,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
+        "Fires 1 more projectile. Base Area up by 40%.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Area up by 40%.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Speed up by 40%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Luminaire",
       "requirements": [
@@ -17225,8 +23408,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Prismatic Missile. Increases the value of gems and coins on the ground.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Prismatic Missile. Increases the value of gems and coins on the ground."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "2.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Luminaire",
@@ -17240,7 +23451,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Has a chance to slow enemies down.",
-      "level_ups": [],
+      "level_ups": [
+        "Has a chance to slow enemies down.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10.",
+        "Base Area up by 50%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Ophion",
       "requirements": [
@@ -17257,7 +23503,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Counterpart to Shadow Servant and Ophion from Arcana I - Gemini",
-      "level_ups": [],
+      "level_ups": [
+        "Counterpart to Shadow Servant and Ophion from Arcana I - Gemini"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -17274,8 +23523,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Shadow Servant. Has a chance to instantly kill enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Shadow Servant. Has a chance to instantly kill enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.05",
+          "rarity": "1",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ophion",
@@ -17289,8 +23566,49 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Throws bouncing projectiles.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Throws bouncing projectiles.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Speed up by 20%.",
+        "Base Damage up by 10.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Speed up by 20%.",
+        "Base Damage up by 10.",
+        "Effect lasts 1 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "10",
+          "max": "2.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Party Popper",
@@ -17304,7 +23622,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Counterpart to Party Popper from Arcana I - Gemini",
-      "level_ups": [],
+      "level_ups": [
+        "Counterpart to Party Popper from Arcana I - Gemini"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -17321,7 +23642,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damages enemies and pushes them away.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Damages enemies and pushes them away.\"",
+        "Base Damage up by 5.",
+        "Knockback factor increased by 10.",
+        "Base damage up by 10.",
+        "Knockback factor increased by 10.",
+        "Base Damage up by 10.",
+        "Knockback factor increased by 10.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Emergency Meeting",
       "requirements": [
@@ -17338,8 +23700,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Report! Occasionally destroys all of one type of enemy.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Report! Occasionally destroys all of one type of enemy."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Emergency Meeting",
@@ -17353,7 +23749,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "The amount of Luck is affected by Amount and by low Luck.",
-      "level_ups": [],
+      "level_ups": [
+        "\"The amount of attacks is affected by Amount and by low luck.\"",
+        "Base Area up by 25%.",
+        "Base Damage up by 5. Base Speed up by 10%.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Base Damage up by 5. Base Speed up by 10%.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Base Damage up by 5. Base Speed up by 10%.",
+        "Fires 1 more projectile. Base Area up by 25%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Crossed Wires",
       "requirements": [
@@ -17370,8 +23807,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lucky Swipe. Attacks in up to four directions.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Lucky Swipe. Attacks in up to four directions."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Crossed Wires",
@@ -17385,7 +23856,30 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Restores HP based on Amount and Recovery.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Restores HP based on Amount and Recovery.\"",
+        "Fires 1 more projectile. Cooldown reduced by 2 seconds.",
+        "Cooldown reduced by 2 seconds.",
+        "Fires 1 more projectile. Cooldown reduced by 2 seconds.",
+        "Cooldown reduced by 2 seconds.",
+        "Fires 1 more projectile. Cooldown reduced by 2 seconds.",
+        "Cooldown reduced by 2 seconds.",
+        "Cooldown reduced by 3 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Paranormal Scan",
       "requirements": [
@@ -17402,8 +23896,24 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lifesign Scan. Periodically grants a random stat boost for the rest of the run.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Lifesign Scan. Periodically grants a random stat boost for the rest of the run."
+      ],
+      "limit_break": [
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Paranormal Scan",
@@ -17417,7 +23927,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Destroys or heavily damages enemies. Amount affects how many times it can trigger.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Destroys or heavily damages enemies. Amount affects how many times it can trigger.\"",
+        "Vent uses increased by 1.",
+        "Base Area up by 50%.",
+        "Vent uses increased by 2.",
+        "Cooldown reduced by 1 seconds.",
+        "Vent uses increased by 2.",
+        "Base Area up by 50%.",
+        "Vent uses increased by 2."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9 seconds"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Unjust Ejection",
       "requirements": [
@@ -17434,8 +23979,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Just Vent. Sucks in enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Just Vent. Sucks in enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Unjust Ejection",
@@ -17449,7 +24022,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates projectile spawning zones that follow the player.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Generates projectile spawning zones that follow the player.\"",
+        "Effects last 0.5 seconds longer. Passes through 2 more enemies.",
+        "Base Damage up by 2. Base Speed up by 30%.",
+        "Effects last 0.5 seconds longer. Passes through 2 more enemies.",
+        "Base Damage up by 2. Base Speed up by 30%.",
+        "Effects last 0.5 seconds longer. Passes through 2 more enemies.",
+        "Fires 5 more projectiles. Base Damage up by 2.",
+        "Fires 5 more projectiles. Passes through 2 more enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Clear Asteroids",
       "requirements": [
@@ -17466,8 +24080,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Clear Debris. Amount creates cluster explosions.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Clear Debris. Amount creates cluster explosions."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Clear Asteroids",
@@ -17481,7 +24129,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes enemies in front of you. Damage multiplied by Recovery.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Licks enemies in front of you. Damage multiplied by Recovery.\"",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile. Base Area up by 20%.",
+        "Base Damage up by 10.",
+        "Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Impostongue",
       "requirements": [
@@ -17498,7 +24181,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Strikes enemies behind you. Damage multiplied by Recovery.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes enemies behind you. Damage multiplied by Recovery."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -17515,8 +24201,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sharp Tongue. Deals high damage to the strongest enemy and anything in its path.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Sharp Tongue. Deals high damage to the strongest enemy and anything in its path."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Impostongue",
@@ -17530,7 +24244,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.\"",
+        "Fires 1 more projectile. Base Area up by 30%.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Area up by 30%.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Area up by 30%.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Rocket Science",
       "requirements": [
@@ -17547,8 +24296,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Science Rocks. Triggers a finisher when the right conditions are met.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Science Rocks. Triggers a finisher when the right conditions are met."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rocket Science",
@@ -17562,8 +24339,49 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Throws cute bouncing projectiles with random properties.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Throws cute bouncing projectiles with random properties.",
+        "Base Area up by 10%. Effect lasts 0.4 seconds longer.",
+        "Fires 1 more projectiles. Base Damage up by 5.",
+        "Base Area up by 10%. Effect lasts 0.4 seconds longer.",
+        "Fires 1 more projectiles. Base Damage up by 5.",
+        "Base Area up by 10%. Effect lasts 0.4 seconds longer.",
+        "Fires 1 more projectiles. Base Damage up by 5.",
+        "Base Speed up by 50%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Hats",
@@ -17577,7 +24395,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires constantly in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires constantly in the faced direction.",
+        "Cooldown reduced by 20ms.",
+        "Cooldown reduced by 20ms.",
+        "Cooldown reduced by 20ms.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 20ms.",
+        "Passes through 1 more enemy.",
+        "Cooldown reduced by 20ms."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Prototype A",
       "requirements": [
@@ -17594,8 +24447,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Long Gun. Calls forth 2 drones for support fire.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Long Gun. Calls forth 2 drones for support fire."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype A",
@@ -17609,7 +24496,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires bursts of decaying projectiles horizontally.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires bursts of decaying projectiles horizontally.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 10.",
+        "Passes through 1 more enemy.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 10.",
+        "Passes through 1 more enemy.",
+        "Base Damage up by 20."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Prototype B",
       "requirements": [
@@ -17627,8 +24555,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Short Gun. Calls forth 2 drones for support fire.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Short Gun. Calls forth 2 drones for support fire."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype B",
@@ -17642,7 +24604,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires in a wide spread in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires in a wide spread in the faced direction.",
+        "Fires 2 more projectiles.",
+        "Fires 2 more projectiles. Base Speed up by 50%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.",
+        "Fires 2 more projectiles. Base Speed up by 50%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.",
+        "Fires 2 more projectiles. Base Speed up by 50%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Prototype C",
       "requirements": [
@@ -17660,8 +24663,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Spread Shot. Calls forth 2 drones for support fire.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Spread Shot. Calls forth 2 drones for support fire."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Prototype C",
@@ -17675,7 +24712,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a piercing projectile in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a piercing projectile in the faced direction.",
+        "Base Damage up by 5. Base Speed up by 20%.",
+        "Effect lasts 0.2 seconds longer. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5. Base Speed up by 20%.",
+        "Effect lasts 0.2 seconds longer. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.4 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pronto Beam",
       "requirements": [
@@ -17693,8 +24765,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved C-U-Laser. Lasers split into multiple beams when they hit.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved C-U-Laser. Lasers split into multiple beams when they hit."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pronto Beam",
@@ -17708,7 +24808,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles at the nearest enemy.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires spinning projectiles at the nearest enemy.",
+        "Fires 1 more projectiles.",
+        "Base Speed up by 30%",
+        "Base Damage up by 10.",
+        "Fires 1 more projectiles.",
+        "Base Speed up by 30%.",
+        "Base Damage up by 10.",
+        "Base Speed up by 40%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Fire-L3GS",
       "requirements": [
@@ -17726,8 +24861,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Firearm. Fires again when destroying a light source or destructible item.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Firearm. Fires again when destroying a light source or destructible item."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Fire-L3GS",
@@ -17741,7 +24910,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires growing projectiles in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires growing projectiles in the faced direction.",
+        "Base Area up by 50%. Passes through 1 more enemy.",
+        "Fires 1 more projectile. Effect lasts 4 seconds longer.",
+        "Base Area up by 50%. Base Damage up by 5.",
+        "Cooldown reduced by 0.5 seconds. Passes through 1 more enemy.",
+        "Fires 1 more projectile. Effect lasts 4 seconds longer.",
+        "Base Area up by 50%. Base Damage up by 5.",
+        "Effect lasts 4 seconds longer. Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Wave Beam",
       "requirements": [
@@ -17759,8 +24969,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wave Beam",
@@ -17774,7 +25012,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires exploding projectiles that home in on enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires exploding projectiles that home in on enemies.",
+        "Fires 1 more projectiles.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Passes through 1 more enemy.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectiles.",
+        "Passes through 1 more enemy.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Multistage Missiles",
       "requirements": [
@@ -17792,8 +25065,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Homing Miss. Projectiles split into smaller ones when they hit.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Homing Miss. Projectiles split into smaller ones when they hit."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Multistage Missiles",
@@ -17807,7 +25108,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires explosive projectiles that travel along walls.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires explosive projectiles that travel along walls.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 10.",
+        "Fires 1 more projectile. Base Speed up by 40%.",
+        "Base Area up by 30%. Base Damage up by 10.",
+        "Fires 1 more projectile. Effect lasts 5 seconds longer.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 10.",
+        "Fires 1 more projectile. Effect lasts 5 seconds longer.",
+        "Effect lasts 10 seconds longer. Base Speed up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Atmo-Torpedo",
       "requirements": [
@@ -17825,8 +25167,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Diver Mines. Creates damaging zones that attract enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Diver Mines. Creates damaging zones that attract enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Atmo-Torpedo",
@@ -17840,7 +25216,54 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires homing projectiles that spin in place when they hit.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires homing projectiles that spin in place when they hit.",
+        "Baase Damage up by 10.",
+        "Effect lasts 0.1 seconds longer. Base Speed up by 25%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.1 seconds.",
+        "Base Damage up by 10.",
+        "Effect lasts 0.1 seconds longer. Base Speed up by 25%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.1 seconds.",
+        "Effect lasts 0.2 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "BFC2000-AD",
       "requirements": [
@@ -17858,8 +25281,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "BFC2000-AD",
@@ -17873,7 +25330,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Has a small chance to freeze enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Has a small chance to freeze enemies.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 5.",
+        "Base Area up by 20%. Base Speed up by 20%.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Time Warp",
       "requirements": [
@@ -17891,7 +25383,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Has a small chance to freeze enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Has a small chance to freeze enemies."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -17908,8 +25403,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Prism Lass. May freeze, slow down, or DeFang enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Prism Lass. May freeze, slow down, or DeFang enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "3.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Time Warp",
@@ -17923,7 +25452,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Cooldown is affected by missing health.",
-      "level_ups": [],
+      "level_ups": [
+        "Cooldown is affected by missing health.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
+        "Base Area up by 50%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
+        "Base Area up by 50%. Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Area up by 50%. Base Damage up by 5.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Big Fuzzy Fist",
       "requirements": [
@@ -17941,8 +25505,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Metal Claw. Pummels the most powerful enemies in sight.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Metal Claw. Pummels the most powerful enemies in sight."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "2"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Big Fuzzy Fist",
@@ -17956,7 +25548,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Grows stronger every time a boss enemy is defeated.",
-      "level_ups": [],
+      "level_ups": [
+        "Grows stronger every time a boss enemy is defeated.",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Base Damage up by 10.",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Base Damage up by 10.",
+        "Base Area up by 20%. Base Damage up by 5.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vampire Killer",
       "requirements": [
@@ -17973,8 +25594,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Alchemy Whip. Every 3rd activation fires additional projectiles. Intense sunlught incinerates boss enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Alchemy Whip. Every 3rd activation fires additional projectiles. Intense sunlught incinerates boss enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vampire Killer",
@@ -17988,7 +25631,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damage affected by growth.",
-      "level_ups": [],
+      "level_ups": [
+        "Damage affected by growth.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Base Area up by 20%.",
+        "Base Damage up by 5.",
+        "Base Area up by 20%.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 0.2 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Spirit Tornado Tip",
       "requirements": [
@@ -18005,8 +25677,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Wind Whip. Every 7th activation summons a spirit that violently collects XP gems for you.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Wind Whip. Every 7th activation summons a spirit that violently collects XP gems for you."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spirit Tornado Tip",
@@ -18020,7 +25714,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Every 3rd activation fires projectiles in fixed directions.",
-      "level_ups": [],
+      "level_ups": [
+        "Every 3rd activation fires projectiles in fixed directions.",
+        "Fires 1 more projectile. Passes through 2 more enemies.",
+        "Base Area up by 20%. Base Damage up by 10.",
+        "Fires 1 more projectile. Passes through 2 more enemies.",
+        "Base Damage up by 10. Base Speed up by 20%.",
+        "Fires 1 more projectile. Passes through 2 more enemies.",
+        "Cooldown reduced by 1 seconds. Base Damage up by 10.",
+        "Passes through 6 more enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Cross Crasher Tip",
       "requirements": [
@@ -18037,8 +25766,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Platinum Whip. Every 7th activation also fires special projectiles.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Platinum Whip. Every 7th activation also fires special projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cross Crasher Tip",
@@ -18052,7 +25809,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Every 7th activation fires a snaking dragon projectile.",
-      "level_ups": [],
+      "level_ups": [
+        "Every 7th activation fires a snaking dragon projectile.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base area up by 20%.",
+        "Base damage up by 10.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base area up by 20%.",
+        "Base damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydrostormer Tip",
       "requirements": [
@@ -18069,8 +25867,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Dragon Water Whip. Every 13th activation generates damaging waves based on Projectile Speed and Duration.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Dragon Water Whip. Every 13th activation generates damaging waves based on Projectile Speed and Duration."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Hydrostormer Tip",
@@ -18084,7 +25916,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Chance to instant kill based on curse.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Chance to instant kill based on curse.\"",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 30%.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Area up by 30%.",
+        "Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "500"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Crissaegrim Tip",
       "requirements": [
@@ -18101,8 +25968,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Whip. Every 5th activation also triggers a blast of damaging waves.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Sonic Whip. Every 5th activation also triggers a blast of damaging waves."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "500"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Crissaegrim Tip",
@@ -18116,7 +26011,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a linear damaging zone.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes at the nearest enemy and generates a linear damaging zone.",
+        "Base damage up by 10.",
+        "Fires 2 more projectile.",
+        "Base area up by 30%.",
+        "Base damage up by 10.",
+        "Fires 2 more projectile.",
+        "Cooldown reduced by 1 seconds.",
+        "Fires 2 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Mormegil Tip",
       "requirements": [
@@ -18133,8 +26057,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Jet Black Whip. Every 8th activation also triggers damaging zones.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Jet Black Whip. Every 8th activation also triggers damaging zones."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Mormegil Tip",
@@ -18148,7 +26094,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a cluster of explosions.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Strikes at the nearest enemy and generates a cluster of explosions.\"",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Might",
+          "value": "0",
+          "rarity": "0.05",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "2",
+          "rarity": "0.05",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "",
+          "max": ""
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Daybreaker Tip",
       "requirements": [
@@ -18165,8 +26146,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Vibhuti Whip. Critical hits maximise amount of projectiles.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Vibhuti Whip. Critical hits maximise amount of projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Might",
+          "value": "0",
+          "rarity": "0.05",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "2",
+          "rarity": "0.05",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "",
+          "max": ""
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Daybreaker Tip",
@@ -18180,7 +26189,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
+        "Base Area up by 20%.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 10.",
+        "Fires 2 more projectiles.Base Area up by 20%.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 10. Base Area up by 20%.",
+        "Fires 2 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Aurablaster Tip",
       "requirements": [
@@ -18197,8 +26235,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Vanitas Whip. Every 7th activation generates an explosion.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Vanitas Whip. Every 7th activation generates an explosion."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "100"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Aurablaster Tip",
@@ -18212,7 +26278,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires projectiles in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires projectiles in the faced direction.",
+        "Fires 1 more projectile.",
+        "Pass through 1 more enemy.",
+        "Fires 1 more projectile. Base damage up by 5.",
+        "Pass through 1 more enemy.",
+        "Fires 1 more projectile.",
+        "Pass through 1 more enemy. Base damage up by 5.",
+        "Fires 2 more projectile."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Yagyu Shuriken",
       "requirements": [
@@ -18229,8 +26305,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Shuriken. Fires with no delay.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Shuriken. Fires with no delay."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Yagyu Shuriken",
@@ -18244,7 +26323,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a spinning projectile at random enemy.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a spinning projectile at random enemy.",
+        "Passes through 1 more enemy.",
+        "Effect lasts 0.5 second longer. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Passes through 1 more enemy.",
+        "Effect lasts 0.5 seconds longer.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Passes through 2 more enemies."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Bwaka Knife",
       "requirements": [
@@ -18261,8 +26350,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Curved Knife. Projectiles bounce forever until Duration expires.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Curved Knife. Projectiles bounce forever until Duration expires."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Bwaka Knife",
@@ -18276,7 +26368,54 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a penetrating projectile in a fixed direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a penetrating projectile in a fixed direction.",
+        "Passes through 2 more enemies.",
+        "Fires 1 more projectile.",
+        "Base damage up by 10.",
+        "Passes through 2 more enemies.",
+        "Fires 1 more projectile.",
+        "Passes through 2 more enemies. Base damage up by 10.",
+        "Fires 1 more projectile. Passes through 2 more enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Long Inus",
       "requirements": [
@@ -18293,8 +26432,48 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Javelin. Projectiles reappear after leaving the screen.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Javelin. Projectiles reappear after leaving the screen."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Long Inus",
@@ -18308,7 +26487,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a defensive projectile.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a defensive projectile.",
+        "Base damage up by 5.",
+        "Base area up by 20%. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile.",
+        "Base damage up by 5.",
+        "Base area up by 20%. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile.",
+        "Base damage up by 5."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Stellar Blade",
       "requirements": [
@@ -18325,8 +26514,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Discus. Travels along walls. Deals critical damage if the user is invulnerable.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Discus. Travels along walls. Deals critical damage if the user is invulnerable."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Stellar Blade",
@@ -18340,7 +26532,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Damage affected by Armor.",
-      "level_ups": [],
+      "level_ups": [
+        "Damage affected by Armor",
+        "Base area up by 25%. Cooldown reduced by 0.2 seconds.",
+        "Base damage up by 10.",
+        "Base area up by 25%. Cooldown reduced by 0.2 seconds.",
+        "Base damage up by 10.",
+        "Base area up by 25%. Cooldown reduced by 0.2 seconds.",
+        "Base damage up by 10.",
+        "Base damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Wrecking Ball",
       "requirements": [
@@ -18357,8 +26584,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Iron Ball. Fires a very heavy projectile.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Iron Ball. Fires a very heavy projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wrecking Ball",
@@ -18372,7 +26627,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a powerful projectiles, six times.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a powerful projectile, six times.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 20.",
+        "Fires 2 more projectiles.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 20.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 20."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Jewel Gun",
       "requirements": [
@@ -18389,8 +26654,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Silver Revolver. Critical hits instantly kill enemies and turn them into Jewels.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Silver Revolver. Critical hits instantly kill enemies and turn them into Jewels."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Jewel Gun",
@@ -18404,7 +26703,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires an exploding projectile.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires an exploding projectile.",
+        "Fires 1 more projectile.",
+        "Base area up by 20%.",
+        "Base damage up by 10.",
+        "Cooldown reduced by 1 seconds.",
+        "Base damage up by 20.",
+        "Fires 1 more projectile.",
+        "Base damage up by 20."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "The RPG",
       "requirements": [
@@ -18421,8 +26749,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hand Grenade. Explosions propagate.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Hand Grenade. Explosions propagate."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "The RPG",
@@ -18436,7 +26786,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws an exploding projectile.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws an exploding projectile.",
+        "Fires 1 more projectile.",
+        "Base Speed up by 30%.",
+        "Base Area up by 20%. Base Damage up by 2.",
+        "Fires 1 more projectile.",
+        "Base Speed up by 30%.",
+        "Base Area up by 20%. Base Damage up by 2.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Meal Ticket",
       "requirements": [
@@ -18453,8 +26838,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Wine Glass. Soulful food deals Revival-based damage to unrefined palates.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Wine Glass. Soulful food deals Revival-based damage to unrefined palates."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Meal Ticket",
@@ -18468,7 +26881,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates an exploding damaging zone.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates an exploding damaging zone.",
+        "Base area up by 20%.Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.3 seconds longer.Base damage up by 10.",
+        "Base area up by 30%.Base damage up by 10.",
+        "Base area up by 20%.Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.3 seconds longer.Base damage up by 10.",
+        "Base area up by 30%.Base damage up by 10.",
+        "Fires 3 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Salamender",
       "requirements": [
@@ -18485,7 +26939,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Raging Fire and Salamender",
-      "level_ups": [],
+      "level_ups": [
+        "Mirrors both Raging Fire and Salamender"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18502,8 +26959,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Raging Fire. Also summons a snake of fire.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Raging Fire. Also summons a snake of fire."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Salamender",
@@ -18517,7 +27008,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones in a straight line.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates damaging zones in a straight line.",
+        "Base area up by 15%. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile. Base damage up by 5.",
+        "Base area up by 15%. Base damage up by 5.",
+        "Base area up by 15%. Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.5 seconds longer. Base damage up by 5.",
+        "Base damage up by 5.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "100",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Cocytus",
       "requirements": [
@@ -18534,7 +27066,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Ice Fang and Cocytus",
-      "level_ups": [],
+      "level_ups": [
+        "Mirrors both Ice Fang and Cocytus"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18551,8 +27086,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Ice Fang. Also triggers a freezing wind.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Ice Fang. Also triggers a freezing wind."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "100",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cocytus",
@@ -18566,7 +27135,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires light-hitting projectiles backwards.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires light-hitting projectiles backwards.",
+        "Base Damage up by 2. Base Speed up by 50%.",
+        "Fires 1 more Projectile. Base Area up by 30%.",
+        "Base Damage up by 2. Base Speed up by 50%.",
+        "Fires 1 more Projectile. Base Area up by 30%.",
+        "Base Damage up by 2. Base Speed up by 50%.",
+        "Fires 1 more Projectile. Base Area up by 30%.",
+        "Base Damage up by 4."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Pneuma Tempestas",
       "requirements": [
@@ -18583,7 +27193,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Point symmetries both Gale Force and Pneuma Tempestas upside down",
-      "level_ups": [],
+      "level_ups": [
+        "Point symmetries both Gale Force and Pneuma Tempestas upside down"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18600,8 +27213,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gale Force. Also triggers a spinning tornado.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Gale Force. Also triggers a spinning tornado."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pneuma Tempestas",
@@ -18615,7 +27262,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires projectiles from a fixed location.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires projectiles from a fixed location.",
+        "Base Area up by 20%. Cooldown reduce by 0.5 seconds.",
+        "Effects lasts 0.5 seconds longer. Base damage up by 10.",
+        "Base Area up by 20%. Base damage up by 10.",
+        "Base Area up by 10%. Cooldown reduce by 0.5 seconds.",
+        "Effects lasts 0.3 seconds longer. Base damage up by 10.",
+        "Base Area up by 30%. Base damage up by 10.",
+        "Fires 3 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Gemma Torpor",
       "requirements": [
@@ -18632,7 +27320,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Rock Riot and Gemma Torpor",
-      "level_ups": [],
+      "level_ups": [
+        "Mirrors both Rock Riot and Gemma Torpor"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18649,8 +27340,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Rock Riot. Also triggers a rain of crystals that can turn enemies into valuable jewels.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Rock Riot. Also triggers a rain of crystals that can turn enemies into valuable jewels."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gemma Torpor",
@@ -18664,7 +27389,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at fixed locations.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes at fixed locations.",
+        "Base area up by 10%. Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.3 seconds longer. Base damage up by 3.",
+        "Fires 3 more projectiles.",
+        "Base area up by 10%. Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.3 seconds longer. Base damage up by 3.",
+        "Fires 3 more projectiles.",
+        "Base area up by 10%. Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Tenebris Tonitrus",
       "requirements": [
@@ -18681,7 +27447,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors Fulgur and doubles Tenebris Tonitrus",
-      "level_ups": [],
+      "level_ups": [
+        "Mirrors Fulgur and doubles Tenebris Tonitrus"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18698,8 +27467,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Fulgur. Also triggers ball lightnings.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Fulgur. Also triggers ball lightnings."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Tenebris Tonitrus",
@@ -18713,7 +27516,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires slow moving damaging zones.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires slow moving damaging zones.",
+        "Effect lasts 0.3 seconds longer. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile. Base Damage up by 2.5.",
+        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile. Base Damage up by 2.5.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 2.5. Base Speed up by 20%.",
+        "Fires 1 more projectile. Base Damage up by 2.5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Keremet Morbus",
       "requirements": [
@@ -18730,7 +27574,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Copies Keremet Bubbles. Has no effect on Keremet Morbus.",
-      "level_ups": [],
+      "level_ups": [
+        "Copies Keremet Bubbles. Has no effect on Keremet Morbus."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18747,8 +27594,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Keremet Bubbles. Also triggers a slimy swarm that chases enemies down.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Keremet Bubbles. Also triggers a slimy swarm that chases enemies down."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Keremet Morbus",
@@ -18762,7 +27643,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates a moving damaging zone. Damage affected by Curse.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates a moving damaging zone. Damage affected by Curse.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
+        "Base Area up by 10%. Base Speed up by 10%.",
+        "Fires 3 more projectiles.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 5.",
+        "Base Area up by 10%. Base Speed up by 10%.",
+        "Effect lasts 1 seconds longer.",
+        "Cooldown reduced by 0.5 seconds. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Nightmare",
       "requirements": [
@@ -18779,7 +27701,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Hex and Nightmare",
-      "level_ups": [],
+      "level_ups": [
+        "Mirrors both Hex and Nightmare"
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18796,8 +27721,48 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hex. Also tirggers a negative energy zone that doubles Curse when stepped into.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Hex. Also tirggers a negative energy zone that doubles Curse when stepped into."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 Seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Nightmare",
@@ -18811,7 +27776,48 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Generates a damaging zone that also provides light healing.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates a damaging zone that also provides light healing.",
+        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 10.",
+        "Base Area up by 30%. Base Damage up by 10.",
+        "Base Area up by 20%. Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 10.",
+        "Base Area up by 30%. Base Damage up by 10.",
+        "Fires 3 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Sanctuary",
       "requirements": [
@@ -18828,7 +27834,10 @@ window.VS_DATA = {
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Point symmetries Refectio. Has no effect on Sanctuary.",
-      "level_ups": [],
+      "level_ups": [
+        "Point symmetries Refectio. Has no effect on Sanctuary."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": null,
       "requirements": [
@@ -18845,8 +27854,42 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Refectio. At fixed intervals, also fully heals characters and purifies all enemies in sight.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Refectio. At fixed intervals, also fully heals characters and purifies all enemies in sight."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "100",
+          "max": "5 seconds"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sanctuary",
@@ -18860,7 +27903,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Amount affects number of hits.",
-      "level_ups": [],
+      "level_ups": [
+        "Amount affects number of hits.",
+        "Effect lasts 0.2 seconds longer.",
+        "Base damage up by 20.",
+        "Base Area up by 20%.",
+        "Effect lasts 0.2 seconds longer.",
+        "Effect lasts 0.1 seconds longer. Base damage up by 10.",
+        "Base Area up by 10%. Base damage up by 10.",
+        "Base Area up by 10%. Effect lasts 0.1 seconds longer."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Stamazza",
       "requirements": [
@@ -18877,8 +27930,48 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mace. Has a catastrophically high critical damage multiplier.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Mace. Has a catastrophically high critical damage multiplier."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Stamazza",
@@ -18892,7 +27985,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires lingering projectiles. Damage multiplied by Recovery.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires lingering projectiles. Damage multiplied by Recovery.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 30%.",
+        "Base Area up by 10%. Effect lasts 0.5 seconds longer.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 30%.",
+        "Base Area up by 10%. Effect lasts 0.5 seconds longer.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Moon Rod",
       "requirements": [
@@ -18909,8 +28012,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Star Flail. Projectiles are shot in the faced direction.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Star Flail. Projectiles are shot in the faced direction."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Moon Rod",
@@ -18924,7 +28030,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Executes a spinning attack when changing horizontal direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Executes a spinning attack when changing horizontal direction.",
+        "Base area up by 30%. Base damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base damage up by 10.",
+        "Base area up by 30%. Base damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base damage up by 10.",
+        "Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Thunderbolt Spear",
       "requirements": [
@@ -18941,8 +28057,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Alucard Spear. Every 7th activation triggers a special attack based on speed.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Alucard Spear. Every 7th activation triggers a special attack based on speed."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Thunderbolt Spear",
@@ -18956,7 +28075,36 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at fixed locations.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes at fixed locations.",
+        "Fires 1 more projectiles.",
+        "Base Area up by 20%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.",
+        "Fires 1 more projectiles.",
+        "Base Area up by 20%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 10.",
+        "Fires 1 more projectile. Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Gungnir-Souris",
       "requirements": [
@@ -18973,8 +28121,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Trident. Critical hits also fire a damaging beam.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Trident. Critical hits also fire a damaging beam."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Crit Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gungnir-Souris",
@@ -18988,7 +28164,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Retaliates by shooting lingering projectiles.",
-      "level_ups": [],
+      "level_ups": [
+        "Retaliates by shooting lingering projectiles.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.5 seconds longer.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Speed up by 20%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dark Iron Shield",
       "requirements": [
@@ -19005,8 +28191,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Iron Shield. Critical hits retaliate with spinning swords.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Iron Shield. Critical hits retaliate with spinning swords."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dark Iron Shield",
@@ -19020,7 +28209,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Summons defensive followers. Overhealing triggers additional follower's attacks.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons defensive followers. Overhealing triggers additional follower's attacks.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.5 seconds longer.",
+        "Fires 1 more projectile.",
+        "Base Area up by 20%. Base Speed up by 20%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": ""
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": ""
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Sacred Beasts Tower Shield",
       "requirements": [
@@ -19037,8 +28261,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Guardian's Targe. Overhealing also triggers a period of invulnerability.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Guardian's Targe. Overhealing also triggers a period of invulnerability."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Beasts Tower Shield",
@@ -19052,7 +28304,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Has boomerang effect, can deal critical damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Has boomerang effect, can deal critical damage.",
+        "Base Area up by 20%. Base Speed up by 25%",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Area up by 20%. Base Speed up by 25%.",
+        "Fires 1 more projectile. Base Damage up by 5.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Rune Sword",
       "requirements": [
@@ -19069,8 +28331,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Tyrfing. Critical damage also affected by Area, Speed, and Duration.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Tyrfing. Critical damage also affected by Area, Speed, and Duration."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rune Sword",
@@ -19084,8 +28349,18 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Allegedly strikes at the nearest enemy.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allegedly strikes at the nearest enemy.",
+        "Base damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base damage up by 10."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": "Alucard Swords",
       "requirements": [],
       "final_state": "Alucard Shield",
@@ -19099,7 +28374,17 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
+        "Base damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base area up by 25%.",
+        "Fires 1 more projectile.",
+        "Base damage up by 10.",
+        "Fires 1 more projectile.",
+        "Base area up by 25%."
+      ],
+      "limit_break": [],
       "trans_conditions": "Special",
       "trans_result": "Alucard Shield",
       "requirements": [],
@@ -19114,8 +28399,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Alucard Swords. Absorbs and triggers all other equipped evolutions. Hovering shield damages enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gift of Alucard Swords. Absorbs and triggers all other equipped evolutions. Hovering shield damages enemies."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Alucard Shield",
@@ -19129,7 +28417,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Attack nearby enemies. Speed affects damage.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 4.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Vol Confodere",
       "requirements": [],
@@ -19144,7 +28459,34 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects Damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Attack nearby enemies. Speed affects damage.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 4.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Melio Confodere",
       "requirements": [],
@@ -19159,8 +28501,35 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Attack nearby enemies. Speed affects Cooldown and Damage.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Attack nearby enemies. Speed affects Cooldown and Damage.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 4.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Melio Confodere",
@@ -19174,7 +28543,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires two bouncing projectiles. Amount affects Duration.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires two bouncing projectiles. Amount affects Duration.",
+        "Base Damage up by 3. Base Speed up by 50%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 3.",
+        "Base Area up by 25%. Base Speed up by 50%.",
+        "Base Damage up by 3. Base Speed up by 50%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 3.",
+        "Base Area up by 25%. Base Speed up by 50%.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0025",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "",
+          "max": ""
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Nitesco",
       "requirements": [
@@ -19190,8 +28594,18 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/speculo_globus.png",
       "category": "Counterpart",
       "method": "Arcana",
-      "description": "",
-      "level_ups": [],
+      "description": "Fires two bouncing projectiles. Amount affects Duration.",
+      "level_ups": [
+        "Fires two bouncing projectiles. Amount affects Duration.",
+        "Base Damage up by 3. Base Speed up by 50%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 3.",
+        "Base Area up by 25%. Base Speed up by 50%.",
+        "Base Damage up by 3. Base Speed up by 50%.",
+        "Effect lasts 0.3 seconds longer. Base Damage up by 3.",
+        "Base Area up by 25%. Base Speed up by 50%.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [],
       "trans_conditions": "Gemini (I)",
       "trans_result": "Nitesco",
       "requirements": [
@@ -19208,8 +28622,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Globus. Fires a piercing energy beam in the faced direction.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Globus. Fires a piercing energy beam in the faced direction."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.0025",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "",
+          "max": ""
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "",
+          "max": ""
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Nitesco",
@@ -19223,7 +28665,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires two penetrating projectiles.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires two penetrating projectiles.",
+        "Fires 1 more projectile.",
+        "Base Area up by 25%. Base Speed up by 20%.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10.",
+        "Base Damage up by 10.",
+        "Base Area up by 25%. Base Speed up by 20%.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Acerbatus",
       "requirements": [
@@ -19240,8 +28717,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Optical Shot. Damage is affected by the amount of defeated enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Optical Shot. Damage is affected by the amount of defeated enemies."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Acerbatus",
@@ -19255,7 +28760,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' fiery head in faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons Cerberus' fiery head in faced direction.",
+        "Base Area up by 10%.",
+        "Base Damage up by 20.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 20.",
+        "Fires 1 more projectile. Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Trinum Custodem",
       "requirements": [
@@ -19273,7 +28805,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' icy head in faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons Cerberus' icy head in faced direction.",
+        "Base Area up by 10%.",
+        "Base Damage up by 20.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 20.",
+        "Fires 1 more projectile. Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Trinum Custodem",
       "requirements": [
@@ -19291,7 +28850,28 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
-      "level_ups": [],
+      "level_ups": [
+        "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Area up by 10%. Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Area up by 20%. Cooldown reduced by 0.1 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Trinum Custodem",
       "requirements": [
@@ -19309,8 +28889,11 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Dextro Custos, Sinestro Custos, and Centralis Custos.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Dextro Custos, Sinestro Custos, and Centralis Custos."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Trinum Custodem",
@@ -19324,7 +28907,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires a penetrating projectile. Drains health.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires a penetrating projectile. Drains health.",
+        "Base Speed up by 50%.",
+        "Base Damage up by 20.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 20.",
+        "Cooldown reduced by 1 second."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Power of Sire",
       "requirements": [
@@ -19342,7 +28933,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Fires projectiles from above. Drains health.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires projectiles from above. Drains Health.",
+        "Passes through 1 more enemy. Base Speed up by 50%.",
+        "Passes through 2 more enemies. Base Damage up by 20.",
+        "Base Area up by 30%. Passes through 3 more enemies.",
+        "Fires 2 more projectiles. Passes through 4 more enemies.",
+        "Cooldown reduced by 1 seconds. Passes through 5 more enemies."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Power of Sire",
       "requirements": [
@@ -19360,7 +28959,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Increases Might, Speed, Duration, and Area. Drains Health.",
-      "level_ups": [],
+      "level_ups": [
+        "Increases Might, Speed, Duration, and Area. Drains Health.",
+        "Increases total Area, Might, Speed and Duration by 8%",
+        "Increases total Area, Might, Speed and Duration by 8%",
+        "Increases total Area, Might, Speed and Duration by 8%",
+        "Increases total Area, Might, Speed and Duration by 8%",
+        "Increases total Area, Might, Speed and Duration by 8%"
+      ],
+      "limit_break": [
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Power of Sire",
       "requirements": [
@@ -19378,8 +29004,11 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Dominus Anger, Dominus Hatred and Dominus Agony. Deals critical damage to anything in sight. Drains health.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Dominus Anger, Dominus Hatred and Dominus Agony. Deals critical damage to anything in sight. Drains health."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Power of Sire",
@@ -19393,7 +29022,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.5 seconds longer. Base damage up by 2.5.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Effect lasts 0.5 seconds longer. Base damage up by 2.5.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
       "trans_result": "Rapidus Fio",
       "requirements": [
@@ -19410,8 +29049,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Dash. Also triggers a single shield charge.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Sonic Dash. Also triggers a single shield charge."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rapidus Fio",
@@ -19425,7 +29067,52 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles made of light.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires spinning projects made of light.",
+        "Base Damage up by 2.",
+        "Base Area up by 20%.",
+        "Base Speed up by 20%.",
+        "Effect lasts 0.4 seconds longer.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Vol Luminatio",
       "requirements": [
@@ -19442,8 +29129,50 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
+        "Base Area up by 20%. Base Speed up by 20%.",
+        "Fires 1 more projectile. Base Damage up by 3."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": "Universitas",
       "requirements": [
         "Vol Umbra"
@@ -19459,7 +29188,52 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles made of darkness.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires spinning projects made of darkness.",
+        "Base Damage up by 2.",
+        "Base Area up by 20%.",
+        "Base Speed up by 20%.",
+        "Effect lasts 0.4 seconds longer.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Vol Umbra",
       "requirements": [
@@ -19476,8 +29250,50 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
+        "Base Area up by 20%. Base Speed up by 20%.",
+        "Fires 1 more projectile. Base Damage up by 3."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.01",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": "Universitas",
       "requirements": [
         "Vol Luminatio"
@@ -19493,8 +29309,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Gift of Vol Luminatio and Vol Umbra. Meteors rain down on enemies at fixed intervals.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gift of Vol Luminatio and Vol Umbra. Meteors rain down on enemies at fixed intervals."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Universitas",
@@ -19508,8 +29327,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of magic whips.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose from a selection of magic whips."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Morning Star",
@@ -19523,8 +29345,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of vampire-killing tools.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose from a selection of vampire-killing tools."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Coat of Arms",
@@ -19538,8 +29363,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of magic weapons.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose from a selection of magic weapons."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Spectral Sword",
@@ -19553,8 +29381,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of spells.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose from a selection of spells."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Belnades' Spellbook",
@@ -19568,8 +29399,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of ambiguous powers.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose from a selection of ambiguous powers."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ebony Diabologue",
@@ -19583,7 +29417,54 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a short-lived knife in the faced direction.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws a short-lived knife in the faced direction.",
+        "Fires 1 more projectile.",
+        "Passes throuch 1 more enemy. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Passes through 1 more enemy. Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Passes through 1 more enemy. Base Damage up by 5."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Pierce",
+          "value": "1",
+          "rarity": "5",
+          "max": "20"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Claimh Solais",
       "requirements": [
@@ -19600,8 +29481,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pocket Knife. Globally increases Might, Armor and Crit Damage for each enemy in sight.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Pocket Knife. Globally increases Might, Armor and Crit Damage for each enemy in sight."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Critical Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Claimh Solais",
@@ -19615,7 +29524,43 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [],
+      "level_ups": [
+        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
+        "Base Area up by 10%.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -19634,7 +29579,43 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [],
+      "level_ups": [
+        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 10%.",
+        "Base Area up by 10%.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -19653,7 +29634,43 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [],
+      "level_ups": [
+        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
+        "Base Damage up by 10.",
+        "Base Speed up by 50%.",
+        "Base Damage up by 10.",
+        "Base Speed up by 50%.",
+        "Base Damage up by 10.",
+        "Base Speed up by 50%.",
+        "Base Damage up by 10.",
+        "Base Speed up by 50%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -19672,7 +29689,43 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
-      "level_ups": [],
+      "level_ups": [
+        "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
+        "Effect lasts 0.5 seconds longer.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 20%.",
+        "Effect lasts 0.5 seconds longer.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 20%.",
+        "Effect lasts 0.5 seconds longer.",
+        "Cooldown reduced by 0.5 seconds. Base Speed up by 20%.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Damage up by 10."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Clock Tower",
       "requirements": [
@@ -19691,8 +29744,11 @@ window.VS_DATA = {
       "category": "Union",
       "method": null,
       "description": "Union of Endo Gears, Peri Pendulum, Myo Lift, and Epi Heads.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Union of Endo Gears, Peri Pendulum, Myo Lift, and Epi Heads."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Clock Tower",
@@ -19706,8 +29762,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to summon a familiar.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to summon a familiar."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Familiar Forge",
@@ -19721,8 +29780,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Runs toward and distract enemies. Attacks with a Svarog Statue (level 3)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Runs toward and distract enemies. Attacks with a Svarog Statue (level 3)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Ukoback",
@@ -19736,8 +29798,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Garlic (level 7)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to the character. Attacks with a Garlic (level 7)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Bitterfly",
@@ -19751,8 +29816,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Moves opposite to the character's movement and distract enemies. Attacks with a Summon Spirit (level 7)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Moves opposite to the character's movement and distract enemies. Attacks with a Summon Spirit (level 7)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Alleged Ghost",
@@ -19766,8 +29834,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to enemies. Attacks with a Trident (level 8)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to enemies. Attacks with a Trident (level 8)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Imp",
@@ -19781,8 +29852,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Follows the character's moving path. Attacks with a Fire Wand (level 2),  Lightning Ring (level 2), and Magic Wand (level 2)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Follows the character's moving path. Attacks with a Fire Wand (level 2),  Lightning Ring (level 2), and Magic Wand (level 2)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wood Rod",
@@ -19796,8 +29870,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Runs away from the character and distract enemies. Attacks with a Curved Knife (level 8) and  Troll Bomb (level 1)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Runs away from the character and distract enemies. Attacks with a Curved Knife (level 8) and  Troll Bomb (level 1)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pumpkin",
@@ -19811,8 +29888,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Refectio (level 3)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to the character. Attacks with a Refectio (level 3)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Faerie",
@@ -19826,8 +29906,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Raging Fire (level 3)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to the character. Attacks with a Raging Fire (level 3)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Cardinal",
@@ -19841,8 +29924,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Fulgur (level 3)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to the character. Attacks with a Fulgur (level 3)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Dragon",
@@ -19856,8 +29942,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Ice Fang (level 3)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to the character. Attacks with a Ice Fang (level 3)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Tiger",
@@ -19871,8 +29960,11 @@ window.VS_DATA = {
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Rock Riot (level 3)",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Stays close to the character. Attacks with a Rock Riot (level 3)"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sacred Turtle",
@@ -19886,7 +29978,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "\"Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.\"",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 3.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 3.",
+        "Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dress Sword",
       "requirements": [
@@ -19903,7 +30022,34 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
+        "Fires 1 more projectiles.",
+        "Base Area up by 20%.",
+        "Base Damage up by 6.",
+        "Base Area up by 20%.",
+        "Fires 1 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Espada Ropera",
       "requirements": [
@@ -19920,8 +30066,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Espada Ropera",
@@ -19935,7 +30103,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 3.",
+        "Base Area up by 20%.",
+        "Base Damage up by 3.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lordstar",
       "requirements": [
@@ -19952,7 +30128,15 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
+        "Fires 2 more projectiles.",
+        "Base Damage up by 3.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 3.",
+        "Fires 2 more projectiles."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Dayblade",
       "requirements": [
@@ -19969,8 +30153,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Dayblade",
@@ -19984,7 +30171,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
+        "Base Area up by 25%.",
+        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds.",
+        "Base Area up by 25%. Base Damage up by 10.",
+        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds.",
+        "Base Area up by 25%. Base Damage up by 10.",
+        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds.",
+        "Effect lasts 0.5 seconds longer. Cooldown reduced by 0.3 seconds."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pursuant Blades",
       "requirements": [
@@ -20002,8 +30199,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
+        "Base Area up by 25%.",
+        "Base Speed up by 25%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Base Area up by 25%.",
+        "Base Speed up by 25%.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pursuant Blades",
@@ -20017,7 +30224,34 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Base Area up by 20%.",
+        "Base Damage up by 5.",
+        "Base Area up by 20%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Zweihander",
       "requirements": [
@@ -20034,7 +30268,34 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
+        "Critical chance increased by 4%.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Critical chance increased by 4%."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Galatyn",
       "requirements": [
@@ -20051,8 +30312,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Zweihander. Can glimmer the \"Vandalize\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Zweihander. Can glimmer the \"Vandalize\" tech."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Galatyn",
@@ -20066,7 +30349,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks sideways. Can glimmer the \"Raksha\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Attacks sideways. Can glimmer the \"Raksha\" tech.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.4 seconds.",
+        "Base Area up by 10%.",
+        "Cooldown reduced by 0.4 seconds.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pressure Point",
       "requirements": [
@@ -20083,7 +30374,15 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
+        "Base Damage up by 5.",
+        "Base Area up by 10%, Cooldown reduced by 0.2 seconds.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%, Cooldown reduced by 0.2 seconds.",
+        "Base Damage up by 5."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Gilded Hand",
       "requirements": [
@@ -20100,8 +30399,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gilded Hand",
@@ -20115,7 +30417,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
+        "Fires 1 more projectile.",
+        "Base damage up by 2.",
+        "Base Area up by 10%. Base damage up by 2.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base damage up by 2.",
+        "Base damage up by 2.",
+        "Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Triangle Kick",
       "requirements": [
@@ -20133,8 +30445,37 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 2.",
+        "Base Damage up by 2.",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 2.",
+        "Base Damage up by 2.",
+        "Fires 1 more projectiles."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Triangle Kick",
@@ -20148,7 +30489,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds",
+        "Projectiles last 12ms longer.",
+        "Base Damage up by 0.5.",
+        "Projectiles last 12ms longer.",
+        "Fires 1 more projectile. Cooldown reduced by 0.5 seconds"
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hecaton Machine Gun",
       "requirements": [
@@ -20165,7 +30514,15 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
+        "Projectiles last 25ms longer.",
+        "Fires 1 more projectiles. Cooldown increased by 0.5 seconds",
+        "Base Damage up by 1.",
+        "Fires 1 more projectiles. Cooldown increased by 0.5 seconds",
+        "Passes through 1 more enemy."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Divergence",
       "requirements": [
@@ -20182,8 +30539,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Divergence",
@@ -20197,7 +30557,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
+        "Base Damage up by 5.",
+        "Pass through 1 more enemy.",
+        "Base Speed up by 10%.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 0.3 seconds."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hydra Cannon",
       "requirements": [
@@ -20214,7 +30582,15 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
+        "Base Damage up by 5.",
+        "Pass through 2 more enemies.",
+        "Base Speed up by 20%.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 0.5 seconds."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Hyperion Bazooka",
       "requirements": [
@@ -20231,8 +30607,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Hyperion Bazooka",
@@ -20246,7 +30625,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
+        "Fires 1 more projectile. Base Area up by 25%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Damage up by 2.5.",
+        "Fires 1 more projectile. Base Area up by 25%.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds.",
+        "Fires 1 more projectile. Base Damage up by 2.5.",
+        "Fires 1 more projectile. Cooldown reduced by 0.3 seconds."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Pendragon",
       "requirements": [
@@ -20264,8 +30653,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 5.",
+        "Base Damage up by 5.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 5."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pendragon",
@@ -20279,7 +30678,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
+        "Base Area up by 25%.",
+        "Effect lasts 0.1 seconds longer. Cooldown reduced by 0.1 seconds.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 10.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.1 seconds longer. Cooldown reduced by 0.1 seconds.",
+        "Base Area up by 25%."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Jetstream",
       "requirements": [
@@ -20297,8 +30706,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
+        "Base Damage up by 2.5.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Area up by 25%.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Area up by 25%.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Area up by 25%."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Jetstream",
@@ -20312,7 +30731,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectile.",
+        "Base Area up by 10%. Base Damage up by 5.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 5.",
+        "Base Damage up by 5."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Gekkabijin",
       "requirements": [
@@ -20330,8 +30759,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 5.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Fires 1 more projectiles."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gekkabijin",
@@ -20345,7 +30784,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile. Cooldown reduced by 0.2 seconds.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer. Base Damage up by 5."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Falconwind",
       "requirements": [
@@ -20363,8 +30812,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Damage up by 5.",
+        "Cooldown reduced by 0.2 seconds.",
+        "Effect lasts 0.5 seconds longer.",
+        "Base Damage up by 5.",
+        "Critical damage increases by an additional 100%.",
+        "Effect lasts 0.5 seconds longer."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Falconwind",
@@ -20378,7 +30837,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
-      "level_ups": [],
+      "level_ups": [
+        "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 4.",
+        "Fires 1 more projectiles.",
+        "Cooldown reduced by 1 seconds.",
+        "Fires 1 more projectiles.",
+        "Base Damage up by 4.",
+        "Fires 1 more projectiles."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Intuition",
       "requirements": [
@@ -20396,8 +30865,18 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
+        "Fires 2 more projectiles.",
+        "Base Area up by 10%. Base Damage up by 2.",
+        "Fires 1 more projectiles.",
+        "Cooldown reduced by 0.5 seconds.",
+        "Fires 2 more projectiles.",
+        "Base Area up by 10%. Base Damage up by 2.",
+        "Fires 1 more projectiles."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Blood Chalice",
@@ -20411,7 +30890,15 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 3.",
+        "Base Speed up by 20%.",
+        "Fires 1 more projectile.",
+        "Base Damage up by 3."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Feather Spear",
       "requirements": [
@@ -20428,7 +30915,15 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
-      "level_ups": [],
+      "level_ups": [
+        "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
+        "Fires 1 more projectiles.",
+        "Base Area up by 10%.",
+        "Base Damage up by 6.",
+        "Base Area up by 10%.",
+        "Fires 1 more projectiles."
+      ],
+      "limit_break": [],
       "trans_conditions": "Max Weapon",
       "trans_result": "Lohengrin",
       "requirements": [
@@ -20445,8 +30940,11 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Lohengrin",
@@ -20460,7 +30958,17 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
-      "level_ups": [],
+      "level_ups": [
+        "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile.",
+        "Effect lasts 0.3 seconds longer.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [],
       "trans_conditions": "Special",
       "trans_result": "Rings of Calamity",
       "requirements": [],
@@ -20475,8 +30983,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "5000ms"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rings of Calamity",
@@ -20490,7 +31020,42 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Picks random enemies to teleport away, but they might not drop XP gems.",
-      "level_ups": [],
+      "level_ups": [
+        "Picks random enemies to teleport away, but they might not drop XP gems.",
+        "Strikes more often. 5% better chance to leave XP intact.",
+        "Strikes more often. 5% better chance to leave XP intact.",
+        "Strikes more often. 5% better chance to leave XP intact.",
+        "Strikes more often. 5% better chance to leave XP intact.",
+        "Strikes more often. 5% better chance to leave XP intact.",
+        "Strikes more often. 5% better chance to leave XP intact.",
+        "Strikes more often. 5% better chance to leave XP intact."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
       "trans_conditions": "Max Weapon",
       "trans_result": "Emerald Wave",
       "requirements": [
@@ -20507,8 +31072,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5000ms"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Emerald Wave",
@@ -20522,8 +31115,11 @@ window.VS_DATA = {
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of weapons from Emerald Diorama.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Allows you to choose from a selection of weapons from Emerald Diorama."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Intuition",
@@ -20537,7 +31133,37 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
-      "level_ups": [],
+      "level_ups": [
+        "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds.",
+        "Base Damage up by 5.",
+        "Base Area up by 20%.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds.",
+        "Base Damage up by 5.",
+        "Effect lasts 0.5 seconds longer. Cooldown increased by 1 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "NaneInferno",
       "requirements": [
@@ -20554,8 +31180,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 seconds"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "NaneInferno",
@@ -20569,7 +31217,55 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
-      "level_ups": [],
+      "level_ups": [
+        "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
+        "Fires 1 more projectiles.",
+        "Base Speed up by 20%.",
+        "Base Damage up by 5.",
+        "Fires 1 more projectiles. Cooldown reduced by 0.1 seconds.",
+        "Base Speed up by 20%.",
+        "Base Damage up by 5.",
+        "Base Speed up by 20%.",
+        "Fires 1 more projectiles. Cooldown reduced by 0.1 seconds."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 Seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Cavendish",
       "requirements": [
@@ -20586,8 +31282,48 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gros Michel. Always crits. Always explodes. Other weapons crit more often.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Gros Michel. Always crits. Always explodes. Other weapons crit more often."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "1",
+          "rarity": "1",
+          "max": "5.0 Seconds"
+        },
+        {
+          "stat": "Chance",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "1"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cavendish",
@@ -20601,7 +31337,43 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
-      "level_ups": [],
+      "level_ups": [
+        "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
+        "Fires 1 more projectile. 1% chance to fire another weapon.",
+        "Cooldown reduced by 0.3 seconds. 2% chance to fire another weapon.",
+        "Base Damage up by 5. 3% chance to fire another weapon.",
+        "Base Area up by 20%. 5% chance to fire another weapon.",
+        "Fires 1 more projectile. 8% chance to fire another weapon.",
+        "Base Damage up by 5. 13% chance to fire another weapon.",
+        "Cooldown reduced by 0.3 seconds. 21% chance to fire another weapon.",
+        "Base Damage up by 5. 34% chance to fire another weapon."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Royal Flush",
       "requirements": [
@@ -20618,8 +31390,36 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Royal Flush",
@@ -20633,7 +31433,37 @@ window.VS_DATA = {
       "category": "Base",
       "method": "Evolution",
       "description": "Planets orbit around you. Damage increases by amount of coins collected this run.",
-      "level_ups": [],
+      "level_ups": [
+        "Planets orbit around you. Damage increases by amount of coins collected this run.",
+        "Fires 1 more projectile.",
+        "Fires 1 more projectile. Base Damage up by 2.",
+        "Fires 1 more projectile. Base Speed up by 10%.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Fires 1 more projectile. Base Damage up by 2.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Fires 1 more projectile. Base Speed up by 10%.",
+        "Fires 1 more projectile. Base Damage up by 3."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
       "trans_conditions": "Max Required",
       "trans_result": "Negative Space",
       "requirements": [
@@ -20650,8 +31480,30 @@ window.VS_DATA = {
       "category": "Evolution",
       "method": null,
       "description": "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.20.05",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "5",
+          "max": "5"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "3"
+        }
+      ],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Negative Space",
@@ -20665,8 +31517,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Increases experience.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Increases experience."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Experience Gem",
@@ -20680,8 +31535,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 1 to your gold coins total.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Adds 1 to your gold coins total."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gold Coin",
@@ -20695,8 +31553,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 10 to your gold coins total.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Adds 10 to your gold coins total."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Coin Bag",
@@ -20710,8 +31571,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 100 to your gold coins total.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Adds 100 to your gold coins total."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rich Coin Bag",
@@ -20725,8 +31589,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Awards coins and power ups. Dropped by strong enemies",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Awards coins and power ups. Dropped by strong enemies"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Treasure Chest",
@@ -20740,8 +31607,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Destroys all enemies in sight.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Destroys all enemies in sight."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rosary",
@@ -20755,8 +31625,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily emits cones of flames. Affected by player stats.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Temporarily emits cones of flames. Affected by player stats."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Nduja Fritta Tanto",
@@ -20770,8 +31643,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily emits freezing cones. Affected by player stats.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Temporarily emits freezing cones. Affected by player stats."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Sorbetto",
@@ -20785,8 +31661,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Freezes all enemies in time for 10 seconds.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Freezes all enemies in time for 10 seconds."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Orologion",
@@ -20800,8 +31679,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Gathers all experience gems left on the ground.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gathers all experience gems left on the ground."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Vacuum",
@@ -20815,8 +31697,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Restores 30 health points.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Restores 30 health points."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Floor Chicken",
@@ -20830,8 +31715,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Gathers all gold left on the ground and starts a Gold Fever.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gathers all gold left on the ground and starts a Gold Fever."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gilded Clover",
@@ -20845,8 +31733,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get 10% luckier.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Pick up to get 10% luckier."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Little Clover",
@@ -20860,8 +31751,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get +1 Reroll.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Pick up to get +1 Reroll."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rerollo",
@@ -20875,8 +31769,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Gives temporary invulnerability, bonus Charm, and minimum Cooldown. Defeat as many enemies as possible to win a prize.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Gives temporary invulnerability, bonus Charm, and minimum Cooldown. Defeat as many enemies as possible to win a prize."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gold Finger",
@@ -20890,8 +31787,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Every player gets a level up for one of their existing weapons.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Every player gets a level up for one of their existing weapons."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Friendship Amulet",
@@ -20905,8 +31805,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Permanently improves a random stat for the current character, by a tiny amount.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Permanently improves a random stat for the current character, by a tiny amount."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Golden Egg",
@@ -20920,8 +31823,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily doubles Speed and halves Cooldown.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Temporarily doubles Speed and halves Cooldown."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Rapid Fire",
@@ -20935,8 +31841,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily prevents all damage, but allows for retaliatory attacks.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Temporarily prevents all damage, but allows for retaliatory attacks."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Barrier",
@@ -20950,8 +31859,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Deals high damage to all visible enemies.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Deals high damage to all visible enemies."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Grenade",
@@ -20965,8 +31877,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Typical Castlevania pot roast. Restores 60 Health points.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Typical Castlevania pot roast. Restores 60 Health points."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Wall Chicken",
@@ -20980,8 +31895,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily gives +5 Recovery.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Temporarily gives +5 Recovery."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Heart Refresh",
@@ -20995,8 +31913,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Has a 50% chance to trigger a Soul Steal, which destroys all enemies in line of sight and turns them into hearts.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Has a 50% chance to trigger a Soul Steal, which destroys all enemies in line of sight and turns them into hearts."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Karma Coin",
@@ -21010,8 +31931,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily doubles Amount. Activates all equipped weapons at once when picked up.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Temporarily doubles Amount. Activates all equipped weapons at once when picked up."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Mirror of Truth",
@@ -21025,8 +31949,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Deals high damage in a large area.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Deals high damage in a large area."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Neutron Bomb",
@@ -21040,8 +31967,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 25 to your gold coins total.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Adds 25 to your gold coins total."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Big Coin Bag",
@@ -21055,8 +31985,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP, summons werewolves.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Heals 30 HP, summons werewolves."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cheese",
@@ -21070,8 +32003,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Heals 30 HP."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Corn",
@@ -21085,8 +32021,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Increases Growth, Recovery, and Max Health by a miniscule amount, but increases the more are collected.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Increases Growth, Recovery, and Max Health by a miniscule amount, but increases the more are collected."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Crystallized Soul",
@@ -21100,8 +32039,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get a minor bonus to MaxHealth, Greed, and Curse.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Pick up to get a minor bonus to MaxHealth, Greed, and Curse."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Cursed Soul",
@@ -21115,8 +32057,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Adds a lot to your Gold coins total.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Adds a lot to your Gold coins total."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Gold Pile",
@@ -21130,8 +32075,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "All pickups, light sources, and stage items are pulled to the player. Spins enemies around the screen.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "All pickups, light sources, and stage items are pulled to the player. Spins enemies around the screen."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Lavatrix Machina",
@@ -21145,8 +32093,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to recover 1 HP.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Pick up to recover 1 HP."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Little Heart",
@@ -21160,8 +32111,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Heals 30 HP."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Pie",
@@ -21175,8 +32129,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get a minor bonus to MaxHealth and Might.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Pick up to get a minor bonus to MaxHealth and Might."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Scorched Soul",
@@ -21190,8 +32147,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "All enemies are frozen for 10 seconds and take damage periodically, unable to damage the player. They still move towards the player.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "All enemies are frozen for 10 seconds and take damage periodically, unable to damage the player. They still move towards the player."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Starry Heavens",
@@ -21205,8 +32165,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Brings up a Survarot draft.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Brings up a Survarot draft."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Survarot",
@@ -21220,8 +32183,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Kills all enemies that are not immune to it.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Kills all enemies that are not immune to it."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "Weird Souls Purifier",
@@ -21235,8 +32201,11 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Pickup",
       "description": "Destroys all enemies in sight and turn them into Little Hearts.",
-      "level_ups": [],
-      "trans_conditions": "-",
+      "level_ups": [
+        "Destroys all enemies in sight and turn them into Little Hearts."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
       "final_state": "World Eater",
@@ -21250,7 +32219,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "All healing triggers an Area-of-Effect damage pulse within a fixed range, dealing damage equal to the amount healed.",
-      "level_ups": [],
+      "level_ups": [
+        "All healing triggers an Area-of-Effect damage pulse within a fixed range, dealing damage equal to the amount healed."
+      ],
+      "limit_break": [],
       "trans_conditions": "Sarabande of Healing (VI)",
       "trans_result": null,
       "requirements": [],
@@ -21265,7 +32237,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "All experience gems act as exploding projectiles that hurl themselves to the closest enemy when collected.",
-      "level_ups": [],
+      "level_ups": [
+        "All experience gems act as exploding projectiles that hurl themselves to the closest enemy when collected."
+      ],
+      "limit_break": [],
       "trans_conditions": "Game Killer (0)",
       "trans_result": null,
       "requirements": [],
@@ -21280,7 +32255,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Projectiles from affected weapons create an explosion on impact, dealing 50% of base damage.",
-      "level_ups": [],
+      "level_ups": [
+        "Projectiles from affected weapons create an explosion on impact, dealing 50% of base damage."
+      ],
+      "limit_break": [],
       "trans_conditions": "Heart of Fire (XIX)",
       "trans_result": null,
       "requirements": [],
@@ -21295,7 +32273,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Freezing Enemies generates explosions.",
-      "level_ups": [],
+      "level_ups": [
+        "Freezing Enemies generates explosions."
+      ],
+      "limit_break": [],
       "trans_conditions": "Out of Bounds (XII)",
       "trans_result": null,
       "requirements": [],
@@ -21310,7 +32291,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Enemies that touch the character take 10 flat damage per Armor.",
-      "level_ups": [],
+      "level_ups": [
+        "Enemies that touch the character take 10 flat damage per Armor."
+      ],
+      "limit_break": [],
       "trans_conditions": "Divine Bloodline (IX)",
       "trans_result": null,
       "requirements": [],
@@ -21325,7 +32309,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Arcana",
       "description": "Turns the character's Magnet area into a zone to damage enemies",
-      "level_ups": [],
+      "level_ups": [
+        "Turns the character's Magnet area into a zone to damage enemies"
+      ],
+      "limit_break": [],
       "trans_conditions": "Blood Astronomia (XXI)",
       "trans_result": null,
       "requirements": [],
@@ -21340,7 +32327,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Darkana",
       "description": "Generates projectiles that circle the character and deal damage based on total recovered Health and Magnet.",
-      "level_ups": [],
+      "level_ups": [
+        "Generates projectiles that circle the character and deal damage based on total recovered Health and Magnet."
+      ],
+      "limit_break": [],
       "trans_conditions": "Wandering the Jet Black (XXI)",
       "trans_result": null,
       "requirements": [],
@@ -21355,7 +32345,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Creates a purple zone with a skull centered slightly above the character.",
-      "level_ups": [],
+      "level_ups": [
+        "Creates a purple zone with a skull centered slightly above the character."
+      ],
+      "limit_break": [],
       "trans_conditions": "Je-Ne-Viv",
       "trans_result": null,
       "requirements": [],
@@ -21370,7 +32363,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Attacks enemies on the lower half of the screen.",
-      "level_ups": [],
+      "level_ups": [
+        "Attacks enemies on the lower half of the screen."
+      ],
+      "limit_break": [],
       "trans_conditions": "Ferryman",
       "trans_result": null,
       "requirements": [],
@@ -21384,8 +32380,9 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/shaft_orb.png",
       "category": "Special",
       "method": "Hidden",
-      "description": "-",
+      "description": "",
       "level_ups": [],
+      "limit_break": [],
       "trans_conditions": "Shaft",
       "trans_result": null,
       "requirements": [],
@@ -21400,7 +32397,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Creates a damaging aura when health is low.",
-      "level_ups": [],
+      "level_ups": [
+        "Creates a damaging aura when health is low."
+      ],
+      "limit_break": [],
       "trans_conditions": "Eric Lacarde",
       "trans_result": null,
       "requirements": [],
@@ -21415,7 +32415,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Deadly digits",
-      "level_ups": [],
+      "level_ups": [
+        "Deadly digits"
+      ],
+      "limit_break": [],
       "trans_conditions": "Megalo Death",
       "trans_result": null,
       "requirements": [],
@@ -21430,7 +32433,10 @@ window.VS_DATA = {
       "category": "Special",
       "method": "Hidden",
       "description": "Bloody Hands",
-      "level_ups": [],
+      "level_ups": [
+        "Bloody Hands"
+      ],
+      "limit_break": [],
       "trans_conditions": "Megalo Dracula",
       "trans_result": null,
       "requirements": [],
@@ -21444,8 +32450,9 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/ruler_sword_body.png",
       "category": "Special",
       "method": "Hidden",
-      "description": "-",
+      "description": "",
       "level_ups": [],
+      "limit_break": [],
       "trans_conditions": "Ruler Sword",
       "trans_result": null,
       "requirements": [],
@@ -21459,8 +32466,9 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/bananastrophe.png",
       "category": "Special",
       "method": "Hidden",
-      "description": "-",
+      "description": "",
       "level_ups": [],
+      "limit_break": [],
       "trans_conditions": "Gros Michel",
       "trans_result": null,
       "requirements": [],
@@ -21474,8 +32482,9 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/sossoldi.png",
       "category": "Special",
       "method": "Hidden",
-      "description": "-",
+      "description": "",
       "level_ups": [],
+      "limit_break": [],
       "trans_conditions": "Outer Saboteur",
       "trans_result": null,
       "requirements": [],
@@ -21487,14 +32496,15 @@ window.VS_DATA = {
     {
       "name": "Chaos Malachite",
       "icon": "assets/icons/weapons/chaos_malachite.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows Mortaccio to morph when reaching Level 80.",
       "level_ups": [],
-      "trans_conditions": "-",
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
-      "final_state": "-",
+      "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
@@ -21502,14 +32512,15 @@ window.VS_DATA = {
     {
       "name": "Chaos Rosalia",
       "icon": "assets/icons/weapons/chaos_rosalia.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows Yatta Cavallo to morph when reaching Level 80.",
       "level_ups": [],
-      "trans_conditions": "-",
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
-      "final_state": "-",
+      "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
@@ -21517,14 +32528,15 @@ window.VS_DATA = {
     {
       "name": "Chaos Lazulia",
       "icon": "assets/icons/weapons/chaos_lazulia.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows Bianca Ramba to morph when reaching Level 80.",
       "level_ups": [],
-      "trans_conditions": "-",
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
-      "final_state": "-",
+      "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
@@ -21532,14 +32544,31 @@ window.VS_DATA = {
     {
       "name": "Chaos Altemanna",
       "icon": "assets/icons/weapons/chaos_altemanna.png",
-      "category": "-",
+      "category": "Special",
       "method": null,
       "description": "Allows O'Sole Meeo to morph when reaching Level 80.",
       "level_ups": [],
-      "trans_conditions": "-",
+      "limit_break": [],
+      "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
-      "final_state": "-",
+      "final_state": "",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0
+    },
+    {
+      "name": "Random",
+      "icon": "assets/icons/weapons/random.png",
+      "category": "Special",
+      "method": null,
+      "description": "",
+      "level_ups": [],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Random",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0
@@ -22678,7 +33707,24 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "0_game_killer",
       "description": "Halts XP gain. Experience Gems turn into exploding projectiles. All Treasure Chests contain at least 3 items.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Experience Gem",
+        "Treasure Chest"
+      ],
+      "affects_implicit": [
+        "Crown",
+        "Attractorb",
+        "Vacuum",
+        "Pentagram",
+        "Gorgeous Moon"
+      ],
+      "affinity": [
+        "Growth",
+        "Magnet",
+        "Halted XP",
+        "Treasure"
+      ]
     },
     {
       "name": "Gemini (I)",
@@ -22688,7 +33734,53 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "i_gemini",
       "description": "Listed weapons come with a counterpart.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Peachone",
+        "Ebony Wings",
+        "Vandalier",
+        "Phiera Der Tuphello",
+        "Eight The Sparrow",
+        "Phieraggi",
+        "Gatti Amari",
+        "Ammo Appalate",
+        "Gunastrophe",
+        "Santa Javelin",
+        "Seraphic Cry",
+        "Shadow Servant",
+        "Ophion",
+        "Party Popper",
+        "Sharp Tongue",
+        "Impostongue",
+        "Prism Lass",
+        "Time Warp",
+        "Raging Fire",
+        "Salamender",
+        "Ice Fang",
+        "Cocytus",
+        "Rock Riot",
+        "Pneuma Tempestas",
+        "Gale Force",
+        "Gemma Torpor",
+        "Fulgur",
+        "Tenebris Tonitrus",
+        "Keremet Bubbles",
+        "Keremet Morbus",
+        "Refectio",
+        "Nightmare",
+        "Hex",
+        "Sanctuary",
+        "Globus",
+        "Nitesco",
+        "Anura",
+        "Dark Frogamorphosis",
+        "Nduja Fritta Tanto",
+        "Sorbetto"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Counterpart"
+      ]
     },
     {
       "name": "Twilight Requiem (II)",
@@ -22698,7 +33790,57 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "ii_twilight_requiem",
       "description": "Listed weapon projectiles generate explosions when they expire. Explosions damage is affected by Curse.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "King Bible",
+        "Unholy Vespers",
+        "Ninth Circle",
+        "Lightning Ring",
+        "Thunder Loop",
+        "Vjaya Sisters",
+        "Peachone",
+        "Ebony Wings",
+        "Runetracer",
+        "Shadow Pinion",
+        "Bone",
+        "Anima of Mortaccio",
+        "Celestial Dusting",
+        "Profusione D'Amore",
+        "Bi-Bracelet",
+        "Tri-Bracelet",
+        "Lapiste Tepisto",
+        "Santa Javelin",
+        "Seraphic Cry",
+        "Silver Wind",
+        "Festive Winds",
+        "Prismatic Missile",
+        "Luminaire",
+        "C-U-Laser",
+        "Pronto Beam",
+        "Vampire Killer",
+        "Jet Black Whip",
+        "Mormegil Tip",
+        "Refectio",
+        "Speculo Refectio",
+        "Sanctuary",
+        "Spirit Rings",
+        "Rings of Calamity",
+        "Sanguine Star",
+        "Blood Chalice",
+        "Glaive",
+        "Feather Spear",
+        "Lohengrin"
+      ],
+      "affects_implicit": [
+        "Skull O'Maniac",
+        "Gold Ring",
+        "Metaglio Right",
+        "Torrona's Box",
+        "Wicked Season (XIII)"
+      ],
+      "affinity": [
+        "Curse"
+      ]
     },
     {
       "name": "Tragic Princess (III)",
@@ -22708,7 +33850,36 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "iii_twilight_princess",
       "description": "The cooldown of the listed weapons reduces when moving.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Garlic",
+        "Soul Eater",
+        "Dark Frogamorphosis",
+        "Santa Water",
+        "La Borra",
+        "Hydro Pump Climax",
+        "Lightning Ring",
+        "Thunder Loop",
+        "Vjaya Sisters",
+        "Santa Javelin",
+        "Levelin'Eh",
+        "Seraphic Cry",
+        "Carréllo",
+        "Fulgur",
+        "Speculo Fulgur",
+        "Tenebris Tonitrus",
+        "Keremet Bubbles",
+        "Speculo Keremet Bubbles",
+        "Keremet Morbus",
+        "Kick",
+        "Triangle Kick"
+      ],
+      "affects_implicit": [
+        "Wings"
+      ],
+      "affinity": [
+        "Move Speed"
+      ]
     },
     {
       "name": "Awake (IV)",
@@ -22718,7 +33889,14 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "iv_awake",
       "description": "Gives +3 Revivals. Consuming a Revival gives +10% Max Health, +1 Armor, and +5% Might, Area, Duration, and Speed.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Tirajisú"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Revival"
+      ]
     },
     {
       "name": "Chaos in the Dark Night (V)",
@@ -22728,7 +33906,14 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "v_chaos_in_the_dark_night",
       "description": "Overall projectile Speed continuously changes between -50% and +50% over 10 seconds. The character starts gaining +1% projectile Speed every level.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Bracer"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Speed"
+      ]
     },
     {
       "name": "Sarabande of Healing (VI)",
@@ -22738,7 +33923,29 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "vi_sarabande_of_healing",
       "description": "Healing is doubled. Recovering HP damages nearby enemies for the same amount.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Bloody Tear",
+        "Fuwalafaloo",
+        "Soul Eater",
+        "Celestial Dusting",
+        "Pummarola",
+        "Silver Wind",
+        "Festive Winds",
+        "Night Sword",
+        "Muramasa",
+        "Lifesign Scan",
+        "Paranormal Scan",
+        "Floor Chicken"
+      ],
+      "affects_implicit": [
+        "Little Heart",
+        "Wall Chicken",
+        "Heart Refresh"
+      ],
+      "affinity": [
+        "Recovery"
+      ]
     },
     {
       "name": "Iron Blue Will (VII)",
@@ -22748,7 +33955,33 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "vii_iron_blue_will",
       "description": "Listed weapon projectiles gain up to 3 bounces and might pass through enemies and walls.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Knife",
+        "Thousand Edge",
+        "Million Cut",
+        "Axe",
+        "Death Spiral",
+        "Legacy of Death: Soul River",
+        "Phiera Der Tuphello",
+        "Eight The Sparrow",
+        "Carréllo",
+        "Flash Arrow",
+        "Prototype B",
+        "Prototype C",
+        "Javelin",
+        "Long Inus",
+        "Iron Ball",
+        "Wrecking Ball",
+        "Curved Knife",
+        "Bwaka Knife",
+        "Shuriken",
+        "Yagyu Shuriken"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Bounce"
+      ]
     },
     {
       "name": "Mad Groove (VIII)",
@@ -22758,7 +33991,25 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "viii_mad_groove",
       "description": "Every 2 minutes attracts all standard stage items, pickups, and light sources towards the character.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Light Source",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
+      ],
+      "affects_implicit": [
+        "Experience Gem",
+        "Treasure Chest",
+        "Vacuum",
+        "Rosary"
+      ],
+      "affinity": [
+        "Light Source",
+        "Rosary",
+        "Vacuum"
+      ]
     },
     {
       "name": "Divine Bloodline (IX)",
@@ -22768,7 +34019,40 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "ix_divine_bloodline",
       "description": "Armor also affects listed weapons' damage and reflects enemy damage. Character gains bonus damage depending on missing Health. Defeating enemies with retaliatory damage gives +0.5 Max Health.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Cross",
+        "King Bible",
+        "Garlic",
+        "Santa Water",
+        "Lightning Ring",
+        "Song of Mana",
+        "Vento Sacro",
+        "Victory Sword",
+        "Silver Wind",
+        "Armor",
+        "Max Health"
+      ],
+      "affects_implicit": [
+        "NO FUTURE",
+        "Victory Sword",
+        "Pako Battiliar",
+        "Mazo Familiar",
+        "Crimson Shroud",
+        "Night Sword",
+        "Muramasa",
+        "Eskizzibur",
+        "Legionnaire",
+        "Iron Shield",
+        "Dark Iron Shield",
+        "Embrace of Gaea"
+      ],
+      "affinity": [
+        "Armor",
+        "Max Health",
+        "Retaliation",
+        "Low Health"
+      ]
     },
     {
       "name": "Beginning (X)",
@@ -22778,7 +34062,19 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "x_bloodline",
       "description": "Listed weapons get +1 Amount. The character's main weapon and its evolution gain +3 Amount instead.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Bone",
+        "Carréllo",
+        "Celestial Dusting",
+        "Cherry Bomb",
+        "La Robba"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Limited",
+        "Amount"
+      ]
     },
     {
       "name": "Waltz of Pearls (XI)",
@@ -22788,7 +34084,32 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xi_waltz_of_pearls",
       "description": "Listed weapon projectiles gain up to 3 bounces.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Magic Wand",
+        "Holy Wand",
+        "Spirit of Light",
+        "Fire Wand",
+        "Hellfire",
+        "Kardía Phlegeton",
+        "Cross",
+        "Heaven Sword",
+        "Arch Angle",
+        "Carréllo",
+        "Hats",
+        "Sonic Bloom",
+        "Wave Beam",
+        "Gale Force",
+        "Pneuma Tempestas",
+        "Rock Riot",
+        "Gemma Torpor",
+        "Gros Michel",
+        "Cavendish"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Bounce"
+      ]
     },
     {
       "name": "Out of Bounds (XII)",
@@ -22798,7 +34119,30 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xii_out_of_bounds",
       "description": "Freezing enemies generates explosions. Orologions are easier to find. Sorbettos could also be found.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Clock Lancet",
+        "Infinite Corridor",
+        "Celestial Voulge",
+        "Mirage Robe",
+        "J'Odore",
+        "Prism Lass",
+        "Prism Damsel",
+        "Time Warp",
+        "Icebrand",
+        "Fleuret",
+        "Dress Sword",
+        "Espada Ropera",
+        "Orologion",
+        "Sorbetto"
+      ],
+      "affects_implicit": [
+        "Jail of Crystal (XIV)",
+        "Crystal Cries (XII)"
+      ],
+      "affinity": [
+        "Freeze"
+      ]
     },
     {
       "name": "Wicked Season (XIII)",
@@ -22808,7 +34152,20 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xiii_wicked_season",
       "description": "Overall Growth, Luck, Greed, and Curse are doubled at fixed intervals. The character starts gaining +1% Growth, Luck, Greed, and Curse every 2 levels.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Crown",
+        "Clover",
+        "Stone Mask",
+        "Skull O'Maniac"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Growth",
+        "Luck",
+        "Greed",
+        "Curse"
+      ]
     },
     {
       "name": "Jail of Crystal (XIV)",
@@ -22818,7 +34175,54 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xiv_jail_of_crystal",
       "description": "Listed weapon projectiles have a chance to freeze enemies.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Magic Wand",
+        "Holy Wand",
+        "Spirit of Light",
+        "Runetracer",
+        "NO FUTURE",
+        "Carnage Heart",
+        "Eight The Sparrow",
+        "Twice Upon a Time",
+        "Cygnus",
+        "Bracelet",
+        "Bi-Bracelet",
+        "Tri-Bracelet",
+        "Lapiste Tepisto",
+        "Penshin Fatcha",
+        "Tonno Subito",
+        "Tonnado",
+        "Tonn'omoto",
+        "Tonn'oddeeo",
+        "Tonne",
+        "Unsurpassed",
+        "Miracle of Multiplication",
+        "Prismatic Missile",
+        "Luminaire",
+        "C-U-Laser",
+        "Pronto Beam",
+        "Prism Lass",
+        "Prism Damsel",
+        "Dragon Water Whip",
+        "Hydrostormer Tip",
+        "Ice Fang",
+        "Speculo Ice Fang",
+        "Cocytus",
+        "Icebrand",
+        "Ninth Circle",
+        "Fleuret",
+        "Dress Sword",
+        "Espada Ropera",
+        "Hydra Cannon",
+        "Hyperion Bazooka",
+        "Spirit Rings",
+        "Rings of Calamity"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Freeze"
+      ]
     },
     {
       "name": "Disco of Gold (XV)",
@@ -22828,7 +34232,22 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xv_disco_of_gold",
       "description": "Picking up coin bags from the floor triggers Gold Fever. Obtaining gold restores as many HP.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Vicious Hunger",
+        "Stone Mask",
+        "Coin Bag",
+        "Big Coin Bag",
+        "Rich Coin Bag",
+        "Treasure Chest"
+      ],
+      "affects_implicit": [
+        "Gold Coin"
+      ],
+      "affinity": [
+        "Greed",
+        "Gold Fever"
+      ]
     },
     {
       "name": "Slash (XVI)",
@@ -22838,7 +34257,77 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xvi_slash",
       "description": "Enables critical hits for listed weapons. Doubles overall critical damage.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Whip",
+        "Bloody Tear",
+        "Knife",
+        "Thousand Edge",
+        "Million Cut",
+        "Axe",
+        "Death Spiral",
+        "Legacy of Death: Soul River",
+        "Heaven Sword",
+        "Arch Angle",
+        "Vento Sacro",
+        "Fuwalafuwaloo",
+        "Ammo Appalate",
+        "Horse Cartridge",
+        "Gunastrophe",
+        "Victory Sword",
+        "Celestial Voulge",
+        "Santa Javelin",
+        "Levelin'Eh",
+        "Seraphic Cry",
+        "Greatest Jubilee",
+        "Yatta Daikarin",
+        "Muramasa",
+        "Eskizzibur",
+        "Legionnaire",
+        "Flash Arrow",
+        "Millionaire",
+        "Impostongue",
+        "Alchemy Whip",
+        "Vampire Killer",
+        "Wind Whip",
+        "Spirit Tornado Tip",
+        "Platinum Whip",
+        "Cross Crasher Tip",
+        "Dragon Water Whip",
+        "Hydrostormer Tip",
+        "Sonic Whip",
+        "Crissaegrim Tip",
+        "Jet Black Whip",
+        "Mormegil Tip",
+        "Vibhuti Whip",
+        "Daybreaker Tip",
+        "Vanitas Whip",
+        "Aurablaster Tip",
+        "Gungnir-Souris",
+        "Tyrfing",
+        "Rune Sword",
+        "Confodere",
+        "Vol Confodere",
+        "Melio Confodere",
+        "Pocket Knife",
+        "Claimh Solais",
+        "Twin Dragon",
+        "Gekkabijin",
+        "Khukuri",
+        "Jetstream",
+        "Bullova",
+        "Falconwind",
+        "Flamberge",
+        "Zweihander",
+        "Galatyn",
+        "Gros Michel",
+        "Cavendish"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Luck",
+        "Critical Damage"
+      ]
     },
     {
       "name": "Lost & Found Painting (XVII)",
@@ -22848,7 +34337,14 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xvii_lost_and_found_painting",
       "description": "Overall Duration continuously changes between -50% and +50% over 10 seconds. The character starts gaining +1% Duration every level.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Spellbinder"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Duration"
+      ]
     },
     {
       "name": "Boogaloo of Illusions (XVIII)",
@@ -22858,7 +34354,14 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xviii_boogaloo_of_illusions",
       "description": "Overall Area continuously changes between -25% and +25% over 10 seconds. The character starts gaining +1% Area every level.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Candelabrador"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Area"
+      ]
     },
     {
       "name": "Heart of Fire (XIX)",
@@ -22868,7 +34371,65 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xix_heart_of_fire",
       "description": "Listed weapon projectiles explode on impact. Light sources explode. Character explodes when damaged.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Fire Wand",
+        "Hellfire",
+        "Aura Blast",
+        "Kardía Phlegeton",
+        "Valkyrie Turner",
+        "Svarog Statue",
+        "Darkness Illusion",
+        "Phiera Der Tuphello",
+        "Red Muscle",
+        "Zhar Ptytsia",
+        "Tri-Bracelet",
+        "Lapiste Tepisto",
+        "Flames of Misspell",
+        "Ashes of Muspell",
+        "Ammo Appalate",
+        "Horse Cartridge",
+        "Gunastrophe",
+        "Prismatic Missile",
+        "Luminaire",
+        "Long Gun",
+        "Prototype A",
+        "Short Gun",
+        "Prototype B",
+        "Spread Shot",
+        "Prototype C",
+        "Firearm",
+        "Fire-L3GS",
+        "Homing Miss",
+        "Multistage Missiles",
+        "Vanitas Whip",
+        "Aurablaster Tip",
+        "Raging Fire",
+        "Speculo Raging Fire",
+        "Salamender",
+        "Hand Grenade",
+        "The RPG",
+        "Dies Irae",
+        "Punch",
+        "Pressure Point",
+        "Gilded Hand",
+        "Saber Machine Gun",
+        "Hecaton Machine Gun",
+        "Divergence",
+        "Super Missile",
+        "Hydra Cannon",
+        "Hyperion Bazooka",
+        "Spirit Rings",
+        "Rings of Calamity"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Fire",
+        "Light Source",
+        "Retaliation",
+        "Might",
+        "Area"
+      ]
     },
     {
       "name": "Silent Old Sanctuary (XX)",
@@ -22878,7 +34439,18 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xx_silent_old_sanctuary",
       "description": "Gives +3 Reroll, Skip, and Banish. Gives +20% Might and -8% Cooldown for each active weapon slot left empty.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Reroll",
+        "Skip",
+        "Banish"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Limited",
+        "Might",
+        "Cooldown"
+      ]
     },
     {
       "name": "Blood Astronomia (XXI)",
@@ -22888,7 +34460,27 @@ window.VS_DATA = {
       "type": "Arcana",
       "weapon_col": "xxi_blood_astronomica",
       "description": "Listed weapons also emit special damaging zones affected by Amount and Magnet. Enemies within Magnet range take damage based on Amount.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Garlic",
+        "Soul Eater",
+        "Pentagram",
+        "Gorgeous Moon",
+        "Song of Mana",
+        "Mannajja",
+        "Clock Lancet",
+        "Laurel",
+        "Sonic Dash",
+        "Rapidus Fio"
+      ],
+      "affects_implicit": [
+        "Duplicator",
+        "Attractorb"
+      ],
+      "affinity": [
+        "Amount",
+        "Magnet"
+      ]
     },
     {
       "name": "Stake to Your Heart (0)",
@@ -22898,7 +34490,16 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": null,
       "description": "Halts XP gain. Enemies drop Gold Coins. Damage is dealt to Gold Coins instead of HP. A special merchant spawns every minute.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Gold Coin",
+        "Experience Gem"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Greed",
+        "Halted XP"
+      ]
     },
     {
       "name": "Sapphire Mist (I)",
@@ -22908,7 +34509,34 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": "di_saphire_mist",
       "description": "All weapons have a chance to fire twice instead of once when activated. The effect is further augmented on listed active weapons.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Bracelet",
+        "Bi-Bracelet",
+        "Tri-Bracelet",
+        "Flames of Misspell",
+        "Ashes of Muspell",
+        "Penshin Fatcha",
+        "Tonno Subito",
+        "Tonnado",
+        "Tonn'omoto",
+        "Tonn'oddeeo",
+        "Tonne",
+        "Unsurpassed",
+        "Miracle of Multiplication.",
+        "Magi-Stone",
+        "Kyra-Stones",
+        "Mille Bolle Blu",
+        "Boo Roo Boolle",
+        "Eagle Gun",
+        "Pendragon",
+        "Party Popper",
+        "Party Pooper"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Luck"
+      ]
     },
     {
       "name": "Hidden Anathema (III)",
@@ -22918,7 +34546,20 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": "diii_hidden_anathema",
       "description": "Food pickups grant cumulative bonuses to random stats based on their rarity or healing value.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Meal Ticket",
+        "Floor Chicken",
+        "Nduja Fritta Tanto",
+        "Sorbetto",
+        "Wall Chicken"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Food",
+        "Recovery",
+        "Luck"
+      ]
     },
     {
       "name": "Pale Diamond Incursion (V)",
@@ -22928,7 +34569,91 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": null,
       "description": "Listed weapons aim at the nearest enemy. They gain a Cooldown bonus affected by the character's projectile Speed.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Knife",
+        "Thousand Edge",
+        "Million Cut",
+        "Axe",
+        "Death Spiral",
+        "Legacy of Death: Soul River",
+        "Fire Wand",
+        "Hellfire",
+        "Kardía Phlegeton",
+        "Santa Water",
+        "La Borra",
+        "Hydro Pump Climax",
+        "Runetracer",
+        "NO FUTURE",
+        "Carnage Heart",
+        "Lightning Ring",
+        "Thunder Loop",
+        "Vjaya Sisters",
+        "Peachone",
+        "Ebony Wings",
+        "Vandalier",
+        "Gatti Amari",
+        "Vicious Hunger",
+        "Shadow Pinion",
+        "Valkyrie Turner",
+        "Darkness Illusion",
+        "Vento Sacro",
+        "Fuwalafuwaloo",
+        "Bone",
+        "Anima of Mortaccio",
+        "Carréllo",
+        "Carrozza!",
+        "La Robba",
+        "Greatest Jubilee",
+        "Bracelet",
+        "Bi-Bracelet",
+        "Tri-Bracelet",
+        "Lapiste Tepisto",
+        "Flames of Misspell",
+        "Ashes of Muspell",
+        "Pako Battiliar",
+        "Mazo Familiar",
+        "Ammo Appalate",
+        "Gunastrophe",
+        "Magi-Stone",
+        "Kyra-Stones",
+        "Santa Javelin",
+        "Seraphic Cry",
+        "Mirage Robe",
+        "J'Odore",
+        "Mille Bolle Blu",
+        "Boo Roo Boolle",
+        "Flash Arrow",
+        "Millionaire",
+        "Prismatic Missile",
+        "Luminaire",
+        "Shadow Servant",
+        "Ophion",
+        "Party Popper",
+        "Hats",
+        "Long Gun",
+        "Prototype A",
+        "Short Gun",
+        "Prototype B",
+        "Spread Shot",
+        "Prototype C",
+        "Sonic Bloom",
+        "Wave Beam",
+        "Shuriken",
+        "Yagyu Shuriken",
+        "Curved Knife",
+        "Bwaka Knife",
+        "Javelin",
+        "Long Inus",
+        "Iron Ball",
+        "Wrecking Ball",
+        "Gros Michel",
+        "Cavendish"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Speed"
+      ]
     },
     {
       "name": "Moonlight Bolero (VI)",
@@ -22938,7 +34663,14 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": "dvi_moonlight_bolero",
       "description": "An extra treasure boss spawns every minute. The treasure it carries might occasionally contain arcanas and random passive weapons.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Treasure Chest"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Treasure"
+      ]
     },
     {
       "name": "Edge of the Earth (VIII)",
@@ -22948,7 +34680,22 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": null,
       "description": "Gives +3 Thorns. Fixes MoveSpeed[sic] to +100%. Allows to walk through walls. Allows to vacuum Treasure Chests, Light Sources, and Weapons.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Wings",
+        "Vacuum",
+        "Light Source",
+        "Treasure Chest"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Retaliation",
+        "Move Speed",
+        "Flight",
+        "Magnet",
+        "Vacuum",
+        "Light Source"
+      ]
     },
     {
       "name": "Hail from the Future (X)",
@@ -22958,7 +34705,26 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": "dx_hail_from_the_future",
       "description": "Receive one of the listed items when levelling up.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Candybox",
+        "Arma Dio",
+        "Rosary",
+        "Orologion",
+        "Vacuum",
+        "Gilded Clover",
+        "Gold Finger",
+        "Nduja Fritta Tanto",
+        "Rerollo",
+        "Sorbetto",
+        "Coin Bag",
+        "Rich Coin Bag"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Luck",
+        "Amount"
+      ]
     },
     {
       "name": "Crystal Cries (XII)",
@@ -22968,7 +34734,15 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": "dxii_crystal_cries",
       "description": "Defeating frozen enemies gives bonus MaxHealth, Recovery, and Growth. Triggers an Orologion when health reaches a critically low level.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Orologion",
+        "Crystallized Soul"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Freeze"
+      ]
     },
     {
       "name": "Call of a Mad Moon (XIII)",
@@ -22978,7 +34752,22 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": null,
       "description": "Effect depends on random results and player stats. Luck: improves Treasure Chests and Light Sources. Growth: improves XP Crystals. Greed: improves gold pickups. Curse: enemies gain MoveSpeed[sic] and Health.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Experience Gem",
+        "Gold Coin",
+        "Coin Bag",
+        "Rich Coin Bag",
+        "Treasure Chest",
+        "Light Source"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Growth",
+        "Greed",
+        "Greed",
+        "Curse"
+      ]
     },
     {
       "name": "Victorian Horror (XVIII)",
@@ -22988,7 +34777,23 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": null,
       "description": "Enemies within Magnet range receive Greed based damage. Once per life, triggers Cursed World Eater after receiving fatal damage.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Attractorb",
+        "Stone Mask",
+        "Skill O'Maniac",
+        "Little Heart"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Greed",
+        "Might",
+        "Amount",
+        "Magnet",
+        "Area",
+        "Max Health",
+        "Curse"
+      ]
     },
     {
       "name": "Heir of Fate (XIX)",
@@ -22998,7 +34803,50 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": null,
       "description": "Defeating enemies with FIRE gives bonus MaxHealth[sic] and Might. Triggers an[sic] Nduja Fritta when health reaches a critically low level.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Fire Wand",
+        "Hellfire",
+        "Kardía Phlegeton",
+        "Santa Water",
+        "La Borra",
+        "Hydro Pump Climax",
+        "Valkyrie Turner",
+        "Bracelet",
+        "Bi-Bracelet",
+        "Tri-Bracelet",
+        "Flames of Misspell",
+        "Ashes of Muspell",
+        "Firearm",
+        "Fire-L3GS",
+        "Alchemy Whip",
+        "Vampire Killer",
+        "Raging Fire",
+        "Salamender",
+        "Dextro Custos",
+        "Trinium Custodem",
+        "Dominus Anger",
+        "Svarog Statue",
+        "Darkness Illusion",
+        "Dies Irae",
+        "Punch",
+        "Pressure Point",
+        "Gilded Hand",
+        "Saber Machine Gun",
+        "Hecaton Machine Gun",
+        "Divergence",
+        "Spirit Rings",
+        "Rings of Calamity",
+        "Infernolatro",
+        "NaneInferno",
+        "Nduja Fritta Tanto"
+      ],
+      "affects_implicit": [],
+      "affinity": [
+        "Fire",
+        "Max Health",
+        "Might"
+      ]
     },
     {
       "name": "Wandering the Jet Black (XXI)",
@@ -23008,7 +34856,24 @@ window.VS_DATA = {
       "type": "Darkana",
       "weapon_col": "dxxi_wandering_the_jet_black",
       "description": "Losing health generates exploding projectiles. Explosion damage is increased by total recovered health and Magnet bonus. Explosion Area is increased by Magnet.",
-      "notes": ""
+      "notes": "",
+      "affects_explicit": [
+        "Bloody Tear",
+        "Fuwalafaloo",
+        "Soul Eater",
+        "Celestial Dusting",
+        "Pummarola",
+        "Silver Wind",
+        "Festive Winds",
+        "Night Sword",
+        "Muramasa",
+        "Lifesign Scan",
+        "Paranormal Scan",
+        "Attractorb",
+        "Floor Chicken"
+      ],
+      "affects_implicit": [],
+      "affinity": []
     }
   ],
   "banishLayout": [

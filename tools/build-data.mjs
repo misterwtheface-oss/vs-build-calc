@@ -244,7 +244,9 @@ function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
 // ─── Process characters ───────────────────────────────────────────────────
 
 function splitItems(raw) {
-  return (raw || '').split('|').map(s => s.trim()).filter(s => s && s !== '-');
+  // New schema wraps these list columns in braces (`{Empty Tome}`, `{-}`), so strip
+  // the wrapper first — otherwise names carry stray braces and `{-}` leaks as an item.
+  return unwrap(raw).split('|').map(s => s.trim()).filter(s => s && s !== '-');
 }
 
 // Strip a `{ … }` wrapper (used by the brace-DSL columns) and normalize `{-}`/`-` to ''.
@@ -261,15 +263,19 @@ const characters = rawChars.map(r => ({
   sprite_static: iconPath(r.sprite_static_path),
   sprite_gif: iconPath(r.sprite_gif_path),
   base_name: r.base_name || r.name,
-  starting_weapons: [r.starting_weapon_1, r.starting_weapon_2, r.starting_weapon_3]
-    .map(w => (w || '').trim()).filter(w => w && w !== '-'),
+  // New schema compresses the three starter columns into one brace-wrapped,
+  // pipe-separated `starting_loadout` (weapons + passives mixed, partitioned
+  // downstream by isPassiveName).
+  starting_weapons: splitItems(r.starting_loadout),
   hidden_items:  splitItems(r.hidden_items),
   max_items:     splitItems(r.max_items),
-  starting_arcana: (r.starting_arcana || '').trim().replace(/^-$/, '') || null,
+  // Brace-wrapped in the new schema ({-} / {Gemini (I)}); unwrap() strips braces and
+  // maps a bare dash to '' so empties collapse to null and names match arcana by name.
+  starting_arcana: unwrap(r.starting_arcana) || null,
   description: unwrap(r.character_description),
   custom_description: unwrap(r.custom_description), // shown in the UI later (extra context)
   notes: '',                                        // no source column in the new schema
-  affinity: (r.affinity || '').trim().replace(/^-$/, ''), // → future affinities.csv mapping
+  affinity: splitItems(r.affinity), // brace-wrapped priority list → array; future affinities.csv mapping
   scaling: parseScaling(r.level_scaling),
   // Phase-2 rule columns, passed through unparsed until their runtime features exist.
   reference_scaling: unwrap(r.reference_scaling),
@@ -296,6 +302,29 @@ const characters = rawChars.map(r => ({
   },
 }));
 
+// ─── Parse limit-break table ───────────────────────────────────────────────
+// `limit_break` column: brace-wrapped, pipe-separated rows. Limit Break = a weapon keeps
+// leveling past its last level; each row is a stat that can roll, its per-roll Value, its
+// selection weight (Rarity), and a cap (Max; "-"/blank = uncapped). The source is inconsistent
+// across weapons — two row layouts appear:
+//   A) "Stat[:| ]Value,Rarity,Max"  e.g. "Might: 0.05,10,-"   (stat+value combined in field 0)
+//   B) "Stat,Value[,Rarity[,Max]]"  e.g. "Might,0.0025"        (stat & value as separate fields)
+// Detect A by a trailing number (opt. unit %/ms…) in field 0; else fall back to B.
+// Emits { stat, value, rarity, max } rows ('' for missing/none).
+function parseLimitBreak(raw) {
+  const cell = unwrap(raw);
+  if (!cell || cell === '-') return [];
+  const none = v => (v === undefined || v === '' || v === '-') ? '' : v;
+  return cell.split('|').map(s => s.trim()).filter(Boolean).map(row => {
+    const parts = row.split(',').map(s => s.trim());
+    const field = parts[0] || '';
+    const m = field.match(/^(.*?)[:\s]+(-?\d[\d.]*(?:\s*[a-zA-Z%]+)?)$/); // stat + trailing value
+    return m
+      ? { stat: m[1].trim(), value: m[2], rarity: none(parts[1]), max: none(parts[2]) } // layout A
+      : { stat: field,       value: none(parts[1]), rarity: none(parts[2]), max: none(parts[3]) }; // layout B
+  }).filter(r => r.stat && r.stat !== '?'); // "?" = source placeholder / limit-break data TBD
+}
+
 // ─── Process weapons ──────────────────────────────────────────────────────
 
 const rawWeapons = readCsv('weapons.csv');
@@ -304,31 +333,35 @@ const weapons = rawWeapons.filter(r => r.weapon && r.weapon !== '-').map(r => {
   ARCANA_COL_KEYS.forEach(col => {
     if (r[col] && r[col] !== '-') arcana_ratings[col] = r[col];
   });
+  // New schema brace-wraps every descriptive/relational weapon field ({Evolution},
+  // {Union}, {Vento Sacro}, {-}); unwrap before any value comparison or the category/
+  // method/requirement/evo-chain logic all break.
   const reqs = [r.requirement_1, r.requirement_2, r.requirement_3]
-    .map(x => (x || '').trim()).filter(x => x && x !== '-');
+    .map(unwrap).filter(x => x && x !== '-');
   const name = r.weapon;
-  const final_state = (r.final_state || '').trim();
+  const final_state = unwrap(r.final_state);
   // A self-referencing trans_result (== own name) is a source-data artifact that would
   // create an evo-chain cycle (infinite loop in chain walkers). Recover the real
   // evolution from final_state when it's distinct, otherwise treat it as a final form.
-  let trans_result = nullIfDash(r.trans_result);
+  let trans_result = nullIfDash(unwrap(r.trans_result));
   if (trans_result === name) trans_result = (final_state && final_state !== name) ? final_state : null;
   return {
     name,
     icon: iconPath(r.icon_path),
-    category: (r.category || 'Base').trim(),
-    method: nullIfDash(r.method),
-    description: (r.description || '').trim(),
-    level_ups: (r.level_ups || '').split('|').map(s => s.trim()).filter(Boolean),
-    trans_conditions: (r.trans_conditions || '').trim(),
+    category: unwrap(r.category) || 'Base',
+    method: nullIfDash(unwrap(r.method)),
+    description: unwrap(r.description),
+    level_ups: unwrap(r.level_up_text).split('|').map(s => s.trim()).filter(Boolean),
+    limit_break: parseLimitBreak(r.limit_break),
+    trans_conditions: unwrap(r.trans_conditions),
     trans_result,
     requirements: reqs,
     final_state,
     // Collection/free-pick pool tag (Candybox-like items): pool members share the pool's
     // name here (e.g. the 8 whips = "Magic Whip"). N/A / - / empty → null.
-    ode_category: (() => { const v = (r.ode_category || '').trim(); return (!v || v === '-' || v === 'N/A') ? null : v; })(),
+    ode_category: (() => { const v = unwrap(r.ode_category); return (!v || v === '-' || v === 'N/A') ? null : v; })(),
     arcana_ratings,
-    rarity: parseInt(r.rarity) || 0,
+    rarity: parseInt(unwrap(r.rarity)) || 0,
   };
 });
 
@@ -388,16 +421,52 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
     base_num,
     type,
     weapon_col,
-    description: (r.description || '').trim(),
-    notes: (r.additional_effects_clarification || '').trim(),
+    description: unwrap(r.description),
+    // New schema dropped the prose `additional_effects_clarification`; no prose source
+    // remains, so notes stays empty (the detail panel guards on truthiness). The
+    // affects_* pipe-lists are captured as arrays for the future Arcana Info Panel rework.
+    notes: '',
+    affects_explicit: splitItems(r.affects_explicit),
+    affects_implicit: splitItems(r.affects_implicit),
+    affinity: splitItems(r.affinity),
   };
 });
+
+// ─── Synthesize phantom starter weapons ───────────────────────────────────
+// Some characters start with an item that has no weapons.csv row. When it's a real
+// (if icon-only) weapon like Random, emit a minimal Special weapon (excluded from the
+// selector grid, non-evolving) pointing at the existing art so it can occupy a locked
+// starter slot. Extend `phantomStarterIcon` as new cases surface.
+// NOTE: the Glimmer "… Tech" innate attacks are deliberately NOT mapped here — they are
+// character abilities, not weapons/items, and will be surfaced by the future Glimmer
+// Tech overlay instead of forced into an item slot. They should be removed from the
+// characters.csv starting_loadout; an unmapped one will warn below until it is.
+function phantomStarterIcon(name) {
+  if (name === 'Random') return 'assets/icons/weapons/random.png';
+  return null;
+}
+{
+  const wNames = new Set(weapons.map(w => w.name));
+  const pNames = new Set(passives.map(p => p.name));
+  const seen = new Set();
+  characters.forEach(c => c.starting_weapons.forEach(nm => {
+    if (wNames.has(nm) || pNames.has(nm) || seen.has(nm)) return;
+    seen.add(nm);
+    const icon = phantomStarterIcon(nm);
+    if (!icon) { console.warn(`phantom starter "${nm}" (${c.name}) has no icon mapping — add one to phantomStarterIcon`); return; }
+    weapons.push({
+      name: nm, icon, category: 'Special', method: null, description: '',
+      level_ups: [], limit_break: [], trans_conditions: '', trans_result: null, requirements: [],
+      final_state: nm, ode_category: null, arcana_ratings: {}, rarity: 0,
+    });
+  }));
+}
 
 // ─── Attach character grants (second pass) ────────────────────────────────
 // Runs after weapons/passives/arcana exist so `kind` resolves. `Passive Slot` /
 // `Arcana Slot` are synthetic "add an empty slot" grants → kind:"slot".
 {
-  const SLOT_REFS = new Set(['Passive Slot', 'Arcana Slot']);
+  const SLOT_REFS = new Set(['Passive Slot', 'Arcana Slot', 'Weapon Slot']);
   const wN = new Set(weapons.map(w => w.name));
   const pN = new Set(passives.map(p => p.name));
   const aN = new Set(arcana.map(a => a.name));
