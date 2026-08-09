@@ -1018,6 +1018,18 @@
     /* larger stage-item icons in both the selector detail panel and planner sidebar */
     .req-icons.stage-items { gap: 6px; }
     .req-icons.stage-items .req-icon { width: 44px; height: 44px; border-radius: 5px; }
+    /* click-to-add stage items (planner sidebar): addable = gold hover + "+" badge;
+       blocked = dimmed/greyed with a reason tooltip; special floor pickups = slightly muted. */
+    .req-icon.stage-add { cursor: pointer; }
+    .req-icon.stage-add:hover { outline: 2px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.5); }
+    .req-icon.stage-add-plus {
+      position: absolute; bottom: -3px; right: -3px; background: var(--gold); color: #1a0000;
+      font-size: .62rem; line-height: 1; padding: 1px 3px; border-radius: 3px; font-weight: bold;
+      opacity: 0; transition: opacity .1s; pointer-events: none;
+    }
+    .req-icon.stage-add:hover .stage-add-plus { opacity: 1; }
+    .req-icon.stage-add-off { opacity: .38; filter: grayscale(.6); cursor: not-allowed; }
+    .req-icon.stage-pickup { opacity: .7; }
     /* 44px icons (matching stage items) in every .req-row list: Starting Loadout
        (selector + info panel), weapon requirements (weapon selector info panel),
        and evo-stage navigation (planner info panel). Placed after the earlier
@@ -2101,31 +2113,64 @@
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // One stage-item icon: a passive, weapon, or special-pickup override; text if unmapped.
-  function stageItemIconHTML(it) {
+  // Whether a stage item can be added to a player right now (mirrors evoQuickAdd's guard rails
+  // so the panel proactively dims what can't be picked up). `ctx` carries the target player and
+  // a precomputed consumed-pool set; `groupArcana` gates arcana-conditional stage groups.
+  function stageItemAddState(name, ctx, groupArcana) {
+    const player = state.players[ctx.playerIdx];
+    const w = weaponByName(name), p = passiveByName(name);
+    if (!w && !p) return { kind: 'pickup' };                       // special pickup, not a build item
+    if (isFreePick(name)) return { addable: false, reason: 'add from a weapon slot' }; // Arma Dio/Turbo gift chooser
+    if (isExtraPassive(name)) return { addable: false, reason: 'weapon-bound (add via its weapon)' };
+    if (groupArcana && !state.arcana.some(a => a?.name === groupArcana)) return { addable: false, reason: `needs ${groupArcana}` };
+    if (collectionEnabled() && ((p && !passiveAccessible(name)) || (w && !weaponAccessible(name)))) return { addable: false, reason: 'not in your collection' };
+    if (p) {
+      if (player.passives.some(x => x && x.name === name)) return { addable: false, reason: 'already in build' };
+      if (STAGE_EXCLUSIVE_PASSIVES.has(name) && anyPlayerOwnsPassive(name)) return { addable: false, reason: 'already in build' };
+      return { addable: true };
+    }
+    if (player.weapons.some(x => x && x.name === name)) return { addable: false, reason: 'already in build' };
+    if (ctx.consumed.has(name)) return { addable: false, reason: 'consumed by an evolution' };
+    const cb = chaosBlocked(name, player); if (cb) return { addable: false, reason: `needs ${cb.character}` };
+    if (stageBlockedWeapon(name, player)) return { addable: false, reason: 'evo needs items not on this stage' };
+    return { addable: true };
+  }
+
+  // One stage-item icon: a passive, weapon, or special-pickup override; text if unmapped. When
+  // `ctx` is set (planner sidebar), build-item icons become click-to-add (or dimmed + reason).
+  function stageItemIconHTML(it, ctx = null, groupArcana = null) {
     const obj  = passiveByName(it) || weaponByName(it);
     const icon = obj ? (obj.icon || EMPTY_ICON) : STAGE_ITEM_ICONS[it];
-    return `<div class="req-icon" title="${esc(it)}">
-      ${icon ? `<img src="${esc(icon)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">` : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`}
-    </div>`;
+    const inner = icon
+      ? `<img src="${esc(icon)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">`
+      : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`;
+    if (!ctx) return `<div class="req-icon" title="${esc(it)}">${inner}</div>`;
+    const st = stageItemAddState(it, ctx, groupArcana);
+    if (st.kind === 'pickup') return `<div class="req-icon stage-pickup" title="${esc(it)} — floor pickup">${inner}</div>`;
+    if (st.addable) {
+      return `<div class="req-icon stage-add" data-action="stage-add" data-stage-item="${esc(it)}" data-player="${ctx.playerIdx}" title="${esc(it)} — click to add">${inner}<span class="stage-add-plus">+</span></div>`;
+    }
+    return `<div class="req-icon stage-add-off" title="${esc(it)} — ${esc(st.reason)}">${inner}</div>`;
   }
 
   // Stage items + arcana-gated groups. `heading` renders each section label so callers can
   // match their panel style (overlay uses <h3>, planner sidebar uses .detail-section-label).
-  function stageItemsHTML(stage, heading) {
+  // Pass `playerIdx` (planner sidebar) to make build-item icons click-to-add.
+  function stageItemsHTML(stage, heading, playerIdx = null) {
     if (!stage) return '';
     const groups = [];
-    if (stage.items?.length) groups.push(['Stage Items', stage.items]);
-    (stage.conditional ?? []).forEach(g => groups.push([`With ${g.arcana}`, g.items]));
+    if (stage.items?.length) groups.push({ label: 'Stage Items', items: stage.items, arcana: null });
+    (stage.conditional ?? []).forEach(g => groups.push({ label: `With ${g.arcana}`, items: g.items, arcana: g.arcana }));
     if (!groups.length) return '<div class="detail-desc" style="margin-top:.5rem">No stage items.</div>';
-    return groups.map(([label, items]) =>
-      `<div class="detail-section">${heading(label)}<div class="req-icons stage-items">${items.map(stageItemIconHTML).join('')}</div></div>`
+    const ctx = playerIdx == null ? null : { playerIdx, consumed: getConsumedWeapons() };
+    return groups.map(g =>
+      `<div class="detail-section">${heading(g.label)}<div class="req-icons stage-items">${g.items.map(it => stageItemIconHTML(it, ctx, g.arcana)).join('')}</div></div>`
     ).join('');
   }
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            hidden = false, removable = true, locked = false, infoName = null, gift = null } = opts;
+            hidden = false, removable = true, locked = false, infoName = null, gift = null, transient = false } = opts;
     const isChar  = type === 'char';
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     const icon = item ? (item.icon || emptyIcon) : emptyIcon;
@@ -2136,7 +2181,9 @@
       type === 'stage'  ? 'slot-stage'  : '',
       hidden    ? 'hidden-weapon' : '',
       locked    ? 'slot-locked'   : '',
-      gift      ? 'slot-gift'     : '',
+      // Transient stage-pickup slots share the dashed-gold gift look but use NORMAL slot
+      // behavior (plain remove-slot / view-slot by index), so no data-gift is emitted.
+      (gift || transient) ? 'slot-gift' : '',
     ].filter(Boolean).join(' ');
 
     const removeBtn = (!hidden && removable && item && !locked)
@@ -2545,7 +2592,9 @@
     }
 
     if (type === 'stage') {
-      html += stageItemsHTML(item, t => `<span class="detail-section-label">${esc(t)}</span>`);
+      // Planner sidebar: stage items are click-to-add (routed through evoQuickAdd). The stage
+      // slot is global, so items add to player 0 (the panel's player).
+      html += stageItemsHTML(item, t => `<span class="detail-section-label">${esc(t)}</span>`, playerIdx ?? 0);
     }
 
     return `<div class="info-sidebar"><div class="sidebar-top">${top}</div><div class="sidebar-body">${html}</div></div>`;
@@ -2561,6 +2610,8 @@
     players.forEach(syncAbsorbed);
     // Restore/clear a Familiar Forge starter slot based on whether a familiar is held.
     players.forEach(syncFamiliarStarter);
+    // Drop appended transient stage-pickup slots the current stage no longer supplies.
+    players.forEach(syncStageSlots);
 
     const playerCards = players.map((player, idx) => {
       const char = player.character;
@@ -2649,6 +2700,16 @@
         ? slotHTML(player.giftPassive, { type:'passive', playerIdx:idx, slotIdx:counts.passives, gift:'passive' })
         : '';
 
+      // Transient stage-pickup slots: real appended slots at array indices >= the core count
+      // (free stage items — rings, metaglios, Academy Badge, Spinach, Fire Wand, …). Full
+      // weapon/passive behavior; dropped by syncStageSlots when the stage stops supplying them.
+      const transientWeaponSlots = player.weapons
+        .map((w, i) => (i >= counts.weapons && w) ? slotHTML(w, { type:'weapon', playerIdx:idx, slotIdx:i, transient:true }) : '')
+        .join('');
+      const transientPassiveSlots = player.passives
+        .map((p, i) => (i >= counts.passives && p) ? slotHTML(p, { type:'passive', playerIdx:idx, slotIdx:i, transient:true }) : '')
+        .join('');
+
       // Hidden/extra passives — instances that don't occupy a core slot. Identical
       // instances collapse to ONE icon with an ×N badge to save space; the × removes a
       // single instance (which may devolve a bound OG weapon). Consumable passives (Mini)
@@ -2683,10 +2744,10 @@
         <div class="player-body">
           <div class="char-col">${charSlot}</div>
           <div class="slots-col">
-            <div class="slot-row">${wSlots}${giftWeaponSlot}</div>
+            <div class="slot-row">${wSlots}${transientWeaponSlots}${giftWeaponSlot}</div>
             ${hiddenWeaponRow}
             ${absorbedWeaponRow}
-            <div class="slot-row">${pSlots}${giftPassiveSlot}</div>
+            <div class="slot-row">${pSlots}${transientPassiveSlots}${giftPassiveSlot}</div>
             ${hiddenPassiveRow}
           </div>
         </div>
@@ -3105,7 +3166,12 @@
       // when at cap or with no enabling weapon (never filtered out).
       const isExtra = isExtraPassive(p.name);
       const isSel = sel && sel.name === p.name;
+      // Stage-exclusive passives (rings/metaglios/Academy Badge) are only selectable when a
+      // stage/character supplies them AND no player already holds them (one per build).
+      const exclusiveBlocked = STAGE_EXCLUSIVE_PASSIVES.has(p.name)
+        && (!stageItemGateOpen(player, p.name) || anyPlayerOwnsPassive(p.name));
       const isDim = (freePickPool && !freePickPool.has(p.name))
+        || exclusiveBlocked
         || (isExtra ? (extraCount(player, p.name) >= extraCap(player, p.name)) : usedPassives.has(p.name));
       const inaccessible = !passiveAccessible(p.name);
       cards += `<div class="item-card${isSel ? ' selected' : ''}${isDim ? ' dim' : ''}${inaccessible && !isSel ? ' uncollected' : ''}"
@@ -3477,6 +3543,8 @@
         // A chaos-morph final still equipped after the character no longer matches (e.g.
         // character removed, or a survivor of the rebuild) devolves back to its base.
         autoDevolveBrokenEvos();
+        // Selecting a qualifying character already at Lv30 auto-earns Academy Badge.
+        autoGrantAcademyBadge(state.players[playerIdx]);
       } else if (type === 'item') {
         if (sel) {
           const isWeapon = D.weapons.some(w => w.name === sel.name);
@@ -3519,6 +3587,42 @@
               render();
               return;
             }
+            // Evolved weapon requiring a stage-exclusive passive not obtainable here (rings/
+            // metaglios only on the right stage) — drop in the base instead (stage-gated evo,
+            // mirrors the chaos-morph / Alucard Shield unmet-condition fallback).
+            const sInfo = stageBlockedWeapon(wDef.name, player);
+            if (sInfo) {
+              player.weapons[slotIdx] = weaponByName(sInfo.base);
+              showToast(`${wDef.name} needs ${sInfo.missing.join(' + ')} — not on this stage`, 'warn');
+              syncExtraPassives(player);
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
+            // Free stage-pickup weapon → appended TRANSIENT slot (a free extra slot, fully
+            // evolvable in place). No core chain-consume/targetSlot; still auto-adds the
+            // weapon's required passives (each routed: stage item → transient, else core).
+            if (itemProvidedFree(wDef.name, player) && !isFreePick(wDef.name)) {
+              if (anyPlayerOwnsWeapon(wDef.name)) {
+                showToast(`${wDef.name} already in build`, 'warn');
+              } else {
+                placeTransientItem(player, 'weapon', wDef);
+                if (state.ovl.autoAdd ?? true) {
+                  for (const pname of collectChainPassives(collectWeaponChain(wDef.name))) {
+                    if (isExtraPassive(pname)) { if (extraCount(player, pname) < extraCap(player, pname)) player.extraPassives.push(pname); continue; }
+                    addRequiredPassive(player, pname);
+                  }
+                }
+                syncExtraPassives(player);
+              }
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
             // Free-pick choosers (Candybox-like) never evolve — no chain-consume, no passive
             // auto-add. Gift items (Turbo/Arma) take their own extra slot (one of EACH per
             // build); other free-pick items occupy the clicked normal slot as a chooser.
@@ -3538,27 +3642,14 @@
               render();
               return;
             }
-            // Add all passives required by the full evo chain that aren't already equipped
+            // Add all passives required by the full evo chain that aren't already equipped.
+            // Each routes via addRequiredPassive: a stage-supplied passive (e.g. Silver/Gold
+            // Ring for Infinite Corridor) takes a free transient slot; others take a core slot.
             const chain = collectWeaponChain(wDef.name);
-            const allEquippedPassiveNames = new Set(
-              state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
-            );
             const skippedPassives = [];
             for (const pname of collectChainPassives(chain)) {
               if (isExtraPassive(pname)) continue; // extra-bar passive; backed after placement
-              if (allEquippedPassiveNames.has(pname)) continue;
-              // Find the first free passive slot, bounded by the slot count — the
-              // passives array may be empty/sparse, so findIndex alone is unreliable.
-              let emptySlot = -1;
-              for (let i = 0; i < counts.passives; i++) {
-                if (!player.passives[i]) { emptySlot = i; break; }
-              }
-              if (emptySlot >= 0) {
-                player.passives[emptySlot] = passiveByName(pname);
-                allEquippedPassiveNames.add(pname);
-              } else {
-                skippedPassives.push(pname);
-              }
+              if (!addRequiredPassive(player, pname)) skippedPassives.push(pname);
             }
             if (skippedPassives.length) {
               showToast(`No passive slot for: ${skippedPassives.join(', ')}`, 'warn');
@@ -3598,15 +3689,25 @@
             syncExtraPassives(player);
           }
           if (slotType === 'passive' && isPassive && slotIdx >= 0) {
+            const player = state.players[playerIdx];
             // Extra-bar passives never occupy a core slot — add an instance to the extra
             // bar (up to their cap) instead of the selected slot.
             if (isExtraPassive(sel.name)) {
-              const player = state.players[playerIdx];
               if (extraCount(player, sel.name) < extraCap(player, sel.name)) player.extraPassives.push(sel.name);
               syncExtraPassives(player);
+            } else if (STAGE_EXCLUSIVE_PASSIVES.has(sel.name) || itemProvidedFree(sel.name, player)) {
+              // Free stage pickup → appended transient slot (never a core slot). Gate-check
+              // exclusives (one per build) and dedup against the whole build.
+              if (STAGE_EXCLUSIVE_PASSIVES.has(sel.name) && !stageItemGateOpen(player, sel.name)) {
+                showToast(`${sel.name} isn't available here`, 'warn');
+              } else if (anyPlayerOwnsPassive(sel.name)) {
+                showToast(`${sel.name} already in build`, 'warn');
+              } else {
+                placeTransientItem(player, 'passive', D.passives.find(p => p.name === sel.name));
+              }
             } else {
               // Replacing a passive can remove one an equipped evo depends on — re-check.
-              state.players[playerIdx].passives[slotIdx] = D.passives.find(p => p.name === sel.name);
+              player.passives[slotIdx] = D.passives.find(p => p.name === sel.name);
               autoDevolveBrokenEvos();
             }
           }
@@ -3620,6 +3721,11 @@
         }
       } else if (type === 'stage') {
         state.stage = sel;
+        // Changing the stage can invalidate transient stage pickups (rings/metaglios/Academy
+        // Badge/etc.); drop the now-unavailable ones, then cascade-devolve any weapon that
+        // relied on one (e.g. Infinite Corridor without its Silver/Gold Ring → Clock Lancet).
+        state.players.forEach(syncStageSlots);
+        autoDevolveBrokenEvos();
       }
     }
     // else: cancel (no change)
@@ -3716,6 +3822,132 @@
   //      consumed when the weapon evolves, restored when it devolves. (Hidden-weapon
   //      spawning is still deferred.)
   const WEAPON_POWER_UP = 'Weapon Power-Up';
+
+  // ── Stage-exclusive passives ────────────────────────────────────────────────
+  // Obtainable ONLY as stage-floor pickups (Silver/Gold Ring, Metaglio Left/Right) or —
+  // for Academy Badge — ALSO by 3 specific characters at Lv30. Modeled as a `stage`
+  // cap-mode extra-bar passive: they never occupy a core slot, satisfy evo requirements
+  // from the transient bar, and are one-per-build (global). Availability is stage/character-
+  // aware; when the gate closes (e.g. the stage is changed away) syncExtraPassives drops
+  // them and autoDevolveBrokenEvos cascades any dependent evolution back down.
+  const STAGE_EXCLUSIVE_PASSIVES = new Set([
+    'Silver Ring', 'Gold Ring', 'Metaglio Left', 'Metaglio Right', 'Academy Badge',
+  ]);
+  const ACADEMY_BADGE = 'Academy Badge';
+  const ACADEMY_CHARS = ['Eleanor Uziron', 'Maruto Cuts', 'Keitha Muort'];
+  const ACADEMY_LEVEL = 30;
+  const isAcademyChar = c => !!c && ACADEMY_CHARS.some(n => c.name.startsWith(n));
+  // Does the currently selected stage yield this item (directly, or via an equipped
+  // conditional-gating arcana like Boss Rash's Mad Groove)?
+  function stageProvidesItem(name) {
+    const st = state.stage;
+    if (!st) return false;
+    if ((st.items || []).includes(name)) return true;
+    return (st.conditional || []).some(g =>
+      (g.items || []).includes(name) && state.arcana.some(a => a && a.name === g.arcana));
+  }
+  // Is a stage-exclusive item obtainable for this player right now?
+  function stageItemGateOpen(player, name) {
+    if (stageProvidesItem(name)) return true;
+    // Academy Badge is obtainable by its 3 characters at ANY level (so it's selectable during
+    // level-1 planning); the Lv30 unlock only drives the AUTO-grant (autoGrantAcademyBadge),
+    // not selectability/retention.
+    if (name === ACADEMY_BADGE) return isAcademyChar(player?.character);
+    return false;
+  }
+  // Guard rail: a qualifying character (Eleanor/Maruto/Keitha) automatically earns Academy
+  // Badge at Lv30 in-game — drop it into a free transient slot so a forgetful user doesn't
+  // miss it. One per build; no-op if already owned. Fired on the Lv30 threshold crossing and
+  // on character change (below level 30 the user adds it manually if they want it).
+  function autoGrantAcademyBadge(player) {
+    if (!player || !isAcademyChar(player.character)) return;
+    if ((player.charLevel || 1) < ACADEMY_LEVEL) return;
+    if (anyPlayerOwnsPassive(ACADEMY_BADGE)) return;
+    placeTransientItem(player, 'passive', passiveByName(ACADEMY_BADGE));
+  }
+  // ── Transient (stage) slots ─────────────────────────────────────────────────
+  // Free stage pickups occupy APPENDED "real" slots at indices >= the core slot count of
+  // player.weapons / player.passives (the Arma/Turbo gift-slot look, but full weapon/passive
+  // behavior since they're ordinary array entries — the count-bounded PLACEMENT loops never
+  // reach them, while the whole-array SCANS (consume/stats/requirements/devolve) all include
+  // them). Routing, rendering, and drop-on-stage-change live in the helpers below.
+  const ownsPassiveName = (player, name) => (player?.passives || []).some(p => p && p.name === name);
+  const ownsWeaponName  = (player, name) => (player?.weapons || []).some(w => w && w.name === name);
+  const anyPlayerOwnsPassive = name => state.players.some(p => ownsPassiveName(p, name));
+  const anyPlayerOwnsWeapon  = name => state.players.some(p => ownsWeaponName(p, name));
+  // Is this item a "free pickup" on the current stage (→ takes a transient slot)? Exclusives
+  // are gated by stage/char; everything else is free iff the selected stage lists it.
+  function itemProvidedFree(name, player) {
+    if (STAGE_EXCLUSIVE_PASSIVES.has(name)) return stageItemGateOpen(player, name);
+    return stageProvidesItem(name);
+  }
+  // A weapon whose REALIZED evo chain requires a stage-exclusive passive that neither any
+  // player already holds nor this player can pick up here. Returns {base,missing} so callers
+  // place the base weapon instead (mirrors chaosBlocked / Alucard Shield fallback). Only counts
+  // requirements of chain weapons whose trans_result is ALSO in the chain — i.e. evolutions that
+  // actually happened — so a plain base Clock Lancet is never blocked by its own forward req.
+  function stageBlockedWeapon(wName, player) {
+    const chain = collectWeaponChain(wName);
+    const missing = [];
+    for (const cn of chain) {
+      const w = weaponByName(cn);
+      if (!w || !chain.has(w.trans_result)) continue;
+      for (const req of (w.requirements || [])) {
+        if (!STAGE_EXCLUSIVE_PASSIVES.has(req) || missing.includes(req)) continue;
+        if (!anyPlayerOwnsPassive(req) && !itemProvidedFree(req, player)) missing.push(req);
+      }
+    }
+    return missing.length ? { base: ogBaseName(wName), missing } : null;
+  }
+  // Place a weapon/passive object in the next free APPENDED transient slot (index >= the core
+  // count). kind: 'weapon' | 'passive'. Caller handles dedup / gate checks.
+  function placeTransientItem(player, kind, obj) {
+    const counts = SLOT_COUNTS[state.playerCount];
+    const arr = kind === 'weapon' ? player.weapons : player.passives;
+    let i = kind === 'weapon' ? counts.weapons : counts.passives;
+    while (arr[i]) i++;
+    arr[i] = obj;
+    return i;
+  }
+  // Add one required passive, routing it to a transient slot when it's a free stage pickup,
+  // else the first empty core slot. (Extra-bar passives are handled separately by callers.)
+  // Returns false only when it needed a core slot and none was free.
+  function addRequiredPassive(player, pname) {
+    if (anyPlayerOwnsPassive(pname)) return true;
+    if (itemProvidedFree(pname, player)) { placeTransientItem(player, 'passive', passiveByName(pname)); return true; }
+    const counts = SLOT_COUNTS[state.playerCount];
+    for (let i = 0; i < counts.passives; i++) if (!player.passives[i]) { player.passives[i] = passiveByName(pname); return true; }
+    return false;
+  }
+  // Per-render sweep: drop transient (appended) items the current stage no longer supplies,
+  // and compact the transient tail. A transient WEAPON survives while any weapon in its
+  // backward chain is still a free pickup (so an evolved stage weapon isn't lost). Dedups
+  // against core slots. autoDevolveBrokenEvos is invoked separately at mutation points so a
+  // dropped requirement (e.g. a ring) cascades its dependent evolution back down.
+  function syncStageSlots(player) {
+    if (!player) return;
+    const counts = SLOT_COUNTS[state.playerCount];
+    for (const kind of ['weapons', 'passives']) {
+      const arr  = player[kind];
+      const base = kind === 'weapons' ? counts.weapons : counts.passives;
+      if (!arr || arr.length <= base) continue;
+      const tail = [];
+      for (let i = base; i < arr.length; i++) if (arr[i]) tail.push(arr[i]);
+      arr.length = base;
+      const owned = new Set(arr.filter(Boolean).map(o => o.name));
+      for (const obj of tail) {
+        if (owned.has(obj.name)) continue;
+        const valid = kind === 'weapons'
+          ? [...collectWeaponChain(obj.name)].some(n => itemProvidedFree(n, player))
+          : itemProvidedFree(obj.name, player);
+        if (!valid) continue;
+        let i = base; while (arr[i]) i++;
+        arr[i] = obj;
+        owned.add(obj.name);
+      }
+    }
+  }
+
   function extraPassiveCapMode(name) {
     if (name === WEAPON_POWER_UP) return 'perWeapon';
     if (name === 'Outer Saboteur') return 'single';
@@ -3753,8 +3985,9 @@
   }
   // Max instances of an extra passive: perWeapon = one per enabling weapon; single/consumable = 1 if any.
   function extraCap(player, passiveName) {
+    const mode = extraPassiveCapMode(passiveName);
     const n = enablingWeaponCount(player, passiveName);
-    return extraPassiveCapMode(passiveName) === 'perWeapon' ? n : (n > 0 ? 1 : 0);
+    return mode === 'perWeapon' ? n : (n > 0 ? 1 : 0);
   }
   const extraCount = (player, passiveName) => (player?.extraPassives || []).filter(n => n === passiveName).length;
   // WPU convenience aliases (its 1:1 binding logic is Weapon-Power-Up-specific).
@@ -4496,6 +4729,13 @@
       renderCollectionOverlay();
       return;
     }
+    if (action === 'stage-add') {
+      // Add a stage item straight from the stage info panel — routes through evoQuickAdd, so
+      // it inherits every guard rail (already-equipped, consumed pool, one-per-build, stage
+      // gating) and lands in a free transient slot like any other stage pickup.
+      evoQuickAdd(btn.dataset.stageItem, playerIdx);
+      return;
+    }
     if (action === 'change-player-count') {
       state.page = 'landing';
       render();
@@ -4538,7 +4778,7 @@
       }
       else if (slotType === 'passive') { p.passives[slotIdx] = null; autoDevolveBrokenEvos(); }
       else if (slotType === 'arcana')  state.arcana[slotIdx] = null;
-      else if (slotType === 'stage')   state.stage = null;
+      else if (slotType === 'stage')   { state.stage = null; state.players.forEach(syncStageSlots); autoDevolveBrokenEvos(); }
       state.infoPanel = null;
       render();
       return;
@@ -4832,39 +5072,6 @@
     return consumed;
   }
 
-  // Place a list of {name, type} items into available slots. Returns {added, failed}.
-  function applyBuildItems(items, playerIdx) {
-    const player = state.players[playerIdx];
-    const counts = SLOT_COUNTS[state.playerCount];
-    const char = player.character;
-    const hiddenSet = new Set(char?.hidden_items ?? []);
-    const starterCount = char
-      ? Math.min(char.starting_weapons.filter(wn => !hiddenSet.has(wn)).length, counts.weapons)
-      : 0;
-    const added = [], failed = [];
-    for (const item of items) {
-      if (item.type === 'weapon') {
-        const wObj = D.weapons.find(w => w.name === item.name);
-        if (!wObj) continue;
-        let slot = -1;
-        for (let i = starterCount; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
-        if (slot < 0) for (let i = 0; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
-        if (slot < 0) { failed.push(item.name); continue; }
-        player.weapons[slot] = wObj;
-        added.push(item.name);
-      } else if (item.type === 'passive') {
-        const pObj = D.passives.find(p => p.name === item.name);
-        if (!pObj) continue;
-        let slot = -1;
-        for (let i = 0; i < counts.passives; i++) { if (!player.passives[i]) { slot = i; break; } }
-        if (slot < 0) { failed.push(item.name); continue; }
-        player.passives[slot] = pObj;
-        added.push(item.name);
-      }
-    }
-    return { added, failed };
-  }
-
   function evoQuickAdd(name, playerIdx) {
     const player = state.players[playerIdx];
     const counts = SLOT_COUNTS[state.playerCount];
@@ -4893,6 +5100,13 @@
         showToast(`Added ${name}`); render(); return;
       }
       if (player.passives.some(p => p?.name === name)) { showToast(`${name} already equipped`, 'warn'); return; }
+      // Stage-exclusive / stage-supplied passive → free transient slot (gate + one-per-build).
+      if (STAGE_EXCLUSIVE_PASSIVES.has(name) || itemProvidedFree(name, player)) {
+        if (STAGE_EXCLUSIVE_PASSIVES.has(name) && !stageItemGateOpen(player, name)) { showToast(`${name} isn't available here`, 'warn'); return; }
+        if (anyPlayerOwnsPassive(name)) { showToast(`${name} already in build`, 'warn'); return; }
+        placeTransientItem(player, 'passive', passiveObj);
+        showToast(`Added ${name}`); render(); return;
+      }
       let slot = -1;
       for (let i = 0; i < counts.passives; i++) { if (!player.passives[i]) { slot = i; break; } }
       if (slot < 0) { showToast(`No room for ${name}`, 'err'); return; }
@@ -4914,6 +5128,11 @@
     const cInfo = chaosBlocked(name, player);
     if (cInfo) { showToast(`${name} needs ${cInfo.character}`, 'warn'); return; }
 
+    // Stage-gated evolutions (Infinite Corridor, Crimson Shroud) need their stage-exclusive
+    // ring/metaglio to be obtainable on the selected stage.
+    const sInfo = stageBlockedWeapon(name, player);
+    if (sInfo) { showToast(`${name} needs ${sInfo.missing.join(' + ')} — not on this stage`, 'warn'); return; }
+
     const equippedW = new Set(player.weapons.filter(Boolean).map(w => w.name));
     // Cross-player evo: a passive equipped by any player satisfies the condition.
     const equippedP = new Set(
@@ -4921,6 +5140,19 @@
     );
 
     if (equippedW.has(name)) { showToast(`${name} already in build`, 'warn'); return; }
+
+    // Free stage-pickup weapon → appended transient slot (fully evolvable in place); auto-add
+    // its required passives (each routed: stage item → transient, else core).
+    if (itemProvidedFree(name, player) && !isFreePick(name)) {
+      if (anyPlayerOwnsWeapon(name)) { showToast(`${name} already in build`, 'warn'); return; }
+      placeTransientItem(player, 'weapon', weaponObj);
+      for (const pname of collectChainPassives(collectWeaponChain(name))) {
+        if (isExtraPassive(pname)) { if (extraCount(player, pname) < extraCap(player, pname)) player.extraPassives.push(pname); continue; }
+        addRequiredPassive(player, pname);
+      }
+      syncExtraPassives(player);
+      showToast(`Added ${name}`); render(); return;
+    }
 
     // Check if this weapon is consumed in any player's evo chain (drop pool is shared).
     const consumed = getConsumedWeapons();
@@ -4948,11 +5180,11 @@
 
     const added = [], failed = [];
 
-    // Add missing passives
-    if (missingPassives.length) {
-      const r = applyBuildItems(missingPassives.map(p => ({ name: p, type: 'passive' })), playerIdx);
-      added.push(...r.added);
-      failed.push(...r.failed);
+    // Add missing passives (routed: a stage-supplied passive — e.g. Silver/Gold Ring for
+    // Infinite Corridor — takes a free transient slot; others take a core slot).
+    for (const pname of missingPassives) {
+      if (addRequiredPassive(player, pname)) added.push(pname);
+      else failed.push(pname);
     }
 
     // Place target weapon — replace anchor slot, or claim an empty slot
@@ -5092,7 +5324,10 @@
       if (!e.target.classList.contains('level-input')) return;
       const playerIdx = parseInt(e.target.dataset.player ?? '0');
       const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
-      state.players[playerIdx].charLevel = val;
+      const player = state.players[playerIdx];
+      const prev = player.charLevel || 1;
+      player.charLevel = val;
+      if (prev < ACADEMY_LEVEL && val >= ACADEMY_LEVEL) autoGrantAcademyBadge(player);
       render();
     });
     const ovlRoot = document.getElementById('overlay-root');
@@ -5115,7 +5350,10 @@
       if (e.target.classList.contains('level-input')) {
         const playerIdx = parseInt(e.target.dataset.player ?? '0');
         const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
-        state.players[playerIdx].charLevel = val;
+        const player = state.players[playerIdx];
+        const prev = player.charLevel || 1;
+        player.charLevel = val;
+        if (prev < ACADEMY_LEVEL && val >= ACADEMY_LEVEL) autoGrantAcademyBadge(player);
         refreshOverlay();
         return;
       }
