@@ -9,6 +9,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { inflateSync } from 'zlib';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT   = join(__dirname, '..');
@@ -99,6 +100,139 @@ function iconPath(raw) {
   const normalized = raw.replace(/\\/g, '/').replace(/\.jpe?g$/i, '.png');
   const match = normalized.match(/assets\/icons\/(.+)$/);
   return match ? 'assets/icons/' + match[1] : normalized;
+}
+
+// ─── Dominant color from a PNG (build-time, for affinity banners) ──────────
+// Self-contained decoder (zlib only, no deps). Supports 8-bit color types
+// 0/2/3/4/6, non-interlaced — the affinity icon set. Anything else / any decode
+// failure returns FALLBACK_COLOR so the build never breaks over an odd asset.
+//
+// "Primary color": bucket opaque, non-extreme pixels by 32-step RGB, pick the
+// heaviest bucket, and return the true average of that bucket. This resists the
+// muddy-gray you get from averaging every pixel together. Tunable later.
+const FALLBACK_COLOR = '#6a4010';
+// Banners read better muted — scale the extracted color's brightness down so vivid icon
+// colors don't glare behind the label text. Tunable.
+const BANNER_MUTE = 0.62;
+
+function toHex(r, g, b) {
+  const h = n => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, '0');
+  return '#' + h(r) + h(g) + h(b);
+}
+function muteHex(r, g, b) { return toHex(r * BANNER_MUTE, g * BANNER_MUTE, b * BANNER_MUTE); }
+
+function decodePngRGBA(buf) {
+  // Signature check
+  const SIG = [137, 80, 78, 71, 13, 10, 26, 10];
+  for (let i = 0; i < 8; i++) if (buf[i] !== SIG[i]) return null;
+  let pos = 8, width = 0, height = 0, bitDepth = 0, colorType = 0, interlace = 0;
+  let palette = null, trns = null;
+  const idat = [];
+  while (pos < buf.length) {
+    const len = buf.readUInt32BE(pos); pos += 4;
+    const type = buf.toString('ascii', pos, pos + 4); pos += 4;
+    const data = buf.subarray(pos, pos + len); pos += len; pos += 4; // skip CRC
+    if (type === 'IHDR') {
+      width = data.readUInt32BE(0); height = data.readUInt32BE(4);
+      bitDepth = data[8]; colorType = data[9]; interlace = data[12];
+    } else if (type === 'PLTE') { palette = data; }
+    else if (type === 'tRNS') { trns = data; }
+    else if (type === 'IDAT') { idat.push(data); }
+    else if (type === 'IEND') break;
+  }
+  // Accept bit depths 1/2/4/8/16 (sub-byte only meaningful for palette/grayscale; 16-bit read
+  // as its high byte). Interlaced PNGs are out of scope → fallback.
+  if (interlace !== 0 || ![1, 2, 4, 8, 16].includes(bitDepth)) return null;
+  const CHANNELS = { 0: 1, 2: 3, 3: 1, 4: 2, 6: 4 };
+  const ch = CHANNELS[colorType];
+  if (!ch) return null;
+  if (bitDepth < 8 && !(colorType === 0 || colorType === 3)) return null; // sub-byte: gray/palette only
+  let raw;
+  try { raw = inflateSync(Buffer.concat(idat)); } catch { return null; }
+  const bppBits  = bitDepth * ch;
+  const bpp      = Math.ceil(bppBits / 8);            // bytes per pixel, for the filter recon
+  const stride   = Math.ceil((width * bppBits) / 8);  // bytes per scanline
+  if (raw.length < (stride + 1) * height) return null;
+  // Unfilter scanlines into `out`.
+  const out = Buffer.alloc(stride * height);
+  for (let y = 0; y < height; y++) {
+    const filter = raw[y * (stride + 1)];
+    const src = y * (stride + 1) + 1;
+    const dst = y * stride;
+    for (let x = 0; x < stride; x++) {
+      const a = x >= bpp ? out[dst + x - bpp] : 0;             // left
+      const b = y > 0 ? out[dst - stride + x] : 0;             // up
+      const c = (x >= bpp && y > 0) ? out[dst - stride + x - bpp] : 0; // up-left
+      let v = raw[src + x];
+      if (filter === 1) v += a;
+      else if (filter === 2) v += b;
+      else if (filter === 3) v += (a + b) >> 1;
+      else if (filter === 4) {
+        const p = a + b - c, pa = Math.abs(p - a), pb = Math.abs(p - b), pc = Math.abs(p - c);
+        v += (pa <= pb && pa <= pc) ? a : (pb <= pc ? b : c);
+      }
+      out[dst + x] = v & 0xff;
+    }
+  }
+  const maxSample = (1 << bitDepth) - 1;
+  // Read channel `c` of the pixel at (col, row) as 0–255 — handles packed sub-byte samples
+  // and 16-bit (via its high byte).
+  function sample(row, col, c) {
+    if (bitDepth === 16) return out[row * stride + (col * ch + c) * 2];  // high byte
+    if (bitDepth === 8) return out[row * stride + col * ch + c];
+    const bitPos = (col * ch + c) * bitDepth;         // ch is 1 for sub-byte formats
+    const byteIdx = row * stride + (bitPos >> 3);
+    const shift = 8 - bitDepth - (bitPos & 7);
+    return (out[byteIdx] >> shift) & maxSample;
+  }
+  return { width, height, colorType, palette, trns,
+    pixel(i) {
+      const row = (i / width) | 0, col = i % width;
+      if (colorType === 6) return [sample(row, col, 0), sample(row, col, 1), sample(row, col, 2), sample(row, col, 3)];
+      if (colorType === 2) return [sample(row, col, 0), sample(row, col, 1), sample(row, col, 2), 255];
+      if (colorType === 4) { const g = sample(row, col, 0); return [g, g, g, sample(row, col, 1)]; }
+      if (colorType === 0) { const s = sample(row, col, 0); const g = bitDepth < 8 ? Math.round(s * 255 / maxSample) : s; return [g, g, g, 255]; }
+      if (colorType === 3) { // palette index
+        const idx = sample(row, col, 0);
+        const p = palette ? [palette[idx * 3], palette[idx * 3 + 1], palette[idx * 3 + 2]] : [0, 0, 0];
+        const al = trns && idx < trns.length ? trns[idx] : 255;
+        return [p[0], p[1], p[2], al];
+      }
+      return [0, 0, 0, 0];
+    } };
+}
+
+function dominantColor(absPath) {
+  let img;
+  try { img = decodePngRGBA(readFileSync(absPath)); } catch { return FALLBACK_COLOR; }
+  if (!img) return FALLBACK_COLOR;
+  const buckets = new Map(); // key → { r, g, b, n }
+  let sumR = 0, sumG = 0, sumB = 0, sumN = 0; // opaque average (fallback for mono icons)
+  const N = img.width * img.height;
+  for (let i = 0; i < N; i++) {
+    const [r, g, b, a] = img.pixel(i);
+    if (a < 128) continue;                       // skip transparent
+    sumR += r; sumG += g; sumB += b; sumN++;
+    const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+    if (mx > 240 && mn > 240) continue;          // skip near-white
+    if (mx < 18) continue;                         // skip near-black
+    const key = (r >> 5) + ',' + (g >> 5) + ',' + (b >> 5);
+    let bk = buckets.get(key);
+    if (!bk) { bk = { r: 0, g: 0, b: 0, n: 0 }; buckets.set(key, bk); }
+    bk.r += r; bk.g += g; bk.b += b; bk.n++;
+  }
+  // Pick the bucket scoring highest on frequency × colorfulness, so a vivid hue wins over a
+  // larger dark/gray mass (outlines, shadows). The +8 keeps low-saturation icons from zeroing.
+  let best = null, bestScore = -1;
+  for (const bk of buckets.values()) {
+    const r = bk.r / bk.n, g = bk.g / bk.n, b = bk.b / bk.n;
+    const colorful = Math.max(r, g, b) - Math.min(r, g, b);
+    const score = bk.n * (colorful + 8);
+    if (score > bestScore) { bestScore = score; best = { r, g, b }; }
+  }
+  if (best) return muteHex(best.r, best.g, best.b);
+  if (sumN) return muteHex(sumR / sumN, sumG / sumN, sumB / sumN); // all near-white/black icon
+  return FALLBACK_COLOR;
 }
 
 // ─── Arcana → weapon-rating column map ───────────────────────────────────
@@ -200,6 +334,42 @@ function splitOutsideBrackets(str, delim) {
   return parts;
 }
 
+// Non-canonical elevation keys normalized to the canonical one ('primary'). Fix in the CSV
+// to silence the warning; kept as an alias so old rows keep working meanwhile.
+const AFFINITY_KEY_ALIASES = { priority: 'primary' };
+
+// Parse an object's `affinity` column into ordered, optionally-keyed groups. Grammar
+// (brace-wrapped cell): `{ [key:] [a, b, c] | [key:] [d, e] | … }` — `|` separates lists,
+// `[]` wraps a list, `,` separates items, an optional `key:` flags a list (e.g. `Primary:`).
+// A bare (unkeyed) list → key:null (the default, lower-priority group). Legacy cells with no
+// `[` fall back to a single default list split on `|` (old pipe-list format), easing migration.
+// Emits [{ key, items }] preserving authoring order; supports >2 lists and unknown keys.
+function parseAffinityGroups(raw, ctx = '') {
+  const cell = unwrap(raw);
+  if (!cell) return [];
+  if (!cell.includes('[')) {
+    const items = cell.split('|').map(s => s.trim()).filter(Boolean);
+    return items.length ? [{ key: null, items }] : [];
+  }
+  return splitOutsideBrackets(cell, '|').map(s => s.trim()).filter(Boolean).map(seg => {
+    const m = seg.match(/^([A-Za-z][\w-]*)\s*:/);
+    let key = m ? m[1].toLowerCase() : null;
+    if (key && AFFINITY_KEY_ALIASES[key]) {
+      console.warn(`affinity: key "${key}" → "${AFFINITY_KEY_ALIASES[key]}" (${ctx}) — standardize the CSV`);
+      key = AFFINITY_KEY_ALIASES[key];
+    }
+    const inner = ((m ? seg.slice(m[0].length) : seg).match(/\[([^\]]*)\]/) || [, ''])[1];
+    const items = inner.split(',').map(s => s.trim()).filter(Boolean);
+    return { key, items };
+  }).filter(g => g.items.length);
+}
+
+// Emit both affinity fields from one parse (avoids double-parsing / double-warning).
+function affinityFields(raw, ctx = '') {
+  const affinity_groups = parseAffinityGroups(raw, ctx);
+  return { affinity_groups, affinity: affinity_groups.flatMap(g => g.items) };
+}
+
 function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
   if (!raw || raw.trim() === '-') return [];
   // Braces only wrap the block; the rules live inside, pipe-separated. Strip the
@@ -275,7 +445,9 @@ const characters = rawChars.map(r => ({
   description: unwrap(r.character_description),
   custom_description: unwrap(r.custom_description), // shown in the UI later (extra context)
   notes: '',                                        // no source column in the new schema
-  affinity: splitItems(r.affinity), // brace-wrapped priority list → array; future affinities.csv mapping
+  // Grouped affinity schema: `affinity_groups` = ordered [{key,items}] (key:'primary' etc.);
+  // `affinity` stays a flat union for anything that just wants the whole list.
+  ...affinityFields(r.affinity, r.name),
   scaling: parseScaling(r.level_scaling),
   // Phase-2 rule columns, passed through unparsed until their runtime features exist.
   reference_scaling: unwrap(r.reference_scaling),
@@ -428,9 +600,49 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
     notes: '',
     affects_explicit: splitItems(r.affects_explicit),
     affects_implicit: splitItems(r.affects_implicit),
-    affinity: splitItems(r.affinity),
+    ...affinityFields(r.affinity, r.name),
   };
 });
+
+// ─── Process affinities ───────────────────────────────────────────────────
+// Affinity = an internal tag-association between build objects (never surfaced by that
+// name in the UI). Each row lists the objects it relates to per category. `base_affinity`
+// gives a shallow parent/child hierarchy: a row is a PARENT when it names itself as its
+// base (Armor, Arcana, Character, and self-parents like Amount); a CHILD points at a
+// different parent (Retaliation → Armor). Membership is pre-authored per row, so no rollup.
+// `color` is the banner color, derived at build time from the icon's dominant color.
+// `info` is affinity-level today; a future per-object blurb column is not yet present.
+
+const rawAffinities = readCsv('affinities.csv', true);
+const affinities = rawAffinities.filter(r => r.affinity).map(r => {
+  const name = unwrap(r.affinity) || r.affinity.trim();
+  const base_affinity = unwrap(r.base_affinity) || name;
+  const icon = iconPath(r.icon_path);
+  const color = icon ? dominantColor(join(REPO_ROOT, icon)) : FALLBACK_COLOR;
+  return {
+    name,
+    icon,
+    color,
+    base_affinity,
+    is_parent: name === base_affinity,
+    description: unwrap(r.description),
+    info: unwrap(r.info),
+    related: {
+      weapons:    splitItems(r.related_to_weapons),
+      passives:   splitItems(r.related_to_passives),
+      characters: splitItems(r.related_to_characters),
+      arcana:     splitItems(r.related_to_arcana),
+    },
+  };
+});
+
+// Manual banner-color swaps: these pairs read better with each other's derived color.
+const AFFINITY_COLOR_SWAPS = [['Max Health', 'Armor']];
+for (const [a, b] of AFFINITY_COLOR_SWAPS) {
+  const A = affinities.find(x => x.name === a), B = affinities.find(x => x.name === b);
+  if (A && B) { const t = A.color; A.color = B.color; B.color = t; }
+  else console.warn(`color swap: "${a}"/"${b}" — one side not found`);
+}
 
 // ─── Synthesize phantom starter weapons ───────────────────────────────────
 // Some characters start with an item that has no weapons.csv row. When it's a real
@@ -598,7 +810,7 @@ const stages = rawStages.filter(r => r.name).map(r => {
 mkdirSync(DATA_OUT, { recursive: true });
 
 const out = `// Generated by tools/build-data.mjs — do not edit by hand
-window.VS_DATA = ${JSON.stringify({ characters, weapons, passives, arcana, banishLayout, stats, evoPaths, stages }, null, 2)};
+window.VS_DATA = ${JSON.stringify({ characters, weapons, passives, arcana, affinities, banishLayout, stats, evoPaths, stages }, null, 2)};
 `;
 
 writeFileSync(join(DATA_OUT, 'data.js'), out);
@@ -607,6 +819,7 @@ console.log(`characters: ${characters.length}`);
 console.log(`weapons:    ${weapons.length}`);
 console.log(`passives:   ${passives.length}`);
 console.log(`arcana:     ${arcana.length}`);
+console.log(`affinities: ${affinities.length}`);
 console.log(`evoPaths:   ${evoPaths.length}`);
 console.log(`stages:     ${stages.length}`);
 console.log('Wrote data/data.js');

@@ -16,6 +16,21 @@ window.VS_DATA = {
       "description": "Gains 10% more damage every 10 levels (max +50%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Max Health",
@@ -67,6 +82,14 @@ window.VS_DATA = {
       "description": "Gains 10% more experience every 5 levels (max +30%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Growth"
       ],
@@ -119,6 +142,17 @@ window.VS_DATA = {
       "description": "Gains 10% more experience every 5 levels (max +30%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Move Speed",
+            "Speed",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Move Speed",
@@ -171,6 +205,14 @@ window.VS_DATA = {
       "description": "Projectiles get 10% faster every 5 levels (max +30%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Speed"
       ],
@@ -220,6 +262,15 @@ window.VS_DATA = {
       "description": "Permanent +1 projectile (all weapons).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health"
@@ -263,6 +314,15 @@ window.VS_DATA = {
       "description": "Weapon cooldown is reduced by 5% every 10 levels (max -15%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Might"
@@ -313,6 +373,21 @@ window.VS_DATA = {
       "description": "Permanent +30% Area. Starts with temporary cooldown bonus.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Halted XP"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Halted XP",
         "Cooldown",
@@ -364,6 +439,22 @@ window.VS_DATA = {
       "description": "Gains +5% Might, MoveSpeed, and Curse every 10 levels (max +20%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Move Speed",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Move Speed",
@@ -428,6 +519,14 @@ window.VS_DATA = {
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Magnet"
       ],
@@ -473,6 +572,20 @@ window.VS_DATA = {
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Magnet"
@@ -516,6 +629,22 @@ window.VS_DATA = {
       "description": "Permanent +0.5 HP/s and +50 Max Health. Starts with temporary area bonus.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Halted XP",
+            "Area"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Halted XP",
         "Area",
@@ -568,6 +697,15 @@ window.VS_DATA = {
       "description": "Permanent +40% duration and speed, -40% move speed.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Speed"
@@ -611,6 +749,15 @@ window.VS_DATA = {
       "description": "Starts with 1 Revival. Gains 1 more Revival at level 33.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Revival"
@@ -661,6 +808,20 @@ window.VS_DATA = {
       "description": "Starts with 1 extra Level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Move Speed"
@@ -705,6 +866,20 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Move Speed"
@@ -755,6 +930,20 @@ window.VS_DATA = {
       "description": "Gains +1% Projectile Speed every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
         "Move Speed"
@@ -805,6 +994,20 @@ window.VS_DATA = {
       "description": "Gains +1% Duration every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Move Speed"
@@ -855,6 +1058,21 @@ window.VS_DATA = {
       "description": "Gains +1% Area every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Area"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Area",
         "Move Speed",
@@ -906,6 +1124,21 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health",
@@ -975,6 +1208,22 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Luck",
@@ -1051,6 +1300,16 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health",
@@ -1102,6 +1361,21 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health",
@@ -1171,11 +1445,17 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+3). Starts with temporary Amount bonus.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount",
+            "Halted XP"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
-        "Magnet",
-        "Luck",
-        "Greed",
         "Halted XP"
       ],
       "scaling": [
@@ -1230,6 +1510,21 @@ window.VS_DATA = {
       "description": "Starts with one extra level. Gains 10% Growth every 5 levels (max +50%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Duration",
@@ -1281,10 +1576,16 @@ window.VS_DATA = {
       "description": "Starts with one extra level. Gains +1 Armor every 5 levels (max +5).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
-        "Armor",
-        "Luck",
-        "Recovery"
+        "Armor"
       ],
       "scaling": [
         {
@@ -1332,6 +1633,24 @@ window.VS_DATA = {
       "description": "Gains +0.5% Might, Projectile Speed, Duration, and Area every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Speed",
@@ -1404,18 +1723,42 @@ window.VS_DATA = {
       "description": "She owns everything.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Recovery",
+            "Armor",
+            "Magnet",
+            "Move Speed",
+            "Duration",
+            "Cooldown",
+            "Amount",
+            "Revival",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Growth",
         "Max Health",
         "Recovery",
         "Armor",
+        "Magnet",
         "Move Speed",
         "Duration",
         "Cooldown",
         "Amount",
         "Revival",
-        "Magnet",
         "Luck"
       ],
       "scaling": [
@@ -1470,6 +1813,22 @@ window.VS_DATA = {
       "description": "Recovers 30% Max Health and gains +32 Max Health (Max +665) when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Move Speed",
@@ -1515,6 +1874,24 @@ window.VS_DATA = {
       "description": "Can find extra explosive props that might drop Treasure Chests. Can destroy light sources by touching them.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Light Source",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Magnet",
+            "Speed",
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Light Source",
         "Luck",
@@ -1562,11 +1939,18 @@ window.VS_DATA = {
       "description": "Activates his main weapon when picking up Gold Coins. Uses Gold Coins as damage barrier. Has a 4X chance of drafting FOIL Survarots.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "[Gold Coin",
+            "Light Source"
+          ]
+        }
+      ],
       "affinity": [
-        "Gold Coin",
-        "Light Source",
-        "Greed",
-        "Move Speed"
+        "[Gold Coin",
+        "Light Source"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -1607,6 +1991,21 @@ window.VS_DATA = {
       "description": "Freezes all enemies for 10 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Freeze",
         "Move Speed",
@@ -1657,6 +2056,23 @@ window.VS_DATA = {
       "description": "Also starts with a Level 5 Wings and a hidden Valkyrie Turner.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Freeze",
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Revival",
         "Luck",
@@ -1706,7 +2122,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
+        "Limited",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -1750,9 +2183,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
-        "Limit Break",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -1796,9 +2244,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
-        "Limit Break",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -1842,9 +2305,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
-        "Limit Break",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -1888,9 +2366,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
-        "Limit Break",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -1934,9 +2427,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
-        "Limit Break",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -1980,9 +2488,24 @@ window.VS_DATA = {
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
-        "Limit Break",
         "Duration",
         "Move Speed",
         "Vacuum"
@@ -2026,11 +2549,27 @@ window.VS_DATA = {
       "description": "Starts with temporary Cooldown bonus. Triggers a Rosary when Health reaches a critically low level. Likes to keep secrets.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Santa",
+            "Halted XP"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Luck",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Santa",
         "Halted XP",
         "Cooldown",
-        "Rosary",
         "Luck",
         "Armor"
       ],
@@ -2101,6 +2640,31 @@ window.VS_DATA = {
       "description": "Overhealing by +30 gives a cumulative bonus to a random stat.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health",
+            "Recovery",
+            "Armor",
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Revival",
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Move Speed",
@@ -2155,6 +2719,23 @@ window.VS_DATA = {
       "description": "Chances his luck every 30 seconds or when picking up a Rerollo.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck",
+            "Light Source"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Magnet",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Light Source",
@@ -2201,6 +2782,14 @@ window.VS_DATA = {
       "description": "May occasionally activate all weapons twice depending on Cooldown.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown"
       ],
@@ -2243,6 +2832,14 @@ window.VS_DATA = {
       "description": "At least they're lucky.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Luck"
       ],
@@ -2292,11 +2889,27 @@ window.VS_DATA = {
       "description": "So much potential.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth",
+            "Max Health",
+            "Armor"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
-        "Luck",
         "Growth",
         "Max Health",
-        "Armor"
+        "Armor",
+        "Luck"
       ],
       "scaling": [
         {
@@ -2356,6 +2969,25 @@ window.VS_DATA = {
       "description": "The quirky white bear.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Area",
+            "Duration",
+            "Cooldown",
+            "Recovery",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Might",
@@ -2447,6 +3079,7 @@ window.VS_DATA = {
       "description": "Random.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [],
       "affinity": [],
       "scaling": [],
       "reference_scaling": "",
@@ -2487,6 +3120,17 @@ window.VS_DATA = {
       "description": "",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Might",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Move Speed",
@@ -2532,8 +3176,27 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIX - Heart of Fire. Grows stronger with every level, but also loses control.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed",
+            "Might",
+            "Curse",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Luck",
+            "Max Health",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
-        "Fire",
         "Move Speed",
         "Might",
         "Curse",
@@ -2607,6 +3270,24 @@ window.VS_DATA = {
       "description": "Might, Projectile Speed, Duration, Area, and Cooldown change every minute.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Speed",
@@ -2661,6 +3342,22 @@ window.VS_DATA = {
       "description": "",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Armor",
         "Might",
@@ -2710,6 +3407,22 @@ window.VS_DATA = {
       "description": "Gains +1 Recovery and +1% Luck every level. Gains +1 Revival every 100 levels. Has hidden weapons.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Revival",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Luck",
@@ -2774,6 +3487,21 @@ window.VS_DATA = {
       "description": "Starts with temporarily reduced area.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Magnet",
         "Armor",
@@ -2825,6 +3553,21 @@ window.VS_DATA = {
       "description": "Gains +1% Greed every level. Gold Fever lasts longer.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Gold Fever",
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Gold Fever",
         "Greed",
@@ -2877,6 +3620,7 @@ window.VS_DATA = {
       "description": "M(▯▯)",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [],
       "affinity": [],
       "scaling": [],
       "reference_scaling": "",
@@ -2917,6 +3661,14 @@ window.VS_DATA = {
       "description": "Gains +2% Growth every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Growth"
       ],
@@ -2966,11 +3718,16 @@ window.VS_DATA = {
       "description": "Gains +1% Curse every level. Can find evolutions in any Treasure.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
-        "Curse",
-        "Max Health",
-        "Revival",
-        "Might"
+        "Curse"
       ],
       "scaling": [
         {
@@ -3018,10 +3775,18 @@ window.VS_DATA = {
       "description": "A blasphemous mockery.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "[Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
-        "Move Speed",
-        "Max Health",
-        "Might"
+        "[Move Speed",
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -3062,6 +3827,21 @@ window.VS_DATA = {
       "description": "Starting weapon gets stronger when levelling up. Revivals also affect Amount. Receives a follower after reviving.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Revival",
         "Move Speed",
@@ -3106,6 +3886,23 @@ window.VS_DATA = {
       "description": "Increases enemy spawn quantity by 100.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Move Speed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Growth",
@@ -3173,6 +3970,23 @@ window.VS_DATA = {
       "description": "Evolves into JoyaTauro at lv16, and into AccumulaTori at lv36. Retaliates.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Retaliation",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Duration",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Retaliation",
         "Max Health",
@@ -3288,6 +4102,16 @@ window.VS_DATA = {
       "description": "Gains a hidden Lightning Ring every 8 levels (max 6) that also fires when losing health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Area",
+            "Max Health",
+            "Retaliation"
+          ]
+        }
+      ],
       "affinity": [
         "Area",
         "Max Health",
@@ -3342,11 +4166,16 @@ window.VS_DATA = {
       "description": "Starting weapon grows stronger when levelling up. Gains +1% Curse every level. Ignores Walls.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
-        "Curse",
-        "Move Speed",
-        "Armor",
-        "Max Health"
+        "Curse"
       ],
       "scaling": [
         {
@@ -3394,6 +4223,21 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Gets a Survarot Multiplier equal to Log10 Golden Eggs (max x10).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Light Source",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Light Source",
         "Luck",
@@ -3438,6 +4282,21 @@ window.VS_DATA = {
       "description": "Starting weapon grows stronger when levelling up. Gets more fans from defeating a large amount of enemies.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Move Speed",
@@ -3482,6 +4341,21 @@ window.VS_DATA = {
       "description": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Max Health",
@@ -3526,11 +4400,28 @@ window.VS_DATA = {
       "description": "Becomes stronger and invincible for a fixed interval after defeating a large amount of enemies.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse",
+            "Cooldown",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
         "Move Speed",
-        "Rosary",
         "Curse",
         "Cooldown",
         "Luck"
@@ -3576,6 +4467,23 @@ window.VS_DATA = {
       "description": "Starts with hidden Night Sword. Morphs into a stronger version when his base weapon evolves.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Max Health",
+            "Armor"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Max Health",
@@ -3630,6 +4538,14 @@ window.VS_DATA = {
       "description": "Ignores weapons cooldown. Weapons fire at a fixed interval when moving.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed"
       ],
@@ -3672,6 +4588,22 @@ window.VS_DATA = {
       "description": "Area temporarily increases at fixed intervals.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Area"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Armor",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Area",
         "Growth",
@@ -3719,6 +4651,22 @@ window.VS_DATA = {
       "description": "Cannot be damaged, but disappears after reaching the current Time Limit. Starts with hidden 108 Bocce.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Move Speed",
@@ -3764,6 +4712,24 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Curse",
+            "Armor",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Max Health",
@@ -3818,6 +4784,20 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -3868,9 +4848,16 @@ window.VS_DATA = {
       "description": "Receives SpellStream at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth, Move Speed"
+          ]
+        }
+      ],
       "affinity": [
-        "Growth",
-        "Move Speed"
+        "Growth, Move Speed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -3942,9 +4929,16 @@ window.VS_DATA = {
       "description": "Receives SpellStrike at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth, Move Speed"
+          ]
+        }
+      ],
       "affinity": [
-        "Growth",
-        "Move Speed"
+        "Growth, Move Speed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -4016,9 +5010,16 @@ window.VS_DATA = {
       "description": "Receives SpellString at Level 10 and SpellStream at Level 20. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth, Move Speed"
+          ]
+        }
+      ],
       "affinity": [
-        "Growth",
-        "Move Speed"
+        "Growth, Move Speed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -4090,6 +5091,22 @@ window.VS_DATA = {
       "description": "Gains temporary Armor bonus after getting damaged. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Armor",
         "Might",
@@ -4146,6 +5163,23 @@ window.VS_DATA = {
       "description": "Luck-based Charge ability: fires a volley of Flash Arrows. Gains +1% luck every level. Receives Academy Badge at Level 30.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Speed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Move Speed",
@@ -4210,6 +5244,22 @@ window.VS_DATA = {
       "description": "Triggers a Rosary when levelling up. Gets a temporary Might, Cooldown, and MoveSpeed bonus after reviving.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Revival",
         "Might",
@@ -4255,8 +5305,22 @@ window.VS_DATA = {
       "description": "Triggers a Vacuum when levelling up. Once per life, triggers World Eater after receiving fatal damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet",
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
-        "Vacuum",
         "Magnet",
         "Greed",
         "Move Speed"
@@ -4315,6 +5379,25 @@ window.VS_DATA = {
       "description": "It will literally eat the world.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Greed",
+            "Armor",
+            "Max Health",
+            "Vacuum"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Curse",
@@ -4407,6 +5490,22 @@ window.VS_DATA = {
       "description": "Gains XP when picking up Gold Coins and Coin Bags. Starts with temporarily reduced Might.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck",
+            "Greed",
+            "Gold Fever"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Greed",
@@ -4459,6 +5558,20 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -4509,6 +5622,20 @@ window.VS_DATA = {
       "description": "Gains stat bonuses every time anyones weapon is brought to max level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Crewmate"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Crewmate",
         "Move Speed"
@@ -4552,6 +5679,14 @@ window.VS_DATA = {
       "description": "Chooses an extra passive weapon at level 2, 12, and 22",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed"
       ],
@@ -4606,6 +5741,20 @@ window.VS_DATA = {
       "description": "Can't be damaged or deal damage, but disappears after reaching the current Time Limit. Ignores walls.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Ghost"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Ghost",
         "Luck"
@@ -4649,6 +5798,22 @@ window.VS_DATA = {
       "description": "Leaves behind excess body parts when damaged and may shift forms.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Retaliation",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Recovery",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Retaliation",
         "Max Health",
@@ -4694,6 +5859,22 @@ window.VS_DATA = {
       "description": "May gain +1 Revival when anyone revives. Increases Armor and Recovery of nearby characters. Ignores walls.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Revival",
         "Move Speed",
@@ -4739,6 +5920,23 @@ window.VS_DATA = {
       "description": "Becomes stronger and briefly invincible after defeating a large amount of enemies, or an ally.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -4785,17 +5983,16 @@ window.VS_DATA = {
       "description": "Gets -10% Luck every 10 levels (max -90%). Can choose a per-level bonus every 10 levels (max 5 times).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Might, Area, Speed, Duration, Recovery, Growth, Luck, Greed, Curse, Move Speed"
+          ]
+        }
+      ],
       "affinity": [
-        "Might",
-        "Area",
-        "Speed",
-        "Duration",
-        "Recovery",
-        "Growth",
-        "Luck",
-        "Greed",
-        "Curse",
-        "Move Speed"
+        "Might, Area, Speed, Duration, Recovery, Growth, Luck, Greed, Curse, Move Speed"
       ],
       "scaling": [
         {
@@ -4873,6 +6070,20 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (max+4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -4925,6 +6136,21 @@ window.VS_DATA = {
       "description": "I'm not the Impostor.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Move Speed",
@@ -4979,6 +6205,21 @@ window.VS_DATA = {
       "description": "Receives a bonus to Projectile Speed (max 50%) and to Might when defeating many enemies. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
         "Might",
@@ -5023,6 +6264,21 @@ window.VS_DATA = {
       "description": "Receive a bonus to Projectile Speed (max 50%) and to Cooldown (max-25%) when defeating many enemies. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
         "Cooldown",
@@ -5067,6 +6323,24 @@ window.VS_DATA = {
       "description": "Movement Speed increases Armour. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed",
+            "Armor",
+            "Ariana"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Speed",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Armor",
@@ -5114,6 +6388,32 @@ window.VS_DATA = {
       "description": "Gain a bonus to all stats after Reviving. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Luck",
+            "Growth",
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Max Health",
+            "Amount",
+            "Greed",
+            "Armor",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Revival",
         "Move Speed",
@@ -5169,6 +6469,24 @@ window.VS_DATA = {
       "description": "When Health is low, Cooldown is decreased and Move Speed and Speed increase. Can find special Pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might",
+            "Speed",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Cooldown",
@@ -5216,13 +6534,18 @@ window.VS_DATA = {
       "description": "Decreasing Cooldown increases Area. Can find extra explosive props and special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Cooldown",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
-        "Area",
-        "Move Speed",
-        "Max Health",
-        "Luck",
-        "Armor"
+        "Area"
       ],
       "scaling": [],
       "reference_scaling": "area: 0.02 per -0.01 cooldown max 0.5",
@@ -5263,10 +6586,18 @@ window.VS_DATA = {
       "description": "Move Speed decreases Cooldown. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
-        "Cooldown",
-        "Recovery"
+        "Cooldown"
       ],
       "scaling": [],
       "reference_scaling": "cooldown: -0.01 per 0.02 move_speed",
@@ -5307,6 +6638,21 @@ window.VS_DATA = {
       "description": "Armour increses Might. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Armor",
         "Might",
@@ -5351,6 +6697,21 @@ window.VS_DATA = {
       "description": "Might increases Armour. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Armor"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Armor",
@@ -5395,11 +6756,18 @@ window.VS_DATA = {
       "description": "Projectile Speed increases Might. Can find extra explosive props and special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
-        "Might",
-        "Move Speed",
-        "Luck"
+        "Might"
       ],
       "scaling": [],
       "reference_scaling": "might: 0.01 per 0.01 speed max 9",
@@ -5440,6 +6808,25 @@ window.VS_DATA = {
       "description": "Greed and Curse increase Might. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed",
+            "Curse",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Magnet",
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Curse",
@@ -5486,6 +6873,23 @@ window.VS_DATA = {
       "description": "Simondo says he doesn't even need guns. Gets more projectiles every 20 levels (max +4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Light Source",
+            "Luck",
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Cooldown",
@@ -5539,6 +6943,29 @@ window.VS_DATA = {
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Might",
+            "Speed",
+            "Area",
+            "Luck",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Revival",
@@ -5602,6 +7029,29 @@ window.VS_DATA = {
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Might",
+            "Speed",
+            "Area",
+            "Luck",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Revival",
@@ -5665,6 +7115,22 @@ window.VS_DATA = {
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Cooldown",
@@ -5710,6 +7176,22 @@ window.VS_DATA = {
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Cooldown",
@@ -5755,6 +7237,20 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -5805,6 +7301,20 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -5855,6 +7365,23 @@ window.VS_DATA = {
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Revival",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Might",
@@ -5901,6 +7428,23 @@ window.VS_DATA = {
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Revival",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Might",
@@ -5947,6 +7491,23 @@ window.VS_DATA = {
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Revival",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Might",
@@ -5993,6 +7554,23 @@ window.VS_DATA = {
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Revival",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Might",
@@ -6039,6 +7617,22 @@ window.VS_DATA = {
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Might",
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Move Speed",
@@ -6084,6 +7678,22 @@ window.VS_DATA = {
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Might",
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Move Speed",
@@ -6129,6 +7739,15 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Cooldown"
@@ -6172,6 +7791,15 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Cooldown"
@@ -6215,6 +7843,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Might",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Might",
@@ -6260,6 +7904,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Might",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Might",
@@ -6305,6 +7965,23 @@ window.VS_DATA = {
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Knives",
+            "Retaliation",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Knives",
         "Retaliation",
@@ -6351,6 +8028,23 @@ window.VS_DATA = {
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Knives",
+            "Retaliation",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Knives",
         "Retaliation",
@@ -6397,6 +8091,21 @@ window.VS_DATA = {
       "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health",
@@ -6452,6 +8161,21 @@ window.VS_DATA = {
       "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health",
@@ -6507,6 +8231,21 @@ window.VS_DATA = {
       "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Max Health",
@@ -6562,6 +8301,22 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -6607,6 +8362,22 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -6652,6 +8423,22 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -6697,6 +8484,22 @@ window.VS_DATA = {
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -6742,6 +8545,21 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Greed",
@@ -6793,6 +8611,21 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Greed",
@@ -6844,6 +8677,24 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.Also gains +1 Revival every 100 levels. Enemies drop Blue, Red, or Yellow Souls that increase Growth, Might, or Greed respectively when set amounts are collected.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Greed",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Revival",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Greed",
@@ -6905,6 +8756,23 @@ window.VS_DATA = {
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Duration",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Growth",
@@ -6952,6 +8820,23 @@ window.VS_DATA = {
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Duration",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Growth",
@@ -6998,6 +8883,15 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Duration"
@@ -7041,6 +8935,15 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Duration"
@@ -7084,10 +8987,16 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana III - Tragic Princess.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Magnet, Move Speed, Speed]"
+          ]
+        }
+      ],
       "affinity": [
-        "Magnet",
-        "Move Speed",
-        "Speed"
+        "Magnet, Move Speed, Speed]"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -7128,10 +9037,16 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana III - Tragic Princess.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Magnet, Move Speed, Speed]"
+          ]
+        }
+      ],
       "affinity": [
-        "Magnet",
-        "Move Speed",
-        "Speed"
+        "Magnet, Move Speed, Speed]"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -7172,6 +9087,22 @@ window.VS_DATA = {
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Move Speed",
@@ -7217,6 +9148,22 @@ window.VS_DATA = {
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Move Speed",
@@ -7262,8 +9209,28 @@ window.VS_DATA = {
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Invulnerable",
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Invulnerable",
+        "Low Health",
         "Move Speed",
         "Might",
         "Speed",
@@ -7309,8 +9276,28 @@ window.VS_DATA = {
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Invulnerable",
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Invulnerable",
+        "Low Health",
         "Move Speed",
         "Might",
         "Speed",
@@ -7356,8 +9343,28 @@ window.VS_DATA = {
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Invulnerable",
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Invulnerable",
+        "Low Health",
         "Move Speed",
         "Might",
         "Speed",
@@ -7403,6 +9410,21 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Familiar"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Familiar",
         "Magnet",
@@ -7457,6 +9479,21 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Familiar"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Familiar",
         "Magnet",
@@ -7511,6 +9548,21 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Familiar"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Familiar",
         "Magnet",
@@ -7565,6 +9617,22 @@ window.VS_DATA = {
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -7651,6 +9719,22 @@ window.VS_DATA = {
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -7737,6 +9821,22 @@ window.VS_DATA = {
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -7823,6 +9923,22 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Ambiguous Power",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Ambiguous Power",
         "Might",
@@ -7875,6 +9991,22 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Ambiguous Power",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Ambiguous Power",
         "Might",
@@ -7927,6 +10059,21 @@ window.VS_DATA = {
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Revival",
@@ -7971,6 +10118,21 @@ window.VS_DATA = {
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Revival",
@@ -8015,6 +10177,23 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Invulnerable",
@@ -8061,6 +10240,23 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Invulnerable",
@@ -8107,6 +10303,24 @@ window.VS_DATA = {
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Area",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Area",
@@ -8154,6 +10368,24 @@ window.VS_DATA = {
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Area",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Area",
@@ -8201,6 +10433,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Greed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Curse",
@@ -8260,6 +10509,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Greed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Curse",
@@ -8319,6 +10585,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Luck",
@@ -8364,6 +10646,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Luck",
@@ -8409,6 +10707,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount"
+          ]
+        }
+      ],
       "affinity": [
         "Magnet",
         "Move Speed",
@@ -8453,6 +10766,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount"
+          ]
+        }
+      ],
       "affinity": [
         "Magnet",
         "Move Speed",
@@ -8497,6 +10825,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana I - Gemini.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Counterpart",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Counterpart",
         "Might",
@@ -8542,6 +10886,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana I - Gemini.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Counterpart",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Counterpart",
         "Might",
@@ -8587,6 +10947,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana II - Twilight Requiem.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Move Speed",
@@ -8632,6 +11008,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana II - Twilight Requiem.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Move Speed",
@@ -8677,6 +11069,26 @@ window.VS_DATA = {
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Greed",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -8726,6 +11138,26 @@ window.VS_DATA = {
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Greed",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -8775,6 +11207,26 @@ window.VS_DATA = {
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Greed",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -8824,6 +11276,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Critical Damage",
         "Max Health",
@@ -8868,6 +11335,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Critical Damage",
         "Max Health",
@@ -8912,6 +11394,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Critical Damage",
         "Max Health",
@@ -8956,6 +11453,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Critical Damage",
         "Max Health",
@@ -9000,6 +11512,22 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed",
+            "Area",
+            "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Familiar"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
         "Area",
@@ -9055,6 +11583,22 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed",
+            "Area",
+            "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Familiar"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
         "Area",
@@ -9110,6 +11654,22 @@ window.VS_DATA = {
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Speed",
+            "Area",
+            "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Familiar"
+          ]
+        }
+      ],
       "affinity": [
         "Speed",
         "Area",
@@ -9165,6 +11725,21 @@ window.VS_DATA = {
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Duration",
@@ -9216,6 +11791,21 @@ window.VS_DATA = {
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Duration",
@@ -9267,6 +11857,21 @@ window.VS_DATA = {
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Greed",
@@ -9311,6 +11916,21 @@ window.VS_DATA = {
       "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Greed",
@@ -9355,6 +11975,24 @@ window.VS_DATA = {
       "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -9402,6 +12040,24 @@ window.VS_DATA = {
       "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -9449,6 +12105,20 @@ window.VS_DATA = {
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Move Speed"
@@ -9499,6 +12169,20 @@ window.VS_DATA = {
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Move Speed"
@@ -9549,6 +12233,26 @@ window.VS_DATA = {
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Curse",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown",
+            "Max Health",
+            "Move Speed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Curse",
         "Invulnerable",
@@ -9605,6 +12309,26 @@ window.VS_DATA = {
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Curse",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown",
+            "Max Health",
+            "Move Speed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Curse",
         "Invulnerable",
@@ -9661,6 +12385,21 @@ window.VS_DATA = {
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Move Speed",
@@ -9712,6 +12451,21 @@ window.VS_DATA = {
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Move Speed",
@@ -9763,6 +12517,21 @@ window.VS_DATA = {
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Move Speed",
@@ -9814,6 +12583,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Armor",
@@ -9879,6 +12663,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Armor",
@@ -9944,6 +12743,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Armor",
@@ -10009,6 +12823,22 @@ window.VS_DATA = {
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Amount",
@@ -10054,6 +12884,22 @@ window.VS_DATA = {
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Amount",
@@ -10099,6 +12945,22 @@ window.VS_DATA = {
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Amount",
@@ -10144,6 +13006,25 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Duration",
+            "Area",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -10192,6 +13073,25 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Duration",
+            "Area",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -10240,6 +13140,25 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Duration",
+            "Area",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -10288,6 +13207,25 @@ window.VS_DATA = {
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Duration",
+            "Area",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Might",
@@ -10336,6 +13274,21 @@ window.VS_DATA = {
       "description": "Cannot be damaged, but disappear after reaching the current time limit.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Familiar"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Familiar",
         "Luck",
@@ -10410,6 +13363,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10460,6 +13427,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10510,6 +13491,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10560,6 +13555,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10610,6 +13619,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10660,6 +13683,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10710,6 +13747,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10760,6 +13811,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10810,6 +13875,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10862,6 +13941,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10913,6 +14006,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +3).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -10964,6 +14071,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Max Health",
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Amount",
@@ -11018,6 +14142,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Max Health",
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Amount",
@@ -11073,7 +14214,17 @@ window.VS_DATA = {
       "description": "Water included.",
       "custom_description": "",
       "notes": "",
-      "affinity": [],
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11116,6 +14267,16 @@ window.VS_DATA = {
       "description": "Deeply moved by money.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Gold Fever",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Gold Fever",
@@ -11167,6 +14328,15 @@ window.VS_DATA = {
       "description": "Gets more projectiles every 20 levels (Max +3). Amount is doubled while invulnerable.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Invulnerable",
+            "Amount"
+          ]
+        }
+      ],
       "affinity": [
         "Invulnerable",
         "Amount"
@@ -11217,6 +14387,22 @@ window.VS_DATA = {
       "description": "Retaliates with Aura Blast. Triggers Aura Blast and a random equipped weapon from the Coat of Arms when overhealing by +8.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Recovery",
+            "Retaliate"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Recovery",
@@ -11262,6 +14448,22 @@ window.VS_DATA = {
       "description": "Adept with Valmanway. Might receive Coat of Arms as 4th level up option until Level 15.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Hugh"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Hugh",
         "Move Speed",
@@ -11307,6 +14509,24 @@ window.VS_DATA = {
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Morris",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Morris",
@@ -11354,6 +14574,24 @@ window.VS_DATA = {
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Morris",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Might",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Morris",
@@ -11401,6 +14639,15 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Recovery"
@@ -11475,6 +14722,15 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Recovery"
@@ -11549,6 +14805,15 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Recovery"
@@ -11623,6 +14888,15 @@ window.VS_DATA = {
       "description": "Summons a selection of clockwork weapons.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Cooldown",
         "Recovery"
@@ -11697,6 +14971,21 @@ window.VS_DATA = {
       "description": "Starts with temporarily reduced Cooldown. Overhealing slightly decreases Cooldown. Rosaries are easier to find.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Halted XP",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Halted XP",
         "Cooldown",
@@ -11763,6 +15052,22 @@ window.VS_DATA = {
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -11811,6 +15116,22 @@ window.VS_DATA = {
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -11859,6 +15180,22 @@ window.VS_DATA = {
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -11907,6 +15244,22 @@ window.VS_DATA = {
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Speed",
@@ -11955,6 +15308,23 @@ window.VS_DATA = {
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Duration",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Growth",
@@ -12004,6 +15374,23 @@ window.VS_DATA = {
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell",
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Duration",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Growth",
@@ -12053,6 +15440,21 @@ window.VS_DATA = {
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Move Speed",
@@ -12100,6 +15502,21 @@ window.VS_DATA = {
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Move Speed",
@@ -12144,6 +15561,21 @@ window.VS_DATA = {
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Move Speed",
@@ -12188,6 +15620,21 @@ window.VS_DATA = {
       "description": "Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Move Speed",
@@ -12232,6 +15679,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XXI - Blood Astronomia. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet",
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Magnet",
         "Greed",
@@ -12279,6 +15742,23 @@ window.VS_DATA = {
       "description": "Fights well with (and against) his father.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Retaliation",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Revival",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Retaliation",
         "Speed",
@@ -12325,6 +15805,14 @@ window.VS_DATA = {
       "description": "Increase the base damage of every equipped fire-type weapon when levelling up.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Fire"
+          ]
+        }
+      ],
       "affinity": [
         "Fire"
       ],
@@ -12367,7 +15855,17 @@ window.VS_DATA = {
       "description": "Gets a hidden clone of the latest equipped weapon or evolution.",
       "custom_description": "",
       "notes": "",
-      "affinity": [],
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12408,6 +15906,15 @@ window.VS_DATA = {
       "description": "Obtains a Karma Coin every 2 levels.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Growth"
@@ -12451,6 +15958,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XIII - Wicked Season. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet",
+            "Greed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Magnet",
         "Greed",
@@ -12496,6 +16019,22 @@ window.VS_DATA = {
       "description": "Totally not Alucard",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Move Speed",
@@ -12541,6 +16080,23 @@ window.VS_DATA = {
       "description": "Immune to health drain. Can choose a per-level bonus.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Speed",
+            "Duration",
+            "Recovery",
+            "Growth",
+            "Luck",
+            "Greed",
+            "Curse",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Area",
@@ -12599,6 +16155,24 @@ window.VS_DATA = {
       "description": "Triggers a random equipped weapon from the Ebony Diabologue when overhealing by +8. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Ambiguous Power",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Armor",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Ambiguous Power",
         "Recovery",
@@ -12646,6 +16220,24 @@ window.VS_DATA = {
       "description": "Charge ability affected by Curse: triggers all equipped Dominus weapons. Immune to health drain. Can fly.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Dominus",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Move Speed",
+            "Might",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Dominus",
         "Curse",
@@ -12693,6 +16285,20 @@ window.VS_DATA = {
       "description": "Gains more projectiles every 20 levels (max +4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -12741,6 +16347,20 @@ window.VS_DATA = {
       "description": "He doesn't understand the game.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Halted XP"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Halted XP",
         "Move Speed"
@@ -12784,6 +16404,17 @@ window.VS_DATA = {
       "description": "Six axes axe axes as axes axe.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Move Speed",
+            "Curse",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Move Speed",
@@ -12858,6 +16489,22 @@ window.VS_DATA = {
       "description": "She likes her Wall and Floor chicken well frozen.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Freeze",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Freeze",
         "Recovery",
@@ -12903,6 +16550,20 @@ window.VS_DATA = {
       "description": "Gains +1% Luck every level. Can fly.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Move Speed"
@@ -12951,6 +16612,23 @@ window.VS_DATA = {
       "description": "Gains +1 Armor every 5 levels. Horizontally impaired. Retaliates.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Greed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Armor",
         "Retaliation",
@@ -13007,6 +16685,21 @@ window.VS_DATA = {
       "description": "Grows additional swords when accumulatively Overhealing by an increasingly larger amount (Max 12 swords).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Recovery",
         "Max Health",
@@ -13072,8 +16765,21 @@ window.VS_DATA = {
       "description": "Her hidden vacuum draws in items, destructibles, and enemies.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
-        "Vacuum",
         "Magnet",
         "Move Speed"
       ],
@@ -13116,6 +16822,22 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVII - Lost & Found Painting. Triggers Keremet Morbus when overhealing by +8.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Curse",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Armor",
         "Might",
@@ -13188,6 +16910,23 @@ window.VS_DATA = {
       "description": "Starts with a hidden Star Flail. Enemies have a 15% chance to spawn Defanged. Can turn defeated enemies into followers.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Defang"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Move Speed",
+            "Max Health",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Defang",
         "Greed",
@@ -13234,6 +16973,21 @@ window.VS_DATA = {
       "description": "Overhealing by +32 triggers any equipped weapon from the Belnades Spellbook.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Belnades' Spell",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Belnades' Spell",
         "Recovery",
@@ -13281,6 +17035,24 @@ window.VS_DATA = {
       "description": "Adept with Gemma Torpor, Runetracer, Magi-Stone, and Kyra-Stones. Has a hidden Runetracer that grows stronger when levelling up.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Actrise"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Amount",
+            "Duration",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Actrise",
         "Greed",
@@ -13331,6 +17103,22 @@ window.VS_DATA = {
       "description": "Overhealing by +32 triggers any equipped weapon from the Coat of Arms and slowly floods the environment.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Vampire-Killing Tool",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Vampire-Killing Tool",
         "Recovery",
@@ -13376,6 +17164,21 @@ window.VS_DATA = {
       "description": "Starts with extra Arcana XVIII - Boogaloo of Illusions.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Move Speed",
@@ -13420,6 +17223,20 @@ window.VS_DATA = {
       "description": "A trio of zombies posing as vampire hunters.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Move Speed"
@@ -13470,6 +17287,20 @@ window.VS_DATA = {
       "description": "A trio of zombies posing as vampire hunters.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Move Speed"
@@ -13513,6 +17344,23 @@ window.VS_DATA = {
       "description": "A trio of zombies posing as vampire hunters.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Knives",
+            "Recovery",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Knives",
         "Recovery",
@@ -13559,6 +17407,15 @@ window.VS_DATA = {
       "description": "Adept with Trident. Always followed by Gaibon. Gets enraged if its partner dies.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Armor"
@@ -13602,6 +17459,15 @@ window.VS_DATA = {
       "description": "Adept with Fire Wand. Always followed by Slogra. Gets enraged if its partner dies. Flies.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Armor"
@@ -13645,6 +17511,24 @@ window.VS_DATA = {
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Knives",
+            "Light Source"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Amount",
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Knives",
         "Light Source",
@@ -13692,6 +17576,24 @@ window.VS_DATA = {
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Knives",
+            "Light Source"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Amount",
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Knives",
         "Light Source",
@@ -13739,6 +17641,21 @@ window.VS_DATA = {
       "description": "Triggers a random equipped weapon every 13th hop. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Greed",
@@ -13783,6 +17700,23 @@ window.VS_DATA = {
       "description": "Can choose a per-level bonus after defeating a set amount of enemies (max 5 times).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Speed",
+            "Duration",
+            "Recovery",
+            "Growth",
+            "Luck",
+            "Greed",
+            "Curse",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Area",
@@ -13876,6 +17810,28 @@ window.VS_DATA = {
       "description": "Count on him to change halfway through the dinner.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Cooldown",
+            "Fire",
+            "Duration",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -13931,6 +17887,21 @@ window.VS_DATA = {
       "description": "Has hidden weapons that grow stronger when leveling up. Can fly.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Might",
@@ -13975,6 +17946,23 @@ window.VS_DATA = {
       "description": "Doesn't appreciate getting blasphemously mockered.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Curse",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Max Health",
@@ -14021,6 +18009,23 @@ window.VS_DATA = {
       "description": "Bigger is better.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Greed",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Might",
@@ -14077,6 +18082,26 @@ window.VS_DATA = {
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Greed",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -14126,6 +18151,26 @@ window.VS_DATA = {
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Greed",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -14175,6 +18220,28 @@ window.VS_DATA = {
       "description": "Count on him to change halfway through dinner.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Cooldown",
+            "Fire",
+            "Duration",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -14226,6 +18293,28 @@ window.VS_DATA = {
       "description": "Count on him to change halfway through dinner.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Cooldown",
+            "Fire",
+            "Duration",
+            "Move Speed",
+            "Max Health",
+            "Armor",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Might",
@@ -14277,6 +18366,23 @@ window.VS_DATA = {
       "description": "Doesn't appreciate getting blasphemously mockered.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Curse",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Max Health",
@@ -14323,6 +18429,23 @@ window.VS_DATA = {
       "description": "Doesn't appreciate getting blasphemously mockered.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed",
+            "Curse",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Max Health",
@@ -14369,6 +18492,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Greed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Curse",
@@ -14430,6 +18570,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Greed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Curse",
@@ -14489,6 +18646,23 @@ window.VS_DATA = {
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Greed",
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Might",
         "Curse",
@@ -14548,6 +18722,15 @@ window.VS_DATA = {
       "description": "Starts with Arcana I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, and XXI.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Magnet"
@@ -14591,6 +18774,21 @@ window.VS_DATA = {
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Speed",
@@ -14635,6 +18833,21 @@ window.VS_DATA = {
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Speed",
@@ -14679,6 +18892,21 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Speed",
@@ -14723,6 +18951,21 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Speed",
@@ -14768,7 +19011,24 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
+        "Glimmer Tech",
         "Might",
         "Max Health",
         "Move Speed"
@@ -14820,6 +19080,22 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Might",
@@ -14873,6 +19149,22 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Might",
@@ -14926,6 +19218,22 @@ window.VS_DATA = {
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Might",
@@ -14978,6 +19286,22 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Duration",
@@ -15030,6 +19354,22 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Duration",
@@ -15082,6 +19422,22 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Duration",
@@ -15134,6 +19490,22 @@ window.VS_DATA = {
       "description": "Gains Duration when using glimmered techs.Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Duration",
@@ -15186,6 +19558,15 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Armor"
@@ -15229,6 +19610,15 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Armor"
@@ -15272,6 +19662,15 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed",
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Magnet"
@@ -15315,6 +19714,22 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Area",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Area",
         "Speed",
@@ -15360,6 +19775,22 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Duration",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Duration",
         "Might",
@@ -15405,6 +19836,25 @@ window.VS_DATA = {
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Might",
@@ -15454,6 +19904,27 @@ window.VS_DATA = {
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Area",
+            "Speed",
+            "Duration",
+            "Cooldown",
+            "Luck",
+            "Growth",
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Might",
@@ -15554,6 +20025,27 @@ window.VS_DATA = {
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Area",
+            "Speed",
+            "Duration",
+            "Cooldown",
+            "Luck",
+            "Growth",
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Might",
@@ -15653,6 +20145,22 @@ window.VS_DATA = {
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Move Speed",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Amount",
@@ -15698,6 +20206,22 @@ window.VS_DATA = {
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Move Speed",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Max Health",
         "Amount",
@@ -15743,6 +20267,21 @@ window.VS_DATA = {
       "description": "Triggers glimmered techs more often than normal. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Greed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Might",
@@ -15787,6 +20326,24 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health and on revival. Gains a bonus to Cooldown every time Showstopper is triggered (Max - 20%).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Might",
+            "Luck",
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Revival",
@@ -15837,6 +20394,24 @@ window.VS_DATA = {
       "description": "Starts with a hidden Rings of Calamity. Increases enemy spawn quantity by 50. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Charm"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Charm",
         "Speed",
@@ -15884,6 +20459,21 @@ window.VS_DATA = {
       "description": "Innately knows the \"Heaven's Thunder\" tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed",
+            "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed",
         "Speed",
@@ -15928,6 +20518,16 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Revival",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Revival",
@@ -15972,6 +20572,16 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Revival",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Revival",
@@ -16016,6 +20626,16 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Revival",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Revival",
@@ -16060,6 +20680,16 @@ window.VS_DATA = {
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Revival",
+            "Growth"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Revival",
@@ -16104,6 +20734,21 @@ window.VS_DATA = {
       "description": "Mr. S will showcase his skills with techs. Gets more projectiles every 20 levels (max +4).",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Amount",
@@ -16153,6 +20798,23 @@ window.VS_DATA = {
       "description": "Triggers Showstopper at critical health. Gain a follower whenever Showstopper is triggered.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Move Speed",
+            "Recovery"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Revival",
@@ -16197,6 +20859,23 @@ window.VS_DATA = {
       "description": "Innately knows the \"Shallow Slice\" and \"Airwave\" tech. Gains bonus Recovery whenever Showstopper is triggered at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Speed",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Recovery",
@@ -16241,6 +20920,22 @@ window.VS_DATA = {
       "description": "Innately knows the \"Hell's Fury\" and \"Blood Rage\" tech. Gains bonus Might whenever Showstopper is triggered at critical health.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Low Health",
         "Might",
@@ -16286,6 +20981,24 @@ window.VS_DATA = {
       "description": "Innately knows the \"Vermillion Sands\" tech.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Glimmer Tech",
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse",
+            "Max Health",
+            "Area",
+            "Armor"
+          ]
+        }
+      ],
       "affinity": [
         "Glimmer Tech",
         "Might",
@@ -16333,6 +21046,23 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Starts with a Survarot draft. Has a Survarot level Multiplier of 4.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Light Source",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Move Speed",
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Light Source",
         "Luck",
@@ -16379,6 +21109,21 @@ window.VS_DATA = {
       "description": "Using Skip when levelling up has a chance to trigger a Survarot draft.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Cooldown",
@@ -16423,10 +21168,15 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Starts with a Survarot draft. Reduces boss health and blocks some special attacks.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
-        "Boss",
-        "Light Source",
-        "Luck",
         "Max Health"
       ],
       "scaling": [],
@@ -16468,6 +21218,21 @@ window.VS_DATA = {
       "description": "Can always find Survarots. Can equip up to 100 Passive Weapons.",
       "custom_description": "",
       "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Light Source",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
       "affinity": [
         "Light Source",
         "Luck",
@@ -33719,6 +38484,17 @@ window.VS_DATA = {
         "Pentagram",
         "Gorgeous Moon"
       ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Magnet",
+            "Halted XP",
+            "Treasure"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Magnet",
@@ -33778,6 +38554,14 @@ window.VS_DATA = {
         "Sorbetto"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Counterpart"
+          ]
+        }
+      ],
       "affinity": [
         "Counterpart"
       ]
@@ -33838,6 +38622,14 @@ window.VS_DATA = {
         "Torrona's Box",
         "Wicked Season (XIII)"
       ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Curse"
       ]
@@ -33877,6 +38669,14 @@ window.VS_DATA = {
       "affects_implicit": [
         "Wings"
       ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Move Speed"
       ]
@@ -33894,6 +38694,14 @@ window.VS_DATA = {
         "Tirajisú"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        }
+      ],
       "affinity": [
         "Revival"
       ]
@@ -33911,6 +38719,14 @@ window.VS_DATA = {
         "Bracer"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Speed"
       ]
@@ -33942,6 +38758,14 @@ window.VS_DATA = {
         "Little Heart",
         "Wall Chicken",
         "Heart Refresh"
+      ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Recovery"
+          ]
+        }
       ],
       "affinity": [
         "Recovery"
@@ -33979,6 +38803,14 @@ window.VS_DATA = {
         "Yagyu Shuriken"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Bounce"
+          ]
+        }
+      ],
       "affinity": [
         "Bounce"
       ]
@@ -34004,6 +38836,16 @@ window.VS_DATA = {
         "Treasure Chest",
         "Vacuum",
         "Rosary"
+      ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Light Source",
+            "Rosary",
+            "Vacuum"
+          ]
+        }
       ],
       "affinity": [
         "Light Source",
@@ -34047,6 +38889,17 @@ window.VS_DATA = {
         "Dark Iron Shield",
         "Embrace of Gaea"
       ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Max Health",
+            "Retaliation",
+            "Low Health"
+          ]
+        }
+      ],
       "affinity": [
         "Armor",
         "Max Health",
@@ -34071,6 +38924,15 @@ window.VS_DATA = {
         "La Robba"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Limited",
+            "Amount"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
         "Amount"
@@ -34107,6 +38969,14 @@ window.VS_DATA = {
         "Cavendish"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Bounce"
+          ]
+        }
+      ],
       "affinity": [
         "Bounce"
       ]
@@ -34140,6 +39010,14 @@ window.VS_DATA = {
         "Jail of Crystal (XIV)",
         "Crystal Cries (XII)"
       ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Freeze"
+          ]
+        }
+      ],
       "affinity": [
         "Freeze"
       ]
@@ -34160,6 +39038,17 @@ window.VS_DATA = {
         "Skull O'Maniac"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Luck",
+            "Greed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Luck",
@@ -34220,6 +39109,14 @@ window.VS_DATA = {
         "Rings of Calamity"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Freeze"
+          ]
+        }
+      ],
       "affinity": [
         "Freeze"
       ]
@@ -34243,6 +39140,15 @@ window.VS_DATA = {
       ],
       "affects_implicit": [
         "Gold Coin"
+      ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Gold Fever"
+          ]
+        }
       ],
       "affinity": [
         "Greed",
@@ -34324,6 +39230,15 @@ window.VS_DATA = {
         "Cavendish"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Critical Damage"
@@ -34342,6 +39257,14 @@ window.VS_DATA = {
         "Spellbinder"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Duration"
+          ]
+        }
+      ],
       "affinity": [
         "Duration"
       ]
@@ -34359,6 +39282,14 @@ window.VS_DATA = {
         "Candelabrador"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Area"
       ]
@@ -34423,6 +39354,18 @@ window.VS_DATA = {
         "Rings of Calamity"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Fire",
+            "Light Source",
+            "Retaliation",
+            "Might",
+            "Area"
+          ]
+        }
+      ],
       "affinity": [
         "Fire",
         "Light Source",
@@ -34446,6 +39389,16 @@ window.VS_DATA = {
         "Banish"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Limited",
+            "Might",
+            "Cooldown"
+          ]
+        }
+      ],
       "affinity": [
         "Limited",
         "Might",
@@ -34477,6 +39430,15 @@ window.VS_DATA = {
         "Duplicator",
         "Attractorb"
       ],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Amount",
+            "Magnet"
+          ]
+        }
+      ],
       "affinity": [
         "Amount",
         "Magnet"
@@ -34496,6 +39458,15 @@ window.VS_DATA = {
         "Experience Gem"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Halted XP"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Halted XP"
@@ -34534,6 +39505,14 @@ window.VS_DATA = {
         "Party Pooper"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Luck"
       ]
@@ -34555,6 +39534,16 @@ window.VS_DATA = {
         "Wall Chicken"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Food",
+            "Recovery",
+            "Luck"
+          ]
+        }
+      ],
       "affinity": [
         "Food",
         "Recovery",
@@ -34651,6 +39640,14 @@ window.VS_DATA = {
         "Cavendish"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Speed"
+          ]
+        }
+      ],
       "affinity": [
         "Speed"
       ]
@@ -34668,6 +39665,14 @@ window.VS_DATA = {
         "Treasure Chest"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Treasure"
+          ]
+        }
+      ],
       "affinity": [
         "Treasure"
       ]
@@ -34688,6 +39693,19 @@ window.VS_DATA = {
         "Treasure Chest"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Retaliation",
+            "Move Speed",
+            "Flight",
+            "Magnet",
+            "Vacuum",
+            "Light Source"
+          ]
+        }
+      ],
       "affinity": [
         "Retaliation",
         "Move Speed",
@@ -34721,6 +39739,15 @@ window.VS_DATA = {
         "Rich Coin Bag"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Amount"
+          ]
+        }
+      ],
       "affinity": [
         "Luck",
         "Amount"
@@ -34740,6 +39767,14 @@ window.VS_DATA = {
         "Crystallized Soul"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Freeze"
+          ]
+        }
+      ],
       "affinity": [
         "Freeze"
       ]
@@ -34762,6 +39797,17 @@ window.VS_DATA = {
         "Light Source"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Greed",
+            "Greed",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Growth",
         "Greed",
@@ -34785,6 +39831,20 @@ window.VS_DATA = {
         "Little Heart"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Might",
+            "Amount",
+            "Magnet",
+            "Area",
+            "Max Health",
+            "Curse"
+          ]
+        }
+      ],
       "affinity": [
         "Greed",
         "Might",
@@ -34842,6 +39902,16 @@ window.VS_DATA = {
         "Nduja Fritta Tanto"
       ],
       "affects_implicit": [],
+      "affinity_groups": [
+        {
+          "key": null,
+          "items": [
+            "Fire",
+            "Max Health",
+            "Might"
+          ]
+        }
+      ],
       "affinity": [
         "Fire",
         "Max Health",
@@ -34873,7 +39943,2362 @@ window.VS_DATA = {
         "Floor Chicken"
       ],
       "affects_implicit": [],
+      "affinity_groups": [],
       "affinity": []
+    }
+  ],
+  "affinities": [
+    {
+      "name": "Amount",
+      "icon": "assets/icons/affinities/amount.png",
+      "color": "#9e3d0e",
+      "base_affinity": "Amount",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [
+          "Whip"
+        ],
+        "passives": [
+          "Duplicator",
+          "Academy Badge"
+        ],
+        "characters": [
+          "Gennaro Belpaese",
+          "Mortaccio",
+          "Yatta Cavallo",
+          "Bianca Ramba",
+          "O'Sole Meeo",
+          "Sir Ambrojoe",
+          "Queen Sigma",
+          "Gazebo",
+          "Gav'Et-Oni",
+          "Rottin'Ghoul",
+          "Horse",
+          "Lucia Zero",
+          "Simondo Belmont",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Trevor Belmont (Dragon Water Whip)",
+          "Trevor Belmont (Morning Star)",
+          "John Morris (Iron Ball)",
+          "John Morris (Coat of Arms)",
+          "John Morris (Morning Star)",
+          "Carrie Fernandez (Rock Riot)",
+          "Carrie Fernandez (Belnades' Spellbook)",
+          "Cornell (Dextro Custos)",
+          "Cornell (Sinestro Custos)",
+          "Cornell (Ebony Diabologue)",
+          "Familiar (Faerie)",
+          "Familiar (Sacred Cardinal)",
+          "Familiar (Sacred Dragon)",
+          "Familiar (Sacred Tiger)",
+          "Familiar (Sacred Turtle)",
+          "Innocent Devil (Ukoback)",
+          "Innocent Devil (Imp)",
+          "Innocent Devil (Alleged Ghost)",
+          "Innocent Devil (Bitterfly)",
+          "Innocent Devil (Wood Rod)",
+          "Innocent Devil (Pumpkin)",
+          "Blue Crescent Moon Cornell (Trinum Custodem)",
+          "Blue Crescent Moon Cornell (Ebony Diabologue)",
+          "Hammer",
+          "Cave Troll",
+          "Witch Actrise",
+          "Fake Trio (Trevor)",
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)",
+          "Siugnas (Town Sword)",
+          "Siugnas (Sanguine Star)",
+          "Lita Caryx",
+          "Mr. S"
+        ],
+        "arcana": [
+          "Beginning (X)",
+          "Blood Astronomia (XXI)",
+          "Hail from the Future (X)",
+          "Victorian Horror (XVIII)"
+        ]
+      }
+    },
+    {
+      "name": "Area",
+      "icon": "assets/icons/affinities/area.png",
+      "color": "#9e8821",
+      "base_affinity": "Area",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [
+          "Whip"
+        ],
+        "passives": [
+          "Candelabrador",
+          "Torrona's Box",
+          "Silver Ring"
+        ],
+        "characters": [
+          "Porta Ladonna",
+          "Suor Clerici",
+          "Concetta Caciotta",
+          "Zi'Assunta Belpaese",
+          "Gazebo",
+          "Smith IV",
+          "Minnah Mannarah",
+          "Leda",
+          "Scorej-Oni",
+          "McCoy-Oni",
+          "Scientist Mina",
+          "Lucia Zero",
+          "Browny",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Charlotte Aulin (Raging Fire)",
+          "Charlotte Aulin (Belnades' Spellbook)",
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Isaac (Trident)",
+          "Isaac (Spectral Sword)",
+          "Isaac (Ebony Diabologue)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Charlotte & Jonathan (Raging Fire)",
+          "Charlotte & Jonathan (Belnades' Spellbook)",
+          "Joachim Armster",
+          "Blackmore",
+          "(Shanks) Diva No. 5",
+          "(Virginia) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Macha Alter Ego",
+          "Malevolent Door Spirit"
+        ],
+        "arcana": [
+          "Boogaloo of Illusions (XVIII)",
+          "Heart of Fire (XIX)",
+          "Victorian Horror (XVIII)"
+        ]
+      }
+    },
+    {
+      "name": "Arcana",
+      "icon": "assets/icons/affinities/arcana.png",
+      "color": "#470793",
+      "base_affinity": "Arcana",
+      "is_parent": true,
+      "description": "Arcana affinities are enabled solely from the associated Arcana and features are not present without them.",
+      "info": "Icon: Randomazzo",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Halted XP",
+      "icon": "assets/icons/affinities/halted_xp.png",
+      "color": "#6f0a08",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Porta Ladonna",
+          "Suor Clerici",
+          "Sir Ambrojoe",
+          "Santa Ladonna",
+          "Tera",
+          "Fleaman"
+        ],
+        "arcana": [
+          "Game Killer (0)",
+          "Stake to Your Heart (0)"
+        ]
+      }
+    },
+    {
+      "name": "Counterpart",
+      "icon": "assets/icons/affinities/counterpart.png",
+      "color": "#161616",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Rinaldo Gandolfi (Keremet Bubbles)",
+          "Rinaldo Gandolfi (Belnades' Spellbook)"
+        ],
+        "arcana": [
+          "Gemini (I)"
+        ]
+      }
+    },
+    {
+      "name": "Bounce",
+      "icon": "assets/icons/affinities/bounce.png",
+      "color": "#875a9e",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "Icon: Combined Will and Waltz shadows",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Iron Blue Will (VII)",
+          "Waltz of Pearls (XI)"
+        ]
+      }
+    },
+    {
+      "name": "Limited",
+      "icon": "assets/icons/affinities/limited.png",
+      "color": "#2d5a87",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Para Kooleo (Tonno Subito)",
+          "Para Kooleo (Tonnado)",
+          "Para Kooleo (Tonn'omoto)",
+          "Para Kooleo (Tonn'oddeeo)",
+          "Para Kooleo (Tonne)",
+          "Para Kooleo (Unsurpassed)"
+        ],
+        "arcana": [
+          "Beginning (X)",
+          "Silent Old Sanctuary (XX)"
+        ]
+      }
+    },
+    {
+      "name": "Astronomia",
+      "icon": "assets/icons/affinities/astronomia.png",
+      "color": "#5a0007",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Armor",
+      "icon": "assets/icons/affinities/armor.png",
+      "color": "#666868",
+      "base_affinity": "Armor",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Armor"
+        ],
+        "characters": [
+          "Antonio Belpaese",
+          "Mortaccio",
+          "Yatta Cavallo",
+          "Bianca Ramba",
+          "O'Sole Meeo",
+          "Divano Thelma",
+          "Queen Sigma",
+          "Bat Robbert",
+          "She-Moon Eeta",
+          "She-Moon Eeta (Reborn)",
+          "Santa Ladonna",
+          "Gazebo",
+          "Toastie",
+          "Leda",
+          "Peppino",
+          "Torino",
+          "Gyoruntin",
+          "Syuuto Moonspell",
+          "McCoy-Oni",
+          "Megalo Syuuto Moonspell",
+          "Maruto Cuts",
+          "Je-Ne-Viv",
+          "Guardian Pina",
+          "Ariana",
+          "Lucia Zero",
+          "Browny",
+          "Probotector",
+          "Stanley",
+          "Colonel Bahamut",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Christopher Belmont (Jet Black Whip)",
+          "Christopher Belmont (Morning Star)",
+          "Simon Belmont (Wind Whip)",
+          "Simon Belmont (Morning Star)",
+          "Alucard (Alucart Sworb)",
+          "Alucard (Candybox)",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Rinaldo Gandolfi (Keremet Bubbles)",
+          "Rinaldo Gandolfi (Belnades' Spellbook)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Vincent Dorin (Iron Shield)",
+          "Vincent Dorin (Coat of Arms)",
+          "Nathan Graves (Sonic Dash)",
+          "Nathan Graves (Morning Star)",
+          "Nathan Graves (Belnades' Spellbook)",
+          "Cornell (Dextro Custos)",
+          "Cornell (Sinestro Custos)",
+          "Cornell (Ebony Diabologue)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Blue Crescent Moon Cornell (Trinum Custodem)",
+          "Blue Crescent Moon Cornell (Ebony Diabologue)",
+          "Hugh Baldwin",
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)",
+          "Stella & Loretta Lecarde",
+          "Loretta & Stella Lecarde",
+          "Stella Lecarde",
+          "Loretta Lecarde",
+          "Brauner",
+          "Soleil Belmont",
+          "Graham Jones",
+          "Genya Arikado",
+          "Walter Bernhard",
+          "Carmilla",
+          "Frozenshade",
+          "Stone Skull",
+          "Ruler Sword",
+          "Keremet",
+          "Slogra and Gaibon (Slogra)",
+          "Slogra and Gaibon (Gaibon)",
+          "Count Olrox",
+          "Malphas",
+          "Galamoth",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Formina Franklyn (Saber Machine Gun)",
+          "Formina Franklyn (Eagle Gun)",
+          "Formina Franklyn - Solo (Saber Machine Gun)",
+          "Formina Franklyn - Solo (Eagle Gun)",
+          "(Retro Pod) Diva No. 5",
+          "(Battle Tank) Diva No. 5",
+          "(Shanks) Diva No. 5",
+          "(Paradox) Diva No. 5",
+          "Malevolent Door Spirit"
+        ],
+        "arcana": [
+          "Divine Bloodline (IX)"
+        ]
+      }
+    },
+    {
+      "name": "Retaliation",
+      "icon": "assets/icons/affinities/retaliation.png",
+      "color": "#980f11",
+      "base_affinity": "Armor",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Armor"
+        ],
+        "characters": [
+          "Torino",
+          "Scorej-Oni",
+          "Shapeshifter Nino",
+          "Grant Danasty (Curved Knife)",
+          "Grant Danasty (Coat of Arms)",
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)",
+          "Soleil Belmont",
+          "Stone Skull",
+          "Fake Trio (Grant)"
+        ],
+        "arcana": [
+          "Divine Bloodline (IX)",
+          "Heart of Fire (XIX)",
+          "Edge of the Earth (VIII)"
+        ]
+      }
+    },
+    {
+      "name": "Character",
+      "icon": "assets/icons/affinities/character.png",
+      "color": "#8b7252",
+      "base_affinity": "Character",
+      "is_parent": true,
+      "description": "Affinities related only to a specific character with unique interactions with the associated items.",
+      "info": "Icon: Mindbender",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Actrise",
+      "icon": "assets/icons/affinities/actrise.png",
+      "color": "#700404",
+      "base_affinity": "Character",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Witch Actrise"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Crewmate",
+      "icon": "assets/icons/affinities/crewmate.png",
+      "color": "#7b0b09",
+      "base_affinity": "Character",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Crewmate Dino"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Ghost",
+      "icon": "assets/icons/affinities/ghost.png",
+      "color": "#989937",
+      "base_affinity": "Character",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Ghost Lino"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Hugh",
+      "icon": "assets/icons/affinities/hugh.png",
+      "color": "#797e88",
+      "base_affinity": "Character",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Hugh Baldwin"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Morris",
+      "icon": "assets/icons/affinities/morris.png",
+      "color": "#2f4501",
+      "base_affinity": "Character",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Santa",
+      "icon": "assets/icons/affinities/santa.png",
+      "color": "#6f1b06",
+      "base_affinity": "Character",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Santa Ladonna"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Charm",
+      "icon": "assets/icons/affinities/charm.png",
+      "color": "#6a4010",
+      "base_affinity": "Charm",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Karoma's Mana"
+        ],
+        "characters": [
+          "Rose De Infernas",
+          "Space Dette",
+          "Menya Moonspell",
+          "Impostor Rina",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Count Olrox",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Macha Alter Ego"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Cooldown",
+      "icon": "assets/icons/affinities/cooldown.png",
+      "color": "#620508",
+      "base_affinity": "Cooldown",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [
+          "Whip"
+        ],
+        "passives": [
+          "Empty Tome"
+        ],
+        "characters": [
+          "(Unblinded) Imelda Belpaese",
+          "Arca Ladonna",
+          "Porta Ladonna",
+          "Christine Davain",
+          "Iguana Gallo Valletto",
+          "Queen Sigma",
+          "Santa Ladonna",
+          "Gazebo",
+          "Space Dude",
+          "Smith IV",
+          "Avatar Infernas",
+          "Minnah Mannarah",
+          "Leda",
+          "Menya Moonspell",
+          "Megalo Menya Moonspell",
+          "Keitha Muort",
+          "Impostor Rina",
+          "Megalo Impostor Rina",
+          "Lance Bean",
+          "Ariana",
+          "Lucia Zero",
+          "Brad Fang",
+          "Browny",
+          "Sheena Etranzi",
+          "Simondo Belmont",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Sonia Belmont (Sonic Whip)",
+          "Sonia Belmont (Morning Star)",
+          "Richter Belmont (Platinum Whip)",
+          "Richter Belmont (Morning Star)",
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
+          "Mina Hakuba (Refectio)",
+          "Mina Hakuba (Belnades' Spellbook)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Saint Germain (Globus)",
+          "Saint Germain (Spectral Sword)",
+          "Saint Germain (Ebony Diabologue)",
+          "Nathan Graves (Sonic Dash)",
+          "Nathan Graves (Morning Star)",
+          "Nathan Graves (Belnades' Spellbook)",
+          "Annette (Endo Gears)",
+          "Annette (Peri Pendulum)",
+          "Annette (Myo Lift)",
+          "Annette (Epi Head)",
+          "Tera",
+          "Succubus",
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)",
+          "Count Olrox",
+          "Death",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Death (Death Spiral)",
+          "Megalo Death (Ebony Diabologue)",
+          "(Virginia) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Dolores",
+          "Macha Alter Ego",
+          "Canio"
+        ],
+        "arcana": [
+          "Silent Old Sanctuary (XX)"
+        ]
+      }
+    },
+    {
+      "name": "Curse",
+      "icon": "assets/icons/affinities/curse.png",
+      "color": "#470793",
+      "base_affinity": "Curse",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Skull O'Maniac",
+          "Torrona's Box",
+          "Gold Ring",
+          "Metaglio Right"
+        ],
+        "characters": [
+          "Lama Ladonna",
+          "Concetta Caciotta",
+          "Zi'Assunta Belpaese",
+          "Boon Marrabbio",
+          "Avatar Infernas",
+          "Gyorunton",
+          "Rose De Infernas",
+          "Gyoruntin",
+          "Space Dette",
+          "Menya Moonspell",
+          "Syuuto Moonspell",
+          "Megalo Syuuto Moonspell",
+          "Maruto Cuts",
+          "Keitha Muort",
+          "Je-Ne-Viv",
+          "Impostor Rina",
+          "Scientist Mina",
+          "Colonel Bahamut",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Vlad Tepes Dracula (Wine Glass)",
+          "Vlad Tepes Dracula (Ebony Diabologue)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Joachim Armster",
+          "Carmilla",
+          "Axe Armor",
+          "Stone Skull",
+          "Keremet",
+          "Blackmore",
+          "Count Olrox",
+          "Death",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Death (Death Spiral)",
+          "Megalo Death (Ebony Diabologue)",
+          "Megalo Dracula (Wine Glass)",
+          "Megalo Dracula (Dominus Agony)",
+          "Megalo Dracula (Ebony Diabologue)",
+          "Malevolent Door Spirit"
+        ],
+        "arcana": [
+          "Twilight Requiem (II)",
+          "Wicked Season (XIII)",
+          "Call of a Mad Moon (XIII)",
+          "Victorian Horror (XVIII)"
+        ]
+      }
+    },
+    {
+      "name": "Duration",
+      "icon": "assets/icons/affinities/duration.png",
+      "color": "#92740c",
+      "base_affinity": "Duration",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Spellbinder",
+          "Torrona's Box",
+          "Silver Ring"
+        ],
+        "characters": [
+          "Dommario",
+          "Poppea Pecorina",
+          "Iguana Gallo Valletto",
+          "Zi'Assunta Belpaese",
+          "Queen Sigma",
+          "Zi'Appunta Belpaese",
+          "Para Kooleo (Penshin Fatcha)",
+          "Para Kooleo (Tonno Subito)",
+          "Para Kooleo (Tonnado)",
+          "Para Kooleo (Tonn'omoto)",
+          "Para Kooleo (Tonn'oddeeo)",
+          "Para Kooleo (Tonne)",
+          "Para Kooleo (Unsurpassed)",
+          "Gazebo",
+          "Smith IV",
+          "Minnah Mannarah",
+          "Torino",
+          "Scientist Mina",
+          "Lucia Zero",
+          "Juste Belmont (Vibhuti Whip)",
+          "Juste Belmont (Morning Star)",
+          "Charlotte Aulin (Raging Fire)",
+          "Charlotte Aulin (Belnades' Spellbook)",
+          "Sypha Belnades (Ice Fang)",
+          "Sypha Belnades (Belnades' Spellbook)",
+          "Sara Trantoul (Star Flail)",
+          "Sara Trantoul (Belnades' Spellbook)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Charlotte & Jonathan (Raging Fire)",
+          "Charlotte & Jonathan (Belnades' Spellbook)",
+          "Joachim Armster",
+          "Drolta Tzuentes",
+          "Witch Actrise",
+          "Atlantis Shrine Wizard",
+          "Fake Trio (Sypha)",
+          "Blackmore",
+          "Count Olrox",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Tsunanori Mido (Fleuret)",
+          "Tsunanori Mido (Splashers)",
+          "Tsunanori Mido - Solo (Fleuret)",
+          "Tsunanori Mido - Solo (Splashers)",
+          "Formina Franklyn (Saber Machine Gun)",
+          "Formina Franklyn (Eagle Gun)",
+          "Formina Franklyn - Solo (Saber Machine Gun)",
+          "Formina Franklyn - Solo (Eagle Gun)",
+          "(Paradox) Diva No. 5",
+          "(Virginia) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Macha Alter Ego",
+          "Jimbo"
+        ],
+        "arcana": [
+          "Lost & Found Painting (XVII)"
+        ]
+      }
+    },
+    {
+      "name": "Greed",
+      "icon": "assets/icons/affinities/greed.png",
+      "color": "#857346",
+      "base_affinity": "Greed",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Stone Mask"
+        ],
+        "characters": [
+          "Sir Ambrojoe",
+          "Big Troubler",
+          "Big Trouser",
+          "Megalo Syuuto Moonspell",
+          "Genevieve Gruyère",
+          "Je-Ne-Viv",
+          "Sammy",
+          "Scientist Mina",
+          "Lucia Zero",
+          "Colonel Bahamut",
+          "Christopher Belmont (Jet Black Whip)",
+          "Christopher Belmont (Morning Star)",
+          "Soma Cruz (Hand Grenade)",
+          "Soma Cruz (Candybox)",
+          "Soma Cruz (Dark Lord)",
+          "Vlad Tepes Dracula (Wine Glass)",
+          "Vlad Tepes Dracula (Ebony Diabologue)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Vincent Dorin (Iron Shield)",
+          "Vincent Dorin (Coat of Arms)",
+          "Master Librarian",
+          "Stella & Loretta Lecarde",
+          "Loretta & Stella Lecarde",
+          "Stella Lecarde",
+          "Loretta Lecarde",
+          "Brauner",
+          "Graham Jones",
+          "Joachim Armster",
+          "Walter Bernhard",
+          "Carmilla",
+          "Stone Skull",
+          "Astarte",
+          "Witch Actrise",
+          "Succubus",
+          "Jiangshi",
+          "Blackmore",
+          "Count Olrox",
+          "Galamoth",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Dracula (Wine Glass)",
+          "Megalo Dracula (Dominus Agony)",
+          "Megalo Dracula (Ebony Diabologue)",
+          "Final Emperor"
+        ],
+        "arcana": [
+          "Wicked Season (XIII)",
+          "Disco of Gold (XV)",
+          "Stake to Your Heart (0)",
+          "Call of a Mad Moon (XIII)",
+          "Victorian Horror (XVIII)"
+        ]
+      }
+    },
+    {
+      "name": "Gold Fever",
+      "icon": "assets/icons/affinities/gold_fever.png",
+      "color": "#9e9e01",
+      "base_affinity": "Greed",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Karoma's Mana"
+        ],
+        "characters": [
+          "Big Trouser",
+          "Sammy",
+          "Master Librarian"
+        ],
+        "arcana": [
+          "Disco of Gold (XV)"
+        ]
+      }
+    },
+    {
+      "name": "Growth",
+      "icon": "assets/icons/affinities/growth.png",
+      "color": "#9a8f0e",
+      "base_affinity": "Growth",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Crown",
+          "Academy Badge"
+        ],
+        "characters": [
+          "Imelda Belpaese",
+          "(Unblinded) Imelda Belpaese",
+          "Iguana Gallo Valletto",
+          "Queen Sigma",
+          "Toastie",
+          "Gains Boros",
+          "Rose De Infernas",
+          "McCoy-Oni",
+          "Eleanor Uziron (SpellString)",
+          "Eleanor Uziron (SpellStream)",
+          "Eleanor Uziron (SpellStrike)",
+          "Scientist Mina",
+          "Ariana",
+          "Lucia Zero",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Simon Belmont (Wind Whip)",
+          "Simon Belmont (Morning Star)",
+          "Soma Cruz (Dark Lord)",
+          "Charlotte Aulin (Raging Fire)",
+          "Charlotte Aulin (Belnades' Spellbook)",
+          "Hector (Mace)",
+          "Hector (Spectral Sword)",
+          "Hector (Coat of Arms)",
+          "Lisa Tepes (Luminatio)",
+          "Lisa Tepes (Belnades' Spellbook)",
+          "Charlotte & Jonathan (Raging Fire)",
+          "Charlotte & Jonathan (Belnades' Spellbook)",
+          "Celia Fortner",
+          "Joachim Armster",
+          "Blackmore",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Macha Alter Ego",
+          "Kugutsu (Musashi)",
+          "Kugutsu (Komachi)",
+          "Kugutsu (Boh)",
+          "Kugutsu (Sukune)",
+          "Canio"
+        ],
+        "arcana": [
+          "Game Killer (0)",
+          "Wicked Season (XIII)",
+          "Call of a Mad Moon (XIII)"
+        ]
+      }
+    },
+    {
+      "name": "Invulnerable",
+      "icon": "assets/icons/affinities/invulnerable.png",
+      "color": "#541414",
+      "base_affinity": "Invulnerable",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
+          "Maxim Kischine (Discus)",
+          "Maxim Kischine (Coat of Arms)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Hammer"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Luck",
+      "icon": "assets/icons/affinities/luck.png",
+      "color": "#2c7734",
+      "base_affinity": "Luck",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Clover"
+        ],
+        "characters": [
+          "Yatta Cavallo",
+          "Sir Ambrojoe",
+          "Divano Thelma",
+          "Queen Sigma",
+          "Zi'Appunta Belpaese",
+          "She-Moon Eeta (Reborn)",
+          "Santa Ladonna",
+          "Chula-Reh",
+          "Exdash Exiviiq",
+          "Toastie",
+          "Smith IV",
+          "Avatar Infernas",
+          "Cosmo Pavone",
+          "Secretino Dagsson",
+          "Menya Moonspell",
+          "Megalo Menya Moonspell",
+          "Keitha Muort",
+          "Sammy",
+          "Ghost Lino",
+          "Scientist Mina",
+          "Lucia Zero",
+          "Browny",
+          "Newt Plissken",
+          "Simondo Belmont",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Sonia Belmont (Sonic Whip)",
+          "Sonia Belmont (Morning Star)",
+          "Grant Danasty (Curved Knife)",
+          "Grant Danasty (Coat of Arms)",
+          "Maria Renard (Guardian's Targe)",
+          "Maria Renard (Spectral Sword)",
+          "Maria Renard (Belnades' Spellbook)",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Julia Laforeze (Gale Force)",
+          "Julia Laforeze (Belnades' Spellbook)",
+          "Mina Hakuba (Refectio)",
+          "Mina Hakuba (Belnades' Spellbook)",
+          "Young Maria Renard",
+          "Tera",
+          "Celia Fortner",
+          "Joachim Armster",
+          "Alamaric Sniper",
+          "Fake Trio (Grant)",
+          "Blackmore",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Dolores",
+          "Lolo, Hiss, Meow, and Purr",
+          "Jimbo",
+          "Canio",
+          "Chicot",
+          "Perkeo"
+        ],
+        "arcana": [
+          "Wicked Season (XIII)",
+          "Slash (XVI)",
+          "Sapphire Mist (I)",
+          "Hidden Anathema (III)",
+          "Hail from the Future (X)"
+        ]
+      }
+    },
+    {
+      "name": "Critical Damage",
+      "icon": "assets/icons/affinities/critical_damage.png",
+      "color": "#6a4010",
+      "base_affinity": "Luck",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Reinhardt Schneider (Tyrfing)",
+          "Reinhardt Schneider (Morning Star)",
+          "Reinhardt Schneider (Spectral Sword)",
+          "Reinhardt Schneider (Coat of Arms)"
+        ],
+        "arcana": [
+          "Slash (XVI)"
+        ]
+      }
+    },
+    {
+      "name": "Gold Coin",
+      "icon": "assets/icons/affinities/gold_coin.png",
+      "color": "#693700",
+      "base_affinity": "Luck",
+      "is_parent": false,
+      "description": "{Despite Gold value being multiplied by Greed, **Gold Coins** and their drop c",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Big Troubler"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Light Source",
+      "icon": "assets/icons/affinities/light_source.png",
+      "color": "#9e471d",
+      "base_affinity": "Luck",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Zi'Appunta Belpaese",
+          "Big Troubler",
+          "Chula-Reh",
+          "Secretino Dagsson",
+          "Simondo Belmont",
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)",
+          "Jimbo",
+          "Chicot",
+          "Perkeo"
+        ],
+        "arcana": [
+          "Mad Groove (VIII)",
+          "Heart of Fire (XIX)",
+          "Edge of the Earth (VIII)"
+        ]
+      }
+    },
+    {
+      "name": "Magnet",
+      "icon": "assets/icons/affinities/magnet.png",
+      "color": "#3c459e",
+      "base_affinity": "Magnet",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Attractorb"
+        ],
+        "characters": [
+          "Poe Ratcho",
+          "(Retired) Poe Ratcho",
+          "Sir Ambrojoe",
+          "Queen Sigma",
+          "Zi'Appunta Belpaese",
+          "Gazebo",
+          "Chula-Reh",
+          "Avatar Infernas",
+          "Peppino",
+          "Genevieve Gruyère",
+          "Je-Ne-Viv",
+          "Colonel Bahamut",
+          "Yoko Belnades (Fulgur)",
+          "Yoko Belnades (Belnades' Spellbook)",
+          "Hector (Mace)",
+          "Hector (Spectral Sword)",
+          "Hector (Coat of Arms)",
+          "Carrie Fernandez (Rock Riot)",
+          "Carrie Fernandez (Belnades' Spellbook)",
+          "Isaac (Trident)",
+          "Isaac (Spectral Sword)",
+          "Isaac (Ebony Diabologue)",
+          "Brauner",
+          "Graham Jones",
+          "Persephone",
+          "Chaos",
+          "(Mover) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)"
+        ],
+        "arcana": [
+          "Game Killer (0)",
+          "Blood Astronomia (XXI)",
+          "Edge of the Earth (VIII)",
+          "Victorian Horror (XVIII)"
+        ]
+      }
+    },
+    {
+      "name": "Max Health",
+      "icon": "assets/icons/affinities/max_health.png",
+      "color": "#0e0f12",
+      "base_affinity": "Max Health",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Hollow Heart",
+          "Metaglio Left"
+        ],
+        "characters": [
+          "Antonio Belpaese",
+          "Gennaro Belpaese",
+          "Lama Ladonna",
+          "Suor Clerici",
+          "Mortaccio",
+          "Yatta Cavallo",
+          "Bianca Ramba",
+          "O'Sole Meeo",
+          "Queen Sigma",
+          "Bat Robbert",
+          "Gazebo",
+          "Toastie",
+          "Boon Marrabbio",
+          "Avatar Infernas",
+          "Minnah Mannarah",
+          "Peppino",
+          "Gyorunton",
+          "Mask of the Red Death",
+          "Bats Bats Bats",
+          "Torino",
+          "Scorej-Oni",
+          "Gyoruntin",
+          "Miang Moonspell",
+          "Syuuto Moonspell",
+          "McCoy-Oni",
+          "Megalo Syuuto Moonspell",
+          "Maruto Cuts",
+          "Je-Ne-Viv",
+          "Shapeshifter Nino",
+          "Bill Rizer",
+          "Lance Bean",
+          "Lucia Zero",
+          "Brad Fang",
+          "Browny",
+          "Probotector",
+          "Stanley",
+          "Colonel Bahamut",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Christopher Belmont (Jet Black Whip)",
+          "Christopher Belmont (Morning Star)",
+          "Simon Belmont (Wind Whip)",
+          "Simon Belmont (Morning Star)",
+          "Julius Belmont (Vanitas Whip)",
+          "Julius Belmont (Morning Star)",
+          "John Morris (Iron Ball)",
+          "John Morris (Coat of Arms)",
+          "John Morris (Morning Star)",
+          "Jonathan Morris (Javelin)",
+          "Jonathan Morris (Morning Star)",
+          "Jonathan Morris (Coat of Arms)",
+          "Jonathan Morris (Spectral Sword)",
+          "Soma Cruz (Dark Lord)",
+          "Alucard (Alucart Sworb)",
+          "Alucard (Candybox)",
+          "Shanoa (Confodere)",
+          "Shanoa (Candybox)",
+          "Maxim Kischine (Discus)",
+          "Maxim Kischine (Coat of Arms)",
+          "Vlad Tepes Dracula (Wine Glass)",
+          "Vlad Tepes Dracula (Ebony Diabologue)",
+          "Julia Laforeze (Gale Force)",
+          "Julia Laforeze (Belnades' Spellbook)",
+          "Rinaldo Gandolfi (Keremet Bubbles)",
+          "Rinaldo Gandolfi (Belnades' Spellbook)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Reinhardt Schneider (Tyrfing)",
+          "Reinhardt Schneider (Morning Star)",
+          "Reinhardt Schneider (Spectral Sword)",
+          "Reinhardt Schneider (Coat of Arms)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Saint Germain (Globus)",
+          "Saint Germain (Spectral Sword)",
+          "Saint Germain (Ebony Diabologue)",
+          "Nathan Graves (Sonic Dash)",
+          "Nathan Graves (Morning Star)",
+          "Nathan Graves (Belnades' Spellbook)",
+          "Cornell (Dextro Custos)",
+          "Cornell (Sinestro Custos)",
+          "Cornell (Ebony Diabologue)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Blue Crescent Moon Cornell (Trinum Custodem)",
+          "Blue Crescent Moon Cornell (Ebony Diabologue)",
+          "Hugh Baldwin",
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)",
+          "Jonathan & Charlotte (Javelin)",
+          "Jonathan & Charlotte (Morning Star)",
+          "Jonathan & Charlotte (Coat of Arms)",
+          "Jonathan & Charlotte (Spectral Sword)",
+          "Soleil Belmont",
+          "Genya Arikado",
+          "Walter Bernhard",
+          "Axe Armor",
+          "Stone Skull",
+          "Ruler Sword",
+          "Astarte",
+          "Witch Actrise",
+          "Count Olrox",
+          "Death",
+          "Galamoth",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Death (Death Spiral)",
+          "Megalo Death (Ebony Diabologue)",
+          "Megalo Dracula (Wine Glass)",
+          "Megalo Dracula (Dominus Agony)",
+          "Megalo Dracula (Ebony Diabologue)",
+          "Chaos",
+          "Bonnie Blair (Punch)",
+          "Bonnie Blair (Kick)",
+          "Bonnie Blair - Solo (Punch)",
+          "Bonnie Blair - Solo (Kick)",
+          "(Retro Pod) Diva No. 5",
+          "(Battle Tank) Diva No. 5",
+          "(Shanks) Diva No. 5",
+          "(Paradox) Diva No. 5",
+          "Siugnas (Town Sword)",
+          "Siugnas (Sanguine Star)",
+          "Kina",
+          "Imakoo",
+          "Malevolent Door Spirit",
+          "Jimbo",
+          "Chicot",
+          "Perkeo"
+        ],
+        "arcana": [
+          "Divine Bloodline (IX)",
+          "Victorian Horror (XVIII)",
+          "Heir of Fate (XIX)"
+        ]
+      }
+    },
+    {
+      "name": "Low Health",
+      "icon": "assets/icons/affinities/low_health.png",
+      "color": "#9d3d3c",
+      "base_affinity": "Max Health",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Brad Fang",
+          "Julius Belmont (Vanitas Whip)",
+          "Julius Belmont (Morning Star)",
+          "Dolores",
+          "Lolo, Hiss, Meow, and Purr",
+          "Kina",
+          "Imakoo"
+        ],
+        "arcana": [
+          "Divine Bloodline (IX)"
+        ]
+      }
+    },
+    {
+      "name": "Might",
+      "icon": "assets/icons/affinities/might.png",
+      "color": "#2d9740",
+      "base_affinity": "Might",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [
+          "Whip"
+        ],
+        "passives": [
+          "Spinach",
+          "Torrona's Box"
+        ],
+        "characters": [
+          "Antonio Belpaese",
+          "Arca Ladonna",
+          "Lama Ladonna",
+          "Pugnala Provola",
+          "Zi'Assunta Belpaese",
+          "Queen Sigma",
+          "Gazebo",
+          "Chula-Reh",
+          "Smith IV",
+          "Boon Marrabbio",
+          "Avatar Infernas",
+          "Minnah Mannarah",
+          "Leda",
+          "Gyorunton",
+          "Mask of the Red Death",
+          "Rose De Infernas",
+          "Torino",
+          "Menya Moonspell",
+          "Syuuto Moonspell",
+          "Megalo Menya Moonspell",
+          "Megalo Syuuto Moonspell",
+          "Maruto Cuts",
+          "Luminaire Foscari",
+          "Je-Ne-Viv",
+          "Impostor Rina",
+          "Scientist Mina",
+          "Megalo Impostor Rina",
+          "Bill Rizer",
+          "Lucia Zero",
+          "Brad Fang",
+          "Probotector",
+          "Stanley",
+          "Newt Plissken",
+          "Colonel Bahamut",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Christopher Belmont (Jet Black Whip)",
+          "Christopher Belmont (Morning Star)",
+          "Simon Belmont (Wind Whip)",
+          "Simon Belmont (Morning Star)",
+          "Juste Belmont (Vibhuti Whip)",
+          "Juste Belmont (Morning Star)",
+          "Julius Belmont (Vanitas Whip)",
+          "Julius Belmont (Morning Star)",
+          "John Morris (Iron Ball)",
+          "John Morris (Coat of Arms)",
+          "John Morris (Morning Star)",
+          "Jonathan Morris (Javelin)",
+          "Jonathan Morris (Morning Star)",
+          "Jonathan Morris (Coat of Arms)",
+          "Jonathan Morris (Spectral Sword)",
+          "Soma Cruz (Hand Grenade)",
+          "Soma Cruz (Candybox)",
+          "Soma Cruz (Dark Lord)",
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
+          "Maria Renard (Guardian's Targe)",
+          "Maria Renard (Spectral Sword)",
+          "Maria Renard (Belnades' Spellbook)",
+          "Shanoa (Confodere)",
+          "Shanoa (Candybox)",
+          "Quincy Morris (Shuriken)",
+          "Quincy Morris (Coat of Arms)",
+          "Maxim Kischine (Discus)",
+          "Maxim Kischine (Coat of Arms)",
+          "Vlad Tepes Dracula (Wine Glass)",
+          "Vlad Tepes Dracula (Ebony Diabologue)",
+          "Rinaldo Gandolfi (Keremet Bubbles)",
+          "Rinaldo Gandolfi (Belnades' Spellbook)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Reinhardt Schneider (Tyrfing)",
+          "Reinhardt Schneider (Morning Star)",
+          "Reinhardt Schneider (Spectral Sword)",
+          "Reinhardt Schneider (Coat of Arms)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Blue Crescent Moon Cornell (Trinum Custodem)",
+          "Blue Crescent Moon Cornell (Ebony Diabologue)",
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)",
+          "Jonathan & Charlotte (Javelin)",
+          "Jonathan & Charlotte (Morning Star)",
+          "Jonathan & Charlotte (Coat of Arms)",
+          "Jonathan & Charlotte (Spectral Sword)",
+          "Joachim Armster",
+          "Carmilla",
+          "Axe Armor",
+          "Keremet",
+          "Slogra and Gaibon (Slogra)",
+          "Slogra and Gaibon (Gaibon)",
+          "Blackmore",
+          "Count Olrox",
+          "Malphas",
+          "Death",
+          "Galamoth",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Death (Death Spiral)",
+          "Megalo Death (Ebony Diabologue)",
+          "Megalo Dracula (Wine Glass)",
+          "Megalo Dracula (Dominus Agony)",
+          "Megalo Dracula (Ebony Diabologue)",
+          "Bonnie Blair (Punch)",
+          "Bonnie Blair (Kick)",
+          "Bonnie Blair - Solo (Punch)",
+          "Bonnie Blair - Solo (Kick)",
+          "(Paradox) Diva No. 5",
+          "(Virginia) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Final Emperor",
+          "Dolores",
+          "Imakoo",
+          "Malevolent Door Spirit"
+        ],
+        "arcana": [
+          "Heart of Fire (XIX)",
+          "Silent Old Sanctuary (XX)",
+          "Victorian Horror (XVIII)",
+          "Heir of Fate (XIX)"
+        ]
+      }
+    },
+    {
+      "name": "Move Speed",
+      "icon": "assets/icons/affinities/move_speed.png",
+      "color": "#757d87",
+      "base_affinity": "Move Speed",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Wings"
+        ],
+        "characters": [
+          "(Unblinded) Imelda Belpaese",
+          "Lama Ladonna",
+          "Krochi Freetto",
+          "Christine Davain",
+          "Pugnala Provola",
+          "Giovanna Grana",
+          "Poppea Pecorina",
+          "Concetta Caciotta",
+          "Zi'Assunta Belpaese",
+          "Queen Sigma",
+          "Bat Robbert",
+          "Zi'Appunta Belpaese",
+          "Big Troubler",
+          "She-Moon Eeta",
+          "She-Moon Eeta (Reborn)",
+          "Para Kooleo (Penshin Fatcha)",
+          "Para Kooleo (Tonno Subito)",
+          "Para Kooleo (Tonnado)",
+          "Para Kooleo (Tonn'omoto)",
+          "Para Kooleo (Tonn'oddeeo)",
+          "Para Kooleo (Tonne)",
+          "Para Kooleo (Unsurpassed)",
+          "Gazebo",
+          "Chula-Reh",
+          "Smith IV",
+          "Boon Marrabbio",
+          "Avatar Infernas",
+          "Cosmo Pavone",
+          "Big Trouser",
+          "Mask of the Red Death",
+          "Bats Bats Bats",
+          "Rose De Infernas",
+          "Gyoruntin",
+          "Secretino Dagsson",
+          "Space Dette",
+          "Miang Moonspell",
+          "Menya Moonspell",
+          "Syuuto Moonspell",
+          "Babi-Onna",
+          "Megalo Menya Moonspell",
+          "Megalo Syuuto Moonspell",
+          "Gav'Et-Oni",
+          "Eleanor Uziron (SpellString)",
+          "Eleanor Uziron (SpellStream)",
+          "Eleanor Uziron (SpellStrike)",
+          "Keitha Muort",
+          "Luminaire Foscari",
+          "Genevieve Gruyère",
+          "Rottin'Ghoul",
+          "Crewmate Dino",
+          "Engineer Gino",
+          "Shapeshifter Nino",
+          "Guardian Pina",
+          "Impostor Rina",
+          "Scientist Mina",
+          "Horse",
+          "Megalo Impostor Rina",
+          "Ariana",
+          "Lucia Zero",
+          "Brad Fang",
+          "Browny",
+          "Sheena Etranzi",
+          "Newt Plissken",
+          "Colonel Bahamut",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Sonia Belmont (Sonic Whip)",
+          "Sonia Belmont (Morning Star)",
+          "Trevor Belmont (Dragon Water Whip)",
+          "Trevor Belmont (Morning Star)",
+          "Juste Belmont (Vibhuti Whip)",
+          "Juste Belmont (Morning Star)",
+          "Richter Belmont (Platinum Whip)",
+          "Richter Belmont (Morning Star)",
+          "Grant Danasty (Curved Knife)",
+          "Grant Danasty (Coat of Arms)",
+          "Soma Cruz (Hand Grenade)",
+          "Soma Cruz (Candybox)",
+          "Soma Cruz (Dark Lord)",
+          "Charlotte Aulin (Raging Fire)",
+          "Charlotte Aulin (Belnades' Spellbook)",
+          "Sypha Belnades (Ice Fang)",
+          "Sypha Belnades (Belnades' Spellbook)",
+          "Yoko Belnades (Fulgur)",
+          "Yoko Belnades (Belnades' Spellbook)",
+          "Alucard (Alucart Sworb)",
+          "Alucard (Candybox)",
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
+          "Maria Renard (Guardian's Targe)",
+          "Maria Renard (Spectral Sword)",
+          "Maria Renard (Belnades' Spellbook)",
+          "Shanoa (Confodere)",
+          "Shanoa (Candybox)",
+          "Quincy Morris (Shuriken)",
+          "Quincy Morris (Coat of Arms)",
+          "Maxim Kischine (Discus)",
+          "Maxim Kischine (Coat of Arms)",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Julia Laforeze (Gale Force)",
+          "Julia Laforeze (Belnades' Spellbook)",
+          "Carrie Fernandez (Rock Riot)",
+          "Carrie Fernandez (Belnades' Spellbook)",
+          "Mina Hakuba (Refectio)",
+          "Mina Hakuba (Belnades' Spellbook)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Sara Trantoul (Star Flail)",
+          "Sara Trantoul (Belnades' Spellbook)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Lisa Tepes (Luminatio)",
+          "Lisa Tepes (Belnades' Spellbook)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Saint Germain (Globus)",
+          "Saint Germain (Spectral Sword)",
+          "Saint Germain (Ebony Diabologue)",
+          "Cornell (Dextro Custos)",
+          "Cornell (Sinestro Custos)",
+          "Cornell (Ebony Diabologue)",
+          "Young Maria Renard",
+          "Familiar (Faerie)",
+          "Familiar (Sacred Cardinal)",
+          "Familiar (Sacred Dragon)",
+          "Familiar (Sacred Tiger)",
+          "Familiar (Sacred Turtle)",
+          "Innocent Devil (Ukoback)",
+          "Innocent Devil (Imp)",
+          "Innocent Devil (Alleged Ghost)",
+          "Innocent Devil (Bitterfly)",
+          "Innocent Devil (Wood Rod)",
+          "Innocent Devil (Pumpkin)",
+          "Blue Crescent Moon Cornell (Trinum Custodem)",
+          "Blue Crescent Moon Cornell (Ebony Diabologue)",
+          "Master Librarian",
+          "Wind",
+          "Hugh Baldwin",
+          "Charlotte & Jonathan (Raging Fire)",
+          "Charlotte & Jonathan (Belnades' Spellbook)",
+          "Stella & Loretta Lecarde",
+          "Loretta & Stella Lecarde",
+          "Stella Lecarde",
+          "Loretta Lecarde",
+          "Brauner",
+          "Graham Jones",
+          "Genya Arikado",
+          "Joachim Armster",
+          "Walter Bernhard",
+          "Carmilla",
+          "Cave Troll",
+          "Fleaman",
+          "Axe Armor",
+          "Frozenshade",
+          "Alamaric Sniper",
+          "Persephone",
+          "Astarte",
+          "Witch Actrise",
+          "Atlantis Shrine Wizard",
+          "Succubus",
+          "Fake Trio (Trevor)",
+          "Fake Trio (Sypha)",
+          "Fake Trio (Grant)",
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)",
+          "Jiangshi",
+          "Blackmore",
+          "Count Olrox",
+          "Malphas",
+          "Death",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Death (Death Spiral)",
+          "Megalo Death (Ebony Diabologue)",
+          "Tsunanori Mido (Fleuret)",
+          "Tsunanori Mido (Splashers)",
+          "Tsunanori Mido - Solo (Fleuret)",
+          "Tsunanori Mido - Solo (Splashers)",
+          "Bonnie Blair (Punch)",
+          "Bonnie Blair (Kick)",
+          "Bonnie Blair - Solo (Punch)",
+          "Bonnie Blair - Solo (Kick)",
+          "Formina Franklyn (Saber Machine Gun)",
+          "Formina Franklyn (Eagle Gun)",
+          "Formina Franklyn - Solo (Saber Machine Gun)",
+          "Formina Franklyn - Solo (Eagle Gun)",
+          "(Mover) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Siugnas (Town Sword)",
+          "Siugnas (Sanguine Star)",
+          "Dolores",
+          "Lita Caryx",
+          "Mr. S",
+          "Lolo, Hiss, Meow, and Purr",
+          "Kina",
+          "Imakoo",
+          "Jimbo"
+        ],
+        "arcana": [
+          "Tragic Princess (III)",
+          "Edge of the Earth (VIII)"
+        ]
+      }
+    },
+    {
+      "name": "Recovery",
+      "icon": "assets/icons/affinities/recovery.png",
+      "color": "#9d2a07",
+      "base_affinity": "Recovery",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Pummarola",
+          "Metaglio Left"
+        ],
+        "characters": [
+          "(Retired) Poe Ratcho",
+          "Suor Clerici",
+          "Divano Thelma",
+          "Queen Sigma",
+          "Bat Robbert",
+          "Gazebo",
+          "Smith IV",
+          "Cosmo Pavone",
+          "Miang Moonspell",
+          "Luminaire Foscari",
+          "Sammy",
+          "Shapeshifter Nino",
+          "Guardian Pina",
+          "Scientist Mina",
+          "Lucia Zero",
+          "Sheena Etranzi",
+          "Sonia Belmont (Sonic Whip)",
+          "Sonia Belmont (Morning Star)",
+          "Grant Danasty (Curved Knife)",
+          "Grant Danasty (Coat of Arms)",
+          "Alucard (Alucart Sworb)",
+          "Alucard (Candybox)",
+          "Maria Renard (Guardian's Targe)",
+          "Maria Renard (Spectral Sword)",
+          "Maria Renard (Belnades' Spellbook)",
+          "Maxim Kischine (Discus)",
+          "Maxim Kischine (Coat of Arms)",
+          "Julia Laforeze (Gale Force)",
+          "Julia Laforeze (Belnades' Spellbook)",
+          "Mina Hakuba (Refectio)",
+          "Mina Hakuba (Belnades' Spellbook)",
+          "Sara Trantoul (Star Flail)",
+          "Sara Trantoul (Belnades' Spellbook)",
+          "Vincent Dorin (Iron Shield)",
+          "Vincent Dorin (Coat of Arms)",
+          "Barlowe (Dominus Anger)",
+          "Barlowe (Dominus Hatred)",
+          "Barlowe (Ebony Diabologue)",
+          "Barlowe (Belnades' Spellbook)",
+          "Wind",
+          "Annette (Endo Gears)",
+          "Annette (Peri Pendulum)",
+          "Annette (Myo Lift)",
+          "Annette (Epi Head)",
+          "Genya Arikado",
+          "Joachim Armster",
+          "Walter Bernhard",
+          "Frozenshade",
+          "Ruler Sword",
+          "Keremet",
+          "Astarte",
+          "Drolta Tzuentes",
+          "Atlantis Shrine Wizard",
+          "Fake Trio (Grant)",
+          "Jiangshi",
+          "Blackmore",
+          "(Virginia) Diva No. 5",
+          "Siugnas (Town Sword)",
+          "Siugnas (Sanguine Star)",
+          "Lolo, Hiss, Meow, and Purr",
+          "Kina"
+        ],
+        "arcana": [
+          "Sarabande of Healing (VI)",
+          "Hidden Anathema (III)"
+        ]
+      }
+    },
+    {
+      "name": "Food",
+      "icon": "assets/icons/affinities/food.png",
+      "color": "#9e5107",
+      "base_affinity": "Recovery",
+      "is_parent": false,
+      "description": "",
+      "info": "Icon: Floor Chicken",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Hidden Anathema (III)"
+        ]
+      }
+    },
+    {
+      "name": "Revival",
+      "icon": "assets/icons/affinities/revival.png",
+      "color": "#361004",
+      "base_affinity": "Revival",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Tirajisú",
+          "Academy Badge",
+          "Weapon Power-Up"
+        ],
+        "characters": [
+          "Krochi Freetto",
+          "Queen Sigma",
+          "She-Moon Eeta (Reborn)",
+          "Gazebo",
+          "Avatar Infernas",
+          "Cosmo Pavone",
+          "Gyorunton",
+          "Bats Bats Bats",
+          "Luminaire Foscari",
+          "Guardian Pina",
+          "Lucia Zero",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Christopher Belmont (Jet Black Whip)",
+          "Christopher Belmont (Morning Star)",
+          "Simon Belmont (Wind Whip)",
+          "Simon Belmont (Morning Star)",
+          "Julius Belmont (Vanitas Whip)",
+          "Julius Belmont (Morning Star)",
+          "Soma Cruz (Dark Lord)",
+          "Quincy Morris (Shuriken)",
+          "Quincy Morris (Coat of Arms)",
+          "Vlad Tepes Dracula (Wine Glass)",
+          "Vlad Tepes Dracula (Ebony Diabologue)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Soleil Belmont",
+          "Galamoth",
+          "Megalo Dracula (Wine Glass)",
+          "Megalo Dracula (Dominus Agony)",
+          "Megalo Dracula (Ebony Diabologue)",
+          "Dolores",
+          "Kugutsu (Musashi)",
+          "Kugutsu (Komachi)",
+          "Kugutsu (Boh)",
+          "Kugutsu (Sukune)",
+          "Lolo, Hiss, Meow, and Purr"
+        ],
+        "arcana": [
+          "Awake (IV)"
+        ]
+      }
+    },
+    {
+      "name": "Speed",
+      "icon": "assets/icons/affinities/speed.png",
+      "color": "#6b4135",
+      "base_affinity": "Speed",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [
+          "Wings",
+          "Bracer",
+          "Torrona's Box"
+        ],
+        "characters": [
+          "(Unblinded) Imelda Belpaese",
+          "Pasqualina Belpaese",
+          "Lama Ladonna",
+          "Dommario",
+          "Krochi Freetto",
+          "Christine Davain",
+          "Pugnala Provola",
+          "Giovanna Grana",
+          "Poppea Pecorina",
+          "Concetta Caciotta",
+          "Zi'Assunta Belpaese",
+          "Queen Sigma",
+          "Bat Robbert",
+          "Zi'Appunta Belpaese",
+          "Big Troubler",
+          "She-Moon Eeta",
+          "She-Moon Eeta (Reborn)",
+          "Para Kooleo (Penshin Fatcha)",
+          "Para Kooleo (Tonno Subito)",
+          "Para Kooleo (Tonnado)",
+          "Para Kooleo (Tonn'omoto)",
+          "Para Kooleo (Tonn'oddeeo)",
+          "Para Kooleo (Tonne)",
+          "Para Kooleo (Unsurpassed)",
+          "Gazebo",
+          "Chula-Reh",
+          "Smith IV",
+          "Boon Marrabbio",
+          "Avatar Infernas",
+          "Minnah Mannarah",
+          "Cosmo Pavone",
+          "Big Trouser",
+          "Mask of the Red Death",
+          "Bats Bats Bats",
+          "Rose De Infernas",
+          "Gyoruntin",
+          "Secretino Dagsson",
+          "Space Dette",
+          "Miang Moonspell",
+          "Menya Moonspell",
+          "Syuuto Moonspell",
+          "Babi-Onna",
+          "Megalo Menya Moonspell",
+          "Megalo Syuuto Moonspell",
+          "Gav'Et-Oni",
+          "Eleanor Uziron (SpellString)",
+          "Eleanor Uziron (SpellStream)",
+          "Eleanor Uziron (SpellStrike)",
+          "Keitha Muort",
+          "Luminaire Foscari",
+          "Genevieve Gruyère",
+          "Rottin'Ghoul",
+          "Crewmate Dino",
+          "Engineer Gino",
+          "Shapeshifter Nino",
+          "Guardian Pina",
+          "Impostor Rina",
+          "Scientist Mina",
+          "Horse",
+          "Megalo Impostor Rina",
+          "Bill Rizer",
+          "Lance Bean",
+          "Ariana",
+          "Lucia Zero",
+          "Brad Fang",
+          "Browny",
+          "Sheena Etranzi",
+          "Newt Plissken",
+          "Colonel Bahamut",
+          "Simondo Belmont",
+          "Leon Belmont (Alchemy Whip)",
+          "Leon Belmont (Morning Star)",
+          "Sonia Belmont (Sonic Whip)",
+          "Sonia Belmont (Morning Star)",
+          "Trevor Belmont (Dragon Water Whip)",
+          "Trevor Belmont (Morning Star)",
+          "Juste Belmont (Vibhuti Whip)",
+          "Juste Belmont (Morning Star)",
+          "Richter Belmont (Platinum Whip)",
+          "Richter Belmont (Morning Star)",
+          "Grant Danasty (Curved Knife)",
+          "Grant Danasty (Coat of Arms)",
+          "Jonathan Morris (Javelin)",
+          "Jonathan Morris (Morning Star)",
+          "Jonathan Morris (Coat of Arms)",
+          "Jonathan Morris (Spectral Sword)",
+          "Soma Cruz (Hand Grenade)",
+          "Soma Cruz (Candybox)",
+          "Soma Cruz (Dark Lord)",
+          "Charlotte Aulin (Raging Fire)",
+          "Charlotte Aulin (Belnades' Spellbook)",
+          "Sypha Belnades (Ice Fang)",
+          "Sypha Belnades (Belnades' Spellbook)",
+          "Yoko Belnades (Fulgur)",
+          "Yoko Belnades (Belnades' Spellbook)",
+          "Alucard (Alucart Sworb)",
+          "Alucard (Candybox)",
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
+          "Maria Renard (Guardian's Targe)",
+          "Maria Renard (Spectral Sword)",
+          "Maria Renard (Belnades' Spellbook)",
+          "Shanoa (Confodere)",
+          "Shanoa (Candybox)",
+          "Quincy Morris (Shuriken)",
+          "Quincy Morris (Coat of Arms)",
+          "Maxim Kischine (Discus)",
+          "Maxim Kischine (Coat of Arms)",
+          "Henry (Silver Revolver)",
+          "Henry (Coat of Arms)",
+          "Julia Laforeze (Gale Force)",
+          "Julia Laforeze (Belnades' Spellbook)",
+          "Carrie Fernandez (Rock Riot)",
+          "Carrie Fernandez (Belnades' Spellbook)",
+          "Mina Hakuba (Refectio)",
+          "Mina Hakuba (Belnades' Spellbook)",
+          "Elizabeth Bartley (Hex)",
+          "Elizabeth Bartley (Belnades' Spellbook)",
+          "Elizabeth Bartley (Ebony Diabologue)",
+          "Isaac (Trident)",
+          "Isaac (Spectral Sword)",
+          "Isaac (Ebony Diabologue)",
+          "Sara Trantoul (Star Flail)",
+          "Sara Trantoul (Belnades' Spellbook)",
+          "Albus (Optical Shot)",
+          "Albus (Ebony Diabologue)",
+          "Lisa Tepes (Luminatio)",
+          "Lisa Tepes (Belnades' Spellbook)",
+          "Shaft (Umbra)",
+          "Shaft (Ebony Diabologue)",
+          "Saint Germain (Globus)",
+          "Saint Germain (Spectral Sword)",
+          "Saint Germain (Ebony Diabologue)",
+          "Cornell (Dextro Custos)",
+          "Cornell (Sinestro Custos)",
+          "Cornell (Ebony Diabologue)",
+          "Young Maria Renard",
+          "Familiar (Faerie)",
+          "Familiar (Sacred Cardinal)",
+          "Familiar (Sacred Dragon)",
+          "Familiar (Sacred Tiger)",
+          "Familiar (Sacred Turtle)",
+          "Innocent Devil (Ukoback)",
+          "Innocent Devil (Imp)",
+          "Innocent Devil (Alleged Ghost)",
+          "Innocent Devil (Bitterfly)",
+          "Innocent Devil (Wood Rod)",
+          "Innocent Devil (Pumpkin)",
+          "Blue Crescent Moon Cornell (Trinum Custodem)",
+          "Blue Crescent Moon Cornell (Ebony Diabologue)",
+          "Master Librarian",
+          "Wind",
+          "Hugh Baldwin",
+          "Jonathan & Charlotte (Javelin)",
+          "Jonathan & Charlotte (Morning Star)",
+          "Jonathan & Charlotte (Coat of Arms)",
+          "Jonathan & Charlotte (Spectral Sword)",
+          "Charlotte & Jonathan (Raging Fire)",
+          "Charlotte & Jonathan (Belnades' Spellbook)",
+          "Stella & Loretta Lecarde",
+          "Loretta & Stella Lecarde",
+          "Stella Lecarde",
+          "Loretta Lecarde",
+          "Brauner",
+          "Soleil Belmont",
+          "Graham Jones",
+          "Genya Arikado",
+          "Joachim Armster",
+          "Walter Bernhard",
+          "Carmilla",
+          "Cave Troll",
+          "Fleaman",
+          "Axe Armor",
+          "Frozenshade",
+          "Alamaric Sniper",
+          "Persephone",
+          "Astarte",
+          "Witch Actrise",
+          "Atlantis Shrine Wizard",
+          "Succubus",
+          "Fake Trio (Trevor)",
+          "Fake Trio (Sypha)",
+          "Fake Trio (Grant)",
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)",
+          "Jiangshi",
+          "Blackmore",
+          "Count Olrox",
+          "Malphas",
+          "Death",
+          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
+          "Megalo Elizabeth Bartley (Ebony Diabologue)",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)",
+          "Megalo Death (Death Spiral)",
+          "Megalo Death (Ebony Diabologue)",
+          "Tsunanori Mido (Fleuret)",
+          "Tsunanori Mido (Splashers)",
+          "Tsunanori Mido - Solo (Fleuret)",
+          "Tsunanori Mido - Solo (Splashers)",
+          "Bonnie Blair (Punch)",
+          "Bonnie Blair (Kick)",
+          "Bonnie Blair - Solo (Punch)",
+          "Bonnie Blair - Solo (Kick)",
+          "Formina Franklyn (Saber Machine Gun)",
+          "Formina Franklyn (Eagle Gun)",
+          "Formina Franklyn - Solo (Saber Machine Gun)",
+          "Formina Franklyn - Solo (Eagle Gun)",
+          "(Mover) Diva No. 5",
+          "(Shanks) Diva No. 5",
+          "(Virginia) Diva No. 5",
+          "Ameya Aisling (Spirit Rings)",
+          "Ameya Aisling (Intuition)",
+          "Siugnas (Town Sword)",
+          "Siugnas (Sanguine Star)",
+          "Dolores",
+          "Macha Alter Ego",
+          "Lita Caryx",
+          "Mr. S",
+          "Lolo, Hiss, Meow, and Purr",
+          "Kina",
+          "Imakoo",
+          "Jimbo"
+        ],
+        "arcana": [
+          "Tragic Princess (III)",
+          "Chaos in the Dark Night (V)",
+          "Pale Diamond Incursion (V)",
+          "Edge of the Earth (VIII)"
+        ]
+      }
+    },
+    {
+      "name": "Fire",
+      "icon": "assets/icons/affinities/fire.png",
+      "color": "#820400",
+      "base_affinity": "Fire",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Avatar Infernas",
+          "Dario Bossi",
+          "Count Olrox",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)"
+        ],
+        "arcana": [
+          "Heart of Fire (XIX)",
+          "Heir of Fate (XIX)"
+        ]
+      }
+    },
+    {
+      "name": "Freeze",
+      "icon": "assets/icons/affinities/freeze.png",
+      "color": "#007d9e",
+      "base_affinity": "Freeze",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "She-Moon Eeta",
+          "She-Moon Eeta (Reborn)",
+          "Frozenshade"
+        ],
+        "arcana": [
+          "Out of Bounds (XII)",
+          "Jail of Crystal (XIV)",
+          "Crystal Cries (XII)"
+        ]
+      }
+    },
+    {
+      "name": "Weapon Type",
+      "icon": "assets/icons/affinities/weapon_type.png",
+      "color": "#32647e",
+      "base_affinity": "Weapon Type",
+      "is_parent": true,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Ambiguous Power",
+      "icon": "assets/icons/affinities/ambiguous_power.png",
+      "color": "#9e0000",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Shanoa (Confodere)",
+          "Shanoa (Candybox)",
+          "Walter Bernhard"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Belnades' Spell",
+      "icon": "assets/icons/affinities/belnades_spell.png",
+      "color": "#09317e",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Juste Belmont (Vibhuti Whip)",
+          "Juste Belmont (Morning Star)",
+          "Charlotte Aulin (Raging Fire)",
+          "Charlotte Aulin (Belnades' Spellbook)",
+          "Charlotte & Jonathan (Raging Fire)",
+          "Charlotte & Jonathan (Belnades' Spellbook)",
+          "Drolta Tzuentes"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Dominus",
+      "icon": "assets/icons/affinities/dominus.png",
+      "color": "#3d0b65",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Carmilla"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Glimmer Tech",
+      "icon": "assets/icons/affinities/glimmer_tech.png",
+      "color": "#00785f",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Bonnie Blair (Kick)",
+          "Bonnie Blair - Solo (Punch)",
+          "Bonnie Blair - Solo (Kick)",
+          "Formina Franklyn (Saber Machine Gun)",
+          "Formina Franklyn (Eagle Gun)",
+          "Formina Franklyn - Solo (Saber Machine Gun)",
+          "Formina Franklyn - Solo (Eagle Gun)",
+          "(Virginia) Diva No. 5",
+          "Final Emperor",
+          "Kugutsu (Musashi)",
+          "Kugutsu (Komachi)",
+          "Kugutsu (Boh)",
+          "Kugutsu (Sukune)",
+          "Mr. S",
+          "Malevolent Door Spirit"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Knives",
+      "icon": "assets/icons/affinities/knives.png",
+      "color": "#757d87",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Grant Danasty (Curved Knife)",
+          "Grant Danasty (Coat of Arms)",
+          "Fake Trio (Grant)",
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Vampire-Killing Tool",
+      "icon": "assets/icons/affinities/vampire-killing_tool.png",
+      "color": "#6d072b",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Jonathan Morris (Javelin)",
+          "Jonathan Morris (Morning Star)",
+          "Jonathan Morris (Coat of Arms)",
+          "Jonathan Morris (Spectral Sword)",
+          "Wind",
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)",
+          "Jonathan & Charlotte (Javelin)",
+          "Jonathan & Charlotte (Morning Star)",
+          "Jonathan & Charlotte (Coat of Arms)",
+          "Jonathan & Charlotte (Spectral Sword)",
+          "Atlantis Shrine Wizard"
+        ],
+        "arcana": []
+      }
     }
   ],
   "banishLayout": [

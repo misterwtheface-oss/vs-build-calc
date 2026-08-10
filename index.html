@@ -372,6 +372,42 @@
       display: block;
       margin-bottom: .3rem;
     }
+    /* ── Affinity banners (shared by info panel + detail overlay) ── */
+    .sidebar-top { position: relative; }
+    .info-detail-btn {
+      position: absolute; top: .5rem; right: .5rem;
+      width: 22px; height: 22px; padding: 0;
+      border: 1px solid var(--border-hi); border-radius: 50%;
+      background: var(--surface2); color: var(--gold);
+      font-family: var(--font-title); font-style: italic; font-size: .85rem; line-height: 1;
+      cursor: pointer; z-index: 2;
+    }
+    .info-detail-btn:hover { background: var(--gold); color: #1a1206; }
+    .affinity-section .affinity-row { margin-bottom: 4px; }
+    .affinity-row {
+      display: flex; align-items: center; gap: 6px;
+      cursor: pointer; user-select: none;
+    }
+    .affinity-row-icon { width: 26px; height: 26px; flex-shrink: 0; }
+    .affinity-row-icon img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+    .affinity-row-banner {
+      flex: 1; min-width: 0;
+      padding: 3px 9px; border-radius: 4px;
+      background: var(--aff-color, var(--surface2));
+      color: var(--aff-text, #fff);
+      font-size: .82rem; font-weight: 600;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .affinity-row:hover .affinity-row-banner { filter: brightness(1.12); }
+    /* Primary (elevated) traits grouped in a shared bordered container; used in both the info
+       panels and the detail overlay object pages. */
+    .primary-traits {
+      border: 1px solid var(--gold-dim); border-radius: 8px;
+      background: rgba(232,184,32,.06);
+      padding: 5px 7px; margin-bottom: 6px;
+    }
+    .primary-traits > :last-child { margin-bottom: 0; }
+    #detail-overlay-root .primary-traits { padding: 9px 12px 3px; margin-bottom: 12px; }
     .info-sidebar .req-row { display: flex; flex-wrap: wrap; gap: 4px; }
     .info-sidebar .req-icon { width: 32px; height: 32px; }
     .info-sidebar .req-icon img { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
@@ -555,6 +591,164 @@
     }
     #overlay-root.hidden { display: none; }
 
+    /* ═══ Detailed Info Overlay — stacks ABOVE the selector overlay ═══ */
+    #detail-overlay-root {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.78);
+      z-index: 200;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1rem;
+    }
+    #detail-overlay-root.hidden { display: none; }
+    #detail-overlay-root .overlay-panel { width: 94vw; max-width: 1600px; max-height: 92vh; }
+    #detail-overlay-root .overlay-header { padding: 1rem 1.4rem; }
+    #detail-overlay-root .overlay-header h2 { font-size: 1.5rem; }
+    .detail-head-left { display: flex; align-items: center; gap: .4rem; }
+    .detail-arrow-btn {
+      width: 38px; height: 38px; padding: 0;
+      border: 1px solid var(--border-hi); border-radius: 6px;
+      background: var(--surface2); color: var(--gold);
+      font-size: 1.25rem; line-height: 1; cursor: pointer;
+    }
+    .detail-arrow-btn:disabled { opacity: .35; cursor: default; }
+    .detail-arrow-btn:not(:disabled):hover { background: var(--gold); color: #1a1206; }
+    .detail-body { display: flex; flex: 1; overflow: hidden; }
+    .detail-left {
+      width: 320px; flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      padding: 1.5rem; text-align: center;
+      overflow-y: auto;
+    }
+    .detail-left .detail-icon { width: 200px; height: 200px; margin: 0 auto .75rem; border-radius: 8px; overflow: hidden; }
+    .detail-left .detail-icon img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+    .detail-left .detail-icon.arcana-card { width: 190px; height: 272px; }
+    .detail-left .detail-icon.arcana-card img { object-fit: fill; }
+    .detail-left .detail-icon.char-sprite { width: 100%; height: 230px; }
+    .detail-left .detail-name { font-family: var(--font-title); color: var(--gold); font-size: 1.55rem; margin-bottom: .5rem; }
+    .detail-left .detail-desc { font-size: .98rem; color: var(--text-muted); font-style: italic; line-height: 1.55; }
+    .detail-kicker { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dim); margin-bottom: .5rem; }
+    .detail-main { flex: 1; overflow-y: auto; padding: 1.5rem 1.8rem; }
+    .detail-cat { margin-bottom: 1.5rem; }
+    .detail-cat-label {
+      font-family: var(--font-title); font-size: 1.2rem; color: var(--gold);
+      border-bottom: 1px solid var(--border); padding-bottom: .35rem; margin-bottom: .7rem;
+    }
+    /* Collapsible category sections (native <details>/<summary>) with a custom marker. */
+    summary.detail-cat-label { cursor: pointer; user-select: none; list-style: none; }
+    summary.detail-cat-label::-webkit-details-marker { display: none; }
+    summary.detail-cat-label::before { content: '▾ '; color: var(--gold-dim); font-size: 1rem; }
+    details.detail-cat:not([open]) > summary.detail-cat-label { margin-bottom: 0; }
+    details.detail-cat:not([open]) > summary.detail-cat-label::before { content: '▸ '; }
+    .detail-blurb-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .detail-blurb-row .aff-nav-icon { width: 44px; height: 44px; }
+    .detail-blurb-text { font-size: .98rem; color: var(--text-muted); }
+    .aff-icon-grid { display: flex; flex-wrap: wrap; gap: 9px; }
+    .aff-nav-icon {
+      width: 60px; height: 60px; flex-shrink: 0;
+      border-radius: 6px; overflow: hidden;
+      cursor: pointer;
+    }
+    .aff-nav-icon.arcana { width: 60px; height: 84px; }
+    .aff-nav-icon.sprite { width: 66px; height: 88px; }
+    .aff-nav-icon img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+    .aff-nav-icon.sprite img { object-fit: contain; }
+    .detail-blurb-row .aff-nav-icon.sprite { width: 40px; height: 54px; }
+    .aff-nav-icon:hover { box-shadow: 0 0 6px rgba(232,184,32,.5); }
+    .detail-banner-header { margin: 0 0 .4rem; }
+    .detail-obj-affinity { margin-bottom: 1.2rem; }
+    /* Object-page affinity banners: scale up within the overlay only (info panels unchanged). */
+    #detail-overlay-root .affinity-row { gap: 10px; }
+    #detail-overlay-root .affinity-row-icon { width: 40px; height: 40px; }
+    #detail-overlay-root .affinity-row-banner { padding: 7px 14px; font-size: 1.05rem; border-radius: 5px; }
+    .detail-empty { color: var(--text-dim); font-style: italic; padding: 1rem 0; }
+    .overlay-footer .btn-add-build { margin-left: auto; }
+
+    /* Reference icon grids (character starting loadout · arcana affects lists). Shared by the
+       detail overlay and the arcana selector's right panel, so kept compact. */
+    .ref-icon-grid { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .ref-nav-icon { width: 42px; height: 42px; flex-shrink: 0; border-radius: 5px; overflow: hidden; cursor: pointer; }
+    .ref-nav-icon.arcana { width: 42px; height: 58px; }
+    .ref-nav-icon.sprite { width: 40px; height: 54px; }
+    .ref-nav-icon img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+    .ref-nav-icon.sprite img { object-fit: contain; }
+    .ref-nav-icon:hover { box-shadow: 0 0 6px rgba(232,184,32,.5); }
+    .req-icon.stage-nav { cursor: pointer; }
+    .req-icon.stage-nav:hover { box-shadow: 0 0 6px rgba(232,184,32,.5); border-radius: 4px; }
+
+    /* ── Player page: shared-trait cross-reference matrix ── */
+    .xref-wrap { overflow: auto; max-width: 100%; }
+    table.player-xref { border-collapse: collapse; font-size: .92rem; }
+    .player-xref th, .player-xref td { border: 1px solid var(--border); }
+    .player-xref thead th { position: sticky; top: 0; z-index: 2; }
+    .xref-corner { position: sticky; left: 0; top: 0; z-index: 4; background: var(--surface2); }
+    .xref-rowhead {
+      position: sticky; left: 0; z-index: 1;
+      background: var(--surface2); text-align: left; white-space: nowrap;
+      padding: 4px 12px 4px 6px; cursor: pointer; max-width: 240px; overflow: hidden;
+    }
+    .xref-rowhead img { width: 27px; height: 27px; vertical-align: middle; margin-right: 8px; object-fit: contain; image-rendering: pixelated; }
+    .xref-rowhead:hover { color: var(--gold); }
+    /* Vertical column headers: icon anchored at the BOTTOM (by the grid), trait name stacked
+       above it reading downward — compact for width. */
+    .xref-colhead { padding: 0; height: 140px; vertical-align: bottom; }
+    .xref-col {
+      display: flex; flex-direction: column-reverse; align-items: center; gap: 5px;
+      height: 100%; padding: 7px 3px; min-width: 34px; cursor: pointer;
+      background: var(--aff-color); color: var(--aff-text);
+    }
+    .xref-col:hover { filter: brightness(1.12); }
+    .xref-col-icon { width: 27px; height: 27px; object-fit: contain; image-rendering: pixelated; flex-shrink: 0; }
+    .xref-col-name { writing-mode: vertical-rl; font-size: .8rem; font-weight: 600; white-space: nowrap; }
+    .player-xref tbody td { text-align: center; width: 34px; min-width: 34px; height: 30px; color: var(--text-dim); }
+    .player-xref td.xref-on { color: var(--gold); }
+    .xref-shared th, .xref-shared td { position: sticky; bottom: 0; z-index: 1; background: var(--surface2); font-weight: 700; }
+    .xref-shared td { color: var(--text-muted); }
+    .xref-shared td.xref-sh { color: var(--gold); }
+    /* Character row (top): set it apart from the item rows. */
+    .xref-char-row .xref-rowhead { color: var(--gold); font-weight: 700; }
+    .xref-char-row td, .xref-char-row .xref-rowhead { border-bottom: 2px solid var(--border-hi); }
+    /* Priority traits (from the character's grouped affinity schema) — bold the whole column. */
+    .player-xref .xref-priority { font-weight: 800; }
+    .player-xref td.xref-priority { background: rgba(232,184,32,.09); }
+    .player-xref td.xref-on.xref-priority { color: var(--gold); }
+    .xref-colhead.xref-priority .xref-col { outline: 2px solid var(--gold); outline-offset: -2px; }
+    /* Reused evo-path sections (weapon/passive detail pages): make their <h3> match the gold
+       category headers, and tile a passive's many "Used In" paths into a compact grid. */
+    #detail-overlay-root .detail-section h3 {
+      font-family: var(--font-title); color: var(--gold); font-size: 1.2rem;
+      border-bottom: 1px solid var(--border); padding-bottom: .35rem; margin-bottom: .6rem;
+    }
+    #detail-overlay-root .detail-passive-evo .evo-flow {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem; align-items: start;
+    }
+
+    /* ── Appendix (index) page ── */
+    .appendix-search {
+      width: 100%; box-sizing: border-box; margin-bottom: 1rem;
+      padding: .65rem .9rem; font-size: 1.05rem;
+      background: var(--surface2); color: var(--text);
+      border: 1px solid var(--border-hi); border-radius: 6px;
+    }
+    .appendix-search:focus { outline: none; border-color: var(--gold); }
+    .appendix-section { margin-bottom: 1.5rem; }
+    .appendix-section-label {
+      font-family: var(--font-title); font-size: 1.2rem; color: var(--gold);
+      border-bottom: 1px solid var(--border); padding-bottom: .35rem; margin-bottom: .55rem;
+    }
+    .appendix-row {
+      display: flex; align-items: center; gap: 11px;
+      padding: 5px 9px; border-radius: 4px; cursor: pointer;
+    }
+    .appendix-row:hover { background: var(--surface2); }
+    .appendix-row.appendix-child { margin-left: 2rem; }
+    .appendix-icon { width: 36px; height: 36px; flex-shrink: 0; }
+    .appendix-icon.sprite { width: 32px; height: 44px; }
+    .appendix-icon img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+    .appendix-row-name { flex: 1; min-width: 0; font-size: 1.02rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .appendix-row-kind { font-size: .76rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .06em; flex-shrink: 0; }
+    .appendix-more { font-size: .88rem; color: var(--text-dim); font-style: italic; padding: .6rem 9px; }
+
     .overlay-panel {
       background: var(--surface);
       border: 1px solid var(--border-hi);
@@ -628,6 +822,7 @@
       display: flex;
       flex-direction: column;
       gap: .4rem;
+      position: relative; /* anchors the info-"i" detail button */
     }
     .ovl-right-body {
       flex: 1;
@@ -1093,6 +1288,7 @@
 <body>
   <div id="app"></div>
   <div id="overlay-root" class="hidden"></div>
+  <div id="detail-overlay-root" class="hidden"></div>
 
   <script src="data/data.js"></script>
   <script>
@@ -1176,6 +1372,10 @@
       tab: 'wp',   // 'wp' | 'characters' | 'arcana'
       unowned: { weapons: new Set(), passives: new Set(), characters: new Set(), arcana: new Set() },
     },
+    // Detailed Info Overlay: a STACKING layer (renders over the selector overlay) with its own
+    // back/forward history. Each page = { kind:'object'|'affinity', type, name }. `player` is the
+    // add-to-build target (the active info panel's player when opened from a panel, else 0).
+    detail: { stack: [], idx: -1, player: 0, appendixQuery: '' },
   };
 
   // ── Collection persistence (localStorage; first persisted state in the app) ──
@@ -1242,6 +1442,142 @@
   function weaponByName(name) { return D.weapons.find(w => w.name === name) || null; }
   function passiveByName(name) { return D.passives.find(p => p.name === name) || null; }
   function arcanaByName(name) { return D.arcana.find(a => a.name === name) || null; }
+
+  // ── Affinities ────────────────────────────────────────────────────────────
+  // "Affinity" = an internal tag-association between build objects (never surfaced by that
+  // name in the UI). `D.affinities` gives affinity → related objects per category; the UI
+  // uses only DIRECT (1-hop) links. Multi-hop daisy-chaining is a theorycraft-skill concern.
+  function affinityByName(name) { return (D.affinities || []).find(a => a.name === name) || null; }
+
+  // Reverse index: object (type+name) → affinity objects that list it. Built once, lazily.
+  // `type` is the object kind key on affinity.related: 'weapons' | 'passives' | 'characters' | 'arcana'.
+  let _affinityIndex = null;
+  function affinityIndex() {
+    if (_affinityIndex) return _affinityIndex;
+    const idx = { weapons: new Map(), passives: new Map(), characters: new Map(), arcana: new Map() };
+    for (const aff of (D.affinities || [])) {
+      for (const cat of ['weapons', 'passives', 'characters', 'arcana']) {
+        for (const objName of (aff.related?.[cat] || [])) {
+          if (!idx[cat].has(objName)) idx[cat].set(objName, []);
+          idx[cat].get(objName).push(aff);
+        }
+      }
+    }
+    _affinityIndex = idx;
+    return idx;
+  }
+  // Panel/detail `type` ('weapon'|'passive'|'character'|'char'|'arcana') → related-category key.
+  const AFFINITY_CAT = { weapon: 'weapons', passive: 'passives', character: 'characters', char: 'characters', arcana: 'arcana' };
+  function objectAffinities(type, name) {
+    const cat = AFFINITY_CAT[type];
+    if (!cat || !name) return [];
+    return affinityIndex()[cat].get(name) || [];
+  }
+  // A parent affinity's children (rows whose base_affinity points at it), for its detail page.
+  function childAffinities(parentName) {
+    return (D.affinities || []).filter(a => a.base_affinity === parentName && a.name !== parentName);
+  }
+  // Per-object info blurb for an (affinity, object). The source column doesn't exist yet —
+  // returns '' until it's added to affinities.csv + build-data.mjs. Single wire-up point.
+  function affinityObjInfo(/* affinityName, type, objName */) { return ''; }
+
+  // Names in a given group of an object's grouped-affinity schema (e.g. 'priority'). Returns
+  // an empty set until that object's `affinity` column adopts the {Priority:[…]|[…]} format.
+  function affinityGroupNames(obj, key) {
+    const groups = obj?.affinity_groups;
+    if (!Array.isArray(groups)) return new Set();
+    const g = groups.find(x => x.key === key);
+    return new Set(g ? g.items : []);
+  }
+
+  // Character variant equivalence (for collapsing the affinity-page character list). A base
+  // (base_name) is "collapsible" when its ≥2 variants share ONE sprite AND an identical,
+  // non-empty affinity set — i.e. weapon-loadout variants that are otherwise the same
+  // character (the Belmonts, etc.). Because their affinity sets are identical, all a base's
+  // variants co-occur in every affinity, so per-list dedup is always consistent. Genuinely
+  // distinct variants (different sprite and/or affinities — Reborn, morphs, Unblinded) are
+  // NOT collapsible and still render individually. Cached once.
+  let _charVariants = null;
+  function charVariantInfo() {
+    if (_charVariants) return _charVariants;
+    const byName = new Map(D.characters.map(c => [c.name, c]));
+    const byBase = new Map();
+    for (const c of D.characters) {
+      if (!byBase.has(c.base_name)) byBase.set(c.base_name, []);
+      byBase.get(c.base_name).push(c);
+    }
+    const charAff = affinityIndex().characters; // name → [affinity objects]
+    const affKey = name => (charAff.get(name) || []).map(a => a.name).sort().join('|');
+    const collapsible = new Set();
+    const repOf = new Map(); // base_name → representative character name (base row if any, else first)
+    for (const [base, group] of byBase) {
+      if (group.length < 2) continue;
+      const sprites = new Set(group.map(c => c.sprite_static || c.sprite_gif || c.icon));
+      const key0 = affKey(group[0].name);
+      if (sprites.size === 1 && key0 !== '' && group.every(c => affKey(c.name) === key0)) {
+        collapsible.add(base);
+        repOf.set(base, (group.find(c => c.name === base) || group[0]).name);
+      }
+    }
+    _charVariants = { collapsible, repOf, byName };
+    return _charVariants;
+  }
+  function charSpriteIcon(c) { return c.sprite_static || c.sprite_gif || c.icon; }
+
+  // "Affinity" is backend-only vocabulary; the banner section shows a neutral heading. Change
+  // this one constant to relabel the section everywhere.
+  const AFFINITY_SECTION_LABEL = 'Traits';
+
+  // Pick readable text over a banner background by its relative luminance.
+  function affinityTextColor(hex) {
+    const m = /^#?([0-9a-f]{6})$/i.exec(hex || '');
+    if (!m) return '#fff';
+    const n = parseInt(m[1], 16);
+    const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+    const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    return lum > 0.6 ? '#1a1206' : '#fdf6e3';
+  }
+
+  // One affinity banner: [icon] [name-as-colored-banner], whole row clickable via `action`
+  // (info panel → 'open-affinity-page'; detail overlay → 'nav-affinity').
+  function affinityBanner(aff, action) {
+    const color = aff.color || '#6a4010';
+    return `<div class="affinity-row" data-action="${esc(action)}" data-affinity="${esc(aff.name)}"
+        style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}" title="${esc(aff.name)}">
+      <span class="affinity-row-icon"><img src="${esc(aff.icon || EMPTY_ICON)}" alt="" onerror="this.style.visibility='hidden'"></span>
+      <span class="affinity-row-banner">${esc(aff.name)}</span>
+    </div>`;
+  }
+
+  // The object's PRIMARY (elevated) trait names, from its grouped-affinity schema. Only
+  // characters and arcana carry the column; others → empty set (no elevation).
+  function objectPrimaryAffinities(type, name) {
+    const obj = (type === 'char' || type === 'character') ? D.characters.find(c => c.name === name)
+      : type === 'arcana' ? arcanaByName(name) : null;
+    return obj ? affinityGroupNames(obj, 'primary') : new Set();
+  }
+
+  // The affinity-banner section for an object's info panel (empty string when it has none).
+  // Primary traits are grouped into a shared bordered container above the loose default ones.
+  function affinitySectionHTML(type, name, action) {
+    const list = objectAffinities(type, name);
+    if (!list.length) return '';
+    const primarySet = objectPrimaryAffinities(type, name);
+    const primary = list.filter(a => primarySet.has(a.name));
+    const rest    = list.filter(a => !primarySet.has(a.name));
+    const banners = arr => arr.map(a => affinityBanner(a, action)).join('');
+    return `<div class="detail-section affinity-section">
+      <span class="detail-section-label">${AFFINITY_SECTION_LABEL}</span>
+      ${primary.length ? `<div class="primary-traits">${banners(primary)}</div>` : ''}
+      ${banners(rest)}
+    </div>`;
+  }
+
+  // The info-"i" button placed in an info panel's top-right → opens that object's detail page.
+  function infoDetailButtonHTML(type, name) {
+    return `<button class="info-detail-btn" data-action="open-object-page"
+      data-detail-type="${esc(type)}" data-detail-name="${esc(name)}" title="More info">i</button>`;
+  }
 
   // ── Collection accessibility ──────────────────────────────────────────────
   // Only BASE weapons, passives, characters and arcana are unlock atoms. Evolved/union
@@ -2155,7 +2491,17 @@
     const inner = icon
       ? `<img src="${esc(icon)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">`
       : `<span style="font-size:.55rem;color:var(--text-muted)">${esc(it.slice(0,6))}</span>`;
-    if (!ctx) return `<div class="req-icon" title="${esc(it)}">${inner}</div>`;
+    if (!ctx) {
+      // Stage SELECTOR (no player context): make items that resolve to an object open their
+      // detail page (routed via handleOverlayClick → detail overlay). Special floor-pickups
+      // that aren't real weapons/passives (e.g. Arcana Treasure Chest) stay static.
+      const ref = resolveRef(it);
+      if (!ref) return `<div class="req-icon" title="${esc(it)}">${inner}</div>`;
+      const navAttrs = ref.kind === 'affinity'
+        ? `data-action="nav-affinity" data-affinity="${esc(it)}"`
+        : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(it)}"`;
+      return `<div class="req-icon stage-nav" ${navAttrs} title="${esc(it)} — view details">${inner}</div>`;
+    }
     const st = stageItemAddState(it, ctx, groupArcana);
     if (st.kind === 'pickup') return `<div class="req-icon stage-pickup" title="${esc(it)} — floor pickup">${inner}</div>`;
     if (st.addable) {
@@ -2581,6 +2927,8 @@
     }
 
     if (type === 'passive') {
+      // Passives show their affinity banners ABOVE the evolution list (the one inverse case).
+      const passiveAffSec = affinitySectionHTML('passive', item.name, 'open-affinity-page');
       if (gift === 'passive' && isFreePick(item.name)) {
         // Arma Dio gift chooser → Choose a passive from its pool.
         html += `<div class="detail-section"><span class="detail-section-label">Choose</span>
@@ -2591,8 +2939,10 @@
         html += `<div class="detail-section"><span class="detail-section-label">Stage</span>
           <button class="btn btn-sm btn-devolve" data-action="remove-slot" data-player="${playerIdx}"
             data-slot="${slotIdx}" data-type="passive" data-gift="passive">← Remove gift</button></div>`;
+        html += passiveAffSec;
         html += buildPassiveEvoHTML(item.name, playerIdx);
       } else {
+        html += passiveAffSec;
         html += buildPassiveEvoHTML(item.name, playerIdx);
       }
     }
@@ -2608,7 +2958,15 @@
       html += stageItemsHTML(item, t => `<span class="detail-section-label">${esc(t)}</span>`, playerIdx ?? 0);
     }
 
-    return `<div class="info-sidebar"><div class="sidebar-top">${top}</div><div class="sidebar-body">${html}</div></div>`;
+    // Affinity banners: appended below existing content for weapon/character/arcana. Passives
+    // insert theirs ABOVE the evolution list (handled in the passive branch) — the inverse case.
+    if (type === 'weapon' || type === 'char' || type === 'arcana') {
+      html += affinitySectionHTML(type, item.name, 'open-affinity-page');
+    }
+
+    // Info-"i" (top-right of the panel) → open this object's detail page. Not for stages.
+    const infoBtn = type === 'stage' ? '' : infoDetailButtonHTML(type, item.name);
+    return `<div class="info-sidebar"><div class="sidebar-top">${infoBtn}${top}</div><div class="sidebar-body">${html}</div></div>`;
   }
 
   function renderPlanning() {
@@ -2749,6 +3107,7 @@
             ${char ? `<span class="char-name">— ${esc(char.name)}</span>` : ''}
           </div>
           <div class="player-header-actions">
+            <button class="btn btn-sm" data-action="open-player-page" data-player="${idx}" title="Shared trait cross-reference">⊞ Traits</button>
             <button class="btn btn-sm" data-action="clear-player" data-player="${idx}" title="Clear all">✕ Clear</button>
           </div>
         </div>
@@ -2794,6 +3153,7 @@
             <button class="btn" data-action="open-power-ups">Power-Ups</button>
             <button class="btn" data-action="open-seal">Seal Advisor</button>
             <button class="btn" data-action="open-collection">Manage Collection</button>
+            <button class="btn" data-action="open-appendix">Appendix</button>
             <button class="btn btn-back" data-action="change-player-count">⟵ Change Player Count</button>
           </div>
         </div>
@@ -2884,7 +3244,7 @@
     const charLevel = state.players[playerIdx]?.charLevel ?? 1;
     const left = `${levelRowHTML(playerIdx, charLevel)}${statsHTML(sel, null, charLevel)}`;
     const rightTop = sel
-      ? `${charSpriteHTML(sel, false)}
+      ? `${infoDetailButtonHTML('char', sel.name)}${charSpriteHTML(sel, false)}
          <div class="detail-name">${esc(sel.name)}</div>`
       : `<div class="detail-desc" style="text-align:center">Select a character</div>`;
     let rightBody = '';
@@ -2892,6 +3252,7 @@
       if (sel.description) rightBody += `<div class="detail-desc">${esc(sel.description)}</div>`;
       rightBody += startingLoadoutHTML(sel);
       if (sel.notes) rightBody += `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>`;
+      rightBody += affinitySectionHTML('char', sel.name, 'open-affinity-page');
     }
 
     return `<div class="overlay-header">
@@ -3161,11 +3522,11 @@
 
         const chainHTML = buildEvoChainHTML(w);
 
-        const wRightTop = `<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+        const wRightTop = `${infoDetailButtonHTML('weapon', w.name)}<div class="detail-icon"><img src="${esc(w.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(w.name)}</div>
           ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}
           ${w.description ? `<div class="detail-desc" style="margin-top:.4rem">${esc(w.description)}</div>` : ''}`;
-        const wRightBody = `${reqHTML}${chainHTML}`;
+        const wRightBody = `${reqHTML}${chainHTML}${affinitySectionHTML('weapon', w.name, 'open-affinity-page')}`;
         rightHTML = `<div class="ovl-right-top">${wRightTop}</div><div class="ovl-right-body">${wRightBody}</div>`;
       }
     } else {
@@ -3231,10 +3592,11 @@
           ${p.level_ups.length > 1 ? `<div class="detail-section"><h3>Level Ups</h3><ul style="padding-left:1.1rem;margin:.3rem 0">
             ${p.level_ups.slice(1).map((l,i) => `<li style="font-size:.75rem;margin-bottom:.15rem">Lv${i+2}: ${esc(l)}</li>`).join('')}
           </ul></div>` : ''}`;
-        rightTop = `<div class="detail-icon"><img src="${esc(p.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
+        rightTop = `${infoDetailButtonHTML('passive', p.name)}<div class="detail-icon"><img src="${esc(p.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
           <div class="detail-name">${esc(p.name)}</div>
           <div class="detail-desc">${esc(p.description)}</div>`;
-        rightBody = buildPassiveEvoHTML(p.name, null);
+        // Passives show affinity banners ABOVE the evolution list (the inverse case).
+        rightBody = affinitySectionHTML('passive', p.name, 'open-affinity-page') + buildPassiveEvoHTML(p.name, null);
       }
     }
     const rightHTML = `<div class="ovl-right-top">${rightTop}</div><div class="ovl-right-body">${rightBody}</div>`;
@@ -3318,6 +3680,7 @@
 
     const rightHTML = sel
       ? `<div class="ovl-right-top">
+           ${infoDetailButtonHTML('arcana', sel.name)}
            <div class="detail-icon arcana-card"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
            <div class="detail-name">${esc(sel.name)}</div>
            <div class="hi-badge ${sel.type === 'Arcana' ? 'arcana' : 'item'}" style="display:block;text-align:center;margin-bottom:.3rem">${esc(sel.type)}</div>
@@ -3325,6 +3688,8 @@
          <div class="ovl-right-body">
            <div class="detail-desc">${esc(sel.description)}</div>
            ${sel.notes ? `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes.slice(0,500))}…</div></div>` : ''}
+           ${arcanaAffectsSectionsHTML(sel, 'selector')}
+           ${affinitySectionHTML('arcana', sel.name, 'open-affinity-page')}
          </div>`
       : '<div class="ovl-right-top"><div class="detail-desc" style="text-align:center">Select an arcana</div></div><div class="ovl-right-body"></div>';
 
@@ -3436,6 +3801,458 @@
     const root = document.getElementById('overlay-root');
     root.innerHTML = `<div class="overlay-panel">${inner}</div>`;
     root.classList.remove('hidden');
+  }
+
+  // ═══════════════════════════════════════════════════════
+  //  DETAILED INFO OVERLAY (stacking "encyclopedia" layer)
+  // ═══════════════════════════════════════════════════════
+  // A separate root (#detail-overlay-root, z-index 200) so it stacks ABOVE selector overlays.
+  // Navigates a back/forward page history; each page is an object page (affinity banners) or
+  // an affinity page (object-category sections + child-affinity banners for a parent).
+
+  // Category metadata for affinity pages, in display order.
+  // `iconOf` chooses which art a category's grid cell shows (defaults to the object's square
+  // icon). Characters use their sprite here — it reads better in the list — while still linking
+  // to the character page; NO other character-icon reference is affected.
+  const DETAIL_CATS = [
+    { key: 'arcana',     label: 'Arcana',     type: 'arcana',    empty: EMPTY_ICONS.arcana,  cls: 'arcana',  lookup: arcanaByName },
+    { key: 'characters', label: 'Characters', type: 'character', empty: EMPTY_ICONS.char,    cls: 'sprite',  lookup: n => D.characters.find(c => c.name === n) || null },
+    { key: 'passives',   label: 'Passives',   type: 'passive',   empty: EMPTY_ICONS.passive, cls: '',        lookup: passiveByName },
+    { key: 'weapons',    label: 'Weapons',    type: 'weapon',     empty: EMPTY_ICONS.weapon,  cls: '',        lookup: weaponByName },
+  ];
+  const DETAIL_KIND_LABEL = { weapon: 'Weapon', passive: 'Passive', character: 'Character', arcana: 'Arcana' };
+
+  function detailObjByType(type, name) {
+    if (type === 'weapon')    return weaponByName(name);
+    if (type === 'passive')   return passiveByName(name);
+    if (type === 'arcana')    return arcanaByName(name);
+    if (type === 'character') return D.characters.find(c => c.name === name) || null;
+    return null;
+  }
+
+  // Push a page (object or affinity). First open seeds the stack; later opens truncate any
+  // forward history. `player` (add-to-build target) is only updated when provided.
+  function openDetailPage(page, player) {
+    if (typeof player === 'number') state.detail.player = player;
+    const d = state.detail;
+    if (d.idx < 0) { d.stack = [page]; d.idx = 0; }
+    else { d.stack = d.stack.slice(0, d.idx + 1); d.stack.push(page); d.idx = d.stack.length - 1; }
+    renderDetailOverlay();
+    document.getElementById('detail-overlay-root').classList.remove('hidden');
+  }
+  function detailBack()    { const d = state.detail; if (d.idx > 0) { d.idx--; renderDetailOverlay(); } }
+  function detailForward() { const d = state.detail; if (d.idx < d.stack.length - 1) { d.idx++; renderDetailOverlay(); } }
+  function closeDetailOverlay() {
+    const r = document.getElementById('detail-overlay-root');
+    r.classList.add('hidden'); r.innerHTML = '';
+    state.detail.stack = []; state.detail.idx = -1; state.detail.appendixQuery = '';
+  }
+  function renderDetailOverlay() {
+    const page = state.detail.stack[state.detail.idx];
+    if (!page) { closeDetailOverlay(); return; }
+    const inner = page.kind === 'appendix' ? detailAppendixPageHTML()
+      : page.kind === 'player' ? detailPlayerPageHTML(page.playerIdx)
+      : page.kind === 'affinity' ? detailAffinityPageHTML(page.name)
+      : detailObjectPageHTML(page.type, page.name);
+    document.getElementById('detail-overlay-root').innerHTML = `<div class="overlay-panel">${inner}</div>`;
+    // Restore appendix search (persisted per view) after the innerHTML rebuild.
+    const search = document.querySelector('#detail-overlay-root .appendix-search');
+    if (search && state.detail.appendixQuery) { search.value = state.detail.appendixQuery; applyAppendixSearch(search); }
+  }
+
+  // Shared header (back/forward/title/close) + body (left art column + scrolling main) + footer.
+  function detailChrome(title, leftHTML, mainHTML, footerHTML) {
+    const d = state.detail;
+    const canBack = d.idx > 0, canFwd = d.idx < d.stack.length - 1;
+    return `<div class="overlay-header">
+        <div class="detail-head-left">
+          <button class="detail-arrow-btn" data-action="detail-back" ${canBack ? '' : 'disabled'} title="Back">◀</button>
+          <button class="detail-arrow-btn" data-action="detail-forward" ${canFwd ? '' : 'disabled'} title="Forward">▶</button>
+          <h2>${esc(title)}</h2>
+        </div>
+        <button class="btn btn-icon overlay-close" data-action="detail-close" title="Close">✕</button>
+      </div>
+      <div class="detail-body">
+        <div class="detail-left">${leftHTML}</div>
+        <div class="detail-main">${mainHTML}</div>
+      </div>
+      ${footerHTML ? `<div class="overlay-footer">${footerHTML}</div>` : ''}`;
+  }
+
+  // Left-column art for an object, per kind (weapon/passive icon · arcana card · char sprite).
+  function detailObjArt(type, item) {
+    if (type === 'character') return charSpriteHTML(item, true);
+    if (type === 'arcana') return `<div class="detail-icon arcana-card"><img src="${esc(item.icon || EMPTY_ICONS.arcana)}" onerror="this.src='${EMPTY_ICONS.arcana}'"></div>`;
+    const e = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
+    return `<div class="detail-icon"><img src="${esc(item.icon || e)}" onerror="this.src='${e}'"></div>`;
+  }
+
+  // Resolve a bare name to a navigable reference across every dataset (weapon/passive/arcana/
+  // character/affinity). Used by starting loadouts + arcana `affects_*` lists, whose names can
+  // land in any file. Returns null for unmatched names (source typos, mechanics like "Reroll").
+  function resolveRef(name) {
+    const w = weaponByName(name);  if (w) return { kind: 'object', type: 'weapon',    name, icon: w.icon };
+    const p = passiveByName(name); if (p) return { kind: 'object', type: 'passive',   name, icon: p.icon };
+    const a = arcanaByName(name);  if (a) return { kind: 'object', type: 'arcana',     name, icon: a.icon, arcana: true };
+    const c = D.characters.find(x => x.name === name); if (c) return { kind: 'object', type: 'character', name, icon: charSpriteIcon(c), sprite: true };
+    const af = affinityByName(name); if (af) return { kind: 'affinity', name, icon: af.icon };
+    return null;
+  }
+  // A compact navigable icon for a resolved ref (affinity → its page, object → its page).
+  function refNavIcon(ref) {
+    const attrs = ref.kind === 'affinity'
+      ? `data-action="nav-affinity" data-affinity="${esc(ref.name)}"`
+      : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(ref.name)}"`;
+    const cls = 'ref-nav-icon' + (ref.sprite ? ' sprite' : ref.arcana ? ' arcana' : '');
+    return `<span class="${cls}" ${attrs} title="${esc(ref.name)}"><img src="${esc(ref.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
+  }
+  function resolveRefs(names) { return (names || []).map(resolveRef).filter(Boolean); }
+  // A grid of ref icons from already-resolved refs. Unmatched names are dropped upstream by
+  // resolveRefs (a handful of source typos + mechanics like Reroll/Skip/Banish have no page).
+  function refIconsGridHTML(refs) {
+    return `<div class="ref-icon-grid">${refs.map(refNavIcon).join('')}</div>`;
+  }
+  // Open the detail page for a resolved ref (shared by evo-node clicks).
+  function openRef(ref, player) {
+    if (!ref) return;
+    if (ref.kind === 'affinity') openDetailPage({ kind: 'affinity', name: ref.name }, player);
+    else openDetailPage({ kind: 'object', type: ref.type, name: ref.name }, player);
+  }
+
+  // Character starting loadout as a navigable icon grid (weapons + passives mixed, plus any
+  // starting arcana). For the detail overlay's main column.
+  function detailStartingLoadoutHTML(char) {
+    const names = [...(char.starting_weapons || [])];
+    // starting_arcana is usually one name, but Chaos legitimately starts with all 21 Arcana
+    // (I–XXI, no Game Killer/Darkana) stored pipe-joined — split so each resolves to its icon.
+    if (char.starting_arcana) names.push(...char.starting_arcana.split('|').map(s => s.trim()).filter(Boolean));
+    const refs = resolveRefs(names);
+    if (!refs.length) return '';
+    return `<details class="detail-cat" open><summary class="detail-cat-label">Starting Loadout</summary>${refIconsGridHTML(refs)}</details>`;
+  }
+
+  // Arcana affects_explicit / affects_implicit as navigable icon lists. `context` picks the
+  // wrapper: 'overlay' → collapsible <details> cat; 'selector' → a plain info-panel section.
+  function arcanaAffectsSectionsHTML(a, context) {
+    const section = (label, names) => {
+      const refs = resolveRefs(names);
+      if (!refs.length) return '';
+      return context === 'overlay'
+        ? `<details class="detail-cat" open><summary class="detail-cat-label">${label} <span style="color:var(--text-dim);font-size:.75rem">(${refs.length})</span></summary>${refIconsGridHTML(refs)}</details>`
+        : `<div class="detail-section"><span class="detail-section-label">${label}</span>${refIconsGridHTML(refs)}</div>`;
+    };
+    return section('Directly Affects', a.affects_explicit) + section('Indirectly Affects', a.affects_implicit);
+  }
+
+  // Object page: affinity banners as headers, each with the object's blurb below (blurb empty
+  // until the per-object info column lands). Type-specific content sits around the banners:
+  // character → starting loadout above; weapon → evo path above; passive → evo paths below
+  // (they're long); arcana → affects lists above. Footer has "Add to build".
+  function detailObjectPageHTML(type, name) {
+    const item = detailObjByType(type, name);
+    if (!item) return detailChrome(name, '', `<div class="detail-empty">“${esc(name)}” not found.</div>`, '');
+    // A collapsible-base character shows its clean base name (variants are interchangeable),
+    // so a page reached from the deduped list reads as the character, not a weapon loadout.
+    const displayName = (type === 'character' && charVariantInfo().collapsible.has(item.base_name))
+      ? item.base_name : item.name;
+    const left = `<div class="detail-kicker">${DETAIL_KIND_LABEL[type] || ''}</div>
+      ${detailObjArt(type, item)}
+      <div class="detail-name">${esc(displayName)}</div>
+      ${item.description ? `<div class="detail-desc">${esc(item.description)}</div>` : ''}`;
+
+    const affs = objectAffinities(type, name);
+    const primarySet = objectPrimaryAffinities(type, name);
+    const renderAff = aff => {
+      const blurb = affinityObjInfo(aff.name, type, name);
+      return `<div class="detail-obj-affinity">
+        <div class="detail-banner-header">${affinityBanner(aff, 'nav-affinity')}</div>
+        ${blurb ? `<div class="detail-blurb-text">${esc(blurb)}</div>` : ''}
+      </div>`;
+    };
+    const primary = affs.filter(a => primarySet.has(a.name));
+    const rest    = affs.filter(a => !primarySet.has(a.name));
+    const bannersHTML = (primary.length ? `<div class="primary-traits">${primary.map(renderAff).join('')}</div>` : '')
+      + rest.map(renderAff).join('');
+
+    let pre = '', post = '';
+    if (type === 'character')    pre  = detailStartingLoadoutHTML(item);
+    else if (type === 'weapon')  pre  = buildEvoChainHTML(item);
+    else if (type === 'arcana')  pre  = arcanaAffectsSectionsHTML(item, 'overlay');
+    else if (type === 'passive') post = `<div class="detail-passive-evo">${buildPassiveEvoHTML(item.name)}</div>`;
+
+    const main = (pre + bannersHTML + post) || `<div class="detail-empty">No associations recorded.</div>`;
+
+    const footer = `<button class="btn btn-confirm btn-add-build" data-action="detail-add-to-build"
+      data-detail-type="${esc(type)}" data-detail-name="${esc(name)}">+ Add to build</button>`;
+    return detailChrome(displayName, left, main, footer);
+  }
+
+  // Player page: character sprite on the left, and a cross-reference matrix of the build's
+  // shared traits — rows = the player's equipped weapons/passives/arcana, columns = every trait
+  // present (banners, sorted most-shared first), ● at each intersection, and a "Shared" totals
+  // row. Row/column headers navigate to the object/trait detail pages.
+  function detailPlayerPageHTML(playerIdx) {
+    const player = state.players[playerIdx];
+    if (!player) return detailChrome(`Player ${playerIdx + 1}`, '', `<div class="detail-empty">No player.</div>`, '');
+    const char = player.character;
+    const title = char ? char.name : `Player ${playerIdx + 1}`;
+    const art = char ? charSpriteHTML(char, true) : `<div class="detail-icon char-sprite"><img src="${EMPTY_ICONS.char}"></div>`;
+    const left = `<div class="detail-kicker">Player ${playerIdx + 1} · Trait Table</div>
+      ${art}
+      <div class="detail-name">${esc(title)}</div>`;
+
+    // Equipped objects (weapons + passives are per-player; arcana are global). The CHARACTER
+    // leads the chart as its own row. Deduped by name.
+    const rows = [];
+    const seen = new Set();
+    const add = (obj, type) => {
+      if (!obj || seen.has(type + '|' + obj.name)) return;
+      seen.add(type + '|' + obj.name);
+      // The character row uses its static sprite PNG (falls back to the square icon).
+      const icon = type === 'character' ? (obj.sprite_static || obj.icon) : obj.icon;
+      rows.push({ type, name: obj.name, icon, affSet: new Set(objectAffinities(type, obj.name).map(a => a.name)) });
+    };
+    if (char) add(char, 'character');
+    player.weapons.filter(Boolean).forEach(w => add(w, 'weapon'));
+    player.passives.filter(Boolean).forEach(p => add(p, 'passive'));
+    state.arcana.filter(Boolean).forEach(a => add(a, 'arcana'));
+
+    if (!rows.length) return detailChrome(title, left, `<div class="detail-empty">No character, weapons, passives, or arcana in this build yet.</div>`, '');
+
+    // The character's PRIMARY traits (from the grouped affinity schema) bold their columns.
+    const prioritySet = char ? affinityGroupNames(char, 'primary') : new Set();
+
+    // Columns = traits present, sorted by how many objects share them (desc), then name.
+    const colCount = new Map();
+    rows.forEach(r => r.affSet.forEach(n => colCount.set(n, (colCount.get(n) || 0) + 1)));
+    const cols = [...colCount.keys()].map(affinityByName).filter(Boolean)
+      .sort((a, b) => (colCount.get(b.name) - colCount.get(a.name)) || a.name.localeCompare(b.name));
+    if (!cols.length) return detailChrome(title, left, `<div class="detail-empty">These items share no traits.</div>`, '');
+
+    const priCls = c => prioritySet.has(c.name) ? ' xref-priority' : '';
+    const colHead = c => {
+      const color = c.color || '#6a4010';
+      return `<th class="xref-colhead${priCls(c)}"><div class="xref-col" style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}"
+        data-action="nav-affinity" data-affinity="${esc(c.name)}" title="${esc(c.name)}">
+        <img class="xref-col-icon" src="${esc(c.icon || '')}" onerror="this.style.visibility='hidden'">
+        <span class="xref-col-name">${esc(c.name)}</span></div></th>`;
+    };
+    const rowHTML = r => `<tr class="${r.type === 'character' ? 'xref-char-row' : ''}">
+      <th class="xref-rowhead" data-action="nav-object" data-detail-type="${r.type}" data-detail-name="${esc(r.name)}" title="${esc(r.name)}">
+        <img src="${esc(r.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(r.name)}</span>
+      </th>
+      ${cols.map(c => `<td class="${r.affSet.has(c.name) ? 'xref-on' : ''}${priCls(c)}">${r.affSet.has(c.name) ? '●' : ''}</td>`).join('')}
+    </tr>`;
+    const sharedRow = `<tr class="xref-shared">
+      <th class="xref-rowhead">Shared</th>
+      ${cols.map(c => { const n = colCount.get(c.name); return `<td class="${n >= 2 ? 'xref-sh' : ''}${priCls(c)}">${n}</td>`; }).join('')}
+    </tr>`;
+
+    const table = `<div class="xref-wrap"><table class="player-xref">
+      <thead><tr><th class="xref-corner"></th>${cols.map(colHead).join('')}</tr></thead>
+      <tbody>${rows.map(rowHTML).join('')}${sharedRow}</tbody>
+    </table></div>`;
+    return detailChrome(title, left, table, '');
+  }
+
+  // Affinity page: object-category sections (Arcana/Characters/Passives/Weapons), each with any
+  // object blurbs then the full navigable icon grid. A parent affinity also lists its children.
+  // Build the render entries for one affinity-page category. Characters are DEDUPED: a
+  // collapsible base renders once (its representative variant), labeled with the clean base
+  // name and drawn with the shared sprite; non-collapsible names render individually.
+  function detailCatEntries(cat, names, affName) {
+    if (cat.key === 'characters') {
+      const vi = charVariantInfo();
+      const seen = new Set(), out = [];
+      for (const n of names) {
+        const c = vi.byName.get(n);
+        if (c && vi.collapsible.has(c.base_name)) {
+          if (seen.has(c.base_name)) continue;
+          seen.add(c.base_name);
+          const rep = vi.byName.get(vi.repOf.get(c.base_name)) || c;
+          out.push({ navName: rep.name, title: c.base_name, icon: charSpriteIcon(rep),
+            blurb: affinityObjInfo(affName, 'character', rep.name) });
+        } else {
+          out.push({ navName: n, title: n, icon: c ? charSpriteIcon(c) : cat.empty,
+            blurb: affinityObjInfo(affName, 'character', n) });
+        }
+      }
+      return out;
+    }
+    return names.map(n => {
+      const obj = cat.lookup(n);
+      const icon = obj ? ((cat.iconOf ? cat.iconOf(obj) : obj.icon) || cat.empty) : cat.empty;
+      return { navName: n, title: n, icon, blurb: affinityObjInfo(affName, cat.type, n) };
+    });
+  }
+
+  function detailAffinityPageHTML(name) {
+    const aff = affinityByName(name);
+    if (!aff) return detailChrome(name, '', `<div class="detail-empty">Unknown.</div>`, '');
+    const left = `<div class="detail-kicker">Trait</div>
+      <div class="detail-icon"><img src="${esc(aff.icon || EMPTY_ICON)}" onerror="this.style.visibility='hidden'"></div>
+      <div class="detail-name">${esc(aff.name)}</div>
+      ${aff.description ? `<div class="detail-desc">${esc(aff.description)}</div>` : ''}`;
+
+    let main = '';
+    if (aff.is_parent) {
+      const kids = childAffinities(aff.name);
+      if (kids.length) main += `<details class="detail-cat" open>
+        <summary class="detail-cat-label">Sub-traits</summary>
+        ${kids.map(k => affinityBanner(k, 'nav-affinity')).join('')}
+      </details>`;
+    }
+    for (const cat of DETAIL_CATS) {
+      const names = aff.related?.[cat.key] || [];
+      if (!names.length) continue;
+      const entries = detailCatEntries(cat, names, aff.name); // [{navName,title,icon,blurb}], deduped for chars
+      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}" data-action="nav-object" data-detail-type="${cat.type}"
+          data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
+      const blurbRows = entries.filter(e => e.blurb)
+        .map(e => `<div class="detail-blurb-row">${iconCell(e)}<span class="detail-blurb-text">${esc(e.blurb)}</span></div>`).join('');
+      main += `<details class="detail-cat" open>
+        <summary class="detail-cat-label">${cat.label} <span style="color:var(--text-dim);font-size:.75rem">(${entries.length})</span></summary>
+        ${blurbRows}
+        <div class="aff-icon-grid">${entries.map(iconCell).join('')}</div>
+      </details>`;
+    }
+    if (!main) main = `<div class="detail-empty">No associations recorded.</div>`;
+    return detailChrome(aff.name, left, main, '');
+  }
+
+  // ── Appendix (index) page ────────────────────────────────────────────────
+  // Default lists everything a browsing index needs — affinities (parents with children
+  // nested), arcana, passives — but NOT characters/weapons (those lists are huge). The search
+  // spans ALL of them, so characters/weapons are reachable via search only. Cached flat index.
+  let _appendixIndex = null;
+  function appendixIndex() {
+    if (_appendixIndex) return _appendixIndex;
+    const out = [];
+    for (const a of D.affinities)  out.push({ kind: 'affinity', name: a.name, icon: a.icon, tag: 'Trait' });
+    for (const a of D.arcana)      out.push({ kind: 'object', type: 'arcana',    name: a.name, icon: a.icon, tag: 'Arcana' });
+    for (const p of D.passives)    out.push({ kind: 'object', type: 'passive',   name: p.name, icon: p.icon, tag: 'Passive' });
+    for (const c of D.characters)  out.push({ kind: 'object', type: 'character', name: c.name, icon: charSpriteIcon(c), sprite: true, tag: 'Character' });
+    for (const w of D.weapons)     out.push({ kind: 'object', type: 'weapon',    name: w.name, icon: w.icon, tag: 'Weapon' });
+    out.forEach(e => { e.q = e.name.toLowerCase(); });
+    _appendixIndex = out;
+    return out;
+  }
+
+  // One appendix row: icon + name + kind tag, navigable (affinity → its page, object → its page).
+  function appendixRow(entry, extraCls) {
+    const dataAttrs = entry.kind === 'affinity'
+      ? `data-action="nav-affinity" data-affinity="${esc(entry.name)}"`
+      : `data-action="nav-object" data-detail-type="${entry.type}" data-detail-name="${esc(entry.name)}"`;
+    return `<div class="appendix-row ${extraCls || ''}" ${dataAttrs} title="${esc(entry.name)}">
+      <span class="appendix-icon ${entry.sprite ? 'sprite' : ''}"><img src="${esc(entry.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>
+      <span class="appendix-row-name">${esc(entry.name)}</span>
+      <span class="appendix-row-kind">${esc(entry.tag)}</span>
+    </div>`;
+  }
+
+  function detailAppendixPageHTML() {
+    // Affinities: parents in data order, each followed by its children (offset). Any affinity
+    // not caught (orphan child) is appended flat so nothing is silently dropped.
+    const rendered = new Set();
+    let affHTML = '';
+    for (const a of D.affinities) {
+      if (!a.is_parent || rendered.has(a.name)) continue;
+      rendered.add(a.name);
+      affHTML += appendixRow({ kind: 'affinity', name: a.name, icon: a.icon, tag: 'Trait' });
+      for (const kid of childAffinities(a.name)) {
+        rendered.add(kid.name);
+        affHTML += appendixRow({ kind: 'affinity', name: kid.name, icon: kid.icon, tag: 'Trait' }, 'appendix-child');
+      }
+    }
+    for (const a of D.affinities) {
+      if (rendered.has(a.name)) continue;
+      affHTML += appendixRow({ kind: 'affinity', name: a.name, icon: a.icon, tag: 'Trait' });
+    }
+    const arcanaHTML  = D.arcana.map(a => appendixRow({ kind: 'object', type: 'arcana', name: a.name, icon: a.icon, tag: 'Arcana' })).join('');
+    const passiveHTML = D.passives.map(p => appendixRow({ kind: 'object', type: 'passive', name: p.name, icon: p.icon, tag: 'Passive' })).join('');
+
+    const left = `<div class="detail-kicker">Appendix</div>
+      <div class="detail-name">Appendix</div>
+      <div class="detail-desc">Browse every trait, arcana, and passive. Search to also find characters and weapons.</div>`;
+
+    const main = `<div class="appendix">
+      <input type="text" class="appendix-search" placeholder="Search traits, arcana, passives, characters, weapons…" autocomplete="off">
+      <div class="appendix-results" style="display:none"></div>
+      <div class="appendix-default">
+        <div class="appendix-section"><div class="appendix-section-label">Traits</div>${affHTML}</div>
+        <div class="appendix-section"><div class="appendix-section-label">Arcana</div>${arcanaHTML}</div>
+        <div class="appendix-section"><div class="appendix-section-label">Passives</div>${passiveHTML}</div>
+      </div>
+    </div>`;
+    return detailChrome('Appendix', left, main, '');
+  }
+
+  // Live-filter the appendix: empty query → default sectioned lists; otherwise a flat list
+  // across ALL types (incl. characters/weapons), capped so a broad query stays usable.
+  const APPENDIX_MAX = 80;
+  function applyAppendixSearch(input) {
+    const q = input.value.trim().toLowerCase();
+    state.detail.appendixQuery = input.value;
+    const root = input.closest('.appendix');
+    if (!root) return;
+    const def = root.querySelector('.appendix-default');
+    const res = root.querySelector('.appendix-results');
+    if (!q) { def.style.display = ''; res.style.display = 'none'; res.innerHTML = ''; return; }
+    def.style.display = 'none';
+    res.style.display = '';
+    const hits = appendixIndex().filter(e => e.q.includes(q));
+    const shown = hits.slice(0, APPENDIX_MAX).map(e => appendixRow(e)).join('');
+    res.innerHTML = shown
+      ? shown + (hits.length > APPENDIX_MAX ? `<div class="appendix-more">Showing first ${APPENDIX_MAX} of ${hits.length} — refine your search.</div>` : '')
+      : `<div class="detail-empty">No matches.</div>`;
+  }
+
+  // Shared by the planner sidebar (#app) and selector overlays (#overlay-root): open the object
+  // or affinity detail page named on a clicked element's dataset. `defaultPlayer` is the
+  // add-to-build target when the element carries no player.
+  function openDetailFromEl(btn, defaultPlayer) {
+    const action = btn.dataset.action;
+    const player = Number.isInteger(defaultPlayer) ? defaultPlayer : 0;
+    if (action === 'open-affinity-page' || action === 'nav-affinity') {
+      openDetailPage({ kind: 'affinity', name: btn.dataset.affinity }, player);
+    } else { // open-object-page | nav-object
+      const t = btn.dataset.detailType === 'char' ? 'character' : btn.dataset.detailType;
+      openDetailPage({ kind: 'object', type: t, name: btn.dataset.detailName }, player);
+    }
+  }
+
+  // Add-to-build from a detail object page → reuse the SAME commit paths (and guards) as the
+  // selectors: evoQuickAdd for weapon/passive/arcana; the character commit for characters.
+  function detailAddToBuild(type, name) {
+    const player = state.detail.player || 0;
+    if (type === 'character') {
+      const ch = D.characters.find(c => c.name === name);
+      if (!ch) { showToast(`${name} not found`, 'err'); return; }
+      // Drive the real character-commit path (collection gate, starter rebuild, auto-devolve,
+      // Academy Badge) by fabricating the char overlay state and confirming it.
+      const prev = state.players[player].character;
+      state.overlay = { type: 'char', playerIdx: player, slotIdx: 0, slotType: 'char', fromEmpty: !prev, prevItem: prev };
+      state.ovl.selected = ch;
+      closeOverlay(true);
+      return;
+    }
+    evoQuickAdd(name, player);
+  }
+
+  // Click handling for the detail overlay (bound once to #detail-overlay-root).
+  function handleDetailClick(e) {
+    // Evo-path nodes (reused from the info panel) carry data-evo-item, not data-action —
+    // navigate to that object's detail page.
+    const evoEl = e.target.closest('[data-evo-item]');
+    if (evoEl) { openRef(resolveRef(evoEl.dataset.evoItem), state.detail.player); return; }
+    const btn = e.target.closest('[data-action]');
+    if (!btn) { if (e.target.id === 'detail-overlay-root') closeDetailOverlay(); return; }
+    const action = btn.dataset.action;
+    if (action === 'detail-close')   { closeDetailOverlay(); return; }
+    if (action === 'detail-back')    { detailBack(); return; }
+    if (action === 'detail-forward') { detailForward(); return; }
+    if (action === 'nav-affinity' || action === 'nav-object') { openDetailFromEl(btn, state.detail.player); return; }
+    if (action === 'detail-add-to-build') { detailAddToBuild(btn.dataset.detailType, btn.dataset.detailName); return; }
   }
 
   function refreshOverlay() {
@@ -4590,6 +5407,15 @@
     e.stopPropagation();
     const action = btn.dataset.action;
 
+    // Detail overlay access from a selector's right info panel — stacks the detail overlay
+    // ABOVE this selector. Covers the info-"i"/affinity banners AND the arcana affects icons
+    // (nav-*). Add-to-build target = the selector's player.
+    if (action === 'open-object-page' || action === 'open-affinity-page'
+        || action === 'nav-object' || action === 'nav-affinity') {
+      openDetailFromEl(btn, state.overlay?.playerIdx ?? 0);
+      return;
+    }
+
     // ── Power-up overlay actions ──
     if (action === 'pu-close') { closePowerUpOverlay(); return; }
     if (action === 'pu-disable-all') {
@@ -4768,6 +5594,14 @@
       renderCollectionOverlay();
       return;
     }
+    if (action === 'open-appendix') {
+      openDetailPage({ kind: 'appendix' }, 0);
+      return;
+    }
+    if (action === 'open-player-page') {
+      openDetailPage({ kind: 'player', playerIdx }, playerIdx);
+      return;
+    }
     if (action === 'stage-add') {
       // Add a stage item straight from the stage info panel — routes through evoQuickAdd, so
       // it inherits every guard rail (already-equipped, consumed pool, one-per-build, stage
@@ -4858,6 +5692,12 @@
     if (action === 'view-extra-passive') {
       state.infoPanel = { type: 'passive', playerIdx, slotIdx: -1, refName: btn.dataset.extraName };
       render();
+      return;
+    }
+    // Detail overlay access from the planner info panel — the add-to-build target is that
+    // panel's player. (Handled here for #app; selector panels route via handleOverlayClick.)
+    if (action === 'open-object-page' || action === 'open-affinity-page') {
+      openDetailFromEl(btn, state.infoPanel?.playerIdx ?? 0);
       return;
     }
     if (action === 'remove-extra-passive') {
@@ -5330,6 +6170,8 @@
 
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
+    // The detail overlay is the topmost layer — close it first when open.
+    if (state.detail.idx >= 0) { closeDetailOverlay(); return; }
     if (state.puActive) { closePowerUpOverlay(); return; }
     if (state.seal.active) { closeSealOverlay(); return; }
     if (state.collection.active) { closeCollectionOverlay(); return; }
@@ -5371,6 +6213,10 @@
     });
     const ovlRoot = document.getElementById('overlay-root');
     ovlRoot.addEventListener('click', handleOverlayClick);
+    document.getElementById('detail-overlay-root').addEventListener('click', handleDetailClick);
+    document.getElementById('detail-overlay-root').addEventListener('input', e => {
+      if (e.target.classList.contains('appendix-search')) applyAppendixSearch(e.target);
+    });
     ovlRoot.addEventListener('input', e => {
       if (e.target.id === 'seal-rarity-slider') {
         const rarities = e.target.dataset.rarities.split(',').map(Number);
