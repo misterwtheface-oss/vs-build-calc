@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vampire Survivors Build Calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'Perfect DOS VGA 437';
@@ -407,7 +407,28 @@
       padding: 5px 7px; margin-bottom: 6px;
     }
     .primary-traits > :last-child { margin-bottom: 0; }
+    /* Ghost variant: same box geometry (keeps the 1px border + padding so inner width matches
+       a real primary container) but invisible — for the default/null-list traits. */
+    .primary-traits.trait-ghost { border-color: transparent; background: transparent; }
+    /* Conflict traits (bad for this object): red box, rendered below the default group. */
+    .primary-traits.conflict-traits { border-color: #e0384a; background: rgba(192,16,32,.13); }
+    /* Arcana-conditional traits: box colored by the arcana's identity color, with a header. */
+    .primary-traits.arcana-traits {
+      border-color: var(--arc-color);
+      background: color-mix(in srgb, var(--arc-color) 13%, transparent);
+    }
+    .arcana-traits-head {
+      display: flex; align-items: center; gap: 6px; margin-bottom: 6px; cursor: pointer;
+      font-size: .78rem; font-weight: 700; letter-spacing: .02em;
+      color: color-mix(in srgb, var(--arc-color) 55%, var(--text));
+    }
+    .arcana-traits-head img { width: 18px; height: 26px; object-fit: contain; image-rendering: pixelated; flex-shrink: 0; }
+    .arcana-traits-head:hover { filter: brightness(1.25); }
+    /* A ghost directly under a real primary container drops its top padding (no reserved
+       header space) so it sits snug beneath; a standalone ghost keeps its top spacing. */
+    .primary-traits + .primary-traits.trait-ghost { padding-top: 0; }
     #detail-overlay-root .primary-traits { padding: 9px 12px 3px; margin-bottom: 12px; }
+    #detail-overlay-root .primary-traits + .primary-traits.trait-ghost { padding-top: 0; }
     .info-sidebar .req-row { display: flex; flex-wrap: wrap; gap: 4px; }
     .info-sidebar .req-icon { width: 32px; height: 32px; }
     .info-sidebar .req-icon img { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
@@ -625,7 +646,12 @@
     .detail-left .detail-icon.arcana-card img { object-fit: fill; }
     .detail-left .detail-icon.char-sprite { width: 100%; height: 230px; }
     .detail-left .detail-name { font-family: var(--font-title); color: var(--gold); font-size: 1.55rem; margin-bottom: .5rem; }
-    .detail-left .detail-desc { font-size: .98rem; color: var(--text-muted); font-style: italic; line-height: 1.55; }
+    .detail-left .detail-desc { font-size: .98rem; color: var(--text-muted); font-style: italic; line-height: 1.55; text-align: left; }
+    /* Markdown **bold** in blurbs — explicit 700 + brighter than the muted body so it reads. */
+    .detail-desc strong { font-weight: 700; color: var(--text); }
+    /* Blurb paragraphs (official desc + clarifications): small controlled gap, not a full line. */
+    .blurb-p { display: block; }
+    .blurb-p + .blurb-p { margin-top: .5rem; }
     .detail-kicker { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dim); margin-bottom: .5rem; }
     .detail-main { flex: 1; overflow-y: auto; padding: 1.5rem 1.8rem; }
     .detail-cat { margin-bottom: 1.5rem; }
@@ -742,6 +768,9 @@
     }
     .appendix-row:hover { background: var(--surface2); }
     .appendix-row.appendix-child { margin-left: 2rem; }
+    /* Trait entries in the appendix render as banners — space them and offset nested children. */
+    .appendix .affinity-row { margin-bottom: 5px; }
+    .appendix .affinity-row.appendix-child { margin-left: 2rem; }
     .appendix-icon { width: 36px; height: 36px; flex-shrink: 0; }
     .appendix-icon.sprite { width: 32px; height: 44px; }
     .appendix-icon img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
@@ -1540,36 +1569,73 @@
 
   // One affinity banner: [icon] [name-as-colored-banner], whole row clickable via `action`
   // (info panel → 'open-affinity-page'; detail overlay → 'nav-affinity').
-  function affinityBanner(aff, action) {
+  function affinityBanner(aff, action, extraCls = '') {
     const color = aff.color || '#6a4010';
-    return `<div class="affinity-row" data-action="${esc(action)}" data-affinity="${esc(aff.name)}"
+    return `<div class="affinity-row ${extraCls}" data-action="${esc(action)}" data-affinity="${esc(aff.name)}"
         style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}" title="${esc(aff.name)}">
       <span class="affinity-row-icon"><img src="${esc(aff.icon || EMPTY_ICON)}" alt="" onerror="this.style.visibility='hidden'"></span>
       <span class="affinity-row-banner">${esc(aff.name)}</span>
     </div>`;
   }
 
-  // The object's PRIMARY (elevated) trait names, from its grouped-affinity schema. Only
-  // characters and arcana carry the column; others → empty set (no elevation).
-  function objectPrimaryAffinities(type, name) {
-    const obj = (type === 'char' || type === 'character') ? D.characters.find(c => c.name === name)
-      : type === 'arcana' ? arcanaByName(name) : null;
-    return obj ? affinityGroupNames(obj, 'primary') : new Set();
+  // Split an object's trait banners into display groups:
+  //   primary  — elevated subset of the derived traits (gold container, on top). From the
+  //              object's `affinity` column `Primary:` group (chars/arcana).
+  //   rest     — the remaining derived traits (ghost container, middle).
+  //   conflict — traits BAD for this object (red container, bottom). Sourced from a SEPARATE
+  //              `conflict` column (NOT the affinity column) so conflicts never feed
+  //              affinities.csv / show as associations on a trait's page. Shown even when not
+  //              in the derived set; removed from `rest` to avoid duplication.
+  function objectAffinityGroups(type, name) {
+    const obj = detailObjByType(type === 'char' ? 'character' : type, name);
+    const groups = obj?.affinity_groups || [];
+    const primarySet  = obj ? affinityGroupNames(obj, 'primary') : new Set();
+    const conflictSet = new Set(obj?.conflict || []);
+    // Arcana-conditional groups: a group whose key resolves to an arcana — its traits are valid
+    // only WHEN that arcana is equipped. Sourced from the group (not the derived set) and
+    // colored by the arcana's identity color; excluded from `rest` to avoid dupes.
+    const arcanaGroups = groups
+      .filter(g => g.key && g.key !== 'primary' && arcanaByName(g.key))
+      .map(g => ({ arcana: arcanaByName(g.key), traits: g.items.map(affinityByName).filter(Boolean) }))
+      .filter(g => g.traits.length);
+    const arcanaTraitNames = new Set(arcanaGroups.flatMap(g => g.traits.map(a => a.name)));
+    const derived = objectAffinities(type, name);
+    return {
+      primary:  derived.filter(a => primarySet.has(a.name)),
+      rest:     derived.filter(a => !primarySet.has(a.name) && !conflictSet.has(a.name) && !arcanaTraitNames.has(a.name)),
+      conflict: [...conflictSet].map(affinityByName).filter(Boolean),
+      arcanaGroups,
+    };
+  }
+
+  // A single arcana-conditional trait container: colored by the arcana, with a navigable
+  // arcana header (icon + name), then its trait banners. `renderBanner` renders each trait.
+  function arcanaBoxHTML(g, objAction, renderBanner) {
+    const color = g.arcana.color || '#6a4010';
+    return `<div class="primary-traits arcana-traits" style="--arc-color:${esc(color)}">
+      <div class="arcana-traits-head" data-action="${esc(objAction)}" data-detail-type="arcana" data-detail-name="${esc(g.arcana.name)}" title="${esc(g.arcana.name)} — traits only with this Arcana">
+        <img src="${esc(g.arcana.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(g.arcana.name)}</span>
+      </div>
+      ${g.traits.map(renderBanner).join('')}
+    </div>`;
   }
 
   // The affinity-banner section for an object's info panel (empty string when it has none).
-  // Primary traits are grouped into a shared bordered container above the loose default ones.
+  // Order: primary (gold box) → default (ghost) → conflict (red box).
   function affinitySectionHTML(type, name, action) {
-    const list = objectAffinities(type, name);
-    if (!list.length) return '';
-    const primarySet = objectPrimaryAffinities(type, name);
-    const primary = list.filter(a => primarySet.has(a.name));
-    const rest    = list.filter(a => !primarySet.has(a.name));
+    const { primary, rest, conflict, arcanaGroups } = objectAffinityGroups(type, name);
+    if (!primary.length && !rest.length && !conflict.length && !arcanaGroups.length) return '';
     const banners = arr => arr.map(a => affinityBanner(a, action)).join('');
+    const objAction = action === 'nav-affinity' ? 'nav-object' : 'open-object-page';
+    const arcanaBoxes = arcanaGroups.map(g => arcanaBoxHTML(g, objAction, a => affinityBanner(a, action))).join('');
+    // Order: primary (gold) > arcana-conditional (colored) > default/unlisted (ghost) > conflict
+    // (red). The ghost box uses .primary-traits geometry (transparent) so widths match.
     return `<div class="detail-section affinity-section">
       <span class="detail-section-label">${AFFINITY_SECTION_LABEL}</span>
       ${primary.length ? `<div class="primary-traits">${banners(primary)}</div>` : ''}
-      ${banners(rest)}
+      ${arcanaBoxes}
+      ${rest.length ? `<div class="primary-traits trait-ghost">${banners(rest)}</div>` : ''}
+      ${conflict.length ? `<div class="primary-traits conflict-traits">${banners(conflict)}</div>` : ''}
     </div>`;
   }
 
@@ -2732,10 +2798,21 @@
   // "Starting Loadout" section for a character: starting weapons AND passives
   // (passives live inside starting_weapons, e.g. Empty Tome), plus the character's
   // extra starting arcana. Shared by the char selector and the planner info panel.
-  function startingLoadoutHTML(char) {
+  // `navigable` (character SELECTOR): make each loadout item open its detail page (routed via
+  // handleOverlayClick → detail overlay). Planner sidebar keeps them static (default).
+  function startingLoadoutHTML(char, navigable = false) {
     if (!char) return '';
     const items = char.starting_weapons ?? [];
     if (!items.length && !char.starting_arcana) return '';
+    // Nav attributes + clickable class for a loadout item name (empty when it doesn't resolve).
+    const nav = name => {
+      const ref = navigable ? resolveRef(name) : null;
+      if (!ref) return { attrs: '', cls: '' };
+      const attrs = ref.kind === 'affinity'
+        ? `data-action="nav-affinity" data-affinity="${esc(name)}"`
+        : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(name)}"`;
+      return { attrs, cls: ' stage-nav' };
+    };
     let row = '';
     for (const wn of items) {
       const obj = weaponByName(wn) || passiveByName(wn);
@@ -2744,17 +2821,33 @@
       const badge = isMax ? '<span class="sw-badge sw-max">MAX</span>'
                   : isHidden ? '<span class="sw-badge sw-hidden">HID</span>' : '';
       const suffix = isHidden ? ' (Hidden)' : isMax ? ' (Max)' : '';
-      row += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}" title="${esc(wn)}${suffix}">${
+      const { attrs, cls } = nav(wn);
+      row += `<div class="req-icon${isHidden ? ' sw-is-hidden' : ''}${cls}" ${attrs} title="${esc(wn)}${suffix}">${
         obj ? `<img src="${esc(obj.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'">${badge}`
             : `<span style="font-size:.55rem">${esc(wn.slice(0,6))}</span>`}</div>`;
     }
     if (char.starting_arcana) {
       const a = arcanaByName(char.starting_arcana);
-      row += `<div class="req-icon sw-arcana-icon" title="${esc(char.starting_arcana)} (Starting Arcana — extra)">${
+      const { attrs, cls } = nav(char.starting_arcana);
+      row += `<div class="req-icon sw-arcana-icon${cls}" ${attrs} title="${esc(char.starting_arcana)} (Starting Arcana — extra)">${
         a ? `<img src="${esc(a.icon||EMPTY_ICONS.arcana)}" onerror="this.src='${EMPTY_ICONS.arcana}'"><span class="sw-badge sw-arcana">ARC</span>`
           : `<span style="font-size:.55rem">${esc(char.starting_arcana.slice(0,6))}</span>`}</div>`;
     }
     return `<div class="detail-section"><span class="detail-section-label">Starting Loadout</span><div class="req-row">${row}</div></div>`;
+  }
+
+  // Escape text, then render Markdown-style **bold** as <strong> (the ** survive esc, and the
+  // wrapped content is already escaped, so no injection).
+  function mdBold(text) {
+    return esc(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  }
+
+  // Description block: official blurb, plus a character's `effect_clarifications` below it (one
+  // blank line between, identical format). Non-characters have no clarifications → just the blurb.
+  function descBlurbHTML(item) {
+    const parts = [item.description, item.effect_clarifications].filter(Boolean).map(mdBold);
+    if (!parts.length) return '';
+    return `<div class="detail-desc">${parts.map(p => `<span class="blurb-p">${p}</span>`).join('')}</div>`;
   }
 
   function buildInfoSidebar(panel) {
@@ -2798,7 +2891,7 @@
       top = `<div class="${iconClass}"><img src="${esc(icon)}" onerror="this.src='${emptyIcon}'"></div>`;
     }
     top += `<div class="detail-name">${esc(item.name)}</div>`;
-    if (item.description) top += `<div class="detail-desc">${esc(item.description)}</div>`;
+    top += descBlurbHTML(item);
     let html = '';
 
     if (type === 'char') {
@@ -3249,8 +3342,8 @@
       : `<div class="detail-desc" style="text-align:center">Select a character</div>`;
     let rightBody = '';
     if (sel) {
-      if (sel.description) rightBody += `<div class="detail-desc">${esc(sel.description)}</div>`;
-      rightBody += startingLoadoutHTML(sel);
+      rightBody += descBlurbHTML(sel); // official blurb + effect clarifications (character)
+      rightBody += startingLoadoutHTML(sel, true); // selector loadout items open detail pages
       if (sel.notes) rightBody += `<div class="detail-section"><h3>Notes</h3><div class="detail-desc" style="margin-top:.3rem">${esc(sel.notes).slice(0,400)}…</div></div>`;
       rightBody += affinitySectionHTML('char', sel.name, 'open-affinity-page');
     }
@@ -3931,17 +4024,21 @@
     return `<details class="detail-cat" open><summary class="detail-cat-label">Starting Loadout</summary>${refIconsGridHTML(refs)}</details>`;
   }
 
-  // Arcana affects_explicit / affects_implicit as navigable icon lists. `context` picks the
-  // wrapper: 'overlay' → collapsible <details> cat; 'selector' → a plain info-panel section.
+  // Arcana `affects_explicit` as a navigable icon list — a single UNLABELED list (the implicit
+  // column was removed; those associations are handled via shared traits). `context` picks the
+  // wrapper for spacing: 'overlay' → detail-cat; 'selector' → info-panel section.
   function arcanaAffectsSectionsHTML(a, context) {
-    const section = (label, names) => {
-      const refs = resolveRefs(names);
-      if (!refs.length) return '';
-      return context === 'overlay'
-        ? `<details class="detail-cat" open><summary class="detail-cat-label">${label} <span style="color:var(--text-dim);font-size:.75rem">(${refs.length})</span></summary>${refIconsGridHTML(refs)}</details>`
-        : `<div class="detail-section"><span class="detail-section-label">${label}</span>${refIconsGridHTML(refs)}</div>`;
-    };
-    return section('Directly Affects', a.affects_explicit) + section('Indirectly Affects', a.affects_implicit);
+    const refs = resolveRefs(a.affects_explicit);
+    if (!refs.length) return '';
+    return `<div class="${context === 'overlay' ? 'detail-cat' : 'detail-section'}">${refIconsGridHTML(refs)}</div>`;
+  }
+
+  // The Arcana associated with a weapon (its `arcana` column) → navigable arcana card icons.
+  // On the weapon detail page, between the evo path and the affinity list.
+  function weaponArcanaSectionHTML(weapon) {
+    const refs = resolveRefs(weapon.arcana || []);
+    if (!refs.length) return '';
+    return `<details class="detail-cat" open><summary class="detail-cat-label">Arcana <span style="color:var(--text-dim);font-size:.75rem">(${refs.length})</span></summary>${refIconsGridHTML(refs)}</details>`;
   }
 
   // Object page: affinity banners as headers, each with the object's blurb below (blurb empty
@@ -3958,10 +4055,9 @@
     const left = `<div class="detail-kicker">${DETAIL_KIND_LABEL[type] || ''}</div>
       ${detailObjArt(type, item)}
       <div class="detail-name">${esc(displayName)}</div>
-      ${item.description ? `<div class="detail-desc">${esc(item.description)}</div>` : ''}`;
+      ${descBlurbHTML(item)}`;
 
-    const affs = objectAffinities(type, name);
-    const primarySet = objectPrimaryAffinities(type, name);
+    const { primary, rest, conflict, arcanaGroups } = objectAffinityGroups(type, name);
     const renderAff = aff => {
       const blurb = affinityObjInfo(aff.name, type, name);
       return `<div class="detail-obj-affinity">
@@ -3969,14 +4065,15 @@
         ${blurb ? `<div class="detail-blurb-text">${esc(blurb)}</div>` : ''}
       </div>`;
     };
-    const primary = affs.filter(a => primarySet.has(a.name));
-    const rest    = affs.filter(a => !primarySet.has(a.name));
+    const arcanaBoxes = arcanaGroups.map(g => arcanaBoxHTML(g, 'nav-object', renderAff)).join('');
     const bannersHTML = (primary.length ? `<div class="primary-traits">${primary.map(renderAff).join('')}</div>` : '')
-      + rest.map(renderAff).join('');
+      + arcanaBoxes
+      + (rest.length ? `<div class="primary-traits trait-ghost">${rest.map(renderAff).join('')}</div>` : '')
+      + (conflict.length ? `<div class="primary-traits conflict-traits">${conflict.map(renderAff).join('')}</div>` : '');
 
     let pre = '', post = '';
     if (type === 'character')    pre  = detailStartingLoadoutHTML(item);
-    else if (type === 'weapon')  pre  = buildEvoChainHTML(item);
+    else if (type === 'weapon')  pre  = buildEvoChainHTML(item) + weaponArcanaSectionHTML(item);
     else if (type === 'arcana')  pre  = arcanaAffectsSectionsHTML(item, 'overlay');
     else if (type === 'passive') post = `<div class="detail-passive-evo">${buildPassiveEvoHTML(item.name)}</div>`;
 
@@ -4139,6 +4236,16 @@
   }
 
   // One appendix row: icon + name + kind tag, navigable (affinity → its page, object → its page).
+  // Appendix entry: affinities render as their colored banner (consistent with the rest of the
+  // app); objects render as an icon row.
+  function appendixEntryHTML(entry) {
+    if (entry.kind === 'affinity') {
+      const aff = affinityByName(entry.name);
+      if (aff) return affinityBanner(aff, 'nav-affinity');
+    }
+    return appendixRow(entry);
+  }
+
   function appendixRow(entry, extraCls) {
     const dataAttrs = entry.kind === 'affinity'
       ? `data-action="nav-affinity" data-affinity="${esc(entry.name)}"`
@@ -4158,15 +4265,15 @@
     for (const a of D.affinities) {
       if (!a.is_parent || rendered.has(a.name)) continue;
       rendered.add(a.name);
-      affHTML += appendixRow({ kind: 'affinity', name: a.name, icon: a.icon, tag: 'Trait' });
+      affHTML += affinityBanner(a, 'nav-affinity');
       for (const kid of childAffinities(a.name)) {
         rendered.add(kid.name);
-        affHTML += appendixRow({ kind: 'affinity', name: kid.name, icon: kid.icon, tag: 'Trait' }, 'appendix-child');
+        affHTML += affinityBanner(kid, 'nav-affinity', 'appendix-child');
       }
     }
     for (const a of D.affinities) {
       if (rendered.has(a.name)) continue;
-      affHTML += appendixRow({ kind: 'affinity', name: a.name, icon: a.icon, tag: 'Trait' });
+      affHTML += affinityBanner(a, 'nav-affinity');
     }
     const arcanaHTML  = D.arcana.map(a => appendixRow({ kind: 'object', type: 'arcana', name: a.name, icon: a.icon, tag: 'Arcana' })).join('');
     const passiveHTML = D.passives.map(p => appendixRow({ kind: 'object', type: 'passive', name: p.name, icon: p.icon, tag: 'Passive' })).join('');
@@ -4201,7 +4308,7 @@
     def.style.display = 'none';
     res.style.display = '';
     const hits = appendixIndex().filter(e => e.q.includes(q));
-    const shown = hits.slice(0, APPENDIX_MAX).map(e => appendixRow(e)).join('');
+    const shown = hits.slice(0, APPENDIX_MAX).map(appendixEntryHTML).join('');
     res.innerHTML = shown
       ? shown + (hits.length > APPENDIX_MAX ? `<div class="appendix-more">Showing first ${APPENDIX_MAX} of ${hits.length} — refine your search.</div>` : '')
       : `<div class="detail-empty">No matches.</div>`;
@@ -5394,6 +5501,9 @@
   // ═══════════════════════════════════════════════════════
 
   function handleOverlayClick(e) {
+    // Left-click an evo-path node (e.g. weapon selector's evo chain) → open its detail page.
+    const evoEl = e.target.closest('[data-evo-item]');
+    if (evoEl) { openRef(resolveRef(evoEl.dataset.evoItem), state.overlay?.playerIdx ?? 0); return; }
     const btn = e.target.closest('[data-action]');
     if (!btn) {
       if (e.target === document.getElementById('overlay-root')) {
@@ -5567,6 +5677,11 @@
   }
 
   function handleAppClick(e) {
+    // Left-click an evo-path node (info panel) → open that object's detail page. (Right-click
+    // still quick-adds via handleAppContextMenu — untouched.) Nodes carry data-evo-item, not
+    // data-action, so this must run before the data-action lookup.
+    const evoEl = e.target.closest('[data-evo-item]');
+    if (evoEl) { openRef(resolveRef(evoEl.dataset.evoItem), state.infoPanel?.playerIdx ?? 0); return; }
     const btn = e.target.closest('[data-action]');
     if (!btn) return;
     const action = btn.dataset.action;

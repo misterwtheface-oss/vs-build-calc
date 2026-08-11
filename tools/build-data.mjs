@@ -344,6 +344,9 @@ const AFFINITY_KEY_ALIASES = { priority: 'primary' };
 // A bare (unkeyed) list → key:null (the default, lower-priority group). Legacy cells with no
 // `[` fall back to a single default list split on `|` (old pipe-list format), easing migration.
 // Emits [{ key, items }] preserving authoring order; supports >2 lists and unknown keys.
+// Known keys: `Primary:` (elevated); `null` = default. NOTE conflicts do NOT go here — they
+// live in a separate `conflict` column so they never feed affinities.csv (would read as an
+// association). `AFFINITY_NEGATIVE_KEYS` below stays as a guard against a stray `Conflict:` key.
 function parseAffinityGroups(raw, ctx = '') {
   const cell = unwrap(raw);
   if (!cell) return [];
@@ -352,23 +355,39 @@ function parseAffinityGroups(raw, ctx = '') {
     return items.length ? [{ key: null, items }] : [];
   }
   return splitOutsideBrackets(cell, '|').map(s => s.trim()).filter(Boolean).map(seg => {
-    const m = seg.match(/^([A-Za-z][\w-]*)\s*:/);
-    let key = m ? m[1].toLowerCase() : null;
-    if (key && AFFINITY_KEY_ALIASES[key]) {
-      console.warn(`affinity: key "${key}" → "${AFFINITY_KEY_ALIASES[key]}" (${ctx}) — standardize the CSV`);
-      key = AFFINITY_KEY_ALIASES[key];
+    // key = any text before the ":[" that opens the list, e.g. "Primary" or an arcana name
+    // like "Slash (XVI)" (spaces/parens allowed). `primary` is normalized lowercase (canonical
+    // op); everything else keeps its original case so an arcana-name key matches by name.
+    const m = seg.match(/^([^\[]*?)\s*:\s*\[/);
+    let key = m ? m[1].trim() : null;
+    if (key) {
+      const lower = key.toLowerCase();
+      if (AFFINITY_KEY_ALIASES[lower]) {
+        console.warn(`affinity: key "${key}" → "${AFFINITY_KEY_ALIASES[lower]}" (${ctx}) — standardize the CSV`);
+        key = AFFINITY_KEY_ALIASES[lower];
+      } else if (lower === 'primary') key = 'primary';
     }
-    const inner = ((m ? seg.slice(m[0].length) : seg).match(/\[([^\]]*)\]/) || [, ''])[1];
+    const inner = (seg.match(/\[([^\]]*)\]/) || [, ''])[1];
     const items = inner.split(',').map(s => s.trim()).filter(Boolean);
     return { key, items };
   }).filter(g => g.items.length);
 }
 
-// Emit both affinity fields from one parse (avoids double-parsing / double-warning).
+// Groups whose items are NOT positive associations (excluded from the flat `affinity` union).
+const AFFINITY_NEGATIVE_KEYS = new Set(['conflict']);
+
+// Emit both affinity fields from one parse (avoids double-parsing / double-warning). The flat
+// `affinity` union is POSITIVE traits only (drops conflict etc.); `affinity_groups` keeps all.
 function affinityFields(raw, ctx = '') {
   const affinity_groups = parseAffinityGroups(raw, ctx);
-  return { affinity_groups, affinity: affinity_groups.flatMap(g => g.items) };
+  const affinity = affinity_groups.filter(g => !AFFINITY_NEGATIVE_KEYS.has(String(g.key).toLowerCase())).flatMap(g => g.items);
+  return { affinity_groups, affinity };
 }
+
+// The dedicated conflict column (`affinity_conflict`) → flat list of bad-trait names. Authored
+// with the same grammar (usually `{Conflict:[Move Speed, Greed]}`, but a bare `{a|b}` works
+// too); the key is irrelevant here — every item in this column is a conflict.
+function conflictList(raw) { return parseAffinityGroups(raw).flatMap(g => g.items); }
 
 function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
   if (!raw || raw.trim() === '-') return [];
@@ -443,11 +462,15 @@ const characters = rawChars.map(r => ({
   // maps a bare dash to '' so empties collapse to null and names match arcana by name.
   starting_arcana: unwrap(r.starting_arcana) || null,
   description: unwrap(r.character_description),
-  custom_description: unwrap(r.custom_description), // shown in the UI later (extra context)
+  // My added context for effects unclear from the official blurb — shown below `description`.
+  effect_clarifications: unwrap(r.effect_clarifications),
   notes: '',                                        // no source column in the new schema
   // Grouped affinity schema: `affinity_groups` = ordered [{key,items}] (key:'primary' etc.);
   // `affinity` stays a flat union for anything that just wants the whole list.
   ...affinityFields(r.affinity, r.name),
+  // Conflicts live in their OWN column (NOT `affinity`, which feeds affinities.csv) so a bad
+  // trait never becomes an association. Brace-wrapped, pipe-separated: `{Curse|Cooldown}`.
+  conflict: conflictList(r.affinity_conflict),
   scaling: parseScaling(r.level_scaling),
   // Phase-2 rule columns, passed through unparsed until their runtime features exist.
   reference_scaling: unwrap(r.reference_scaling),
@@ -534,6 +557,11 @@ const weapons = rawWeapons.filter(r => r.weapon && r.weapon !== '-').map(r => {
     ode_category: (() => { const v = unwrap(r.ode_category); return (!v || v === '-' || v === 'N/A') ? null : v; })(),
     arcana_ratings,
     rarity: parseInt(unwrap(r.rarity)) || 0,
+    // Weapon affinity groups: `Primary:` (elevated) + arcana-name keys (traits valid only WITH
+    // that arcana) + unlisted default. Conflicts stay in their own column.
+    ...affinityFields(r.affinity, r.weapon),
+    conflict: conflictList(r.affinity_conflict), // traits BAD for this weapon (own column; not `affinity`)
+    arcana: splitItems(r.arcana), // Arcana associated with this weapon (brace/pipe list of names)
   };
 });
 
@@ -570,6 +598,7 @@ const passives = rawPassives.filter(r => r.item).map(r => {
     level_ups: unwrap(r['level_up_text']).split('|').map(s => s.trim().replace(/^"|"$/g, '')).filter(Boolean),
     level_up_values: levels,
     consumed_on_evo: /^true$/i.test((r.consumed_on_evo || '').trim()),
+    conflict: conflictList(r.affinity_conflict), // traits BAD for this passive (own column; not `affinity`)
     grants: [],           // hidden-weapon / item grants; resolved in the second pass
     _grantRaw: grantRaw,
   };
@@ -586,9 +615,14 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
   const weapon_col = type === 'Darkana'
     ? (DARKANA_NUM_TO_COL[numRaw] || null)
     : (ARCANA_NUM_TO_COL[numRaw]  || null);
+  // Color identity for this arcana — colors the container of an arcana-conditional trait group.
+  // Prefer an explicit `color` column; otherwise derive from the card art (muted, like traits).
+  const icon = iconPath(r.icon_path);
+  const color = unwrap(r.color) || (icon ? dominantColor(join(REPO_ROOT, icon)) : FALLBACK_COLOR);
   return {
     name: r.name,
-    icon: iconPath(r.icon_path),
+    icon,
+    color,
     number: numRaw,
     base_num,
     type,
@@ -599,8 +633,8 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
     // affects_* pipe-lists are captured as arrays for the future Arcana Info Panel rework.
     notes: '',
     affects_explicit: splitItems(r.affects_explicit),
-    affects_implicit: splitItems(r.affects_implicit),
     ...affinityFields(r.affinity, r.name),
+    conflict: conflictList(r.affinity_conflict), // traits BAD for this arcana (own column; not `affinity`)
   };
 });
 

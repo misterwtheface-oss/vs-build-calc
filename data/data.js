@@ -14,7 +14,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more damage every 10 levels (max +50%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -36,6 +36,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -80,11 +81,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Growth"
           ]
@@ -93,6 +94,7 @@ window.VS_DATA = {
       "affinity": [
         "Growth"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "growth",
@@ -140,11 +142,11 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Gains 10% more experience every 5 levels (max +30%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Growth",
             "Move Speed",
@@ -159,6 +161,7 @@ window.VS_DATA = {
         "Speed",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "growth",
@@ -203,11 +206,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Projectiles get 10% faster every 5 levels (max +30%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Speed"
           ]
@@ -216,6 +219,7 @@ window.VS_DATA = {
       "affinity": [
         "Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "speed",
@@ -260,13 +264,18 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +1 projectile (all weapons).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Amount",
             "Max Health"
           ]
         }
@@ -275,6 +284,7 @@ window.VS_DATA = {
         "Amount",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -312,13 +322,18 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Weapon cooldown is reduced by 5% every 10 levels (max -15%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Cooldown"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Cooldown",
             "Might"
           ]
         }
@@ -327,6 +342,7 @@ window.VS_DATA = {
         "Cooldown",
         "Might"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -371,7 +387,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +30% Area. Starts with temporary cooldown bonus.",
-      "custom_description": "",
+      "effect_clarifications": "Cooldown bonus diminishes to 0 by level 4.",
       "notes": "",
       "affinity_groups": [
         {
@@ -393,6 +409,7 @@ window.VS_DATA = {
         "Cooldown",
         "Area"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -437,7 +454,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +5% Might, MoveSpeed, and Curse every 10 levels (max +20%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -461,6 +478,7 @@ window.VS_DATA = {
         "Curse",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -517,11 +535,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Magnet"
           ]
@@ -529,6 +547,9 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Magnet"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -570,18 +591,13 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Permanent +25% Pickup radius and -30 Max Health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
-            "Recovery"
-          ]
-        },
-        {
-          "key": null,
-          "items": [
+            "Recovery",
             "Magnet"
           ]
         }
@@ -590,6 +606,7 @@ window.VS_DATA = {
         "Recovery",
         "Magnet"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -627,7 +644,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +0.5 HP/s and +50 Max Health. Starts with temporary area bonus.",
-      "custom_description": "",
+      "effect_clarifications": "Area bonus diminishes to 0 by level 4.",
       "notes": "",
       "affinity_groups": [
         {
@@ -651,6 +668,7 @@ window.VS_DATA = {
         "Max Health",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "area",
@@ -695,11 +713,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Permanent +40% duration and speed, -40% move speed.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Duration",
             "Speed"
@@ -709,6 +727,9 @@ window.VS_DATA = {
       "affinity": [
         "Duration",
         "Speed"
+      ],
+      "conflict": [
+        "Move Speed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -747,21 +768,22 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with 1 Revival. Gains 1 more Revival at level 33.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Move Speed",
-            "Revival"
+            "Revival",
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "Move Speed",
-        "Revival"
+        "Revival",
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "revival",
@@ -806,7 +828,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with 1 extra Level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -825,6 +847,10 @@ window.VS_DATA = {
       "affinity": [
         "Cooldown",
         "Move Speed"
+      ],
+      "conflict": [
+        "Max Health",
+        "Might"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -864,7 +890,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -884,6 +910,7 @@ window.VS_DATA = {
         "Might",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -928,7 +955,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Projectile Speed every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -948,6 +975,7 @@ window.VS_DATA = {
         "Speed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "speed",
@@ -992,7 +1020,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Duration every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -1012,6 +1040,7 @@ window.VS_DATA = {
         "Duration",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "duration",
@@ -1056,7 +1085,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Area every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -1078,6 +1107,7 @@ window.VS_DATA = {
         "Move Speed",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "area",
@@ -1122,7 +1152,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "custom_description": "",
+      "effect_clarifications": "With Chaos Malachite, changes form and evolves starting weapon at level 80.",
       "notes": "",
       "affinity_groups": [
         {
@@ -1144,6 +1174,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -1206,7 +1237,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "custom_description": "",
+      "effect_clarifications": "With Chaos Rosalia, changes form and evolves starting weapon at level 80.",
       "notes": "",
       "affinity_groups": [
         {
@@ -1230,6 +1261,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -1298,13 +1330,18 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "custom_description": "",
+      "effect_clarifications": "With Chaos Lazulia, changes form and evolves starting weapon at level 80.",
       "notes": "",
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Amount",
             "Max Health",
             "Armor"
           ]
@@ -1315,6 +1352,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -1359,7 +1397,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3).",
-      "custom_description": "",
+      "effect_clarifications": "With Chaos Altemanna, changes form and evolves starting weapon at level 80.",
       "notes": "",
       "affinity_groups": [
         {
@@ -1381,6 +1419,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -1443,7 +1482,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+3). Starts with temporary Amount bonus.",
-      "custom_description": "",
+      "effect_clarifications": "Amount bonus diminishes to 0 by level 5 and a portion is regained, up to 3 by level 60.",
       "notes": "",
       "affinity_groups": [
         {
@@ -1452,12 +1491,24 @@ window.VS_DATA = {
             "Amount",
             "Halted XP"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Luck",
+            "Greed"
+          ]
         }
       ],
       "affinity": [
         "Amount",
-        "Halted XP"
+        "Halted XP",
+        "Magnet",
+        "Luck",
+        "Greed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -1508,7 +1559,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with one extra level. Gains 10% Growth every 5 levels (max +50%).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -1529,6 +1580,9 @@ window.VS_DATA = {
         "Growth",
         "Duration",
         "Cooldown"
+      ],
+      "conflict": [
+        "Greed"
       ],
       "scaling": [
         {
@@ -1574,7 +1628,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with one extra level. Gains +1 Armor every 5 levels (max +5).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -1582,10 +1636,22 @@ window.VS_DATA = {
           "items": [
             "Armor"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Recovery"
+          ]
         }
       ],
       "affinity": [
-        "Armor"
+        "Armor",
+        "Luck",
+        "Recovery"
+      ],
+      "conflict": [
+        "Greed"
       ],
       "scaling": [
         {
@@ -1631,7 +1697,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.5% Might, Projectile Speed, Duration, and Area every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -1659,6 +1725,7 @@ window.VS_DATA = {
         "Move Speed",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -1721,7 +1788,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "She owns everything.",
-      "custom_description": "",
+      "effect_clarifications": "Gains access to Arcanas at level 77 and 108 (instead of minute 11 and 21) and chooses from the entire Arcana list.",
       "notes": "",
       "affinity_groups": [
         {
@@ -1761,6 +1828,7 @@ window.VS_DATA = {
         "Revival",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -1811,7 +1879,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Recovers 30% Max Health and gains +32 Max Health (Max +665) when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -1835,6 +1903,7 @@ window.VS_DATA = {
         "Armor",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Overheal min 32 max 665 by 32",
@@ -1872,7 +1941,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can find extra explosive props that might drop Treasure Chests. Can destroy light sources by touching them.",
-      "custom_description": "",
+      "effect_clarifications": "Treasure chests can be Golden, affected by Luck, and drop weapons as stage pick-ups bypassing slot restrictions.",
       "notes": "",
       "affinity_groups": [
         {
@@ -1900,6 +1969,7 @@ window.VS_DATA = {
         "Speed",
         "Duration"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1937,21 +2007,31 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Activates his main weapon when picking up Gold Coins. Uses Gold Coins as damage barrier. Has a 4X chance of drafting FOIL Survarots.",
-      "custom_description": "",
+      "effect_clarifications": "Automatic weapon activation requires gold pick-ups and is not activated by gold received through other sources.",
       "notes": "",
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
-            "[Gold Coin",
+            "Gold Coin",
             "Light Source"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed",
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "[Gold Coin",
-        "Light Source"
+        "Gold Coin",
+        "Light Source",
+        "Greed",
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -1989,7 +2069,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Freezes all enemies for 10 seconds when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -2011,6 +2091,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2054,7 +2135,7 @@ window.VS_DATA = {
       ],
       "starting_arcana": null,
       "description": "Also starts with a Level 5 Wings and a hidden Valkyrie Turner.",
-      "custom_description": "",
+      "effect_clarifications": "Freezes all enemies for 10 seconds when health reaches a critically low level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -2080,6 +2161,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2120,7 +2202,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -2133,17 +2215,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2181,7 +2262,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Base weapon cannot be evolved but gains 5x effect from Limit Break and can obtain Amount in the Limit Break pool (max 20).",
       "notes": "",
       "affinity_groups": [
         {
@@ -2194,17 +2275,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2242,7 +2322,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Base weapon cannot be evolved but gains 5x effect from Limit Break and can obtain Amount in the Limit Break pool (max 20).",
       "notes": "",
       "affinity_groups": [
         {
@@ -2255,17 +2335,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2303,7 +2382,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Base weapon cannot be evolved but gains 5x effect from Limit Break and can obtain Amount in the Limit Break pool (max 20).",
       "notes": "",
       "affinity_groups": [
         {
@@ -2316,17 +2395,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2364,7 +2442,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Base weapon cannot be evolved but gains 5x effect from Limit Break and can obtain Amount in the Limit Break pool (max 20).",
       "notes": "",
       "affinity_groups": [
         {
@@ -2377,17 +2455,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2425,7 +2502,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Base weapon cannot be evolved but gains 5x effect from Limit Break and can obtain Amount in the Limit Break pool (max 20).",
       "notes": "",
       "affinity_groups": [
         {
@@ -2438,17 +2515,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2486,7 +2562,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a flood when a weapon evolves. Vacuums all XP Crystals when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Base weapon cannot be evolved but gains 5x effect from Limit Break and can obtain Amount in the Limit Break pool (max 20).",
       "notes": "",
       "affinity_groups": [
         {
@@ -2499,17 +2575,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Move Speed",
-            "Vacuum"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
         "Limited",
         "Duration",
-        "Move Speed",
-        "Vacuum"
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2547,7 +2622,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporary Cooldown bonus. Triggers a Rosary when Health reaches a critically low level. Likes to keep secrets.",
-      "custom_description": "",
+      "effect_clarifications": "Arma Dio (level 40) and Candybox (level 80) appear as stage pickups. Weapon evolutions and Arcana can be found in any Treasure Chest (obeying Arcana limits). Santa Water, King Bible, and Cross automatically evolve and become hidden items when all 3 are at max level; this effect fails if any are evolved through normal evolution.",
       "notes": "",
       "affinity_groups": [
         {
@@ -2573,6 +2648,7 @@ window.VS_DATA = {
         "Luck",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -2638,7 +2714,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +30 gives a cumulative bonus to a random stat.",
-      "custom_description": "",
+      "effect_clarifications": "Bonuses are capped at 220 Max Health, 2 Recovery, 2 Armor, 50% Move Speed, 50% Might, 50% Speed, 50% Duration, 50% Area, -25% Cooldown, 2 Amount, 3 Revival, and 16 Magnet",
       "notes": "",
       "affinity_groups": [
         {
@@ -2680,6 +2756,7 @@ window.VS_DATA = {
         "Revival",
         "Magnet"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Overheal min 0 max 220 by pct|\nrecovery: source Overheal min 0 max 2 by pct|\narmor: source Overheal min 0 max 2 by pct|\nmove_speed: source Overheal min 0 max 0.5 by pct|\nmight: source Overheal min 0 max 0.5 by pct|\nspeed: source Overheal min 0 max 0.5 by pct|\nduration: source Overheal min 0 max 0.5 by pct|\narea: source Overheal min 0 max 0.5 by pct|\ncooldown: source Overheal min 0 max -0.25 by pct|\namount: source Overheal min 0 max 2 by pct|\nrevival: source Overheal min 0 max 3 by pct|\nmagnet: source Overheal min 0 max 16 by pct",
@@ -2717,7 +2794,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Chances his luck every 30 seconds or when picking up a Rerollo.",
-      "custom_description": "",
+      "effect_clarifications": "On a 6: \"Lucky!\" Spawn light sources and gain 777% Luck and 77% Move Speed for 30 seconds. On a 2, 3, 4 or 5: Gain that amount of Luck permanently. On a 1: \"Unlucky!\" Trigger shooting starts targeting the player and gain 77% Curse and -777% Luck for 30 seconds.",
       "notes": "",
       "affinity_groups": [
         {
@@ -2742,6 +2819,9 @@ window.VS_DATA = {
         "Move Speed",
         "Magnet",
         "Might"
+      ],
+      "conflict": [
+        "Curse"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -2780,11 +2860,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "May occasionally activate all weapons twice depending on Cooldown.",
-      "custom_description": "",
+      "effect_clarifications": "Effect activates every 10-15 seconds, reduced by Cooldown to a minimum of 3 seconds at -90% Cooldown.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Cooldown"
           ]
@@ -2793,6 +2873,7 @@ window.VS_DATA = {
       "affinity": [
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -2830,11 +2911,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "At least they're lucky.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 10% Luck every 10 levels (max +50%).",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Luck"
           ]
@@ -2842,6 +2923,14 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Luck"
+      ],
+      "conflict": [
+        "Max Health",
+        "Move Speed",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown"
       ],
       "scaling": [
         {
@@ -2887,7 +2976,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "So much potential.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 20% Luck every 10 levels (max +50%). Also gains 9899 Max Health at level 100 and 65520 Armor at level 200.",
       "notes": "",
       "affinity_groups": [
         {
@@ -2910,6 +2999,12 @@ window.VS_DATA = {
         "Max Health",
         "Armor",
         "Luck"
+      ],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Cooldown"
       ],
       "scaling": [
         {
@@ -2967,7 +3062,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "The quirky white bear.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Luck, 0.25% Cooldown, 0.01  Recovery, and 0.7% Might, Area, Speed, and Duration every level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -2996,6 +3091,10 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery",
         "Move Speed"
+      ],
+      "conflict": [
+        "Max Health",
+        "Speed"
       ],
       "scaling": [
         {
@@ -3077,10 +3176,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Random.",
-      "custom_description": "",
+      "effect_clarifications": "Under Construction",
       "notes": "",
       "affinity_groups": [],
       "affinity": [],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3118,24 +3218,33 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "",
-      "custom_description": "",
+      "effect_clarifications": "Negative Speed causes projectiles to fire backwards from the character. Exactly 0% Speed causes projectiles to be stationary.",
       "notes": "",
       "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Move Speed",
+            "Might"
+          ]
+        },
         {
           "key": null,
           "items": [
             "Max Health",
-            "Move Speed",
-            "Might",
             "Curse"
           ]
         }
       ],
       "affinity": [
-        "Max Health",
         "Move Speed",
         "Might",
+        "Max Health",
         "Curse"
+      ],
+      "conflict": [
+        "Speed",
+        "Greed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -3174,7 +3283,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of Fire. Grows stronger with every level, but also loses control.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 2% Move Speed, 0.5% Might and Curse, and 0.25% Cooldown every level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -3206,6 +3315,7 @@ window.VS_DATA = {
         "Max Health",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "move_speed",
@@ -3268,7 +3378,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Might, Projectile Speed, Duration, Area, and Cooldown change every minute.",
-      "custom_description": "",
+      "effect_clarifications": "Listed stats oscillate between 200% and 50% with two extremes: High Area, Duration, and Cooldown with Low Speed and Might; High Speed and Might with Low Area, Duration, and Cooldown",
       "notes": "",
       "affinity_groups": [
         {
@@ -3296,6 +3406,7 @@ window.VS_DATA = {
         "Cooldown",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -3340,7 +3451,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -3363,6 +3474,10 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown"
+      ],
+      "conflict": [
+        "Move Speed",
+        "Greed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -3405,7 +3520,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1 Recovery and +1% Luck every level. Gains +1 Revival every 100 levels. Has hidden weapons.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -3428,6 +3543,9 @@ window.VS_DATA = {
         "Luck",
         "Revival",
         "Move Speed"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [
         {
@@ -3485,7 +3603,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporarily reduced area.",
-      "custom_description": "",
+      "effect_clarifications": "Area malus diminishes to 0 by level 21.",
       "notes": "",
       "affinity_groups": [
         {
@@ -3506,6 +3624,9 @@ window.VS_DATA = {
         "Magnet",
         "Armor",
         "Max Health"
+      ],
+      "conflict": [
+        "Move Speed"
       ],
       "scaling": [
         {
@@ -3551,7 +3672,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Greed every level. Gold Fever lasts longer.",
-      "custom_description": "",
+      "effect_clarifications": "Gold Fever duration cap and extension are multiplied by 1.5x",
       "notes": "",
       "affinity_groups": [
         {
@@ -3573,6 +3694,7 @@ window.VS_DATA = {
         "Greed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "greed",
@@ -3618,10 +3740,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "M(▯▯)",
-      "custom_description": "",
+      "effect_clarifications": "Has a 50% chance to start with Axe instead of Death Spiral.",
       "notes": "",
       "affinity_groups": [],
       "affinity": [],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3659,11 +3782,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +2% Growth every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Growth"
           ]
@@ -3672,6 +3795,7 @@ window.VS_DATA = {
       "affinity": [
         "Growth"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "growth",
@@ -3716,7 +3840,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Can find evolutions in any Treasure.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -3724,11 +3848,23 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Revival",
+            "Might"
+          ]
         }
       ],
       "affinity": [
-        "Curse"
+        "Curse",
+        "Max Health",
+        "Revival",
+        "Might"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "curse",
@@ -3773,7 +3909,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "A blasphemous mockery.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -3788,6 +3924,7 @@ window.VS_DATA = {
         "[Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -3825,7 +3962,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon gets stronger when levelling up. Revivals also affect Amount. Receives a follower after reviving.",
-      "custom_description": "",
+      "effect_clarifications": "Mazo Familiar has 10 base damage (instead of 40) but gains 1 damage every level. Followers fire Pako Battiliar.",
       "notes": "",
       "affinity_groups": [
         {
@@ -3847,6 +3984,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "amount: 1 per 1 revival",
       "manual_scaling": "",
@@ -3884,7 +4022,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 100.",
-      "custom_description": "",
+      "effect_clarifications": "Might and Growth malus diminishes to 0 by level 108.",
       "notes": "",
       "affinity_groups": [
         {
@@ -3910,6 +4048,7 @@ window.VS_DATA = {
         "Move Speed",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -3968,7 +4107,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Evolves into JoyaTauro at lv16, and into AccumulaTori at lv36. Retaliates.",
-      "custom_description": "",
+      "effect_clarifications": "JoyaTauro gains 35% Might and Area, 20% Duration, 1 Amor, multiplies Max Health by 1.35, and reduces Move Speed by 20%; additionally, hidden Eskizzibur gains 65% base damage. AccumlaTori gains 35% Might, 20% Duration, 2 Amor, multiplies Max Health by 1.8, and reduces Move Speed by 20%; additionally, hidden Eskizzibur gains 65% base damage.",
       "notes": "",
       "affinity_groups": [
         {
@@ -3993,6 +4132,9 @@ window.VS_DATA = {
         "Armor",
         "Duration",
         "Might"
+      ],
+      "conflict": [
+        "Move Speed"
       ],
       "scaling": [
         {
@@ -4100,23 +4242,29 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a hidden Lightning Ring every 8 levels (max 6) that also fires when losing health.",
-      "custom_description": "",
+      "effect_clarifications": "Lightning Ring attacks when losing health are not considered retaliatory damage.",
       "notes": "",
       "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Retaliation"
+          ]
+        },
         {
           "key": null,
           "items": [
             "Area",
-            "Max Health",
-            "Retaliation"
+            "Max Health"
           ]
         }
       ],
       "affinity": [
+        "Retaliation",
         "Area",
-        "Max Health",
-        "Retaliation"
+        "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -4164,7 +4312,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon grows stronger when levelling up. Gains +1% Curse every level. Ignores Walls.",
-      "custom_description": "",
+      "effect_clarifications": "NO FUTURE has 5 base damage (instead of 30) but gains 1 damage every level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -4172,11 +4320,23 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Armor",
+            "Max Health"
+          ]
         }
       ],
       "affinity": [
-        "Curse"
+        "Curse",
+        "Move Speed",
+        "Armor",
+        "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "curse",
@@ -4221,7 +4381,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Gets a Survarot Multiplier equal to Log10 Golden Eggs (max x10).",
-      "custom_description": "",
+      "effect_clarifications": "Kyra-Stones damage is equal to that of the player's level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -4243,6 +4403,7 @@ window.VS_DATA = {
         "Luck",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -4280,7 +4441,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starting weapon grows stronger when levelling up. Gets more fans from defeating a large amount of enemies.",
-      "custom_description": "",
+      "effect_clarifications": "Photonstorm has 10 base damage (instead of 25) but gains 10 damage every 10 levels starting at level 20. A maximum of 30 followers can be obtained.",
       "notes": "",
       "affinity_groups": [
         {
@@ -4302,6 +4463,7 @@ window.VS_DATA = {
         "Move Speed",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -4339,7 +4501,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.2 Max Health when overhealing.Healing multiplier applies to healing sources that are exempt from the Recovery multiplier.",
       "notes": "",
       "affinity_groups": [
         {
@@ -4361,6 +4523,7 @@ window.VS_DATA = {
         "Max Health",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Overheal min 0 max 9999 by 0.2",
@@ -4398,20 +4561,21 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes stronger and invincible for a fixed interval after defeating a large amount of enemies.",
-      "custom_description": "",
+      "effect_clarifications": "Megalo form lasts for 30 seconds and queues to guarantee full duration. Gains a hidden 108 Bocce, 200% Might, -20% Cooldown, 50% Curse, up to 100% Move Speed (max 300%). The kill requirement caps at 10,000.",
       "notes": "",
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
             "Charm",
-            "Might",
-            "Move Speed"
+            "Invulnerable",
+            "Might"
           ]
         },
         {
           "key": null,
           "items": [
+            "Move Speed",
             "Curse",
             "Cooldown",
             "Luck"
@@ -4420,11 +4584,15 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Charm",
+        "Invulnerable",
         "Might",
         "Move Speed",
         "Curse",
         "Cooldown",
         "Luck"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -4465,7 +4633,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with hidden Night Sword. Morphs into a stronger version when his base weapon evolves.",
-      "custom_description": "",
+      "effect_clarifications": "Hidden Night Sword only retaliates. Permanent Megalo form is granted when obtaining Echo Night gaining 100 Max Health, 2 Armor, 40% Move Speed, 30% Speed, and 30% Area.",
       "notes": "",
       "affinity_groups": [
         {
@@ -4491,6 +4659,7 @@ window.VS_DATA = {
         "Curse",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -4536,11 +4705,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Ignores weapons cooldown. Weapons fire at a fixed interval when moving.",
-      "custom_description": "",
+      "effect_clarifications": "Equipped weapons fire in slot-sequence only while moving and does not fire hidden weapons.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed"
           ]
@@ -4548,6 +4717,9 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Move Speed"
+      ],
+      "conflict": [
+        "Cooldown"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -4586,7 +4758,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Area temporarily increases at fixed intervals.",
-      "custom_description": "",
+      "effect_clarifications": "Area oscillates between 100% and 150%.",
       "notes": "",
       "affinity_groups": [
         {
@@ -4610,6 +4782,7 @@ window.VS_DATA = {
         "Armor",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_area: source Expansion min 1 max 1.5 by boolean",
@@ -4649,7 +4822,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Cannot be damaged, but disappears after reaching the current Time Limit. Starts with hidden 108 Bocce.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -4672,6 +4845,9 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown",
         "Luck"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -4710,7 +4886,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -4738,6 +4914,7 @@ window.VS_DATA = {
         "Armor",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -4782,7 +4959,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -4802,6 +4979,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -4846,18 +5024,23 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellStream at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
-      "custom_description": "",
+      "effect_clarifications": "Received items are dropped on the stage at their respective level intervals.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Growth, Move Speed"
+            "Growth",
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "Growth, Move Speed"
+        "Growth",
+        "Move Speed"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -4927,18 +5110,23 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellStrike at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30.",
-      "custom_description": "",
+      "effect_clarifications": "Received items are dropped on the stage at their respective level intervals.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Growth, Move Speed"
+            "Growth",
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "Growth, Move Speed"
+        "Growth",
+        "Move Speed"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -5008,18 +5196,23 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives SpellString at Level 10 and SpellStream at Level 20. Receives Academy Badge at Level 30.",
-      "custom_description": "",
+      "effect_clarifications": "Received items are dropped on the stage at their respective level intervals.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Growth, Move Speed"
+            "Growth",
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "Growth, Move Speed"
+        "Growth",
+        "Move Speed"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -5089,7 +5282,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains temporary Armor bonus after getting damaged. Receives Academy Badge at Level 30.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1 Armor after being damaged, resetting to 0 after 10 seconds. Each hit extends the reset timer by 1 second. Received Academy Badge is dropped on the stage",
       "notes": "",
       "affinity_groups": [
         {
@@ -5113,6 +5306,7 @@ window.VS_DATA = {
         "Max Health",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "armor: source Damage Taken min 0 max 50 by 1",
@@ -5161,7 +5355,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Luck-based Charge ability: fires a volley of Flash Arrows. Gains +1% luck every level. Receives Academy Badge at Level 30.",
-      "custom_description": "",
+      "effect_clarifications": "Flash Arrow Volley charges while moving and fires when standing still. Received Academy Badge is dropped on the stage",
       "notes": "",
       "affinity_groups": [
         {
@@ -5187,6 +5381,7 @@ window.VS_DATA = {
         "Speed",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "luck",
@@ -5242,7 +5437,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a Rosary when levelling up. Gets a temporary Might, Cooldown, and MoveSpeed bonus after reviving.",
-      "custom_description": "",
+      "effect_clarifications": "On revival, gains 200% Might, -100% Cooldown, 60% Move Speed (max 300%) for 15 seconds and gains invulnerability for 4 seconds. Duration is extended by 2 seconds each revival.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5265,6 +5460,9 @@ window.VS_DATA = {
         "Might",
         "Move Speed",
         "Recovery"
+      ],
+      "conflict": [
+        "Cooldown"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -5303,7 +5501,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a Vacuum when levelling up. Once per life, triggers World Eater after receiving fatal damage.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -5325,6 +5523,7 @@ window.VS_DATA = {
         "Greed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -5377,7 +5576,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Insatiable",
       "description": "It will literally eat the world.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might and 0.5% Curse every level. On level-up triggers a Vacuum effect. After receiving fatal damage and every 6th level trigger a Rosary effect. At levels 10, 20, and 30 a SpellString, SpellStream, and SpellStrike appear on the stage.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5393,8 +5592,7 @@ window.VS_DATA = {
             "Magnet",
             "Greed",
             "Armor",
-            "Max Health",
-            "Vacuum"
+            "Max Health"
           ]
         }
       ],
@@ -5404,9 +5602,9 @@ window.VS_DATA = {
         "Magnet",
         "Greed",
         "Armor",
-        "Max Health",
-        "Vacuum"
+        "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -5488,7 +5686,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains XP when picking up Gold Coins and Coin Bags. Starts with temporarily reduced Might.",
-      "custom_description": "",
+      "effect_clarifications": "Gold Fever duration cap and duration extension are multiplied by 1.25x",
       "notes": "",
       "affinity_groups": [
         {
@@ -5512,6 +5710,7 @@ window.VS_DATA = {
         "Gold Fever",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -5556,7 +5755,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -5576,6 +5775,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -5620,7 +5820,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses every time anyones weapon is brought to max level.",
-      "custom_description": "",
+      "effect_clarifications": "Stat bonus is random and multiplied by the level of the item. Weapons provide 4% to Might, Duration, Speed, or Area; Passives provide 20 Max Health, 0.1 Recovery, 0.02 Armor, 8% Move Speed, -3% Cooldown, 0.2 Amount, 0.2 Revival, 0.5 Magnet, 5% Luck, or 5% Growth",
       "notes": "",
       "affinity_groups": [
         {
@@ -5640,6 +5840,7 @@ window.VS_DATA = {
         "Crewmate",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5677,11 +5878,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Chooses an extra passive weapon at level 2, 12, and 22",
-      "custom_description": "",
+      "effect_clarifications": "Passives are added directly to passive slots and will be granted even with full slots exceeding the normal limit.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed"
           ]
@@ -5690,6 +5891,7 @@ window.VS_DATA = {
       "affinity": [
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -5739,7 +5941,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can't be damaged or deal damage, but disappears after reaching the current Time Limit. Ignores walls.",
-      "custom_description": "",
+      "effect_clarifications": "Might malus cannot be negated.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5758,6 +5960,9 @@ window.VS_DATA = {
       "affinity": [
         "Ghost",
         "Luck"
+      ],
+      "conflict": [
+        "Might"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -5796,7 +6001,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Leaves behind excess body parts when damaged and may shift forms.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1 Max Health for each body part collected.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5820,6 +6025,7 @@ window.VS_DATA = {
         "Recovery",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Body Parts min 0 max 999 by pct",
@@ -5857,7 +6063,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "May gain +1 Revival when anyone revives. Increases Armor and Recovery of nearby characters. Ignores walls.",
-      "custom_description": "",
+      "effect_clarifications": "Chance to gain Revival is 50%, unaffected by Luck.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5881,6 +6087,7 @@ window.VS_DATA = {
         "Armor",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "revival: source Revived min 0 max 10 by 1",
@@ -5918,7 +6125,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes stronger and briefly invincible after defeating a large amount of enemies, or an ally.",
-      "custom_description": "",
+      "effect_clarifications": "Megalo form lasts for 30 seconds and queues to guarantee full duration. Gains 6, hidden, level 1 Sharp Tongue, 200% Might, -20% Cooldown, and 80% Move Speed. The kill requirement caps at 10,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5944,6 +6151,7 @@ window.VS_DATA = {
         "Cooldown",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\nmove_speed: source Megalo State min 0 max 0.8 by boolean",
@@ -5981,19 +6189,38 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets -10% Luck every 10 levels (max -90%). Can choose a per-level bonus every 10 levels (max 5 times).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Might, Area, Speed, Duration, Recovery, Growth, Luck, Greed, Curse, Move Speed"
+            "Might",
+            "Area",
+            "Speed",
+            "Duration",
+            "Recovery",
+            "Growth",
+            "Luck",
+            "Greed",
+            "Curse",
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "Might, Area, Speed, Duration, Recovery, Growth, Luck, Greed, Curse, Move Speed"
+        "Might",
+        "Area",
+        "Speed",
+        "Duration",
+        "Recovery",
+        "Growth",
+        "Luck",
+        "Greed",
+        "Curse",
+        "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "luck",
@@ -6068,7 +6295,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (max+4).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -6088,6 +6315,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -6134,7 +6362,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "I'm not the Impostor.",
-      "custom_description": "",
+      "effect_clarifications": "Gains a hidden Sharp Tongue every 6 levels (max 6).",
       "notes": "",
       "affinity_groups": [
         {
@@ -6156,6 +6384,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -6203,7 +6432,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a bonus to Projectile Speed (max 50%) and to Might when defeating many enemies. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Speed in 2.5% and Might in 1% increments at each exponential kill threshold. Soft cap for Might is ~35% (1,000,000 kills).",
       "notes": "",
       "affinity_groups": [
         {
@@ -6225,6 +6454,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\nmight: source Kills min 0 max 0.25 by pct",
@@ -6262,7 +6492,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receive a bonus to Projectile Speed (max 50%) and to Cooldown (max-25%) when defeating many enemies. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Speed in 2.5% and Cooldown in -1% increments at each exponential kill threshold. Speed is capped at 19005 and Cooldown at 70565.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6284,6 +6514,7 @@ window.VS_DATA = {
         "Cooldown",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\ncooldown: source Kills min 0 max -0.25 by pct",
@@ -6321,7 +6552,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Movement Speed increases Armour. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1  Armor per 10% Move Speed (max 10) and gains -5% Cooldown for each \"Prototype\" evolution obtained.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6349,6 +6580,7 @@ window.VS_DATA = {
         "Speed",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "armor: 1 per 0.1 move_speed|cooldown: -0.05 per [Prototype A,Prototype B,Prototype C]",
       "manual_scaling": "",
@@ -6386,7 +6618,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gain a bonus to all stats after Reviving. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "On revival, gains 20 Max Health, 0.1 Recovery, 0.2 Armor, 8% Move Speed, 4% Might, 4% Speed, 4% Duration, 4% Area, -3% Cooldown, 0.2 Amount, 0.2 Revival, 5% Luck, 5% Growth, and 1% Greed permanently.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6430,6 +6662,7 @@ window.VS_DATA = {
         "Armor",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Revived min 0 max revival*20 by 20|\nrecovery: source Revived min 0 max revival*0.1 by 0.1|\narmor: source Revived min 0 max revival*0.2 by 0.2|\nmove_speed: source Revived min 0 max revival*0.08 by 0.08|\nmight: source Revived min 0 max revival*0.04 by 0.04|\nspeed: source Revived min 0 max revival*0.04 by 0.04|\nduration: source Revived min 0 max revival*0.04 by 0.04|\narea: source Revived min 0 max revival*0.04 by 0.04|\ncooldown: source Revived min 0 max revival*-0.03 by -0.03|\namount: source Revived min 0 max revival*0.2 by 0.2|\nluck: source Revived min 0 max revival*0.05 by 0.05|\ngrowth: source Revived min 0 max revival*0.05 by 0.05|\ngreed: source Revived min 0 max revival*0.01 by 0.01",
@@ -6467,7 +6700,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "When Health is low, Cooldown is decreased and Move Speed and Speed increase. Can find special Pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Cooldown scales linearly in -0.5% increments per 1% missing health up to -50% at 0% health. Speed and Move Speed scales in 1% increments per 10% missing health up to 10% at 0% health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6495,6 +6728,7 @@ window.VS_DATA = {
         "Speed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source Missing Health min 0 max -0.5 by pct|\nmove_speed: source Missing Health min 0 max 0.1 by pct|\nspeed: source Missing Health min 0 max 0.1 by pct",
@@ -6532,7 +6766,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Decreasing Cooldown increases Area. Can find extra explosive props and special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 2% Area per -1% Cooldown (max 100%). Can find Explosive Cars that deal 60 Base Damage to a large area around it when they are destroyed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6547,6 +6781,7 @@ window.VS_DATA = {
         "Cooldown",
         "Area"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "area: 0.02 per -0.01 cooldown max 0.5",
       "manual_scaling": "",
@@ -6584,7 +6819,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Move Speed decreases Cooldown. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains -1% Cooldown per 2% Move Speed (max -90%).",
       "notes": "",
       "affinity_groups": [
         {
@@ -6599,6 +6834,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "cooldown: -0.01 per 0.02 move_speed",
       "manual_scaling": "",
@@ -6636,7 +6872,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Armour increses Might. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 10% Might per 1 Armor.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6658,6 +6894,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "might: 0.1 per 1 armor",
       "manual_scaling": "",
@@ -6695,7 +6932,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Might increases Armour. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1 Armor per 10% Might.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6717,6 +6954,7 @@ window.VS_DATA = {
         "Armor",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "armor: 1 per 0.1 might",
       "manual_scaling": "",
@@ -6754,7 +6992,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Projectile Speed increases Might. Can find extra explosive props and special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might per 1% Speed (max 900%). Can find Explosive Barrels that deal 60 Base Damage to a large area around it when they are destroyed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6769,6 +7007,7 @@ window.VS_DATA = {
         "Speed",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "might: 0.01 per 0.01 speed max 9",
       "manual_scaling": "",
@@ -6806,7 +7045,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Greed and Curse increase Might. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might per 1% Curse or Greed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6836,6 +7075,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "might: 0.01 per 0.01 greed|might: 0.01 per 0.01 curse",
       "manual_scaling": "",
@@ -6871,7 +7111,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Simondo says he doesn't even need guns. Gets more projectiles every 20 levels (max +4).",
-      "custom_description": "",
+      "effect_clarifications": "Spawns up to 12 Rapid Fire, Barrier, and Grenade pickups, determined by Amount, every 30 seconds, reduced by Cooldown. When health is critical, 12 pickups are spawned immediately (ignoring Amount).",
       "notes": "",
       "affinity_groups": [
         {
@@ -6897,6 +7137,7 @@ window.VS_DATA = {
         "Luck",
         "Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -6941,7 +7182,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "After obtaining Vampire Killer, gains 80 Max Health, 0.1 Recovery, 1 Armor, 1 Amount, 1 Revival, 10% Move Speed, 10% Might, 10% Speed, 10% Area, 10% Luck, 10% Growth, -5% Cooldown.",
       "notes": "",
       "affinity_groups": [
         {
@@ -6979,6 +7220,7 @@ window.VS_DATA = {
         "Luck",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
       "manual_scaling": "",
@@ -7027,7 +7269,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Receives a hidden Svarog Statue at Level 5. Gets a bonus to most stats when Vampire Killer is equipped. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "After obtaining Vampire Killer, gains 80 Max Health, 0.1 Recovery, 1 Armor, 1 Amount, 1 Revival, 10% Move Speed, 10% Might, 10% Speed, 10% Area, 10% Luck, 10% Growth, -5% Cooldown.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7065,6 +7307,7 @@ window.VS_DATA = {
         "Luck",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
       "manual_scaling": "",
@@ -7113,7 +7356,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "On overheal (≥8), gains Rapid Fire for 10 seconds. This effect can trigger once every 5 seconds and multiple instances can be active.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7137,6 +7380,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7174,7 +7418,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a temporary Cooldown reduction when overhealing by +8. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "On overheal (≥8), gains Rapid Fire for 10 seconds. This effect can trigger once every 5 seconds and multiple instances can be active.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7198,6 +7442,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7235,7 +7480,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -7255,6 +7500,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -7299,7 +7545,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "Starts with extra Arcana X - Beginning. Gains +1 Amount every 10 levels (max +3). Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -7319,6 +7565,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -7363,7 +7610,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Greed has a 50% chance to be added to Might and to multiply Armor, unaffected by Luck. 1% Greed is equivalent to 1% Might and 100% Greed is equivalent to 1 Armor.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7389,6 +7636,7 @@ window.VS_DATA = {
         "Revival",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
@@ -7426,7 +7674,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Greed can occasionally affect Might and Armor. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Greed has a 50% chance to be added to Might and to multiply Armor, unaffected by Luck. 1% Greed is equivalent to 1% Might and 100% Greed is equivalent to 1 Armor.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7452,6 +7700,7 @@ window.VS_DATA = {
         "Revival",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
@@ -7489,7 +7738,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Growth has a 50% chance to be added to Might and to multiply Armor, unaffected by Luck. 1% Growth is equivalent to 1% Might and 100% Growth is equivalent to 1 Armor.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7515,6 +7764,7 @@ window.VS_DATA = {
         "Revival",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
@@ -7552,7 +7802,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Growth Can occasionally affect Might and Armor. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Growth has a 50% chance to be added to Might and to multiply Armor, unaffected by Luck. 1% Growth is equivalent to 1% Might and 100% Growth is equivalent to 1 Armor.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7578,6 +7828,7 @@ window.VS_DATA = {
         "Revival",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
@@ -7615,7 +7866,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
-      "custom_description": "",
+      "effect_clarifications": "Belnades' Spellbook is offered even if it's Banished, Sealed, or the maximum number of weapons has been obtained.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7639,6 +7890,7 @@ window.VS_DATA = {
         "Might",
         "Duration"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7676,7 +7928,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can receive Belnades' Spellbook as 4th level up option until Level 7. Every 6 levels automatically levels up any equipped spell from the Belnades Spellbook.",
-      "custom_description": "",
+      "effect_clarifications": "Belnades' Spellbook is offered even if it's Banished, Sealed, or the maximum number of weapons has been obtained.",
       "notes": "",
       "affinity_groups": [
         {
@@ -7700,6 +7952,7 @@ window.VS_DATA = {
         "Might",
         "Duration"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7737,11 +7990,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Divine Bloodline (IX)",
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed",
             "Cooldown"
@@ -7752,6 +8005,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7789,11 +8043,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Divine Bloodline (IX)",
       "description": "Starts with extra Arcana IX - Divine Bloodline. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed",
             "Cooldown"
@@ -7804,6 +8058,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -7841,7 +8096,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Multiplier range increases as Max Health increases. At 180 Max Health (default) maximum range is 2x with 1 HP and increases by 1x for each additional 180 Max Health (e.g. 3x with 360 HP, 4x with 540)",
       "notes": "",
       "affinity_groups": [
         {
@@ -7865,6 +8120,7 @@ window.VS_DATA = {
         "Max Health",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
@@ -7902,7 +8158,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Heart of Fire (XIX)",
       "description": "Starts with extra Arcana XIX - Heart of fire. When Health is low, Might is increased. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Multiplier range increases as Max Health increases. At 180 Max Health (default) maximum range is 2x with 1 HP and increases by 1x for each additional 180 Max Health (e.g. 3x with 360 HP, 4x with 540)",
       "notes": "",
       "affinity_groups": [
         {
@@ -7926,6 +8182,7 @@ window.VS_DATA = {
         "Max Health",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
@@ -7963,7 +8220,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -7989,6 +8246,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8026,7 +8284,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers any equipped knives in retaliation or when overhealing by +8. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -8052,6 +8310,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8089,7 +8348,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -8111,6 +8370,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8159,7 +8419,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -8181,6 +8441,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8229,7 +8490,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains an extra Arcana VII — Iron Blue Will at Level 10. Can find special pickups and spawns Mirrors of Truth every 5 levels.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -8251,6 +8512,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8299,7 +8561,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8323,6 +8585,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8360,7 +8623,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8384,6 +8647,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8421,7 +8685,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8445,6 +8709,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8482,7 +8747,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Speed: triggers all equipped weapons from the Coat of Arms.",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8506,6 +8771,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8543,7 +8809,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -8565,6 +8831,7 @@ window.VS_DATA = {
         "Greed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -8609,7 +8876,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -8631,6 +8898,7 @@ window.VS_DATA = {
         "Greed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -8674,8 +8942,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage.Also gains +1 Revival every 100 levels. Enemies drop Blue, Red, or Yellow Souls that increase Growth, Might, or Greed respectively when set amounts are collected.",
-      "custom_description": "",
+      "description": "Also gains +1 Revival every 100 levels. Enemies drop Blue, Red, or Yellow Souls that increase Growth, Might, or Greed respectively when set amounts are collected.",
+      "effect_clarifications": "Gains +1% Might every level. Immune to health drain. Once per life, triggers Soul Steal after receiving fatal damage. Enemy Souls grant a reward at certain kill thresholds: Red Souls grant an Arma Dio, Blue Souls grant a  Candybox, and Yellow Souls grant a  Gold Finger.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8703,6 +8971,7 @@ window.VS_DATA = {
         "Revival",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -8747,14 +9016,13 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/charlotte_aulin_sprite.gif",
       "base_name": "Charlotte Aulin",
       "starting_weapons": [
-        "Raging Fire",
-        "Belnades' Spellbook"
+        "Raging Fire"
       ],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
-      "custom_description": "",
+      "effect_clarifications": "Belnades' Spellbook ability charges while standing still. Charge time is 15 seconds and reduced by Growth to a minimum of 3 seconds at 400% Growth.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8780,6 +9048,7 @@ window.VS_DATA = {
         "Duration",
         "Area"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8811,14 +9080,13 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/charlotte_aulin_sprite.gif",
       "base_name": "Charlotte Aulin",
       "starting_weapons": [
-        "Belnades' Spellbook",
         "Belnades' Spellbook"
       ],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Growth: triggers all equipped weapons from the Belnades Spellbook.",
-      "custom_description": "",
+      "effect_clarifications": "Belnades' Spellbook ability charges while standing still. Charge time is 15 seconds and reduced by Growth to a minimum of 3 seconds at 400% Growth.",
       "notes": "",
       "affinity_groups": [
         {
@@ -8844,6 +9112,7 @@ window.VS_DATA = {
         "Duration",
         "Area"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8881,11 +9150,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed",
             "Duration"
@@ -8896,6 +9165,7 @@ window.VS_DATA = {
         "Move Speed",
         "Duration"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8933,11 +9203,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "Starts with extra Arcana XIV - Jail of Crystal. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed",
             "Duration"
@@ -8948,6 +9218,7 @@ window.VS_DATA = {
         "Move Speed",
         "Duration"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -8985,19 +9256,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Tragic Princess (III)",
       "description": "Starts with extra Arcana III - Tragic Princess.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Magnet, Move Speed, Speed]"
+            "Magnet",
+            "Move Speed",
+            "Speed"
           ]
         }
       ],
       "affinity": [
-        "Magnet, Move Speed, Speed]"
+        "Magnet",
+        "Move Speed",
+        "Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9035,19 +9311,24 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Tragic Princess (III)",
       "description": "Starts with extra Arcana III - Tragic Princess.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Magnet, Move Speed, Speed]"
+            "Magnet",
+            "Move Speed",
+            "Speed"
           ]
         }
       ],
       "affinity": [
-        "Magnet, Move Speed, Speed]"
+        "Magnet",
+        "Move Speed",
+        "Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9085,7 +9366,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Level-up triggers Dominus Anger.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9109,6 +9390,7 @@ window.VS_DATA = {
         "Recovery",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9146,7 +9428,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge: Soul Steal. LevelUp: Dark Inferno. Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Level-up triggers Dominus Anger.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9170,6 +9452,7 @@ window.VS_DATA = {
         "Recovery",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9207,7 +9490,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Gains -20% Cooldown for the duration of the effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9237,6 +9520,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
@@ -9274,7 +9558,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Gains -20% Cooldown for the duration of the effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9304,6 +9588,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
@@ -9341,7 +9626,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Gains -20% Cooldown for the duration of the effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9371,6 +9656,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
@@ -9408,7 +9694,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
-      "custom_description": "",
+      "effect_clarifications": "Offered a Familiar Forge every 7 levels as a 4th level up option (max 16 Familiar Forges). Familiar Forges will stop being offered if the player has no valid weapon or passive weapon level up choices.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9430,6 +9716,7 @@ window.VS_DATA = {
         "Magnet",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9477,7 +9764,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
-      "custom_description": "",
+      "effect_clarifications": "Offered a Familiar Forge every 7 levels as a 4th level up option (max 16 Familiar Forges). Familiar Forges will stop being offered if the player has no valid weapon or passive weapon level up choices.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9499,6 +9786,7 @@ window.VS_DATA = {
         "Magnet",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9546,7 +9834,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 4).",
-      "custom_description": "",
+      "effect_clarifications": "Offered a Familiar Forge every 7 levels as a 4th level up option (max 16 Familiar Forges). Familiar Forges will stop being offered if the player has no valid weapon or passive weapon level up choices.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9568,6 +9856,7 @@ window.VS_DATA = {
         "Magnet",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9615,7 +9904,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000. On overheal (≥32), triggers Mirror of Truth and Rapid Fire for her followers.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9639,6 +9928,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9717,7 +10007,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000. On overheal (≥32), triggers Mirror of Truth and Rapid Fire for her followers.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9741,6 +10031,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9819,7 +10110,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a follower every 10 levels starting from level 2. Overhealing slightly increases Might. Overhealing by +32 temporarily boosts all current followers.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000. On overheal (≥32), triggers Mirror of Truth and Rapid Fire for her followers.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9843,6 +10134,7 @@ window.VS_DATA = {
         "Move Speed",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -9921,7 +10213,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Ebony Diabologue ability charges while standing still. Charge time is 30 seconds.",
       "notes": "",
       "affinity_groups": [
         {
@@ -9945,6 +10237,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -9989,7 +10282,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level. Charge ability: triggers all equipped weapons from the Ebony Diabologue. Can find special pickups.",
-      "custom_description": "",
+      "effect_clarifications": "Ebony Diabologue ability charges while standing still. Charge time is 30 seconds.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10013,6 +10306,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -10057,13 +10351,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
-      "custom_description": "",
+      "effect_clarifications": "Neutron Bomb ability charges while standing still. Charge time is 75 seconds and reduced by Might to a minimum of 15 seconds at 400% Might. On activation, 45% chance to lose 35% Max Health, reduced by Luck.",
       "notes": "",
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
-            "Might"
+            "Might",
+            "Luck"
           ]
         },
         {
@@ -10076,9 +10371,11 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Might",
+        "Luck",
         "Revival",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10116,13 +10413,14 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Might: attempts to safely deconate a Neutron Bomb.",
-      "custom_description": "",
+      "effect_clarifications": "Neutron Bomb ability charges while standing still. Charge time is 75 seconds and reduced by Might to a minimum of 15 seconds at 400% Might. On activation, 45% chance to lose 35% Max Health, reduced by Luck.",
       "notes": "",
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
-            "Might"
+            "Might",
+            "Luck"
           ]
         },
         {
@@ -10135,9 +10433,11 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Might",
+        "Luck",
         "Revival",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10175,7 +10475,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Speed from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000. Gains a Might multiplier with a maximum value of 2x, scaling with Speed gained from Overhealing.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10201,6 +10501,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
@@ -10238,7 +10539,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Speed. Might is greatly increased while Invulnerable.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Speed from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000. Gains a Might multiplier with a maximum value of 2x, scaling with Speed gained from Overhealing.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10264,6 +10565,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
@@ -10301,7 +10603,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
-      "custom_description": "",
+      "effect_clarifications": "Gains up to 100% Luck and Area with 300 enemies on the screen.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10329,6 +10631,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
@@ -10366,7 +10669,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a bonus to Area and Luck depending on how many enemies are in sight.",
-      "custom_description": "",
+      "effect_clarifications": "Gains up to 100% Luck and Area with 300 enemies on the screen.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10394,6 +10697,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
@@ -10431,7 +10735,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might for each 1% Curse. With Ebony and Crimson Stones, changes form at level 80 and gains 2 Armor, 50% Move Speed, 150% Might and -20% Cooldown.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10457,6 +10761,7 @@ window.VS_DATA = {
         "Greed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -10507,7 +10812,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might for each 1% Curse. With Ebony and Crimson Stones, changes form at level 80 and gains 2 Armor, 50% Move Speed, 150% Might and -20% Cooldown.",
       "notes": "",
       "affinity_groups": [
         {
@@ -10533,6 +10838,7 @@ window.VS_DATA = {
         "Greed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -10583,7 +10889,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Sarabande of Healing (VI)",
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10607,6 +10913,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10644,7 +10951,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Sarabande of Healing (VI)",
       "description": "Starts with extra Arcana VI - Sarabande of Healing. Obtains a Heart Refresh every 2 levels.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10668,6 +10975,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10705,7 +11013,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Waltz of Pearls (XI)",
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10727,6 +11035,7 @@ window.VS_DATA = {
         "Move Speed",
         "Amount"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10764,7 +11073,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Waltz of Pearls (XI)",
       "description": "Starts with extra Arcana XI - Waltz of Pearls.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10786,6 +11095,7 @@ window.VS_DATA = {
         "Move Speed",
         "Amount"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10823,7 +11133,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Gemini (I)",
       "description": "Starts with extra Arcana I - Gemini.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10847,6 +11157,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10884,7 +11195,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Gemini (I)",
       "description": "Starts with extra Arcana I - Gemini.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10908,6 +11219,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -10945,7 +11257,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Twilight Requiem (II)",
       "description": "Starts with extra Arcana II - Twilight Requiem.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -10969,6 +11281,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11006,7 +11319,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Twilight Requiem (II)",
       "description": "Starts with extra Arcana II - Twilight Requiem.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -11030,6 +11343,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11067,7 +11381,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "With Ebony and Crimson Stones, changes form at certain kill thresholds gaining 200% Might, -50% Cooldown and becoming invulnerable. Megalo form lasts for 30 seconds and queues to guarantee full duration. The kill requirement caps at 15,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11099,6 +11413,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -11136,7 +11451,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "With Ebony and Crimson Stones, changes form at certain kill thresholds gaining 200% Might, -50% Cooldown and becoming invulnerable. Megalo form lasts for 30 seconds and queues to guarantee full duration. The kill requirement caps at 15,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11168,6 +11483,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -11205,7 +11521,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemies spawn quantity by 50. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "With Ebony and Crimson Stones, changes form at certain kill thresholds gaining 200% Might, -50% Cooldown and becoming invulnerable. Megalo form lasts for 30 seconds and queues to guarantee full duration. The kill requirement caps at 15,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11237,6 +11553,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -11274,7 +11591,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "custom_description": "",
+      "effect_clarifications": "Gains an additional 1x Critical Multiplier.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11296,6 +11613,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11333,7 +11651,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "custom_description": "",
+      "effect_clarifications": "Gains an additional 1x Critical Multiplier.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11355,6 +11673,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11392,7 +11711,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "custom_description": "",
+      "effect_clarifications": "Gains an additional 1x Critical Multiplier.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11414,6 +11733,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11451,7 +11771,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Slash (XVI)",
       "description": "Starts with extra Arcana XVI - Slash. Inflicts higher overall critical damage.",
-      "custom_description": "",
+      "effect_clarifications": "Gains an additional 1x Critical Multiplier.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11473,6 +11793,7 @@ window.VS_DATA = {
         "Max Health",
         "Might"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11502,7 +11823,7 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/isaac_trident.png",
       "sprite_static": "assets/icons/characters/isaac_sprite.png",
       "sprite_gif": "assets/icons/characters/isaac_sprite.gif",
-      "base_name": "Isaac (Trident)",
+      "base_name": "Isaac",
       "starting_weapons": [
         "Trident"
       ],
@@ -11510,7 +11831,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -11534,6 +11855,7 @@ window.VS_DATA = {
         "Magnet",
         "Familiar"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11573,7 +11895,7 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/isaac_spectral_sword.png",
       "sprite_static": "assets/icons/characters/isaac_sprite.png",
       "sprite_gif": "assets/icons/characters/isaac_sprite.gif",
-      "base_name": "Isaac (Spectral Sword)",
+      "base_name": "Isaac",
       "starting_weapons": [
         "Spectral Sword"
       ],
@@ -11581,7 +11903,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -11605,6 +11927,7 @@ window.VS_DATA = {
         "Magnet",
         "Familiar"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11644,7 +11967,7 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/isaac_ebony_diabologue.png",
       "sprite_static": "assets/icons/characters/isaac_sprite.png",
       "sprite_gif": "assets/icons/characters/isaac_sprite.gif",
-      "base_name": "Isaac (Ebony Diabologue)",
+      "base_name": "Isaac",
       "starting_weapons": [
         "Ebony Diabologue"
       ],
@@ -11652,7 +11975,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains a random Familiar as a follower every 10 levels (max 6).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -11676,6 +11999,7 @@ window.VS_DATA = {
         "Magnet",
         "Familiar"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -11723,7 +12047,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -11745,6 +12069,7 @@ window.VS_DATA = {
         "Duration",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "recovery",
@@ -11789,7 +12114,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +0.02 Recovery every level. Once per life, triggers Firebreathing for every character after receiving fatal damage. Evolves the Alchemy Whip when reviving.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -11811,6 +12136,7 @@ window.VS_DATA = {
         "Duration",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "recovery",
@@ -11854,8 +12180,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": "Disco of Gold (XV)",
-      "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
-      "custom_description": "",
+      "description": "Overhealing slightly increases Greed. Greed is doubled while Invulnerable. Starts with extra Arcana XV - Disco of Gold.",
+      "effect_clarifications": "Gains Greed from overhealing on a logarithmic scale with no bonus below 2,000 overhealing and 100% at 20,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11877,6 +12203,7 @@ window.VS_DATA = {
         "Greed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
@@ -11913,8 +12240,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": "Disco of Gold (XV)",
-      "description": "- Vincent starts with +1  Armor, +20%  Greed, and +10  Banishes. He also starts with an extra  Disco of Gold (XV).\n- Vincent gains a Greed bonus while overhealing based on log(TotalOverhealing) Note that Vincent does not accumulate overhealing at a 1:1 ratio, instead multiplying overhealing by 0.0005 before adding it to the total.\n- While Vincent is invulnerable, his total Greed is doubled.\n- incent can find special Ode to Castlevania pickups from light sources.",
-      "custom_description": "",
+      "description": "Overhealing slightly increases Greed. Greed is doubled while Invulnerable. Starts with extra Arcana XV - Disco of Gold.",
+      "effect_clarifications": "Gains Greed from overhealing on a logarithmic scale with no bonus below 2,000 overhealing and 100% at 20,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -11936,6 +12263,7 @@ window.VS_DATA = {
         "Greed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
@@ -11972,8 +12300,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
-      "custom_description": "",
+      "description": "Gains a bonus to Might and Cooldown depending on how many enemies are in sight.",
+      "effect_clarifications": "Gains up to 40% Might and -40% Cooldown with 300 enemies on the screen.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12001,6 +12329,7 @@ window.VS_DATA = {
         "Max Health",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
@@ -12037,8 +12366,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "- Albus starts with +20  Max Health and +40%  Move Speed.\n- Albus gains a bonus to Might and Cooldown based on the proportion of on-screen enemies out of 300. At 300 enemies, Albus has a maximum of -40% Cooldown and +40% Might.\n- He can find special Ode to Castlevania pickups from light sources.\n- Items that increase  Curse and  Charm, such as  Torrona's Box and  Karoma's Mana, can be picked to increase the number of enemies on the screen and maximize the bonuses.\r\n- Wicked Season (XIII) may also be chosen early to increase Curse.",
-      "custom_description": "",
+      "description": "Gains a bonus to Might and Cooldown depending on how many enemies are in sight.",
+      "effect_clarifications": "Gains up to 40% Might and -40% Cooldown with 300 enemies on the screen.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12066,6 +12395,7 @@ window.VS_DATA = {
         "Max Health",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
@@ -12103,7 +12433,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Silent Old Sanctuary (XX)",
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -12123,6 +12453,7 @@ window.VS_DATA = {
         "Growth",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "growth",
@@ -12167,7 +12498,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Silent Old Sanctuary (XX)",
       "description": "Gains +1% Growth every level. Starts with extra Arcana XX - Silent Old Sanctuary.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -12187,6 +12518,7 @@ window.VS_DATA = {
         "Growth",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "growth",
@@ -12231,7 +12563,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 200% Might, -20% Cooldown and 50% Curse for the duration of the effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12263,6 +12595,7 @@ window.VS_DATA = {
         "Move Speed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "curse",
@@ -12307,7 +12640,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Curse every level. Becomes invincible and deals damage to nearby enemies for 20 seconds when health reaches a critically low level.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 200% Might, -20% Cooldown and 50% Curse for the duration of the effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12339,6 +12672,7 @@ window.VS_DATA = {
         "Move Speed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "curse",
@@ -12383,7 +12717,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -12405,6 +12739,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -12449,7 +12784,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -12471,6 +12806,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -12515,7 +12851,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Out of Bounds (XII)",
       "description": "Gains 0.2% Cooldown reduction per level. Starts with extra Arcana XII - Out of Bounds.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -12537,6 +12873,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -12581,7 +12918,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
-      "custom_description": "",
+      "effect_clarifications": "Arcana gained are extra and do not replace normal Arcana chests.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12603,6 +12940,7 @@ window.VS_DATA = {
         "Armor",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12661,7 +12999,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
-      "custom_description": "",
+      "effect_clarifications": "Arcana gained are extra and do not replace normal Arcana chests.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12683,6 +13021,7 @@ window.VS_DATA = {
         "Armor",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12741,7 +13080,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Awake (IV)",
       "description": "Starts with extra Arcana IV- Awake. Gain an extra choice of Arcana after survivng 7 and 14 minutes.",
-      "custom_description": "",
+      "effect_clarifications": "Arcana gained are extra and do not replace normal Arcana chests.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12763,6 +13102,7 @@ window.VS_DATA = {
         "Armor",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -12821,7 +13161,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 100 Max Health, 2 Armor, 40% Move Speed and 2 Amount after chaning form. Offered Custos weapons not in his possession as a 4th level up option always regardless of unlock state in the collection.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12845,6 +13185,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
@@ -12882,7 +13223,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 100 Max Health, 2 Armor, 40% Move Speed and 2 Amount after chaning form. Offered Custos weapons not in his possession as a 4th level up option always regardless of unlock state in the collection.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12906,6 +13247,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
@@ -12943,7 +13285,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Morphs into a stronger version when equipped with Trinum Custodem.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 100 Max Health, 2 Armor, 40% Move Speed and 2 Amount after chaning form. Offered Custos weapons not in his possession as a 4th level up option always regardless of unlock state in the collection.",
       "notes": "",
       "affinity_groups": [
         {
@@ -12967,6 +13309,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
@@ -13004,7 +13347,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might and Curse from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -13034,6 +13377,7 @@ window.VS_DATA = {
         "Area",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -13071,7 +13415,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might and Curse from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -13101,6 +13445,7 @@ window.VS_DATA = {
         "Area",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -13138,7 +13483,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might and Curse from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -13168,6 +13513,7 @@ window.VS_DATA = {
         "Area",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -13205,7 +13551,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing slightly increase Might and Curse. Might receive Ebony Diabologue as 4th level up option until Level 11.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might and Curse from overhealing on a logarithmic scale with no bonus below 1,000 overhealing and 100% at 10,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -13235,6 +13581,7 @@ window.VS_DATA = {
         "Area",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
@@ -13272,7 +13619,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Cannot be damaged, but disappear after reaching the current time limit.",
-      "custom_description": "",
+      "effect_clarifications": "Offered a fixed 4th leveling-up option, in sequence, that ignores weapon slot availability: Peachone, Ebony Wings, and Familiar Forgeup to 30 Familiar Forges.",
       "notes": "",
       "affinity_groups": [
         {
@@ -13294,6 +13641,7 @@ window.VS_DATA = {
         "Luck",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -13361,7 +13709,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13381,6 +13729,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13425,7 +13774,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13445,6 +13794,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13489,7 +13839,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13509,6 +13859,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13553,7 +13904,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13573,6 +13924,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13617,7 +13969,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13637,6 +13989,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13681,7 +14034,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13701,6 +14054,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13745,7 +14099,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13765,6 +14119,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13809,7 +14164,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13829,6 +14184,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13873,7 +14229,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13893,6 +14249,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -13939,7 +14296,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -13959,6 +14316,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -14004,7 +14362,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +3).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -14024,6 +14382,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -14069,7 +14428,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -14095,6 +14454,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -14140,7 +14500,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -14166,6 +14526,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -14212,19 +14573,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Water included.",
-      "custom_description": "",
+      "effect_clarifications": "Begins with a hidden Acquazzone that triggers every 5 seconds.",
       "notes": "",
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14265,11 +14618,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Mad Groove (VIII)",
       "description": "Deeply moved by money.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 80% Move Speed the first time Rapidus Fio fires, 2% Move Speed every level, and starts with an extra Mad Groove (VIII). Gold Fever duration cap and extension are multiplied by 1.5x",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Greed",
             "Gold Fever",
@@ -14282,6 +14635,7 @@ window.VS_DATA = {
         "Gold Fever",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "move_speed",
@@ -14326,11 +14680,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets more projectiles every 20 levels (Max +3). Amount is doubled while invulnerable.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1 Amount every 20 levels and Amount is doubled while Invulnerable.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Invulnerable",
             "Amount"
@@ -14341,6 +14695,7 @@ window.VS_DATA = {
         "Invulnerable",
         "Amount"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -14385,7 +14740,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Retaliates with Aura Blast. Triggers Aura Blast and a random equipped weapon from the Coat of Arms when overhealing by +8.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -14409,6 +14764,7 @@ window.VS_DATA = {
         "Retaliate",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14446,7 +14802,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Valmanway. Might receive Coat of Arms as 4th level up option until Level 15.",
-      "custom_description": "",
+      "effect_clarifications": "Also adept with Tyrfing.",
       "notes": "",
       "affinity_groups": [
         {
@@ -14470,6 +14826,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14507,7 +14864,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
-      "custom_description": "",
+      "effect_clarifications": "Kaiser Knuckle, Lapiste Tepisto, and Bracelet lineage attacks from taking damage are not considered retaliatory damage.",
       "notes": "",
       "affinity_groups": [
         {
@@ -14535,6 +14892,7 @@ window.VS_DATA = {
         "Might",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14572,7 +14930,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with all weapons from the Coat of Arms. Retaliates by triggering Kaiser Knuckle, Lapiste Tepisto, and any Bracelet.",
-      "custom_description": "",
+      "effect_clarifications": "Kaiser Knuckle, Lapiste Tepisto, and Bracelet lineage attacks from taking damage are not considered retaliatory damage.",
       "notes": "",
       "affinity_groups": [
         {
@@ -14600,6 +14958,7 @@ window.VS_DATA = {
         "Might",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14637,11 +14996,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "custom_description": "",
+      "effect_clarifications": "After obtaining a Dominus Hatred and upgrading it to level 6, morphs into Carmilla and receives her stats and passive bonuses.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Cooldown",
             "Recovery"
@@ -14652,6 +15011,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14720,11 +15080,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "custom_description": "",
+      "effect_clarifications": "After obtaining a Dominus Hatred and upgrading it to level 6, morphs into Carmilla and receives her stats and passive bonuses.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Cooldown",
             "Recovery"
@@ -14735,6 +15095,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14803,11 +15164,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "custom_description": "",
+      "effect_clarifications": "After obtaining a Dominus Hatred and upgrading it to level 6, morphs into Carmilla and receives her stats and passive bonuses.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Cooldown",
             "Recovery"
@@ -14818,6 +15179,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14886,11 +15248,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Summons a selection of clockwork weapons.",
-      "custom_description": "",
+      "effect_clarifications": "After obtaining a Dominus Hatred and upgrading it to level 6, morphs into Carmilla and receives her stats and passive bonuses.",
       "notes": "",
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Cooldown",
             "Recovery"
@@ -14901,6 +15263,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -14969,7 +15332,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with temporarily reduced Cooldown. Overhealing slightly decreases Cooldown. Rosaries are easier to find.",
-      "custom_description": "",
+      "effect_clarifications": "Cooldown bonus diminishes to 0 by level 4.",
       "notes": "",
       "affinity_groups": [
         {
@@ -14991,6 +15354,7 @@ window.VS_DATA = {
         "Cooldown",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "cooldown",
@@ -15050,7 +15414,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15074,6 +15438,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15114,7 +15479,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15138,6 +15503,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15178,7 +15544,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15202,6 +15568,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15242,7 +15609,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte!",
-      "custom_description": "",
+      "effect_clarifications": "Coat of Arms ability charges while standing still. Charge time is 15 seconds and reduced by Speed to a minimum of 3 seconds at 400% Speed.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15266,6 +15633,7 @@ window.VS_DATA = {
         "Might",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15306,7 +15674,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
-      "custom_description": "",
+      "effect_clarifications": "Belnades' Spellbook ability charges while standing still. Charge time is 15 seconds and reduced by Growth to a minimum of 3 seconds at 400% Growth.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15332,6 +15700,7 @@ window.VS_DATA = {
         "Duration",
         "Area"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15372,7 +15741,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan! Charlotte! Jonathan!",
-      "custom_description": "",
+      "effect_clarifications": "Belnades' Spellbook ability charges while standing still. Charge time is 15 seconds and reduced by Growth to a minimum of 3 seconds at 400% Growth.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15398,6 +15767,7 @@ window.VS_DATA = {
         "Duration",
         "Area"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15438,7 +15808,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15460,6 +15830,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15500,7 +15871,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15522,6 +15893,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15559,7 +15931,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15581,6 +15953,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15618,7 +15991,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15640,6 +16013,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15677,7 +16051,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Blood Astronomia (XXI)",
       "description": "Starts with extra Arcana XXI - Blood Astronomia. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15701,6 +16075,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15740,7 +16115,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Fights well with (and against) his father.",
-      "custom_description": "",
+      "effect_clarifications": "Hidden whips trigger when receiving damage, this attack is not considered retaliatory damage and can occur once every 4 seconds, reduced by Speed to a minimum of 0.5.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15766,6 +16141,7 @@ window.VS_DATA = {
         "Revival",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15803,7 +16179,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increase the base damage of every equipped fire-type weapon when levelling up.",
-      "custom_description": "",
+      "effect_clarifications": "Base damage increase is 0.5 per level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -15816,6 +16192,7 @@ window.VS_DATA = {
       "affinity": [
         "Fire"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15853,19 +16230,11 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gets a hidden clone of the latest equipped weapon or evolution.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15904,7 +16273,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Karma Coin every 2 levels.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15919,6 +16288,7 @@ window.VS_DATA = {
         "Luck",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -15956,7 +16326,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Wicked Season (XIII)",
       "description": "Starts with extra Arcana XIII - Wicked Season. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -15980,6 +16350,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16016,8 +16387,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Totally not Alucard",
-      "custom_description": "",
+      "description": "- Genya has the same bonuses as Alucard; Charge: Soul Steal. LevelUp: Dark Inferno (Actually Dominus Hatred). Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.\n- Genya must heal to full to recharge his HP Critical ability.",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16041,6 +16412,7 @@ window.VS_DATA = {
         "Recovery",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16078,7 +16450,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Immune to health drain. Can choose a per-level bonus.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16109,12 +16481,13 @@ window.VS_DATA = {
         "Curse",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": null
+          "max": 1
         }
       ],
       "reference_scaling": "",
@@ -16153,7 +16526,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a random equipped weapon from the Ebony Diabologue when overhealing by +8. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Ebony Diabologue ability does not trigger evolutions of Ebony Diabologue weapons.",
       "notes": "",
       "affinity_groups": [
         {
@@ -16181,6 +16554,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16218,7 +16592,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Charge ability affected by Curse: triggers all equipped Dominus weapons. Immune to health drain. Can fly.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16246,6 +16620,7 @@ window.VS_DATA = {
         "Might",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16283,7 +16658,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains more projectiles every 20 levels (max +4).",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16303,6 +16678,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -16345,7 +16721,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Game Killer (0)",
       "description": "He doesn't understand the game.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16364,6 +16740,9 @@ window.VS_DATA = {
       "affinity": [
         "Halted XP",
         "Move Speed"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -16402,7 +16781,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Six axes axe axes as axes axe.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 5% Might, 5% Move Speed and 5% Curse every 10 levels (max 20%) and gains a hidden Axe every 10 levels (max 6).",
       "notes": "",
       "affinity_groups": [
         {
@@ -16421,6 +16800,7 @@ window.VS_DATA = {
         "Curse",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -16487,7 +16867,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "She likes her Wall and Floor chicken well frozen.",
-      "custom_description": "",
+      "effect_clarifications": "Overhealing (≥32) triggers a Sorbetto.",
       "notes": "",
       "affinity_groups": [
         {
@@ -16511,6 +16891,7 @@ window.VS_DATA = {
         "Move Speed",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16548,7 +16929,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Luck every level. Can fly.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16568,6 +16949,7 @@ window.VS_DATA = {
         "Luck",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "luck",
@@ -16610,7 +16992,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1 Armor every 5 levels. Horizontally impaired. Retaliates.",
-      "custom_description": "",
+      "effect_clarifications": "Moves at 25% of normal Move Speed when moving horizontally. When taking damage, deals retaliatory damage equal to its level, increased by Armor.",
       "notes": "",
       "affinity_groups": [
         {
@@ -16636,6 +17018,7 @@ window.VS_DATA = {
         "Greed",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "armor",
@@ -16683,7 +17066,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Grows additional swords when accumulatively Overhealing by an increasingly larger amount (Max 12 swords).",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1 hidden Ruler Sword Body when overhealing at specific thresholds (max 12). After all 12 swords are obtained, overhealing (≥32) causes all swords to shoot out and retract, dealing damage to enemies and increases the damage of hidden Ruler Sword Bodies.",
       "notes": "",
       "affinity_groups": [
         {
@@ -16705,6 +17088,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16763,7 +17147,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Her hidden vacuum draws in items, destructibles, and enemies.",
-      "custom_description": "",
+      "effect_clarifications": "Ability affects all pickups, stage items, enemies, and light sources with an area of effect that stretches to the edge of the screen.",
       "notes": "",
       "affinity_groups": [
         {
@@ -16783,6 +17167,7 @@ window.VS_DATA = {
         "Magnet",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16820,7 +17205,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Lost & Found Painting (XVII)",
       "description": "Starts with extra Arcana XVII - Lost & Found Painting. Triggers Keremet Morbus when overhealing by +8.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 5% Move Speed, 5% Might, and 5% Curse every 10 levels (max 20%) and gains 1 Armor every 20 levels starting at level 30 (max 50).",
       "notes": "",
       "affinity_groups": [
         {
@@ -16844,6 +17229,7 @@ window.VS_DATA = {
         "Curse",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -16908,7 +17294,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with a hidden Star Flail. Enemies have a 15% chance to spawn Defanged. Can turn defeated enemies into followers.",
-      "custom_description": "",
+      "effect_clarifications": "Maximum follower count is determined by level (max 10 at level 95).",
       "notes": "",
       "affinity_groups": [
         {
@@ -16934,6 +17320,7 @@ window.VS_DATA = {
         "Max Health",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -16971,7 +17358,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +32 triggers any equipped weapon from the Belnades Spellbook.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -16993,6 +17380,7 @@ window.VS_DATA = {
         "Recovery",
         "Duration"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17033,7 +17421,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Gemma Torpor, Runetracer, Magi-Stone, and Kyra-Stones. Has a hidden Runetracer that grows stronger when levelling up.",
-      "custom_description": "",
+      "effect_clarifications": "Hidden Runetracer gains 1 damage per level.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17061,6 +17449,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17101,7 +17490,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Overhealing by +32 triggers any equipped weapon from the Coat of Arms and slowly floods the environment.",
-      "custom_description": "",
+      "effect_clarifications": "Overhealing (≥32) triggers hidden Acquazzone which gains height with each instance of overhealing (≥32).",
       "notes": "",
       "affinity_groups": [
         {
@@ -17125,6 +17514,7 @@ window.VS_DATA = {
         "Duration",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17162,7 +17552,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Boogaloo of Illusions (XVIII)",
       "description": "Starts with extra Arcana XVIII - Boogaloo of Illusions.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -17184,6 +17574,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17221,7 +17612,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Beginning (X)",
       "description": "A trio of zombies posing as vampire hunters.",
-      "custom_description": "",
+      "effect_clarifications": "Starts with an extra Beginning (X) and gains 1 Amount every 10 levels (max 3).",
       "notes": "",
       "affinity_groups": [
         {
@@ -17241,6 +17632,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -17285,7 +17677,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Jail of Crystal (XIV)",
       "description": "A trio of zombies posing as vampire hunters.",
-      "custom_description": "",
+      "effect_clarifications": "Starts with an extra Jail of Crystal (XIV).",
       "notes": "",
       "affinity_groups": [
         {
@@ -17305,6 +17697,7 @@ window.VS_DATA = {
         "Duration",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17342,7 +17735,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "A trio of zombies posing as vampire hunters.",
-      "custom_description": "",
+      "effect_clarifications": "Triggers any equipped knives in retaliation or when overhealing by +8.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17368,6 +17761,7 @@ window.VS_DATA = {
         "Luck",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17405,7 +17799,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Trident. Always followed by Gaibon. Gets enraged if its partner dies.",
-      "custom_description": "",
+      "effect_clarifications": "Gains -90% Cooldown for 20 seconds when enraged.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17419,6 +17813,9 @@ window.VS_DATA = {
       "affinity": [
         "Might",
         "Armor"
+      ],
+      "conflict": [
+        "Cooldown"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -17457,7 +17854,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with Fire Wand. Always followed by Slogra. Gets enraged if its partner dies. Flies.",
-      "custom_description": "",
+      "effect_clarifications": "Gains -90% Cooldown for 20 seconds when enraged.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17471,6 +17868,9 @@ window.VS_DATA = {
       "affinity": [
         "Might",
         "Armor"
+      ],
+      "conflict": [
+        "Cooldown"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -17509,7 +17909,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 100% Move Speed and -33% Cooldown while an Orologion is in effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17537,6 +17937,7 @@ window.VS_DATA = {
         "Amount",
         "Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
@@ -17574,7 +17975,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Adept with knives. Gains a Cooldown and MoveSpeed bonus when picking up Orologions. Orologions are easier to find.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 100% Move Speed and -33% Cooldown while an Orologion is in effect.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17602,6 +18003,7 @@ window.VS_DATA = {
         "Amount",
         "Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
@@ -17639,7 +18041,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers a random equipped weapon every 13th hop. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -17660,6 +18062,9 @@ window.VS_DATA = {
         "Move Speed",
         "Greed",
         "Recovery"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -17698,7 +18103,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Chaos in the Dark Night (V)",
       "description": "Can choose a per-level bonus after defeating a set amount of enemies (max 5 times).",
-      "custom_description": "",
+      "effect_clarifications": "Starts with an extra Chaos in the Dark Night (V) and is able to gain up to five Arcana.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17729,6 +18134,7 @@ window.VS_DATA = {
         "Curse",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "stat_choice",
@@ -17808,7 +18214,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through the dinner.",
-      "custom_description": "",
+      "effect_clarifications": "With Ebony and Crimson Stones, changes form at certain kill thresholds gaining 200% Might, -50% Cooldown, becoming invulnerable, and gaining Nduja Fritta Tanto. Megalo form lasts for 30 seconds and queues to guarantee full duration. The kill requirement caps at 15,000.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17844,6 +18250,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
@@ -17885,7 +18292,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Has hidden weapons that grow stronger when leveling up. Can fly.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -17907,6 +18314,7 @@ window.VS_DATA = {
         "Might",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -17944,7 +18352,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
-      "custom_description": "",
+      "effect_clarifications": "With Ebony and Crimson Stones, changes form at level 80 and gains  200% Might, -20% Cooldown, 100% Curse, and becomes invulnerable. Disappears at time limit.",
       "notes": "",
       "affinity_groups": [
         {
@@ -17970,6 +18378,7 @@ window.VS_DATA = {
         "Curse",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 1 by boolean",
@@ -18007,7 +18416,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Bigger is better.",
-      "custom_description": "",
+      "effect_clarifications": "Gains a hidden Lightning Ring every 8 levels (max 5).",
       "notes": "",
       "affinity_groups": [
         {
@@ -18033,6 +18442,7 @@ window.VS_DATA = {
         "Armor",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18080,7 +18490,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18112,6 +18522,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18149,7 +18560,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Increases enemy spawn quantity by 50. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18181,6 +18592,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18218,7 +18630,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through dinner.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18254,6 +18666,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18291,7 +18704,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Count on him to change halfway through dinner.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18327,6 +18740,7 @@ window.VS_DATA = {
         "Armor",
         "Curse"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18358,13 +18772,14 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/megalo_death_sprite.gif",
       "base_name": "Megalo Death",
       "starting_weapons": [
-        "Death Spiral"
+        "Death Spiral",
+        "Death Hand"
       ],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18390,6 +18805,7 @@ window.VS_DATA = {
         "Curse",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18421,13 +18837,14 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/megalo_death_sprite.gif",
       "base_name": "Megalo Death",
       "starting_weapons": [
-        "Ebony Diabologue"
+        "Death Spiral",
+        "Death Hand"
       ],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18453,6 +18870,7 @@ window.VS_DATA = {
         "Curse",
         "Cooldown"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -18490,7 +18908,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might for each 1% Curse.",
       "notes": "",
       "affinity_groups": [
         {
@@ -18516,6 +18934,7 @@ window.VS_DATA = {
         "Greed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -18568,7 +18987,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might for each 1% Curse.",
       "notes": "",
       "affinity_groups": [
         {
@@ -18594,6 +19013,7 @@ window.VS_DATA = {
         "Greed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -18644,7 +19064,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains +1% Might every level and +1 Revival every 100 levels. Curse increases Might. Incoming damage capped at 10. Immune to health drain.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 1% Might for each 1% Curse.",
       "notes": "",
       "affinity_groups": [
         {
@@ -18670,6 +19090,7 @@ window.VS_DATA = {
         "Greed",
         "Revival"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -18720,7 +19141,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": "Gemini (I)|Twilight Requiem (II)|Tragic Princess (III)|Awake (IV)|Chaos in the Dark Night (V)|Sarabande of Healing (VI)|Iron Blue Will (VII)|Mad Groove (VIII)|Divine Bloodline (IX)|Beginning (X)|Waltz of Pearls (XI)|Out of Bounds (XII)|Wicked Season (XIII)|Jail of Crystal (XIV)|Disco of Gold (XV)|Slash (XVI)|Lost & Found Painting (XVII)|Boogaloo of Illusions (XVIII)|Heart of Fire (XIX)|Silent Old Sanctuary (XX)|Blood Astronomia (XXI)",
       "description": "Starts with Arcana I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, and XXI.",
-      "custom_description": "",
+      "effect_clarifications": "Normal Arcana chests do not spawn.",
       "notes": "",
       "affinity_groups": [
         {
@@ -18734,6 +19155,9 @@ window.VS_DATA = {
       "affinity": [
         "Max Health",
         "Magnet"
+      ],
+      "conflict": [
+        "Growth"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -18772,7 +19196,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18794,6 +19218,7 @@ window.VS_DATA = {
         "Speed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -18831,7 +19256,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18853,6 +19278,7 @@ window.VS_DATA = {
         "Speed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -18890,7 +19316,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18912,6 +19338,7 @@ window.VS_DATA = {
         "Speed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -18949,7 +19376,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -18971,6 +19398,7 @@ window.VS_DATA = {
         "Speed",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -19009,7 +19437,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Might for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19033,6 +19461,7 @@ window.VS_DATA = {
         "Max Health",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -19078,7 +19507,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Might for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19102,6 +19531,7 @@ window.VS_DATA = {
         "Max Health",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -19147,7 +19577,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Might for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19171,6 +19601,7 @@ window.VS_DATA = {
         "Max Health",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -19216,7 +19647,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Might when using glimmered techs. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Might for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19240,6 +19671,7 @@ window.VS_DATA = {
         "Max Health",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -19284,7 +19716,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Duration for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19308,6 +19740,7 @@ window.VS_DATA = {
         "Armor",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "duration",
@@ -19352,7 +19785,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Duration for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19376,6 +19809,7 @@ window.VS_DATA = {
         "Armor",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "duration",
@@ -19420,7 +19854,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Duration for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19444,6 +19878,7 @@ window.VS_DATA = {
         "Armor",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "duration",
@@ -19488,7 +19923,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains Duration when using glimmered techs.Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains 0.1% Duration for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19512,6 +19947,7 @@ window.VS_DATA = {
         "Armor",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "duration",
@@ -19556,7 +19992,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -19571,6 +20007,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -19607,8 +20044,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "description": "Charge: fires an array of Super Missiles.",
+      "effect_clarifications": "Triggers Showstopper at critical health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19622,6 +20059,9 @@ window.VS_DATA = {
       "affinity": [
         "Max Health",
         "Armor"
+      ],
+      "conflict": [
+        "Move Speed"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -19659,8 +20099,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "description": "Can Fly. High Magnet and Move Speed, but low Max Health.",
+      "effect_clarifications": "Triggers Showstopper at critical health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19674,6 +20114,9 @@ window.VS_DATA = {
       "affinity": [
         "Move Speed",
         "Magnet"
+      ],
+      "conflict": [
+        "Max Health"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -19711,8 +20154,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "description": "Charge: triggers the \"Ballistic Missiles\" tech.",
+      "effect_clarifications": "Triggers Showstopper at critical health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19736,6 +20179,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -19772,8 +20216,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "description": "Can fly. Can innately use the \"Cosmic Rave\" tech.",
+      "effect_clarifications": "Triggers Showstopper at critical health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19797,6 +20241,7 @@ window.VS_DATA = {
         "Max Health",
         "Armor"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -19833,8 +20278,8 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Different skins have different stats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "description": "Gains bonuses to Might, Projective speed, Duration, Area, Cooldown, and Recovery based on the total of glimmered techs",
+      "effect_clarifications": "Gains 5% Might, 5% Speed (max 100%), 5% Duration (max 100%), 2.5% Area (max 50%), -1% Cooldown (max -10%), 0.03 Recovery, (max 1) for every tech glimmered.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19864,6 +20309,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "might: 0.05 per [Glimmer Tech]|\nspeed: 0.05 per [Glimmer Tech] max 1|\nduration: 0.05 per [Glimmer Tech] max 1|\narea: 0.025 per [Glimmer Tech] max 0.5|\ncooldown: -0.01 per [Glimmer Tech] max -0.1|\nrecovery: 0.003 per [Glimmer Tech] max 1",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -19902,7 +20348,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Summon frequency is based on level (max 3 cats every 3 seconds at level 80). Collecting the rainbow cat attracts all other cats. Gains 2% Might, Area, Speed, Duration, Luck and Growth, -1% Cooldown, and 0.2 Magnet for every cat collected.",
       "notes": "",
       "affinity_groups": [
         {
@@ -19936,6 +20382,7 @@ window.VS_DATA = {
         "Growth",
         "Magnet"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -20023,7 +20470,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Summon frequency is based on level (max 3 cats every 3 seconds at level 80). Collecting the rainbow cat attracts all other cats. Gains 2% Might, Area, Speed, Duration, Luck and Growth, -1% Cooldown, and 0.2 Magnet for every cat collected.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20057,6 +20504,7 @@ window.VS_DATA = {
         "Growth",
         "Magnet"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "might",
@@ -20143,7 +20591,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "A maximum of 4 followers can be obtained, requiring 300 Max Health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20167,6 +20615,7 @@ window.VS_DATA = {
         "Move Speed",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20204,7 +20653,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "A maximum of 4 followers can be obtained, requiring 300 Max Health.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20228,6 +20677,7 @@ window.VS_DATA = {
         "Move Speed",
         "Recovery"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20265,7 +20715,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers glimmered techs more often than normal. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20287,6 +20737,7 @@ window.VS_DATA = {
         "Might",
         "Greed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20324,7 +20775,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health and on revival. Gains a bonus to Cooldown every time Showstopper is triggered (Max - 20%).",
-      "custom_description": "",
+      "effect_clarifications": "Gains a -0.8% Cooldown on each Showstopper trigger.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20352,6 +20803,7 @@ window.VS_DATA = {
         "Luck",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20392,7 +20844,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Starts with a hidden Rings of Calamity. Increases enemy spawn quantity by 50. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20420,6 +20872,7 @@ window.VS_DATA = {
         "Cooldown",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20457,7 +20910,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Heaven's Thunder\" tech. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20479,6 +20932,7 @@ window.VS_DATA = {
         "Speed",
         "Amount"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20516,7 +20970,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20533,6 +20987,7 @@ window.VS_DATA = {
         "Revival",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20570,7 +21025,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20587,6 +21042,7 @@ window.VS_DATA = {
         "Revival",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20624,7 +21080,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20641,6 +21097,7 @@ window.VS_DATA = {
         "Revival",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20678,7 +21135,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20695,6 +21152,7 @@ window.VS_DATA = {
         "Revival",
         "Growth"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
@@ -20732,7 +21190,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Mr. S will showcase his skills with techs. Gets more projectiles every 20 levels (max +4).",
-      "custom_description": "",
+      "effect_clarifications": "Triggers glimmer techs with every attack.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20754,6 +21212,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed"
       ],
+      "conflict": [],
       "scaling": [
         {
           "key": "amount",
@@ -20796,7 +21255,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Triggers Showstopper at critical health. Gain a follower whenever Showstopper is triggered.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -20821,6 +21280,11 @@ window.VS_DATA = {
         "Luck",
         "Move Speed",
         "Recovery"
+      ],
+      "conflict": [
+        "Max Health",
+        "Might",
+        "Area"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -20857,7 +21321,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Shallow Slice\" and \"Airwave\" tech. Gains bonus Recovery whenever Showstopper is triggered at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains between 0.1 and 1 Recovery on each Showstopper trigger.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20883,6 +21347,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean|\nrecovery: source HP Critical min 0 max 10",
@@ -20918,7 +21383,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Hell's Fury\" and \"Blood Rage\" tech. Gains bonus Might whenever Showstopper is triggered at critical health.",
-      "custom_description": "",
+      "effect_clarifications": "Gains between 5% and 50% Might on each Showstopper trigger.",
       "notes": "",
       "affinity_groups": [
         {
@@ -20941,6 +21406,9 @@ window.VS_DATA = {
         "Might",
         "Move Speed",
         "Max Health"
+      ],
+      "conflict": [
+        "Duration"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -20979,7 +21447,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Innately knows the \"Vermillion Sands\" tech.",
-      "custom_description": "",
+      "effect_clarifications": "Gains Might  for every triggered glimmer tech.",
       "notes": "",
       "affinity_groups": [
         {
@@ -21006,6 +21474,10 @@ window.VS_DATA = {
         "Max Health",
         "Area",
         "Armor"
+      ],
+      "conflict": [
+        "Move Speed",
+        "Luck"
       ],
       "scaling": [],
       "reference_scaling": "",
@@ -21044,7 +21516,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Starts with a Survarot draft. Has a Survarot level Multiplier of 4.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -21070,6 +21542,7 @@ window.VS_DATA = {
         "Move Speed",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -21107,7 +21580,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Using Skip when levelling up has a chance to trigger a Survarot draft.",
-      "custom_description": "",
+      "effect_clarifications": "Chance starts at 100% and decreases by 5% for every Survarot (min 10%).",
       "notes": "",
       "affinity_groups": [
         {
@@ -21129,6 +21602,7 @@ window.VS_DATA = {
         "Cooldown",
         "Luck"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -21166,7 +21640,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Starts with a Survarot draft. Reduces boss health and blocks some special attacks.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -21179,6 +21653,7 @@ window.VS_DATA = {
       "affinity": [
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -21216,7 +21691,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Can always find Survarots. Can equip up to 100 Passive Weapons.",
-      "custom_description": "",
+      "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
         {
@@ -21238,6 +21713,7 @@ window.VS_DATA = {
         "Luck",
         "Max Health"
       ],
+      "conflict": [],
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
@@ -21308,7 +21784,47 @@ window.VS_DATA = {
       "final_state": "Fuwalafuwaloo",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 100
+      "rarity": 100,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Vampire-Killing Tool"
+          ]
+        },
+        {
+          "key": "Passive",
+          "items": [
+            "Max Health"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Vampire-Killing Tool",
+        "Max Health",
+        "Luck"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Bloody Tear",
@@ -21353,7 +21869,48 @@ window.VS_DATA = {
       "final_state": "Fuwalafuwaloo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Luck",
+            "Recovery",
+            "Vampire-Killing Tool"
+          ]
+        },
+        {
+          "key": "Passive",
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck",
+        "Recovery",
+        "Vampire-Killing Tool",
+        "Max Health"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Slash (XVI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Vento Sacro",
@@ -21411,7 +21968,40 @@ window.VS_DATA = {
       "final_state": "Fuwalafuwaloo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Speed",
+            "Duration",
+            "Critical Damage",
+            "Luck"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Speed",
+        "Duration",
+        "Critical Damage",
+        "Luck"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Divine Bloodline (IX)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Fuwalafuwaloo",
@@ -21460,7 +22050,50 @@ window.VS_DATA = {
       "final_state": "Fuwalafuwaloo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Speed",
+            "Duration",
+            "Critical Damage",
+            "Luck",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Passive",
+          "items": [
+            "Max Health"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Speed",
+        "Duration",
+        "Critical Damage",
+        "Luck",
+        "Recovery",
+        "Max Health"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Magic Wand",
@@ -21518,7 +22151,33 @@ window.VS_DATA = {
       "final_state": "Spirit of Light",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 100
+      "rarity": 100,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Holy Wand",
@@ -21569,7 +22228,33 @@ window.VS_DATA = {
       "final_state": "Spirit of Light",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Summon Spirit",
@@ -21627,7 +22312,30 @@ window.VS_DATA = {
       "final_state": "Spirit of Light",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Area"
+      ],
+      "arcana": []
     },
     {
       "name": "Spirit of Light",
@@ -21676,7 +22384,33 @@ window.VS_DATA = {
       "final_state": "Spirit of Light",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Knife",
@@ -21734,7 +22468,34 @@ window.VS_DATA = {
       "final_state": "Million Cut",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 100
+      "rarity": 100,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Thousand Edge",
@@ -21785,7 +22546,34 @@ window.VS_DATA = {
       "final_state": "Million Cut",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Valmanway",
@@ -21831,7 +22619,32 @@ window.VS_DATA = {
       "final_state": "Million Cut",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": []
     },
     {
       "name": "Million Cut",
@@ -21868,7 +22681,36 @@ window.VS_DATA = {
       "final_state": "Million Cut",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Axe",
@@ -21926,7 +22768,34 @@ window.VS_DATA = {
       "final_state": "Legacy of Death: Soul River",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 100
+      "rarity": 100,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Death Spiral",
@@ -21971,7 +22840,34 @@ window.VS_DATA = {
       "final_state": "Legacy of Death: Soul River",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Dark Rift",
@@ -22017,7 +22913,30 @@ window.VS_DATA = {
       "final_state": "Legacy of Death: Soul River",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Legacy of Death: Soul River",
@@ -22066,7 +22985,34 @@ window.VS_DATA = {
       "final_state": "Legacy of Death: Soul River",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Cross",
@@ -22124,7 +23070,34 @@ window.VS_DATA = {
       "final_state": "Arch Angle",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Divine Bloodline (IX)",
+        "Waltz of Pearls (XI)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Heaven Sword",
@@ -22175,7 +23148,35 @@ window.VS_DATA = {
       "final_state": "Arch Angle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Grand Cross",
@@ -22221,7 +23222,29 @@ window.VS_DATA = {
       "final_state": "Arch Angle",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": []
     },
     {
       "name": "Arch Angle",
@@ -22270,7 +23293,33 @@ window.VS_DATA = {
       "final_state": "Arch Angle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "King Bible",
@@ -22328,7 +23377,33 @@ window.VS_DATA = {
       "final_state": "Ninth Circle",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Divine Bloodline (IX)"
+      ]
     },
     {
       "name": "Unholy Vespers",
@@ -22379,7 +23454,32 @@ window.VS_DATA = {
       "final_state": "Ninth Circle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Icebrand",
@@ -22443,7 +23543,35 @@ window.VS_DATA = {
       "final_state": "Ninth Circle",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Ninth Circle",
@@ -22492,7 +23620,35 @@ window.VS_DATA = {
       "final_state": "Ninth Circle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Fire Wand",
@@ -22544,7 +23700,35 @@ window.VS_DATA = {
       "final_state": "Kardía Phlegeton",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Hellfire",
@@ -22589,7 +23773,35 @@ window.VS_DATA = {
       "final_state": "Kardía Phlegeton",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Aura Blast",
@@ -22635,7 +23847,31 @@ window.VS_DATA = {
       "final_state": "Kardía Phlegeton",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Kardía Phlegeton",
@@ -22684,7 +23920,35 @@ window.VS_DATA = {
       "final_state": "Kardía Phlegeton",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Garlic",
@@ -22724,7 +23988,34 @@ window.VS_DATA = {
       "final_state": "Dark Frogamorphosis",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Freeze"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Freeze"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Amount"
+      ],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Divine Bloodline (IX)",
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Soul Eater",
@@ -22757,7 +24048,37 @@ window.VS_DATA = {
       "final_state": "Dark Frogamorphosis",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Recovery",
+            "Freeze"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Recovery",
+        "Freeze"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Amount"
+      ],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Sarabande of Healing (VI)",
+        "Blood Astronomia (XXI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Speculo Anura",
@@ -22808,7 +24129,30 @@ window.VS_DATA = {
       "final_state": "Speculo Anura",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": []
     },
     {
       "name": "Anura",
@@ -22866,7 +24210,32 @@ window.VS_DATA = {
       "final_state": "Dark Frogamorphosis",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Dark Frogamorphosis",
@@ -22915,7 +24284,37 @@ window.VS_DATA = {
       "final_state": "Dark Frogamorphosis",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Freeze"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Freeze"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": [
+        "Gemini (I)",
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Santa Water",
@@ -22967,7 +24366,35 @@ window.VS_DATA = {
       "final_state": "Hydro Pump Climax",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 100
+      "rarity": 100,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Divine Bloodline (IX)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "La Borra",
@@ -23012,7 +24439,36 @@ window.VS_DATA = {
       "final_state": "Hydro Pump Climax",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Hydro Storm",
@@ -23058,7 +24514,30 @@ window.VS_DATA = {
       "final_state": "Hydro Pump Climax",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown"
+      ],
+      "conflict": [
+        "Amount"
+      ],
+      "arcana": []
     },
     {
       "name": "Hydro Pump Climax",
@@ -23113,7 +24592,36 @@ window.VS_DATA = {
       "final_state": "Hydro Pump Climax",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Runetracer",
@@ -23171,7 +24679,34 @@ window.VS_DATA = {
       "final_state": "Carnage Heart",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "NO FUTURE",
@@ -23222,7 +24757,37 @@ window.VS_DATA = {
       "final_state": "Carnage Heart",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Troll Bomb",
@@ -23262,7 +24827,28 @@ window.VS_DATA = {
       "final_state": "Carnage Heart",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Area"
+      ],
+      "arcana": []
     },
     {
       "name": "Carnage Heart",
@@ -23311,7 +24897,37 @@ window.VS_DATA = {
       "final_state": "Carnage Heart",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Lightning Ring",
@@ -23357,7 +24973,34 @@ window.VS_DATA = {
       "final_state": "Vjaya Sisters",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)",
+        "Divine Bloodline (IX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Thunder Loop",
@@ -23396,7 +25039,33 @@ window.VS_DATA = {
       "final_state": "Vjaya Sisters",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Sword Brothers",
@@ -23430,7 +25099,24 @@ window.VS_DATA = {
       "final_state": "Vjaya Sisters",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Cooldown",
+            "Invulnerable"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Cooldown",
+        "Invulnerable"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Vjaya Sisters",
@@ -23467,7 +25153,32 @@ window.VS_DATA = {
       "final_state": "Vjaya Sisters",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Invulnerable"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Invulnerable"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Pentagram",
@@ -23501,7 +25212,22 @@ window.VS_DATA = {
       "final_state": "Venus Crescent",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Gorgeous Moon",
@@ -23528,7 +25254,22 @@ window.VS_DATA = {
       "final_state": "Venus Crescent",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Summon Spirit Tornado",
@@ -23580,7 +25321,20 @@ window.VS_DATA = {
       "final_state": "Venus Crescent",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Venus Crescent",
@@ -23605,7 +25359,20 @@ window.VS_DATA = {
       "final_state": "Venus Crescent",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Peachone",
@@ -23663,7 +25430,24 @@ window.VS_DATA = {
       "final_state": "Vandalier",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Cygnus",
@@ -23683,7 +25467,22 @@ window.VS_DATA = {
       "final_state": "Cygnus",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Ebony Wings",
@@ -23741,7 +25540,24 @@ window.VS_DATA = {
       "final_state": "Vandalier",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Zhar Ptytsia",
@@ -23761,7 +25577,22 @@ window.VS_DATA = {
       "final_state": "Zhar Ptytsia",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Vandalier",
@@ -23817,7 +25648,23 @@ window.VS_DATA = {
       "final_state": "Vandalier",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Phiera Der Tuphello",
@@ -23876,7 +25723,24 @@ window.VS_DATA = {
       "final_state": "Phieraggi",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Iron Blue Will (VII)",
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Red Muscle",
@@ -23896,7 +25760,22 @@ window.VS_DATA = {
       "final_state": "Red Muscle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Eight The Sparrow",
@@ -23955,7 +25834,24 @@ window.VS_DATA = {
       "final_state": "Phieraggi",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Iron Blue Will (VII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Twice Upon a Time",
@@ -23975,7 +25871,22 @@ window.VS_DATA = {
       "final_state": "Twice Upon a Time",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Phieraggi",
@@ -24024,7 +25935,22 @@ window.VS_DATA = {
       "final_state": "Phieraggi",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Gatti Amari",
@@ -24082,7 +26008,23 @@ window.VS_DATA = {
       "final_state": "Power of Lire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Flock Destroyer",
@@ -24102,7 +26044,20 @@ window.VS_DATA = {
       "final_state": "Flock Destroyer",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Vicious Hunger",
@@ -24153,7 +26108,33 @@ window.VS_DATA = {
       "final_state": "Power of Lire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Disco of Gold (XV)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Soul Steal",
@@ -24193,7 +26174,20 @@ window.VS_DATA = {
       "final_state": "Power of Lire",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Power of Lire",
@@ -24211,7 +26205,20 @@ window.VS_DATA = {
       "final_state": "Power of Lire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Song of Mana",
@@ -24257,7 +26264,23 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Divine Bloodline (IX)",
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Mannajja",
@@ -24296,7 +26319,22 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Arrow of Goth",
@@ -24348,7 +26386,20 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Dies Irae",
@@ -24403,7 +26454,23 @@ window.VS_DATA = {
       "final_state": "Dies Irae",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Shadow Pinion",
@@ -24461,7 +26528,23 @@ window.VS_DATA = {
       "final_state": "Darkness Illusion",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Valkyrie Turner",
@@ -24512,7 +26595,24 @@ window.VS_DATA = {
       "final_state": "Darkness Illusion",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Svarog Statue",
@@ -24564,7 +26664,23 @@ window.VS_DATA = {
       "final_state": "Darkness Illusion",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Darkness Illusion",
@@ -24613,7 +26729,24 @@ window.VS_DATA = {
       "final_state": "Darkness Illusion",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Clock Lancet",
@@ -24647,7 +26780,23 @@ window.VS_DATA = {
       "final_state": "Infinite Corridor",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Infinite Corridor",
@@ -24672,7 +26821,22 @@ window.VS_DATA = {
       "final_state": "Infinite Corridor",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)"
+      ]
     },
     {
       "name": "Laurel",
@@ -24699,7 +26863,22 @@ window.VS_DATA = {
       "final_state": "Crimson Shroud",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Crimson Shroud",
@@ -24736,7 +26915,20 @@ window.VS_DATA = {
       "final_state": "Crimson Shroud",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Bone",
@@ -24794,7 +26986,24 @@ window.VS_DATA = {
       "final_state": "Anima of Mortaccio",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Beginning (X)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Anima of Mortaccio",
@@ -24843,7 +27052,23 @@ window.VS_DATA = {
       "final_state": "Anima of Mortaccio",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Cherry Bomb",
@@ -24907,7 +27132,22 @@ window.VS_DATA = {
       "final_state": "Yatta Daikarin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Beginning (X)"
+      ]
     },
     {
       "name": "Yatta Daikarin",
@@ -24956,7 +27196,22 @@ window.VS_DATA = {
       "final_state": "Yatta Daikarin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Carréllo",
@@ -25014,7 +27269,26 @@ window.VS_DATA = {
       "final_state": "Carozza!",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Iron Blue Will (VII)",
+        "Beginning (X)",
+        "Waltz of Pearls (XI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Carozza!",
@@ -25051,7 +27325,22 @@ window.VS_DATA = {
       "final_state": "Carozza!",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Celestial Dusting",
@@ -25109,7 +27398,25 @@ window.VS_DATA = {
       "final_state": "Profusione D'Amore",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Sarabande of Healing (VI)",
+        "Beginning (X)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Profusione D'Amore",
@@ -25158,7 +27465,22 @@ window.VS_DATA = {
       "final_state": "Profusione D'Amore",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "La Robba",
@@ -25214,7 +27536,23 @@ window.VS_DATA = {
       "final_state": "La Robba",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Beginning (X)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Greatest Jubilee",
@@ -25271,7 +27609,23 @@ window.VS_DATA = {
       "final_state": "Greatest Jubilee",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Bracelet",
@@ -25319,7 +27673,27 @@ window.VS_DATA = {
       "final_state": "Lapiste Tepisto",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 40
+      "rarity": 40,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Bi-Bracelet",
@@ -25367,7 +27741,26 @@ window.VS_DATA = {
       "final_state": "Lapiste Tepisto",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Tri-Bracelet",
@@ -25417,7 +27810,27 @@ window.VS_DATA = {
       "final_state": "Lapiste Tepisto",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Kaiser Knuckle",
@@ -25463,7 +27876,20 @@ window.VS_DATA = {
       "final_state": "Lapiste Tepisto",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Lapiste Tepisto",
@@ -25506,7 +27932,25 @@ window.VS_DATA = {
       "final_state": "Lapiste Tepisto",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Candybox",
@@ -25524,7 +27968,22 @@ window.VS_DATA = {
       "final_state": "Candybox",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Super Candybox II Turbo",
@@ -25542,7 +28001,20 @@ window.VS_DATA = {
       "final_state": "Super Candybox II Turbo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Pako Battiliar",
@@ -25594,7 +28066,22 @@ window.VS_DATA = {
       "final_state": "Mazo Familiar",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Mazo Familiar",
@@ -25637,7 +28124,22 @@ window.VS_DATA = {
       "final_state": "Mazo Familiar",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Ammo Appalate",
@@ -25695,7 +28197,25 @@ window.VS_DATA = {
       "final_state": "Gunastrophe",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Slash (XVI)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Horse Cartridge",
@@ -25746,7 +28266,23 @@ window.VS_DATA = {
       "final_state": "Horse Cartridge",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)",
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Gunastrophe",
@@ -25777,7 +28313,25 @@ window.VS_DATA = {
       "final_state": "Gunastrophe",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Slash (XVI)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Victory Sword",
@@ -25827,7 +28381,23 @@ window.VS_DATA = {
       "final_state": "Victory Sword",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 30
+      "rarity": 30,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Divine Bloodline (IX)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Sole Solution",
@@ -25845,7 +28415,20 @@ window.VS_DATA = {
       "final_state": "Sole Solution",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Flames of Misspell",
@@ -25897,7 +28480,25 @@ window.VS_DATA = {
       "final_state": "Ashes of Muspell",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 30
+      "rarity": 30,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Ashes of Muspell",
@@ -25940,7 +28541,25 @@ window.VS_DATA = {
       "final_state": "Ashes of Muspell",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Unearthly Bolt",
@@ -25992,7 +28611,20 @@ window.VS_DATA = {
       "final_state": "Spirit Disturbance",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Spirit Disturbance",
@@ -26029,7 +28661,20 @@ window.VS_DATA = {
       "final_state": "Spirit Disturbance",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Glass Fandango",
@@ -26075,7 +28720,20 @@ window.VS_DATA = {
       "final_state": "Celestial Voulge",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Celestial Voulge",
@@ -26112,7 +28770,23 @@ window.VS_DATA = {
       "final_state": "Celestial Voulge",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Penshin Fatcha",
@@ -26131,7 +28805,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Tonno Subito",
@@ -26203,7 +28893,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Tonnado",
@@ -26275,7 +28981,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Tonn'omoto",
@@ -26347,7 +29069,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Tonn'oddeeo",
@@ -26419,7 +29157,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Tonne",
@@ -26491,7 +29245,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Unsurpassed",
@@ -26563,7 +29333,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Miracle of Multiplication",
@@ -26612,7 +29398,23 @@ window.VS_DATA = {
       "final_state": "Miracle of Multiplication",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Santa Javelin",
@@ -26670,7 +29472,26 @@ window.VS_DATA = {
       "final_state": "Seraphic Cry",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Levelin'Eh",
@@ -26690,7 +29511,23 @@ window.VS_DATA = {
       "final_state": "Levelin'Eh",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Seraphic Cry",
@@ -26739,7 +29576,26 @@ window.VS_DATA = {
       "final_state": "Seraphic Cry",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Gaze of Gaea",
@@ -26797,7 +29653,20 @@ window.VS_DATA = {
       "final_state": "Embrace of Gaea",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Embrace of Gaea",
@@ -26846,7 +29715,20 @@ window.VS_DATA = {
       "final_state": "Embrace of Gaea",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Magi-Stone",
@@ -26892,7 +29774,23 @@ window.VS_DATA = {
       "final_state": "Kyra-Stones",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Kyra-Stones",
@@ -26929,7 +29827,23 @@ window.VS_DATA = {
       "final_state": "Kyra-Stones",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Phas3r",
@@ -26975,7 +29889,20 @@ window.VS_DATA = {
       "final_state": "Photonstorm",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Photonstorm",
@@ -27012,7 +29939,20 @@ window.VS_DATA = {
       "final_state": "Photonstorm",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Arma Dio",
@@ -27030,7 +29970,22 @@ window.VS_DATA = {
       "final_state": "Arma Dio",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Chaos Rune",
@@ -27088,7 +30043,20 @@ window.VS_DATA = {
       "final_state": "Wicked Ruler",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 40
+      "rarity": 40,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Wicked Ruler",
@@ -27137,7 +30105,20 @@ window.VS_DATA = {
       "final_state": "Wicked Ruler",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Silver Wind",
@@ -27195,7 +30176,25 @@ window.VS_DATA = {
       "final_state": "Festive Winds",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Sarabande of Healing (VI)",
+        "Divine Bloodline (IX)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Festive Winds",
@@ -27244,7 +30243,24 @@ window.VS_DATA = {
       "final_state": "Festive Winds",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Four Seasons",
@@ -27284,7 +30300,20 @@ window.VS_DATA = {
       "final_state": "Godai Shuffle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Godai Shuffle",
@@ -27315,7 +30344,20 @@ window.VS_DATA = {
       "final_state": "Godai Shuffle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Summon Night",
@@ -27367,7 +30409,20 @@ window.VS_DATA = {
       "final_state": "Echo Night",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Echo Night",
@@ -27410,7 +30465,20 @@ window.VS_DATA = {
       "final_state": "Echo Night",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Mirage Robe",
@@ -27462,7 +30530,23 @@ window.VS_DATA = {
       "final_state": "J'Odore",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "J'Odore",
@@ -27511,7 +30595,23 @@ window.VS_DATA = {
       "final_state": "J'Odore",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Night Sword",
@@ -27557,7 +30657,23 @@ window.VS_DATA = {
       "final_state": "Muramasa",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 30
+      "rarity": 30,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Muramasa",
@@ -27600,7 +30716,24 @@ window.VS_DATA = {
       "final_state": "Muramasa",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Slash (XVI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Mille Bolle Blu",
@@ -27658,7 +30791,23 @@ window.VS_DATA = {
       "final_state": "Boo Roo Boolle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Boo Roo Boolle",
@@ -27707,7 +30856,23 @@ window.VS_DATA = {
       "final_state": "Boo Roo Boolle",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "108 Bocce",
@@ -27745,7 +30910,20 @@ window.VS_DATA = {
       "final_state": "108 Bocce",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 10
+      "rarity": 10,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "SpellString",
@@ -27784,7 +30962,20 @@ window.VS_DATA = {
       "final_state": "SpellStrom",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "SpellStream",
@@ -27829,7 +31020,20 @@ window.VS_DATA = {
       "final_state": "SpellStrom",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "SpellStrike",
@@ -27868,7 +31072,20 @@ window.VS_DATA = {
       "final_state": "SpellStrom",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "SpellStrom",
@@ -27911,7 +31128,20 @@ window.VS_DATA = {
       "final_state": "SpellStrom",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Eskizzibur",
@@ -27957,7 +31187,22 @@ window.VS_DATA = {
       "final_state": "Legionnaire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Legionnaire",
@@ -28000,7 +31245,22 @@ window.VS_DATA = {
       "final_state": "Legionnaire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Flash Arrow",
@@ -28058,7 +31318,24 @@ window.VS_DATA = {
       "final_state": "Millionaire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Millionaire",
@@ -28107,7 +31384,23 @@ window.VS_DATA = {
       "final_state": "Millionaire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Prismatic Missile",
@@ -28165,7 +31458,25 @@ window.VS_DATA = {
       "final_state": "Luminaire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Luminaire",
@@ -28208,7 +31519,25 @@ window.VS_DATA = {
       "final_state": "Luminaire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Shadow Servant",
@@ -28260,7 +31589,23 @@ window.VS_DATA = {
       "final_state": "Ophion",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Silver Sliver",
@@ -28280,7 +31625,20 @@ window.VS_DATA = {
       "final_state": "Silver Sliver",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Ophion",
@@ -28323,7 +31681,23 @@ window.VS_DATA = {
       "final_state": "Ophion",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Party Popper",
@@ -28379,7 +31753,24 @@ window.VS_DATA = {
       "final_state": "Party Popper",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Party Pooper",
@@ -28399,7 +31790,22 @@ window.VS_DATA = {
       "final_state": "Party Pooper",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Report!",
@@ -28457,7 +31863,20 @@ window.VS_DATA = {
       "final_state": "Emergency Meeting",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Emergency Meeting",
@@ -28506,7 +31925,20 @@ window.VS_DATA = {
       "final_state": "Emergency Meeting",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Lucky Swipe",
@@ -28564,7 +31996,20 @@ window.VS_DATA = {
       "final_state": "Crossed Wires",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Crossed Wires",
@@ -28613,7 +32058,20 @@ window.VS_DATA = {
       "final_state": "Crossed Wires",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Lifesign Scan",
@@ -28653,7 +32111,23 @@ window.VS_DATA = {
       "final_state": "Paranormal Scan",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 40
+      "rarity": 40,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Paranormal Scan",
@@ -28684,7 +32158,23 @@ window.VS_DATA = {
       "final_state": "Paranormal Scan",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Just Vent",
@@ -28736,7 +32226,20 @@ window.VS_DATA = {
       "final_state": "Unjust Ejection",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Unjust Ejection",
@@ -28779,7 +32282,20 @@ window.VS_DATA = {
       "final_state": "Unjust Ejection",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Clear Debris",
@@ -28837,7 +32353,20 @@ window.VS_DATA = {
       "final_state": "Clear Asteroids",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Clear Asteroids",
@@ -28886,7 +32415,20 @@ window.VS_DATA = {
       "final_state": "Clear Asteroids",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sharp Tongue",
@@ -28938,7 +32480,22 @@ window.VS_DATA = {
       "final_state": "Impostongue",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Silver Tongue",
@@ -28958,7 +32515,20 @@ window.VS_DATA = {
       "final_state": "Silver Tongue",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Impostongue",
@@ -29001,7 +32571,23 @@ window.VS_DATA = {
       "final_state": "Impostongue",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Science Rocks",
@@ -29053,7 +32639,20 @@ window.VS_DATA = {
       "final_state": "Rocket Science",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Rocket Science",
@@ -29096,7 +32695,20 @@ window.VS_DATA = {
       "final_state": "Rocket Science",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Hats",
@@ -29152,7 +32764,23 @@ window.VS_DATA = {
       "final_state": "Hats",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Long Gun",
@@ -29204,7 +32832,23 @@ window.VS_DATA = {
       "final_state": "Prototype A",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Prototype A",
@@ -29253,7 +32897,23 @@ window.VS_DATA = {
       "final_state": "Prototype A",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Short Gun",
@@ -29312,7 +32972,23 @@ window.VS_DATA = {
       "final_state": "Prototype B",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Prototype B",
@@ -29361,7 +33037,24 @@ window.VS_DATA = {
       "final_state": "Prototype B",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Spread Shot",
@@ -29420,7 +33113,23 @@ window.VS_DATA = {
       "final_state": "Prototype C",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Prototype C",
@@ -29469,7 +33178,24 @@ window.VS_DATA = {
       "final_state": "Prototype C",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Heart of Fire (XIX)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "C-U-Laser",
@@ -29522,7 +33248,23 @@ window.VS_DATA = {
       "final_state": "Pronto Beam",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Pronto Beam",
@@ -29565,7 +33307,23 @@ window.VS_DATA = {
       "final_state": "Pronto Beam",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Firearm",
@@ -29618,7 +33376,23 @@ window.VS_DATA = {
       "final_state": "Fire-L3GS",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Fire-L3GS",
@@ -29667,7 +33441,23 @@ window.VS_DATA = {
       "final_state": "Fire-L3GS",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Sonic Bloom",
@@ -29726,7 +33516,23 @@ window.VS_DATA = {
       "final_state": "Wave Beam",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Wave Beam",
@@ -29769,7 +33575,23 @@ window.VS_DATA = {
       "final_state": "Wave Beam",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Homing Miss",
@@ -29822,7 +33644,22 @@ window.VS_DATA = {
       "final_state": "Multistage Missiles",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Multistage Missiles",
@@ -29865,7 +33702,22 @@ window.VS_DATA = {
       "final_state": "Multistage Missiles",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Diver Mines",
@@ -29924,7 +33776,20 @@ window.VS_DATA = {
       "final_state": "Atmo-Torpedo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Atmo-Torpedo",
@@ -29973,7 +33838,20 @@ window.VS_DATA = {
       "final_state": "Atmo-Torpedo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Blade Crossbow",
@@ -30038,7 +33916,20 @@ window.VS_DATA = {
       "final_state": "BFC2000-AD",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "BFC2000-AD",
@@ -30087,7 +33978,20 @@ window.VS_DATA = {
       "final_state": "BFC2000-AD",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Prism Lass",
@@ -30140,7 +34044,24 @@ window.VS_DATA = {
       "final_state": "Time Warp",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Out of Bounds (XII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Prism Damsel",
@@ -30160,7 +34081,23 @@ window.VS_DATA = {
       "final_state": "Prism Damsel",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Time Warp",
@@ -30209,7 +34146,23 @@ window.VS_DATA = {
       "final_state": "Time Warp",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Out of Bounds (XII)"
+      ]
     },
     {
       "name": "Metal Claw",
@@ -30262,7 +34215,20 @@ window.VS_DATA = {
       "final_state": "Big Fuzzy Fist",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Big Fuzzy Fist",
@@ -30305,7 +34271,20 @@ window.VS_DATA = {
       "final_state": "Big Fuzzy Fist",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Alchemy Whip",
@@ -30351,7 +34330,23 @@ window.VS_DATA = {
       "final_state": "Vampire Killer",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Vampire Killer",
@@ -30388,7 +34383,24 @@ window.VS_DATA = {
       "final_state": "Vampire Killer",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Slash (XVI)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Wind Whip",
@@ -30434,7 +34446,22 @@ window.VS_DATA = {
       "final_state": "Spirit Tornado Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Spirit Tornado Tip",
@@ -30471,7 +34498,22 @@ window.VS_DATA = {
       "final_state": "Spirit Tornado Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Platinum Whip",
@@ -30523,7 +34565,22 @@ window.VS_DATA = {
       "final_state": "Cross Crasher Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Cross Crasher Tip",
@@ -30566,7 +34623,22 @@ window.VS_DATA = {
       "final_state": "Cross Crasher Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Dragon Water Whip",
@@ -30624,7 +34696,23 @@ window.VS_DATA = {
       "final_state": "Hydrostormer Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Hydrostormer Tip",
@@ -30673,7 +34761,23 @@ window.VS_DATA = {
       "final_state": "Hydrostormer Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Sonic Whip",
@@ -30725,7 +34829,22 @@ window.VS_DATA = {
       "final_state": "Crissaegrim Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Crissaegrim Tip",
@@ -30768,7 +34887,22 @@ window.VS_DATA = {
       "final_state": "Crissaegrim Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Jet Black Whip",
@@ -30814,7 +34948,23 @@ window.VS_DATA = {
       "final_state": "Mormegil Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Mormegil Tip",
@@ -30851,7 +35001,23 @@ window.VS_DATA = {
       "final_state": "Mormegil Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Vibhuti Whip",
@@ -30903,7 +35069,22 @@ window.VS_DATA = {
       "final_state": "Daybreaker Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Daybreaker Tip",
@@ -30946,7 +35127,22 @@ window.VS_DATA = {
       "final_state": "Daybreaker Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Vanitas Whip",
@@ -30992,7 +35188,23 @@ window.VS_DATA = {
       "final_state": "Aurablaster Tip",
       "ode_category": "Magic Whip",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)",
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Aurablaster Tip",
@@ -31035,7 +35247,23 @@ window.VS_DATA = {
       "final_state": "Aurablaster Tip",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)",
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Shuriken",
@@ -31062,7 +35290,23 @@ window.VS_DATA = {
       "final_state": "Yagyu Shuriken",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Yagyu Shuriken",
@@ -31080,7 +35324,23 @@ window.VS_DATA = {
       "final_state": "Yagyu Shuriken",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Curved Knife",
@@ -31107,7 +35367,23 @@ window.VS_DATA = {
       "final_state": "Bwaka Knife",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Bwaka Knife",
@@ -31125,7 +35401,23 @@ window.VS_DATA = {
       "final_state": "Bwaka Knife",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Javelin",
@@ -31189,7 +35481,27 @@ window.VS_DATA = {
       "final_state": "Long Inus",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)",
+        "Iron Blue Will (VII)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Long Inus",
@@ -31244,7 +35556,23 @@ window.VS_DATA = {
       "final_state": "Long Inus",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Discus",
@@ -31271,7 +35599,20 @@ window.VS_DATA = {
       "final_state": "Stellar Blade",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Stellar Blade",
@@ -31289,7 +35630,20 @@ window.VS_DATA = {
       "final_state": "Stellar Blade",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Iron Ball",
@@ -31341,7 +35695,23 @@ window.VS_DATA = {
       "final_state": "Wrecking Ball",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Wrecking Ball",
@@ -31384,7 +35754,23 @@ window.VS_DATA = {
       "final_state": "Wrecking Ball",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Iron Blue Will (VII)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Silver Revolver",
@@ -31411,7 +35797,20 @@ window.VS_DATA = {
       "final_state": "Jewel Gun",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Jewel Gun",
@@ -31460,7 +35859,20 @@ window.VS_DATA = {
       "final_state": "Jewel Gun",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Hand Grenade",
@@ -31506,7 +35918,22 @@ window.VS_DATA = {
       "final_state": "The RPG",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "The RPG",
@@ -31543,7 +35970,22 @@ window.VS_DATA = {
       "final_state": "The RPG",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Wine Glass",
@@ -31595,7 +36037,20 @@ window.VS_DATA = {
       "final_state": "Meal Ticket",
       "ode_category": "Vampire-Killing Tool",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Meal Ticket",
@@ -31638,7 +36093,22 @@ window.VS_DATA = {
       "final_state": "Meal Ticket",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hidden Anathema (III)"
+      ]
     },
     {
       "name": "Raging Fire",
@@ -31696,7 +36166,24 @@ window.VS_DATA = {
       "final_state": "Salamender",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Speculo Raging Fire",
@@ -31716,7 +36203,22 @@ window.VS_DATA = {
       "final_state": "Speculo Raging Fire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Salamender",
@@ -31765,7 +36267,24 @@ window.VS_DATA = {
       "final_state": "Salamender",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Ice Fang",
@@ -31823,7 +36342,23 @@ window.VS_DATA = {
       "final_state": "Cocytus",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Speculo Ice Fang",
@@ -31843,7 +36378,22 @@ window.VS_DATA = {
       "final_state": "Speculo Ice Fang",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Cocytus",
@@ -31892,7 +36442,23 @@ window.VS_DATA = {
       "final_state": "Cocytus",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Gale Force",
@@ -31950,7 +36516,23 @@ window.VS_DATA = {
       "final_state": "Pneuma Tempestas",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Waltz of Pearls (XI)"
+      ]
     },
     {
       "name": "Speculo Gale Force",
@@ -31970,7 +36552,20 @@ window.VS_DATA = {
       "final_state": "Speculo Gale Force",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Pneuma Tempestas",
@@ -32019,7 +36614,23 @@ window.VS_DATA = {
       "final_state": "Pneuma Tempestas",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Waltz of Pearls (XI)"
+      ]
     },
     {
       "name": "Rock Riot",
@@ -32077,7 +36688,23 @@ window.VS_DATA = {
       "final_state": "Gemma Torpor",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Waltz of Pearls (XI)"
+      ]
     },
     {
       "name": "Speculo Rock Riot",
@@ -32097,7 +36724,20 @@ window.VS_DATA = {
       "final_state": "Speculo Rock Riot",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Gemma Torpor",
@@ -32146,7 +36786,23 @@ window.VS_DATA = {
       "final_state": "Gemma Torpor",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Waltz of Pearls (XI)"
+      ]
     },
     {
       "name": "Fulgur",
@@ -32204,7 +36860,23 @@ window.VS_DATA = {
       "final_state": "Tenebris Tonitrus",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Speculo Fulgur",
@@ -32224,7 +36896,22 @@ window.VS_DATA = {
       "final_state": "Speculo Fulgur",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Tenebris Tonitrus",
@@ -32273,7 +36960,23 @@ window.VS_DATA = {
       "final_state": "Tenebris Tonitrus",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Keremet Bubbles",
@@ -32331,7 +37034,23 @@ window.VS_DATA = {
       "final_state": "Keremet Morbus",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Speculo Keremet Bubbles",
@@ -32351,7 +37070,22 @@ window.VS_DATA = {
       "final_state": "Speculo Keremet Bubbles",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Keremet Morbus",
@@ -32400,7 +37134,23 @@ window.VS_DATA = {
       "final_state": "Keremet Morbus",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Hex",
@@ -32458,7 +37208,22 @@ window.VS_DATA = {
       "final_state": "Nightmare",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Speculo Hex",
@@ -32478,7 +37243,20 @@ window.VS_DATA = {
       "final_state": "Speculo Hex",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Nightmare",
@@ -32533,7 +37311,22 @@ window.VS_DATA = {
       "final_state": "Nightmare",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Refectio",
@@ -32591,7 +37384,23 @@ window.VS_DATA = {
       "final_state": "Sanctuary",
       "ode_category": "Belnades' Spell",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Speculo Refectio",
@@ -32611,7 +37420,22 @@ window.VS_DATA = {
       "final_state": "Speculo Refectio",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Sanctuary",
@@ -32660,7 +37484,23 @@ window.VS_DATA = {
       "final_state": "Sanctuary",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Mace",
@@ -32687,7 +37527,20 @@ window.VS_DATA = {
       "final_state": "Stamazza",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Stamazza",
@@ -32742,7 +37595,20 @@ window.VS_DATA = {
       "final_state": "Stamazza",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Star Flail",
@@ -32769,7 +37635,20 @@ window.VS_DATA = {
       "final_state": "Moon Rod",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Moon Rod",
@@ -32787,7 +37666,20 @@ window.VS_DATA = {
       "final_state": "Moon Rod",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Alucard Spear",
@@ -32814,7 +37706,20 @@ window.VS_DATA = {
       "final_state": "Thunderbolt Spear",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Thunderbolt Spear",
@@ -32832,7 +37737,20 @@ window.VS_DATA = {
       "final_state": "Thunderbolt Spear",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Trident",
@@ -32878,7 +37796,20 @@ window.VS_DATA = {
       "final_state": "Gungnir-Souris",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Gungnir-Souris",
@@ -32921,7 +37852,22 @@ window.VS_DATA = {
       "final_state": "Gungnir-Souris",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Iron Shield",
@@ -32948,7 +37894,20 @@ window.VS_DATA = {
       "final_state": "Dark Iron Shield",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Dark Iron Shield",
@@ -32966,7 +37925,20 @@ window.VS_DATA = {
       "final_state": "Dark Iron Shield",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Guardian's Targe",
@@ -33018,7 +37990,20 @@ window.VS_DATA = {
       "final_state": "Sacred Beasts Tower Shield",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sacred Beasts Tower Shield",
@@ -33061,7 +38046,20 @@ window.VS_DATA = {
       "final_state": "Sacred Beasts Tower Shield",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Tyrfing",
@@ -33088,7 +38086,22 @@ window.VS_DATA = {
       "final_state": "Rune Sword",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Rune Sword",
@@ -33106,7 +38119,22 @@ window.VS_DATA = {
       "final_state": "Rune Sword",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Alucart Sworb",
@@ -33131,7 +38159,20 @@ window.VS_DATA = {
       "final_state": "Alucard Shield",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Alucard Swords",
@@ -33156,7 +38197,20 @@ window.VS_DATA = {
       "final_state": "Alucard Shield",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Alucard Shield",
@@ -33174,7 +38228,20 @@ window.VS_DATA = {
       "final_state": "Alucard Shield",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Confodere",
@@ -33216,7 +38283,22 @@ window.VS_DATA = {
       "final_state": "Melio Confodere",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Vol Confodere",
@@ -33258,7 +38340,22 @@ window.VS_DATA = {
       "final_state": "Melio Confodere",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Melio Confodere",
@@ -33300,7 +38397,22 @@ window.VS_DATA = {
       "final_state": "Melio Confodere",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Globus",
@@ -33352,7 +38464,22 @@ window.VS_DATA = {
       "final_state": "Nitesco",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Speculo Globus",
@@ -33379,7 +38506,20 @@ window.VS_DATA = {
       "final_state": "Nitesco",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Nitesco",
@@ -33422,7 +38562,22 @@ window.VS_DATA = {
       "final_state": "Nitesco",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)"
+      ]
     },
     {
       "name": "Optical Shot",
@@ -33474,7 +38629,20 @@ window.VS_DATA = {
       "final_state": "Acerbatus",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Acerbatus",
@@ -33517,7 +38685,20 @@ window.VS_DATA = {
       "final_state": "Acerbatus",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Dextro Custos",
@@ -33562,7 +38743,22 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Sinestro Custos",
@@ -33607,7 +38803,20 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Centralis Custos",
@@ -33646,7 +38855,20 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 70
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Trinum Custodem",
@@ -33664,7 +38886,22 @@ window.VS_DATA = {
       "final_state": "Trinum Custodem",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Dominus Anger",
@@ -33690,7 +38927,22 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Dominus Hatred",
@@ -33716,7 +38968,20 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Dominus Agony",
@@ -33761,7 +39026,20 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Power of Sire",
@@ -33779,7 +39057,20 @@ window.VS_DATA = {
       "final_state": "Power of Sire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sonic Dash",
@@ -33806,7 +39097,22 @@ window.VS_DATA = {
       "final_state": "Rapidus Fio",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Rapidus Fio",
@@ -33824,7 +39130,22 @@ window.VS_DATA = {
       "final_state": "Rapidus Fio",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Blood Astronomia (XXI)"
+      ]
     },
     {
       "name": "Luminatio",
@@ -33886,7 +39207,20 @@ window.VS_DATA = {
       "final_state": "Vol Luminatio",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Vol Luminatio",
@@ -33945,7 +39279,20 @@ window.VS_DATA = {
       "final_state": "Vol Luminatio",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Umbra",
@@ -34007,7 +39354,20 @@ window.VS_DATA = {
       "final_state": "Vol Umbra",
       "ode_category": "Ambiguous Power",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Vol Umbra",
@@ -34066,7 +39426,20 @@ window.VS_DATA = {
       "final_state": "Vol Umbra",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Universitas",
@@ -34084,7 +39457,20 @@ window.VS_DATA = {
       "final_state": "Universitas",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Morning Star",
@@ -34102,7 +39488,20 @@ window.VS_DATA = {
       "final_state": "Morning Star",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Coat of Arms",
@@ -34120,7 +39519,20 @@ window.VS_DATA = {
       "final_state": "Coat of Arms",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Spectral Sword",
@@ -34138,7 +39550,20 @@ window.VS_DATA = {
       "final_state": "Spectral Sword",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Belnades' Spellbook",
@@ -34156,7 +39581,20 @@ window.VS_DATA = {
       "final_state": "Belnades' Spellbook",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Ebony Diabologue",
@@ -34174,7 +39612,20 @@ window.VS_DATA = {
       "final_state": "Ebony Diabologue",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Pocket Knife",
@@ -34238,7 +39689,22 @@ window.VS_DATA = {
       "final_state": "Claimh Solais",
       "ode_category": "Magic Weapon",
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Claimh Solais",
@@ -34281,7 +39747,22 @@ window.VS_DATA = {
       "final_state": "Claimh Solais",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Endo Gears",
@@ -34336,7 +39817,20 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Peri Pendulum",
@@ -34391,7 +39885,20 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Myo Lift",
@@ -34446,7 +39953,20 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Epi Head",
@@ -34501,7 +40021,20 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "ode_category": "Clockwork Weapon",
       "arcana_ratings": {},
-      "rarity": 20
+      "rarity": 20,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Clock Tower",
@@ -34519,7 +40052,20 @@ window.VS_DATA = {
       "final_state": "Clock Tower",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Familiar Forge",
@@ -34537,7 +40083,20 @@ window.VS_DATA = {
       "final_state": "Familiar Forge",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 6
+      "rarity": 6,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Ukoback",
@@ -34555,7 +40114,20 @@ window.VS_DATA = {
       "final_state": "Ukoback",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Bitterfly",
@@ -34573,7 +40145,20 @@ window.VS_DATA = {
       "final_state": "Bitterfly",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Alleged Ghost",
@@ -34591,7 +40176,20 @@ window.VS_DATA = {
       "final_state": "Alleged Ghost",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Imp",
@@ -34609,7 +40207,23 @@ window.VS_DATA = {
       "final_state": "Imp",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Wood Rod",
@@ -34627,7 +40241,20 @@ window.VS_DATA = {
       "final_state": "Wood Rod",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Pumpkin",
@@ -34645,7 +40272,20 @@ window.VS_DATA = {
       "final_state": "Pumpkin",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Faerie",
@@ -34663,7 +40303,20 @@ window.VS_DATA = {
       "final_state": "Faerie",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sacred Cardinal",
@@ -34681,7 +40334,20 @@ window.VS_DATA = {
       "final_state": "Sacred Cardinal",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sacred Dragon",
@@ -34699,7 +40365,20 @@ window.VS_DATA = {
       "final_state": "Sacred Dragon",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sacred Tiger",
@@ -34717,7 +40396,20 @@ window.VS_DATA = {
       "final_state": "Sacred Tiger",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sacred Turtle",
@@ -34735,7 +40427,20 @@ window.VS_DATA = {
       "final_state": "Sacred Turtle",
       "ode_category": "Familiar",
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Fleuret",
@@ -34779,7 +40484,23 @@ window.VS_DATA = {
       "final_state": "Espada Ropera",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Dress Sword",
@@ -34823,7 +40544,23 @@ window.VS_DATA = {
       "final_state": "Espada Ropera",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Espada Ropera",
@@ -34860,7 +40597,23 @@ window.VS_DATA = {
       "final_state": "Espada Ropera",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Jail of Crystal (XIV)"
+      ]
     },
     {
       "name": "Town Sword",
@@ -34885,7 +40638,20 @@ window.VS_DATA = {
       "final_state": "Dayblade",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Lordstar",
@@ -34910,7 +40676,20 @@ window.VS_DATA = {
       "final_state": "Dayblade",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Dayblade",
@@ -34928,7 +40707,20 @@ window.VS_DATA = {
       "final_state": "Dayblade",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Splashers",
@@ -34956,7 +40748,20 @@ window.VS_DATA = {
       "final_state": "Pursuant Blades",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Pursuant Blades",
@@ -34981,7 +40786,20 @@ window.VS_DATA = {
       "final_state": "Pursuant Blades",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Flamberge",
@@ -35025,7 +40843,22 @@ window.VS_DATA = {
       "final_state": "Galatyn",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Zweihander",
@@ -35069,7 +40902,22 @@ window.VS_DATA = {
       "final_state": "Galatyn",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Galatyn",
@@ -35106,7 +40954,22 @@ window.VS_DATA = {
       "final_state": "Galatyn",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Punch",
@@ -35131,7 +40994,23 @@ window.VS_DATA = {
       "final_state": "Gilded Hand",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Pressure Point",
@@ -35156,7 +41035,23 @@ window.VS_DATA = {
       "final_state": "Gilded Hand",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Gilded Hand",
@@ -35174,7 +41069,23 @@ window.VS_DATA = {
       "final_state": "Gilded Hand",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Kick",
@@ -35202,7 +41113,22 @@ window.VS_DATA = {
       "final_state": "Triangle Kick",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Triangle Kick",
@@ -35246,7 +41172,22 @@ window.VS_DATA = {
       "final_state": "Triangle Kick",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Tragic Princess (III)"
+      ]
     },
     {
       "name": "Saber Machine Gun",
@@ -35271,7 +41212,23 @@ window.VS_DATA = {
       "final_state": "Divergence",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 60
+      "rarity": 60,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Hecaton Machine Gun",
@@ -35296,7 +41253,23 @@ window.VS_DATA = {
       "final_state": "Divergence",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Divergence",
@@ -35314,7 +41287,23 @@ window.VS_DATA = {
       "final_state": "Divergence",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Super Missile",
@@ -35339,7 +41328,22 @@ window.VS_DATA = {
       "final_state": "Hyperion Bazooka",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Hydra Cannon",
@@ -35364,7 +41368,23 @@ window.VS_DATA = {
       "final_state": "Hyperion Bazooka",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Hyperion Bazooka",
@@ -35382,7 +41402,23 @@ window.VS_DATA = {
       "final_state": "Hyperion Bazooka",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Eagle Gun",
@@ -35410,7 +41446,22 @@ window.VS_DATA = {
       "final_state": "Pendragon",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Pendragon",
@@ -35435,7 +41486,22 @@ window.VS_DATA = {
       "final_state": "Pendragon",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)"
+      ]
     },
     {
       "name": "Khukuri",
@@ -35463,7 +41529,22 @@ window.VS_DATA = {
       "final_state": "Jetstream",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Jetstream",
@@ -35488,7 +41569,22 @@ window.VS_DATA = {
       "final_state": "Jetstream",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Twin Dragon",
@@ -35516,7 +41612,22 @@ window.VS_DATA = {
       "final_state": "Gekkabijin",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Gekkabijin",
@@ -35541,7 +41652,22 @@ window.VS_DATA = {
       "final_state": "Gekkabijin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Bullova",
@@ -35569,7 +41695,22 @@ window.VS_DATA = {
       "final_state": "Falconwind",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Falconwind",
@@ -35594,7 +41735,22 @@ window.VS_DATA = {
       "final_state": "Falconwind",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Sanguine Star",
@@ -35622,7 +41778,22 @@ window.VS_DATA = {
       "final_state": "Blood Chalice",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Blood Chalice",
@@ -35647,7 +41818,22 @@ window.VS_DATA = {
       "final_state": "Blood Chalice",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Glaive",
@@ -35672,7 +41858,22 @@ window.VS_DATA = {
       "final_state": "Lohengrin",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Feather Spear",
@@ -35697,7 +41898,22 @@ window.VS_DATA = {
       "final_state": "Lohengrin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Lohengrin",
@@ -35715,7 +41931,22 @@ window.VS_DATA = {
       "final_state": "Lohengrin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Spirit Rings",
@@ -35740,7 +41971,25 @@ window.VS_DATA = {
       "final_state": "Rings of Calamity",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 50
+      "rarity": 50,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Rings of Calamity",
@@ -35777,7 +42026,25 @@ window.VS_DATA = {
       "final_state": "Rings of Calamity",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Jail of Crystal (XIV)",
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Emerald Rapture",
@@ -35829,7 +42096,20 @@ window.VS_DATA = {
       "final_state": "Emerald Wave",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 1
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Emerald Wave",
@@ -35872,7 +42152,20 @@ window.VS_DATA = {
       "final_state": "Emerald Wave",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Intuition",
@@ -35890,7 +42183,20 @@ window.VS_DATA = {
       "final_state": "Intuition",
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
-      "rarity": 2
+      "rarity": 2,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Infernolatro",
@@ -35937,7 +42243,22 @@ window.VS_DATA = {
       "final_state": "NaneInferno",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "NaneInferno",
@@ -35974,7 +42295,22 @@ window.VS_DATA = {
       "final_state": "NaneInferno",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Gros Michel",
@@ -36039,7 +42375,24 @@ window.VS_DATA = {
       "final_state": "Cavendish",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Cavendish",
@@ -36094,7 +42447,24 @@ window.VS_DATA = {
       "final_state": "Cavendish",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Waltz of Pearls (XI)",
+        "Slash (XVI)",
+        "Pale Diamond Incursion (V)"
+      ]
     },
     {
       "name": "Fibonacci Spritz",
@@ -36147,7 +42517,20 @@ window.VS_DATA = {
       "final_state": "Royal Flush",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Royal Flush",
@@ -36190,7 +42573,20 @@ window.VS_DATA = {
       "final_state": "Royal Flush",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Celestial Booster",
@@ -36237,7 +42633,20 @@ window.VS_DATA = {
       "final_state": "Negative Space",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 80
+      "rarity": 80,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Negative Space",
@@ -36274,7 +42683,20 @@ window.VS_DATA = {
       "final_state": "Negative Space",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Experience Gem",
@@ -36292,7 +42714,24 @@ window.VS_DATA = {
       "final_state": "Experience Gem",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Game Killer (0)",
+        "Stake to Your Heart (0)",
+        "Call of a Mad Moon (XIII)"
+      ]
     },
     {
       "name": "Gold Coin",
@@ -36310,7 +42749,23 @@ window.VS_DATA = {
       "final_state": "Gold Coin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Stake to Your Heart (0)",
+        "Call of a Mad Moon (XIII)"
+      ]
     },
     {
       "name": "Coin Bag",
@@ -36328,7 +42783,24 @@ window.VS_DATA = {
       "final_state": "Coin Bag",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Disco of Gold (XV)",
+        "Hail from the Future (X)",
+        "Call of a Mad Moon (XIII)"
+      ]
     },
     {
       "name": "Rich Coin Bag",
@@ -36346,7 +42818,24 @@ window.VS_DATA = {
       "final_state": "Rich Coin Bag",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Disco of Gold (XV)",
+        "Hail from the Future (X)",
+        "Call of a Mad Moon (XIII)"
+      ]
     },
     {
       "name": "Treasure Chest",
@@ -36364,7 +42853,26 @@ window.VS_DATA = {
       "final_state": "Treasure Chest",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Game Killer (0)",
+        "Disco of Gold (XV)",
+        "Moonlight Bolero (VI)",
+        "Edge of the Earth (VIII)",
+        "Call of a Mad Moon (XIII)"
+      ]
     },
     {
       "name": "Rosary",
@@ -36382,7 +42890,22 @@ window.VS_DATA = {
       "final_state": "Rosary",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Nduja Fritta Tanto",
@@ -36400,7 +42923,25 @@ window.VS_DATA = {
       "final_state": "Nduja Fritta Tanto",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Hidden Anathema (III)",
+        "Hail from the Future (X)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "Sorbetto",
@@ -36418,7 +42959,25 @@ window.VS_DATA = {
       "final_state": "Sorbetto",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Gemini (I)",
+        "Out of Bounds (XII)",
+        "Hidden Anathema (III)",
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Orologion",
@@ -36436,7 +42995,24 @@ window.VS_DATA = {
       "final_state": "Orologion",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Out of Bounds (XII)",
+        "Hail from the Future (X)",
+        "Crystal Cries (XII)"
+      ]
     },
     {
       "name": "Vacuum",
@@ -36454,7 +43030,23 @@ window.VS_DATA = {
       "final_state": "Vacuum",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Edge of the Earth (VIII)",
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Floor Chicken",
@@ -36472,7 +43064,24 @@ window.VS_DATA = {
       "final_state": "Floor Chicken",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sarabande of Healing (VI)",
+        "Hidden Anathema (III)",
+        "Wandering the Jet Black (XXI)"
+      ]
     },
     {
       "name": "Gilded Clover",
@@ -36490,7 +43099,22 @@ window.VS_DATA = {
       "final_state": "Gilded Clover",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Little Clover",
@@ -36508,7 +43132,20 @@ window.VS_DATA = {
       "final_state": "Little Clover",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Rerollo",
@@ -36526,7 +43163,22 @@ window.VS_DATA = {
       "final_state": "Rerollo",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Gold Finger",
@@ -36544,7 +43196,22 @@ window.VS_DATA = {
       "final_state": "Gold Finger",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hail from the Future (X)"
+      ]
     },
     {
       "name": "Friendship Amulet",
@@ -36562,7 +43229,20 @@ window.VS_DATA = {
       "final_state": "Friendship Amulet",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Golden Egg",
@@ -36580,7 +43260,20 @@ window.VS_DATA = {
       "final_state": "Golden Egg",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Rapid Fire",
@@ -36598,7 +43291,20 @@ window.VS_DATA = {
       "final_state": "Rapid Fire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Barrier",
@@ -36616,7 +43322,20 @@ window.VS_DATA = {
       "final_state": "Barrier",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Grenade",
@@ -36634,7 +43353,22 @@ window.VS_DATA = {
       "final_state": "Grenade",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)"
+      ]
     },
     {
       "name": "Wall Chicken",
@@ -36652,7 +43386,22 @@ window.VS_DATA = {
       "final_state": "Wall Chicken",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Hidden Anathema (III)"
+      ]
     },
     {
       "name": "Heart Refresh",
@@ -36670,7 +43419,20 @@ window.VS_DATA = {
       "final_state": "Heart Refresh",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Karma Coin",
@@ -36688,7 +43450,20 @@ window.VS_DATA = {
       "final_state": "Karma Coin",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Mirror of Truth",
@@ -36706,7 +43481,20 @@ window.VS_DATA = {
       "final_state": "Mirror of Truth",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Neutron Bomb",
@@ -36724,7 +43512,20 @@ window.VS_DATA = {
       "final_state": "Neutron Bomb",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Big Coin Bag",
@@ -36742,7 +43543,22 @@ window.VS_DATA = {
       "final_state": "Big Coin Bag",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Disco of Gold (XV)"
+      ]
     },
     {
       "name": "Cheese",
@@ -36760,7 +43576,20 @@ window.VS_DATA = {
       "final_state": "Cheese",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Corn",
@@ -36778,7 +43607,20 @@ window.VS_DATA = {
       "final_state": "Corn",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Crystallized Soul",
@@ -36796,7 +43638,22 @@ window.VS_DATA = {
       "final_state": "Crystallized Soul",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Crystal Cries (XII)"
+      ]
     },
     {
       "name": "Cursed Soul",
@@ -36814,7 +43671,20 @@ window.VS_DATA = {
       "final_state": "Cursed Soul",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Gold Pile",
@@ -36832,7 +43702,20 @@ window.VS_DATA = {
       "final_state": "Gold Pile",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Lavatrix Machina",
@@ -36850,7 +43733,20 @@ window.VS_DATA = {
       "final_state": "Lavatrix Machina",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Little Heart",
@@ -36868,7 +43764,22 @@ window.VS_DATA = {
       "final_state": "Little Heart",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Victorian Horror (XVIII)"
+      ]
     },
     {
       "name": "Pie",
@@ -36886,7 +43797,20 @@ window.VS_DATA = {
       "final_state": "Pie",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Scorched Soul",
@@ -36904,7 +43828,20 @@ window.VS_DATA = {
       "final_state": "Scorched Soul",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Starry Heavens",
@@ -36922,7 +43859,20 @@ window.VS_DATA = {
       "final_state": "Starry Heavens",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Survarot",
@@ -36940,7 +43890,20 @@ window.VS_DATA = {
       "final_state": "Survarot",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Weird Souls Purifier",
@@ -36958,7 +43921,20 @@ window.VS_DATA = {
       "final_state": "Weird Souls Purifier",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "World Eater",
@@ -36976,7 +43952,20 @@ window.VS_DATA = {
       "final_state": "World Eater",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sarabande of Healing",
@@ -36994,7 +43983,20 @@ window.VS_DATA = {
       "final_state": "Sarabande of Healing",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Game Killer",
@@ -37012,7 +44014,20 @@ window.VS_DATA = {
       "final_state": "Game Killer",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Heart of Fire",
@@ -37030,7 +44045,20 @@ window.VS_DATA = {
       "final_state": "Heart of Fire",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Out of Bounds",
@@ -37048,7 +44076,20 @@ window.VS_DATA = {
       "final_state": "Out of Bounds",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Divine Bloodline",
@@ -37066,7 +44107,20 @@ window.VS_DATA = {
       "final_state": "Divine Bloodline",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Blood Astronomia",
@@ -37084,7 +44138,20 @@ window.VS_DATA = {
       "final_state": "Blood Astronomia",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Wandering the Jet Black",
@@ -37102,7 +44169,20 @@ window.VS_DATA = {
       "final_state": "Wandering the Jet Black",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Insatiable",
@@ -37120,7 +44200,20 @@ window.VS_DATA = {
       "final_state": "Insatiable",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Acquazzone",
@@ -37138,7 +44231,20 @@ window.VS_DATA = {
       "final_state": "Acquazzone",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Shaft Orb",
@@ -37154,7 +44260,20 @@ window.VS_DATA = {
       "final_state": "Shaft Orb",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Burning Alcarde",
@@ -37172,7 +44291,20 @@ window.VS_DATA = {
       "final_state": "Burning Alcarde",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Death Hand",
@@ -37190,7 +44322,20 @@ window.VS_DATA = {
       "final_state": "Death Hand",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Hand of Vlad",
@@ -37208,7 +44353,20 @@ window.VS_DATA = {
       "final_state": "Hand of Vlad",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Ruler Sword Body",
@@ -37224,7 +44382,20 @@ window.VS_DATA = {
       "final_state": "Ruler Sword Body",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Bananastrophe",
@@ -37240,7 +44411,20 @@ window.VS_DATA = {
       "final_state": "Bananastrophe",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Sossoldi",
@@ -37256,7 +44440,20 @@ window.VS_DATA = {
       "final_state": "Sossoldi",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Chaos Malachite",
@@ -37272,7 +44469,20 @@ window.VS_DATA = {
       "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Chaos Rosalia",
@@ -37288,7 +44498,20 @@ window.VS_DATA = {
       "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Chaos Lazulia",
@@ -37304,7 +44527,20 @@ window.VS_DATA = {
       "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Chaos Altemanna",
@@ -37320,7 +44556,20 @@ window.VS_DATA = {
       "final_state": "",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 0
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "-"
+          ]
+        }
+      ],
+      "affinity": [
+        "-"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Random",
@@ -37371,6 +44620,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37404,6 +44654,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37437,6 +44688,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37470,6 +44722,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37503,6 +44756,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37536,6 +44790,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37569,6 +44824,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37602,6 +44858,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37635,6 +44892,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37656,6 +44914,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37677,6 +44936,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37710,6 +44970,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37743,6 +45004,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37776,6 +45038,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37809,6 +45072,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37842,6 +45106,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37891,6 +45156,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37924,6 +45190,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -37957,6 +45224,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38004,6 +45272,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38051,6 +45320,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38098,6 +45368,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38145,6 +45416,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38180,6 +45452,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38199,6 +45472,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38226,6 +45500,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38253,6 +45528,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38280,6 +45556,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38307,6 +45584,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38334,6 +45612,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38361,6 +45640,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38388,6 +45668,7 @@ window.VS_DATA = {
         {}
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": [
         {
           "op": "add_hidden",
@@ -38413,6 +45694,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": true,
+      "conflict": [],
       "grants": []
     },
     {
@@ -38460,6 +45742,7 @@ window.VS_DATA = {
         }
       ],
       "consumed_on_evo": false,
+      "conflict": [],
       "grants": []
     }
   ],
@@ -38467,6 +45750,7 @@ window.VS_DATA = {
     {
       "name": "Game Killer (0)",
       "icon": "assets/icons/arcana/game_killer_0.png",
+      "color": "#5a9e9e",
       "number": "0",
       "base_num": "0",
       "type": "Arcana",
@@ -38476,13 +45760,6 @@ window.VS_DATA = {
       "affects_explicit": [
         "Experience Gem",
         "Treasure Chest"
-      ],
-      "affects_implicit": [
-        "Crown",
-        "Attractorb",
-        "Vacuum",
-        "Pentagram",
-        "Gorgeous Moon"
       ],
       "affinity_groups": [
         {
@@ -38500,11 +45777,13 @@ window.VS_DATA = {
         "Magnet",
         "Halted XP",
         "Treasure"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Gemini (I)",
       "icon": "assets/icons/arcana/gemini_i.png",
+      "color": "#162d44",
       "number": "1",
       "base_num": "1",
       "type": "Arcana",
@@ -38553,7 +45832,6 @@ window.VS_DATA = {
         "Nduja Fritta Tanto",
         "Sorbetto"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -38564,11 +45842,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Counterpart"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Twilight Requiem (II)",
       "icon": "assets/icons/arcana/twilight_requiem_ii.png",
+      "color": "#001616",
       "number": "2",
       "base_num": "2",
       "type": "Arcana",
@@ -38615,13 +45895,6 @@ window.VS_DATA = {
         "Feather Spear",
         "Lohengrin"
       ],
-      "affects_implicit": [
-        "Skull O'Maniac",
-        "Gold Ring",
-        "Metaglio Right",
-        "Torrona's Box",
-        "Wicked Season (XIII)"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -38632,11 +45905,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Curse"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Tragic Princess (III)",
       "icon": "assets/icons/arcana/tragic_princess_iii.png",
+      "color": "#9e8771",
       "number": "3",
       "base_num": "3",
       "type": "Arcana",
@@ -38666,9 +45941,6 @@ window.VS_DATA = {
         "Kick",
         "Triangle Kick"
       ],
-      "affects_implicit": [
-        "Wings"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -38679,11 +45951,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Move Speed"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Awake (IV)",
       "icon": "assets/icons/arcana/awake_iv.png",
+      "color": "#9e7116",
       "number": "4",
       "base_num": "4",
       "type": "Arcana",
@@ -38693,7 +45967,6 @@ window.VS_DATA = {
       "affects_explicit": [
         "Tirajisú"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -38704,11 +45977,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Revival"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Chaos in the Dark Night (V)",
       "icon": "assets/icons/arcana/chaos_in_the_dark_night.png",
+      "color": "#444444",
       "number": "5",
       "base_num": "5",
       "type": "Arcana",
@@ -38718,7 +45993,6 @@ window.VS_DATA = {
       "affects_explicit": [
         "Bracer"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -38729,11 +46003,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Speed"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Sarabande of Healing (VI)",
       "icon": "assets/icons/arcana/sarabande_of_healing_vi.png",
+      "color": "#16162d",
       "number": "6",
       "base_num": "6",
       "type": "Arcana",
@@ -38754,11 +46030,6 @@ window.VS_DATA = {
         "Paranormal Scan",
         "Floor Chicken"
       ],
-      "affects_implicit": [
-        "Little Heart",
-        "Wall Chicken",
-        "Heart Refresh"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -38769,11 +46040,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Recovery"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Iron Blue Will (VII)",
       "icon": "assets/icons/arcana/iron_blue_will_vii.png",
+      "color": "#5a8787",
       "number": "7",
       "base_num": "7",
       "type": "Arcana",
@@ -38802,7 +46075,6 @@ window.VS_DATA = {
         "Shuriken",
         "Yagyu Shuriken"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -38813,11 +46085,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Bounce"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Mad Groove (VIII)",
       "icon": "assets/icons/arcana/mad_groove_viii.png",
+      "color": "#01715a",
       "number": "8",
       "base_num": "8",
       "type": "Arcana",
@@ -38830,12 +46104,6 @@ window.VS_DATA = {
         "Metaglio Right",
         "Gold Ring",
         "Metaglio Left"
-      ],
-      "affects_implicit": [
-        "Experience Gem",
-        "Treasure Chest",
-        "Vacuum",
-        "Rosary"
       ],
       "affinity_groups": [
         {
@@ -38851,11 +46119,13 @@ window.VS_DATA = {
         "Light Source",
         "Rosary",
         "Vacuum"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Divine Bloodline (IX)",
       "icon": "assets/icons/arcana/divine_bloodline_ix.png",
+      "color": "#000016",
       "number": "9",
       "base_num": "9",
       "type": "Arcana",
@@ -38875,20 +46145,6 @@ window.VS_DATA = {
         "Armor",
         "Max Health"
       ],
-      "affects_implicit": [
-        "NO FUTURE",
-        "Victory Sword",
-        "Pako Battiliar",
-        "Mazo Familiar",
-        "Crimson Shroud",
-        "Night Sword",
-        "Muramasa",
-        "Eskizzibur",
-        "Legionnaire",
-        "Iron Shield",
-        "Dark Iron Shield",
-        "Embrace of Gaea"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -38905,11 +46161,13 @@ window.VS_DATA = {
         "Max Health",
         "Retaliation",
         "Low Health"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Beginning (X)",
       "icon": "assets/icons/arcana/beginning_x.png",
+      "color": "#715a2d",
       "number": "10",
       "base_num": "10",
       "type": "Arcana",
@@ -38923,7 +46181,6 @@ window.VS_DATA = {
         "Cherry Bomb",
         "La Robba"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -38936,11 +46193,13 @@ window.VS_DATA = {
       "affinity": [
         "Limited",
         "Amount"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Waltz of Pearls (XI)",
       "icon": "assets/icons/arcana/waltz_of_pearls_xi.png",
+      "color": "#875a9e",
       "number": "11",
       "base_num": "11",
       "type": "Arcana",
@@ -38968,7 +46227,6 @@ window.VS_DATA = {
         "Gros Michel",
         "Cavendish"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -38979,11 +46237,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Bounce"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Out of Bounds (XII)",
       "icon": "assets/icons/arcana/out_of_bounds_xii.png",
+      "color": "#162d5a",
       "number": "12",
       "base_num": "12",
       "type": "Arcana",
@@ -39006,10 +46266,6 @@ window.VS_DATA = {
         "Orologion",
         "Sorbetto"
       ],
-      "affects_implicit": [
-        "Jail of Crystal (XIV)",
-        "Crystal Cries (XII)"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -39020,11 +46276,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Freeze"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Wicked Season (XIII)",
       "icon": "assets/icons/arcana/wicked_season_xiii.png",
+      "color": "#9e875a",
       "number": "13",
       "base_num": "13",
       "type": "Arcana",
@@ -39037,7 +46295,6 @@ window.VS_DATA = {
         "Stone Mask",
         "Skull O'Maniac"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39054,11 +46311,13 @@ window.VS_DATA = {
         "Luck",
         "Greed",
         "Curse"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Jail of Crystal (XIV)",
       "icon": "assets/icons/arcana/jail_of_crystal_xiv.png",
+      "color": "#169e9d",
       "number": "14",
       "base_num": "14",
       "type": "Arcana",
@@ -39108,7 +46367,6 @@ window.VS_DATA = {
         "Spirit Rings",
         "Rings of Calamity"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39119,11 +46377,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Freeze"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Disco of Gold (XV)",
       "icon": "assets/icons/arcana/disco_of_gold_xv.png",
+      "color": "#9d8a0e",
       "number": "15",
       "base_num": "15",
       "type": "Arcana",
@@ -39138,9 +46398,6 @@ window.VS_DATA = {
         "Rich Coin Bag",
         "Treasure Chest"
       ],
-      "affects_implicit": [
-        "Gold Coin"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -39153,11 +46410,13 @@ window.VS_DATA = {
       "affinity": [
         "Greed",
         "Gold Fever"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Slash (XVI)",
       "icon": "assets/icons/arcana/slash_xvi.png",
+      "color": "#878787",
       "number": "16",
       "base_num": "16",
       "type": "Arcana",
@@ -39229,7 +46488,6 @@ window.VS_DATA = {
         "Gros Michel",
         "Cavendish"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39242,11 +46500,13 @@ window.VS_DATA = {
       "affinity": [
         "Luck",
         "Critical Damage"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Lost & Found Painting (XVII)",
       "icon": "assets/icons/arcana/lost_&_found_painting_xvii.png",
+      "color": "#449e9e",
       "number": "17",
       "base_num": "17",
       "type": "Arcana",
@@ -39256,7 +46516,6 @@ window.VS_DATA = {
       "affects_explicit": [
         "Spellbinder"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39267,11 +46526,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Duration"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Boogaloo of Illusions (XVIII)",
       "icon": "assets/icons/arcana/boogaloo_of_illusions_xviii.png",
+      "color": "#2d1644",
       "number": "18",
       "base_num": "18",
       "type": "Arcana",
@@ -39281,7 +46542,6 @@ window.VS_DATA = {
       "affects_explicit": [
         "Candelabrador"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39292,11 +46552,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Area"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Heart of Fire (XIX)",
       "icon": "assets/icons/arcana/heart_of_fire_xix.png",
+      "color": "#9e442d",
       "number": "19",
       "base_num": "19",
       "type": "Arcana",
@@ -39353,7 +46615,6 @@ window.VS_DATA = {
         "Spirit Rings",
         "Rings of Calamity"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39372,11 +46633,13 @@ window.VS_DATA = {
         "Retaliation",
         "Might",
         "Area"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Silent Old Sanctuary (XX)",
       "icon": "assets/icons/arcana/silent_old_sanctuary_xx.png",
+      "color": "#2d5a87",
       "number": "20",
       "base_num": "20",
       "type": "Arcana",
@@ -39388,7 +46651,6 @@ window.VS_DATA = {
         "Skip",
         "Banish"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39403,11 +46665,13 @@ window.VS_DATA = {
         "Limited",
         "Might",
         "Cooldown"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Blood Astronomia (XXI)",
       "icon": "assets/icons/arcana/blood_astronomia_xxi.png",
+      "color": "#2d2d5a",
       "number": "21",
       "base_num": "21",
       "type": "Arcana",
@@ -39426,10 +46690,6 @@ window.VS_DATA = {
         "Sonic Dash",
         "Rapidus Fio"
       ],
-      "affects_implicit": [
-        "Duplicator",
-        "Attractorb"
-      ],
       "affinity_groups": [
         {
           "key": null,
@@ -39442,11 +46702,13 @@ window.VS_DATA = {
       "affinity": [
         "Amount",
         "Magnet"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Stake to Your Heart (0)",
       "icon": "assets/icons/arcana/stake_to_your_heart_0.png",
+      "color": "#320b09",
       "number": "0",
       "base_num": "0",
       "type": "Darkana",
@@ -39457,7 +46719,6 @@ window.VS_DATA = {
         "Gold Coin",
         "Experience Gem"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39470,11 +46731,13 @@ window.VS_DATA = {
       "affinity": [
         "Greed",
         "Halted XP"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Sapphire Mist (I)",
       "icon": "assets/icons/arcana/sapphire_mist_i.png",
+      "color": "#100000",
       "number": "1",
       "base_num": "1",
       "type": "Darkana",
@@ -39504,7 +46767,6 @@ window.VS_DATA = {
         "Party Popper",
         "Party Pooper"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39515,11 +46777,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Luck"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Hidden Anathema (III)",
       "icon": "assets/icons/arcana/hidden_anathema_iii.png",
+      "color": "#0a1b2e",
       "number": "3",
       "base_num": "3",
       "type": "Darkana",
@@ -39533,7 +46797,6 @@ window.VS_DATA = {
         "Sorbetto",
         "Wall Chicken"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39548,11 +46811,13 @@ window.VS_DATA = {
         "Food",
         "Recovery",
         "Luck"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Pale Diamond Incursion (V)",
       "icon": "assets/icons/arcana/pale_diamond_incursion_v.png",
+      "color": "#100202",
       "number": "5",
       "base_num": "5",
       "type": "Darkana",
@@ -39639,7 +46904,6 @@ window.VS_DATA = {
         "Gros Michel",
         "Cavendish"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39650,11 +46914,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Speed"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Moonlight Bolero (VI)",
       "icon": "assets/icons/arcana/moonlight_bolero_vi.png",
+      "color": "#9a290d",
       "number": "6",
       "base_num": "6",
       "type": "Darkana",
@@ -39664,7 +46930,6 @@ window.VS_DATA = {
       "affects_explicit": [
         "Treasure Chest"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39675,11 +46940,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Treasure"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Edge of the Earth (VIII)",
       "icon": "assets/icons/arcana/edge_of_the_earth_viii.png",
+      "color": "#932f57",
       "number": "8",
       "base_num": "8",
       "type": "Darkana",
@@ -39692,7 +46959,6 @@ window.VS_DATA = {
         "Light Source",
         "Treasure Chest"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39713,11 +46979,13 @@ window.VS_DATA = {
         "Magnet",
         "Vacuum",
         "Light Source"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Hail from the Future (X)",
       "icon": "assets/icons/arcana/hail_from_the_future_x.png",
+      "color": "#330b0b",
       "number": "10",
       "base_num": "10",
       "type": "Darkana",
@@ -39738,7 +47006,6 @@ window.VS_DATA = {
         "Coin Bag",
         "Rich Coin Bag"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39751,11 +47018,13 @@ window.VS_DATA = {
       "affinity": [
         "Luck",
         "Amount"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Crystal Cries (XII)",
       "icon": "assets/icons/arcana/crystal_cries_xii.png",
+      "color": "#100000",
       "number": "12",
       "base_num": "12",
       "type": "Darkana",
@@ -39766,7 +47035,6 @@ window.VS_DATA = {
         "Orologion",
         "Crystallized Soul"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39777,11 +47045,13 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Freeze"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Call of a Mad Moon (XIII)",
       "icon": "assets/icons/arcana/call_of_a_mad_moon.png",
+      "color": "#06295c",
       "number": "13",
       "base_num": "13",
       "type": "Darkana",
@@ -39796,7 +47066,6 @@ window.VS_DATA = {
         "Treasure Chest",
         "Light Source"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39813,11 +47082,13 @@ window.VS_DATA = {
         "Greed",
         "Greed",
         "Curse"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Victorian Horror (XVIII)",
       "icon": "assets/icons/arcana/victorian_horror_xviii.png",
+      "color": "#100101",
       "number": "18",
       "base_num": "18",
       "type": "Darkana",
@@ -39830,7 +47101,6 @@ window.VS_DATA = {
         "Skill O'Maniac",
         "Little Heart"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39853,11 +47123,13 @@ window.VS_DATA = {
         "Area",
         "Max Health",
         "Curse"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Heir of Fate (XIX)",
       "icon": "assets/icons/arcana/heir_of_fate_xix.png",
+      "color": "#100202",
       "number": "19",
       "base_num": "19",
       "type": "Darkana",
@@ -39901,7 +47173,6 @@ window.VS_DATA = {
         "NaneInferno",
         "Nduja Fritta Tanto"
       ],
-      "affects_implicit": [],
       "affinity_groups": [
         {
           "key": null,
@@ -39916,11 +47187,13 @@ window.VS_DATA = {
         "Fire",
         "Max Health",
         "Might"
-      ]
+      ],
+      "conflict": []
     },
     {
       "name": "Wandering the Jet Black (XXI)",
       "icon": "assets/icons/arcana/wandering_the_jet_black_xxi.png",
+      "color": "#570103",
       "number": "21",
       "base_num": "21",
       "type": "Darkana",
@@ -39942,9 +47215,9 @@ window.VS_DATA = {
         "Attractorb",
         "Floor Chicken"
       ],
-      "affects_implicit": [],
       "affinity_groups": [],
-      "affinity": []
+      "affinity": [],
+      "conflict": []
     }
   ],
   "affinities": [
@@ -39955,10 +47228,51 @@ window.VS_DATA = {
       "base_affinity": "Amount",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info": "[Aura Blast,\"When total Amount is at 6 and above trigger a Grand Cross explosion that damages enemies in a much larger area.\"]",
       "related": {
         "weapons": [
-          "Whip"
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Magic Wand",
+          "Holy Wand",
+          "Summon Spirit",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Valmanway",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Grand Cross",
+          "Arch Angle",
+          "King Bible",
+          "Unholy Vespers",
+          "Icebrand",
+          "Ninth Circle",
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Troll Bomb",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Vjaya Sisters",
+          "Vicious Hunger"
         ],
         "passives": [
           "Duplicator",
@@ -40023,16 +47337,177 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Arcana",
+      "icon": "assets/icons/affinities/arcana.png",
+      "color": "#470793",
+      "base_affinity": "Arcana",
+      "is_parent": true,
+      "description": "Arcana affinities are enabled solely from the associated Arcana and features are not present without them.",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Astronomia",
+      "icon": "assets/icons/affinities/astronomia.png",
+      "color": "#5a0007",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Bounce",
+      "icon": "assets/icons/affinities/bounce.png",
+      "color": "#875a9e",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Iron Blue Will (VII)",
+          "Waltz of Pearls (XI)"
+        ]
+      }
+    },
+    {
+      "name": "Counterpart",
+      "icon": "assets/icons/affinities/counterpart.png",
+      "color": "#88715b",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Rinaldo Gandolfi (Keremet Bubbles)",
+          "Rinaldo Gandolfi (Belnades' Spellbook)"
+        ],
+        "arcana": [
+          "Gemini (I)"
+        ]
+      }
+    },
+    {
+      "name": "Halted XP",
+      "icon": "assets/icons/affinities/halted_xp.png",
+      "color": "#6f0a08",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Porta Ladonna",
+          "Suor Clerici",
+          "Sir Ambrojoe",
+          "Santa Ladonna",
+          "Tera",
+          "Fleaman"
+        ],
+        "arcana": [
+          "Game Killer (0)",
+          "Stake to Your Heart (0)"
+        ]
+      }
+    },
+    {
+      "name": "Limited",
+      "icon": "assets/icons/affinities/limited.png",
+      "color": "#2d5a87",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info": "",
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Para Kooleo (Penshin Fatcha)",
+          "Para Kooleo (Tonno Subito)",
+          "Para Kooleo (Tonnado)",
+          "Para Kooleo (Tonn'omoto)",
+          "Para Kooleo (Tonn'oddeeo)",
+          "Para Kooleo (Tonne)",
+          "Para Kooleo (Unsurpassed)"
+        ],
+        "arcana": [
+          "Beginning (X)",
+          "Silent Old Sanctuary (XX)"
+        ]
+      }
+    },
+    {
       "name": "Area",
       "icon": "assets/icons/affinities/area.png",
       "color": "#9e8821",
       "base_affinity": "Area",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info": "Axe Receives an addiitonal 1.3x Area multiplier.|\nDeath Spiral Receives an addiitonal 1.2x Area multiplier.|\nLegacy of Death: Soul River Damage is multiplied by Area",
       "related": {
         "weapons": [
-          "Whip"
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Magic Wand",
+          "Holy Wand",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Valmanway",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Grand Cross",
+          "Arch Angle",
+          "King Bible",
+          "Unholy Vespers",
+          "Icebrand",
+          "Ninth Circle",
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Garlic",
+          "Soul Eater",
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Vjaya Sisters",
+          "Vicious Hunger"
         ],
         "passives": [
           "Candelabrador",
@@ -40088,124 +47563,6 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Arcana",
-      "icon": "assets/icons/affinities/arcana.png",
-      "color": "#470793",
-      "base_affinity": "Arcana",
-      "is_parent": true,
-      "description": "Arcana affinities are enabled solely from the associated Arcana and features are not present without them.",
-      "info": "Icon: Randomazzo",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Halted XP",
-      "icon": "assets/icons/affinities/halted_xp.png",
-      "color": "#6f0a08",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info": "",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Porta Ladonna",
-          "Suor Clerici",
-          "Sir Ambrojoe",
-          "Santa Ladonna",
-          "Tera",
-          "Fleaman"
-        ],
-        "arcana": [
-          "Game Killer (0)",
-          "Stake to Your Heart (0)"
-        ]
-      }
-    },
-    {
-      "name": "Counterpart",
-      "icon": "assets/icons/affinities/counterpart.png",
-      "color": "#161616",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info": "",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Rinaldo Gandolfi (Keremet Bubbles)",
-          "Rinaldo Gandolfi (Belnades' Spellbook)"
-        ],
-        "arcana": [
-          "Gemini (I)"
-        ]
-      }
-    },
-    {
-      "name": "Bounce",
-      "icon": "assets/icons/affinities/bounce.png",
-      "color": "#875a9e",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info": "Icon: Combined Will and Waltz shadows",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": [
-          "Iron Blue Will (VII)",
-          "Waltz of Pearls (XI)"
-        ]
-      }
-    },
-    {
-      "name": "Limited",
-      "icon": "assets/icons/affinities/limited.png",
-      "color": "#2d5a87",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info": "",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Para Kooleo (Tonno Subito)",
-          "Para Kooleo (Tonnado)",
-          "Para Kooleo (Tonn'omoto)",
-          "Para Kooleo (Tonn'oddeeo)",
-          "Para Kooleo (Tonne)",
-          "Para Kooleo (Unsurpassed)"
-        ],
-        "arcana": [
-          "Beginning (X)",
-          "Silent Old Sanctuary (XX)"
-        ]
-      }
-    },
-    {
-      "name": "Astronomia",
-      "icon": "assets/icons/affinities/astronomia.png",
-      "color": "#5a0007",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info": "",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": []
-      }
-    },
-    {
       "name": "Armor",
       "icon": "assets/icons/affinities/armor.png",
       "color": "#666868",
@@ -40214,7 +47571,11 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vento Sacro",
+          "NO FUTURE",
+          "Carnage Heart"
+        ],
         "passives": [
           "Armor"
         ],
@@ -40327,7 +47688,10 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "NO FUTURE",
+          "Carnage Heart"
+        ],
         "passives": [
           "Armor"
         ],
@@ -40357,7 +47721,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": true,
       "description": "Affinities related only to a specific character with unique interactions with the associated items.",
-      "info": "Icon: Mindbender",
+      "info": "",
       "related": {
         "weapons": [],
         "passives": [],
@@ -40513,7 +47877,52 @@ window.VS_DATA = {
       "info": "",
       "related": {
         "weapons": [
-          "Whip"
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Magic Wand",
+          "Holy Wand",
+          "Summon Spirit",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Valmanway",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Grand Cross",
+          "Arch Angle",
+          "King Bible",
+          "Unholy Vespers",
+          "Icebrand",
+          "Ninth Circle",
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Garlic",
+          "Soul Eater",
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Troll Bomb",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Sword Brothers",
+          "Vjaya Sisters",
+          "Vicious Hunger"
         ],
         "passives": [
           "Empty Tome"
@@ -40682,7 +48091,28 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Summon Spirit",
+          "Spirit of Light",
+          "Dark Rift",
+          "King Bible",
+          "Unholy Vespers",
+          "Icebrand",
+          "Ninth Circle",
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Vicious Hunger"
+        ],
         "passives": [
           "Spellbinder",
           "Torrona's Box",
@@ -40919,9 +48349,15 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
-        "passives": [],
+        "weapons": [
+          "Sword Brothers",
+          "Vjaya Sisters"
+        ],
+        "passives": [
+          "Parm Aegis"
+        ],
         "characters": [
+          "Menya Moonspell",
           "Eric Lecarde (Alucard Spear)",
           "Eric Lecarde (Spectral Sword)",
           "Eric Lecarde (Coat of Arms)",
@@ -40943,7 +48379,13 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Heaven Sword"
+        ],
         "passives": [
           "Clover"
         ],
@@ -40981,6 +48423,8 @@ window.VS_DATA = {
           "Maria Renard (Guardian's Targe)",
           "Maria Renard (Spectral Sword)",
           "Maria Renard (Belnades' Spellbook)",
+          "Quincy Morris (Shuriken)",
+          "Quincy Morris (Coat of Arms)",
           "Henry (Silver Revolver)",
           "Henry (Coat of Arms)",
           "Julia Laforeze (Gale Force)",
@@ -41015,13 +48459,17 @@ window.VS_DATA = {
     {
       "name": "Critical Damage",
       "icon": "assets/icons/affinities/critical_damage.png",
-      "color": "#6a4010",
+      "color": "#171717",
       "base_affinity": "Luck",
       "is_parent": false,
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo"
+        ],
         "passives": [],
         "characters": [
           "Reinhardt Schneider (Tyrfing)",
@@ -41071,7 +48519,6 @@ window.VS_DATA = {
           "Zephyr (Knife)",
           "Zephyr (Curved Knife)",
           "Jimbo",
-          "Chicot",
           "Perkeo"
         ],
         "arcana": [
@@ -41142,7 +48589,11 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Whip",
+          "Bloody Tear",
+          "Fuwalafuwaloo"
+        ],
         "passives": [
           "Hollow Heart",
           "Metaglio Left"
@@ -41306,6 +48757,9 @@ window.VS_DATA = {
           "Brad Fang",
           "Julius Belmont (Vanitas Whip)",
           "Julius Belmont (Morning Star)",
+          "Eric Lecarde (Alucard Spear)",
+          "Eric Lecarde (Spectral Sword)",
+          "Eric Lecarde (Coat of Arms)",
           "Dolores",
           "Lolo, Hiss, Meow, and Purr",
           "Kina",
@@ -41326,7 +48780,52 @@ window.VS_DATA = {
       "info": "",
       "related": {
         "weapons": [
-          "Whip"
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Magic Wand",
+          "Holy Wand",
+          "Summon Spirit",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Valmanway",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Grand Cross",
+          "Arch Angle",
+          "King Bible",
+          "Unholy Vespers",
+          "Icebrand",
+          "Ninth Circle",
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Garlic",
+          "Soul Eater",
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Troll Bomb",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Sword Brothers",
+          "Vjaya Sisters",
+          "Vicious Hunger"
         ],
         "passives": [
           "Spinach",
@@ -41476,7 +48975,14 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Valmanway",
+          "Million Cut",
+          "La Borra",
+          "Hydro Pump Climax"
+        ],
         "passives": [
           "Wings"
         ],
@@ -41543,7 +49049,6 @@ window.VS_DATA = {
           "Brad Fang",
           "Browny",
           "Sheena Etranzi",
-          "Newt Plissken",
           "Colonel Bahamut",
           "Leon Belmont (Alchemy Whip)",
           "Leon Belmont (Morning Star)",
@@ -41700,7 +49205,12 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Bloody Tear",
+          "Fuwalafuwaloo",
+          "Soul Eater",
+          "Dark Frogamorphosis"
+        ],
         "passives": [
           "Pummarola",
           "Metaglio Left"
@@ -41770,7 +49280,8 @@ window.VS_DATA = {
         ],
         "arcana": [
           "Sarabande of Healing (VI)",
-          "Hidden Anathema (III)"
+          "Hidden Anathema (III)",
+          "Wandering the Jet Black (XXI)"
         ]
       }
     },
@@ -41781,7 +49292,7 @@ window.VS_DATA = {
       "base_affinity": "Recovery",
       "is_parent": false,
       "description": "",
-      "info": "Icon: Floor Chicken",
+      "info": "",
       "related": {
         "weapons": [],
         "passives": [],
@@ -41859,243 +49370,99 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Magic Wand",
+          "Holy Wand",
+          "Summon Spirit",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Valmanway",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Arch Angle",
+          "King Bible",
+          "Unholy Vespers",
+          "Icebrand",
+          "Ninth Circle",
+          "Fire Wand",
+          "Hellfire",
+          "Kardía Phlegeton",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Vicious Hunger"
+        ],
         "passives": [
-          "Wings",
           "Bracer",
           "Torrona's Box"
         ],
         "characters": [
           "(Unblinded) Imelda Belpaese",
           "Pasqualina Belpaese",
-          "Lama Ladonna",
           "Dommario",
-          "Krochi Freetto",
-          "Christine Davain",
-          "Pugnala Provola",
           "Giovanna Grana",
-          "Poppea Pecorina",
-          "Concetta Caciotta",
           "Zi'Assunta Belpaese",
-          "Queen Sigma",
-          "Bat Robbert",
           "Zi'Appunta Belpaese",
-          "Big Troubler",
-          "She-Moon Eeta",
-          "She-Moon Eeta (Reborn)",
-          "Para Kooleo (Penshin Fatcha)",
-          "Para Kooleo (Tonno Subito)",
-          "Para Kooleo (Tonnado)",
-          "Para Kooleo (Tonn'omoto)",
-          "Para Kooleo (Tonn'oddeeo)",
-          "Para Kooleo (Tonne)",
-          "Para Kooleo (Unsurpassed)",
           "Gazebo",
-          "Chula-Reh",
-          "Smith IV",
-          "Boon Marrabbio",
-          "Avatar Infernas",
           "Minnah Mannarah",
-          "Cosmo Pavone",
-          "Big Trouser",
-          "Mask of the Red Death",
-          "Bats Bats Bats",
-          "Rose De Infernas",
-          "Gyoruntin",
-          "Secretino Dagsson",
-          "Space Dette",
-          "Miang Moonspell",
-          "Menya Moonspell",
-          "Syuuto Moonspell",
-          "Babi-Onna",
-          "Megalo Menya Moonspell",
-          "Megalo Syuuto Moonspell",
-          "Gav'Et-Oni",
-          "Eleanor Uziron (SpellString)",
-          "Eleanor Uziron (SpellStream)",
-          "Eleanor Uziron (SpellStrike)",
           "Keitha Muort",
-          "Luminaire Foscari",
-          "Genevieve Gruyère",
-          "Rottin'Ghoul",
-          "Crewmate Dino",
-          "Engineer Gino",
-          "Shapeshifter Nino",
-          "Guardian Pina",
-          "Impostor Rina",
           "Scientist Mina",
-          "Horse",
-          "Megalo Impostor Rina",
           "Bill Rizer",
           "Lance Bean",
           "Ariana",
           "Lucia Zero",
           "Brad Fang",
-          "Browny",
-          "Sheena Etranzi",
           "Newt Plissken",
-          "Colonel Bahamut",
           "Simondo Belmont",
           "Leon Belmont (Alchemy Whip)",
           "Leon Belmont (Morning Star)",
-          "Sonia Belmont (Sonic Whip)",
-          "Sonia Belmont (Morning Star)",
-          "Trevor Belmont (Dragon Water Whip)",
-          "Trevor Belmont (Morning Star)",
-          "Juste Belmont (Vibhuti Whip)",
-          "Juste Belmont (Morning Star)",
-          "Richter Belmont (Platinum Whip)",
-          "Richter Belmont (Morning Star)",
-          "Grant Danasty (Curved Knife)",
-          "Grant Danasty (Coat of Arms)",
           "Jonathan Morris (Javelin)",
           "Jonathan Morris (Morning Star)",
           "Jonathan Morris (Coat of Arms)",
           "Jonathan Morris (Spectral Sword)",
-          "Soma Cruz (Hand Grenade)",
-          "Soma Cruz (Candybox)",
-          "Soma Cruz (Dark Lord)",
-          "Charlotte Aulin (Raging Fire)",
-          "Charlotte Aulin (Belnades' Spellbook)",
-          "Sypha Belnades (Ice Fang)",
-          "Sypha Belnades (Belnades' Spellbook)",
           "Yoko Belnades (Fulgur)",
           "Yoko Belnades (Belnades' Spellbook)",
-          "Alucard (Alucart Sworb)",
-          "Alucard (Candybox)",
           "Eric Lecarde (Alucard Spear)",
           "Eric Lecarde (Spectral Sword)",
           "Eric Lecarde (Coat of Arms)",
-          "Maria Renard (Guardian's Targe)",
-          "Maria Renard (Spectral Sword)",
-          "Maria Renard (Belnades' Spellbook)",
-          "Shanoa (Confodere)",
-          "Shanoa (Candybox)",
-          "Quincy Morris (Shuriken)",
-          "Quincy Morris (Coat of Arms)",
-          "Maxim Kischine (Discus)",
-          "Maxim Kischine (Coat of Arms)",
-          "Henry (Silver Revolver)",
-          "Henry (Coat of Arms)",
-          "Julia Laforeze (Gale Force)",
-          "Julia Laforeze (Belnades' Spellbook)",
-          "Carrie Fernandez (Rock Riot)",
-          "Carrie Fernandez (Belnades' Spellbook)",
-          "Mina Hakuba (Refectio)",
-          "Mina Hakuba (Belnades' Spellbook)",
-          "Elizabeth Bartley (Hex)",
-          "Elizabeth Bartley (Belnades' Spellbook)",
-          "Elizabeth Bartley (Ebony Diabologue)",
           "Isaac (Trident)",
           "Isaac (Spectral Sword)",
           "Isaac (Ebony Diabologue)",
-          "Sara Trantoul (Star Flail)",
-          "Sara Trantoul (Belnades' Spellbook)",
-          "Albus (Optical Shot)",
-          "Albus (Ebony Diabologue)",
-          "Lisa Tepes (Luminatio)",
-          "Lisa Tepes (Belnades' Spellbook)",
-          "Shaft (Umbra)",
-          "Shaft (Ebony Diabologue)",
-          "Saint Germain (Globus)",
-          "Saint Germain (Spectral Sword)",
-          "Saint Germain (Ebony Diabologue)",
-          "Cornell (Dextro Custos)",
-          "Cornell (Sinestro Custos)",
-          "Cornell (Ebony Diabologue)",
-          "Young Maria Renard",
-          "Familiar (Faerie)",
-          "Familiar (Sacred Cardinal)",
-          "Familiar (Sacred Dragon)",
-          "Familiar (Sacred Tiger)",
-          "Familiar (Sacred Turtle)",
-          "Innocent Devil (Ukoback)",
-          "Innocent Devil (Imp)",
-          "Innocent Devil (Alleged Ghost)",
-          "Innocent Devil (Bitterfly)",
-          "Innocent Devil (Wood Rod)",
-          "Innocent Devil (Pumpkin)",
-          "Blue Crescent Moon Cornell (Trinum Custodem)",
-          "Blue Crescent Moon Cornell (Ebony Diabologue)",
-          "Master Librarian",
-          "Wind",
-          "Hugh Baldwin",
           "Jonathan & Charlotte (Javelin)",
           "Jonathan & Charlotte (Morning Star)",
           "Jonathan & Charlotte (Coat of Arms)",
           "Jonathan & Charlotte (Spectral Sword)",
-          "Charlotte & Jonathan (Raging Fire)",
-          "Charlotte & Jonathan (Belnades' Spellbook)",
-          "Stella & Loretta Lecarde",
-          "Loretta & Stella Lecarde",
-          "Stella Lecarde",
-          "Loretta Lecarde",
-          "Brauner",
           "Soleil Belmont",
-          "Graham Jones",
-          "Genya Arikado",
           "Joachim Armster",
-          "Walter Bernhard",
-          "Carmilla",
-          "Cave Troll",
-          "Fleaman",
-          "Axe Armor",
-          "Frozenshade",
-          "Alamaric Sniper",
-          "Persephone",
-          "Astarte",
-          "Witch Actrise",
-          "Atlantis Shrine Wizard",
-          "Succubus",
-          "Fake Trio (Trevor)",
-          "Fake Trio (Sypha)",
-          "Fake Trio (Grant)",
           "Zephyr (Knife)",
           "Zephyr (Curved Knife)",
-          "Jiangshi",
           "Blackmore",
-          "Count Olrox",
-          "Malphas",
-          "Death",
-          "Megalo Elizabeth Bartley (Belnades' Spellbook)",
-          "Megalo Elizabeth Bartley (Ebony Diabologue)",
-          "Megalo Olrox (Dark Rift)",
-          "Megalo Olrox (Ebony Diabologue)",
-          "Megalo Death (Death Spiral)",
-          "Megalo Death (Ebony Diabologue)",
           "Tsunanori Mido (Fleuret)",
           "Tsunanori Mido (Splashers)",
           "Tsunanori Mido - Solo (Fleuret)",
           "Tsunanori Mido - Solo (Splashers)",
-          "Bonnie Blair (Punch)",
-          "Bonnie Blair (Kick)",
-          "Bonnie Blair - Solo (Punch)",
-          "Bonnie Blair - Solo (Kick)",
-          "Formina Franklyn (Saber Machine Gun)",
-          "Formina Franklyn (Eagle Gun)",
-          "Formina Franklyn - Solo (Saber Machine Gun)",
-          "Formina Franklyn - Solo (Eagle Gun)",
-          "(Mover) Diva No. 5",
           "(Shanks) Diva No. 5",
           "(Virginia) Diva No. 5",
           "Ameya Aisling (Spirit Rings)",
           "Ameya Aisling (Intuition)",
-          "Siugnas (Town Sword)",
-          "Siugnas (Sanguine Star)",
-          "Dolores",
           "Macha Alter Ego",
           "Lita Caryx",
-          "Mr. S",
-          "Lolo, Hiss, Meow, and Purr",
-          "Kina",
-          "Imakoo",
-          "Jimbo"
+          "Kina"
         ],
         "arcana": [
-          "Tragic Princess (III)",
           "Chaos in the Dark Night (V)",
-          "Pale Diamond Incursion (V)",
-          "Edge of the Earth (VIII)"
+          "Pale Diamond Incursion (V)"
         ]
       }
     },
@@ -42111,7 +49478,6 @@ window.VS_DATA = {
         "weapons": [],
         "passives": [],
         "characters": [
-          "Avatar Infernas",
           "Dario Bossi",
           "Count Olrox",
           "Megalo Olrox (Dark Rift)",
@@ -42132,7 +49498,13 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Icebrand",
+          "Ninth Circle",
+          "Garlic",
+          "Soul Eater",
+          "Dark Frogamorphosis"
+        ],
         "passives": [],
         "characters": [
           "She-Moon Eeta",
@@ -42232,6 +49604,7 @@ window.VS_DATA = {
         "weapons": [],
         "passives": [],
         "characters": [
+          "Bonnie Blair (Punch)",
           "Bonnie Blair (Kick)",
           "Bonnie Blair - Solo (Punch)",
           "Bonnie Blair - Solo (Kick)",
@@ -42281,7 +49654,10 @@ window.VS_DATA = {
       "description": "",
       "info": "",
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Whip",
+          "Bloody Tear"
+        ],
         "passives": [],
         "characters": [
           "Jonathan Morris (Javelin)",
