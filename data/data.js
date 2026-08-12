@@ -1957,7 +1957,8 @@ window.VS_DATA = {
             "Move Speed",
             "Magnet",
             "Speed",
-            "Duration"
+            "Duration",
+            "Treasure"
           ]
         }
       ],
@@ -1967,7 +1968,8 @@ window.VS_DATA = {
         "Move Speed",
         "Magnet",
         "Speed",
-        "Duration"
+        "Duration",
+        "Treasure"
       ],
       "conflict": [],
       "scaling": [],
@@ -2637,7 +2639,8 @@ window.VS_DATA = {
           "items": [
             "Cooldown",
             "Luck",
-            "Armor"
+            "Armor",
+            "Treasure"
           ]
         }
       ],
@@ -2646,7 +2649,8 @@ window.VS_DATA = {
         "Halted XP",
         "Cooldown",
         "Luck",
-        "Armor"
+        "Armor",
+        "Treasure"
       ],
       "conflict": [],
       "scaling": [
@@ -3854,7 +3858,8 @@ window.VS_DATA = {
           "items": [
             "Max Health",
             "Revival",
-            "Might"
+            "Might",
+            "Treasure"
           ]
         }
       ],
@@ -3862,7 +3867,8 @@ window.VS_DATA = {
         "Curse",
         "Max Health",
         "Revival",
-        "Might"
+        "Might",
+        "Treasure"
       ],
       "conflict": [],
       "scaling": [
@@ -17916,7 +17922,7 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Knives",
-            "Light Source"
+            "Orologion"
           ]
         },
         {
@@ -17925,17 +17931,19 @@ window.VS_DATA = {
             "Move Speed",
             "Cooldown",
             "Amount",
-            "Speed"
+            "Speed",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
         "Knives",
-        "Light Source",
+        "Orologion",
         "Move Speed",
         "Cooldown",
         "Amount",
-        "Speed"
+        "Speed",
+        "Light Source"
       ],
       "conflict": [],
       "scaling": [],
@@ -17982,7 +17990,7 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Knives",
-            "Light Source"
+            "Orologion"
           ]
         },
         {
@@ -17991,17 +17999,19 @@ window.VS_DATA = {
             "Move Speed",
             "Cooldown",
             "Amount",
-            "Speed"
+            "Speed",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
         "Knives",
-        "Light Source",
+        "Orologion",
         "Move Speed",
         "Cooldown",
         "Amount",
-        "Speed"
+        "Speed",
+        "Light Source"
       ],
       "conflict": [],
       "scaling": [],
@@ -21797,15 +21807,10 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Passive",
-          "items": [
-            "Max Health"
-          ]
-        },
-        {
           "key": "Slash (XVI)",
           "items": [
-            "Luck"
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
@@ -21815,8 +21820,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Max Health",
-        "Luck"
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Speed",
@@ -21885,7 +21890,7 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Passive",
+          "key": null,
           "items": [
             "Max Health"
           ]
@@ -21983,6 +21988,12 @@ window.VS_DATA = {
             "Critical Damage",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Divine Bloodline (IX):[Armor"
+          ]
         }
       ],
       "affinity": [
@@ -21994,7 +22005,8 @@ window.VS_DATA = {
         "Speed",
         "Duration",
         "Critical Damage",
-        "Luck"
+        "Luck",
+        "Divine Bloodline (IX):[Armor"
       ],
       "conflict": [],
       "arcana": [
@@ -22068,7 +22080,7 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Passive",
+          "key": null,
           "items": [
             "Max Health"
           ]
@@ -22162,6 +22174,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -22169,7 +22187,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Freeze"
       ],
       "conflict": [
         "Duration"
@@ -22239,6 +22258,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -22246,7 +22271,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Freeze"
       ],
       "conflict": [
         "Duration"
@@ -22396,6 +22422,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -22404,7 +22436,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -22479,6 +22512,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -22486,7 +22526,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -22557,6 +22599,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -22564,7 +22613,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -22693,6 +22744,13 @@ window.VS_DATA = {
             "Amount",
             "Move Speed"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -22701,7 +22759,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Move Speed"
+        "Move Speed",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -22779,6 +22839,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -22786,7 +22853,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -22851,6 +22920,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -22858,7 +22934,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -22996,6 +23074,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -23003,7 +23088,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -23081,6 +23168,19 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
+          ]
         }
       ],
       "affinity": [
@@ -23088,7 +23188,10 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage",
+        "Armor"
       ],
       "conflict": [
         "Duration"
@@ -23158,7 +23261,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Luck"
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
@@ -23168,7 +23272,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -23304,6 +23409,18 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage"
+          ]
         }
       ],
       "affinity": [
@@ -23311,7 +23428,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [
         "Duration"
@@ -23389,6 +23508,18 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
+          ]
         }
       ],
       "affinity": [
@@ -23397,7 +23528,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Curse",
+        "Armor"
       ],
       "conflict": [],
       "arcana": [
@@ -23466,6 +23599,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
         }
       ],
       "affinity": [
@@ -23474,7 +23613,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -23633,6 +23773,12 @@ window.VS_DATA = {
             "Amount",
             "Freeze"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
         }
       ],
       "affinity": [
@@ -23642,7 +23788,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -23711,6 +23858,18 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
@@ -23718,7 +23877,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [
         "Duration"
@@ -23784,6 +23945,18 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
@@ -23791,7 +23964,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [
         "Duration"
@@ -23857,13 +24032,20 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Fire"
       ],
       "conflict": [
         "Speed",
@@ -23931,6 +24113,18 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
@@ -23938,7 +24132,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [
         "Duration"
@@ -23998,18 +24194,41 @@ window.VS_DATA = {
             "Cooldown",
             "Freeze"
           ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Amount",
+            "Magnet",
+            "Duration"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Area",
         "Cooldown",
-        "Freeze"
+        "Freeze",
+        "Move Speed",
+        "Armor",
+        "Amount",
+        "Magnet",
+        "Duration"
       ],
       "conflict": [
-        "Speed",
-        "Duration",
-        "Amount"
+        "Speed"
       ],
       "arcana": [
         "Tragic Princess (III)",
@@ -24059,6 +24278,20 @@ window.VS_DATA = {
             "Recovery",
             "Freeze"
           ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Amount",
+            "Magnet",
+            "Duration"
+          ]
         }
       ],
       "affinity": [
@@ -24066,12 +24299,14 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Recovery",
-        "Freeze"
+        "Freeze",
+        "Move Speed",
+        "Amount",
+        "Magnet",
+        "Duration"
       ],
       "conflict": [
-        "Speed",
-        "Duration",
-        "Amount"
+        "Speed"
       ],
       "arcana": [
         "Tragic Princess (III)",
@@ -24140,6 +24375,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
         }
       ],
       "affinity": [
@@ -24147,7 +24388,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [
         "Speed"
@@ -24221,6 +24463,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
         }
       ],
       "affinity": [
@@ -24228,7 +24476,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [
         "Speed"
@@ -24297,6 +24546,18 @@ window.VS_DATA = {
             "Recovery",
             "Freeze"
           ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
         }
       ],
       "affinity": [
@@ -24306,7 +24567,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
-        "Freeze"
+        "Freeze",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [
         "Speed"
@@ -24377,6 +24640,30 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Speed"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
@@ -24384,11 +24671,13 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Move Speed",
+        "Armor",
+        "Speed",
+        "Fire"
       ],
-      "conflict": [
-        "Speed"
-      ],
+      "conflict": [],
       "arcana": [
         "Tragic Princess (III)",
         "Divine Bloodline (IX)",
@@ -24452,6 +24741,18 @@ window.VS_DATA = {
             "Amount",
             "Move Speed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
@@ -24461,7 +24762,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Move Speed"
+        "Move Speed",
+        "Magnet",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -24605,6 +24908,18 @@ window.VS_DATA = {
             "Amount",
             "Move Speed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
+          ]
         }
       ],
       "affinity": [
@@ -24614,7 +24929,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Move Speed"
+        "Move Speed",
+        "Magnet",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -24691,6 +25008,18 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -24699,7 +25028,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Curse",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -24771,6 +25102,12 @@ window.VS_DATA = {
             "Armor",
             "Retaliation"
           ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -24781,7 +25118,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Armor",
-        "Retaliation"
+        "Retaliation",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -24911,6 +25249,12 @@ window.VS_DATA = {
             "Armor",
             "Retaliation"
           ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -24921,7 +25265,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Armor",
-        "Retaliation"
+        "Retaliation",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -24983,16 +25328,43 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Speed"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Curse",
+        "Move Speed",
+        "Armor",
+        "Speed"
       ],
       "conflict": [
-        "Speed",
         "Duration"
       ],
       "arcana": [
@@ -25049,16 +25421,36 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Speed"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Curse",
+        "Move Speed",
+        "Speed"
       ],
       "conflict": [
-        "Speed",
         "Duration"
       ],
       "arcana": [
@@ -25164,6 +25556,24 @@ window.VS_DATA = {
             "Amount",
             "Invulnerable"
           ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Speed"
+          ]
         }
       ],
       "affinity": [
@@ -25171,9 +25581,14 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Invulnerable"
+        "Invulnerable",
+        "Curse",
+        "Move Speed",
+        "Speed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Tragic Princess (III)",
@@ -25217,14 +25632,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Cooldown",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Duration",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Cooldown",
+        "Luck",
+        "Duration",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Area"
+      ],
       "arcana": [
         "Blood Astronomia (XXI)"
       ]
@@ -25259,14 +25689,34 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Duration",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Cooldown",
+        "Growth",
+        "Duration",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Area"
+      ],
       "arcana": [
         "Blood Astronomia (XXI)"
       ]
@@ -25326,14 +25776,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Area"
+      ],
       "arcana": []
     },
     {
@@ -25364,14 +25824,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Growth"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area"
+      ],
       "arcana": []
     },
     {
@@ -25435,12 +25911,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -25472,12 +25972,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -25545,12 +26069,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -25582,12 +26130,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -25653,12 +26225,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -25728,14 +26317,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Gemini (I)",
         "Iron Blue Will (VII)",
@@ -25765,14 +26378,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)"
       ]
@@ -25839,14 +26476,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Freeze"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Gemini (I)",
         "Iron Blue Will (VII)",
@@ -25876,14 +26537,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Freeze"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Jail of Crystal (XIV)"
       ]
@@ -25940,14 +26625,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Revival"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Counterpart"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Gemini (I)"
       ]
@@ -26013,12 +26717,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Light Source"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Light Source",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -26049,12 +26774,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Light Source"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Light Source",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": []
@@ -26118,7 +26864,28 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Gold Coin",
+            "Gold Fever",
+            "Light Source"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Disco of Gold (XV)",
+          "items": [
+            "Recovery"
           ]
         }
       ],
@@ -26128,10 +26895,17 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Gold Coin",
+        "Gold Fever",
+        "Light Source",
+        "Greed",
+        "Counterpart",
+        "Recovery"
       ],
       "conflict": [],
       "arcana": [
+        "Gemini (I)",
         "Disco of Gold (XV)",
         "Pale Diamond Incursion (V)"
       ]
@@ -26179,14 +26953,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Cooldown",
+            "Amount",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Cooldown",
+        "Amount",
+        "Recovery"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Area"
+      ],
       "arcana": []
     },
     {
@@ -26210,14 +26994,39 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Gold Coin",
+            "Gold Fever"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Greed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Gold Coin",
+        "Gold Fever",
+        "Greed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Area"
+      ],
       "arcana": []
     },
     {
@@ -26269,14 +27078,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Amount",
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Armor",
+        "Amount",
+        "Magnet"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Divine Bloodline (IX)",
         "Blood Astronomia (XXI)"
@@ -26324,14 +27157,40 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Slow"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Amount",
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Slow",
+        "Curse",
+        "Amount",
+        "Magnet"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Blood Astronomia (XXI)"
       ]
@@ -26391,14 +27250,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -26459,14 +27330,47 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Luck",
+        "Curse",
+        "Fire",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -26533,12 +27437,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -26600,12 +27523,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -26669,14 +27618,40 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Fire",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -26734,12 +27709,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -26785,14 +27786,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Duration",
+            "Cooldown",
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Amount",
+            "Magnet",
+            "Slow"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Duration",
+        "Cooldown",
+        "Freeze",
+        "Amount",
+        "Magnet",
+        "Slow"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Area"
+      ],
       "arcana": [
         "Out of Bounds (XII)",
         "Blood Astronomia (XXI)"
@@ -26826,14 +27846,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Duration",
+            "Cooldown",
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Area",
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Duration",
+        "Cooldown",
+        "Freeze",
+        "Area",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Amount"
+      ],
       "arcana": [
         "Out of Bounds (XII)"
       ]
@@ -26868,14 +27905,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Cooldown",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Duration",
+            "Amount",
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Cooldown",
+        "Invulnerable",
+        "Duration",
+        "Amount",
+        "Magnet"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Area"
+      ],
       "arcana": [
         "Blood Astronomia (XXI)"
       ]
@@ -26920,14 +27974,40 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Curse",
+            "Invulnerable",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Curse",
+        "Invulnerable",
+        "Retaliation",
+        "Max Health",
+        "Recovery"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -26991,12 +28071,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -27057,12 +28154,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -27137,12 +28251,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
       "conflict": [],
       "arcana": [
@@ -27201,12 +28327,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [],
       "arcana": [
@@ -27274,14 +28414,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Tragic Princess (III)",
         "Iron Blue Will (VII)",
@@ -27330,14 +28487,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Pale Diamond Incursion (V)"
       ]
@@ -27403,14 +28570,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Recovery",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Sarabande of Healing (VI)",
@@ -27470,14 +28658,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Recovery",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Twilight Requiem (II)"
       ]
@@ -27541,12 +28750,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -27614,12 +28833,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Luck",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck",
+        "Light Source"
       ],
       "conflict": [],
       "arcana": [
@@ -27678,18 +28913,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
-        "Twilight Requiem (II)",
         "Jail of Crystal (XIV)",
-        "Heart of Fire (XIX)",
         "Sapphire Mist (I)",
         "Pale Diamond Incursion (V)",
         "Heir of Fate (XIX)"
@@ -27746,12 +28996,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -27815,12 +29089,50 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Freeze",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -27881,14 +29193,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -27937,14 +29258,45 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Freeze",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Jail of Crystal (XIV)",
@@ -27969,17 +29321,8 @@ window.VS_DATA = {
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 2,
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
       "conflict": [],
       "arcana": [
         "Hail from the Future (X)"
@@ -28002,17 +29345,8 @@ window.VS_DATA = {
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0,
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
       "conflict": [],
       "arcana": []
     },
@@ -28071,14 +29405,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation",
+        "Low Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Pale Diamond Incursion (V)"
       ]
@@ -28129,12 +29479,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation",
+            "Low Health",
+            "Max Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation",
+        "Low Health",
+        "Max Health"
       ],
       "conflict": [],
       "arcana": [
@@ -28202,14 +29568,47 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Gemini (I)",
         "Slash (XVI)",
@@ -28271,14 +29670,47 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)",
         "Heart of Fire (XIX)"
@@ -28318,14 +29750,47 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Area"
+      ],
       "arcana": [
         "Gemini (I)",
         "Slash (XVI)",
@@ -28386,14 +29851,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Amount",
+            "Armor",
+            "Retaliation"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Amount",
+        "Armor",
+        "Retaliation"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Divine Bloodline (IX)",
         "Slash (XVI)"
@@ -28420,14 +29902,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Speed",
+            "Duration",
+            "Area",
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Cooldown",
+        "Amount"
+      ],
       "arcana": []
     },
     {
@@ -28485,12 +29983,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -28546,12 +30068,45 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Charm"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Charm",
+        "Curse",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -28616,14 +30171,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Revival"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Revival"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -28666,14 +30234,25 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Revival"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -28725,14 +30304,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Orologion",
+            "Freeze",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Orologion",
+        "Freeze",
+        "Light Source"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -28775,14 +30371,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Orologion",
+            "Freeze",
+            "Luck",
+            "Critical Damage",
+            "Light Sources"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Orologion",
+        "Freeze",
+        "Luck",
+        "Critical Damage",
+        "Light Sources"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Out of Bounds (XII)",
         "Slash (XVI)"
@@ -28806,17 +30423,8 @@ window.VS_DATA = {
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50,
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
       "conflict": [],
       "arcana": [
         "Jail of Crystal (XIV)",
@@ -28898,12 +30506,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -28986,12 +30611,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -29074,12 +30716,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -29162,12 +30821,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -29250,12 +30926,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -29338,12 +31031,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -29403,12 +31113,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -29477,12 +31204,52 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage",
+        "Counterpart",
+        "Curse",
+        "Move Speed",
+        "Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -29516,12 +31283,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -29581,12 +31374,49 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage",
+            "Light Source",
+            "Rosary"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage",
+        "Light Source",
+        "Rosary",
+        "Counterpart",
+        "Curse",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -29658,14 +31488,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Defang",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Defang",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -29720,14 +31564,34 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Defang",
+            "Luck",
+            "Retaliation",
+            "Armor",
+            "Invulnerable"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Defang",
+        "Luck",
+        "Retaliation",
+        "Armor",
+        "Invulnerable"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -29779,14 +31643,25 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Duration"
+      ],
       "arcana": [
         "Sapphire Mist (I)",
         "Pale Diamond Incursion (V)"
@@ -29832,14 +31707,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth",
+            "Charm"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth",
+        "Charm"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Duration"
+      ],
       "arcana": [
         "Sapphire Mist (I)",
         "Pale Diamond Incursion (V)"
@@ -29894,14 +31782,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -29944,14 +31841,25 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -29971,17 +31879,8 @@ window.VS_DATA = {
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50,
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
       "conflict": [],
       "arcana": [
         "Hail from the Future (X)"
@@ -30048,12 +31947,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -30110,12 +32019,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -30181,12 +32100,40 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Armor"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Curse",
+        "Armor"
       ],
       "conflict": [],
       "arcana": [
@@ -30248,12 +32195,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -30305,14 +32273,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -30349,14 +32327,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -30414,14 +32402,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -30470,14 +32468,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -30535,12 +32543,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Luck",
+        "Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -30600,12 +32627,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Luck",
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Luck",
+        "Freeze",
+        "Magnet"
       ],
       "conflict": [],
       "arcana": [
@@ -30662,14 +32712,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Luck",
+            "Greed",
+            "Armor",
+            "Retaliation"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Greed",
+        "Armor",
+        "Retaliation"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Sarabande of Healing (VI)",
         "Wandering the Jet Black (XXI)"
@@ -30721,14 +32790,37 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Luck",
+            "Greed",
+            "Armor",
+            "Retaliation",
+            "Low Health",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Greed",
+        "Armor",
+        "Retaliation",
+        "Low Health",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Sarabande of Healing (VI)",
         "Slash (XVI)",
@@ -30796,12 +32888,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -30861,12 +32963,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -30915,14 +33027,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Luck",
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Luck",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Amount",
+        "Luck"
+      ],
       "arcana": []
     },
     {
@@ -30967,14 +33092,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration",
+        "Area"
+      ],
       "arcana": []
     },
     {
@@ -31025,14 +33159,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown"
       ],
-      "conflict": [],
+      "conflict": [
+        "Amount"
+      ],
       "arcana": []
     },
     {
@@ -31077,14 +33221,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration",
+        "Area"
+      ],
       "arcana": []
     },
     {
@@ -31133,12 +33286,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -31192,14 +33355,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Armor",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": "Slash (XVI)}",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Armor",
+        "Retaliation",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Amount"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -31250,12 +33434,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation"
+          ]
+        },
+        {
+          "key": "Slash (XVI)}",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation",
+        "Critical Damage",
+        "Luck"
       ],
       "conflict": [],
       "arcana": [
@@ -31323,14 +33530,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Slash (XVI)",
@@ -31389,14 +33610,32 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Luck",
+            "Gold Coin",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck",
+        "Gold Coin",
+        "Light Source"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)",
         "Pale Diamond Incursion (V)"
@@ -31463,14 +33702,45 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Freeze",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Jail of Crystal (XIV)",
@@ -31524,14 +33794,52 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth",
+        "Curse",
+        "Freeze",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Jail of Crystal (XIV)",
@@ -31594,12 +33902,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Slow",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Slow",
+        "Luck",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -31630,12 +33959,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Slow",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Slow",
+        "Luck",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": []
@@ -31686,14 +34036,42 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Slow",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Slow",
+        "Luck",
+        "Curse",
+        "Counterpart"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Gemini (I)",
         "Pale Diamond Incursion (V)"
@@ -31758,12 +34136,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Sapphire Mist (I)",
+          "items": [
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Luck"
       ],
       "conflict": [],
       "arcana": [
@@ -31795,12 +34197,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Sapphire Mist (I)",
+          "items": [
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Luck"
       ],
       "conflict": [],
       "arcana": [
@@ -31868,14 +34294,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -31930,14 +34366,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -32001,14 +34447,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration",
+        "Luck"
+      ],
       "arcana": []
     },
     {
@@ -32063,14 +34522,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration",
+        "Luck"
+      ],
       "arcana": []
     },
     {
@@ -32116,14 +34588,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Sarabande of Healing (VI)",
         "Wandering the Jet Black (XXI)"
@@ -32163,12 +34645,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Magnet",
+            "Revival",
+            "Max Health",
+            "Armor",
+            "Move Speed",
+            "Luck",
+            "Growth"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Might",
+        "Speed",
+        "Duration",
+        "Magnet",
+        "Revival",
+        "Max Health",
+        "Armor",
+        "Move Speed",
+        "Luck",
+        "Growth"
       ],
       "conflict": [],
       "arcana": [
@@ -32231,14 +34744,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -32287,14 +34810,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -32358,12 +34890,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -32420,12 +34962,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -32485,14 +35037,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Counterpart"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Gemini (I)"
       ]
@@ -32520,14 +35091,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Counterpart"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -32576,14 +35166,37 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Luck",
+            "Critical Chance"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Critical Chance",
+        "Counterpart"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Gemini (I)",
         "Slash (XVI)"
@@ -32644,14 +35257,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Slow",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Slow",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -32700,14 +35327,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Slow",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Slow",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -32769,12 +35410,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -32837,14 +35488,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Pale Diamond Incursion (V)"
@@ -32902,14 +35570,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Pale Diamond Incursion (V)"
@@ -32977,14 +35669,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Pale Diamond Incursion (V)"
@@ -33042,14 +35751,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Heart of Fire (XIX)",
@@ -33118,14 +35851,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Pale Diamond Incursion (V)"
@@ -33183,14 +35933,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Heart of Fire (XIX)",
@@ -33253,12 +36027,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -33312,14 +36110,45 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Curse",
+        "Freeze"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Jail of Crystal (XIV)"
@@ -33381,14 +36210,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -33446,14 +36292,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -33521,12 +36384,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -33580,12 +36453,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Revival"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Revival"
       ],
       "conflict": [],
       "arcana": [
@@ -33649,14 +36541,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)"
       ]
@@ -33707,14 +36616,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)"
       ]
@@ -33781,12 +36707,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -33843,12 +36779,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival",
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Magnet"
       ],
       "conflict": [],
       "arcana": []
@@ -33921,12 +36876,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -33983,12 +36948,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Revival"
       ],
       "conflict": [],
       "arcana": []
@@ -34049,12 +37033,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Luck",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -34086,12 +37091,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Luck",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -34151,12 +37177,44 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze",
+            "Luck",
+            "Defang"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Revival",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Luck",
+        "Defang",
+        "Revival",
+        "Move Speed",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -34220,14 +37278,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Low Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -34276,14 +37346,25 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Low Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -34335,14 +37416,39 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)",
         "Heir of Fate (XIX)"
@@ -34388,14 +37494,46 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Slash (XVI)",
@@ -34451,14 +37589,34 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -34503,12 +37661,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth",
+        "Critical Damage",
+        "Luck"
       ],
       "conflict": [],
       "arcana": [
@@ -34570,14 +37749,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -34628,14 +37826,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -34701,14 +37918,40 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Jail of Crystal (XIV)",
         "Slash (XVI)"
@@ -34766,14 +38009,47 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Magnet",
+        "Freeze",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Jail of Crystal (XIV)",
         "Slash (XVI)"
@@ -34834,14 +38110,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Curse"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -34892,14 +38189,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Curse"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -34953,14 +38271,41 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Max Health"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Max Health",
+        "Curse",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Slash (XVI)"
@@ -35006,14 +38351,41 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Max Health"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Max Health",
+        "Curse",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)",
         "Slash (XVI)"
@@ -35074,14 +38446,35 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Max Health"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Max Health",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -35132,14 +38525,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Max Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Max Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -35193,14 +38598,41 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Max Health"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Max Health",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)",
         "Heart of Fire (XIX)"
@@ -35252,14 +38684,41 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Max Health"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Max Health",
+        "Critical Damage",
+        "Luck",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)",
         "Heart of Fire (XIX)"
@@ -35295,14 +38754,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Pale Diamond Incursion (V)"
@@ -35329,14 +38798,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Pale Diamond Incursion (V)"
@@ -35372,12 +38851,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -35406,12 +38895,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -35486,20 +38985,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
-        "Gemini (I)",
-        "Twilight Requiem (II)",
-        "Tragic Princess (III)",
         "Iron Blue Will (VII)",
-        "Slash (XVI)",
         "Pale Diamond Incursion (V)"
       ]
     },
@@ -35561,12 +39066,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": [
@@ -35604,14 +39119,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -35635,14 +39160,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Invulnerable",
+        "Armor"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -35700,14 +39244,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Pale Diamond Incursion (V)"
@@ -35759,14 +39313,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Iron Blue Will (VII)",
         "Pale Diamond Incursion (V)"
@@ -35802,12 +39373,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -35864,12 +39445,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Chance",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Chance",
+        "Luck"
       ],
       "conflict": [],
       "arcana": []
@@ -35923,12 +39518,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -35975,12 +39587,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -36042,14 +39671,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -36098,14 +39737,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Revival",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Revival",
+        "Recovery"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Hidden Anathema (III)"
       ]
@@ -36171,12 +39824,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -36208,12 +39892,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -36272,12 +39987,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -36347,12 +40093,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -36383,12 +40153,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -36447,12 +40241,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -36521,12 +40339,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -36557,12 +40392,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": []
@@ -36619,12 +40471,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -36693,12 +40562,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -36729,12 +40615,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": []
@@ -36791,12 +40694,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -36865,12 +40785,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -36901,12 +40845,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -36965,12 +40933,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37039,12 +41031,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37075,12 +41091,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37139,12 +41179,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Counterpart",
+        "Move Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37213,16 +41284,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Curse"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Counterpart"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
       "arcana": [
-        "Gemini (I)"
+        "Gemini (I)",
+        "Twilight Requiem (II)"
       ]
     },
     {
@@ -37248,15 +41346,43 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Curse"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Counterpart"
       ],
-      "conflict": [],
-      "arcana": []
+      "conflict": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "arcana": [
+        "Twilight Requiem (II)"
+      ]
     },
     {
       "name": "Nightmare",
@@ -37316,16 +41442,48 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
       "arcana": [
-        "Gemini (I)"
+        "Gemini (I)",
+        "Twilight Requiem (II)"
       ]
     },
     {
@@ -37389,12 +41547,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Counterpart",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -37425,12 +41609,38 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Counterpart",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -37489,12 +41699,45 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Counterpart",
+        "Curse"
       ],
       "conflict": [],
       "arcana": [
@@ -37532,14 +41775,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -37600,14 +41853,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -37640,12 +41907,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery"
       ],
       "conflict": [],
       "arcana": []
@@ -37661,7 +41940,7 @@ window.VS_DATA = {
       ],
       "limit_break": [],
       "trans_conditions": "",
-      "trans_result": null,
+      "trans_result": "Damage still receives a recovery mult?",
       "requirements": [],
       "final_state": "Moon Rod",
       "ode_category": null,
@@ -37671,12 +41950,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery"
       ],
       "conflict": [],
       "arcana": []
@@ -37711,14 +42002,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -37742,14 +42042,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -37801,14 +42118,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -37857,14 +42183,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -37899,12 +42238,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation",
+        "Low Health"
       ],
       "conflict": [],
       "arcana": []
@@ -37930,12 +42285,37 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Retaliation",
+            "Low Health",
+            "Critical Hit"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Invulnerable"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Retaliation",
+        "Low Health",
+        "Critical Hit",
+        "Invulnerable"
       ],
       "conflict": [],
       "arcana": []
@@ -37995,14 +42375,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Recovery"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -38051,12 +42445,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed",
+            "Recovery",
+            "Invulnerable"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Recovery",
+        "Invulnerable"
       ],
       "conflict": [],
       "arcana": []
@@ -38091,14 +42499,28 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -38124,12 +42546,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [],
       "arcana": [
@@ -38164,14 +42600,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -38202,14 +42647,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -38233,14 +42694,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -38288,14 +42765,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -38345,14 +42841,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -38402,14 +42917,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -38469,12 +43003,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -38511,12 +43062,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": []
@@ -38567,12 +43135,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Gemini (I)",
+          "items": [
+            "Counterpart"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Counterpart"
       ],
       "conflict": [],
       "arcana": [
@@ -38634,14 +43219,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -38690,14 +43285,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Charm"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Gold Fever"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Charm",
+        "Gold Fever"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -38748,14 +43362,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Heir of Fate (XIX)"
       ]
@@ -38808,14 +43438,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -38860,14 +43499,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Recovery",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Recovery",
+        "Low Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Amount"
+      ],
       "arcana": []
     },
     {
@@ -38891,14 +43547,37 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor",
+            "Recovery",
+            "Low Health"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor",
+        "Recovery",
+        "Low Health",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Heir of Fate (XIX)"
       ]
@@ -38932,14 +43611,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Low Health"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Low Health",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heir of Fate (XIX)"
       ]
@@ -38973,14 +43671,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Low Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -39031,14 +43741,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Low Health"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Low Health"
       ],
-      "conflict": [],
+      "conflict": [
+        "Amount"
+      ],
       "arcana": []
     },
     {
@@ -39062,12 +43784,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Low Health"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Low Health",
+        "Fire"
       ],
       "conflict": [],
       "arcana": []
@@ -39102,12 +43843,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Magnet"
       ],
       "conflict": [],
       "arcana": [
@@ -39135,12 +43895,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": "Blood Astronomia (XXI)",
+          "items": [
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Move Speed",
+        "Magnet"
       ],
       "conflict": [],
       "arcana": [
@@ -39212,12 +43991,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -39284,12 +44073,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth"
       ],
       "conflict": [],
       "arcana": []
@@ -39359,12 +44160,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -39431,12 +44242,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Magnet"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Magnet"
       ],
       "conflict": [],
       "arcana": []
@@ -39462,12 +44285,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -39493,12 +44326,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Magic Whip"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Magic Whip"
       ],
       "conflict": [],
       "arcana": []
@@ -39524,12 +44357,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Vampire-Killing Tool"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": []
@@ -39555,12 +44388,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Magic Weapon"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": []
@@ -39586,12 +44419,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Belnades' Spell"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Belnades' Spell"
       ],
       "conflict": [],
       "arcana": []
@@ -39617,12 +44450,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Ambiguous Powers"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Ambiguous Powers"
       ],
       "conflict": [],
       "arcana": []
@@ -39694,14 +44527,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -39752,14 +44604,37 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Charm",
+            "Luck",
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Charm",
+        "Luck",
+        "Critical Damage",
+        "Armor"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -39822,12 +44697,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Orologion"
       ],
       "conflict": [],
       "arcana": []
@@ -39890,12 +44777,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Orologion"
       ],
       "conflict": [],
       "arcana": []
@@ -39958,12 +44857,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Orologion"
       ],
       "conflict": [],
       "arcana": []
@@ -40026,12 +44937,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Orologion"
       ],
       "conflict": [],
       "arcana": []
@@ -40057,12 +44980,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Orologion"
       ],
       "conflict": [],
       "arcana": []
@@ -40088,12 +45023,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40119,12 +45054,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40150,12 +45085,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40181,12 +45116,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40212,12 +45147,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": [
@@ -40246,12 +45181,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40277,12 +45212,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40308,12 +45243,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40339,12 +45274,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40370,12 +45305,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40401,12 +45336,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40432,12 +45367,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Familiar"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Familiar"
       ],
       "conflict": [],
       "arcana": []
@@ -40489,14 +45424,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Out of Bounds (XII)",
         "Jail of Crystal (XIV)"
@@ -40549,14 +45496,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Out of Bounds (XII)",
         "Jail of Crystal (XIV)"
@@ -40602,14 +45561,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Out of Bounds (XII)",
         "Jail of Crystal (XIV)"
@@ -40643,14 +45614,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -40681,14 +45661,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -40712,14 +45701,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -40753,14 +45751,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -40791,14 +45799,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": []
     },
     {
@@ -40848,14 +45866,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -40907,14 +45938,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -40959,14 +46003,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -40999,14 +46056,39 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Fire",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -41040,14 +46122,39 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Fire",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -41074,14 +46181,39 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Fire",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)",
         "Heir of Fate (XIX)"
@@ -41118,14 +46250,32 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Move Speed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Tragic Princess (III)"
       ]
@@ -41177,14 +46327,32 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery"
+          ]
+        },
+        {
+          "key": "Tragic Princess (III)",
+          "items": [
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Move Speed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Tragic Princess (III)"
       ]
@@ -41217,12 +46385,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -41258,12 +46450,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -41292,12 +46508,36 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -41333,14 +46573,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Heart of Fire (XIX)"
       ]
@@ -41373,14 +46630,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Jail of Crystal (XIV)",
         "Heart of Fire (XIX)"
@@ -41407,14 +46683,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Freeze",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Jail of Crystal (XIV)",
         "Heart of Fire (XIX)"
@@ -41451,14 +46746,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Sapphire Mist (I)",
+          "items": [
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Sapphire Mist (I)"
       ]
@@ -41491,14 +46803,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Sapphire Mist (I)",
+          "items": [
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Sapphire Mist (I)"
       ]
@@ -41534,14 +46863,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -41574,14 +46922,30 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage",
+            "Invulnerable"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage",
+        "Invulnerable"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -41617,14 +46981,32 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -41657,14 +47039,41 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Charm",
+            "Gold Fever"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Damage",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Charm",
+        "Gold Fever",
+        "Critical Damage",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -41700,14 +47109,33 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -41740,14 +47168,40 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse",
+        "Luck",
+        "Critical Damage"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed"
+      ],
       "arcana": [
         "Slash (XVI)"
       ]
@@ -41783,14 +47237,23 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)"
       ]
@@ -41823,14 +47286,27 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Greed",
+            "Recovery"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Greed",
+        "Recovery"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)"
       ]
@@ -41863,14 +47339,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)"
       ]
@@ -41903,14 +47396,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)"
       ]
@@ -41936,14 +47446,31 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Curse"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
         "Twilight Requiem (II)"
       ]
@@ -41976,12 +47503,52 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth",
+        "Curse",
+        "Freeze",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -42031,12 +47598,52 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Growth"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
+        },
+        {
+          "key": "Heart of Fire (XIX)",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth",
+        "Curse",
+        "Freeze",
+        "Fire",
+        "Fire"
       ],
       "conflict": [],
       "arcana": [
@@ -42101,12 +47708,22 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount"
       ],
       "conflict": [],
       "arcana": []
@@ -42157,12 +47774,29 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Growth"
       ],
       "conflict": [],
       "arcana": []
@@ -42184,17 +47818,8 @@ window.VS_DATA = {
       "ode_category": "Emerald Diorama",
       "arcana_ratings": {},
       "rarity": 2,
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "-"
-          ]
-        }
-      ],
-      "affinity": [
-        "-"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
       "conflict": [],
       "arcana": []
     },
@@ -42248,14 +47873,32 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Charm"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Charm",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Amount"
+      ],
       "arcana": [
         "Heir of Fate (XIX)"
       ]
@@ -42300,14 +47943,34 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Charm",
+            "Gold Coin"
+          ]
+        },
+        {
+          "key": "Heir of Fate (XIX)",
+          "items": [
+            "Fire"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Charm",
+        "Gold Coin",
+        "Fire"
       ],
-      "conflict": [],
+      "conflict": [
+        "Speed",
+        "Amount"
+      ],
       "arcana": [
         "Heir of Fate (XIX)"
       ]
@@ -42380,12 +48043,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [],
       "arcana": [
@@ -42452,12 +48129,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Critical Damage"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Critical Damage"
       ],
       "conflict": [],
       "arcana": [
@@ -42522,14 +48213,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -42578,14 +48281,26 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": []
     },
     {
@@ -42638,14 +48353,25 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Area",
+            "Amount",
+            "Greed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Area",
+        "Amount",
+        "Greed"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration",
+        "Cooldown"
+      ],
       "arcana": []
     },
     {
@@ -42688,12 +48414,24 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "-"
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Greed"
           ]
         }
       ],
       "affinity": [
-        "-"
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Greed"
       ],
       "conflict": [],
       "arcana": []
@@ -43043,10 +48781,7 @@ window.VS_DATA = {
         "-"
       ],
       "conflict": [],
-      "arcana": [
-        "Edge of the Earth (VIII)",
-        "Hail from the Future (X)"
-      ]
+      "arcana": []
     },
     {
       "name": "Floor Chicken",
@@ -43366,9 +49101,7 @@ window.VS_DATA = {
         "-"
       ],
       "conflict": [],
-      "arcana": [
-        "Heart of Fire (XIX)"
-      ]
+      "arcana": []
     },
     {
       "name": "Wall Chicken",
@@ -45763,19 +51496,24 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Halted XP",
+            "Growth"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Growth",
             "Magnet",
-            "Halted XP",
             "Treasure"
           ]
         }
       ],
       "affinity": [
+        "Halted XP",
         "Growth",
         "Magnet",
-        "Halted XP",
         "Treasure"
       ],
       "conflict": []
@@ -45798,6 +51536,7 @@ window.VS_DATA = {
         "Eight The Sparrow",
         "Phieraggi",
         "Gatti Amari",
+        "Vicious Hunger",
         "Ammo Appalate",
         "Gunastrophe",
         "Santa Javelin",
@@ -45834,7 +51573,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Counterpart"
           ]
@@ -45887,6 +51626,9 @@ window.VS_DATA = {
         "Refectio",
         "Speculo Refectio",
         "Sanctuary",
+        "Hex",
+        "Speculo Hex",
+        "Nightmare",
         "Spirit Rings",
         "Rings of Calamity",
         "Sanguine Star",
@@ -45897,7 +51639,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Curse"
           ]
@@ -45943,7 +51685,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Move Speed"
           ]
@@ -45969,14 +51711,31 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Revival"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Armor",
+            "Might",
+            "Area",
+            "Duration",
+            "Speed"
           ]
         }
       ],
       "affinity": [
-        "Revival"
+        "Revival",
+        "Max Health",
+        "Armor",
+        "Might",
+        "Area",
+        "Duration",
+        "Speed"
       ],
       "conflict": []
     },
@@ -45995,7 +51754,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Speed"
           ]
@@ -46018,7 +51777,7 @@ window.VS_DATA = {
       "notes": "",
       "affects_explicit": [
         "Bloody Tear",
-        "Fuwalafaloo",
+        "Fuwalafuwaloo",
         "Soul Eater",
         "Celestial Dusting",
         "Pummarola",
@@ -46032,14 +51791,21 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Area"
           ]
         }
       ],
       "affinity": [
-        "Recovery"
+        "Recovery",
+        "Area"
       ],
       "conflict": []
     },
@@ -46077,7 +51843,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Bounce"
           ]
@@ -46107,18 +51873,14 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
-            "Light Source",
-            "Rosary",
-            "Vacuum"
+            "Light Source"
           ]
         }
       ],
       "affinity": [
-        "Light Source",
-        "Rosary",
-        "Vacuum"
+        "Light Source"
       ],
       "conflict": []
     },
@@ -46147,7 +51909,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Armor",
             "Max Health",
@@ -46183,16 +51945,21 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Limited",
-            "Amount"
+            "Limited"
           ]
         }
       ],
       "affinity": [
-        "Limited",
-        "Amount"
+        "Amount",
+        "Limited"
       ],
       "conflict": []
     },
@@ -46229,7 +51996,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Bounce"
           ]
@@ -46268,14 +52035,21 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "Freeze"
+        "Freeze",
+        "Orologion"
       ],
       "conflict": []
     },
@@ -46297,7 +52071,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Growth",
             "Luck",
@@ -46369,14 +52143,23 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Luck",
+            "Duration"
           ]
         }
       ],
       "affinity": [
-        "Freeze"
+        "Freeze",
+        "Luck",
+        "Duration"
       ],
       "conflict": []
     },
@@ -46400,16 +52183,25 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Greed",
             "Gold Fever"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Recovery",
+            "Treasure"
           ]
         }
       ],
       "affinity": [
         "Greed",
-        "Gold Fever"
+        "Gold Fever",
+        "Recovery",
+        "Treasure"
       ],
       "conflict": []
     },
@@ -46490,7 +52282,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Luck",
             "Critical Damage"
@@ -46518,7 +52310,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Duration"
           ]
@@ -46544,7 +52336,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Area"
           ]
@@ -46617,11 +52409,17 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Fire"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Fire",
             "Light Source",
             "Retaliation",
+            "Armor",
             "Might",
             "Area"
           ]
@@ -46631,6 +52429,7 @@ window.VS_DATA = {
         "Fire",
         "Light Source",
         "Retaliation",
+        "Armor",
         "Might",
         "Area"
       ],
@@ -46653,9 +52452,14 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Limited"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Limited",
             "Might",
             "Cooldown"
           ]
@@ -46692,16 +52496,27 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
+            "Astronomia",
             "Amount",
             "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Duration",
+            "Cooldown"
           ]
         }
       ],
       "affinity": [
+        "Astronomia",
         "Amount",
-        "Magnet"
+        "Magnet",
+        "Duration",
+        "Cooldown"
       ],
       "conflict": []
     },
@@ -46721,16 +52536,23 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Halted XP",
+            "Gold Coin"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Greed",
-            "Halted XP"
+            "Greed"
           ]
         }
       ],
       "affinity": [
-        "Greed",
-        "Halted XP"
+        "Halted XP",
+        "Gold Coin",
+        "Greed"
       ],
       "conflict": []
     },
@@ -46757,7 +52579,7 @@ window.VS_DATA = {
         "Tonn'oddeeo",
         "Tonne",
         "Unsurpassed",
-        "Miracle of Multiplication.",
+        "Miracle of Multiplication",
         "Magi-Stone",
         "Kyra-Stones",
         "Mille Bolle Blu",
@@ -46769,7 +52591,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Luck"
           ]
@@ -46799,18 +52621,23 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
+          "key": "primary",
+          "items": [
+            "Recovery"
+          ]
+        },
+        {
           "key": null,
           "items": [
-            "Food",
-            "Recovery",
-            "Luck"
+            "Luck",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
-        "Food",
         "Recovery",
-        "Luck"
+        "Luck",
+        "Light Source"
       ],
       "conflict": []
     },
@@ -46856,7 +52683,7 @@ window.VS_DATA = {
         "Bone",
         "Anima of Mortaccio",
         "Carréllo",
-        "Carrozza!",
+        "Carozza!",
         "La Robba",
         "Greatest Jubilee",
         "Bracelet",
@@ -46906,14 +52733,21 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown"
           ]
         }
       ],
       "affinity": [
-        "Speed"
+        "Speed",
+        "Cooldown"
       ],
       "conflict": []
     },
@@ -46932,13 +52766,15 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
+            "Arcana",
             "Treasure"
           ]
         }
       ],
       "affinity": [
+        "Arcana",
         "Treasure"
       ],
       "conflict": []
@@ -46955,19 +52791,22 @@ window.VS_DATA = {
       "notes": "",
       "affects_explicit": [
         "Wings",
-        "Vacuum",
+        "Magnet",
         "Light Source",
         "Treasure Chest"
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Retaliation",
-            "Move Speed",
-            "Flight",
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Magnet",
-            "Vacuum",
             "Light Source"
           ]
         }
@@ -46975,9 +52814,7 @@ window.VS_DATA = {
       "affinity": [
         "Retaliation",
         "Move Speed",
-        "Flight",
         "Magnet",
-        "Vacuum",
         "Light Source"
       ],
       "conflict": []
@@ -46997,7 +52834,7 @@ window.VS_DATA = {
         "Arma Dio",
         "Rosary",
         "Orologion",
-        "Vacuum",
+        "Magnet",
         "Gilded Clover",
         "Gold Finger",
         "Nduja Fritta Tanto",
@@ -47008,16 +52845,29 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Luck",
             "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Orologion",
+            "Rosary",
+            "Gold Coin",
+            "Gold Fever"
           ]
         }
       ],
       "affinity": [
         "Luck",
-        "Amount"
+        "Amount",
+        "Orologion",
+        "Rosary",
+        "Gold Coin",
+        "Gold Fever"
       ],
       "conflict": []
     },
@@ -47037,14 +52887,27 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Recovery",
+            "Max Health",
+            "Orologion"
           ]
         }
       ],
       "affinity": [
-        "Freeze"
+        "Freeze",
+        "Growth",
+        "Recovery",
+        "Max Health",
+        "Orologion"
       ],
       "conflict": []
     },
@@ -47068,11 +52931,11 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Growth",
             "Greed",
-            "Greed",
+            "Luck",
             "Curse"
           ]
         }
@@ -47080,7 +52943,7 @@ window.VS_DATA = {
       "affinity": [
         "Growth",
         "Greed",
-        "Greed",
+        "Luck",
         "Curse"
       ],
       "conflict": []
@@ -47098,31 +52961,36 @@ window.VS_DATA = {
       "affects_explicit": [
         "Attractorb",
         "Stone Mask",
-        "Skill O'Maniac",
+        "Skull O'Maniac",
         "Little Heart"
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Greed",
+            "Magnet",
+            "Curse",
+            "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Might",
             "Amount",
-            "Magnet",
-            "Area",
-            "Max Health",
-            "Curse"
+            "Area"
           ]
         }
       ],
       "affinity": [
         "Greed",
+        "Magnet",
+        "Curse",
+        "Max Health",
         "Might",
         "Amount",
-        "Magnet",
-        "Area",
-        "Max Health",
-        "Curse"
+        "Area"
       ],
       "conflict": []
     },
@@ -47156,7 +53024,7 @@ window.VS_DATA = {
         "Raging Fire",
         "Salamender",
         "Dextro Custos",
-        "Trinium Custodem",
+        "Trinum Custodem",
         "Dominus Anger",
         "Svarog Statue",
         "Darkness Illusion",
@@ -47175,7 +53043,7 @@ window.VS_DATA = {
       ],
       "affinity_groups": [
         {
-          "key": null,
+          "key": "primary",
           "items": [
             "Fire",
             "Max Health",
@@ -47202,7 +53070,7 @@ window.VS_DATA = {
       "notes": "",
       "affects_explicit": [
         "Bloody Tear",
-        "Fuwalafaloo",
+        "Fuwalafuwaloo",
         "Soul Eater",
         "Celestial Dusting",
         "Pummarola",
@@ -47215,8 +53083,30 @@ window.VS_DATA = {
         "Attractorb",
         "Floor Chicken"
       ],
-      "affinity_groups": [],
-      "affinity": [],
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magnet",
+            "Amount",
+            "Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Recovery",
+        "Low Health",
+        "Magnet",
+        "Amount",
+        "Speed"
+      ],
       "conflict": []
     }
   ],
@@ -47227,8 +53117,76 @@ window.VS_DATA = {
       "color": "#9e3d0e",
       "base_affinity": "Amount",
       "is_parent": true,
-      "description": "",
-      "info": "[Aura Blast,\"When total Amount is at 6 and above trigger a Grand Cross explosion that damages enemies in a much larger area.\"]",
+      "description": "Amount most commonly increases the number of projectiles fired by weapons but has unique interactions with certain weapons and Arcana.",
+      "info_entries": [
+        {
+          "objects": [
+            "Blood Astronomia (XXI)"
+          ],
+          "blurb": "Enemies within the range of Magnet take damage equal to 5x Amount."
+        },
+        {
+          "objects": [
+            "Hail from the Future (X)"
+          ],
+          "blurb": "Amount increases the number of drops received from the Arcana."
+        },
+        {
+          "objects": [
+            "Victorian Horror (XVIII)"
+          ],
+          "blurb": "Each Amount above cap (10) increases Arcana damage by 10%"
+        },
+        {
+          "objects": [
+            "Wandering the Jet Black (XXI)"
+          ],
+          "blurb": "The number of projectiles spawned when losing health or healing is increased by Amount."
+        },
+        {
+          "objects": [
+            "Tonne"
+          ],
+          "blurb": "Amount decreases the hitbox delay of the weapon."
+        },
+        {
+          "objects": [
+            "Phas3r"
+          ],
+          "blurb": "Receives a 4x multiplier to Amount."
+        },
+        {
+          "objects": [
+            "Four Seasons",
+            "Godai Shuffle",
+            "Endo Gears",
+            "Peri Pendulum",
+            "Myo Lift",
+            "Epi Head",
+            "Clock Tower"
+          ],
+          "blurb": "Amount is applied as a Damage multiplier."
+        },
+        {
+          "objects": [
+            "Globus",
+            "Speculo Globus",
+            "Nitesco"
+          ],
+          "blurb": "Amount increases the duration of the weapon effect."
+        },
+        {
+          "objects": [
+            "Dextro Custos",
+            "Sinestro Custos",
+            "Trinum Custodem",
+            "Town Sword",
+            "Lordstar",
+            "Dayblade"
+          ],
+          "blurb": "Amount increases the number of hits."
+        }
+      ],
       "related": {
         "weapons": [
           "Whip",
@@ -47259,6 +53217,8 @@ window.VS_DATA = {
           "Hellfire",
           "Aura Blast",
           "Kardía Phlegeton",
+          "Garlic",
+          "Soul Eater",
           "Speculo Anura",
           "Anura",
           "Dark Frogamorphosis",
@@ -47272,7 +53232,291 @@ window.VS_DATA = {
           "Lightning Ring",
           "Thunder Loop",
           "Vjaya Sisters",
-          "Vicious Hunger"
+          "Pentagram",
+          "Gorgeous Moon",
+          "Summon Spirit Tornado",
+          "Venus Crescent",
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Phieraggi",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Soul Steal",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Arrow of Goth",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Clock Lancet",
+          "Laurel",
+          "Crimson Shroud",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Carréllo",
+          "Carozza!",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Kaiser Knuckle",
+          "Lapiste Tepisto",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Victory Sword",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Unearthly Bolt",
+          "Spirit Disturbance",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Gaze of Gaea",
+          "Embrace of Gaea",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Phas3r",
+          "Photonstorm",
+          "Chaos Rune",
+          "Wicked Ruler",
+          "Silver Wind",
+          "Festive Winds",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Summon Night",
+          "Echo Night",
+          "Mirage Robe",
+          "J'Odore",
+          "Night Sword",
+          "Muramasa",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "SpellString",
+          "SpellStrike",
+          "SpellStrom",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Report!",
+          "Emergency Meeting",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Lifesign Scan",
+          "Paranormal Scan",
+          "Just Vent",
+          "Unjust Ejection",
+          "Clear Debris",
+          "Clear Asteroids",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Science Rocks",
+          "Rocket Science",
+          "Hats",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Firearm",
+          "Fire-L3GS",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Metal Claw",
+          "Big Fuzzy Fist",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Mace",
+          "Stamazza",
+          "Star Flail",
+          "Moon Rod",
+          "Alucard Spear",
+          "Thunderbolt Spear",
+          "Trident",
+          "Gungnir-Souris",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Tyrfing",
+          "Rune Sword",
+          "Alucart Sworb",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Optical Shot",
+          "Acerbatus",
+          "Dextro Custos",
+          "Sinestro Custos",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Splashers",
+          "Pursuant Blades",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Sanguine Star",
+          "Blood Chalice",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Gros Michel",
+          "Cavendish",
+          "Fibonacci Spritz",
+          "Royal Flush",
+          "Celestial Booster",
+          "Negative Space"
         ],
         "passives": [
           "Duplicator",
@@ -47332,7 +53576,8 @@ window.VS_DATA = {
           "Beginning (X)",
           "Blood Astronomia (XXI)",
           "Hail from the Future (X)",
-          "Victorian Horror (XVIII)"
+          "Victorian Horror (XVIII)",
+          "Wandering the Jet Black (XXI)"
         ]
       }
     },
@@ -47343,12 +53588,14 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": true,
       "description": "Arcana affinities are enabled solely from the associated Arcana and features are not present without them.",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
         "characters": [],
-        "arcana": []
+        "arcana": [
+          "Moonlight Bolero (VI)"
+        ]
       }
     },
     {
@@ -47358,12 +53605,14 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
         "characters": [],
-        "arcana": []
+        "arcana": [
+          "Blood Astronomia (XXI)"
+        ]
       }
     },
     {
@@ -47373,7 +53622,7 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47391,9 +53640,70 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Phieraggi",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco"
+        ],
         "passives": [],
         "characters": [
           "Rinaldo Gandolfi (Keremet Bubbles)",
@@ -47411,7 +53721,7 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47436,7 +53746,7 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47462,7 +53772,29 @@ window.VS_DATA = {
       "base_affinity": "Area",
       "is_parent": true,
       "description": "",
-      "info": "Axe Receives an addiitonal 1.3x Area multiplier.|\nDeath Spiral Receives an addiitonal 1.2x Area multiplier.|\nLegacy of Death: Soul River Damage is multiplied by Area",
+      "info_entries": [
+        {
+          "objects": [
+            "SpellStream",
+            "SpellStrom"
+          ],
+          "blurb": "Damage is multiplied by 1.25x Area."
+        },
+        {
+          "objects": [
+            "Sonic Dash",
+            "Rapidus Fio"
+          ],
+          "blurb": "Damage is affected by Area."
+        },
+        {
+          "objects": [
+            "Spirit Rings",
+            "Rings of Calamity"
+          ],
+          "blurb": "Gains the Vermillion Sands glimmer tech at +55% Area."
+        }
+      ],
       "related": {
         "weapons": [
           "Whip",
@@ -47507,7 +53839,290 @@ window.VS_DATA = {
           "Lightning Ring",
           "Thunder Loop",
           "Vjaya Sisters",
-          "Vicious Hunger"
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Phieraggi",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Arrow of Goth",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Infinite Corridor",
+          "Crimson Shroud",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Carréllo",
+          "Carozza!",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Kaiser Knuckle",
+          "Lapiste Tepisto",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Victory Sword",
+          "Sole Solution",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Unearthly Bolt",
+          "Spirit Disturbance",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Gaze of Gaea",
+          "Embrace of Gaea",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Phas3r",
+          "Photonstorm",
+          "Chaos Rune",
+          "Wicked Ruler",
+          "Silver Wind",
+          "Festive Winds",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Summon Night",
+          "Echo Night",
+          "Mirage Robe",
+          "J'Odore",
+          "Night Sword",
+          "Muramasa",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "108 Bocce",
+          "SpellStream",
+          "SpellStrom",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Report!",
+          "Emergency Meeting",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Lifesign Scan",
+          "Paranormal Scan",
+          "Just Vent",
+          "Unjust Ejection",
+          "Clear Debris",
+          "Clear Asteroids",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Science Rocks",
+          "Rocket Science",
+          "Hats",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Firearm",
+          "Fire-L3GS",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Metal Claw",
+          "Big Fuzzy Fist",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Mace",
+          "Stamazza",
+          "Star Flail",
+          "Moon Rod",
+          "Alucard Spear",
+          "Thunderbolt Spear",
+          "Trident",
+          "Gungnir-Souris",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Tyrfing",
+          "Rune Sword",
+          "Alucart Sworb",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Optical Shot",
+          "Acerbatus",
+          "Dextro Custos",
+          "Sinestro Custos",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Splashers",
+          "Pursuant Blades",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Sanguine Star",
+          "Blood Chalice",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Infernolatro",
+          "NaneInferno",
+          "Gros Michel",
+          "Cavendish",
+          "Fibonacci Spritz",
+          "Royal Flush",
+          "Celestial Booster",
+          "Negative Space"
         ],
         "passives": [
           "Candelabrador",
@@ -47556,6 +54171,8 @@ window.VS_DATA = {
           "Malevolent Door Spirit"
         ],
         "arcana": [
+          "Awake (IV)",
+          "Sarabande of Healing (VI)",
           "Boogaloo of Illusions (XVIII)",
           "Heart of Fire (XIX)",
           "Victorian Horror (XVIII)"
@@ -47569,12 +54186,45 @@ window.VS_DATA = {
       "base_affinity": "Armor",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Claimh Solais"
+          ],
+          "blurb": "Global modifier applies to Armor (max 5)."
+        }
+      ],
       "related": {
         "weapons": [
           "Vento Sacro",
+          "Cross",
+          "King Bible",
+          "Garlic",
+          "Santa Water",
           "NO FUTURE",
-          "Carnage Heart"
+          "Carnage Heart",
+          "Lightning Ring",
+          "Song of Mana",
+          "Crimson Shroud",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Victory Sword",
+          "Embrace of Gaea",
+          "Silver Wind",
+          "Night Sword",
+          "Muramasa",
+          "Eskizzibur",
+          "Legionnaire",
+          "Paranormal Scan",
+          "Wave Beam",
+          "Stellar Blade",
+          "Wrecking Ball",
+          "Keremet Morbus",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Claimh Solais"
         ],
         "passives": [
           "Armor"
@@ -47675,7 +54325,9 @@ window.VS_DATA = {
           "Malevolent Door Spirit"
         ],
         "arcana": [
-          "Divine Bloodline (IX)"
+          "Awake (IV)",
+          "Divine Bloodline (IX)",
+          "Heart of Fire (XIX)"
         ]
       }
     },
@@ -47686,11 +54338,29 @@ window.VS_DATA = {
       "base_affinity": "Armor",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Legionnaire"
+          ],
+          "blurb": "Projectiles deal retaliatory damage."
+        }
+      ],
       "related": {
         "weapons": [
           "NO FUTURE",
-          "Carnage Heart"
+          "Carnage Heart",
+          "Crimson Shroud",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Victory Sword",
+          "Embrace of Gaea",
+          "Night Sword",
+          "Muramasa",
+          "Eskizzibur",
+          "Legionnaire",
+          "Iron Shield",
+          "Dark Iron Shield"
         ],
         "passives": [
           "Armor"
@@ -47721,7 +54391,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": true,
       "description": "Affinities related only to a specific character with unique interactions with the associated items.",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47736,7 +54406,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47753,7 +54423,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47770,7 +54440,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47787,7 +54457,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47804,7 +54474,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47822,7 +54492,7 @@ window.VS_DATA = {
       "base_affinity": "Character",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -47839,9 +54509,43 @@ window.VS_DATA = {
       "base_affinity": "Charm",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Kyra-Stones"
+          ],
+          "blurb": "Gains Amount (max 6.25) based on the number of visible enemies (max 500)."
+        },
+        {
+          "objects": [
+            "Acerbatus"
+          ],
+          "blurb": "Damage increases based on the number of enemies killed during the run."
+        },
+        {
+          "objects": [
+            "Claimh Solais"
+          ],
+          "blurb": "Applies several global modifiers based on the number of visible enemies (max 300)."
+        },
+        {
+          "objects": [
+            "Infernolatro",
+            "NaneInferno"
+          ],
+          "blurb": "Damage receives a multiplier based on the number of kills during the weapon's active duration."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Ashes of Muspell",
+          "Kyra-Stones",
+          "Acerbatus",
+          "Claimh Solais",
+          "Gekkabijin",
+          "Infernolatro",
+          "NaneInferno"
+        ],
         "passives": [
           "Karoma's Mana"
         ],
@@ -47874,7 +54578,7 @@ window.VS_DATA = {
       "base_affinity": "Cooldown",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [
           "Whip",
@@ -47922,7 +54626,298 @@ window.VS_DATA = {
           "Thunder Loop",
           "Sword Brothers",
           "Vjaya Sisters",
-          "Vicious Hunger"
+          "Pentagram",
+          "Gorgeous Moon",
+          "Summon Spirit Tornado",
+          "Venus Crescent",
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Phieraggi",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Soul Steal",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Arrow of Goth",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Clock Lancet",
+          "Infinite Corridor",
+          "Laurel",
+          "Crimson Shroud",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Carréllo",
+          "Carozza!",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Kaiser Knuckle",
+          "Lapiste Tepisto",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Victory Sword",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Unearthly Bolt",
+          "Spirit Disturbance",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Gaze of Gaea",
+          "Embrace of Gaea",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Phas3r",
+          "Photonstorm",
+          "Chaos Rune",
+          "Wicked Ruler",
+          "Silver Wind",
+          "Festive Winds",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Summon Night",
+          "Echo Night",
+          "Mirage Robe",
+          "J'Odore",
+          "Night Sword",
+          "Muramasa",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "108 Bocce",
+          "SpellString",
+          "SpellStream",
+          "SpellStrike",
+          "SpellStrom",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Report!",
+          "Emergency Meeting",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Lifesign Scan",
+          "Paranormal Scan",
+          "Just Vent",
+          "Unjust Ejection",
+          "Clear Debris",
+          "Clear Asteroids",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Science Rocks",
+          "Rocket Science",
+          "Hats",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Firearm",
+          "Fire-L3GS",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Metal Claw",
+          "Big Fuzzy Fist",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Mace",
+          "Stamazza",
+          "Star Flail",
+          "Moon Rod",
+          "Alucard Spear",
+          "Thunderbolt Spear",
+          "Trident",
+          "Gungnir-Souris",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Tyrfing",
+          "Rune Sword",
+          "Alucart Sworb",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Optical Shot",
+          "Acerbatus",
+          "Dextro Custos",
+          "Sinestro Custos",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Splashers",
+          "Pursuant Blades",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Sanguine Star",
+          "Blood Chalice",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Infernolatro",
+          "NaneInferno",
+          "Gros Michel",
+          "Cavendish",
+          "Fibonacci Spritz",
+          "Royal Flush",
+          "Negative Space"
         ],
         "passives": [
           "Empty Tome"
@@ -48001,7 +54996,9 @@ window.VS_DATA = {
           "Canio"
         ],
         "arcana": [
-          "Silent Old Sanctuary (XX)"
+          "Silent Old Sanctuary (XX)",
+          "Blood Astronomia (XXI)",
+          "Pale Diamond Incursion (V)"
         ]
       }
     },
@@ -48012,9 +55009,60 @@ window.VS_DATA = {
       "base_affinity": "Curse",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "King Bible",
+          "Unholy Vespers",
+          "Ninth Circle",
+          "Runetracer",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Vjaya Sisters",
+          "Peachone",
+          "Ebony Wings",
+          "Mannajja",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Infinite Corridor",
+          "Crimson Shroud",
+          "Bone",
+          "Anima of Mortaccio",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Sole Solution",
+          "Ashes of Muspell",
+          "Santa Javelin",
+          "Seraphic Cry",
+          "Silver Wind",
+          "Festive Winds",
+          "108 Bocce",
+          "Prismatic Missile",
+          "Luminaire",
+          "Ophion",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Vampire Killer",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Falconwind",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity"
+        ],
         "passives": [
           "Skull O'Maniac",
           "Torrona's Box",
@@ -48088,8 +55136,34 @@ window.VS_DATA = {
       "color": "#92740c",
       "base_affinity": "Duration",
       "is_parent": true,
-      "description": "",
-      "info": "",
+      "description": "Amount most commonly increases the duration of weapon effects but has unique interactions with certain weapons and Arcana.",
+      "info_entries": [
+        {
+          "objects": [
+            "Santa Javelin"
+          ],
+          "blurb": "Duration increases the Amount of projectiles spawned."
+        },
+        {
+          "objects": [
+            "Four Seasons"
+          ],
+          "blurb": "Duration is added to base damage before it is multiplied by Amount."
+        },
+        {
+          "objects": [
+            "Splashers"
+          ],
+          "blurb": "Damage is affected by Duration."
+        },
+        {
+          "objects": [
+            "Spirit Rings",
+            "Rings of Calamity"
+          ],
+          "blurb": "Gains the Aqua Spheres glimmer tech at +55% Duration."
+        }
+      ],
       "related": {
         "weapons": [
           "Vento Sacro",
@@ -48101,6 +55175,8 @@ window.VS_DATA = {
           "Unholy Vespers",
           "Icebrand",
           "Ninth Circle",
+          "Garlic",
+          "Soul Eater",
           "Speculo Anura",
           "Anura",
           "Dark Frogamorphosis",
@@ -48111,7 +55187,177 @@ window.VS_DATA = {
           "Runetracer",
           "NO FUTURE",
           "Carnage Heart",
-          "Vicious Hunger"
+          "Pentagram",
+          "Gorgeous Moon",
+          "Summon Spirit Tornado",
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Clock Lancet",
+          "Infinite Corridor",
+          "Laurel",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Gunastrophe",
+          "Sole Solution",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Gaze of Gaea",
+          "Embrace of Gaea",
+          "Chaos Rune",
+          "Wicked Ruler",
+          "Silver Wind",
+          "Festive Winds",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Summon Night",
+          "Echo Night",
+          "Mirage Robe",
+          "J'Odore",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "SpellStream",
+          "SpellStrom",
+          "Legionnaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Paranormal Scan",
+          "Just Vent",
+          "Clear Debris",
+          "Clear Asteroids",
+          "Science Rocks",
+          "Rocket Science",
+          "Hats",
+          "C-U-Laser",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Mace",
+          "Stamazza",
+          "Star Flail",
+          "Moon Rod",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Rune Sword",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Splashers",
+          "Pursuant Blades",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Khukuri",
+          "Jetstream",
+          "Bullova",
+          "Falconwind",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Infernolatro",
+          "NaneInferno",
+          "Gros Michel",
+          "Cavendish",
+          "Negative Space"
         ],
         "passives": [
           "Spellbinder",
@@ -48179,7 +55425,234 @@ window.VS_DATA = {
           "Jimbo"
         ],
         "arcana": [
-          "Lost & Found Painting (XVII)"
+          "Awake (IV)",
+          "Jail of Crystal (XIV)",
+          "Lost & Found Painting (XVII)",
+          "Blood Astronomia (XXI)"
+        ]
+      }
+    },
+    {
+      "name": "Fire",
+      "icon": "assets/icons/affinities/fire.png",
+      "color": "#9e442d",
+      "base_affinity": "Fire",
+      "is_parent": true,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Santa Water",
+          "La Borra",
+          "Hydro Pump Climax",
+          "Zhar Ptytsia",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Dies Irae",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Prismatic Missile",
+          "Luminaire",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "Firearm",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Hand Grenade",
+          "The RPG",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Dextro Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Power of Sire",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Infernolatro",
+          "NaneInferno"
+        ],
+        "passives": [],
+        "characters": [
+          "Dario Bossi",
+          "Count Olrox",
+          "Megalo Olrox (Dark Rift)",
+          "Megalo Olrox (Ebony Diabologue)"
+        ],
+        "arcana": [
+          "Heart of Fire (XIX)",
+          "Heir of Fate (XIX)"
+        ]
+      }
+    },
+    {
+      "name": "Freeze",
+      "icon": "assets/icons/affinities/freeze.png",
+      "color": "#169e9d",
+      "base_affinity": "Freeze",
+      "is_parent": true,
+      "description": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Glass Fandango"
+          ],
+          "blurb": "Cannot freeze directly but deals 3x damage to frozen enemies."
+        },
+        {
+          "objects": [
+            "Celestial Voulge"
+          ],
+          "blurb": "Innate chance freeze enemies (5%)]."
+        },
+        {
+          "objects": [
+            "Fleuret",
+            "Dress Sword",
+            "Espada Ropera",
+            "Hydra Cannon",
+            "Hyperion Bazooka"
+          ],
+          "blurb": "Glimmer tech can freeze enemies"
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Magic Wand",
+          "Holy Wand",
+          "Spirit of Light",
+          "Icebrand",
+          "Ninth Circle",
+          "Garlic",
+          "Soul Eater",
+          "Dark Frogamorphosis",
+          "Runetracer",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Cygnus",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Clock Lancet",
+          "Infinite Corridor",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Mirage Robe",
+          "J'Odore",
+          "Prismatic Missile",
+          "Luminaire",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Spirit Rings",
+          "Rings of Calamity"
+        ],
+        "passives": [],
+        "characters": [
+          "She-Moon Eeta",
+          "She-Moon Eeta (Reborn)",
+          "Frozenshade"
+        ],
+        "arcana": [
+          "Out of Bounds (XII)",
+          "Jail of Crystal (XIV)",
+          "Crystal Cries (XII)"
+        ]
+      }
+    },
+    {
+      "name": "Orologion",
+      "icon": "assets/icons/affinities/orologion.png",
+      "color": "#9e823a",
+      "base_affinity": "Freeze",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Endo Gears",
+            "Peri Pendulum",
+            "Myo Lift",
+            "Epi Head",
+            "Clock Tower"
+          ],
+          "blurb": "Damage receives a bonus from the number of Orologions found."
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower"
+        ],
+        "passives": [],
+        "characters": [
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)"
+        ],
+        "arcana": [
+          "Out of Bounds (XII)",
+          "Hail from the Future (X)",
+          "Crystal Cries (XII)"
         ]
       }
     },
@@ -48190,9 +55663,31 @@ window.VS_DATA = {
       "base_affinity": "Greed",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Celestial Booster",
+            "Negative Space"
+          ],
+          "blurb": "Damage receives a multiplier based on the total amount of gold collected during the run."
+        },
+        {
+          "objects": [
+            "Blood Chalice"
+          ],
+          "blurb": "Scarlet Harbinger tech damage is affected by Greed."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vicious Hunger",
+          "Power of Lire",
+          "Night Sword",
+          "Muramasa",
+          "Blood Chalice",
+          "Celestial Booster",
+          "Negative Space"
+        ],
         "passives": [
           "Stone Mask"
         ],
@@ -48262,9 +55757,14 @@ window.VS_DATA = {
       "base_affinity": "Greed",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vicious Hunger",
+          "Power of Lire",
+          "Acerbatus",
+          "Gekkabijin"
+        ],
         "passives": [
           "Karoma's Mana"
         ],
@@ -48274,7 +55774,8 @@ window.VS_DATA = {
           "Master Librarian"
         ],
         "arcana": [
-          "Disco of Gold (XV)"
+          "Disco of Gold (XV)",
+          "Hail from the Future (X)"
         ]
       }
     },
@@ -48285,9 +55786,37 @@ window.VS_DATA = {
       "base_affinity": "Growth",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Magi-Stone",
+            "Kyra-Stones"
+          ],
+          "blurb": "Deals damage based on character level."
+        },
+        {
+          "objects": [
+            "Spirit Rings",
+            "Rings of Calamity"
+          ],
+          "blurb": "Gains the Hypergravity glimmer tech at +55% Growth."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Gorgeous Moon",
+          "Venus Crescent",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Luminaire",
+          "Paranormal Scan",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Vol Luminatio",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Wave"
+        ],
         "passives": [
           "Crown",
           "Academy Badge"
@@ -48336,6 +55865,7 @@ window.VS_DATA = {
         "arcana": [
           "Game Killer (0)",
           "Wicked Season (XIII)",
+          "Crystal Cries (XII)",
           "Call of a Mad Moon (XIII)"
         ]
       }
@@ -48347,11 +55877,25 @@ window.VS_DATA = {
       "base_affinity": "Invulnerable",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Embrace of Gaea"
+          ],
+          "blurb": "Deals 2x damage during invulnerability."
+        }
+      ],
       "related": {
         "weapons": [
           "Sword Brothers",
-          "Vjaya Sisters"
+          "Vjaya Sisters",
+          "Laurel",
+          "Crimson Shroud",
+          "Embrace of Gaea",
+          "Stellar Blade",
+          "Dark Iron Shield",
+          "Sacred Beasts Tower Shield",
+          "Jetstream"
         ],
         "passives": [
           "Parm Aegis"
@@ -48376,15 +55920,138 @@ window.VS_DATA = {
       "color": "#2c7734",
       "base_affinity": "Luck",
       "is_parent": true,
-      "description": "",
-      "info": "",
+      "description": "Luck has a variety of applications in game and can benefit all weapons through Sapphire Mist (I)",
+      "info_entries": [
+        {
+          "objects": [
+            "Silver Wind",
+            "Festive Winds"
+          ],
+          "blurb": "Killed enemies have a 5% chance to drop Little Hearts, affected by Luck."
+        },
+        {
+          "objects": [
+            "Mirage Robe",
+            "J'Odore"
+          ],
+          "blurb": "Chance for Mirage to explode is affected by Luck."
+        },
+        {
+          "objects": [
+            "Lucky Swipe",
+            "Crossed Wires"
+          ],
+          "blurb": "Chance for weapon to fail improves with low Luck (<100%)."
+        },
+        {
+          "objects": [
+            "Fibonacci Spritz",
+            "Royal Flush"
+          ],
+          "blurb": "Chance to fire other weapons is affected by Luck."
+        }
+      ],
       "related": {
         "weapons": [
           "Whip",
           "Bloody Tear",
           "Vento Sacro",
           "Fuwalafuwaloo",
-          "Heaven Sword"
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Arch Angle",
+          "Pentagram",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Arrow of Goth",
+          "Dies Irae",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Greatest Jubilee",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Unearthly Bolt",
+          "Celestial Voulge",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Gaze of Gaea",
+          "Embrace of Gaea",
+          "Photonstorm",
+          "Silver Wind",
+          "Festive Winds",
+          "Mirage Robe",
+          "J'Odore",
+          "Night Sword",
+          "Muramasa",
+          "108 Bocce",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Paranormal Scan",
+          "Impostongue",
+          "Science Rocks",
+          "Rocket Science",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Jewel Gun",
+          "Sanctuary",
+          "Stamazza",
+          "Gungnir-Souris",
+          "Tyrfing",
+          "Rune Sword",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Eagle Gun",
+          "Pendragon",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Gros Michel",
+          "Cavendish",
+          "Fibonacci Spritz",
+          "Royal Flush"
         ],
         "passives": [
           "Clover"
@@ -48449,10 +56116,12 @@ window.VS_DATA = {
         ],
         "arcana": [
           "Wicked Season (XIII)",
+          "Jail of Crystal (XIV)",
           "Slash (XVI)",
           "Sapphire Mist (I)",
           "Hidden Anathema (III)",
-          "Hail from the Future (X)"
+          "Hail from the Future (X)",
+          "Call of a Mad Moon (XIII)"
         ]
       }
     },
@@ -48462,13 +56131,120 @@ window.VS_DATA = {
       "color": "#171717",
       "base_affinity": "Luck",
       "is_parent": false,
-      "description": "",
-      "info": "",
+      "description": "Some weapons possess low innate crit chance which is generally affected by Luck but all Critical Damage builds benefit from Slash (XVI) for its double critical multiplier and elevated critical chance.",
+      "info_entries": [
+        {
+          "objects": [
+            "Celestial Voulge",
+            "Santa Javelin"
+          ],
+          "blurb": "Innate chance to deal 2x critical damage (5%)."
+        },
+        {
+          "objects": [
+            "Claimh Solais"
+          ],
+          "blurb": "Global modifier applies to Critical Damage (max +100%)."
+        },
+        {
+          "objects": [
+            "Tyrfing",
+            "Rune Sword"
+          ],
+          "blurb": "Innate chance to deal 3x critical damage."
+        },
+        {
+          "objects": [
+            "Rune Sword"
+          ],
+          "blurb": "Critical damage also affected by Area, Speed, and Duration."
+        },
+        {
+          "objects": [
+            "Gungnir-Souris"
+          ],
+          "blurb": "Innate chance to deal 2x critical damage (25%)"
+        },
+        {
+          "objects": [
+            "Flamberge",
+            "Zweihander",
+            "Galatyn"
+          ],
+          "blurb": "Innate chance to deal 2x critical damage (2%)."
+        },
+        {
+          "objects": [
+            "Stamazza"
+          ],
+          "blurb": "Innate chance to deal 100x critical damage (1%), unaffected by Slash (XVI)."
+        }
+      ],
       "related": {
         "weapons": [
+          "Whip",
           "Bloody Tear",
           "Vento Sacro",
-          "Fuwalafuwaloo"
+          "Fuwalafuwaloo",
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Arch Angle",
+          "Yatta Daikarin",
+          "Greatest Jubilee",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Victory Sword",
+          "Celestial Voulge",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Muramasa",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Stamazza",
+          "Gungnir-Souris",
+          "Tyrfing",
+          "Rune Sword",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Gros Michel",
+          "Cavendish"
         ],
         "passives": [],
         "characters": [
@@ -48489,14 +56265,29 @@ window.VS_DATA = {
       "base_affinity": "Luck",
       "is_parent": false,
       "description": "{Despite Gold value being multiplied by Greed, **Gold Coins** and their drop c",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "NaneInferno"
+          ],
+          "blurb": "When exceeding 1,540 kills in a single active duration Gold Coins are spawned."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vicious Hunger",
+          "Power of Lire",
+          "Millionaire",
+          "NaneInferno"
+        ],
         "passives": [],
         "characters": [
           "Big Troubler"
         ],
-        "arcana": []
+        "arcana": [
+          "Stake to Your Heart (0)",
+          "Hail from the Future (X)"
+        ]
       }
     },
     {
@@ -48506,9 +56297,26 @@ window.VS_DATA = {
       "base_affinity": "Luck",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Glass Fandango",
+            "Celestial Voulge"
+          ],
+          "blurb": "Benefits from more light sources for Orologion pickups."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Greatest Jubilee",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Seraphic Cry",
+          "Millionaire"
+        ],
         "passives": [],
         "characters": [
           "Zi'Appunta Belpaese",
@@ -48524,7 +56332,57 @@ window.VS_DATA = {
         "arcana": [
           "Mad Groove (VIII)",
           "Heart of Fire (XIX)",
+          "Hidden Anathema (III)",
           "Edge of the Earth (VIII)"
+        ]
+      }
+    },
+    {
+      "name": "Orologion",
+      "icon": "assets/icons/affinities/orologion.png",
+      "color": "#9e823a",
+      "base_affinity": "Light Source",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower"
+        ],
+        "passives": [],
+        "characters": [
+          "Zephyr (Knife)",
+          "Zephyr (Curved Knife)"
+        ],
+        "arcana": [
+          "Out of Bounds (XII)",
+          "Hail from the Future (X)",
+          "Crystal Cries (XII)"
+        ]
+      }
+    },
+    {
+      "name": "Rosary",
+      "icon": "assets/icons/affinities/rosary.png",
+      "color": "#6a4010",
+      "base_affinity": "Light Source",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Seraphic Cry"
+        ],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Hail from the Future (X)"
         ]
       }
     },
@@ -48535,9 +56393,25 @@ window.VS_DATA = {
       "base_affinity": "Magnet",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Garlic",
+          "Soul Eater",
+          "La Borra",
+          "Hydro Pump Climax",
+          "Song of Mana",
+          "Mannajja",
+          "Clock Lancet",
+          "Laurel",
+          "J'Odore",
+          "Paranormal Scan",
+          "Atmo-Torpedo",
+          "Hydrostormer Tip",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Vol Umbra"
+        ],
         "passives": [
           "Attractorb"
         ],
@@ -48576,7 +56450,8 @@ window.VS_DATA = {
           "Game Killer (0)",
           "Blood Astronomia (XXI)",
           "Edge of the Earth (VIII)",
-          "Victorian Horror (XVIII)"
+          "Victorian Horror (XVIII)",
+          "Wandering the Jet Black (XXI)"
         ]
       }
     },
@@ -48587,12 +56462,20 @@ window.VS_DATA = {
       "base_affinity": "Max Health",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [
-          "Whip",
           "Bloody Tear",
-          "Fuwalafuwaloo"
+          "Fuwalafuwaloo",
+          "Crimson Shroud",
+          "Mazo Familiar",
+          "Paranormal Scan",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip"
         ],
         "passives": [
           "Hollow Heart",
@@ -48736,7 +56619,9 @@ window.VS_DATA = {
           "Perkeo"
         ],
         "arcana": [
+          "Awake (IV)",
           "Divine Bloodline (IX)",
+          "Crystal Cries (XII)",
           "Victorian Horror (XVIII)",
           "Heir of Fate (XIX)"
         ]
@@ -48749,9 +56634,33 @@ window.VS_DATA = {
       "base_affinity": "Max Health",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Dominus Anger",
+            "Dominus Hatred",
+            "Dominus Agony",
+            "Power of Sire"
+          ],
+          "blurb": "Health is constantly drained while weapon is equipped."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Muramasa",
+          "Metal Claw",
+          "Big Fuzzy Fist",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Dominus Agony",
+          "Power of Sire"
+        ],
         "passives": [],
         "characters": [
           "Brad Fang",
@@ -48766,7 +56675,8 @@ window.VS_DATA = {
           "Imakoo"
         ],
         "arcana": [
-          "Divine Bloodline (IX)"
+          "Divine Bloodline (IX)",
+          "Wandering the Jet Black (XXI)"
         ]
       }
     },
@@ -48777,7 +56687,21 @@ window.VS_DATA = {
       "base_affinity": "Might",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "SpellStrike",
+            "SpellStrom"
+          ],
+          "blurb": "Damage is multiplied by an additional 1.25x Might."
+        },
+        {
+          "objects": [
+            "Claimh Solais"
+          ],
+          "blurb": "Global modifier applies to Might (max +50%)."
+        }
+      ],
       "related": {
         "weapons": [
           "Whip",
@@ -48825,7 +56749,291 @@ window.VS_DATA = {
           "Thunder Loop",
           "Sword Brothers",
           "Vjaya Sisters",
-          "Vicious Hunger"
+          "Summon Spirit Tornado",
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Phieraggi",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Soul Steal",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Arrow of Goth",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Crimson Shroud",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Carréllo",
+          "Carozza!",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Kaiser Knuckle",
+          "Lapiste Tepisto",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Victory Sword",
+          "Sole Solution",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Unearthly Bolt",
+          "Spirit Disturbance",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Gaze of Gaea",
+          "Embrace of Gaea",
+          "Phas3r",
+          "Photonstorm",
+          "Chaos Rune",
+          "Wicked Ruler",
+          "Silver Wind",
+          "Festive Winds",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Summon Night",
+          "Echo Night",
+          "Mirage Robe",
+          "J'Odore",
+          "Night Sword",
+          "Muramasa",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "108 Bocce",
+          "SpellString",
+          "SpellStream",
+          "SpellStrike",
+          "SpellStrom",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Ophion",
+          "Party Popper",
+          "Party Pooper",
+          "Report!",
+          "Emergency Meeting",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Paranormal Scan",
+          "Just Vent",
+          "Unjust Ejection",
+          "Clear Debris",
+          "Clear Asteroids",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Science Rocks",
+          "Rocket Science",
+          "Hats",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Firearm",
+          "Fire-L3GS",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Metal Claw",
+          "Big Fuzzy Fist",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Mace",
+          "Stamazza",
+          "Star Flail",
+          "Moon Rod",
+          "Alucard Spear",
+          "Thunderbolt Spear",
+          "Trident",
+          "Gungnir-Souris",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Tyrfing",
+          "Rune Sword",
+          "Alucart Sworb",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Optical Shot",
+          "Acerbatus",
+          "Dextro Custos",
+          "Sinestro Custos",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Splashers",
+          "Pursuant Blades",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Sanguine Star",
+          "Blood Chalice",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Infernolatro",
+          "NaneInferno",
+          "Gros Michel",
+          "Cavendish",
+          "Fibonacci Spritz",
+          "Royal Flush",
+          "Celestial Booster",
+          "Negative Space"
         ],
         "passives": [
           "Spinach",
@@ -48959,6 +57167,7 @@ window.VS_DATA = {
           "Malevolent Door Spirit"
         ],
         "arcana": [
+          "Awake (IV)",
           "Heart of Fire (XIX)",
           "Silent Old Sanctuary (XX)",
           "Victorian Horror (XVIII)",
@@ -48973,15 +57182,58 @@ window.VS_DATA = {
       "base_affinity": "Move Speed",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Sonic Dash",
+            "Rapidus Fio"
+          ],
+          "blurb": "Temporarily boosts Move Speed on activation."
+        }
+      ],
       "related": {
         "weapons": [
           "Vento Sacro",
           "Fuwalafuwaloo",
           "Valmanway",
           "Million Cut",
+          "Garlic",
+          "Soul Eater",
+          "Dark Frogamorphosis",
+          "Santa Water",
           "La Borra",
-          "Hydro Pump Climax"
+          "Hydro Pump Climax",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Vjaya Sisters",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Carréllo",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "J'Odore",
+          "Paranormal Scan",
+          "Time Warp",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Thunderbolt Spear",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Kick",
+          "Triangle Kick"
         ],
         "passives": [
           "Wings"
@@ -49203,13 +57455,63 @@ window.VS_DATA = {
       "base_affinity": "Recovery",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Blood Chalice"
+          ],
+          "blurb": "Scarlet Harbinger tech generates Little Hearts on kill."
+        },
+        {
+          "objects": [
+            "Kick"
+          ],
+          "blurb": "Recovery improves ability to maintain maximum health."
+        },
+        {
+          "objects": [
+            "Triangle Kick"
+          ],
+          "blurb": "Damage is affected by total amount Overhealed during the run."
+        }
+      ],
       "related": {
         "weapons": [
           "Bloody Tear",
           "Fuwalafuwaloo",
           "Soul Eater",
-          "Dark Frogamorphosis"
+          "Dark Frogamorphosis",
+          "Venus Crescent",
+          "Vicious Hunger",
+          "Soul Steal",
+          "Crimson Shroud",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "Silver Wind",
+          "Festive Winds",
+          "Night Sword",
+          "Muramasa",
+          "Lifesign Scan",
+          "Paranormal Scan",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Meal Ticket",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Star Flail",
+          "Moon Rod",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Blood Chalice"
         ],
         "passives": [
           "Pummarola",
@@ -49280,25 +57582,10 @@ window.VS_DATA = {
         ],
         "arcana": [
           "Sarabande of Healing (VI)",
+          "Disco of Gold (XV)",
           "Hidden Anathema (III)",
+          "Crystal Cries (XII)",
           "Wandering the Jet Black (XXI)"
-        ]
-      }
-    },
-    {
-      "name": "Food",
-      "icon": "assets/icons/affinities/food.png",
-      "color": "#9e5107",
-      "base_affinity": "Recovery",
-      "is_parent": false,
-      "description": "",
-      "info": "",
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": [
-          "Hidden Anathema (III)"
         ]
       }
     },
@@ -49309,9 +57596,24 @@ window.VS_DATA = {
       "base_affinity": "Revival",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Phieraggi",
+          "Unearthly Bolt",
+          "Spirit Disturbance",
+          "Paranormal Scan",
+          "Prototype A",
+          "Prototype B",
+          "Prototype C",
+          "Pronto Beam",
+          "Fire-L3GS",
+          "Wave Beam",
+          "Atmo-Torpedo",
+          "BFC2000-AD",
+          "Time Warp",
+          "Meal Ticket"
+        ],
         "passives": [
           "Tirajisú",
           "Academy Badge",
@@ -49368,7 +57670,41 @@ window.VS_DATA = {
       "base_affinity": "Speed",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [
+        {
+          "objects": [
+            "SpellString",
+            "SpellStrom",
+            "Fleuret",
+            "Dress Sword",
+            "Espada Ropera"
+          ],
+          "blurb": "Damage is multiplied by Speed."
+        },
+        {
+          "objects": [
+            "Confodere",
+            "Vol Confodere",
+            "Melio Confodere",
+            "Sonic Dash",
+            "Rapidus Fio"
+          ],
+          "blurb": "Damage is affected by Speed."
+        },
+        {
+          "objects": [
+            "Melio Confodere"
+          ],
+          "blurb": "Cooldown is affected by Speed."
+        },
+        {
+          "objects": [
+            "Spirit Rings",
+            "Rings of Calamity"
+          ],
+          "blurb": "Gains the Heaven's Thunder glimmer tech at +55% Speed."
+        }
+      ],
       "related": {
         "weapons": [
           "Vento Sacro",
@@ -49395,13 +57731,220 @@ window.VS_DATA = {
           "Fire Wand",
           "Hellfire",
           "Kardía Phlegeton",
+          "Santa Water",
           "La Borra",
           "Hydro Storm",
           "Hydro Pump Climax",
           "Runetracer",
           "NO FUTURE",
           "Carnage Heart",
-          "Vicious Hunger"
+          "Lightning Ring",
+          "Thunder Loop",
+          "Vjaya Sisters",
+          "Summon Spirit Tornado",
+          "Peachone",
+          "Cygnus",
+          "Ebony Wings",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Phieraggi",
+          "Gatti Amari",
+          "Flock Destroyer",
+          "Vicious Hunger",
+          "Power of Lire",
+          "Arrow of Goth",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Darkness Illusion",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Carréllo",
+          "Carozza!",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Sole Solution",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Santa Javelin",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Chaos Rune",
+          "Wicked Ruler",
+          "Silver Wind",
+          "Festive Winds",
+          "Mirage Robe",
+          "J'Odore",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "SpellString",
+          "SpellStream",
+          "SpellStrike",
+          "SpellStrom",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Shadow Servant",
+          "Silver Sliver",
+          "Party Popper",
+          "Party Pooper",
+          "Report!",
+          "Emergency Meeting",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Paranormal Scan",
+          "Clear Debris",
+          "Clear Asteroids",
+          "Sharp Tongue",
+          "Silver Tongue",
+          "Impostongue",
+          "Hats",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Firearm",
+          "Fire-L3GS",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "BFC2000-AD",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Metal Claw",
+          "Spirit Tornado Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Speculo Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Refectio",
+          "Speculo Refectio",
+          "Sanctuary",
+          "Star Flail",
+          "Moon Rod",
+          "Thunderbolt Spear",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Tyrfing",
+          "Rune Sword",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Optical Shot",
+          "Acerbatus",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Gros Michel",
+          "Cavendish",
+          "Fibonacci Spritz",
+          "Royal Flush",
+          "Celestial Booster",
+          "Negative Space"
         ],
         "passives": [
           "Bracer",
@@ -49461,60 +58004,33 @@ window.VS_DATA = {
           "Kina"
         ],
         "arcana": [
+          "Awake (IV)",
           "Chaos in the Dark Night (V)",
-          "Pale Diamond Incursion (V)"
+          "Pale Diamond Incursion (V)",
+          "Wandering the Jet Black (XXI)"
         ]
       }
     },
     {
-      "name": "Fire",
-      "icon": "assets/icons/affinities/fire.png",
-      "color": "#820400",
-      "base_affinity": "Fire",
+      "name": "Treasure",
+      "icon": "assets/icons/affinities/treasure.png",
+      "color": "#6a4010",
+      "base_affinity": "Treasure",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
         "characters": [
-          "Dario Bossi",
-          "Count Olrox",
-          "Megalo Olrox (Dark Rift)",
-          "Megalo Olrox (Ebony Diabologue)"
+          "Zi'Appunta Belpaese",
+          "Santa Ladonna",
+          "Gyorunton"
         ],
         "arcana": [
-          "Heart of Fire (XIX)",
-          "Heir of Fate (XIX)"
-        ]
-      }
-    },
-    {
-      "name": "Freeze",
-      "icon": "assets/icons/affinities/freeze.png",
-      "color": "#007d9e",
-      "base_affinity": "Freeze",
-      "is_parent": true,
-      "description": "",
-      "info": "",
-      "related": {
-        "weapons": [
-          "Icebrand",
-          "Ninth Circle",
-          "Garlic",
-          "Soul Eater",
-          "Dark Frogamorphosis"
-        ],
-        "passives": [],
-        "characters": [
-          "She-Moon Eeta",
-          "She-Moon Eeta (Reborn)",
-          "Frozenshade"
-        ],
-        "arcana": [
-          "Out of Bounds (XII)",
-          "Jail of Crystal (XIV)",
-          "Crystal Cries (XII)"
+          "Game Killer (0)",
+          "Disco of Gold (XV)",
+          "Moonlight Bolero (VI)"
         ]
       }
     },
@@ -49525,7 +58041,7 @@ window.VS_DATA = {
       "base_affinity": "Weapon Type",
       "is_parent": true,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -49540,9 +58056,11 @@ window.VS_DATA = {
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Ebony Diabologue"
+        ],
         "passives": [],
         "characters": [
           "Shanoa (Confodere)",
@@ -49559,9 +58077,11 @@ window.VS_DATA = {
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Belnades' Spellbook"
+        ],
         "passives": [],
         "characters": [
           "Juste Belmont (Vibhuti Whip)",
@@ -49582,7 +58102,7 @@ window.VS_DATA = {
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -49599,7 +58119,7 @@ window.VS_DATA = {
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -49631,7 +58151,7 @@ window.VS_DATA = {
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [],
         "passives": [],
@@ -49646,17 +58166,52 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Magic Weapon",
+      "icon": "assets/icons/affinities/magic_weapon.png",
+      "color": "#6a4010",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Spectral Sword"
+        ],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Magic Whip",
+      "icon": "assets/icons/affinities/magic_whip.png",
+      "color": "#6a4010",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Morning Star"
+        ],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
       "name": "Vampire-Killing Tool",
       "icon": "assets/icons/affinities/vampire-killing_tool.png",
       "color": "#6d072b",
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
-      "info": "",
+      "info_entries": [],
       "related": {
         "weapons": [
           "Whip",
-          "Bloody Tear"
+          "Bloody Tear",
+          "Coat of Arms"
         ],
         "passives": [],
         "characters": [

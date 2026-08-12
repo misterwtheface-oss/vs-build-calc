@@ -665,9 +665,13 @@
     summary.detail-cat-label::before { content: '▾ '; color: var(--gold-dim); font-size: 1rem; }
     details.detail-cat:not([open]) > summary.detail-cat-label { margin-bottom: 0; }
     details.detail-cat:not([open]) > summary.detail-cat-label::before { content: '▸ '; }
-    .detail-blurb-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .detail-blurb-row .aff-nav-icon { width: 44px; height: 44px; }
-    .detail-blurb-text { font-size: .98rem; color: var(--text-muted); }
+    /* Per-object interaction blurb: the objects' icon row, then the italic note below it. */
+    .detail-info-entry { margin: 0 0 .9rem; }
+    .detail-info-entry .ref-icon-grid { margin-bottom: .35rem; }
+    .detail-info-entry .detail-info-blurb { font-size: .95rem; margin: 0; text-align: left; }
+    /* Affinity-page blurbs pack into a compact 3-up grid (icons over text) to save height. */
+    .detail-info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem 1.1rem; margin-bottom: .8rem; }
+    .detail-info-grid .detail-info-entry { margin: 0; }
     .aff-icon-grid { display: flex; flex-wrap: wrap; gap: 9px; }
     .aff-nav-icon {
       width: 60px; height: 60px; flex-shrink: 0;
@@ -678,7 +682,6 @@
     .aff-nav-icon.sprite { width: 66px; height: 88px; }
     .aff-nav-icon img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
     .aff-nav-icon.sprite img { object-fit: contain; }
-    .detail-blurb-row .aff-nav-icon.sprite { width: 40px; height: 54px; }
     .aff-nav-icon:hover { box-shadow: 0 0 6px rgba(232,184,32,.5); }
     .detail-banner-header { margin: 0 0 .4rem; }
     .detail-obj-affinity { margin-bottom: 1.2rem; }
@@ -1307,10 +1310,12 @@
       .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr; }
       .overlay-panel { width: 95vw; }
       .ovl-left, .ovl-right { width: 140px; }
+      .detail-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 480px) {
       .ovl-left { display: none; }
       .ovl-right { width: 160px; }
+      .detail-info-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1506,9 +1511,23 @@
   function childAffinities(parentName) {
     return (D.affinities || []).filter(a => a.base_affinity === parentName && a.name !== parentName);
   }
-  // Per-object info blurb for an (affinity, object). The source column doesn't exist yet —
-  // returns '' until it's added to affinities.csv + build-data.mjs. Single wire-up point.
-  function affinityObjInfo(/* affinityName, type, objName */) { return ''; }
+  // Per-object interaction blurbs for a trait (from affinities.csv `info`). Each entry is
+  // `{objects:[name…], blurb}`; a single blurb may cover several co-listed objects.
+  function affinityInfoEntries(affinityName) {
+    return affinityByName(affinityName)?.info_entries || [];
+  }
+  // The entries of `affinityName` that mention `objName` — for that object's own detail page.
+  function affinityObjEntries(affinityName, objName) {
+    return affinityInfoEntries(affinityName).filter(e => e.objects.includes(objName));
+  }
+  // Render one info entry: the italic blurb, optionally preceded by a row of the objects'
+  // navigable icons. Icons help on an affinity page (which object?), but are redundant on an
+  // object's own page (its icon would repeat once per interaction) — pass withIcons:false there.
+  function infoEntryHTML(entry, withIcons = true) {
+    const refs = withIcons ? resolveRefs(entry.objects) : [];
+    return `<div class="detail-info-entry">${refs.length ? refIconsGridHTML(refs) : ''}
+      <div class="detail-desc detail-info-blurb">${mdBold(entry.blurb)}</div></div>`;
+  }
 
   // Names in a given group of an object's grouped-affinity schema (e.g. 'priority'). Returns
   // an empty set until that object's `affinity` column adopts the {Priority:[…]|[…]} format.
@@ -4059,10 +4078,10 @@
 
     const { primary, rest, conflict, arcanaGroups } = objectAffinityGroups(type, name);
     const renderAff = aff => {
-      const blurb = affinityObjInfo(aff.name, type, name);
+      const entries = affinityObjEntries(aff.name, name);
       return `<div class="detail-obj-affinity">
         <div class="detail-banner-header">${affinityBanner(aff, 'nav-affinity')}</div>
-        ${blurb ? `<div class="detail-blurb-text">${esc(blurb)}</div>` : ''}
+        ${entries.map(e => infoEntryHTML(e, false)).join('')}
       </div>`;
     };
     const arcanaBoxes = arcanaGroups.map(g => arcanaBoxHTML(g, 'nav-object', renderAff)).join('');
@@ -4167,11 +4186,9 @@
           if (seen.has(c.base_name)) continue;
           seen.add(c.base_name);
           const rep = vi.byName.get(vi.repOf.get(c.base_name)) || c;
-          out.push({ navName: rep.name, title: c.base_name, icon: charSpriteIcon(rep),
-            blurb: affinityObjInfo(affName, 'character', rep.name) });
+          out.push({ navName: rep.name, title: c.base_name, icon: charSpriteIcon(rep) });
         } else {
-          out.push({ navName: n, title: n, icon: c ? charSpriteIcon(c) : cat.empty,
-            blurb: affinityObjInfo(affName, 'character', n) });
+          out.push({ navName: n, title: n, icon: c ? charSpriteIcon(c) : cat.empty });
         }
       }
       return out;
@@ -4179,7 +4196,7 @@
     return names.map(n => {
       const obj = cat.lookup(n);
       const icon = obj ? ((cat.iconOf ? cat.iconOf(obj) : obj.icon) || cat.empty) : cat.empty;
-      return { navName: n, title: n, icon, blurb: affinityObjInfo(affName, cat.type, n) };
+      return { navName: n, title: n, icon };
     });
   }
 
@@ -4199,17 +4216,23 @@
         ${kids.map(k => affinityBanner(k, 'nav-affinity')).join('')}
       </details>`;
     }
+    // Per-object interaction blurbs nest under the category they belong to (weapon blurbs above
+    // the weapons grid, etc.). Entries are homogeneous, so bucket each by its objects' type.
+    const infoEntries = affinityInfoEntries(aff.name);
+    const blurbsFor = t => {
+      const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t).map(e => infoEntryHTML(e)).join('');
+      return cells ? `<div class="detail-info-grid">${cells}</div>` : '';
+    };
     for (const cat of DETAIL_CATS) {
       const names = aff.related?.[cat.key] || [];
-      if (!names.length) continue;
-      const entries = detailCatEntries(cat, names, aff.name); // [{navName,title,icon,blurb}], deduped for chars
+      const catBlurbs = blurbsFor(cat.type);
+      if (!names.length && !catBlurbs) continue;
+      const entries = detailCatEntries(cat, names, aff.name); // [{navName,title,icon}], deduped for chars
       const iconCell = e => `<span class="aff-nav-icon ${cat.cls}" data-action="nav-object" data-detail-type="${cat.type}"
           data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
-      const blurbRows = entries.filter(e => e.blurb)
-        .map(e => `<div class="detail-blurb-row">${iconCell(e)}<span class="detail-blurb-text">${esc(e.blurb)}</span></div>`).join('');
       main += `<details class="detail-cat" open>
         <summary class="detail-cat-label">${cat.label} <span style="color:var(--text-dim);font-size:.75rem">(${entries.length})</span></summary>
-        ${blurbRows}
+        ${catBlurbs}
         <div class="aff-icon-grid">${entries.map(iconCell).join('')}</div>
       </details>`;
     }

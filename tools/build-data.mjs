@@ -389,6 +389,40 @@ function affinityFields(raw, ctx = '') {
 // too); the key is irrelevant here — every item in this column is a conflict.
 function conflictList(raw) { return parseAffinityGroups(raw).flatMap(g => g.items); }
 
+// The affinities.csv `info` column → per-object interaction blurbs for a trait. Grammar:
+//   { KEY:[free-text blurb] | KEY:[…] | … }   (or `{-}` for none)
+// KEY is one object name, an arcana name with its numeral (`Blood Astronomia (XXI)` — kept
+// verbatim, since arcana objects are named WITH the numeral and dropping it collides with the
+// like-named weapon), or a bracketed comma-list sharing one blurb (`[Four Seasons, Godai
+// Shuffle]`). Unlike the affinity grammar the blurb is NOT comma-split — it's prose. Emits
+// `[{objects:[name…], blurb}]`.
+function splitTopLevel(s, sep) {
+  const out = []; let depth = 0, cur = '';
+  for (const ch of s) {
+    if (ch === '[' || ch === '{') depth++;
+    else if (ch === ']' || ch === '}') depth = Math.max(0, depth - 1);
+    if (ch === sep && depth === 0) { out.push(cur); cur = ''; }
+    else cur += ch;
+  }
+  out.push(cur);
+  return out;
+}
+function parseInfoEntries(raw, ctx = '') {
+  const cell = unwrap(raw);            // strips the outer `{ … }` and normalizes `{-}` → ''
+  if (!cell) return [];
+  const entries = [];
+  for (const group of splitTopLevel(cell, '|').map(g => g.trim()).filter(Boolean)) {
+    const at = group.indexOf(':[');
+    if (at < 0) { console.warn(`info: group without ":[" (${ctx}): ${group}`); continue; }
+    let key = group.slice(0, at).trim();
+    let blurb = group.slice(at + 1).trim().replace(/^\[/, '').replace(/\]$/, '').replace(/\s+/g, ' ').trim();
+    if (key.startsWith('[') && key.endsWith(']')) key = key.slice(1, -1);
+    const objects = key.split(',').map(s => s.trim()).filter(Boolean);
+    if (objects.length && blurb) entries.push({ objects, blurb });
+  }
+  return entries;
+}
+
 function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
   if (!raw || raw.trim() === '-') return [];
   // Braces only wrap the block; the rules live inside, pipe-separated. Strip the
@@ -645,7 +679,7 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
 // base (Armor, Arcana, Character, and self-parents like Amount); a CHILD points at a
 // different parent (Retaliation → Armor). Membership is pre-authored per row, so no rollup.
 // `color` is the banner color, derived at build time from the icon's dominant color.
-// `info` is affinity-level today; a future per-object blurb column is not yet present.
+// `info_entries` are per-object interaction blurbs parsed from the `info` column (see parseInfoEntries).
 
 const rawAffinities = readCsv('affinities.csv', true);
 const affinities = rawAffinities.filter(r => r.affinity).map(r => {
@@ -660,7 +694,8 @@ const affinities = rawAffinities.filter(r => r.affinity).map(r => {
     base_affinity,
     is_parent: name === base_affinity,
     description: unwrap(r.description),
-    info: unwrap(r.info),
+    // Per-object interaction blurbs: `[{objects:[name…], blurb}]` (parsed from the `info` column).
+    info_entries: parseInfoEntries(r.info, name),
     related: {
       weapons:    splitItems(r.related_to_weapons),
       passives:   splitItems(r.related_to_passives),
