@@ -37,7 +37,9 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 | `name`        | string            | ✔   | Display name. |
 | `author`      | string            |     | Credit. |
 | `description` | string            |     | Short blurb. |
-| `tags`        | string[]          |     | e.g. `["solo","crit","whip"]`. |
+| `notes`       | string            |     | Freeform "why I picked this" note, shown under the build name. |
+| `tags`        | string[]          |     | e.g. `["solo","crit","whip"]`. Legacy free-text; the UI now shows derived trait banners instead. |
+| `traits`      | string[]          |     | Cached top-3 trait names (banners). Derived at save time; the site recomputes from live data when available, so this is just a portable fallback. |
 | `dataVersion` | string            |     | Free-form marker of the data snapshot authored against (e.g. `"2026-08"`). |
 | `playerCount` | number (1–4)      | ✔   | Number of player entries. |
 | `stage`       | string \| null    |     | Stage name, or `null`. |

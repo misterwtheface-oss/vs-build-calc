@@ -324,6 +324,9 @@
     .build-row:hover { border-color: var(--gold); }
     .build-row-icon { width: 40px; height: 40px; flex: none; }
     .build-row-icon img { width: 100%; height: 100%; object-fit: contain; }
+    /* Character sprite icons are tall — give them room and pixel-crisp scaling. */
+    .build-row-sprite { width: 44px; height: 52px; }
+    .build-row-sprite img { image-rendering: pixelated; }
     .build-row-main { flex: 1; min-width: 0; }
     .build-row-name { font-weight: 600; font-size: .9rem; color: var(--text); }
     .build-row-meta { font-size: .68rem; color: var(--text-muted); }
@@ -332,6 +335,12 @@
     .build-tag {
       font-size: .62rem; text-transform: uppercase; letter-spacing: .04em;
       color: var(--gold); border: 1px solid var(--border-hi); border-radius: 3px; padding: 0 .3rem;
+    }
+    /* Top-3 trait banners (colored per trait) shown in place of free-text tags. */
+    .build-trait-banner {
+      font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+      background: var(--aff-color); color: var(--aff-text);
+      border-radius: 3px; padding: .05rem .4rem; white-space: nowrap;
     }
     .build-row-actions { display: flex; flex-wrap: wrap; gap: .3rem; justify-content: flex-end; flex: none; max-width: 45%; }
     .btn-danger { background: rgba(160,25,25,.15); border-color: rgba(200,50,50,.4); color: #cc7070; }
@@ -781,6 +790,11 @@
       font-family: var(--font-title); color: var(--gold); font-size: 1.2rem;
       border-bottom: 1px solid var(--border); padding-bottom: .35rem; margin-bottom: .6rem;
     }
+    /* Breathing room between stacked detail-page sections so a section's last entry —
+       especially tall/wide evolution paths — doesn't crowd or bleed into the next header. */
+    #detail-overlay-root .detail-main > .detail-section { margin-top: 1.6rem; }
+    #detail-overlay-root .detail-main > .detail-section:first-child { margin-top: 0; }
+    #detail-overlay-root .detail-main > .detail-section + .primary-traits { margin-top: 1.6rem; }
     #detail-overlay-root .detail-passive-evo .evo-flow {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1rem; align-items: start;
@@ -1451,7 +1465,7 @@
     detail: { stack: [], idx: -1, player: 0, appendixQuery: '' },
     // Build loadouts overlay. `user` = localStorage-backed builds (vsbc.builds); featured
     // builds live in window.VS_BUILDS. See captureBuild/applyBuild and builds/SCHEMA.md.
-    builds: { active: false, user: [] },
+    builds: { active: false, user: [], charScope: null },
   };
 
   // ── Collection persistence (localStorage; first persisted state in the app) ──
@@ -1496,12 +1510,13 @@
 
   // Snapshot current state → a schema object. Objects are mapped to their `.name`.
   function captureBuild(meta = {}) {
-    return {
+    const build = {
       schema: BUILD_SCHEMA,
       id: meta.id || ('build-' + Date.now().toString(36)),
       name: meta.name || 'Untitled Build',
       author: meta.author || '',
       description: meta.description || '',
+      notes: meta.notes || '',
       tags: Array.isArray(meta.tags) ? meta.tags : [],
       dataVersion: meta.dataVersion || '',
       playerCount: state.playerCount,
@@ -1519,6 +1534,31 @@
         absorbed: Object.fromEntries(Object.entries(p.absorbed || {}).map(([k, v]) => [k, [...v]])),
       })),
     };
+    // Cache the derived top traits so saved/exported builds carry their trait banners even
+    // where affinity data isn't available (e.g. skill/repo tooling). Rendered fresh when the
+    // current dataset can recompute them; this is just the portable fallback.
+    build.traits = buildTopTraits(build, 3).map(a => a.name);
+    return build;
+  }
+
+  // The build's headline traits: every equipped object (character + weapons + passives + arcana)
+  // votes for its traits; the traits shared by the most objects win. This is the same tally the
+  // player Trait Table (detailPlayerPageHTML) sorts its columns by, distilled to the top few.
+  // Returns up to `limit` affinity objects, most-shared first.
+  function buildTopTraits(build, limit = 3) {
+    const objs = [];
+    const push = (name, type) => { if (name) objs.push({ type, name }); };
+    (build.players || []).forEach(p => {
+      push(p.character, 'character');
+      (p.weapons  || []).forEach(n => push(n, 'weapon'));
+      (p.passives || []).forEach(n => push(n, 'passive'));
+    });
+    (build.arcana || []).forEach(n => push(n, 'arcana'));
+    const count = new Map();
+    objs.forEach(o => objectAffinities(o.type, o.name).forEach(a => count.set(a.name, (count.get(a.name) || 0) + 1)));
+    return [...count.keys()].map(affinityByName).filter(Boolean)
+      .sort((a, b) => (count.get(b.name) - count.get(a.name)) || a.name.localeCompare(b.name))
+      .slice(0, limit);
   }
 
   // Rehydrate a schema object into `state` and re-render. Unresolvable names are collected
@@ -3385,6 +3425,7 @@
           </div>
           <div class="player-header-actions">
             <button class="btn btn-sm" data-action="open-player-page" data-player="${idx}" title="Shared trait cross-reference">⊞ Traits</button>
+            ${char ? `<button class="btn btn-sm" data-action="open-player-builds" data-player="${idx}" title="Saved builds for ${esc(char.name)}">★ Builds</button>` : ''}
             <button class="btn btn-sm" data-action="clear-player" data-player="${idx}" title="Clear all">✕ Clear</button>
           </div>
         </div>
@@ -5689,26 +5730,45 @@
   // Two sections: Featured (window.VS_BUILDS, read-only) and My Builds (localStorage,
   // editable). Rows Load a build into the planner; the toolbar Saves the current planner
   // as a new user build or Imports one from pasted JSON. See captureBuild/applyBuild.
+  // The build's top traits, as compact colored banners — replaces free-text tags. Recomputed
+  // from the live dataset; falls back to the names cached on the build (build.traits) when the
+  // current data can't resolve them.
+  function buildTraitBannersHTML(build) {
+    let traits = buildTopTraits(build, 3);
+    if (!traits.length && Array.isArray(build.traits))
+      traits = build.traits.map(affinityByName).filter(Boolean).slice(0, 3);
+    if (!traits.length) return '';
+    return `<div class="build-tags">${traits.map(a => {
+      const color = a.color || '#6a4010';
+      return `<span class="build-trait-banner" style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}"
+        title="${esc(a.name)}">${esc(a.name)}</span>`;
+    }).join('')}</div>`;
+  }
+
+  // `idx` is the index into the SOURCE list (state.builds.user or window.VS_BUILDS) — not the
+  // (possibly filtered) display order — so Load/Delete/etc. target the right build.
   function buildRowHTML(build, source, idx) {
     const charName = build.players?.[0]?.character;
-    const icon = charName ? evoIcon(charName) : EMPTY_ICONS.char;
-    const tags = (build.tags || []).map(t => `<span class="build-tag">${esc(t)}</span>`).join('');
+    const char = charName ? charByName(charName) : null;
+    const icon = char ? charSpriteIcon(char) : EMPTY_ICONS.char; // character _sprite.png
+    const banners = buildTraitBannersHTML(build);
     const meta = [
       build.playerCount > 1 ? `${build.playerCount}P` : 'Solo',
       build.author ? `by ${esc(build.author)}` : '',
     ].filter(Boolean).join(' · ');
+    const notes = build.notes || build.description || '';
     const userActions = source === 'user'
       ? `<button class="btn btn-sm" data-action="rename-build" data-idx="${idx}">Rename</button>
          <button class="btn btn-sm" data-action="export-build" data-source="user" data-idx="${idx}">Export</button>
          <button class="btn btn-sm btn-danger" data-action="delete-build" data-idx="${idx}">Delete</button>`
       : `<button class="btn btn-sm" data-action="export-build" data-source="featured" data-idx="${idx}">Export</button>`;
     return `<div class="build-row">
-      <div class="build-row-icon"><img src="${esc(icon)}" alt="" onerror="this.src='${EMPTY_ICONS.char}'"></div>
+      <div class="build-row-icon build-row-sprite"><img src="${esc(icon)}" alt="" onerror="this.src='${EMPTY_ICONS.char}'"></div>
       <div class="build-row-main">
         <div class="build-row-name">${esc(build.name || 'Untitled')}</div>
         ${meta ? `<div class="build-row-meta">${meta}</div>` : ''}
-        ${build.description ? `<div class="build-row-desc">${esc(build.description)}</div>` : ''}
-        ${tags ? `<div class="build-tags">${tags}</div>` : ''}
+        ${notes ? `<div class="build-row-desc">${esc(notes)}</div>` : ''}
+        ${banners}
       </div>
       <div class="build-row-actions">
         <button class="btn btn-sm" data-action="load-build" data-source="${source}" data-idx="${idx}">Load ▸</button>
@@ -5717,34 +5777,52 @@
     </div>`;
   }
 
-  function buildsSectionHTML(title, builds, source, emptyMsg) {
-    const rows = builds.length
-      ? builds.map((b, i) => buildRowHTML(b, source, i)).join('')
+  // `entries` is [{build, idx}] where idx is the index into the source list.
+  function buildsSectionHTML(title, entries, source, emptyMsg) {
+    const rows = entries.length
+      ? entries.map(e => buildRowHTML(e.build, source, e.idx)).join('')
       : `<div class="builds-empty">${emptyMsg}</div>`;
     return `<div class="builds-section">
-      <h3 class="builds-section-title">${esc(title)} <span class="builds-count">${builds.length}</span></h3>
+      <h3 class="builds-section-title">${esc(title)} <span class="builds-count">${entries.length}</span></h3>
       ${rows}
     </div>`;
   }
 
-  function renderBuildsOverlay() {
+  // A build "belongs to" a character if any of its players run that character.
+  function buildHasChar(build, charName) {
+    return (build.players || []).some(p => p.character === charName);
+  }
+
+  // `charScope` (a character name) filters the overlay to that character's builds and labels
+  // the save button accordingly; null shows every build. Defaults to the current scope so the
+  // internal re-renders (after save/delete/rename/import) preserve it.
+  function renderBuildsOverlay(charScope = state.builds.charScope) {
+    state.builds.charScope = charScope || null;
     const featured = window.VS_BUILDS || [];
     const user = state.builds.user;
+    // Keep source indices while filtering to the scoped character.
+    const entries = (list) => list
+      .map((build, idx) => ({ build, idx }))
+      .filter(e => !charScope || buildHasChar(e.build, charScope));
+    const scoped = !!charScope;
     const root = document.getElementById('overlay-root');
     root.innerHTML = `
       <div class="overlay-panel builds-panel">
         <div class="overlay-header">
-          <h2>Builds</h2>
+          <h2>${scoped ? `Builds — ${esc(charScope)}` : 'Builds'}</h2>
           <button class="btn btn-icon overlay-close" data-action="builds-close">✕</button>
         </div>
         <div class="seal-controls">
           <button class="btn btn-sm" data-action="save-build">＋ Save current build</button>
           <button class="btn btn-sm" data-action="import-build">⬆ Import…</button>
+          ${scoped ? `<button class="btn btn-sm" data-action="open-builds">All builds ▸</button>` : ''}
         </div>
-        <div class="builds-hint">Load fills the planner (characters, weapons, passives, arcana, stage). The Seal Advisor is left untouched.</div>
+        <div class="builds-hint">${scoped
+          ? `Showing builds that run ${esc(charScope)}. Save captures the current planner. Load fills the planner; the Seal Advisor is left untouched.`
+          : `Load fills the planner (characters, weapons, passives, arcana, stage). The Seal Advisor is left untouched.`}</div>
         <div class="builds-scroll">
-          ${buildsSectionHTML('Featured', featured, 'featured', 'No featured builds bundled yet.')}
-          ${buildsSectionHTML('My Builds', user, 'user', 'None saved yet. Build a loadout, then “Save current build”.')}
+          ${buildsSectionHTML('Featured', entries(featured), 'featured', scoped ? `No featured builds for ${esc(charScope)}.` : 'No featured builds bundled yet.')}
+          ${buildsSectionHTML('My Builds', entries(user), 'user', scoped ? `No saved builds for ${esc(charScope)} yet. Build a loadout, then “Save current build”.` : 'None saved yet. Build a loadout, then “Save current build”.')}
         </div>
       </div>`;
     root.classList.remove('hidden');
@@ -5754,6 +5832,7 @@
   function closeBuildsOverlay() {
     document.getElementById('overlay-root').classList.add('hidden');
     state.builds.active = false;
+    state.builds.charScope = null;
   }
 
   // Copy text to clipboard with a file://-safe fallback (prompt shows selectable JSON).
@@ -5875,11 +5954,13 @@
       return;
     }
     if (action === 'save-build') {
-      const name = window.prompt('Name this build:', 'My Build');
+      const scopeChar = state.builds.charScope;
+      const defaultName = scopeChar ? `${scopeChar} build` : 'My Build';
+      const name = window.prompt('Name this build:', defaultName);
       if (name == null) return; // cancelled
-      const tagsRaw = window.prompt('Tags (comma-separated, optional):', '') || '';
-      const tags = tagsRaw.split(',').map(t => t.trim()).filter(Boolean);
-      const build = captureBuild({ name: name.trim() || 'My Build', tags, author: '' });
+      // Light "why did I pick this" note — freeform, shown under the build name.
+      const notes = window.prompt('Why this build? (optional notes on your picks)', '') || '';
+      const build = captureBuild({ name: name.trim() || defaultName, notes: notes.trim(), author: '' });
       state.builds.user.push(build);
       saveBuilds();
       renderBuildsOverlay();
@@ -6061,7 +6142,12 @@
       return;
     }
     if (action === 'open-builds') {
-      renderBuildsOverlay();
+      renderBuildsOverlay(null); // global view — clear any character scope
+      return;
+    }
+    if (action === 'open-player-builds') {
+      const char = state.players[playerIdx]?.character;
+      renderBuildsOverlay(char ? char.name : null);
       return;
     }
     if (action === 'open-appendix') {
