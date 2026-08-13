@@ -1436,10 +1436,96 @@
       .ovl-left, .ovl-right { width: 140px; }
       .detail-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-    @media (max-width: 480px) {
-      .ovl-left { display: none; }
-      .ovl-right { width: 160px; }
+    /* ══════════════════════════════════════════════════════════════════════
+       MOBILE (phones, ≤600px) — reflow ONLY. Every rule here is an override
+       that fires at phone widths; the desktop/tablet layout above is untouched.
+       No markup/JS changes, so the web design is byte-for-byte identical >600px.
+       ══════════════════════════════════════════════════════════════════════ */
+    @media (max-width: 600px) {
+      /* Slightly smaller slots so rows fit a phone; cascades to every slot/grid. */
+      :root { --slot-size: 46px; }
+
+      /* ── Overlays go full-screen (no wasted margin, easier to scroll) ── */
+      #overlay-root, #detail-overlay-root { padding: 0; }
+      .overlay-panel, #detail-overlay-root .overlay-panel,
+      .builds-panel, .collection-panel, .seal-panel, .pu-panel {
+        width: 100vw; max-width: 100vw;
+        height: 100vh; height: 100dvh; max-height: 100vh; max-height: 100dvh;
+        border-radius: 0; border: none;
+      }
+      .overlay-header h2 { font-size: 1.2rem; }
+      #detail-overlay-root .overlay-header h2 { font-size: 1.25rem; }
+
+      /* ── Landing ── */
+      .landing-grid { grid-template-columns: 1fr; gap: .75rem; }
+      .player-tile-btn { width: 100%; }
+
+      /* ── Planner header (wraps instead of overflowing) ── */
+      .planning-header { flex-wrap: wrap; gap: .4rem; padding: .55rem .7rem; }
+      .planning-header h1 { font-size: 1rem; }
+      .planning-header-actions { flex-wrap: wrap; gap: .35rem; }
+      .planning-header-actions .btn { font-size: .78rem; padding: .3rem .5rem; }
+
+      /* ── Planner body: single column, tighter padding ── */
+      .planning-body { flex-direction: column; padding: .6rem; gap: .6rem; overflow: visible; }
+      .planning-main { overflow: visible; }
+      .global-row { max-width: 100%; padding: .5rem .6rem; }
+      .players-grid, .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr; max-width: 100%; }
+
+      /* ── Player card: character on top, slots below; slot rows wrap ── */
+      .player-header { flex-wrap: wrap; gap: .3rem; }
+      .player-header-actions { flex-wrap: wrap; }
+      .player-body { flex-direction: column; gap: .6rem; padding: .6rem; }
+      .char-col { align-self: center; }
+      .slot-row { flex-wrap: wrap; }
+      .slot-row-label { width: 100%; margin-bottom: .1rem; }
+
+      /* ── Selection overlay: stack the 3 columns; grid first, panel scrolls ── */
+      .overlay-body { flex-direction: column; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .ovl-left, .ovl-center, .ovl-center-wide, .ovl-right { width: 100%; flex: none; }
+      .ovl-center, .ovl-center-wide { order: 1; overflow: visible; }
+      .ovl-right { order: 2; width: 100%; border-left: none; border-top: 1px solid var(--border); }
+      .ovl-left  { order: 3; border-right: none; border-top: 1px solid var(--border); }
+      /* Keep the item grid scannable in its own bounded scroll; stats/detail sit below it. */
+      .ovl-center-scroll { max-height: 58vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .ovl-left { overflow: visible; }
+      .ovl-right-body { overflow: visible; }
+      .ovl-right-top .detail-icon { width: 72px; height: 72px; }
+
+      /* Stat table shrinks to fit narrow screens */
+      .ovl-left .stat-row { grid-template-columns: 1fr 40px 40px 46px 52px; font-size: .76rem; }
+
+      /* ── Detail overlay: art on top, single column, page scrolls ── */
+      .detail-body { flex-direction: column; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .detail-left {
+        width: 100%; flex: none; border-right: none;
+        border-bottom: 1px solid var(--border); padding: 1rem; text-align: center;
+      }
+      .detail-left .detail-icon { width: 128px; height: 128px; margin: 0 auto .6rem; }
+      .detail-left .detail-icon.arcana-card { width: 132px; height: 190px; }
+      .detail-left .detail-icon.char-sprite { height: 168px; }
+      .detail-left .detail-name { font-size: 1.3rem; }
+      .detail-main { overflow: visible; padding: 1rem 1.1rem; }
       .detail-info-grid { grid-template-columns: 1fr; }
+      .xref-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+      /* Combo-trait picker popover fits the viewport */
+      .aff-add-pop { width: min(88vw, 300px); }
+
+      /* Seal / collection dense grids wrap to width instead of overflowing 8-wide */
+      .seal-grid { grid-template-columns: repeat(auto-fill, var(--slot-size)); justify-content: center; }
+      .seal-controls { gap: .45rem; }
+
+      /* Builds rows: keep actions from squishing the name */
+      .build-row { flex-wrap: wrap; }
+      .build-row-actions { max-width: 100%; width: 100%; justify-content: flex-start; }
+    }
+
+    /* Very small phones: shave a bit more so 6 slots still wrap cleanly. */
+    @media (max-width: 380px) {
+      :root { --slot-size: 42px; }
+      .planning-header-actions .btn { font-size: .72rem; padding: .28rem .4rem; }
+      .detail-left .detail-icon { width: 108px; height: 108px; }
     }
   </style>
 </head>
