@@ -2763,7 +2763,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Overheal min 0 max 220 by pct|\nrecovery: source Overheal min 0 max 2 by pct|\narmor: source Overheal min 0 max 2 by pct|\nmove_speed: source Overheal min 0 max 0.5 by pct|\nmight: source Overheal min 0 max 0.5 by pct|\nspeed: source Overheal min 0 max 0.5 by pct|\nduration: source Overheal min 0 max 0.5 by pct|\narea: source Overheal min 0 max 0.5 by pct|\ncooldown: source Overheal min 0 max -0.25 by pct|\namount: source Overheal min 0 max 2 by pct|\nrevival: source Overheal min 0 max 3 by pct|\nmagnet: source Overheal min 0 max 16 by pct",
+      "manual_scaling": "max_health_flat: source Overheal min 0 max 220 by pct|\r\nrecovery: source Overheal min 0 max 2 by pct|\r\narmor: source Overheal min 0 max 2 by pct|\r\nmove_speed: source Overheal min 0 max 0.5 by pct|\r\nmight: source Overheal min 0 max 0.5 by pct|\r\nspeed: source Overheal min 0 max 0.5 by pct|\r\nduration: source Overheal min 0 max 0.5 by pct|\r\narea: source Overheal min 0 max 0.5 by pct|\r\ncooldown: source Overheal min 0 max -0.25 by pct|\r\namount: source Overheal min 0 max 2 by pct|\r\nrevival: source Overheal min 0 max 3 by pct|\r\nmagnet: source Overheal min 0 max 16 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -3921,14 +3921,21 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "[Move Speed",
+            "Move Speed",
             "Max Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might"
           ]
         }
       ],
       "affinity": [
-        "[Move Speed",
-        "Max Health"
+        "Move Speed",
+        "Max Health",
+        "Might"
       ],
       "conflict": [],
       "scaling": [],
@@ -4602,7 +4609,7 @@ window.VS_DATA = {
       ],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 0.5 by boolean|\nmove_speed: source Megalo State min 0 max 1 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean|\r\ncurse: source Megalo State min 0 max 0.5 by boolean|\r\nmove_speed: source Megalo State min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -4675,7 +4682,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nspeed: source Megalo State min 0 max 0.3 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\narea: source Megalo State min 0 max 0.3 by boolean",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nspeed: source Megalo State min 0 max 0.3 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\narea: source Megalo State min 0 max 0.3 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -5472,7 +5479,7 @@ window.VS_DATA = {
       ],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Revived min 0 max 2 by boolean|\ncooldown: source Revived min 0 max -1 by boolean|\nmove_speed: source Revived min 0 max 0.6 by boolean",
+      "manual_scaling": "might: source Revived min 0 max 2 by boolean|\r\ncooldown: source Revived min 0 max -1 by boolean|\r\nmove_speed: source Revived min 0 max 0.6 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -6160,7 +6167,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\nmove_speed: source Megalo State min 0 max 0.8 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.8 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -6463,7 +6470,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\nmight: source Kills min 0 max 0.25 by pct",
+      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\r\nmight: source Kills min 0 max 0.25 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -6523,7 +6530,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\ncooldown: source Kills min 0 max -0.25 by pct",
+      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\r\ncooldown: source Kills min 0 max -0.25 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -6671,7 +6678,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Revived min 0 max revival*20 by 20|\nrecovery: source Revived min 0 max revival*0.1 by 0.1|\narmor: source Revived min 0 max revival*0.2 by 0.2|\nmove_speed: source Revived min 0 max revival*0.08 by 0.08|\nmight: source Revived min 0 max revival*0.04 by 0.04|\nspeed: source Revived min 0 max revival*0.04 by 0.04|\nduration: source Revived min 0 max revival*0.04 by 0.04|\narea: source Revived min 0 max revival*0.04 by 0.04|\ncooldown: source Revived min 0 max revival*-0.03 by -0.03|\namount: source Revived min 0 max revival*0.2 by 0.2|\nluck: source Revived min 0 max revival*0.05 by 0.05|\ngrowth: source Revived min 0 max revival*0.05 by 0.05|\ngreed: source Revived min 0 max revival*0.01 by 0.01",
+      "manual_scaling": "max_health_flat: source Revived min 0 max revival*20 by 20|\r\nrecovery: source Revived min 0 max revival*0.1 by 0.1|\r\narmor: source Revived min 0 max revival*0.2 by 0.2|\r\nmove_speed: source Revived min 0 max revival*0.08 by 0.08|\r\nmight: source Revived min 0 max revival*0.04 by 0.04|\r\nspeed: source Revived min 0 max revival*0.04 by 0.04|\r\nduration: source Revived min 0 max revival*0.04 by 0.04|\r\narea: source Revived min 0 max revival*0.04 by 0.04|\r\ncooldown: source Revived min 0 max revival*-0.03 by -0.03|\r\namount: source Revived min 0 max revival*0.2 by 0.2|\r\nluck: source Revived min 0 max revival*0.05 by 0.05|\r\ngrowth: source Revived min 0 max revival*0.05 by 0.05|\r\ngreed: source Revived min 0 max revival*0.01 by 0.01",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -6737,7 +6744,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "cooldown: source Missing Health min 0 max -0.5 by pct|\nmove_speed: source Missing Health min 0 max 0.1 by pct|\nspeed: source Missing Health min 0 max 0.1 by pct",
+      "manual_scaling": "cooldown: source Missing Health min 0 max -0.5 by pct|\r\nmove_speed: source Missing Health min 0 max 0.1 by pct|\r\nspeed: source Missing Health min 0 max 0.1 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -8993,7 +9000,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "greed: source Soul Collector min 0 max 4.5 by pct|\nmight: source Soul Collector min 0 max 2.25 by pct|\ngrowth: source Soul Collector min 0 max 2.25 by pct",
+      "manual_scaling": "greed: source Soul Collector min 0 max 4.5 by pct|\r\nmight: source Soul Collector min 0 max 2.25 by pct|\r\ngrowth: source Soul Collector min 0 max 2.25 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -10510,7 +10517,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
+      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\r\nmultiply_might: source Overheal min 1 max 2 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -10574,7 +10581,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\nmultiply_might: source Overheal min 1 max 2 by pct",
+      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\r\nmultiply_might: source Overheal min 1 max 2 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -10640,7 +10647,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
+      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\r\narea: source Enemy Presence min 0 max by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -10706,7 +10713,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\narea: source Enemy Presence min 0 max by pct",
+      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\r\narea: source Enemy Presence min 0 max by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -10783,7 +10790,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\nmight: source Megalo State min 0 max 1.5 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean",
+      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\r\nmight: source Megalo State min 0 max 1.5 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -10860,7 +10867,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\nmight: source Megalo State min 0 max 1.5 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean",
+      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\r\nmight: source Megalo State min 0 max 1.5 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -11422,7 +11429,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -11492,7 +11499,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -11562,7 +11569,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -12338,7 +12345,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
+      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\r\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -12404,7 +12411,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
+      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\r\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -12611,7 +12618,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\ncooldown: source HP Critical min 0 max -0.2 by boolean|\ncurse: source HP Critical min 0 max 0.5 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\r\ncooldown: source HP Critical min 0 max -0.2 by boolean|\r\ncurse: source HP Critical min 0 max 0.5 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -12688,7 +12695,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\ncooldown: source HP Critical min 0 max -0.2 by boolean|\ncurse: source HP Critical min 0 max 0.5 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\r\ncooldown: source HP Critical min 0 max -0.2 by boolean|\r\ncurse: source HP Critical min 0 max 0.5 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13194,7 +13201,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\namount: source Megalo State min 0 max 2 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13256,7 +13263,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\namount: source Megalo State min 0 max 2 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13318,7 +13325,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\narmor: source Megalo State min 0 max 2 by boolean|\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\namount: source Megalo State min 0 max 2 by boolean",
+      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\namount: source Megalo State min 0 max 2 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13386,7 +13393,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13454,7 +13461,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13522,7 +13529,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -13590,7 +13597,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\ncurse: source Overheal min 0 max 10 by pct",
+      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -15448,7 +15455,7 @@ window.VS_DATA = {
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
         "max_health": 30,
@@ -15513,7 +15520,7 @@ window.VS_DATA = {
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
         "max_health": 30,
@@ -15578,7 +15585,7 @@ window.VS_DATA = {
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
         "max_health": 30,
@@ -15643,7 +15650,7 @@ window.VS_DATA = {
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
         "max_health": 30,
@@ -15710,7 +15717,7 @@ window.VS_DATA = {
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
         "max_health": 0,
@@ -15777,7 +15784,7 @@ window.VS_DATA = {
       "scaling": [],
       "reference_scaling": "",
       "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
         "max_health": 0,
@@ -16393,7 +16400,7 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "- Genya has the same bonuses as Alucard; Charge: Soul Steal. LevelUp: Dark Inferno (Actually Dominus Hatred). Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.\n- Genya must heal to full to recharge his HP Critical ability.",
+      "description": "- Genya has the same bonuses as Alucard; Charge: Soul Steal. LevelUp: Dark Inferno (Actually Dominus Hatred). Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.\r\n- Genya must heal to full to recharge his HP Critical ability.",
       "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
@@ -17948,7 +17955,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
+      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\r\ncooldown: source Orologion min 0 max -0.33 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -18016,7 +18023,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\ncooldown: source Orologion min 0 max -0.33 by boolean",
+      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\r\ncooldown: source Orologion min 0 max -0.33 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -18263,7 +18270,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -18391,7 +18398,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\ncooldown: source Megalo State min 0 max -0.2 by boolean|\ncurse: source Megalo State min 0 max 1 by boolean",
+      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean|\r\ncurse: source Megalo State min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19231,7 +19238,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19291,7 +19298,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19351,7 +19358,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19411,7 +19418,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19481,7 +19488,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19551,7 +19558,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19621,7 +19628,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19691,7 +19698,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19760,7 +19767,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19829,7 +19836,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19898,7 +19905,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -19967,7 +19974,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20020,7 +20027,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20075,7 +20082,7 @@ window.VS_DATA = {
       ],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20130,7 +20137,7 @@ window.VS_DATA = {
       ],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20192,7 +20199,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20254,7 +20261,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20321,8 +20328,8 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "might: 0.05 per [Glimmer Tech]|\nspeed: 0.05 per [Glimmer Tech] max 1|\nduration: 0.05 per [Glimmer Tech] max 1|\narea: 0.025 per [Glimmer Tech] max 0.5|\ncooldown: -0.01 per [Glimmer Tech] max -0.1|\nrecovery: 0.003 per [Glimmer Tech] max 1",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "reference_scaling": "might: 0.05 per [Glimmer Tech]|\r\nspeed: 0.05 per [Glimmer Tech] max 1|\r\nduration: 0.05 per [Glimmer Tech] max 1|\r\narea: 0.025 per [Glimmer Tech] max 0.5|\r\ncooldown: -0.01 per [Glimmer Tech] max -0.1|\r\nrecovery: 0.003 per [Glimmer Tech] max 1",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20444,7 +20451,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20566,7 +20573,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20628,7 +20635,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20690,7 +20697,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20750,7 +20757,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20816,7 +20823,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20885,7 +20892,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20945,7 +20952,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -20999,8 +21006,8 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21054,8 +21061,8 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21109,8 +21116,8 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21164,8 +21171,8 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21232,7 +21239,7 @@ window.VS_DATA = {
         }
       ],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21298,7 +21305,7 @@ window.VS_DATA = {
       ],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21360,7 +21367,7 @@ window.VS_DATA = {
       "conflict": [],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean|\nrecovery: source HP Critical min 0 max 10",
+      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean|\r\nrecovery: source HP Critical min 0 max 10",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21422,7 +21429,7 @@ window.VS_DATA = {
       ],
       "scaling": [],
       "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 6 by boolean|\ncooldown: source HP Critical min 0 max -1 by boolean|\nluck: source HP Critical min 0 max 1 by boolean",
+      "manual_scaling": "might: source HP Critical min 0 max 6 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
@@ -21753,6 +21760,7 @@ window.VS_DATA = {
     {
       "name": "Whip",
       "icon": "assets/icons/weapons/whip.png",
+      "sprite": "assets/icons/weapons/whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks horizontally, passes through enemies.",
@@ -21834,6 +21842,7 @@ window.VS_DATA = {
     {
       "name": "Bloody Tear",
       "icon": "assets/icons/weapons/bloody_tear.png",
+      "sprite": "assets/icons/weapons/bloody_tear_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolution of the whip. Can deal critical damage and absorb HP.",
@@ -21920,6 +21929,7 @@ window.VS_DATA = {
     {
       "name": "Vento Sacro",
       "icon": "assets/icons/weapons/vento_sacro.png",
+      "sprite": "assets/icons/weapons/vento_sacro_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Stronger with continuous movement. Can deal critical damage.",
@@ -21990,9 +22000,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Divine Bloodline (IX)",
           "items": [
-            "Divine Bloodline (IX):[Armor"
+            "Armor"
           ]
         }
       ],
@@ -22006,7 +22016,7 @@ window.VS_DATA = {
         "Duration",
         "Critical Damage",
         "Luck",
-        "Divine Bloodline (IX):[Armor"
+        "Armor"
       ],
       "conflict": [],
       "arcana": [
@@ -22018,6 +22028,7 @@ window.VS_DATA = {
     {
       "name": "Fuwalafuwaloo",
       "icon": "assets/icons/weapons/fuwalafuwaloo.png",
+      "sprite": "assets/icons/weapons/fuwalafuwaloo_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions",
@@ -22110,6 +22121,7 @@ window.VS_DATA = {
     {
       "name": "Magic Wand",
       "icon": "assets/icons/weapons/magic_wand.png",
+      "sprite": "assets/icons/weapons/magic_wand_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at the nearest enemy.",
@@ -22201,6 +22213,7 @@ window.VS_DATA = {
     {
       "name": "Holy Wand",
       "icon": "assets/icons/weapons/holy_wand.png",
+      "sprite": "assets/icons/weapons/holy_wand_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolution of the Magic Wand. Fires with no delay.",
@@ -22285,6 +22298,7 @@ window.VS_DATA = {
     {
       "name": "Summon Spirit",
       "icon": "assets/icons/weapons/summon_spirit.png",
+      "sprite": "assets/icons/weapons/summon_spirit_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires a homing projectile.",
@@ -22366,6 +22380,7 @@ window.VS_DATA = {
     {
       "name": "Spirit of Light",
       "icon": "assets/icons/weapons/spirit_of_light.png",
+      "sprite": "assets/icons/weapons/spirit_of_light_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Summon Spirit and Holy Wand. Fires homing spirits from a portal of light.",
@@ -22448,6 +22463,7 @@ window.VS_DATA = {
     {
       "name": "Knife",
       "icon": "assets/icons/weapons/knife.png",
+      "sprite": "assets/icons/weapons/knife_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires quickly in the faced direction.",
@@ -22510,7 +22526,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -22527,6 +22544,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Luck",
         "Critical Damage"
       ],
@@ -22542,6 +22560,7 @@ window.VS_DATA = {
     {
       "name": "Thousand Edge",
       "icon": "assets/icons/weapons/thousand_edge.png",
+      "sprite": "assets/icons/weapons/thousand_edge_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Knife. Fires with no delay.",
@@ -22597,7 +22616,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -22614,6 +22634,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Luck",
         "Critical Damage"
       ],
@@ -22629,6 +22650,7 @@ window.VS_DATA = {
     {
       "name": "Valmanway",
       "icon": "assets/icons/weapons/valmanway.png",
+      "sprite": "assets/icons/weapons/valmanway_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires faster when moving.",
@@ -22700,6 +22722,7 @@ window.VS_DATA = {
     {
       "name": "Million Cut",
       "icon": "assets/icons/weapons/million_cut.png",
+      "sprite": "assets/icons/weapons/million_cut_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Valmanway and Thousand Edge. Slashes endlessly. Grows bigger with continuous movement.",
@@ -22775,6 +22798,7 @@ window.VS_DATA = {
     {
       "name": "Axe",
       "icon": "assets/icons/weapons/axe.png",
+      "sprite": "assets/icons/weapons/axe_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "High damage, high area scaling.",
@@ -22837,7 +22861,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -22854,6 +22879,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Luck",
         "Critical Damage"
       ],
@@ -22869,6 +22895,7 @@ window.VS_DATA = {
     {
       "name": "Death Spiral",
       "icon": "assets/icons/weapons/death_spiral.png",
+      "sprite": "assets/icons/weapons/death_spiral_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Axe. Passes through enemies.",
@@ -22918,7 +22945,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -22935,6 +22963,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Luck",
         "Critical Damage"
       ],
@@ -22950,6 +22979,7 @@ window.VS_DATA = {
     {
       "name": "Dark Rift",
       "icon": "assets/icons/weapons/dark_rift.png",
+      "sprite": "assets/icons/weapons/dark_rift_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Generates vertical damaging zones.",
@@ -23019,6 +23049,7 @@ window.VS_DATA = {
     {
       "name": "Legacy of Death: Soul River",
       "icon": "assets/icons/weapons/legacy_of_death_soul.png",
+      "sprite": "assets/icons/weapons/legacy_of_death_soul_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Dark Rift and Death Spiral. Death becomes you.",
@@ -23104,6 +23135,7 @@ window.VS_DATA = {
     {
       "name": "Cross",
       "icon": "assets/icons/weapons/cross.png",
+      "sprite": "assets/icons/weapons/cross_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Aims at the nearest enemy, has a boomerang effect.",
@@ -23166,7 +23198,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -23189,6 +23222,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Luck",
         "Critical Damage",
         "Armor"
@@ -23205,6 +23239,7 @@ window.VS_DATA = {
     {
       "name": "Heaven Sword",
       "icon": "assets/icons/weapons/heaven_sword.png",
+      "sprite": "assets/icons/weapons/heaven_sword_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Cross. Can do critical damage.",
@@ -23262,7 +23297,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -23273,7 +23309,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -23286,6 +23323,7 @@ window.VS_DATA = {
     {
       "name": "Grand Cross",
       "icon": "assets/icons/weapons/grand_cross.png",
+      "sprite": "assets/icons/weapons/grand_cross_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Summons holy light.",
@@ -23335,7 +23373,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -23343,7 +23382,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Speed",
@@ -23354,6 +23394,7 @@ window.VS_DATA = {
     {
       "name": "Arch Angle",
       "icon": "assets/icons/weapons/arch_angle.png",
+      "sprite": "assets/icons/weapons/arch_angle_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Grand Cross and Heaven Sword. Central beam pulses when crosses pass through it.",
@@ -23407,7 +23448,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -23429,6 +23471,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Luck",
         "Critical Damage"
       ],
@@ -23443,6 +23486,7 @@ window.VS_DATA = {
     {
       "name": "King Bible",
       "icon": "assets/icons/weapons/king_bible.png",
+      "sprite": "assets/icons/weapons/king_bible_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Orbits around the character.",
@@ -23506,7 +23550,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -23529,6 +23574,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Curse",
         "Armor"
       ],
@@ -23541,6 +23587,7 @@ window.VS_DATA = {
     {
       "name": "Unholy Vespers",
       "icon": "assets/icons/weapons/unholy_vespers.png",
+      "sprite": "assets/icons/weapons/unholy_vespers_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved King Bible. Never Ends.",
@@ -23597,7 +23644,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -23614,6 +23662,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Curse"
       ],
       "conflict": [],
@@ -23624,6 +23673,7 @@ window.VS_DATA = {
     {
       "name": "Icebrand",
       "icon": "assets/icons/weapons/icebrand.png",
+      "sprite": "assets/icons/weapons/icebrand_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires lingering projectiles. Might freeze enemies.",
@@ -23716,6 +23766,7 @@ window.VS_DATA = {
     {
       "name": "Ninth Circle",
       "icon": "assets/icons/weapons/ninth_circle.png",
+      "sprite": "assets/icons/weapons/ninth_circle_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Icebrand and Unholy Vespers. Hell truly has frozen over.",
@@ -23800,6 +23851,7 @@ window.VS_DATA = {
     {
       "name": "Fire Wand",
       "icon": "assets/icons/weapons/fire_wand.png",
+      "sprite": "assets/icons/weapons/fire_wand_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at a random enemy, deals heavy damage.",
@@ -23894,6 +23946,7 @@ window.VS_DATA = {
     {
       "name": "Hellfire",
       "icon": "assets/icons/weapons/hellfire.png",
+      "sprite": "assets/icons/weapons/hellfire_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Fire Wand. Passes through enemies.",
@@ -23981,6 +24034,7 @@ window.VS_DATA = {
     {
       "name": "Aura Blast",
       "icon": "assets/icons/weapons/aura_blast.png",
+      "sprite": "assets/icons/weapons/aura_blast_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Generates explosive sideways.",
@@ -24058,6 +24112,7 @@ window.VS_DATA = {
     {
       "name": "Kardía Phlegeton",
       "icon": "assets/icons/weapons/kardia_phlegeton.png",
+      "sprite": "assets/icons/weapons/kardia_phlegeton_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Aura Blast and Hellfire. Calls forth a massive volcanic eruption.",
@@ -24149,6 +24204,7 @@ window.VS_DATA = {
     {
       "name": "Garlic",
       "icon": "assets/icons/weapons/garlic.png",
+      "sprite": "assets/icons/weapons/garlic_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Damages nearby enemies. Reduces resistance to knockback and freeze.",
@@ -24239,6 +24295,7 @@ window.VS_DATA = {
     {
       "name": "Soul Eater",
       "icon": "assets/icons/weapons/soul_eater.png",
+      "sprite": "assets/icons/weapons/soul_eater_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Garlic. Steals hearts. Power increases when recovering HP.",
@@ -24318,6 +24375,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Anura",
       "icon": "assets/icons/weapons/speculo_anura.png",
+      "sprite": "assets/icons/weapons/speculo_anura_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Summons frogs that damage enemies as they jump.",
@@ -24399,6 +24457,7 @@ window.VS_DATA = {
     {
       "name": "Anura",
       "icon": "assets/icons/weapons/anura.png",
+      "sprite": "assets/icons/weapons/anura_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Summons frogs that damage enemies as they jump.",
@@ -24461,7 +24520,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -24477,6 +24537,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart"
       ],
       "conflict": [
@@ -24489,6 +24550,7 @@ window.VS_DATA = {
     {
       "name": "Dark Frogamorphosis",
       "icon": "assets/icons/weapons/dark_frogamorphosis.png",
+      "sprite": "assets/icons/weapons/dark_frogamorphosis_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Anura and Soul Eater. May actually eat enemies.",
@@ -24582,6 +24644,7 @@ window.VS_DATA = {
     {
       "name": "Santa Water",
       "icon": "assets/icons/weapons/santa_water.png",
+      "sprite": "assets/icons/weapons/santa_water_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones.",
@@ -24638,7 +24701,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -24672,6 +24736,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Move Speed",
         "Armor",
         "Speed",
@@ -24688,6 +24753,7 @@ window.VS_DATA = {
     {
       "name": "La Borra",
       "icon": "assets/icons/weapons/la_borra.png",
+      "sprite": "assets/icons/weapons/la_borra_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Santa water. Damaging zones follow you and grow when they move.",
@@ -24739,7 +24805,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed"
+            "Move Speed",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -24763,6 +24830,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Vampire-Killing Tool",
         "Magnet",
         "Fire"
       ],
@@ -24776,6 +24844,7 @@ window.VS_DATA = {
     {
       "name": "Hydro Storm",
       "icon": "assets/icons/weapons/hydro_storm.png",
+      "sprite": "assets/icons/weapons/hydro_storm_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Generates damaging waves based on Projectile Speed and Duration.",
@@ -24826,7 +24895,8 @@ window.VS_DATA = {
             "Speed",
             "Duration",
             "Area",
-            "Cooldown"
+            "Cooldown",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -24835,7 +24905,8 @@ window.VS_DATA = {
         "Speed",
         "Duration",
         "Area",
-        "Cooldown"
+        "Cooldown",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Amount"
@@ -24845,6 +24916,7 @@ window.VS_DATA = {
     {
       "name": "Hydro Pump Climax",
       "icon": "assets/icons/weapons/hydro_pump_climax.png",
+      "sprite": "assets/icons/weapons/hydro_pump_climax_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Hydro Storm and La Borra. It never rains but it pours.",
@@ -24906,7 +24978,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed"
+            "Move Speed",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -24930,6 +25003,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Vampire-Killing Tool",
         "Magnet",
         "Fire"
       ],
@@ -24943,6 +25017,7 @@ window.VS_DATA = {
     {
       "name": "Runetracer",
       "icon": "assets/icons/weapons/runetracer.png",
+      "sprite": "assets/icons/weapons/runetracer_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Passes through enemies, bounces around.",
@@ -25006,7 +25081,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -25029,6 +25105,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Curse",
         "Freeze"
       ],
@@ -25042,6 +25119,7 @@ window.VS_DATA = {
     {
       "name": "NO FUTURE",
       "icon": "assets/icons/weapons/no_future.png",
+      "sprite": "assets/icons/weapons/no_future_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Runetracer. Explodes when bouncing and in retaliation.",
@@ -25100,7 +25178,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Armor",
-            "Retaliation"
+            "Retaliation",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -25119,6 +25198,7 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Retaliation",
+        "Vampire-Killing Tool",
         "Freeze"
       ],
       "conflict": [],
@@ -25130,6 +25210,7 @@ window.VS_DATA = {
     {
       "name": "Troll Bomb",
       "icon": "assets/icons/weapons/troll_bomb.png",
+      "sprite": "assets/icons/weapons/troll_bomb_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "This one doesn't bounce.",
@@ -25172,14 +25253,16 @@ window.VS_DATA = {
           "items": [
             "Might",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
       "affinity": [
         "Might",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Speed",
@@ -25191,6 +25274,7 @@ window.VS_DATA = {
     {
       "name": "Carnage Heart",
       "icon": "assets/icons/weapons/carnage_heart.png",
+      "sprite": "assets/icons/weapons/carnage_heart_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Troll Bomb and NO FUTURE. This one does in fact bounce.",
@@ -25247,7 +25331,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Armor",
-            "Retaliation"
+            "Retaliation",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -25266,6 +25351,7 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Retaliation",
+        "Vampire-Killing Tool",
         "Freeze"
       ],
       "conflict": [],
@@ -25277,6 +25363,7 @@ window.VS_DATA = {
     {
       "name": "Lightning Ring",
       "icon": "assets/icons/weapons/lightning_ring.png",
+      "sprite": "assets/icons/weapons/lightning_ring_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at random enemies.",
@@ -25326,7 +25413,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -25359,6 +25447,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Curse",
         "Move Speed",
         "Armor",
@@ -25377,6 +25466,7 @@ window.VS_DATA = {
     {
       "name": "Thunder Loop",
       "icon": "assets/icons/weapons/thunder_loop.png",
+      "sprite": "assets/icons/weapons/thunder_loop_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Lightning Ring. Projectiles strike twice.",
@@ -25419,7 +25509,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -25446,6 +25537,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Curse",
         "Move Speed",
         "Speed"
@@ -25462,6 +25554,7 @@ window.VS_DATA = {
     {
       "name": "Sword Brothers",
       "icon": "assets/icons/weapons/sword_brothers.png",
+      "sprite": "assets/icons/weapons/sword_brothers_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Grants a brief moment of Invulnerability and generates a damaging wave.",
@@ -25513,6 +25606,7 @@ window.VS_DATA = {
     {
       "name": "Vjaya Sisters",
       "icon": "assets/icons/weapons/vjaya_sisters.png",
+      "sprite": "assets/icons/weapons/vjaya_sisters_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Sword Brothers and Thunder Loop. Lightning triggers sword explosions with brief Invulnerability.",
@@ -25598,6 +25692,7 @@ window.VS_DATA = {
     {
       "name": "Pentagram",
       "icon": "assets/icons/weapons/pentagram.png",
+      "sprite": "assets/icons/weapons/pentagram_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Erases everything in sight.",
@@ -25662,6 +25757,7 @@ window.VS_DATA = {
     {
       "name": "Gorgeous Moon",
       "icon": "assets/icons/weapons/gorgeous_moon.png",
+      "sprite": "assets/icons/weapons/gorgeous_moon_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Pentagram. Generates extra gems and gathers all of them.",
@@ -25724,6 +25820,7 @@ window.VS_DATA = {
     {
       "name": "Summon Spirit Tornado",
       "icon": "assets/icons/weapons/summon_spirit_tornado.png",
+      "sprite": "assets/icons/weapons/summon_spirit_tornado_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Summons spirits that will occasionally pick up XP gems for you.",
@@ -25780,7 +25877,8 @@ window.VS_DATA = {
             "Speed",
             "Duration",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         }
       ],
@@ -25789,7 +25887,8 @@ window.VS_DATA = {
         "Speed",
         "Duration",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Belnades' Spell"
       ],
       "conflict": [
         "Area"
@@ -25799,6 +25898,7 @@ window.VS_DATA = {
     {
       "name": "Venus Crescent",
       "icon": "assets/icons/weapons/venus_crescent.png",
+      "sprite": "assets/icons/weapons/venus_crescent_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Summon Spirit Tornado and Gorgeous Moon. Love, Beauty and Light.",
@@ -25853,6 +25953,7 @@ window.VS_DATA = {
     {
       "name": "Peachone",
       "icon": "assets/icons/weapons/peachone.png",
+      "sprite": "assets/icons/weapons/peachone_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Bombards in a circular area.",
@@ -25952,6 +26053,7 @@ window.VS_DATA = {
     {
       "name": "Cygnus",
       "icon": "assets/icons/weapons/cygnus.png",
+      "sprite": "assets/icons/weapons/cygnus_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Bombards in a circular area.",
@@ -26011,6 +26113,7 @@ window.VS_DATA = {
     {
       "name": "Ebony Wings",
       "icon": "assets/icons/weapons/ebony_wings.png",
+      "sprite": "assets/icons/weapons/ebony_wings_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Bombards in a circular area.",
@@ -26110,6 +26213,7 @@ window.VS_DATA = {
     {
       "name": "Zhar Ptytsia",
       "icon": "assets/icons/weapons/zhar_ptytsia.png",
+      "sprite": "assets/icons/weapons/zhar_ptytsia_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Bombards in a circular area.",
@@ -26169,6 +26273,7 @@ window.VS_DATA = {
     {
       "name": "Vandalier",
       "icon": "assets/icons/weapons/vandalier.png",
+      "sprite": "assets/icons/weapons/vandalier_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Peachone and Ebony Wings.",
@@ -26258,6 +26363,7 @@ window.VS_DATA = {
     {
       "name": "Phiera Der Tuphello",
       "icon": "assets/icons/weapons/phiera_der_tuphello.png",
+      "sprite": "assets/icons/weapons/phiera_der_tuphello_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires quickly in four fixed directions.",
@@ -26358,6 +26464,7 @@ window.VS_DATA = {
     {
       "name": "Red Muscle",
       "icon": "assets/icons/weapons/red_muscle.png",
+      "sprite": "assets/icons/weapons/red_muscle_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
@@ -26417,6 +26524,7 @@ window.VS_DATA = {
     {
       "name": "Eight The Sparrow",
       "icon": "assets/icons/weapons/eight_the_sparrow.png",
+      "sprite": "assets/icons/weapons/eight_the_sparrow_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires quickly in four fixed directions.",
@@ -26517,6 +26625,7 @@ window.VS_DATA = {
     {
       "name": "Twice Upon a Time",
       "icon": "assets/icons/weapons/twice_upon_a_time.png",
+      "sprite": "assets/icons/weapons/twice_upon_a_time_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires quickly in four fixed directions.",
@@ -26576,6 +26685,7 @@ window.VS_DATA = {
     {
       "name": "Phieraggi",
       "icon": "assets/icons/weapons/phieraggi.png",
+      "sprite": "assets/icons/weapons/phieraggi_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals.",
@@ -26659,6 +26769,7 @@ window.VS_DATA = {
     {
       "name": "Gatti Amari",
       "icon": "assets/icons/weapons/gatti_amari.png",
+      "sprite": "assets/icons/weapons/gatti_amari_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Summons capricious projectiles. Might interact with pickups.",
@@ -26754,6 +26865,7 @@ window.VS_DATA = {
     {
       "name": "Flock Destroyer",
       "icon": "assets/icons/weapons/flock_destroyer.png",
+      "sprite": "assets/icons/weapons/flock_destroyer_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Summons capricious projectiles. Might interact with pickups.",
@@ -26808,6 +26920,7 @@ window.VS_DATA = {
     {
       "name": "Vicious Hunger",
       "icon": "assets/icons/weapons/vicious_hunger.png",
+      "sprite": "assets/icons/weapons/vicious_hunger_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Gatti Amari. Might turn anything into gold.",
@@ -26913,6 +27026,7 @@ window.VS_DATA = {
     {
       "name": "Soul Steal",
       "icon": "assets/icons/weapons/soul_steal.png",
+      "sprite": "assets/icons/weapons/soul_steal_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Damages all enemies in sight and attempts to turn them into hearts.",
@@ -26976,6 +27090,7 @@ window.VS_DATA = {
     {
       "name": "Power of Lire",
       "icon": "assets/icons/weapons/power_of_lire.png",
+      "sprite": "assets/icons/weapons/power_of_lire_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Soul Steal and Vicious Hunger. Devours enemies with insatiable greed.",
@@ -27032,6 +27147,7 @@ window.VS_DATA = {
     {
       "name": "Song of Mana",
       "icon": "assets/icons/weapons/song_of_mana.png",
+      "sprite": "assets/icons/weapons/song_of_mana_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks vertically, passes through enemies.",
@@ -27118,6 +27234,7 @@ window.VS_DATA = {
     {
       "name": "Mannajja",
       "icon": "assets/icons/weapons/mannajja.png",
+      "sprite": "assets/icons/weapons/mannajja_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Song of Mana. Might slow enemies down.",
@@ -27198,6 +27315,7 @@ window.VS_DATA = {
     {
       "name": "Arrow of Goth",
       "icon": "assets/icons/weapons/arrow_of_goth.png",
+      "sprite": "assets/icons/weapons/arrow_of_goth_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Critical hits maximise amount of projectiles.",
@@ -27275,6 +27393,7 @@ window.VS_DATA = {
     {
       "name": "Dies Irae",
       "icon": "assets/icons/weapons/dies_irae.png",
+      "sprite": "assets/icons/weapons/dies_irae_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Arrow of Goth and Mannajja. Alamaric Snipers rain down arrows, even more so on critical hit.",
@@ -27379,6 +27498,7 @@ window.VS_DATA = {
     {
       "name": "Shadow Pinion",
       "icon": "assets/icons/weapons/shadow_pinion.png",
+      "sprite": "assets/icons/weapons/shadow_pinion_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generating damaging zones when moving, strikes when stopping.",
@@ -27472,6 +27592,7 @@ window.VS_DATA = {
     {
       "name": "Valkyrie Turner",
       "icon": "assets/icons/weapons/valkyrie_turner.png",
+      "sprite": "assets/icons/weapons/valkyrie_turner_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Evolved Shadow Pinion. Bigger, longer, faster, stronger.",
@@ -27566,9 +27687,10 @@ window.VS_DATA = {
     {
       "name": "Svarog Statue",
       "icon": "assets/icons/weapons/svarog_statue.png",
+      "sprite": "assets/icons/weapons/svarog_statue_sprite.png",
       "category": "Base",
       "method": "Union",
-      "description": "Geneartes damaging zones when moving.",
+      "description": "Generates damaging zones when moving.",
       "level_ups": [
         "Generates damaging zones when moving.",
         "Base Area up by 30%.",
@@ -27623,7 +27745,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed"
+            "Move Speed",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -27646,6 +27769,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Vampire-Killing Tool",
         "Fire",
         "Fire"
       ],
@@ -27660,6 +27784,7 @@ window.VS_DATA = {
     {
       "name": "Darkness Illusion",
       "icon": "assets/icons/weapons/darkness_illusion.png",
+      "sprite": "assets/icons/weapons/darkness_illusion_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Svarog Statue and Valkyrie Turner. Crimson clones dance with you in the flames.",
@@ -27752,6 +27877,7 @@ window.VS_DATA = {
     {
       "name": "Clock Lancet",
       "icon": "assets/icons/weapons/clock_lancet.png",
+      "sprite": "assets/icons/weapons/clock_lancet_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Chance to freeze enemies in time.",
@@ -27821,6 +27947,7 @@ window.VS_DATA = {
     {
       "name": "Infinite Corridor",
       "icon": "assets/icons/weapons/infinite_corridor.png",
+      "sprite": "assets/icons/weapons/infinite_corridor_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Clock Lancet. Halves enemies' health.",
@@ -27878,6 +28005,7 @@ window.VS_DATA = {
     {
       "name": "Laurel",
       "icon": "assets/icons/weapons/laurel.png",
+      "sprite": "assets/icons/weapons/laurel_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Shields from damage while active.",
@@ -27937,6 +28065,7 @@ window.VS_DATA = {
     {
       "name": "Crimson Shroud",
       "icon": "assets/icons/weapons/crimson_shroud.png",
+      "sprite": "assets/icons/weapons/crimson_shroud_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges.",
@@ -28013,6 +28142,7 @@ window.VS_DATA = {
     {
       "name": "Bone",
       "icon": "assets/icons/weapons/bone.png",
+      "sprite": "assets/icons/weapons/bone_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile.",
@@ -28105,6 +28235,7 @@ window.VS_DATA = {
     {
       "name": "Anima of Mortaccio",
       "icon": "assets/icons/weapons/anima_of_mortaccio.png",
+      "sprite": "assets/icons/weapons/anima_of_mortaccio_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Bone. Projectiles accelerate when bouncing.",
@@ -28187,6 +28318,7 @@ window.VS_DATA = {
     {
       "name": "Cherry Bomb",
       "icon": "assets/icons/weapons/cherry_bomb.png",
+      "sprite": "assets/icons/weapons/cherry_bomb_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile that explodes after some time.",
@@ -28278,6 +28410,7 @@ window.VS_DATA = {
     {
       "name": "Yatta Daikarin",
       "icon": "assets/icons/weapons/yatta_daikarin.png",
+      "sprite": "assets/icons/weapons/yatta_daikarin_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage.",
@@ -28356,6 +28489,7 @@ window.VS_DATA = {
     {
       "name": "Carréllo",
       "icon": "assets/icons/weapons/carrello.png",
+      "sprite": "assets/icons/weapons/carrello_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile. Number of bounces affected by Amount.",
@@ -28450,6 +28584,7 @@ window.VS_DATA = {
     {
       "name": "Carozza!",
       "icon": "assets/icons/weapons/carozza!.png",
+      "sprite": "assets/icons/weapons/carozza!_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Carréllo. Duration, Speed, and Area affect damage instead.",
@@ -28512,6 +28647,7 @@ window.VS_DATA = {
     {
       "name": "Celestial Dusting",
       "icon": "assets/icons/weapons/celestial_dusting.png",
+      "sprite": "assets/icons/weapons/celestial_dusting_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a bouncing projectile. Cooldown reduces when moving.",
@@ -28609,6 +28745,7 @@ window.VS_DATA = {
     {
       "name": "Profusione D'Amore",
       "icon": "assets/icons/weapons/profusione_damore.png",
+      "sprite": "assets/icons/weapons/profusione_damore_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals.",
@@ -28694,6 +28831,7 @@ window.VS_DATA = {
     {
       "name": "La Robba",
       "icon": "assets/icons/weapons/la_robba.png",
+      "sprite": "assets/icons/weapons/la_robba_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Generates bouncing projectiles.",
@@ -28776,6 +28914,7 @@ window.VS_DATA = {
     {
       "name": "Greatest Jubilee",
       "icon": "assets/icons/weapons/greatest_jubilee.png",
+      "sprite": "assets/icons/weapons/greatest_jubilee_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Has a chance to summon light sources.",
@@ -28865,6 +29004,7 @@ window.VS_DATA = {
     {
       "name": "Bracelet",
       "icon": "assets/icons/weapons/bracelet.png",
+      "sprite": "assets/icons/weapons/bracelet_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
@@ -28948,6 +29088,7 @@ window.VS_DATA = {
     {
       "name": "Bi-Bracelet",
       "icon": "assets/icons/weapons/bi-bracelet.png",
+      "sprite": "assets/icons/weapons/bi-bracelet_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Fires three projectiles at a random enemy.",
@@ -29039,6 +29180,7 @@ window.VS_DATA = {
     {
       "name": "Tri-Bracelet",
       "icon": "assets/icons/weapons/tri-bracelet.png",
+      "sprite": "assets/icons/weapons/tri-bracelet_sprite.png",
       "category": "Evolution",
       "method": "Union",
       "description": "Fires three projectiles at a random enemy.",
@@ -29147,6 +29289,7 @@ window.VS_DATA = {
     {
       "name": "Kaiser Knuckle",
       "icon": "assets/icons/weapons/kaiser_knuckle.png",
+      "sprite": "assets/icons/weapons/kaiser_knuckle_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Throws a flurry of close-range punches.",
@@ -29215,6 +29358,7 @@ window.VS_DATA = {
     {
       "name": "Lapiste Tepisto",
       "icon": "assets/icons/weapons/lapiste_tepisto.png",
+      "sprite": "assets/icons/weapons/lapiste_tepisto_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Kaiser Knuckle and Tri-Bracelet. Launches a barrage of stony fists.",
@@ -29307,6 +29451,7 @@ window.VS_DATA = {
     {
       "name": "Candybox",
       "icon": "assets/icons/weapons/candybox.png",
+      "sprite": "assets/icons/weapons/candybox_sprite.png",
       "category": "Base",
       "method": "Gift",
       "description": "Allows you to choose any unlocked base weapon.",
@@ -29331,6 +29476,7 @@ window.VS_DATA = {
     {
       "name": "Super Candybox II Turbo",
       "icon": "assets/icons/weapons/super_candybox_ii_turbo.png",
+      "sprite": "assets/icons/weapons/super_candybox_ii_turbo_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Gift of Candybox. Allows to choose among a selection of advanced weapons.",
@@ -29353,6 +29499,7 @@ window.VS_DATA = {
     {
       "name": "Pako Battiliar",
       "icon": "assets/icons/weapons/pako_battiliar.png",
+      "sprite": "assets/icons/weapons/pako_battiliar_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "May retaliate when losing health.",
@@ -29436,6 +29583,7 @@ window.VS_DATA = {
     {
       "name": "Mazo Familiar",
       "icon": "assets/icons/weapons/mazo_familiar.png",
+      "sprite": "assets/icons/weapons/mazo_familiar_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pako Battiliar. Damage and Amount affected by Max Health.",
@@ -29510,6 +29658,7 @@ window.VS_DATA = {
     {
       "name": "Ammo Appalate",
       "icon": "assets/icons/weapons/ammo_appalate.png",
+      "sprite": "assets/icons/weapons/ammo_appalate_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
@@ -29619,6 +29768,7 @@ window.VS_DATA = {
     {
       "name": "Horse Cartridge",
       "icon": "assets/icons/weapons/horse_cartridge.png",
+      "sprite": "assets/icons/weapons/horse_cartridge_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range.",
@@ -29719,6 +29869,7 @@ window.VS_DATA = {
     {
       "name": "Gunastrophe",
       "icon": "assets/icons/weapons/gunastrophe.png",
+      "sprite": "assets/icons/weapons/gunastrophe_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight.",
@@ -29801,6 +29952,7 @@ window.VS_DATA = {
     {
       "name": "Victory Sword",
       "icon": "assets/icons/weapons/victory_sword.png",
+      "sprite": "assets/icons/weapons/victory_sword_sprite.png",
       "category": "Base",
       "method": "Gift",
       "description": "Strikes with a combo attack at the nearest enemy. Retaliates.",
@@ -29884,6 +30036,7 @@ window.VS_DATA = {
     {
       "name": "Sole Solution",
       "icon": "assets/icons/weapons/sole_solution.png",
+      "sprite": "assets/icons/weapons/sole_solution_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Gift of Victory Sword. The more enemies are defeated, the stronger it grows.",
@@ -29931,6 +30084,7 @@ window.VS_DATA = {
     {
       "name": "Flames of Misspell",
       "icon": "assets/icons/weapons/flames_of_misspell.png",
+      "sprite": "assets/icons/weapons/flames_of_misspell_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Emits cones of flames.",
@@ -30025,6 +30179,7 @@ window.VS_DATA = {
     {
       "name": "Ashes of Muspell",
       "icon": "assets/icons/weapons/ashes_of_muspell.png",
+      "sprite": "assets/icons/weapons/ashes_of_muspell_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows.",
@@ -30119,6 +30274,7 @@ window.VS_DATA = {
     {
       "name": "Unearthly Bolt",
       "icon": "assets/icons/weapons/unearthly_bolt.png",
+      "sprite": "assets/icons/weapons/unearthly_bolt_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Critical hits generate damaging zones. Revivals affect damage of consecutive critical hits.",
@@ -30197,6 +30353,7 @@ window.VS_DATA = {
     {
       "name": "Spirit Disturbance",
       "icon": "assets/icons/weapons/spirit_disturbance.png",
+      "sprite": "assets/icons/weapons/spirit_disturbance_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Unearthly Bolt. Always deals critical hits.",
@@ -30258,6 +30415,7 @@ window.VS_DATA = {
     {
       "name": "Glass Fandango",
       "icon": "assets/icons/weapons/glass_fandango.png",
+      "sprite": "assets/icons/weapons/glass_fandango_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Stronger with movement, Orologions, and against frozen enemies",
@@ -30334,6 +30492,7 @@ window.VS_DATA = {
     {
       "name": "Celestial Voulge",
       "icon": "assets/icons/weapons/celestial_voulge.png",
+      "sprite": "assets/icons/weapons/celestial_voulge_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens.",
@@ -30408,6 +30567,7 @@ window.VS_DATA = {
     {
       "name": "Penshin Fatcha",
       "icon": "assets/icons/weapons/penshin_fatcha.png",
+      "sprite": "assets/icons/weapons/penshin_fatcha_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "A selection of aquatic armaments that can evolve endlessly. (Default)|\r\nChoose a new form. Level up bonuses from all previous forms carry over to the new form. (Evolved",
@@ -30434,6 +30594,7 @@ window.VS_DATA = {
     {
       "name": "Tonno Subito",
       "icon": "assets/icons/weapons/tonno_subito.png",
+      "sprite": "assets/icons/weapons/tonno_subito_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Basic tuna. Level up bonuses focus on Speed.",
@@ -30539,6 +30700,7 @@ window.VS_DATA = {
     {
       "name": "Tonnado",
       "icon": "assets/icons/weapons/tonnado.png",
+      "sprite": "assets/icons/weapons/tonnado_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Whipped tuna. Level up bonuses focus on Duration.",
@@ -30644,6 +30806,7 @@ window.VS_DATA = {
     {
       "name": "Tonn'omoto",
       "icon": "assets/icons/weapons/tonnomoto.png",
+      "sprite": "assets/icons/weapons/tonnomoto_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Freshwater tuna. Level up bonuses focus on Cooldown.",
@@ -30749,6 +30912,7 @@ window.VS_DATA = {
     {
       "name": "Tonn'oddeeo",
       "icon": "assets/icons/weapons/tonnoddeeo.png",
+      "sprite": "assets/icons/weapons/tonnoddeeo_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Heavenly tuna. Level up bonuses focus on Amount.",
@@ -30854,6 +31018,7 @@ window.VS_DATA = {
     {
       "name": "Tonne",
       "icon": "assets/icons/weapons/tonne.png",
+      "sprite": "assets/icons/weapons/tonne_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead.",
@@ -30959,6 +31124,7 @@ window.VS_DATA = {
     {
       "name": "Unsurpassed",
       "icon": "assets/icons/weapons/unsurpassed.png",
+      "sprite": "assets/icons/weapons/unsurpassed_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Premium tuna. Level up bonuses focus on Might.",
@@ -31064,6 +31230,7 @@ window.VS_DATA = {
     {
       "name": "Miracle of Multiplication",
       "icon": "assets/icons/weapons/miracle_of_multiplication.png",
+      "sprite": "assets/icons/weapons/miracle_of_multiplication_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve.",
@@ -31146,6 +31313,7 @@ window.VS_DATA = {
     {
       "name": "Santa Javelin",
       "icon": "assets/icons/weapons/santa_javelin.png",
+      "sprite": "assets/icons/weapons/santa_javelin_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Duration affects Amount. Can deal critical damage.",
@@ -31263,6 +31431,7 @@ window.VS_DATA = {
     {
       "name": "Levelin'Eh",
       "icon": "assets/icons/weapons/levelineh.png",
+      "sprite": "assets/icons/weapons/levelineh_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Duration affects Amount. Can deal critical damage.",
@@ -31325,6 +31494,7 @@ window.VS_DATA = {
     {
       "name": "Seraphic Cry",
       "icon": "assets/icons/weapons/seraphic_cry.png",
+      "sprite": "assets/icons/weapons/seraphic_cry_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers.",
@@ -31430,6 +31600,7 @@ window.VS_DATA = {
     {
       "name": "Gaze of Gaea",
       "icon": "assets/icons/weapons/gaze_of_gaea.png",
+      "sprite": "assets/icons/weapons/gaze_of_gaea_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Might Defang enemies.",
@@ -31515,6 +31686,7 @@ window.VS_DATA = {
     {
       "name": "Embrace of Gaea",
       "icon": "assets/icons/weapons/embrace_of_gaea.png",
+      "sprite": "assets/icons/weapons/embrace_of_gaea_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates",
@@ -31597,6 +31769,7 @@ window.VS_DATA = {
     {
       "name": "Magi-Stone",
       "icon": "assets/icons/weapons/magi-stone.png",
+      "sprite": "assets/icons/weapons/magi-stone_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Deals fixed damage based on Weapon Level.",
@@ -31670,6 +31843,7 @@ window.VS_DATA = {
     {
       "name": "Kyra-Stones",
       "icon": "assets/icons/weapons/kyra-stones.png",
+      "sprite": "assets/icons/weapons/kyra-stones_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies.",
@@ -31736,6 +31910,7 @@ window.VS_DATA = {
     {
       "name": "Phas3r",
       "icon": "assets/icons/weapons/phas3r.png",
+      "sprite": "assets/icons/weapons/phas3r_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates thin damaging zones. High Amount scaling.",
@@ -31804,6 +31979,7 @@ window.VS_DATA = {
     {
       "name": "Photonstorm",
       "icon": "assets/icons/weapons/photonstorm.png",
+      "sprite": "assets/icons/weapons/photonstorm_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Phas3r. Fires 2 to 5 times more projectiles depending on Luck.",
@@ -31865,6 +32041,7 @@ window.VS_DATA = {
     {
       "name": "Arma Dio",
       "icon": "assets/icons/weapons/arma_dio.png",
+      "sprite": "assets/icons/weapons/arma_dio_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose an extra passive weapon.",
@@ -31889,6 +32066,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Rune",
       "icon": "assets/icons/weapons/chaos_rune.png",
+      "sprite": "assets/icons/weapons/chaos_rune_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Speed and Duration affect the number of hit boxes instead.",
@@ -31970,6 +32148,7 @@ window.VS_DATA = {
     {
       "name": "Wicked Ruler",
       "icon": "assets/icons/weapons/wicked_ruler.png",
+      "sprite": "assets/icons/weapons/wicked_ruler_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Chaos Rune. Exerts control over wild magical forces.",
@@ -32042,6 +32221,7 @@ window.VS_DATA = {
     {
       "name": "Silver Wind",
       "icon": "assets/icons/weapons/silver_wind.png",
+      "sprite": "assets/icons/weapons/silver_wind_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Defeated enemies might drop hearts.",
@@ -32146,6 +32326,7 @@ window.VS_DATA = {
     {
       "name": "Festive Winds",
       "icon": "assets/icons/weapons/festive_winds.png",
+      "sprite": "assets/icons/weapons/festive_winds_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Silver Wind. Weakens enemies defenses.",
@@ -32233,6 +32414,7 @@ window.VS_DATA = {
     {
       "name": "Four Seasons",
       "icon": "assets/icons/weapons/four_seasons.png",
+      "sprite": "assets/icons/weapons/four_seasons_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates 4 explosions. Amount and Duration affect damage instead.",
@@ -32296,6 +32478,7 @@ window.VS_DATA = {
     {
       "name": "Godai Shuffle",
       "icon": "assets/icons/weapons/godai_shuffle.png",
+      "sprite": "assets/icons/weapons/godai_shuffle_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Four Seasons. Generates an additional explosion.",
@@ -32350,6 +32533,7 @@ window.VS_DATA = {
     {
       "name": "Summon Night",
       "icon": "assets/icons/weapons/summon_night.png",
+      "sprite": "assets/icons/weapons/summon_night_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones above the character.",
@@ -32425,6 +32609,7 @@ window.VS_DATA = {
     {
       "name": "Echo Night",
       "icon": "assets/icons/weapons/echo_night.png",
+      "sprite": "assets/icons/weapons/echo_night_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Summon Night. Generates damaging zones below the character.",
@@ -32491,6 +32676,7 @@ window.VS_DATA = {
     {
       "name": "Mirage Robe",
       "icon": "assets/icons/weapons/mirage_robe.png",
+      "sprite": "assets/icons/weapons/mirage_robe_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates freezing static projectiles with a chance to explode.",
@@ -32578,6 +32764,7 @@ window.VS_DATA = {
     {
       "name": "J'Odore",
       "icon": "assets/icons/weapons/jodore.png",
+      "sprite": "assets/icons/weapons/jodore_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mirage Robe. Projectiles move and confuse enemies.",
@@ -32666,6 +32853,7 @@ window.VS_DATA = {
     {
       "name": "Night Sword",
       "icon": "assets/icons/weapons/night_sword.png",
+      "sprite": "assets/icons/weapons/night_sword_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Retaliates with a bonus damage affected by Greed. Might steal hearts.",
@@ -32747,6 +32935,7 @@ window.VS_DATA = {
     {
       "name": "Muramasa",
       "icon": "assets/icons/weapons/muramasa.png",
+      "sprite": "assets/icons/weapons/muramasa_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health.",
@@ -32830,6 +33019,7 @@ window.VS_DATA = {
     {
       "name": "Mille Bolle Blu",
       "icon": "assets/icons/weapons/mille_bolle_blu.png",
+      "sprite": "assets/icons/weapons/mille_bolle_blu_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires lingering projectiles.",
@@ -32914,6 +33104,7 @@ window.VS_DATA = {
     {
       "name": "Boo Roo Boolle",
       "icon": "assets/icons/weapons/boo_roo_boolle.png",
+      "sprite": "assets/icons/weapons/boo_roo_boolle_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once.",
@@ -32989,6 +33180,7 @@ window.VS_DATA = {
     {
       "name": "108 Bocce",
       "icon": "assets/icons/weapons/108_bocce.png",
+      "sprite": "assets/icons/weapons/108_bocce_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Actually it's just 8. Damage affected by the difference between Curse and Luck.",
@@ -33053,6 +33245,7 @@ window.VS_DATA = {
     {
       "name": "SpellString",
       "icon": "assets/icons/weapons/spellstring.png",
+      "sprite": "assets/icons/weapons/spellstring_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Strikes at nearby enemies. Damage multiplied by Speed.",
@@ -33114,6 +33307,7 @@ window.VS_DATA = {
     {
       "name": "SpellStream",
       "icon": "assets/icons/weapons/spellstream.png",
+      "sprite": "assets/icons/weapons/spellstream_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Generates an expanding damaging zone. Damage multiplied by Area.",
@@ -33182,6 +33376,7 @@ window.VS_DATA = {
     {
       "name": "SpellStrike",
       "icon": "assets/icons/weapons/spellstrike.png",
+      "sprite": "assets/icons/weapons/spellstrike_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Strikes at the nearest enemy. Damage further multiplied by Might.",
@@ -33243,6 +33438,7 @@ window.VS_DATA = {
     {
       "name": "SpellStrom",
       "icon": "assets/icons/weapons/spellstrom.png",
+      "sprite": "assets/icons/weapons/spellstrom_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity.",
@@ -33309,6 +33505,7 @@ window.VS_DATA = {
     {
       "name": "Eskizzibur",
       "icon": "assets/icons/weapons/eskizzibur.png",
+      "sprite": "assets/icons/weapons/eskizzibur_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks nearby enemies. Retaliates.",
@@ -33391,6 +33588,7 @@ window.VS_DATA = {
     {
       "name": "Legionnaire",
       "icon": "assets/icons/weapons/legionnaire.png",
+      "sprite": "assets/icons/weapons/legionnaire_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage.",
@@ -33472,6 +33670,7 @@ window.VS_DATA = {
     {
       "name": "Flash Arrow",
       "icon": "assets/icons/weapons/flash_arrow.png",
+      "sprite": "assets/icons/weapons/flash_arrow_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Can deal critical damage. Amount affects damage instead.",
@@ -33561,6 +33760,7 @@ window.VS_DATA = {
     {
       "name": "Millionaire",
       "icon": "assets/icons/weapons/millionaire.png",
+      "sprite": "assets/icons/weapons/millionaire_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins.",
@@ -33644,6 +33844,7 @@ window.VS_DATA = {
     {
       "name": "Prismatic Missile",
       "icon": "assets/icons/weapons/prismatic_missile.png",
+      "sprite": "assets/icons/weapons/prismatic_missile_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX.",
@@ -33751,6 +33952,7 @@ window.VS_DATA = {
     {
       "name": "Luminaire",
       "icon": "assets/icons/weapons/luminaire.png",
+      "sprite": "assets/icons/weapons/luminaire_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Prismatic Missile. Increases the value of gems and coins on the ground.",
@@ -33850,6 +34052,7 @@ window.VS_DATA = {
     {
       "name": "Shadow Servant",
       "icon": "assets/icons/weapons/shadow_servant.png",
+      "sprite": "assets/icons/weapons/shadow_servant_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Has a chance to slow enemies down.",
@@ -33939,6 +34142,7 @@ window.VS_DATA = {
     {
       "name": "Silver Sliver",
       "icon": "assets/icons/weapons/silver_sliver.png",
+      "sprite": "assets/icons/weapons/silver_sliver_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Counterpart to Shadow Servant and Ophion from Arcana I - Gemini",
@@ -33993,6 +34197,7 @@ window.VS_DATA = {
     {
       "name": "Ophion",
       "icon": "assets/icons/weapons/ophion.png",
+      "sprite": "assets/icons/weapons/ophion_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Shadow Servant. Has a chance to instantly kill enemies.",
@@ -34080,6 +34285,7 @@ window.VS_DATA = {
     {
       "name": "Party Popper",
       "icon": "assets/icons/weapons/party_popper.png",
+      "sprite": "assets/icons/weapons/party_popper_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Throws bouncing projectiles.",
@@ -34177,6 +34383,7 @@ window.VS_DATA = {
     {
       "name": "Party Pooper",
       "icon": "assets/icons/weapons/party_pooper.png",
+      "sprite": "assets/icons/weapons/party_pooper_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Counterpart to Party Popper from Arcana I - Gemini",
@@ -34236,6 +34443,7 @@ window.VS_DATA = {
     {
       "name": "Report!",
       "icon": "assets/icons/weapons/report!.png",
+      "sprite": "assets/icons/weapons/report!_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Damages enemies and pushes them away.",
@@ -34317,6 +34525,7 @@ window.VS_DATA = {
     {
       "name": "Emergency Meeting",
       "icon": "assets/icons/weapons/emergency_meeting.png",
+      "sprite": "assets/icons/weapons/emergency_meeting_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Report! Occasionally destroys all of one type of enemy.",
@@ -34389,6 +34598,7 @@ window.VS_DATA = {
     {
       "name": "Lucky Swipe",
       "icon": "assets/icons/weapons/lucky_swipe.png",
+      "sprite": "assets/icons/weapons/lucky_swipe_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "The amount of Luck is affected by Amount and by low Luck.",
@@ -34473,6 +34683,7 @@ window.VS_DATA = {
     {
       "name": "Crossed Wires",
       "icon": "assets/icons/weapons/crossed_wires.png",
+      "sprite": "assets/icons/weapons/crossed_wires_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lucky Swipe. Attacks in up to four directions.",
@@ -34548,6 +34759,7 @@ window.VS_DATA = {
     {
       "name": "Lifesign Scan",
       "icon": "assets/icons/weapons/lifesign_scan.png",
+      "sprite": "assets/icons/weapons/lifesign_scan_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Restores HP based on Amount and Recovery.",
@@ -34614,6 +34826,7 @@ window.VS_DATA = {
     {
       "name": "Paranormal Scan",
       "icon": "assets/icons/weapons/paranormal_scan.png",
+      "sprite": "assets/icons/weapons/paranormal_scan_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lifesign Scan. Periodically grants a random stat boost for the rest of the run.",
@@ -34692,6 +34905,7 @@ window.VS_DATA = {
     {
       "name": "Just Vent",
       "icon": "assets/icons/weapons/just_vent.png",
+      "sprite": "assets/icons/weapons/just_vent_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Destroys or heavily damages enemies. Amount affects how many times it can trigger.",
@@ -34767,6 +34981,7 @@ window.VS_DATA = {
     {
       "name": "Unjust Ejection",
       "icon": "assets/icons/weapons/unjust_ejection.png",
+      "sprite": "assets/icons/weapons/unjust_ejection_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Just Vent. Sucks in enemies.",
@@ -34832,6 +35047,7 @@ window.VS_DATA = {
     {
       "name": "Clear Debris",
       "icon": "assets/icons/weapons/clear_debris.png",
+      "sprite": "assets/icons/weapons/clear_debris_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates projectile spawning zones that follow the player.",
@@ -34913,6 +35129,7 @@ window.VS_DATA = {
     {
       "name": "Clear Asteroids",
       "icon": "assets/icons/weapons/clear_asteroids.png",
+      "sprite": "assets/icons/weapons/clear_asteroids_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Clear Debris. Amount creates cluster explosions.",
@@ -34985,6 +35202,7 @@ window.VS_DATA = {
     {
       "name": "Sharp Tongue",
       "icon": "assets/icons/weapons/sharp_tongue.png",
+      "sprite": "assets/icons/weapons/sharp_tongue_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes enemies in front of you. Damage multiplied by Recovery.",
@@ -35071,6 +35289,7 @@ window.VS_DATA = {
     {
       "name": "Silver Tongue",
       "icon": "assets/icons/weapons/silver_tongue.png",
+      "sprite": "assets/icons/weapons/silver_tongue_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Strikes enemies behind you. Damage multiplied by Recovery.",
@@ -35123,6 +35342,7 @@ window.VS_DATA = {
     {
       "name": "Impostongue",
       "icon": "assets/icons/weapons/impostongue.png",
+      "sprite": "assets/icons/weapons/impostongue_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sharp Tongue. Deals high damage to the strongest enemy and anything in its path.",
@@ -35205,6 +35425,7 @@ window.VS_DATA = {
     {
       "name": "Science Rocks",
       "icon": "assets/icons/weapons/science_rocks.png",
+      "sprite": "assets/icons/weapons/science_rocks_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates zones that explode when touched by a player. Amount affects the number of explosion clusters.",
@@ -35284,6 +35505,7 @@ window.VS_DATA = {
     {
       "name": "Rocket Science",
       "icon": "assets/icons/weapons/rocket_science.png",
+      "sprite": "assets/icons/weapons/rocket_science_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Science Rocks. Triggers a finisher when the right conditions are met.",
@@ -35354,6 +35576,7 @@ window.VS_DATA = {
     {
       "name": "Hats",
       "icon": "assets/icons/weapons/hats.png",
+      "sprite": "assets/icons/weapons/hats_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Throws cute bouncing projectiles with random properties.",
@@ -35436,6 +35659,7 @@ window.VS_DATA = {
     {
       "name": "Long Gun",
       "icon": "assets/icons/weapons/long_gun.png",
+      "sprite": "assets/icons/weapons/long_gun_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires constantly in the faced direction.",
@@ -35521,6 +35745,7 @@ window.VS_DATA = {
     {
       "name": "Prototype A",
       "icon": "assets/icons/weapons/prototype_a.png",
+      "sprite": "assets/icons/weapons/prototype_a_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Long Gun. Calls forth 2 drones for support fire.",
@@ -35610,6 +35835,7 @@ window.VS_DATA = {
     {
       "name": "Short Gun",
       "icon": "assets/icons/weapons/short_gun.png",
+      "sprite": "assets/icons/weapons/short_gun_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires bursts of decaying projectiles horizontally.",
@@ -35702,6 +35928,7 @@ window.VS_DATA = {
     {
       "name": "Prototype B",
       "icon": "assets/icons/weapons/prototype_b.png",
+      "sprite": "assets/icons/weapons/prototype_b_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Short Gun. Calls forth 2 drones for support fire.",
@@ -35792,6 +36019,7 @@ window.VS_DATA = {
     {
       "name": "Spread Shot",
       "icon": "assets/icons/weapons/spread_shot.png",
+      "sprite": "assets/icons/weapons/spread_shot_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires in a wide spread in the faced direction.",
@@ -35884,6 +36112,7 @@ window.VS_DATA = {
     {
       "name": "Prototype C",
       "icon": "assets/icons/weapons/prototype_c.png",
+      "sprite": "assets/icons/weapons/prototype_c_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Spread Shot. Calls forth 2 drones for support fire.",
@@ -35974,6 +36203,7 @@ window.VS_DATA = {
     {
       "name": "C-U-Laser",
       "icon": "assets/icons/weapons/c-u-laser.png",
+      "sprite": "assets/icons/weapons/c-u-laser_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a piercing projectile in the faced direction.",
@@ -36067,6 +36297,7 @@ window.VS_DATA = {
     {
       "name": "Pronto Beam",
       "icon": "assets/icons/weapons/pronto_beam.png",
+      "sprite": "assets/icons/weapons/pronto_beam_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved C-U-Laser. Lasers split into multiple beams when they hit.",
@@ -36157,6 +36388,7 @@ window.VS_DATA = {
     {
       "name": "Firearm",
       "icon": "assets/icons/weapons/firearm.png",
+      "sprite": "assets/icons/weapons/firearm_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles at the nearest enemy.",
@@ -36243,6 +36475,7 @@ window.VS_DATA = {
     {
       "name": "Fire-L3GS",
       "icon": "assets/icons/weapons/fire-l3gs.png",
+      "sprite": "assets/icons/weapons/fire-l3gs_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Firearm. Fires again when destroying a light source or destructible item.",
@@ -36325,6 +36558,7 @@ window.VS_DATA = {
     {
       "name": "Sonic Bloom",
       "icon": "assets/icons/weapons/sonic_bloom.png",
+      "sprite": "assets/icons/weapons/sonic_bloom_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires growing projectiles in the faced direction.",
@@ -36410,6 +36644,7 @@ window.VS_DATA = {
     {
       "name": "Wave Beam",
       "icon": "assets/icons/weapons/wave_beam.png",
+      "sprite": "assets/icons/weapons/wave_beam_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still.",
@@ -36488,6 +36723,7 @@ window.VS_DATA = {
     {
       "name": "Homing Miss",
       "icon": "assets/icons/weapons/homing_miss.png",
+      "sprite": "assets/icons/weapons/homing_miss_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires exploding projectiles that home in on enemies.",
@@ -36573,6 +36809,7 @@ window.VS_DATA = {
     {
       "name": "Multistage Missiles",
       "icon": "assets/icons/weapons/multistage_missiles.png",
+      "sprite": "assets/icons/weapons/multistage_missiles_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Homing Miss. Projectiles split into smaller ones when they hit.",
@@ -36648,6 +36885,7 @@ window.VS_DATA = {
     {
       "name": "Diver Mines",
       "icon": "assets/icons/weapons/diver_mines.png",
+      "sprite": "assets/icons/weapons/diver_mines_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires explosive projectiles that travel along walls.",
@@ -36730,6 +36968,7 @@ window.VS_DATA = {
     {
       "name": "Atmo-Torpedo",
       "icon": "assets/icons/weapons/atmo-torpedo.png",
+      "sprite": "assets/icons/weapons/atmo-torpedo_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Diver Mines. Creates damaging zones that attract enemies.",
@@ -36811,6 +37050,7 @@ window.VS_DATA = {
     {
       "name": "Blade Crossbow",
       "icon": "assets/icons/weapons/blade_crossbow.png",
+      "sprite": "assets/icons/weapons/blade_crossbow_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires homing projectiles that spin in place when they hit.",
@@ -36899,6 +37139,7 @@ window.VS_DATA = {
     {
       "name": "BFC2000-AD",
       "icon": "assets/icons/weapons/bfc2000-ad.png",
+      "sprite": "assets/icons/weapons/bfc2000-ad_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency.",
@@ -36980,6 +37221,7 @@ window.VS_DATA = {
     {
       "name": "Prism Lass",
       "icon": "assets/icons/weapons/prism_lass.png",
+      "sprite": "assets/icons/weapons/prism_lass_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Has a small chance to freeze enemies.",
@@ -37071,6 +37313,7 @@ window.VS_DATA = {
     {
       "name": "Prism Damsel",
       "icon": "assets/icons/weapons/prism_damsel.png",
+      "sprite": "assets/icons/weapons/prism_damsel_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Has a small chance to freeze enemies.",
@@ -37128,6 +37371,7 @@ window.VS_DATA = {
     {
       "name": "Time Warp",
       "icon": "assets/icons/weapons/time_warp.png",
+      "sprite": "assets/icons/weapons/time_warp_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Prism Lass. May freeze, slow down, or DeFang enemies.",
@@ -37225,6 +37469,7 @@ window.VS_DATA = {
     {
       "name": "Metal Claw",
       "icon": "assets/icons/weapons/metal_claw.png",
+      "sprite": "assets/icons/weapons/metal_claw_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Cooldown is affected by missing health.",
@@ -37303,6 +37548,7 @@ window.VS_DATA = {
     {
       "name": "Big Fuzzy Fist",
       "icon": "assets/icons/weapons/big_fuzzy_fist.png",
+      "sprite": "assets/icons/weapons/big_fuzzy_fist_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Metal Claw. Pummels the most powerful enemies in sight.",
@@ -37370,6 +37616,7 @@ window.VS_DATA = {
     {
       "name": "Alchemy Whip",
       "icon": "assets/icons/weapons/alchemy_whip.png",
+      "sprite": "assets/icons/weapons/alchemy_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Grows stronger every time a boss enemy is defeated.",
@@ -37457,6 +37704,7 @@ window.VS_DATA = {
     {
       "name": "Vampire Killer",
       "icon": "assets/icons/weapons/vampire_killer.png",
+      "sprite": "assets/icons/weapons/vampire_killer_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Alchemy Whip. Every 3rd activation fires additional projectiles. Intense sunlught incinerates boss enemies.",
@@ -37543,6 +37791,7 @@ window.VS_DATA = {
     {
       "name": "Wind Whip",
       "icon": "assets/icons/weapons/wind_whip.png",
+      "sprite": "assets/icons/weapons/wind_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Damage affected by growth.",
@@ -37624,6 +37873,7 @@ window.VS_DATA = {
     {
       "name": "Spirit Tornado Tip",
       "icon": "assets/icons/weapons/spirit_tornado_tip.png",
+      "sprite": "assets/icons/weapons/spirit_tornado_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Wind Whip. Every 7th activation summons a spirit that violently collects XP gems for you.",
@@ -37697,6 +37947,7 @@ window.VS_DATA = {
     {
       "name": "Platinum Whip",
       "icon": "assets/icons/weapons/platinum_whip.png",
+      "sprite": "assets/icons/weapons/platinum_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Every 3rd activation fires projectiles in fixed directions.",
@@ -37783,6 +38034,7 @@ window.VS_DATA = {
     {
       "name": "Cross Crasher Tip",
       "icon": "assets/icons/weapons/cross_crasher_tip.png",
+      "sprite": "assets/icons/weapons/cross_crasher_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Platinum Whip. Every 7th activation also fires special projectiles.",
@@ -37860,6 +38112,7 @@ window.VS_DATA = {
     {
       "name": "Dragon Water Whip",
       "icon": "assets/icons/weapons/dragon_water_whip.png",
+      "sprite": "assets/icons/weapons/dragon_water_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Every 7th activation fires a snaking dragon projectile.",
@@ -37960,6 +38213,7 @@ window.VS_DATA = {
     {
       "name": "Hydrostormer Tip",
       "icon": "assets/icons/weapons/hydrostormer_tip.png",
+      "sprite": "assets/icons/weapons/hydrostormer_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Dragon Water Whip. Every 13th activation generates damaging waves based on Projectile Speed and Duration.",
@@ -38058,6 +38312,7 @@ window.VS_DATA = {
     {
       "name": "Sonic Whip",
       "icon": "assets/icons/weapons/sonic_whip.png",
+      "sprite": "assets/icons/weapons/sonic_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Chance to instant kill based on curse.",
@@ -38146,6 +38401,7 @@ window.VS_DATA = {
     {
       "name": "Crissaegrim Tip",
       "icon": "assets/icons/weapons/crissaegrim_tip.png",
+      "sprite": "assets/icons/weapons/crissaegrim_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Whip. Every 5th activation also triggers a blast of damaging waves.",
@@ -38225,6 +38481,7 @@ window.VS_DATA = {
     {
       "name": "Jet Black Whip",
       "icon": "assets/icons/weapons/jet_black_whip.png",
+      "sprite": "assets/icons/weapons/jet_black_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a linear damaging zone.",
@@ -38314,6 +38571,7 @@ window.VS_DATA = {
     {
       "name": "Mormegil Tip",
       "icon": "assets/icons/weapons/mormegil_tip.png",
+      "sprite": "assets/icons/weapons/mormegil_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Jet Black Whip. Every 8th activation also triggers damaging zones.",
@@ -38394,6 +38652,7 @@ window.VS_DATA = {
     {
       "name": "Vibhuti Whip",
       "icon": "assets/icons/weapons/vibhuti_whip.png",
+      "sprite": "assets/icons/weapons/vibhuti_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a cluster of explosions.",
@@ -38482,6 +38741,7 @@ window.VS_DATA = {
     {
       "name": "Daybreaker Tip",
       "icon": "assets/icons/weapons/daybreaker_tip.png",
+      "sprite": "assets/icons/weapons/daybreaker_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Vibhuti Whip. Critical hits maximise amount of projectiles.",
@@ -38552,6 +38812,7 @@ window.VS_DATA = {
     {
       "name": "Vanitas Whip",
       "icon": "assets/icons/weapons/vanitas_whip.png",
+      "sprite": "assets/icons/weapons/vanitas_whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth.",
@@ -38641,6 +38902,7 @@ window.VS_DATA = {
     {
       "name": "Aurablaster Tip",
       "icon": "assets/icons/weapons/aurablaster_tip.png",
+      "sprite": "assets/icons/weapons/aurablaster_tip_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Vanitas Whip. Every 7th activation generates an explosion.",
@@ -38727,6 +38989,7 @@ window.VS_DATA = {
     {
       "name": "Shuriken",
       "icon": "assets/icons/weapons/shuriken.png",
+      "sprite": "assets/icons/weapons/shuriken_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires projectiles in the faced direction.",
@@ -38758,7 +39021,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -38767,7 +39031,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -38780,6 +39045,7 @@ window.VS_DATA = {
     {
       "name": "Yagyu Shuriken",
       "icon": "assets/icons/weapons/yagyu_shuriken.png",
+      "sprite": "assets/icons/weapons/yagyu_shuriken_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Shuriken. Fires with no delay.",
@@ -38802,7 +39068,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -38811,7 +39078,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -38824,6 +39092,7 @@ window.VS_DATA = {
     {
       "name": "Curved Knife",
       "icon": "assets/icons/weapons/curved_knife.png",
+      "sprite": "assets/icons/weapons/curved_knife_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a spinning projectile at random enemy.",
@@ -38856,7 +39125,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -38866,7 +39136,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": [
@@ -38877,6 +39148,7 @@ window.VS_DATA = {
     {
       "name": "Bwaka Knife",
       "icon": "assets/icons/weapons/bwaka_knife.png",
+      "sprite": "assets/icons/weapons/bwaka_knife_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Curved Knife. Projectiles bounce forever until Duration expires.",
@@ -38900,7 +39172,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -38910,7 +39183,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": [
@@ -38921,6 +39195,7 @@ window.VS_DATA = {
     {
       "name": "Javelin",
       "icon": "assets/icons/weapons/javelin.png",
+      "sprite": "assets/icons/weapons/javelin_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a penetrating projectile in a fixed direction.",
@@ -38990,7 +39265,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39000,7 +39276,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": [
@@ -39011,6 +39288,7 @@ window.VS_DATA = {
     {
       "name": "Long Inus",
       "icon": "assets/icons/weapons/long_inus.png",
+      "sprite": "assets/icons/weapons/long_inus_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Javelin. Projectiles reappear after leaving the screen.",
@@ -39071,7 +39349,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39081,7 +39360,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": [
@@ -39092,6 +39372,7 @@ window.VS_DATA = {
     {
       "name": "Discus",
       "icon": "assets/icons/weapons/discus.png",
+      "sprite": "assets/icons/weapons/discus_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a defensive projectile.",
@@ -39123,7 +39404,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39132,7 +39414,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -39142,6 +39425,7 @@ window.VS_DATA = {
     {
       "name": "Stellar Blade",
       "icon": "assets/icons/weapons/stellar_blade.png",
+      "sprite": "assets/icons/weapons/stellar_blade_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Discus. Travels along walls. Deals critical damage if the user is invulnerable.",
@@ -39165,7 +39449,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Invulnerable"
+            "Invulnerable",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -39182,6 +39467,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Invulnerable",
+        "Vampire-Killing Tool",
         "Armor"
       ],
       "conflict": [
@@ -39192,6 +39478,7 @@ window.VS_DATA = {
     {
       "name": "Iron Ball",
       "icon": "assets/icons/weapons/iron_ball.png",
+      "sprite": "assets/icons/weapons/iron_ball_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Damage affected by Armor.",
@@ -39248,7 +39535,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39257,7 +39545,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -39270,6 +39559,7 @@ window.VS_DATA = {
     {
       "name": "Wrecking Ball",
       "icon": "assets/icons/weapons/wrecking_ball.png",
+      "sprite": "assets/icons/weapons/wrecking_ball_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Iron Ball. Fires a very heavy projectile.",
@@ -39317,7 +39607,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -39333,6 +39624,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Armor"
       ],
       "conflict": [
@@ -39346,6 +39638,7 @@ window.VS_DATA = {
     {
       "name": "Silver Revolver",
       "icon": "assets/icons/weapons/silver_revolver.png",
+      "sprite": "assets/icons/weapons/silver_revolver_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires a powerful projectiles, six times.",
@@ -39378,7 +39671,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39388,7 +39682,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": []
@@ -39396,6 +39691,7 @@ window.VS_DATA = {
     {
       "name": "Jewel Gun",
       "icon": "assets/icons/weapons/jewel_gun.png",
+      "sprite": "assets/icons/weapons/jewel_gun_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Silver Revolver. Critical hits instantly kill enemies and turn them into Jewels.",
@@ -39452,7 +39748,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Critical Chance",
-            "Luck"
+            "Luck",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39464,7 +39761,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Critical Chance",
-        "Luck"
+        "Luck",
+        "Vampire-Killing Tool"
       ],
       "conflict": [],
       "arcana": []
@@ -39472,6 +39770,7 @@ window.VS_DATA = {
     {
       "name": "Hand Grenade",
       "icon": "assets/icons/weapons/hand_grenade.png",
+      "sprite": "assets/icons/weapons/hand_grenade_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires an exploding projectile.",
@@ -39523,7 +39822,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -39540,6 +39840,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Fire"
       ],
       "conflict": [],
@@ -39550,6 +39851,7 @@ window.VS_DATA = {
     {
       "name": "The RPG",
       "icon": "assets/icons/weapons/the_rpg.png",
+      "sprite": "assets/icons/weapons/the_rpg_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hand Grenade. Explosions propagate.",
@@ -39592,7 +39894,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         },
         {
@@ -39609,6 +39912,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Vampire-Killing Tool",
         "Fire"
       ],
       "conflict": [],
@@ -39619,6 +39923,7 @@ window.VS_DATA = {
     {
       "name": "Wine Glass",
       "icon": "assets/icons/weapons/wine_glass.png",
+      "sprite": "assets/icons/weapons/wine_glass_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws an exploding projectile.",
@@ -39675,7 +39980,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39684,7 +39990,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -39694,6 +40001,7 @@ window.VS_DATA = {
     {
       "name": "Meal Ticket",
       "icon": "assets/icons/weapons/meal_ticket.png",
+      "sprite": "assets/icons/weapons/meal_ticket_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Wine Glass. Soulful food deals Revival-based damage to unrefined palates.",
@@ -39743,7 +40051,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Revival",
-            "Recovery"
+            "Recovery",
+            "Vampire-Killing Tool"
           ]
         }
       ],
@@ -39754,7 +40063,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Revival",
-        "Recovery"
+        "Recovery",
+        "Vampire-Killing Tool"
       ],
       "conflict": [
         "Duration"
@@ -39766,6 +40076,7 @@ window.VS_DATA = {
     {
       "name": "Raging Fire",
       "icon": "assets/icons/weapons/raging_fire.png",
+      "sprite": "assets/icons/weapons/raging_fire_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates an exploding damaging zone.",
@@ -39829,7 +40140,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -39858,6 +40170,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Fire",
         "Fire"
@@ -39872,6 +40185,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Raging Fire",
       "icon": "assets/icons/weapons/speculo_raging_fire.png",
+      "sprite": "assets/icons/weapons/speculo_raging_fire_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Raging Fire and Salamender",
@@ -39938,6 +40252,7 @@ window.VS_DATA = {
     {
       "name": "Salamender",
       "icon": "assets/icons/weapons/salamender.png",
+      "sprite": "assets/icons/weapons/salamender_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Raging Fire. Also summons a snake of fire.",
@@ -39992,7 +40307,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40021,6 +40337,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Fire",
         "Fire"
@@ -40035,6 +40352,7 @@ window.VS_DATA = {
     {
       "name": "Ice Fang",
       "icon": "assets/icons/weapons/ice_fang.png",
+      "sprite": "assets/icons/weapons/ice_fang_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates damaging zones in a straight line.",
@@ -40098,7 +40416,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40121,6 +40440,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Freeze"
       ],
@@ -40133,6 +40453,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Ice Fang",
       "icon": "assets/icons/weapons/speculo_ice_fang.png",
+      "sprite": "assets/icons/weapons/speculo_ice_fang_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Ice Fang and Cocytus",
@@ -40192,6 +40513,7 @@ window.VS_DATA = {
     {
       "name": "Cocytus",
       "icon": "assets/icons/weapons/cocytus.png",
+      "sprite": "assets/icons/weapons/cocytus_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Ice Fang. Also triggers a freezing wind.",
@@ -40246,7 +40568,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40269,6 +40592,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Freeze"
       ],
@@ -40281,6 +40605,7 @@ window.VS_DATA = {
     {
       "name": "Gale Force",
       "icon": "assets/icons/weapons/gale_force.png",
+      "sprite": "assets/icons/weapons/gale_force_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires light-hitting projectiles backwards.",
@@ -40344,7 +40669,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40361,6 +40687,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart"
       ],
       "conflict": [],
@@ -40372,6 +40699,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Gale Force",
       "icon": "assets/icons/weapons/speculo_gale_force.png",
+      "sprite": "assets/icons/weapons/speculo_gale_force_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Point symmetries both Gale Force and Pneuma Tempestas upside down",
@@ -40422,6 +40750,7 @@ window.VS_DATA = {
     {
       "name": "Pneuma Tempestas",
       "icon": "assets/icons/weapons/pneuma_tempestas.png",
+      "sprite": "assets/icons/weapons/pneuma_tempestas_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gale Force. Also triggers a spinning tornado.",
@@ -40476,7 +40805,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40493,6 +40823,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart"
       ],
       "conflict": [],
@@ -40504,6 +40835,7 @@ window.VS_DATA = {
     {
       "name": "Rock Riot",
       "icon": "assets/icons/weapons/rock_riot.png",
+      "sprite": "assets/icons/weapons/rock_riot_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires projectiles from a fixed location.",
@@ -40567,7 +40899,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40584,6 +40917,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart"
       ],
       "conflict": [],
@@ -40595,6 +40929,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Rock Riot",
       "icon": "assets/icons/weapons/speculo_rock_riot.png",
+      "sprite": "assets/icons/weapons/speculo_rock_riot_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Rock Riot and Gemma Torpor",
@@ -40645,6 +40980,7 @@ window.VS_DATA = {
     {
       "name": "Gemma Torpor",
       "icon": "assets/icons/weapons/gemma_torpor.png",
+      "sprite": "assets/icons/weapons/gemma_torpor_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Rock Riot. Also triggers a rain of crystals that can turn enemies into valuable jewels.",
@@ -40699,7 +41035,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40716,6 +41053,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart"
       ],
       "conflict": [],
@@ -40727,6 +41065,7 @@ window.VS_DATA = {
     {
       "name": "Fulgur",
       "icon": "assets/icons/weapons/fulgur.png",
+      "sprite": "assets/icons/weapons/fulgur_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at fixed locations.",
@@ -40790,7 +41129,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40813,6 +41153,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Move Speed"
       ],
@@ -40825,6 +41166,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Fulgur",
       "icon": "assets/icons/weapons/speculo_fulgur.png",
+      "sprite": "assets/icons/weapons/speculo_fulgur_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors Fulgur and doubles Tenebris Tonitrus",
@@ -40884,6 +41226,7 @@ window.VS_DATA = {
     {
       "name": "Tenebris Tonitrus",
       "icon": "assets/icons/weapons/tenebris_tonitrus.png",
+      "sprite": "assets/icons/weapons/tenebris_tonitrus_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Fulgur. Also triggers ball lightnings.",
@@ -40938,7 +41281,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -40961,6 +41305,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Move Speed"
       ],
@@ -40973,6 +41318,7 @@ window.VS_DATA = {
     {
       "name": "Keremet Bubbles",
       "icon": "assets/icons/weapons/keremet_bubbles.png",
+      "sprite": "assets/icons/weapons/keremet_bubbles_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires slow moving damaging zones.",
@@ -41036,7 +41382,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -41059,6 +41406,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Move Speed"
       ],
@@ -41071,6 +41419,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Keremet Bubbles",
       "icon": "assets/icons/weapons/speculo_keremet_bubbles.png",
+      "sprite": "assets/icons/weapons/speculo_keremet_bubbles_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Copies Keremet Bubbles. Has no effect on Keremet Morbus.",
@@ -41130,6 +41479,7 @@ window.VS_DATA = {
     {
       "name": "Keremet Morbus",
       "icon": "assets/icons/weapons/keremet_morbus.png",
+      "sprite": "assets/icons/weapons/keremet_morbus_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Keremet Bubbles. Also triggers a slimy swarm that chases enemies down.",
@@ -41184,7 +41534,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -41213,6 +41564,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Armor",
         "Counterpart",
         "Move Speed"
@@ -41226,6 +41578,7 @@ window.VS_DATA = {
     {
       "name": "Hex",
       "icon": "assets/icons/weapons/hex.png",
+      "sprite": "assets/icons/weapons/hex_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates a moving damaging zone. Damage affected by Curse.",
@@ -41290,7 +41643,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Curse"
+            "Curse",
+            "Belnades' Spell"
           ]
         },
         {
@@ -41308,6 +41662,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Curse",
+        "Belnades' Spell",
         "Counterpart"
       ],
       "conflict": [
@@ -41326,6 +41681,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Hex",
       "icon": "assets/icons/weapons/speculo_hex.png",
+      "sprite": "assets/icons/weapons/speculo_hex_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Mirrors both Hex and Nightmare",
@@ -41387,6 +41743,7 @@ window.VS_DATA = {
     {
       "name": "Nightmare",
       "icon": "assets/icons/weapons/nightmare.png",
+      "sprite": "assets/icons/weapons/nightmare_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hex. Also tirggers a negative energy zone that doubles Curse when stepped into.",
@@ -41447,7 +41804,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Belnades' Spell"
           ]
         },
         {
@@ -41470,6 +41828,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Belnades' Spell",
         "Counterpart",
         "Curse"
       ],
@@ -41489,6 +41848,7 @@ window.VS_DATA = {
     {
       "name": "Refectio",
       "icon": "assets/icons/weapons/refectio.png",
+      "sprite": "assets/icons/weapons/refectio_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Generates a damaging zone that also provides light healing.",
@@ -41553,7 +41913,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Belnades' Spell"
           ]
         },
         {
@@ -41577,6 +41938,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Belnades' Spell",
         "Counterpart",
         "Curse"
       ],
@@ -41589,6 +41951,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Refectio",
       "icon": "assets/icons/weapons/speculo_refectio.png",
+      "sprite": "assets/icons/weapons/speculo_refectio_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Point symmetries Refectio. Has no effect on Sanctuary.",
@@ -41650,6 +42013,7 @@ window.VS_DATA = {
     {
       "name": "Sanctuary",
       "icon": "assets/icons/weapons/sanctuary.png",
+      "sprite": "assets/icons/weapons/sanctuary_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Refectio. At fixed intervals, also fully heals characters and purifies all enemies in sight.",
@@ -41705,7 +42069,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Belnades' Spell"
           ]
         },
         {
@@ -41735,6 +42100,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Belnades' Spell",
         "Luck",
         "Counterpart",
         "Curse"
@@ -41748,6 +42114,7 @@ window.VS_DATA = {
     {
       "name": "Mace",
       "icon": "assets/icons/weapons/mace.png",
+      "sprite": "assets/icons/weapons/mace_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Amount affects number of hits.",
@@ -41798,6 +42165,7 @@ window.VS_DATA = {
     {
       "name": "Stamazza",
       "icon": "assets/icons/weapons/stamazza.png",
+      "sprite": "assets/icons/weapons/stamazza_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Mace. Has a catastrophically high critical damage multiplier.",
@@ -41880,6 +42248,7 @@ window.VS_DATA = {
     {
       "name": "Star Flail",
       "icon": "assets/icons/weapons/star_flail.png",
+      "sprite": "assets/icons/weapons/star_flail_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires lingering projectiles. Damage multiplied by Recovery.",
@@ -41932,6 +42301,7 @@ window.VS_DATA = {
     {
       "name": "Moon Rod",
       "icon": "assets/icons/weapons/moon_rod.png",
+      "sprite": "assets/icons/weapons/moon_rod_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Star Flail. Projectiles are shot in the faced direction.",
@@ -41975,6 +42345,7 @@ window.VS_DATA = {
     {
       "name": "Alucard Spear",
       "icon": "assets/icons/weapons/alucard_spear.png",
+      "sprite": "assets/icons/weapons/alucard_spear_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Executes a spinning attack when changing horizontal direction.",
@@ -42024,6 +42395,7 @@ window.VS_DATA = {
     {
       "name": "Thunderbolt Spear",
       "icon": "assets/icons/weapons/thunderbolt_spear.png",
+      "sprite": "assets/icons/weapons/thunderbolt_spear_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Alucard Spear. Every 7th activation triggers a special attack based on speed.",
@@ -42072,6 +42444,7 @@ window.VS_DATA = {
     {
       "name": "Trident",
       "icon": "assets/icons/weapons/trident.png",
+      "sprite": "assets/icons/weapons/trident_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at fixed locations.",
@@ -42140,6 +42513,7 @@ window.VS_DATA = {
     {
       "name": "Gungnir-Souris",
       "icon": "assets/icons/weapons/gungnir-souris.png",
+      "sprite": "assets/icons/weapons/gungnir-souris_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Trident. Critical hits also fire a damaging beam.",
@@ -42211,6 +42585,7 @@ window.VS_DATA = {
     {
       "name": "Iron Shield",
       "icon": "assets/icons/weapons/iron_shield.png",
+      "sprite": "assets/icons/weapons/iron_shield_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Retaliates by shooting lingering projectiles.",
@@ -42267,6 +42642,7 @@ window.VS_DATA = {
     {
       "name": "Dark Iron Shield",
       "icon": "assets/icons/weapons/dark_iron_shield.png",
+      "sprite": "assets/icons/weapons/dark_iron_shield_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Iron Shield. Critical hits retaliate with spinning swords.",
@@ -42323,6 +42699,7 @@ window.VS_DATA = {
     {
       "name": "Guardian's Targe",
       "icon": "assets/icons/weapons/guardians_targe.png",
+      "sprite": "assets/icons/weapons/guardians_targe_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Summons defensive followers. Overhealing triggers additional follower's attacks.",
@@ -42402,6 +42779,7 @@ window.VS_DATA = {
     {
       "name": "Sacred Beasts Tower Shield",
       "icon": "assets/icons/weapons/sacred_beasts_tower_shield.png",
+      "sprite": "assets/icons/weapons/sacred_beasts_tower_shield_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Guardian's Targe. Overhealing also triggers a period of invulnerability.",
@@ -42472,6 +42850,7 @@ window.VS_DATA = {
     {
       "name": "Tyrfing",
       "icon": "assets/icons/weapons/tyrfing.png",
+      "sprite": "assets/icons/weapons/tyrfing_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Has boomerang effect, can deal critical damage.",
@@ -42528,6 +42907,7 @@ window.VS_DATA = {
     {
       "name": "Rune Sword",
       "icon": "assets/icons/weapons/rune_sword.png",
+      "sprite": "assets/icons/weapons/rune_sword_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Tyrfing. Critical damage also affected by Area, Speed, and Duration.",
@@ -42575,6 +42955,7 @@ window.VS_DATA = {
     {
       "name": "Alucart Sworb",
       "icon": "assets/icons/weapons/alucart_sworb.png",
+      "sprite": "assets/icons/weapons/alucart_sworb_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Allegedly strikes at the nearest enemy.",
@@ -42622,6 +43003,7 @@ window.VS_DATA = {
     {
       "name": "Alucard Swords",
       "icon": "assets/icons/weapons/alucard_swords.png",
+      "sprite": "assets/icons/weapons/alucard_swords_sprite.png",
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies.",
@@ -42676,6 +43058,7 @@ window.VS_DATA = {
     {
       "name": "Alucard Shield",
       "icon": "assets/icons/weapons/alucard_shield.png",
+      "sprite": "assets/icons/weapons/alucard_shield_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Gift of Alucard Swords. Absorbs and triggers all other equipped evolutions. Hovering shield damages enemies.",
@@ -42723,6 +43106,7 @@ window.VS_DATA = {
     {
       "name": "Confodere",
       "icon": "assets/icons/weapons/confodere.png",
+      "sprite": "assets/icons/weapons/confodere_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects damage.",
@@ -42799,6 +43183,7 @@ window.VS_DATA = {
     {
       "name": "Vol Confodere",
       "icon": "assets/icons/weapons/vol_confodere.png",
+      "sprite": "assets/icons/weapons/vol_confodere_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Attack nearby enemies. Speed affects Damage.",
@@ -42875,6 +43260,7 @@ window.VS_DATA = {
     {
       "name": "Melio Confodere",
       "icon": "assets/icons/weapons/melio_confodere.png",
+      "sprite": "assets/icons/weapons/melio_confodere_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Attack nearby enemies. Speed affects Cooldown and Damage.",
@@ -42951,6 +43337,7 @@ window.VS_DATA = {
     {
       "name": "Globus",
       "icon": "assets/icons/weapons/globus.png",
+      "sprite": "assets/icons/weapons/globus_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires two bouncing projectiles. Amount affects Duration.",
@@ -43035,6 +43422,7 @@ window.VS_DATA = {
     {
       "name": "Speculo Globus",
       "icon": "assets/icons/weapons/speculo_globus.png",
+      "sprite": "assets/icons/weapons/speculo_globus_sprite.png",
       "category": "Counterpart",
       "method": "Arcana",
       "description": "Fires two bouncing projectiles. Amount affects Duration.",
@@ -43092,6 +43480,7 @@ window.VS_DATA = {
     {
       "name": "Nitesco",
       "icon": "assets/icons/weapons/nitesco.png",
+      "sprite": "assets/icons/weapons/nitesco_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Globus. Fires a piercing energy beam in the faced direction.",
@@ -43167,6 +43556,7 @@ window.VS_DATA = {
     {
       "name": "Optical Shot",
       "icon": "assets/icons/weapons/optical_shot.png",
+      "sprite": "assets/icons/weapons/optical_shot_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires two penetrating projectiles.",
@@ -43242,6 +43632,7 @@ window.VS_DATA = {
     {
       "name": "Acerbatus",
       "icon": "assets/icons/weapons/acerbatus.png",
+      "sprite": "assets/icons/weapons/acerbatus_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Optical Shot. Damage is affected by the amount of defeated enemies.",
@@ -43317,6 +43708,7 @@ window.VS_DATA = {
     {
       "name": "Dextro Custos",
       "icon": "assets/icons/weapons/dextro_custos.png",
+      "sprite": "assets/icons/weapons/dextro_custos_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' fiery head in faced direction.",
@@ -43393,6 +43785,7 @@ window.VS_DATA = {
     {
       "name": "Sinestro Custos",
       "icon": "assets/icons/weapons/sinestro_custos.png",
+      "sprite": "assets/icons/weapons/sinestro_custos_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' icy head in faced direction.",
@@ -43460,6 +43853,7 @@ window.VS_DATA = {
     {
       "name": "Centralis Custos",
       "icon": "assets/icons/weapons/centralis_custos.png",
+      "sprite": "assets/icons/weapons/centralis_custos_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged.",
@@ -43529,6 +43923,7 @@ window.VS_DATA = {
     {
       "name": "Trinum Custodem",
       "icon": "assets/icons/weapons/trinum_custodem.png",
+      "sprite": "assets/icons/weapons/trinum_custodem_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Dextro Custos, Sinestro Custos, and Centralis Custos.",
@@ -43585,6 +43980,7 @@ window.VS_DATA = {
     {
       "name": "Dominus Anger",
       "icon": "assets/icons/weapons/dominus_anger.png",
+      "sprite": "assets/icons/weapons/dominus_anger_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires a penetrating projectile. Drains health.",
@@ -43645,6 +44041,7 @@ window.VS_DATA = {
     {
       "name": "Dominus Hatred",
       "icon": "assets/icons/weapons/dominus_hatred.png",
+      "sprite": "assets/icons/weapons/dominus_hatred_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Fires projectiles from above. Drains health.",
@@ -43696,6 +44093,7 @@ window.VS_DATA = {
     {
       "name": "Dominus Agony",
       "icon": "assets/icons/weapons/dominus_agony.png",
+      "sprite": "assets/icons/weapons/dominus_agony_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Increases Might, Speed, Duration, and Area. Drains Health.",
@@ -43766,6 +44164,7 @@ window.VS_DATA = {
     {
       "name": "Power of Sire",
       "icon": "assets/icons/weapons/power_of_sire.png",
+      "sprite": "assets/icons/weapons/power_of_sire_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Dominus Anger, Dominus Hatred and Dominus Agony. Deals critical damage to anything in sight. Drains health.",
@@ -43816,6 +44215,7 @@ window.VS_DATA = {
     {
       "name": "Sonic Dash",
       "icon": "assets/icons/weapons/sonic_dash.png",
+      "sprite": "assets/icons/weapons/sonic_dash_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage.",
@@ -43877,6 +44277,7 @@ window.VS_DATA = {
     {
       "name": "Rapidus Fio",
       "icon": "assets/icons/weapons/rapidus_fio.png",
+      "sprite": "assets/icons/weapons/rapidus_fio_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sonic Dash. Also triggers a single shield charge.",
@@ -43929,6 +44330,7 @@ window.VS_DATA = {
     {
       "name": "Luminatio",
       "icon": "assets/icons/weapons/luminatio.png",
+      "sprite": "assets/icons/weapons/luminatio_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles made of light.",
@@ -44014,6 +44416,7 @@ window.VS_DATA = {
     {
       "name": "Vol Luminatio",
       "icon": "assets/icons/weapons/vol_luminatio.png",
+      "sprite": "assets/icons/weapons/vol_luminatio_sprite.png",
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth.",
@@ -44098,6 +44501,7 @@ window.VS_DATA = {
     {
       "name": "Umbra",
       "icon": "assets/icons/weapons/umbra.png",
+      "sprite": "assets/icons/weapons/umbra_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires spinning projectiles made of darkness.",
@@ -44183,6 +44587,7 @@ window.VS_DATA = {
     {
       "name": "Vol Umbra",
       "icon": "assets/icons/weapons/vol_umbra.png",
+      "sprite": "assets/icons/weapons/vol_umbra_sprite.png",
       "category": "Evolution",
       "method": "Gift",
       "description": "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet.",
@@ -44267,6 +44672,7 @@ window.VS_DATA = {
     {
       "name": "Universitas",
       "icon": "assets/icons/weapons/universitas.png",
+      "sprite": "assets/icons/weapons/universitas_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Gift of Vol Luminatio and Vol Umbra. Meteors rain down on enemies at fixed intervals.",
@@ -44308,6 +44714,7 @@ window.VS_DATA = {
     {
       "name": "Morning Star",
       "icon": "assets/icons/weapons/morning_star.png",
+      "sprite": "assets/icons/weapons/morning_star_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of magic whips.",
@@ -44339,6 +44746,7 @@ window.VS_DATA = {
     {
       "name": "Coat of Arms",
       "icon": "assets/icons/weapons/coat_of_arms.png",
+      "sprite": "assets/icons/weapons/coat_of_arms_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of vampire-killing tools.",
@@ -44370,6 +44778,7 @@ window.VS_DATA = {
     {
       "name": "Spectral Sword",
       "icon": "assets/icons/weapons/spectral_sword.png",
+      "sprite": "assets/icons/weapons/spectral_sword_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of magic weapons.",
@@ -44401,6 +44810,7 @@ window.VS_DATA = {
     {
       "name": "Belnades' Spellbook",
       "icon": "assets/icons/weapons/belnades_spellbook.png",
+      "sprite": "assets/icons/weapons/belnades_spellbook_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of spells.",
@@ -44432,6 +44842,7 @@ window.VS_DATA = {
     {
       "name": "Ebony Diabologue",
       "icon": "assets/icons/weapons/ebony_diabologue.png",
+      "sprite": "assets/icons/weapons/ebony_diabologue_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of ambiguous powers.",
@@ -44463,6 +44874,7 @@ window.VS_DATA = {
     {
       "name": "Pocket Knife",
       "icon": "assets/icons/weapons/pocket_knife.png",
+      "sprite": "assets/icons/weapons/pocket_knife_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws a short-lived knife in the faced direction.",
@@ -44561,6 +44973,7 @@ window.VS_DATA = {
     {
       "name": "Claimh Solais",
       "icon": "assets/icons/weapons/claimh_solais.png",
+      "sprite": "assets/icons/weapons/claimh_solais_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pocket Knife. Globally increases Might, Armor and Crit Damage for each enemy in sight.",
@@ -44642,6 +45055,7 @@ window.VS_DATA = {
     {
       "name": "Endo Gears",
       "icon": "assets/icons/weapons/endo_gears.png",
+      "sprite": "assets/icons/weapons/endo_gears_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -44722,6 +45136,7 @@ window.VS_DATA = {
     {
       "name": "Peri Pendulum",
       "icon": "assets/icons/weapons/peri_pendulum.png",
+      "sprite": "assets/icons/weapons/peri_pendulum_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -44802,6 +45217,7 @@ window.VS_DATA = {
     {
       "name": "Myo Lift",
       "icon": "assets/icons/weapons/myo_lift.png",
+      "sprite": "assets/icons/weapons/myo_lift_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -44882,6 +45298,7 @@ window.VS_DATA = {
     {
       "name": "Epi Head",
       "icon": "assets/icons/weapons/epi_head.png",
+      "sprite": "assets/icons/weapons/epi_head_sprite.png",
       "category": "Base",
       "method": "Union",
       "description": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions.",
@@ -44962,6 +45379,7 @@ window.VS_DATA = {
     {
       "name": "Clock Tower",
       "icon": "assets/icons/weapons/clock_tower.png",
+      "sprite": "assets/icons/weapons/clock_tower_sprite.png",
       "category": "Union",
       "method": null,
       "description": "Union of Endo Gears, Peri Pendulum, Myo Lift, and Epi Heads.",
@@ -45005,6 +45423,7 @@ window.VS_DATA = {
     {
       "name": "Familiar Forge",
       "icon": "assets/icons/weapons/familiar_forge.png",
+      "sprite": "assets/icons/weapons/familiar_forge_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to summon a familiar.",
@@ -45036,6 +45455,7 @@ window.VS_DATA = {
     {
       "name": "Ukoback",
       "icon": "assets/icons/weapons/ukoback.png",
+      "sprite": "assets/icons/weapons/ukoback_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Runs toward and distract enemies. Attacks with a Svarog Statue (level 3)",
@@ -45067,6 +45487,7 @@ window.VS_DATA = {
     {
       "name": "Bitterfly",
       "icon": "assets/icons/weapons/bitterfly.png",
+      "sprite": "assets/icons/weapons/bitterfly_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Garlic (level 7)",
@@ -45098,6 +45519,7 @@ window.VS_DATA = {
     {
       "name": "Alleged Ghost",
       "icon": "assets/icons/weapons/alleged_ghost.png",
+      "sprite": "assets/icons/weapons/alleged_ghost_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Moves opposite to the character's movement and distract enemies. Attacks with a Summon Spirit (level 7)",
@@ -45129,6 +45551,7 @@ window.VS_DATA = {
     {
       "name": "Imp",
       "icon": "assets/icons/weapons/imp.png",
+      "sprite": "assets/icons/weapons/imp_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to enemies. Attacks with a Trident (level 8)",
@@ -45163,6 +45586,7 @@ window.VS_DATA = {
     {
       "name": "Wood Rod",
       "icon": "assets/icons/weapons/wood_rod.png",
+      "sprite": "assets/icons/weapons/wood_rod_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Follows the character's moving path. Attacks with a Fire Wand (level 2),  Lightning Ring (level 2), and Magic Wand (level 2)",
@@ -45194,6 +45618,7 @@ window.VS_DATA = {
     {
       "name": "Pumpkin",
       "icon": "assets/icons/weapons/pumpkin.png",
+      "sprite": "assets/icons/weapons/pumpkin_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Runs away from the character and distract enemies. Attacks with a Curved Knife (level 8) and  Troll Bomb (level 1)",
@@ -45225,6 +45650,7 @@ window.VS_DATA = {
     {
       "name": "Faerie",
       "icon": "assets/icons/weapons/faerie.png",
+      "sprite": "assets/icons/weapons/faerie_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Refectio (level 3)",
@@ -45256,6 +45682,7 @@ window.VS_DATA = {
     {
       "name": "Sacred Cardinal",
       "icon": "assets/icons/weapons/sacred_cardinal.png",
+      "sprite": "assets/icons/weapons/sacred_cardinal_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Raging Fire (level 3)",
@@ -45287,6 +45714,7 @@ window.VS_DATA = {
     {
       "name": "Sacred Dragon",
       "icon": "assets/icons/weapons/sacred_dragon.png",
+      "sprite": "assets/icons/weapons/sacred_dragon_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Fulgur (level 3)",
@@ -45318,6 +45746,7 @@ window.VS_DATA = {
     {
       "name": "Sacred Tiger",
       "icon": "assets/icons/weapons/sacred_tiger.png",
+      "sprite": "assets/icons/weapons/sacred_tiger_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Ice Fang (level 3)",
@@ -45349,6 +45778,7 @@ window.VS_DATA = {
     {
       "name": "Sacred Turtle",
       "icon": "assets/icons/weapons/sacred_turtle.png",
+      "sprite": "assets/icons/weapons/sacred_turtle_sprite.png",
       "category": "Gift",
       "method": null,
       "description": "Stays close to the character. Attacks with a Rock Riot (level 3)",
@@ -45380,6 +45810,7 @@ window.VS_DATA = {
     {
       "name": "Fleuret",
       "icon": "assets/icons/weapons/fleuret.png",
+      "sprite": "assets/icons/weapons/fleuret_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Speed affects damage. Can glimmer the \"Crystalline Carve\" tech.",
@@ -45452,6 +45883,7 @@ window.VS_DATA = {
     {
       "name": "Dress Sword",
       "icon": "assets/icons/weapons/dress_sword.png",
+      "sprite": "assets/icons/weapons/dress_sword_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech.",
@@ -45524,6 +45956,7 @@ window.VS_DATA = {
     {
       "name": "Espada Ropera",
       "icon": "assets/icons/weapons/espada_ropera.png",
+      "sprite": "assets/icons/weapons/espada_ropera_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech.",
@@ -45589,6 +46022,7 @@ window.VS_DATA = {
     {
       "name": "Town Sword",
       "icon": "assets/icons/weapons/town_sword.png",
+      "sprite": "assets/icons/weapons/town_sword_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech.",
@@ -45636,6 +46070,7 @@ window.VS_DATA = {
     {
       "name": "Lordstar",
       "icon": "assets/icons/weapons/lordstar.png",
+      "sprite": "assets/icons/weapons/lordstar_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5.",
@@ -45683,6 +46118,7 @@ window.VS_DATA = {
     {
       "name": "Dayblade",
       "icon": "assets/icons/weapons/dayblade.png",
+      "sprite": "assets/icons/weapons/dayblade_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech.",
@@ -45723,6 +46159,7 @@ window.VS_DATA = {
     {
       "name": "Splashers",
       "icon": "assets/icons/weapons/splashers.png",
+      "sprite": "assets/icons/weapons/splashers_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech.",
@@ -45774,6 +46211,7 @@ window.VS_DATA = {
     {
       "name": "Pursuant Blades",
       "icon": "assets/icons/weapons/pursuant_blades.png",
+      "sprite": "assets/icons/weapons/pursuant_blades_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech.",
@@ -45822,6 +46260,7 @@ window.VS_DATA = {
     {
       "name": "Flamberge",
       "icon": "assets/icons/weapons/flamberge.png",
+      "sprite": "assets/icons/weapons/flamberge_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech.",
@@ -45894,6 +46333,7 @@ window.VS_DATA = {
     {
       "name": "Zweihander",
       "icon": "assets/icons/weapons/zweihander.png",
+      "sprite": "assets/icons/weapons/zweihander_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Flamberge. Can glimmer the \"Absetzen\" tech.",
@@ -45966,6 +46406,7 @@ window.VS_DATA = {
     {
       "name": "Galatyn",
       "icon": "assets/icons/weapons/galatyn.png",
+      "sprite": "assets/icons/weapons/galatyn_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Zweihander. Can glimmer the \"Vandalize\" tech.",
@@ -46031,6 +46472,7 @@ window.VS_DATA = {
     {
       "name": "Punch",
       "icon": "assets/icons/weapons/punch.png",
+      "sprite": "assets/icons/weapons/punch_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks sideways. Can glimmer the \"Raksha\" tech.",
@@ -46097,6 +46539,7 @@ window.VS_DATA = {
     {
       "name": "Pressure Point",
       "icon": "assets/icons/weapons/pressure_point.png",
+      "sprite": "assets/icons/weapons/pressure_point_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech.",
@@ -46163,6 +46606,7 @@ window.VS_DATA = {
     {
       "name": "Gilded Hand",
       "icon": "assets/icons/weapons/gilded_hand.png",
+      "sprite": "assets/icons/weapons/gilded_hand_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech.",
@@ -46222,6 +46666,7 @@ window.VS_DATA = {
     {
       "name": "Kick",
       "icon": "assets/icons/weapons/kick.png",
+      "sprite": "assets/icons/weapons/kick_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech.",
@@ -46283,6 +46728,7 @@ window.VS_DATA = {
     {
       "name": "Triangle Kick",
       "icon": "assets/icons/weapons/triangle_kick.png",
+      "sprite": "assets/icons/weapons/triangle_kick_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total.",
@@ -46360,6 +46806,7 @@ window.VS_DATA = {
     {
       "name": "Saber Machine Gun",
       "icon": "assets/icons/weapons/saber_machine_gun.png",
+      "sprite": "assets/icons/weapons/saber_machine_gun_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires in the faced direction. Can glimmer the \"Shockwave\" tech.",
@@ -46425,6 +46872,7 @@ window.VS_DATA = {
     {
       "name": "Hecaton Machine Gun",
       "icon": "assets/icons/weapons/hecaton_machine_gun.png",
+      "sprite": "assets/icons/weapons/hecaton_machine_gun_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech.",
@@ -46490,6 +46938,7 @@ window.VS_DATA = {
     {
       "name": "Divergence",
       "icon": "assets/icons/weapons/divergence.png",
+      "sprite": "assets/icons/weapons/divergence_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech.",
@@ -46548,6 +46997,7 @@ window.VS_DATA = {
     {
       "name": "Super Missile",
       "icon": "assets/icons/weapons/super_missile.png",
+      "sprite": "assets/icons/weapons/super_missile_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech.",
@@ -46605,6 +47055,7 @@ window.VS_DATA = {
     {
       "name": "Hydra Cannon",
       "icon": "assets/icons/weapons/hydra_cannon.png",
+      "sprite": "assets/icons/weapons/hydra_cannon_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech.",
@@ -46665,6 +47116,7 @@ window.VS_DATA = {
     {
       "name": "Hyperion Bazooka",
       "icon": "assets/icons/weapons/hyperion_bazooka.png",
+      "sprite": "assets/icons/weapons/hyperion_bazooka_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech.",
@@ -46718,6 +47170,7 @@ window.VS_DATA = {
     {
       "name": "Eagle Gun",
       "icon": "assets/icons/weapons/eagle_gun.png",
+      "sprite": "assets/icons/weapons/eagle_gun_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech.",
@@ -46778,6 +47231,7 @@ window.VS_DATA = {
     {
       "name": "Pendragon",
       "icon": "assets/icons/weapons/pendragon.png",
+      "sprite": "assets/icons/weapons/pendragon_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech.",
@@ -46835,6 +47289,7 @@ window.VS_DATA = {
     {
       "name": "Khukuri",
       "icon": "assets/icons/weapons/khukuri.png",
+      "sprite": "assets/icons/weapons/khukuri_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech.",
@@ -46897,6 +47352,7 @@ window.VS_DATA = {
     {
       "name": "Jetstream",
       "icon": "assets/icons/weapons/jetstream.png",
+      "sprite": "assets/icons/weapons/jetstream_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech.",
@@ -46953,6 +47409,7 @@ window.VS_DATA = {
     {
       "name": "Twin Dragon",
       "icon": "assets/icons/weapons/twin_dragon.png",
+      "sprite": "assets/icons/weapons/twin_dragon_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Attacks horizontally. Can glimmer the \"Gravedigger\" tech.",
@@ -47014,6 +47471,7 @@ window.VS_DATA = {
     {
       "name": "Gekkabijin",
       "icon": "assets/icons/weapons/gekkabijin.png",
+      "sprite": "assets/icons/weapons/gekkabijin_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech.",
@@ -47081,6 +47539,7 @@ window.VS_DATA = {
     {
       "name": "Bullova",
       "icon": "assets/icons/weapons/bullova.png",
+      "sprite": "assets/icons/weapons/bullova_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Passes through enemies. Can glimmer the \"Hell's Fury\" tech.",
@@ -47143,6 +47602,7 @@ window.VS_DATA = {
     {
       "name": "Falconwind",
       "icon": "assets/icons/weapons/falconwind.png",
+      "sprite": "assets/icons/weapons/falconwind_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech.",
@@ -47209,6 +47669,7 @@ window.VS_DATA = {
     {
       "name": "Sanguine Star",
       "icon": "assets/icons/weapons/sanguine_star.png",
+      "sprite": "assets/icons/weapons/sanguine_star_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2.",
@@ -47261,6 +47722,7 @@ window.VS_DATA = {
     {
       "name": "Blood Chalice",
       "icon": "assets/icons/weapons/blood_chalice.png",
+      "sprite": "assets/icons/weapons/blood_chalice_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts.",
@@ -47314,6 +47776,7 @@ window.VS_DATA = {
     {
       "name": "Glaive",
       "icon": "assets/icons/weapons/glaive.png",
+      "sprite": "assets/icons/weapons/glaive_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech.",
@@ -47371,6 +47834,7 @@ window.VS_DATA = {
     {
       "name": "Feather Spear",
       "icon": "assets/icons/weapons/feather_spear.png",
+      "sprite": "assets/icons/weapons/feather_spear_sprite.png",
       "category": "Evolution",
       "method": "Evolution",
       "description": "Evolved Glaive. Can glimmer the \"Stardust\" tech.",
@@ -47428,6 +47892,7 @@ window.VS_DATA = {
     {
       "name": "Lohengrin",
       "icon": "assets/icons/weapons/lohengrin.png",
+      "sprite": "assets/icons/weapons/lohengrin_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3.",
@@ -47478,6 +47943,7 @@ window.VS_DATA = {
     {
       "name": "Spirit Rings",
       "icon": "assets/icons/weapons/spirit_rings.png",
+      "sprite": "assets/icons/weapons/spirit_rings_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%.",
@@ -47561,6 +48027,7 @@ window.VS_DATA = {
     {
       "name": "Rings of Calamity",
       "icon": "assets/icons/weapons/rings_of_calamity.png",
+      "sprite": "assets/icons/weapons/rings_of_calamity_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech.",
@@ -47656,6 +48123,7 @@ window.VS_DATA = {
     {
       "name": "Emerald Rapture",
       "icon": "assets/icons/weapons/emerald_rapture.png",
+      "sprite": "assets/icons/weapons/emerald_rapture_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Picks random enemies to teleport away, but they might not drop XP gems.",
@@ -47731,6 +48199,7 @@ window.VS_DATA = {
     {
       "name": "Emerald Wave",
       "icon": "assets/icons/weapons/emerald_wave.png",
+      "sprite": "assets/icons/weapons/emerald_wave_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems.",
@@ -47804,6 +48273,7 @@ window.VS_DATA = {
     {
       "name": "Intuition",
       "icon": "assets/icons/weapons/intuition.png",
+      "sprite": "assets/icons/weapons/intuition_sprite.png",
       "category": "Base",
       "method": null,
       "description": "Allows you to choose from a selection of weapons from Emerald Diorama.",
@@ -47826,6 +48296,7 @@ window.VS_DATA = {
     {
       "name": "Infernolatro",
       "icon": "assets/icons/weapons/infernolatro.png",
+      "sprite": "assets/icons/weapons/infernolatro_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Creates a zone of flames in the faced direction. Empowered by enemy kills.",
@@ -47906,6 +48377,7 @@ window.VS_DATA = {
     {
       "name": "NaneInferno",
       "icon": "assets/icons/weapons/naneinferno.png",
+      "sprite": "assets/icons/weapons/naneinferno_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined.",
@@ -47978,6 +48450,7 @@ window.VS_DATA = {
     {
       "name": "Gros Michel",
       "icon": "assets/icons/weapons/gros_michel.png",
+      "sprite": "assets/icons/weapons/gros_michel_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Flings curving bananas. 1 in 6 chance to critically hit and explode.",
@@ -48074,6 +48547,7 @@ window.VS_DATA = {
     {
       "name": "Cavendish",
       "icon": "assets/icons/weapons/cavendish.png",
+      "sprite": "assets/icons/weapons/cavendish_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Gros Michel. Always crits. Always explodes. Other weapons crit more often.",
@@ -48160,6 +48634,7 @@ window.VS_DATA = {
     {
       "name": "Fibonacci Spritz",
       "icon": "assets/icons/weapons/fibonacci_spritz.png",
+      "sprite": "assets/icons/weapons/fibonacci_spritz_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon.",
@@ -48238,6 +48713,7 @@ window.VS_DATA = {
     {
       "name": "Royal Flush",
       "icon": "assets/icons/weapons/royal_flush.png",
+      "sprite": "assets/icons/weapons/royal_flush_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons.",
@@ -48306,6 +48782,7 @@ window.VS_DATA = {
     {
       "name": "Celestial Booster",
       "icon": "assets/icons/weapons/celestial_booster.png",
+      "sprite": "assets/icons/weapons/celestial_booster_sprite.png",
       "category": "Base",
       "method": "Evolution",
       "description": "Planets orbit around you. Damage increases by amount of coins collected this run.",
@@ -48377,6 +48854,7 @@ window.VS_DATA = {
     {
       "name": "Negative Space",
       "icon": "assets/icons/weapons/negative_space.png",
+      "sprite": "assets/icons/weapons/negative_space_sprite.png",
       "category": "Evolution",
       "method": null,
       "description": "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative.",
@@ -48439,6 +48917,7 @@ window.VS_DATA = {
     {
       "name": "Experience Gem",
       "icon": "assets/icons/weapons/experience_gem.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Increases experience.",
@@ -48474,6 +48953,7 @@ window.VS_DATA = {
     {
       "name": "Gold Coin",
       "icon": "assets/icons/weapons/gold_coin.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 1 to your gold coins total.",
@@ -48508,6 +48988,7 @@ window.VS_DATA = {
     {
       "name": "Coin Bag",
       "icon": "assets/icons/weapons/coin_bag.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 10 to your gold coins total.",
@@ -48543,6 +49024,7 @@ window.VS_DATA = {
     {
       "name": "Rich Coin Bag",
       "icon": "assets/icons/weapons/rich_coin_bag.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 100 to your gold coins total.",
@@ -48578,6 +49060,7 @@ window.VS_DATA = {
     {
       "name": "Treasure Chest",
       "icon": "assets/icons/weapons/treasure_chest.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Awards coins and power ups. Dropped by strong enemies",
@@ -48615,6 +49098,7 @@ window.VS_DATA = {
     {
       "name": "Rosary",
       "icon": "assets/icons/weapons/rosary.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Destroys all enemies in sight.",
@@ -48648,6 +49132,7 @@ window.VS_DATA = {
     {
       "name": "Nduja Fritta Tanto",
       "icon": "assets/icons/weapons/nduja_fritta_tanto.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily emits cones of flames. Affected by player stats.",
@@ -48684,6 +49169,7 @@ window.VS_DATA = {
     {
       "name": "Sorbetto",
       "icon": "assets/icons/weapons/sorbetto.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily emits freezing cones. Affected by player stats.",
@@ -48720,6 +49206,7 @@ window.VS_DATA = {
     {
       "name": "Orologion",
       "icon": "assets/icons/weapons/orologion.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Freezes all enemies in time for 10 seconds.",
@@ -48755,6 +49242,7 @@ window.VS_DATA = {
     {
       "name": "Vacuum",
       "icon": "assets/icons/weapons/vacuum.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Gathers all experience gems left on the ground.",
@@ -48786,6 +49274,7 @@ window.VS_DATA = {
     {
       "name": "Floor Chicken",
       "icon": "assets/icons/weapons/floor_chicken.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Restores 30 health points.",
@@ -48821,6 +49310,7 @@ window.VS_DATA = {
     {
       "name": "Gilded Clover",
       "icon": "assets/icons/weapons/gilded_clover.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Gathers all gold left on the ground and starts a Gold Fever.",
@@ -48854,6 +49344,7 @@ window.VS_DATA = {
     {
       "name": "Little Clover",
       "icon": "assets/icons/weapons/little_clover.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get 10% luckier.",
@@ -48885,6 +49376,7 @@ window.VS_DATA = {
     {
       "name": "Rerollo",
       "icon": "assets/icons/weapons/rerollo.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get +1 Reroll.",
@@ -48918,6 +49410,7 @@ window.VS_DATA = {
     {
       "name": "Gold Finger",
       "icon": "assets/icons/weapons/gold_finger.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Gives temporary invulnerability, bonus Charm, and minimum Cooldown. Defeat as many enemies as possible to win a prize.",
@@ -48951,6 +49444,7 @@ window.VS_DATA = {
     {
       "name": "Friendship Amulet",
       "icon": "assets/icons/weapons/friendship_amulet.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Every player gets a level up for one of their existing weapons.",
@@ -48982,6 +49476,7 @@ window.VS_DATA = {
     {
       "name": "Golden Egg",
       "icon": "assets/icons/weapons/golden_egg.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Permanently improves a random stat for the current character, by a tiny amount.",
@@ -49013,6 +49508,7 @@ window.VS_DATA = {
     {
       "name": "Rapid Fire",
       "icon": "assets/icons/weapons/rapid_fire.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily doubles Speed and halves Cooldown.",
@@ -49044,6 +49540,7 @@ window.VS_DATA = {
     {
       "name": "Barrier",
       "icon": "assets/icons/weapons/barrier.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily prevents all damage, but allows for retaliatory attacks.",
@@ -49075,6 +49572,7 @@ window.VS_DATA = {
     {
       "name": "Grenade",
       "icon": "assets/icons/weapons/grenade.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Deals high damage to all visible enemies.",
@@ -49106,6 +49604,7 @@ window.VS_DATA = {
     {
       "name": "Wall Chicken",
       "icon": "assets/icons/weapons/wall_chicken.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Typical Castlevania pot roast. Restores 60 Health points.",
@@ -49139,6 +49638,7 @@ window.VS_DATA = {
     {
       "name": "Heart Refresh",
       "icon": "assets/icons/weapons/heart_refresh.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily gives +5 Recovery.",
@@ -49170,6 +49670,7 @@ window.VS_DATA = {
     {
       "name": "Karma Coin",
       "icon": "assets/icons/weapons/karma_coin.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Has a 50% chance to trigger a Soul Steal, which destroys all enemies in line of sight and turns them into hearts.",
@@ -49201,6 +49702,7 @@ window.VS_DATA = {
     {
       "name": "Mirror of Truth",
       "icon": "assets/icons/weapons/mirror_of_truth.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Temporarily doubles Amount. Activates all equipped weapons at once when picked up.",
@@ -49232,6 +49734,7 @@ window.VS_DATA = {
     {
       "name": "Neutron Bomb",
       "icon": "assets/icons/weapons/neutron_bomb.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Deals high damage in a large area.",
@@ -49263,6 +49766,7 @@ window.VS_DATA = {
     {
       "name": "Big Coin Bag",
       "icon": "assets/icons/weapons/big_coin_bag.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Adds 25 to your gold coins total.",
@@ -49296,6 +49800,7 @@ window.VS_DATA = {
     {
       "name": "Cheese",
       "icon": "assets/icons/weapons/cheese.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP, summons werewolves.",
@@ -49327,6 +49832,7 @@ window.VS_DATA = {
     {
       "name": "Corn",
       "icon": "assets/icons/weapons/corn.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP.",
@@ -49358,6 +49864,7 @@ window.VS_DATA = {
     {
       "name": "Crystallized Soul",
       "icon": "assets/icons/weapons/crystallized_soul.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Increases Growth, Recovery, and Max Health by a miniscule amount, but increases the more are collected.",
@@ -49391,6 +49898,7 @@ window.VS_DATA = {
     {
       "name": "Cursed Soul",
       "icon": "assets/icons/weapons/cursed_soul.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get a minor bonus to MaxHealth, Greed, and Curse.",
@@ -49422,6 +49930,7 @@ window.VS_DATA = {
     {
       "name": "Gold Pile",
       "icon": "assets/icons/weapons/gold_pile.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Adds a lot to your Gold coins total.",
@@ -49453,6 +49962,7 @@ window.VS_DATA = {
     {
       "name": "Lavatrix Machina",
       "icon": "assets/icons/weapons/lavatrix_machina.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "All pickups, light sources, and stage items are pulled to the player. Spins enemies around the screen.",
@@ -49484,6 +49994,7 @@ window.VS_DATA = {
     {
       "name": "Little Heart",
       "icon": "assets/icons/weapons/little_heart.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to recover 1 HP.",
@@ -49517,6 +50028,7 @@ window.VS_DATA = {
     {
       "name": "Pie",
       "icon": "assets/icons/weapons/pie.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Heals 30 HP.",
@@ -49548,6 +50060,7 @@ window.VS_DATA = {
     {
       "name": "Scorched Soul",
       "icon": "assets/icons/weapons/scorched_soul.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Pick up to get a minor bonus to MaxHealth and Might.",
@@ -49579,6 +50092,7 @@ window.VS_DATA = {
     {
       "name": "Starry Heavens",
       "icon": "assets/icons/weapons/starry_heavens.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "All enemies are frozen for 10 seconds and take damage periodically, unable to damage the player. They still move towards the player.",
@@ -49610,6 +50124,7 @@ window.VS_DATA = {
     {
       "name": "Survarot",
       "icon": "assets/icons/weapons/survarot.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Brings up a Survarot draft.",
@@ -49641,6 +50156,7 @@ window.VS_DATA = {
     {
       "name": "Weird Souls Purifier",
       "icon": "assets/icons/weapons/weird_souls_purifier.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Kills all enemies that are not immune to it.",
@@ -49672,6 +50188,7 @@ window.VS_DATA = {
     {
       "name": "World Eater",
       "icon": "assets/icons/weapons/world_eater.png",
+      "sprite": "",
       "category": "Special",
       "method": "Pickup",
       "description": "Destroys all enemies in sight and turn them into Little Hearts.",
@@ -49703,6 +50220,7 @@ window.VS_DATA = {
     {
       "name": "Sarabande of Healing",
       "icon": "assets/icons/weapons/sarabande_of_healing.png",
+      "sprite": "",
       "category": "Special",
       "method": "Arcana",
       "description": "All healing triggers an Area-of-Effect damage pulse within a fixed range, dealing damage equal to the amount healed.",
@@ -49734,6 +50252,7 @@ window.VS_DATA = {
     {
       "name": "Game Killer",
       "icon": "assets/icons/weapons/game_killer.png",
+      "sprite": "",
       "category": "Special",
       "method": "Arcana",
       "description": "All experience gems act as exploding projectiles that hurl themselves to the closest enemy when collected.",
@@ -49765,6 +50284,7 @@ window.VS_DATA = {
     {
       "name": "Heart of Fire",
       "icon": "assets/icons/weapons/heart_of_fire.png",
+      "sprite": "",
       "category": "Special",
       "method": "Arcana",
       "description": "Projectiles from affected weapons create an explosion on impact, dealing 50% of base damage.",
@@ -49796,6 +50316,7 @@ window.VS_DATA = {
     {
       "name": "Out of Bounds",
       "icon": "assets/icons/weapons/out_of_bounds.png",
+      "sprite": "",
       "category": "Special",
       "method": "Arcana",
       "description": "Freezing Enemies generates explosions.",
@@ -49827,6 +50348,7 @@ window.VS_DATA = {
     {
       "name": "Divine Bloodline",
       "icon": "assets/icons/weapons/divine_bloodline.png",
+      "sprite": "",
       "category": "Special",
       "method": "Arcana",
       "description": "Enemies that touch the character take 10 flat damage per Armor.",
@@ -49858,6 +50380,7 @@ window.VS_DATA = {
     {
       "name": "Blood Astronomia",
       "icon": "assets/icons/weapons/blood_astronomia.png",
+      "sprite": "",
       "category": "Special",
       "method": "Arcana",
       "description": "Turns the character's Magnet area into a zone to damage enemies",
@@ -49889,6 +50412,7 @@ window.VS_DATA = {
     {
       "name": "Wandering the Jet Black",
       "icon": "assets/icons/weapons/wandering_the_jet_black.png",
+      "sprite": "",
       "category": "Special",
       "method": "Darkana",
       "description": "Generates projectiles that circle the character and deal damage based on total recovered Health and Magnet.",
@@ -49920,6 +50444,7 @@ window.VS_DATA = {
     {
       "name": "Insatiable",
       "icon": "assets/icons/weapons/insatiable.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "Creates a purple zone with a skull centered slightly above the character.",
@@ -49951,6 +50476,7 @@ window.VS_DATA = {
     {
       "name": "Acquazzone",
       "icon": "assets/icons/weapons/acquazzone.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "Attacks enemies on the lower half of the screen.",
@@ -49982,6 +50508,7 @@ window.VS_DATA = {
     {
       "name": "Shaft Orb",
       "icon": "assets/icons/weapons/shaft_orb.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "",
@@ -50011,6 +50538,7 @@ window.VS_DATA = {
     {
       "name": "Burning Alcarde",
       "icon": "assets/icons/weapons/burning_alcarde.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "Creates a damaging aura when health is low.",
@@ -50042,6 +50570,7 @@ window.VS_DATA = {
     {
       "name": "Death Hand",
       "icon": "assets/icons/weapons/death_hand.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "Deadly digits",
@@ -50073,6 +50602,7 @@ window.VS_DATA = {
     {
       "name": "Hand of Vlad",
       "icon": "assets/icons/weapons/hand_of_vlad.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "Bloody Hands",
@@ -50104,6 +50634,7 @@ window.VS_DATA = {
     {
       "name": "Ruler Sword Body",
       "icon": "assets/icons/weapons/ruler_sword_body.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "",
@@ -50133,6 +50664,7 @@ window.VS_DATA = {
     {
       "name": "Bananastrophe",
       "icon": "assets/icons/weapons/bananastrophe.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "",
@@ -50162,6 +50694,7 @@ window.VS_DATA = {
     {
       "name": "Sossoldi",
       "icon": "assets/icons/weapons/sossoldi.png",
+      "sprite": "",
       "category": "Special",
       "method": "Hidden",
       "description": "",
@@ -50191,6 +50724,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Malachite",
       "icon": "assets/icons/weapons/chaos_malachite.png",
+      "sprite": "",
       "category": "Special",
       "method": null,
       "description": "Allows Mortaccio to morph when reaching Level 80.",
@@ -50220,6 +50754,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Rosalia",
       "icon": "assets/icons/weapons/chaos_rosalia.png",
+      "sprite": "",
       "category": "Special",
       "method": null,
       "description": "Allows Yatta Cavallo to morph when reaching Level 80.",
@@ -50249,6 +50784,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Lazulia",
       "icon": "assets/icons/weapons/chaos_lazulia.png",
+      "sprite": "",
       "category": "Special",
       "method": null,
       "description": "Allows Bianca Ramba to morph when reaching Level 80.",
@@ -50278,6 +50814,7 @@ window.VS_DATA = {
     {
       "name": "Chaos Altemanna",
       "icon": "assets/icons/weapons/chaos_altemanna.png",
+      "sprite": "",
       "category": "Special",
       "method": null,
       "description": "Allows O'Sole Meeo to morph when reaching Level 80.",
@@ -58168,7 +58705,7 @@ window.VS_DATA = {
     {
       "name": "Magic Weapon",
       "icon": "assets/icons/affinities/magic_weapon.png",
-      "color": "#6a4010",
+      "color": "#44996e",
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
@@ -58185,7 +58722,7 @@ window.VS_DATA = {
     {
       "name": "Magic Whip",
       "icon": "assets/icons/affinities/magic_whip.png",
-      "color": "#6a4010",
+      "color": "#9e9e3f",
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",

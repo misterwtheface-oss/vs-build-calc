@@ -6,7 +6,7 @@
  * Usage: node tools/build-data.mjs   (from vs-build-calc root)
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { inflateSync } from 'zlib';
@@ -100,6 +100,14 @@ function iconPath(raw) {
   const normalized = raw.replace(/\\/g, '/').replace(/\.jpe?g$/i, '.png');
   const match = normalized.match(/assets\/icons\/(.+)$/);
   return match ? 'assets/icons/' + match[1] : normalized;
+}
+
+// Like iconPath, but only returns the path when the asset actually exists in the repo — many
+// pickups/consumables carry a sprite_path with no sprite art, and render should fall back to the
+// square icon rather than a broken/empty image.
+function spritePathIfExists(raw) {
+  const p = iconPath(raw);
+  return p && existsSync(join(REPO_ROOT, p)) ? p : '';
 }
 
 // ─── Dominant color from a PNG (build-time, for affinity banners) ──────────
@@ -577,6 +585,7 @@ const weapons = rawWeapons.filter(r => r.weapon && r.weapon !== '-').map(r => {
   return {
     name,
     icon: iconPath(r.icon_path),
+    sprite: spritePathIfExists(r.sprite_path), // full weapon sprite art; '' if no asset → icon at render
     category: unwrap(r.category) || 'Base',
     method: nullIfDash(unwrap(r.method)),
     description: unwrap(r.description),

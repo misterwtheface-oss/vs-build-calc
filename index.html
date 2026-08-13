@@ -728,6 +728,38 @@
     .aff-nav-icon:hover { box-shadow: 0 0 6px rgba(232,184,32,.5); }
     .detail-banner-header { margin: 0 0 .4rem; }
     .detail-obj-affinity { margin-bottom: 1.2rem; }
+    /* Trait page ＋ combobox: add another trait as an AND condition. */
+    .aff-add { position: relative; display: inline-flex; }
+    .aff-add-btn {
+      width: 30px; height: 30px; border-radius: 6px; cursor: pointer; line-height: 1;
+      border: 1px solid var(--gold-dim); background: rgba(232,184,32,.12); color: var(--gold);
+      font-size: 1.15rem; padding: 0;
+    }
+    .aff-add-btn:hover { background: rgba(232,184,32,.28); border-color: var(--gold); }
+    .aff-add-pop {
+      position: absolute; top: calc(100% + 6px); left: 0; z-index: 50; width: 280px;
+      background: var(--surface); border: 1px solid var(--gold-dim); border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.5); padding: .5rem;
+    }
+    .aff-add-search {
+      width: 100%; box-sizing: border-box; margin-bottom: .4rem; padding: .45rem .6rem;
+      background: var(--surface2); color: var(--text); border: 1px solid var(--border-hi); border-radius: 5px;
+    }
+    .aff-add-search:focus { outline: none; border-color: var(--gold); }
+    .aff-add-list { max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+    .aff-add-opt {
+      display: flex; align-items: center; gap: .5rem; width: 100%; text-align: left; cursor: pointer;
+      background: transparent; border: none; color: var(--text); padding: .3rem .4rem; border-radius: 4px; font-size: .92rem;
+    }
+    .aff-add-opt:hover { background: var(--surface2); color: var(--gold); }
+    .aff-add-opt img { width: 22px; height: 22px; object-fit: contain; image-rendering: pixelated; flex: none; }
+    /* Combo trait chips in the left column (removable AND conditions). */
+    .aff-combo-chips { display: flex; flex-wrap: wrap; gap: .35rem; justify-content: center; margin-top: .6rem; }
+    .aff-combo-chip {
+      display: inline-flex; align-items: center; gap: .3rem; padding: .12rem .28rem .12rem .4rem;
+      background: var(--aff-color); color: var(--aff-text); border-radius: 4px; font-size: .8rem; font-weight: 700;
+    }
+    .aff-combo-chip img { width: 16px; height: 16px; object-fit: contain; image-rendering: pixelated; }
     /* Object-page affinity banners: scale up within the overlay only (info panels unchanged). */
     #detail-overlay-root .affinity-row { gap: 10px; }
     #detail-overlay-root .affinity-row-icon { width: 40px; height: 40px; }
@@ -795,6 +827,10 @@
     #detail-overlay-root .detail-main > .detail-section { margin-top: 1.6rem; }
     #detail-overlay-root .detail-main > .detail-section:first-child { margin-top: 0; }
     #detail-overlay-root .detail-main > .detail-section + .primary-traits { margin-top: 1.6rem; }
+    /* Evo-node MAX/Hidden labels are absolutely positioned below their node (top:100%), so they
+       overflow the section box and can touch the next header. Reserve a little space beneath evo
+       paths on the detail page so those labels clear the following section. (Evo layout untouched.) */
+    #detail-overlay-root .detail-main .detail-section .evo-flow { padding-bottom: 1rem; }
     #detail-overlay-root .detail-passive-evo .evo-flow {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1rem; align-items: start;
@@ -808,6 +844,46 @@
       border: 1px solid var(--border-hi); border-radius: 6px;
     }
     .appendix-search:focus { outline: none; border-color: var(--gold); }
+    /* Multi-trait filter bar: active trait chips (AND) shown above results. */
+    .appendix-trait-filter {
+      display: flex; flex-wrap: wrap; align-items: center; gap: .4rem;
+      margin: -.4rem 0 1rem; padding: .55rem .6rem;
+      background: var(--surface2); border: 1px solid var(--border-hi); border-radius: 6px;
+    }
+    .appendix-filter-label { font-size: .78rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .06em; }
+    .appendix-chip {
+      display: inline-flex; align-items: center; gap: .35rem; padding: .15rem .3rem .15rem .4rem;
+      background: var(--aff-color); color: var(--aff-text); border-radius: 4px; font-size: .82rem; font-weight: 700;
+    }
+    .appendix-chip img { width: 18px; height: 18px; object-fit: contain; image-rendering: pixelated; }
+    .appendix-chip-x {
+      border: none; background: rgba(0,0,0,.25); color: inherit; cursor: pointer;
+      width: 16px; height: 16px; border-radius: 3px; line-height: 1; font-size: .72rem; padding: 0;
+    }
+    .appendix-chip-x:hover { background: rgba(0,0,0,.45); }
+    .appendix-filter-clear {
+      margin-left: auto; border: 1px solid var(--border-hi); background: transparent; color: var(--text-muted);
+      cursor: pointer; font-size: .76rem; padding: .15rem .5rem; border-radius: 4px;
+    }
+    .appendix-filter-clear:hover { color: var(--gold); border-color: var(--gold); }
+    /* "Add a trait filter" suggestion rows + results section heads. */
+    .appendix-suggest-head, .appendix-results-head {
+      font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gold-dim);
+      margin: .8rem 0 .4rem; padding-bottom: .25rem; border-bottom: 1px solid var(--border);
+    }
+    .appendix-suggest-head:first-child { margin-top: 0; }
+    .appendix-count {
+      color: var(--text-dim); background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0 .4rem; font-size: .7rem; margin-left: .3rem;
+    }
+    .appendix-suggest { display: flex; align-items: center; gap: .5rem; margin-bottom: 5px; }
+    .appendix-suggest .affinity-row { flex: 1; margin-bottom: 0; }
+    .appendix-suggest-add {
+      flex: none; width: 26px; height: 26px; border-radius: 5px; cursor: pointer;
+      border: 1px solid var(--gold-dim); background: rgba(232,184,32,.12); color: var(--gold);
+      font-size: 1rem; line-height: 1; padding: 0;
+    }
+    .appendix-suggest-add:hover { background: rgba(232,184,32,.28); border-color: var(--gold); }
     .appendix-section { margin-bottom: 1.5rem; }
     .appendix-section-label {
       font-family: var(--font-title); font-size: 1.2rem; color: var(--gold);
@@ -1462,7 +1538,7 @@
     // Detailed Info Overlay: a STACKING layer (renders over the selector overlay) with its own
     // back/forward history. Each page = { kind:'object'|'affinity', type, name }. `player` is the
     // add-to-build target (the active info panel's player when opened from a panel, else 0).
-    detail: { stack: [], idx: -1, player: 0, appendixQuery: '' },
+    detail: { stack: [], idx: -1, player: 0, appendixQuery: '', appendixTraits: [] },
     // Build loadouts overlay. `user` = localStorage-backed builds (vsbc.builds); featured
     // builds live in window.VS_BUILDS. See captureBuild/applyBuild and builds/SCHEMA.md.
     builds: { active: false, user: [], charScope: null },
@@ -1776,6 +1852,8 @@
     return _charVariants;
   }
   function charSpriteIcon(c) { return c.sprite_static || c.sprite_gif || c.icon; }
+  // Weapon full-art sprite (weapons.csv `sprite_path`), falling back to the square icon.
+  function weaponSprite(w) { return (w && (w.sprite || w.icon)) || ''; }
 
   // "Affinity" is backend-only vocabulary; the banner section shows a neutral heading. Change
   // this one constant to relabel the section everywhere.
@@ -4137,7 +4215,7 @@
     { key: 'arcana',     label: 'Arcana',     type: 'arcana',    empty: EMPTY_ICONS.arcana,  cls: 'arcana',  lookup: arcanaByName },
     { key: 'characters', label: 'Characters', type: 'character', empty: EMPTY_ICONS.char,    cls: 'sprite',  lookup: n => D.characters.find(c => c.name === n) || null },
     { key: 'passives',   label: 'Passives',   type: 'passive',   empty: EMPTY_ICONS.passive, cls: '',        lookup: passiveByName },
-    { key: 'weapons',    label: 'Weapons',    type: 'weapon',     empty: EMPTY_ICONS.weapon,  cls: '',        lookup: weaponByName },
+    { key: 'weapons',    label: 'Weapons',    type: 'weapon',     empty: EMPTY_ICONS.weapon,  cls: '',        lookup: weaponByName, iconOf: weaponSprite },
   ];
   const DETAIL_KIND_LABEL = { weapon: 'Weapon', passive: 'Passive', character: 'Character', arcana: 'Arcana' };
 
@@ -4164,23 +4242,27 @@
   function closeDetailOverlay() {
     const r = document.getElementById('detail-overlay-root');
     r.classList.add('hidden'); r.innerHTML = '';
-    state.detail.stack = []; state.detail.idx = -1; state.detail.appendixQuery = '';
+    state.detail.stack = []; state.detail.idx = -1; state.detail.appendixQuery = ''; state.detail.appendixTraits = [];
   }
   function renderDetailOverlay() {
     const page = state.detail.stack[state.detail.idx];
     if (!page) { closeDetailOverlay(); return; }
     const inner = page.kind === 'appendix' ? detailAppendixPageHTML()
       : page.kind === 'player' ? detailPlayerPageHTML(page.playerIdx)
-      : page.kind === 'affinity' ? detailAffinityPageHTML(page.name)
+      : page.kind === 'affinity' ? detailAffinityPageHTML(page.name, page.also || [])
       : detailObjectPageHTML(page.type, page.name);
     document.getElementById('detail-overlay-root').innerHTML = `<div class="overlay-panel">${inner}</div>`;
     // Restore appendix search (persisted per view) after the innerHTML rebuild.
     const search = document.querySelector('#detail-overlay-root .appendix-search');
-    if (search && state.detail.appendixQuery) { search.value = state.detail.appendixQuery; applyAppendixSearch(search); }
+    if (search && (state.detail.appendixQuery || state.detail.appendixTraits.length)) {
+      search.value = state.detail.appendixQuery; applyAppendixSearch(search);
+    }
   }
 
   // Shared header (back/forward/title/close) + body (left art column + scrolling main) + footer.
-  function detailChrome(title, leftHTML, mainHTML, footerHTML) {
+  // `headerAdorn` is optional markup placed right after the title (used by trait pages for the
+  // "＋ add a condition" combobox).
+  function detailChrome(title, leftHTML, mainHTML, footerHTML, headerAdorn = '') {
     const d = state.detail;
     const canBack = d.idx > 0, canFwd = d.idx < d.stack.length - 1;
     return `<div class="overlay-header">
@@ -4188,6 +4270,7 @@
           <button class="detail-arrow-btn" data-action="detail-back" ${canBack ? '' : 'disabled'} title="Back">◀</button>
           <button class="detail-arrow-btn" data-action="detail-forward" ${canFwd ? '' : 'disabled'} title="Forward">▶</button>
           <h2>${esc(title)}</h2>
+          ${headerAdorn}
         </div>
         <button class="btn btn-icon overlay-close" data-action="detail-close" title="Close">✕</button>
       </div>
@@ -4203,14 +4286,15 @@
     if (type === 'character') return charSpriteHTML(item, true);
     if (type === 'arcana') return `<div class="detail-icon arcana-card"><img src="${esc(item.icon || EMPTY_ICONS.arcana)}" onerror="this.src='${EMPTY_ICONS.arcana}'"></div>`;
     const e = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
-    return `<div class="detail-icon"><img src="${esc(item.icon || e)}" onerror="this.src='${e}'"></div>`;
+    const art = type === 'weapon' ? weaponSprite(item) : item.icon; // weapons show their sprite
+    return `<div class="detail-icon"><img src="${esc(art || e)}" onerror="this.src='${e}'"></div>`;
   }
 
   // Resolve a bare name to a navigable reference across every dataset (weapon/passive/arcana/
   // character/affinity). Used by starting loadouts + arcana `affects_*` lists, whose names can
   // land in any file. Returns null for unmatched names (source typos, mechanics like "Reroll").
   function resolveRef(name) {
-    const w = weaponByName(name);  if (w) return { kind: 'object', type: 'weapon',    name, icon: w.icon };
+    const w = weaponByName(name);  if (w) return { kind: 'object', type: 'weapon',    name, icon: weaponSprite(w) };
     const p = passiveByName(name); if (p) return { kind: 'object', type: 'passive',   name, icon: p.icon };
     const a = arcanaByName(name);  if (a) return { kind: 'object', type: 'arcana',     name, icon: a.icon, arcana: true };
     const c = D.characters.find(x => x.name === name); if (c) return { kind: 'object', type: 'character', name, icon: charSpriteIcon(c), sprite: true };
@@ -4407,34 +4491,56 @@
     });
   }
 
-  function detailAffinityPageHTML(name) {
-    const aff = affinityByName(name);
-    if (!aff) return detailChrome(name, '', `<div class="detail-empty">Unknown.</div>`, '');
-    const left = `<div class="detail-kicker">Trait</div>
-      <div class="detail-icon"><img src="${esc(aff.icon || EMPTY_ICON)}" onerror="this.style.visibility='hidden'"></div>
-      <div class="detail-name">${esc(aff.name)}</div>
-      ${aff.description ? `<div class="detail-desc">${esc(aff.description)}</div>` : ''}`;
+  // Trait page. Pass extra trait names in `also` to AND them with the primary: the page then
+  // shows only objects associated with EVERY selected trait (per-category set intersection),
+  // but keeps the normal single-trait layout. Title becomes "Might + Revival". The header ＋
+  // combobox adds conditions; each trait chip in the left column removes one.
+  function detailAffinityPageHTML(name, also = []) {
+    const names = [name, ...also].filter((n, i, arr) => affinityByName(n) && arr.indexOf(n) === i);
+    const affs = names.map(affinityByName);
+    const primary = affs[0];
+    if (!primary) return detailChrome(name, '', `<div class="detail-empty">Unknown.</div>`, '');
+    const combo = affs.length > 1;
+    const title = names.join(' + ');
+
+    // Left: primary art + combined title. In combo mode, list each trait as a removable chip.
+    const chips = combo ? `<div class="aff-combo-chips">${names.map(n => {
+      const a = affinityByName(n); const color = a.color || '#6a4010';
+      return `<span class="aff-combo-chip" style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}" title="${esc(a.name)}">
+        <img src="${esc(a.icon || '')}" onerror="this.style.display='none'"><span>${esc(a.name)}</span>
+        <button class="appendix-chip-x" data-action="affinity-remove" data-affinity="${esc(a.name)}" title="Remove this condition">✕</button></span>`;
+    }).join('')}</div>` : '';
+    const left = `<div class="detail-kicker">${combo ? 'Traits (shared)' : 'Trait'}</div>
+      <div class="detail-icon"><img src="${esc(primary.icon || EMPTY_ICON)}" onerror="this.style.visibility='hidden'"></div>
+      <div class="detail-name">${esc(title)}</div>
+      ${!combo && primary.description ? `<div class="detail-desc">${esc(primary.description)}</div>` : ''}
+      ${chips}`;
 
     let main = '';
-    if (aff.is_parent) {
-      const kids = childAffinities(aff.name);
+    // Sub-traits + per-object blurbs are single-trait concepts; keep them only on a lone trait.
+    if (!combo && primary.is_parent) {
+      const kids = childAffinities(primary.name);
       if (kids.length) main += `<details class="detail-cat" open>
         <summary class="detail-cat-label">Sub-traits</summary>
         ${kids.map(k => affinityBanner(k, 'nav-affinity')).join('')}
       </details>`;
     }
-    // Per-object interaction blurbs nest under the category they belong to (weapon blurbs above
-    // the weapons grid, etc.). Entries are homogeneous, so bucket each by its objects' type.
-    const infoEntries = affinityInfoEntries(aff.name);
+    const infoEntries = combo ? [] : affinityInfoEntries(primary.name);
     const blurbsFor = t => {
       const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t).map(e => infoEntryHTML(e)).join('');
       return cells ? `<div class="detail-info-grid">${cells}</div>` : '';
     };
     for (const cat of DETAIL_CATS) {
-      const names = aff.related?.[cat.key] || [];
+      // Intersect this category's associated names across every selected trait.
+      let catNames = null;
+      for (const a of affs) {
+        const set = new Set(a.related?.[cat.key] || []);
+        catNames = catNames === null ? [...set] : catNames.filter(n => set.has(n));
+      }
+      catNames = catNames || [];
       const catBlurbs = blurbsFor(cat.type);
-      if (!names.length && !catBlurbs) continue;
-      const entries = detailCatEntries(cat, names, aff.name); // [{navName,title,icon}], deduped for chars
+      if (!catNames.length && !catBlurbs) continue;
+      const entries = detailCatEntries(cat, catNames, primary.name); // [{navName,title,icon}], deduped for chars
       const iconCell = e => `<span class="aff-nav-icon ${cat.cls}" data-action="nav-object" data-detail-type="${cat.type}"
           data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
       main += `<details class="detail-cat" open>
@@ -4443,8 +4549,23 @@
         <div class="aff-icon-grid">${entries.map(iconCell).join('')}</div>
       </details>`;
     }
-    if (!main) main = `<div class="detail-empty">No associations recorded.</div>`;
-    return detailChrome(aff.name, left, main, '');
+    if (!main) main = combo
+      ? `<div class="detail-empty">No items share ${esc(title)}.</div>`
+      : `<div class="detail-empty">No associations recorded.</div>`;
+
+    // ＋ combobox: pick another trait to AND in. Lists every trait not already selected; the
+    // input filters the list live (see the aff-add-search handler).
+    const others = D.affinities.filter(a => !names.includes(a.name));
+    const adorn = `<div class="aff-add">
+      <button class="aff-add-btn" data-action="affinity-add-toggle" title="Add a trait condition">＋</button>
+      <div class="aff-add-pop" hidden>
+        <input type="text" class="aff-add-search" placeholder="Add a trait condition…" autocomplete="off">
+        <div class="aff-add-list">${others.map(a => `<button class="aff-add-opt" data-action="affinity-add" data-affinity="${esc(a.name)}" data-q="${esc(a.name.toLowerCase())}">
+          <img src="${esc(a.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(a.name)}</span></button>`).join('')}</div>
+      </div>
+    </div>`;
+
+    return detailChrome(title, left, main, '', adorn);
   }
 
   // ── Appendix (index) page ────────────────────────────────────────────────
@@ -4459,7 +4580,7 @@
     for (const a of D.arcana)      out.push({ kind: 'object', type: 'arcana',    name: a.name, icon: a.icon, tag: 'Arcana' });
     for (const p of D.passives)    out.push({ kind: 'object', type: 'passive',   name: p.name, icon: p.icon, tag: 'Passive' });
     for (const c of D.characters)  out.push({ kind: 'object', type: 'character', name: c.name, icon: charSpriteIcon(c), sprite: true, tag: 'Character' });
-    for (const w of D.weapons)     out.push({ kind: 'object', type: 'weapon',    name: w.name, icon: w.icon, tag: 'Weapon' });
+    for (const w of D.weapons)     out.push({ kind: 'object', type: 'weapon',    name: w.name, icon: weaponSprite(w), tag: 'Weapon' });
     out.forEach(e => { e.q = e.name.toLowerCase(); });
     _appendixIndex = out;
     return out;
@@ -4510,10 +4631,12 @@
 
     const left = `<div class="detail-kicker">Appendix</div>
       <div class="detail-name">Appendix</div>
-      <div class="detail-desc">Browse every trait, arcana, and passive. Search to also find characters and weapons.</div>`;
+      <div class="detail-desc">Browse every trait, arcana, and passive. Search to also find characters and weapons.</div>
+      <div class="detail-desc" style="margin-top:.5rem">Add two or more <b>traits</b> as filters (the ＋ on a trait) to narrow to items that share <i>all</i> of them.</div>`;
 
     const main = `<div class="appendix">
-      <input type="text" class="appendix-search" placeholder="Search traits, arcana, passives, characters, weapons…" autocomplete="off">
+      <input type="text" class="appendix-search" placeholder="Search — or type a trait and ＋ it to filter…" autocomplete="off">
+      <div class="appendix-trait-filter" style="display:none"></div>
       <div class="appendix-results" style="display:none"></div>
       <div class="appendix-default">
         <div class="appendix-section"><div class="appendix-section-label">Traits</div>${affHTML}</div>
@@ -4527,6 +4650,62 @@
   // Live-filter the appendix: empty query → default sectioned lists; otherwise a flat list
   // across ALL types (incl. characters/weapons), capped so a broad query stays usable.
   const APPENDIX_MAX = 80;
+
+  // The objects (as `type|name` keys) a single trait is associated with, across every category.
+  function appendixTraitMembers(traitName) {
+    const r = affinityByName(traitName)?.related || {};
+    const set = new Set();
+    (r.weapons    || []).forEach(n => set.add('weapon|'    + n));
+    (r.passives   || []).forEach(n => set.add('passive|'   + n));
+    (r.characters || []).forEach(n => set.add('character|' + n));
+    (r.arcana     || []).forEach(n => set.add('arcana|'    + n));
+    return set;
+  }
+
+  // Objects that share ALL of `traits` (set intersection of each trait's associations), returned
+  // as appendix object entries. Empty `traits` → []. This is the multi-trait AND filter.
+  function appendixTraitIntersection(traits) {
+    let inter = null;
+    for (const t of traits) {
+      const m = appendixTraitMembers(t);
+      inter = inter === null ? m : new Set([...inter].filter(x => m.has(x)));
+    }
+    const lookup = { weapon: weaponByName, passive: passiveByName, character: charByName, arcana: arcanaByName };
+    const tagOf  = { weapon: 'Weapon', passive: 'Passive', character: 'Character', arcana: 'Arcana' };
+    return [...(inter || [])].map(key => {
+      const i = key.indexOf('|'); const type = key.slice(0, i), name = key.slice(i + 1);
+      const obj = lookup[type]?.(name);
+      const icon = type === 'character' ? (obj ? charSpriteIcon(obj) : '')
+        : type === 'weapon' ? weaponSprite(obj)
+        : (obj?.icon || '');
+      return { kind: 'object', type, name, icon,
+        sprite: type === 'character', tag: tagOf[type], q: name.toLowerCase() };
+    });
+  }
+
+  // An active trait-filter chip (removable).
+  function appendixChipHTML(name) {
+    const aff = affinityByName(name); if (!aff) return '';
+    const color = aff.color || '#6a4010';
+    return `<span class="appendix-chip" style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}" title="${esc(aff.name)}">
+      <img src="${esc(aff.icon || '')}" onerror="this.style.display='none'">
+      <span class="appendix-chip-name">${esc(aff.name)}</span>
+      <button class="appendix-chip-x" data-action="appendix-trait-remove" data-affinity="${esc(aff.name)}" title="Remove filter">✕</button>
+    </span>`;
+  }
+
+  // A "＋ add this trait as a filter" suggestion row (banner still navigates to the trait page).
+  function appendixTraitSuggestHTML(aff) {
+    return `<div class="appendix-suggest">
+      <button class="appendix-suggest-add" data-action="appendix-trait-add" data-affinity="${esc(aff.name)}" title="Add as filter">＋</button>
+      ${affinityBanner(aff, 'nav-affinity')}
+    </div>`;
+  }
+
+  // Live-filter the appendix. Two dimensions combine:
+  //   • active trait filters (state.detail.appendixTraits) → objects sharing ALL of them (AND);
+  //   • the text query → suggests traits to add (＋) and name-filters the object pool.
+  // Empty query + no filters → the default sectioned lists.
   function applyAppendixSearch(input) {
     const q = input.value.trim().toLowerCase();
     state.detail.appendixQuery = input.value;
@@ -4534,14 +4713,41 @@
     if (!root) return;
     const def = root.querySelector('.appendix-default');
     const res = root.querySelector('.appendix-results');
-    if (!q) { def.style.display = ''; res.style.display = 'none'; res.innerHTML = ''; return; }
+    const filterBar = root.querySelector('.appendix-trait-filter');
+    const traits = state.detail.appendixTraits;
+
+    // Active-filter chip bar.
+    if (traits.length) {
+      filterBar.style.display = '';
+      filterBar.innerHTML = `<span class="appendix-filter-label">Sharing all of:</span>${traits.map(appendixChipHTML).join('')}`
+        + `<button class="appendix-filter-clear" data-action="appendix-trait-clear">Clear</button>`;
+    } else { filterBar.style.display = 'none'; filterBar.innerHTML = ''; }
+
+    const hasFilter = traits.length > 0;
+    if (!q && !hasFilter) { def.style.display = ''; res.style.display = 'none'; res.innerHTML = ''; return; }
     def.style.display = 'none';
     res.style.display = '';
-    const hits = appendixIndex().filter(e => e.q.includes(q));
-    const shown = hits.slice(0, APPENDIX_MAX).map(appendixEntryHTML).join('');
-    res.innerHTML = shown
-      ? shown + (hits.length > APPENDIX_MAX ? `<div class="appendix-more">Showing first ${APPENDIX_MAX} of ${hits.length} — refine your search.</div>` : '')
-      : `<div class="detail-empty">No matches.</div>`;
+
+    // Traits to suggest adding (while typing; exclude already-active).
+    const suggest = q ? D.affinities.filter(a => a.name.toLowerCase().includes(q) && !traits.includes(a.name)) : [];
+
+    // Object pool: the AND-intersection when filtering, else every object; then name-filtered.
+    let pool = hasFilter ? appendixTraitIntersection(traits) : appendixIndex().filter(e => e.kind === 'object');
+    if (q) pool = pool.filter(e => e.q.includes(q));
+    pool.sort((a, b) => a.tag.localeCompare(b.tag) || a.name.localeCompare(b.name));
+
+    let html = '';
+    if (suggest.length) html += `<div class="appendix-suggest-head">Add a trait filter</div>`
+      + suggest.slice(0, 12).map(appendixTraitSuggestHTML).join('');
+    const head = hasFilter
+      ? `Items sharing ${traits.length === 1 ? 'this trait' : `all ${traits.length} traits`} <span class="appendix-count">${pool.length}</span>`
+      : (q ? `Results <span class="appendix-count">${pool.length}</span>` : '');
+    if (head) html += `<div class="appendix-results-head">${head}</div>`;
+    html += pool.length
+      ? pool.slice(0, APPENDIX_MAX).map(appendixEntryHTML).join('')
+        + (pool.length > APPENDIX_MAX ? `<div class="appendix-more">Showing first ${APPENDIX_MAX} of ${pool.length} — refine your search.</div>` : '')
+      : (suggest.length ? '' : `<div class="detail-empty">No matches.</div>`);
+    res.innerHTML = html || `<div class="detail-empty">No matches.</div>`;
   }
 
   // Shared by the planner sidebar (#app) and selector overlays (#overlay-root): open the object
@@ -4590,6 +4796,57 @@
     if (action === 'detail-forward') { detailForward(); return; }
     if (action === 'nav-affinity' || action === 'nav-object') { openDetailFromEl(btn, state.detail.player); return; }
     if (action === 'detail-add-to-build') { detailAddToBuild(btn.dataset.detailType, btn.dataset.detailName); return; }
+    if (action === 'appendix-trait-add') {
+      const name = btn.dataset.affinity;
+      if (name && !state.detail.appendixTraits.includes(name)) state.detail.appendixTraits.push(name);
+      const inp = document.querySelector('#detail-overlay-root .appendix-search');
+      // Clear the text so the freshly-narrowed intersection is fully visible; keep focus to add more.
+      if (inp) { inp.value = ''; applyAppendixSearch(inp); inp.focus(); }
+      return;
+    }
+    if (action === 'appendix-trait-remove') {
+      state.detail.appendixTraits = state.detail.appendixTraits.filter(t => t !== btn.dataset.affinity);
+      const inp = document.querySelector('#detail-overlay-root .appendix-search');
+      if (inp) applyAppendixSearch(inp);
+      return;
+    }
+    if (action === 'appendix-trait-clear') {
+      state.detail.appendixTraits = [];
+      const inp = document.querySelector('#detail-overlay-root .appendix-search');
+      if (inp) applyAppendixSearch(inp);
+      return;
+    }
+    // ── Combo trait page (＋ add / remove conditions) ──
+    if (action === 'affinity-add-toggle') {
+      const pop = btn.parentElement.querySelector('.aff-add-pop');
+      if (pop) {
+        pop.hidden = !pop.hidden;
+        if (!pop.hidden) {
+          const s = pop.querySelector('.aff-add-search');
+          if (s) { s.value = ''; s.focus(); }
+          pop.querySelectorAll('.aff-add-opt').forEach(o => o.style.display = '');
+        }
+      }
+      return;
+    }
+    if (action === 'affinity-add') {
+      const p = state.detail.stack[state.detail.idx];
+      if (p && p.kind === 'affinity') {
+        const nm = btn.dataset.affinity;
+        p.also = p.also || [];
+        if (nm && nm !== p.name && !p.also.includes(nm)) p.also.push(nm);
+        renderDetailOverlay();
+      }
+      return;
+    }
+    if (action === 'affinity-remove') {
+      const p = state.detail.stack[state.detail.idx];
+      if (p && p.kind === 'affinity') {
+        const rest = [p.name, ...(p.also || [])].filter(x => x !== btn.dataset.affinity);
+        if (rest.length) { p.name = rest[0]; p.also = rest.slice(1); renderDetailOverlay(); }
+      }
+      return;
+    }
   }
 
   function refreshOverlay() {
@@ -6774,6 +7031,11 @@
     document.getElementById('detail-overlay-root').addEventListener('click', handleDetailClick);
     document.getElementById('detail-overlay-root').addEventListener('input', e => {
       if (e.target.classList.contains('appendix-search')) applyAppendixSearch(e.target);
+      else if (e.target.classList.contains('aff-add-search')) {
+        const q = e.target.value.trim().toLowerCase();
+        const list = e.target.parentElement.querySelector('.aff-add-list');
+        if (list) list.querySelectorAll('.aff-add-opt').forEach(o => { o.style.display = (!q || o.dataset.q.includes(q)) ? '' : 'none'; });
+      }
     });
     ovlRoot.addEventListener('input', e => {
       if (e.target.id === 'seal-rarity-slider') {
