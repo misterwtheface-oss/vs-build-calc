@@ -548,10 +548,10 @@
       gap: .5rem;
       flex-wrap: wrap;
     }
-    /* Stage label + icon are grouped so they can travel together. On desktop `display:contents`
-       makes the wrapper invisible to layout (label + slot render exactly as before); mobile turns
-       it into a column so the label sits above the icon and the pair wraps as one unit. */
-    .global-stage-group { display: contents; }
+    /* Arcana and Stage are wrapped in groups so mobile can lay them out as two zones (arcana left,
+       stage reserved right). On desktop both are `display:contents` — the wrapper vanishes from
+       layout and the labels/slots render exactly as a flat row, so the web layout is unchanged. */
+    .global-arcana-group, .global-stage-group { display: contents; }
 
     /* ── Player card ── */
     .player-card {
@@ -1479,12 +1479,21 @@
       .planning-main { overflow: visible; }
       .global-row { max-width: 100%; padding: .5rem .6rem; }
       .players-grid, .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr; max-width: 100%; }
-      /* Stage label + icon travel together as a column (label above icon) and wrap as one unit,
-         so an extra Arcana can't strand the Stage icon on its own line away from its label. The
-         desktop right-push spacer is dropped so the group flows next to the arcana instead. */
+      /* Two zones, top-aligned: Arcana fills the left and WRAPS internally; Stage keeps a reserved
+         spot on the right that never shifts (label top-right like Arcana's label is top-left, icon
+         below). Both labels are one line high, so the Stage icon lines up with the first arcana row. */
+      .global-row-inner { align-items: flex-start; }
       .global-row-spacer { display: none; }
-      .global-stage-group { display: inline-flex; flex-direction: column; align-items: center; gap: .12rem; }
-      .global-stage-group .slot-row-label { width: auto !important; margin: 0 !important; }
+      .global-arcana-group {
+        display: flex; flex: 1; flex-wrap: wrap; align-items: center; align-content: flex-start; gap: .3rem;
+      }
+      /* Zero the label's own margin so the label→first-row gap is exactly the flex row-gap (.3rem)
+         in BOTH zones — that's what makes the Stage icon line up with the first Arcana row. */
+      .global-arcana-group .slot-row-label { width: 100%; margin: 0; }
+      .global-stage-group {
+        display: inline-flex; flex-direction: column; align-items: flex-end; gap: .3rem; flex: none;
+      }
+      .global-stage-group .slot-row-label { width: auto !important; margin: 0 !important; text-align: right; }
 
       /* ── Player card: character on top, slots below; slot rows wrap ── */
       .player-header { flex-wrap: wrap; gap: .3rem; }
@@ -1494,17 +1503,32 @@
       .slot-row { flex-wrap: wrap; }
       .slot-row-label { width: 100%; margin-bottom: .1rem; }
 
-      /* ── Selection overlay: stack the 3 columns; grid first, panel scrolls ── */
-      .overlay-body { flex-direction: column; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-      .ovl-left, .ovl-center, .ovl-center-wide, .ovl-right { width: 100%; flex: none; }
-      .ovl-center, .ovl-center-wide { order: 1; overflow: visible; }
-      .ovl-right { order: 2; width: 100%; border-left: none; border-top: 1px solid var(--border); }
-      .ovl-left  { order: 3; border-right: none; border-top: 1px solid var(--border); }
-      /* Single scroller on mobile = the overlay body (its scroll is preserved across selections in
-         refreshOverlay). The grid flows naturally instead of nesting a 2nd scroll region that reset. */
-      .ovl-center-scroll { max-height: none; overflow: visible; }
-      .ovl-left { overflow: visible; }
-      .ovl-right-body { overflow: visible; }
+      /* ── Selection overlay (mobile): nothing selected → the grid is the whole screen; once
+         something IS selected → grid on the top half, the info panels on the bottom half, each
+         with its OWN scroll that a selection never resets. `.has-selection` is toggled in JS from
+         state.ovl.selected. Desktop keeps its 3-column layout (these rules are mobile-only). ── */
+      .overlay-body { flex-direction: column; overflow: hidden; }
+      .ovl-left, .ovl-center, .ovl-center-wide, .ovl-right {
+        width: 100%; border-left: none; border-right: none; min-height: 0;
+      }
+      .ovl-center, .ovl-center-wide { order: 1; display: flex; flex-direction: column; overflow: hidden; }
+      .ovl-right { order: 2; border-top: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+      .ovl-left  { order: 3; border-top: 1px solid var(--border); }
+      /* Independent scroll regions (each preserved across a re-render in refreshOverlay). */
+      .ovl-center-scroll { flex: 1; min-height: 0; max-height: none; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .ovl-right-body { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .ovl-left { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      /* Nothing selected → grid fills the screen, info panels hidden. */
+      .overlay-body:not(.has-selection) .ovl-center,
+      .overlay-body:not(.has-selection) .ovl-center-wide { flex: 1 1 100%; }
+      .overlay-body:not(.has-selection) .ovl-left,
+      .overlay-body:not(.has-selection) .ovl-right { display: none; }
+      /* Something selected → grid = top half, info panels share the bottom half (detail gets the
+         larger share; stats below it). Each keeps its own scroll. */
+      .overlay-body.has-selection .ovl-center,
+      .overlay-body.has-selection .ovl-center-wide { flex: 0 0 50%; }
+      .overlay-body.has-selection .ovl-right { flex: 3 1 0; }
+      .overlay-body.has-selection .ovl-left  { flex: 2 1 0; }
       .ovl-right-top .detail-icon { width: 72px; height: 72px; }
       /* Stage picker: two smaller side-by-side tiles instead of one big column (names removed;
          the icon art already contains the stage name). */
@@ -3662,9 +3686,11 @@
           <div class="planning-main">
             <div class="global-row">
               <div class="global-row-inner">
-                <span class="slot-row-label">Arcana</span>
-                ${gASlots}
-                ${gExtraArcanaRow}
+                <div class="global-arcana-group">
+                  <span class="slot-row-label">Arcana</span>
+                  ${gASlots}
+                  ${gExtraArcanaRow}
+                </div>
                 <div class="global-row-spacer" style="flex:1"></div>
                 <div class="global-stage-group">
                   <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
@@ -4303,6 +4329,15 @@
     const root = document.getElementById('overlay-root');
     root.innerHTML = `<div class="overlay-panel">${inner}</div>`;
     root.classList.remove('hidden');
+    markOverlaySelection();
+  }
+
+  // Mobile splits the selector overlay into grid (top) + info panels (bottom) — but only once
+  // something is selected. This marker on `.overlay-body` drives that split; desktop ignores it
+  // (the rules are mobile-only). No-op for overlays without an `.overlay-body` (collection/builds).
+  function markOverlaySelection() {
+    const body = document.querySelector('#overlay-root .overlay-body');
+    if (body) body.classList.toggle('has-selection', !!(state.ovl && state.ovl.selected));
   }
 
   // ═══════════════════════════════════════════════════════
@@ -4963,13 +4998,14 @@
     else if (type === 'arcana') inner = arcanaOverlayHTML(slotIdx);
     else if (type === 'stage')  inner = stageOverlayHTML();
     const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
-    // Preserve scroll across the re-render for BOTH scrollers: the grid (.ovl-center-scroll, used
-    // on desktop) and the whole panel body (.overlay-body, the single scroller on mobile). Selecting
-    // an item must never fling the list back to the top.
-    const SCROLLERS = ['.overlay-body', '.ovl-center-scroll'];
+    // Preserve scroll across the re-render for every independent scroll region — the grid
+    // (.ovl-center-scroll) and the info panels (.ovl-left stats, .ovl-right-body detail). Selecting
+    // an item must never fling any of them back to the top (desktop + mobile top/bottom split).
+    const SCROLLERS = ['.ovl-center-scroll', '.ovl-left', '.ovl-right-body'];
     const saved = SCROLLERS.map(sel => { const el = panel.querySelector(sel); return el ? el.scrollTop : 0; });
     panel.innerHTML = inner;
     SCROLLERS.forEach((sel, i) => { const el = panel.querySelector(sel); if (el) el.scrollTop = saved[i]; });
+    markOverlaySelection();
     const searchInput = panel.querySelector('.ovl-search');
     if (searchInput && state.ovl.search) {
       searchInput.value = state.ovl.search;
