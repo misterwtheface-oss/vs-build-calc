@@ -302,6 +302,40 @@
       font-size: .62rem; line-height: 1; opacity: .95; pointer-events: none;
       text-shadow: 0 0 2px #000, 0 0 2px #000;
     }
+    /* ── Builds overlay ── */
+    .builds-panel { max-width: 620px; width: 95vw; }
+    .builds-hint { font-size: .72rem; color: var(--text-muted); padding: .35rem .9rem 0; }
+    .builds-scroll { overflow-y: auto; padding: .65rem .9rem .9rem; flex: 1; }
+    .builds-section + .builds-section { margin-top: 1rem; }
+    .builds-section-title {
+      font-size: .78rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--gold); margin: 0 0 .45rem; display: flex; align-items: center; gap: .4rem;
+    }
+    .builds-count {
+      font-size: .68rem; color: var(--text-muted); background: var(--surface2);
+      border: 1px solid var(--border); border-radius: 10px; padding: 0 .4rem; font-weight: 400;
+    }
+    .builds-empty { font-size: .74rem; color: var(--text-muted); font-style: italic; padding: .3rem .1rem .5rem; }
+    .build-row {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .5rem .6rem; margin-bottom: .4rem;
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 5px;
+    }
+    .build-row:hover { border-color: var(--gold); }
+    .build-row-icon { width: 40px; height: 40px; flex: none; }
+    .build-row-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .build-row-main { flex: 1; min-width: 0; }
+    .build-row-name { font-weight: 600; font-size: .9rem; color: var(--text); }
+    .build-row-meta { font-size: .68rem; color: var(--text-muted); }
+    .build-row-desc { font-size: .72rem; color: var(--text-muted); margin-top: .1rem; }
+    .build-tags { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .25rem; }
+    .build-tag {
+      font-size: .62rem; text-transform: uppercase; letter-spacing: .04em;
+      color: var(--gold); border: 1px solid var(--border-hi); border-radius: 3px; padding: 0 .3rem;
+    }
+    .build-row-actions { display: flex; flex-wrap: wrap; gap: .3rem; justify-content: flex-end; flex: none; max-width: 45%; }
+    .btn-danger { background: rgba(160,25,25,.15); border-color: rgba(200,50,50,.4); color: #cc7070; }
+    .btn-danger:hover { background: rgba(160,25,25,.3); border-color: rgba(200,50,50,.7); color: #dd8080; }
     .planning-body {
       flex: 1;
       min-height: 0;
@@ -1325,7 +1359,12 @@
   <div id="detail-overlay-root" class="hidden"></div>
 
   <script src="data/data.js"></script>
+  <script src="builds/builds.js"></script>
+  <script src="builds/validate.js"></script>
   <script>
+  // Featured builds bundle (builds/builds.js) is optional — default to empty if absent
+  // (e.g. before the first `node tools/build-builds.mjs` run). See builds/SCHEMA.md.
+  window.VS_BUILDS = window.VS_BUILDS || [];
   // ═══════════════════════════════════════════════════════
   //  CONSTANTS
   // ═══════════════════════════════════════════════════════
@@ -1410,6 +1449,9 @@
     // back/forward history. Each page = { kind:'object'|'affinity', type, name }. `player` is the
     // add-to-build target (the active info panel's player when opened from a panel, else 0).
     detail: { stack: [], idx: -1, player: 0, appendixQuery: '' },
+    // Build loadouts overlay. `user` = localStorage-backed builds (vsbc.builds); featured
+    // builds live in window.VS_BUILDS. See captureBuild/applyBuild and builds/SCHEMA.md.
+    builds: { active: false, user: [] },
   };
 
   // ── Collection persistence (localStorage; first persisted state in the app) ──
@@ -1444,6 +1486,127 @@
     } catch (e) { /* malformed — ignore, keep defaults */ }
   }
 
+  // ── Build loadouts (capture / apply / persist) ─────────────────────────────
+  // A "build" is a name-keyed snapshot of the PLANNER (characters, weapons, passives,
+  // arcana, stage, gifts, familiars, absorb-unions). It intentionally does NOT touch the
+  // Seal Advisor, Power-Ups, or Collection. Featured builds ship in builds/builds.js
+  // (window.VS_BUILDS); user builds persist to localStorage. See builds/SCHEMA.md.
+  const BUILD_SCHEMA = 1;
+  const BUILDS_STORAGE_KEY = 'vsbc.builds';
+
+  // Snapshot current state → a schema object. Objects are mapped to their `.name`.
+  function captureBuild(meta = {}) {
+    return {
+      schema: BUILD_SCHEMA,
+      id: meta.id || ('build-' + Date.now().toString(36)),
+      name: meta.name || 'Untitled Build',
+      author: meta.author || '',
+      description: meta.description || '',
+      tags: Array.isArray(meta.tags) ? meta.tags : [],
+      dataVersion: meta.dataVersion || '',
+      playerCount: state.playerCount,
+      stage: state.stage ? state.stage.name : null,
+      arcana: state.arcana.map(a => a ? a.name : null),
+      players: state.players.map(p => ({
+        character: p.character ? p.character.name : null,
+        charLevel: p.charLevel || 1,
+        weapons: (p.weapons || []).filter(Boolean).map(w => w.name),
+        passives: (p.passives || []).filter(Boolean).map(pa => pa.name),
+        extraPassives: [...(p.extraPassives || [])],
+        giftWeapon: p.giftWeapon ? p.giftWeapon.name : null,
+        giftPassive: p.giftPassive ? p.giftPassive.name : null,
+        familiars: [...(p.familiars || [])],
+        absorbed: Object.fromEntries(Object.entries(p.absorbed || {}).map(([k, v]) => [k, [...v]])),
+      })),
+    };
+  }
+
+  // Rehydrate a schema object into `state` and re-render. Unresolvable names are collected
+  // and surfaced in a toast rather than silently dropped; the rest of the build still loads.
+  function applyBuild(build) {
+    if (!build || build.schema !== BUILD_SCHEMA) {
+      showToast('Unsupported build format', 'warn');
+      return;
+    }
+    const missing = [];
+    const resolve = (name, fn) => {
+      if (name == null) return null;
+      const obj = fn(name);
+      if (!obj) { missing.push(name); return null; }
+      return obj;
+    };
+
+    const count = Math.max(1, Math.min(4, build.playerCount || 1));
+    state.playerCount = count;
+    state.players = initPlayers(count); // fresh players — no carry-over
+
+    (build.players || []).slice(0, count).forEach((bp, i) => {
+      const p = state.players[i];
+      p.character = resolve(bp.character, charByName);
+      p.charLevel = Math.max(1, Math.min(999, bp.charLevel || 1));
+      p.weapons  = (bp.weapons  || []).map(n => resolve(n, weaponByName)).filter(Boolean);
+      p.passives = (bp.passives || []).map(n => resolve(n, passiveByName)).filter(Boolean);
+      // extraPassives / familiars are stored as NAME strings — validate but keep the string.
+      p.extraPassives = (bp.extraPassives || []).filter(n => resolve(n, passiveByName));
+      p.familiars     = (bp.familiars     || []).filter(n => resolve(n, weaponByName));
+      p.giftWeapon  = resolve(bp.giftWeapon,  weaponByName);
+      p.giftPassive = resolve(bp.giftPassive, passiveByName);
+      // absorbed: { resultName: [hiddenNames] } — validate each, keep names as-is.
+      p.absorbed = {};
+      for (const [result, hidden] of Object.entries(bp.absorbed || {})) {
+        if (!resolve(result, weaponByName)) continue;
+        p.absorbed[result] = (hidden || []).filter(n => resolve(n, weaponByName));
+      }
+    });
+
+    // Globals: arcana (3 positional slots) + stage.
+    const arc = build.arcana || [];
+    state.arcana = [0, 1, 2].map(i => resolve(arc[i], arcanaByName));
+    state.stage = resolve(build.stage, stageByName);
+
+    // Self-heal to a legal state (defence-in-depth alongside validateBuildLegality): prune
+    // orphaned absorb entries, drop stage items the loaded stage doesn't supply, reconcile
+    // extra-bar passives, then cascade-devolve any evolution whose requirements aren't met
+    // (also handles chaos finals on the wrong character). For a VALID build these are no-ops.
+    state.players.forEach(syncAbsorbed);
+    state.players.forEach(syncStageSlots);
+    state.players.forEach(syncExtraPassives);
+    autoDevolveBrokenEvos();
+    state.infoPanel = null;
+    state.page = 'planning';
+    render();
+
+    if (missing.length) {
+      const uniq = [...new Set(missing)];
+      showToast(`Loaded "${build.name}" — skipped ${uniq.length} unknown item(s): ${uniq.slice(0, 3).join(', ')}${uniq.length > 3 ? '…' : ''}`, 'warn');
+    } else {
+      showToast(`Loaded "${build.name}"`, 'ok');
+    }
+  }
+
+  // User builds — localStorage array of schema objects (mirrors collection persistence).
+  function saveBuilds() {
+    try { localStorage.setItem(BUILDS_STORAGE_KEY, JSON.stringify(state.builds.user)); }
+    catch (e) { /* file:// or private mode — persistence just no-ops */ }
+  }
+  function loadBuilds() {
+    try {
+      const raw = localStorage.getItem(BUILDS_STORAGE_KEY);
+      if (!raw) return;
+      const arr = JSON.parse(raw);
+      if (Array.isArray(arr)) state.builds.user = arr.filter(b => b && b.schema === BUILD_SCHEMA);
+    } catch (e) { /* malformed — ignore, keep defaults */ }
+  }
+
+  // Run the shared legality validator (builds/validate.js) against the current game data.
+  // Returns { errors, warnings } (empty arrays if the validator failed to load).
+  function validateBuildLegality(build) {
+    try {
+      if (typeof window.VS_VALIDATE_BUILD === 'function') return window.VS_VALIDATE_BUILD(build, D);
+    } catch (e) { /* validator error — treat as no findings */ }
+    return { errors: [], warnings: [] };
+  }
+
   function makePlayer() {
     // extraPassives: passive instances that don't occupy a core slot (e.g. Weapon
     // Power-Up), rendered in the hidden/extra bar; duplicates allowed for this type.
@@ -1476,6 +1639,8 @@
   function weaponByName(name) { return D.weapons.find(w => w.name === name) || null; }
   function passiveByName(name) { return D.passives.find(p => p.name === name) || null; }
   function arcanaByName(name) { return D.arcana.find(a => a.name === name) || null; }
+  function charByName(name) { return D.characters.find(c => c.name === name) || null; }
+  function stageByName(name) { return (STAGES || []).find(s => s.name === name) || null; }
 
   // ── Affinities ────────────────────────────────────────────────────────────
   // "Affinity" = an internal tag-association between build objects (never surfaced by that
@@ -3265,6 +3430,7 @@
             <button class="btn" data-action="open-power-ups">Power-Ups</button>
             <button class="btn" data-action="open-seal">Seal Advisor</button>
             <button class="btn" data-action="open-collection">Manage Collection</button>
+            <button class="btn" data-action="open-builds">Builds</button>
             <button class="btn" data-action="open-appendix">Appendix</button>
             <button class="btn btn-back" data-action="change-player-count">⟵ Change Player Count</button>
           </div>
@@ -5519,6 +5685,87 @@
     state.collection.active = false;
   }
 
+  // ── Builds overlay ─────────────────────────────────────────────────────────
+  // Two sections: Featured (window.VS_BUILDS, read-only) and My Builds (localStorage,
+  // editable). Rows Load a build into the planner; the toolbar Saves the current planner
+  // as a new user build or Imports one from pasted JSON. See captureBuild/applyBuild.
+  function buildRowHTML(build, source, idx) {
+    const charName = build.players?.[0]?.character;
+    const icon = charName ? evoIcon(charName) : EMPTY_ICONS.char;
+    const tags = (build.tags || []).map(t => `<span class="build-tag">${esc(t)}</span>`).join('');
+    const meta = [
+      build.playerCount > 1 ? `${build.playerCount}P` : 'Solo',
+      build.author ? `by ${esc(build.author)}` : '',
+    ].filter(Boolean).join(' · ');
+    const userActions = source === 'user'
+      ? `<button class="btn btn-sm" data-action="rename-build" data-idx="${idx}">Rename</button>
+         <button class="btn btn-sm" data-action="export-build" data-source="user" data-idx="${idx}">Export</button>
+         <button class="btn btn-sm btn-danger" data-action="delete-build" data-idx="${idx}">Delete</button>`
+      : `<button class="btn btn-sm" data-action="export-build" data-source="featured" data-idx="${idx}">Export</button>`;
+    return `<div class="build-row">
+      <div class="build-row-icon"><img src="${esc(icon)}" alt="" onerror="this.src='${EMPTY_ICONS.char}'"></div>
+      <div class="build-row-main">
+        <div class="build-row-name">${esc(build.name || 'Untitled')}</div>
+        ${meta ? `<div class="build-row-meta">${meta}</div>` : ''}
+        ${build.description ? `<div class="build-row-desc">${esc(build.description)}</div>` : ''}
+        ${tags ? `<div class="build-tags">${tags}</div>` : ''}
+      </div>
+      <div class="build-row-actions">
+        <button class="btn btn-sm" data-action="load-build" data-source="${source}" data-idx="${idx}">Load ▸</button>
+        ${userActions}
+      </div>
+    </div>`;
+  }
+
+  function buildsSectionHTML(title, builds, source, emptyMsg) {
+    const rows = builds.length
+      ? builds.map((b, i) => buildRowHTML(b, source, i)).join('')
+      : `<div class="builds-empty">${emptyMsg}</div>`;
+    return `<div class="builds-section">
+      <h3 class="builds-section-title">${esc(title)} <span class="builds-count">${builds.length}</span></h3>
+      ${rows}
+    </div>`;
+  }
+
+  function renderBuildsOverlay() {
+    const featured = window.VS_BUILDS || [];
+    const user = state.builds.user;
+    const root = document.getElementById('overlay-root');
+    root.innerHTML = `
+      <div class="overlay-panel builds-panel">
+        <div class="overlay-header">
+          <h2>Builds</h2>
+          <button class="btn btn-icon overlay-close" data-action="builds-close">✕</button>
+        </div>
+        <div class="seal-controls">
+          <button class="btn btn-sm" data-action="save-build">＋ Save current build</button>
+          <button class="btn btn-sm" data-action="import-build">⬆ Import…</button>
+        </div>
+        <div class="builds-hint">Load fills the planner (characters, weapons, passives, arcana, stage). The Seal Advisor is left untouched.</div>
+        <div class="builds-scroll">
+          ${buildsSectionHTML('Featured', featured, 'featured', 'No featured builds bundled yet.')}
+          ${buildsSectionHTML('My Builds', user, 'user', 'None saved yet. Build a loadout, then “Save current build”.')}
+        </div>
+      </div>`;
+    root.classList.remove('hidden');
+    state.builds.active = true;
+  }
+
+  function closeBuildsOverlay() {
+    document.getElementById('overlay-root').classList.add('hidden');
+    state.builds.active = false;
+  }
+
+  // Copy text to clipboard with a file://-safe fallback (prompt shows selectable JSON).
+  function copyToClipboard(text, okMsg) {
+    const fallback = () => window.prompt('Copy this build JSON:', text);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => showToast(okMsg, 'ok'), fallback);
+    } else {
+      fallback();
+    }
+  }
+
   // ═══════════════════════════════════════════════════════
   //  EVENT HANDLERS
   // ═══════════════════════════════════════════════════════
@@ -5533,6 +5780,7 @@
         if (state.puActive) closePowerUpOverlay();
         else if (state.seal.active) closeSealOverlay();
         else if (state.collection.active) closeCollectionOverlay();
+        else if (state.builds.active) closeBuildsOverlay();
         else closeOverlay(false);
       }
       return;
@@ -5609,6 +5857,86 @@
       }
       saveCollection();
       refreshCollectionGrid(); return;
+    }
+
+    // ── Builds overlay actions ──
+    if (action === 'builds-close') { closeBuildsOverlay(); return; }
+    if (action === 'load-build') {
+      const idx = parseInt(btn.dataset.idx);
+      const list = btn.dataset.source === 'user' ? state.builds.user : (window.VS_BUILDS || []);
+      const build = list[idx];
+      if (!build) { showToast('Build not found', 'warn'); return; }
+      // Surface legality problems (featured builds are pre-validated at bundle time; this is a
+      // safety net). Load proceeds — applyBuild self-heals — but the user is told what's off.
+      const { errors } = validateBuildLegality(build);
+      closeBuildsOverlay();
+      applyBuild(build);
+      if (errors.length) showToast(`Loaded with ${errors.length} rule issue(s): ${errors[0]}`, 'warn');
+      return;
+    }
+    if (action === 'save-build') {
+      const name = window.prompt('Name this build:', 'My Build');
+      if (name == null) return; // cancelled
+      const tagsRaw = window.prompt('Tags (comma-separated, optional):', '') || '';
+      const tags = tagsRaw.split(',').map(t => t.trim()).filter(Boolean);
+      const build = captureBuild({ name: name.trim() || 'My Build', tags, author: '' });
+      state.builds.user.push(build);
+      saveBuilds();
+      renderBuildsOverlay();
+      showToast(`Saved "${build.name}"`, 'ok');
+      return;
+    }
+    if (action === 'rename-build') {
+      const idx = parseInt(btn.dataset.idx);
+      const build = state.builds.user[idx];
+      if (!build) return;
+      const name = window.prompt('Rename build:', build.name || '');
+      if (name == null) return;
+      build.name = name.trim() || build.name;
+      saveBuilds();
+      renderBuildsOverlay();
+      return;
+    }
+    if (action === 'delete-build') {
+      const idx = parseInt(btn.dataset.idx);
+      const build = state.builds.user[idx];
+      if (!build) return;
+      if (!window.confirm(`Delete "${build.name}"? This can't be undone.`)) return;
+      state.builds.user.splice(idx, 1);
+      saveBuilds();
+      renderBuildsOverlay();
+      return;
+    }
+    if (action === 'export-build') {
+      const idx = parseInt(btn.dataset.idx);
+      const list = btn.dataset.source === 'user' ? state.builds.user : (window.VS_BUILDS || []);
+      const build = list[idx];
+      if (!build) return;
+      copyToClipboard(JSON.stringify(build, null, 2), `Copied "${build.name}" JSON to clipboard`);
+      return;
+    }
+    if (action === 'import-build') {
+      const raw = window.prompt('Paste build JSON:');
+      if (raw == null || !raw.trim()) return;
+      let obj;
+      try { obj = JSON.parse(raw); }
+      catch (e) { showToast('Invalid JSON', 'warn'); return; }
+      if (!obj || obj.schema !== BUILD_SCHEMA || !Array.isArray(obj.players)) {
+        showToast('Not a valid build', 'warn'); return;
+      }
+      // Enforce the same legality rules as the planner — reject an illegal import outright so an
+      // erroneous build (missing requirements, wrong-stage Academy Badge, dupes, …) can't get in.
+      const { errors, warnings } = validateBuildLegality(obj);
+      if (errors.length) {
+        window.alert('Cannot import — this build breaks game rules:\n\n• ' + errors.join('\n• '));
+        return;
+      }
+      if (warnings.length) showToast(`Imported with ${warnings.length} warning(s): ${warnings[0]}`, 'warn');
+      state.builds.user.push(obj);
+      saveBuilds();
+      renderBuildsOverlay();
+      if (!warnings.length) showToast(`Imported "${obj.name || 'build'}"`, 'ok');
+      return;
     }
 
     // ── Seal overlay actions ──
@@ -5730,6 +6058,10 @@
     }
     if (action === 'open-collection') {
       renderCollectionOverlay();
+      return;
+    }
+    if (action === 'open-builds') {
+      renderBuildsOverlay();
       return;
     }
     if (action === 'open-appendix') {
@@ -6313,6 +6645,7 @@
     if (state.puActive) { closePowerUpOverlay(); return; }
     if (state.seal.active) { closeSealOverlay(); return; }
     if (state.collection.active) { closeCollectionOverlay(); return; }
+    if (state.builds.active) { closeBuildsOverlay(); return; }
     if (!state.overlay) return;
     const { fromEmpty } = state.overlay;
     const hasSelection = !!state.ovl.selected;
@@ -6335,6 +6668,7 @@
     STAGES = D.stages || [];
     D.stats.forEach(s => { state.powerUps[s.name] = s.max_level; });
     loadCollection();
+    loadBuilds();
     render();
     // Bind once to persistent elements — survives innerHTML replacements
     document.getElementById('app').addEventListener('click', handleAppClick);
