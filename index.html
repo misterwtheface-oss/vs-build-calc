@@ -548,6 +548,10 @@
       gap: .5rem;
       flex-wrap: wrap;
     }
+    /* Stage label + icon are grouped so they can travel together. On desktop `display:contents`
+       makes the wrapper invisible to layout (label + slot render exactly as before); mobile turns
+       it into a column so the label sits above the icon and the pair wraps as one unit. */
+    .global-stage-group { display: contents; }
 
     /* ── Player card ── */
     .player-card {
@@ -604,6 +608,16 @@
     }
     .slot:hover .slot-remove { display: flex; }
     .slot .slot-remove:hover { color: var(--accent); }
+    /* Touch devices have no hover to reveal the × on demand, so show it faintly at all times and
+       require a two-tap confirm (JS arms it → .armed). Armed = prominent red so the confirm is
+       deliberate. Hidden weapons keep their !important display:none and stay non-removable. */
+    @media (hover: none) {
+      .slot .slot-remove { display: flex; opacity: .5; }
+      .slot .slot-remove.armed {
+        opacity: 1; background: #c0392b; color: #fff;
+        width: 20px; height: 20px; font-size: 12px;
+      }
+    }
     .slot.hidden-weapon { opacity: .4; cursor: default; }
     .slot.hidden-weapon:hover img { filter: none; }
     .slot.hidden-weapon .slot-remove { display: none !important; }
@@ -1408,12 +1422,6 @@
     }
     .stage-tile:hover img { filter: brightness(1.2); }
     .stage-tile.selected img { box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(232,184,32,.55); }
-    .stage-tile-name {
-      font-size: .72rem; text-align: center; line-height: 1.15;
-      color: var(--text-muted);
-    }
-    .stage-tile:hover .stage-tile-name { color: var(--text); }
-    .stage-tile.selected .stage-tile-name { color: var(--gold); }
     /* stage image in the detail panel — same landscape aspect */
     .stage-detail-img img {
       width: 100%;
@@ -1471,6 +1479,12 @@
       .planning-main { overflow: visible; }
       .global-row { max-width: 100%; padding: .5rem .6rem; }
       .players-grid, .players-grid.p3, .players-grid.p4 { grid-template-columns: 1fr; max-width: 100%; }
+      /* Stage label + icon travel together as a column (label above icon) and wrap as one unit,
+         so an extra Arcana can't strand the Stage icon on its own line away from its label. The
+         desktop right-push spacer is dropped so the group flows next to the arcana instead. */
+      .global-row-spacer { display: none; }
+      .global-stage-group { display: inline-flex; flex-direction: column; align-items: center; gap: .12rem; }
+      .global-stage-group .slot-row-label { width: auto !important; margin: 0 !important; }
 
       /* ── Player card: character on top, slots below; slot rows wrap ── */
       .player-header { flex-wrap: wrap; gap: .3rem; }
@@ -1486,11 +1500,15 @@
       .ovl-center, .ovl-center-wide { order: 1; overflow: visible; }
       .ovl-right { order: 2; width: 100%; border-left: none; border-top: 1px solid var(--border); }
       .ovl-left  { order: 3; border-right: none; border-top: 1px solid var(--border); }
-      /* Keep the item grid scannable in its own bounded scroll; stats/detail sit below it. */
-      .ovl-center-scroll { max-height: 58vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      /* Single scroller on mobile = the overlay body (its scroll is preserved across selections in
+         refreshOverlay). The grid flows naturally instead of nesting a 2nd scroll region that reset. */
+      .ovl-center-scroll { max-height: none; overflow: visible; }
       .ovl-left { overflow: visible; }
       .ovl-right-body { overflow: visible; }
       .ovl-right-top .detail-icon { width: 72px; height: 72px; }
+      /* Stage picker: two smaller side-by-side tiles instead of one big column (names removed;
+         the icon art already contains the stage name). */
+      .stage-grid { grid-template-columns: repeat(2, 1fr); gap: .5rem; }
 
       /* Stat table shrinks to fit narrow screens */
       .ovl-left .stat-row { grid-template-columns: 1fr 40px 40px 46px 52px; font-size: .76rem; }
@@ -3647,9 +3665,11 @@
                 <span class="slot-row-label">Arcana</span>
                 ${gASlots}
                 ${gExtraArcanaRow}
-                <div style="flex:1"></div>
-                <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
-                ${gStageSlot}
+                <div class="global-row-spacer" style="flex:1"></div>
+                <div class="global-stage-group">
+                  <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
+                  ${gStageSlot}
+                </div>
               </div>
             </div>
             <div class="players-grid p${playerCount}">${playerCards}</div>
@@ -4209,7 +4229,6 @@
       const icon = stage.icon || EMPTY_ICONS.stage;
       tiles += `<div class="stage-tile${isSel ? ' selected' : ''}" data-action="ovl-select-stage" data-stage="${esc(stage.name)}" title="${esc(stage.name)}">
         <img src="${esc(icon)}" alt="${esc(stage.name)}" onerror="this.src='${EMPTY_ICONS.stage}'">
-        <span class="stage-tile-name">${esc(stage.name)}</span>
       </div>`;
     }
 
@@ -4944,11 +4963,13 @@
     else if (type === 'arcana') inner = arcanaOverlayHTML(slotIdx);
     else if (type === 'stage')  inner = stageOverlayHTML();
     const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
-    const scroller = panel.querySelector('.ovl-center-scroll');
-    const scrollTop = scroller ? scroller.scrollTop : 0;
+    // Preserve scroll across the re-render for BOTH scrollers: the grid (.ovl-center-scroll, used
+    // on desktop) and the whole panel body (.overlay-body, the single scroller on mobile). Selecting
+    // an item must never fling the list back to the top.
+    const SCROLLERS = ['.overlay-body', '.ovl-center-scroll'];
+    const saved = SCROLLERS.map(sel => { const el = panel.querySelector(sel); return el ? el.scrollTop : 0; });
     panel.innerHTML = inner;
-    const newScroller = panel.querySelector('.ovl-center-scroll');
-    if (newScroller) newScroller.scrollTop = scrollTop;
+    SCROLLERS.forEach((sel, i) => { const el = panel.querySelector(sel); if (el) el.scrollTop = saved[i]; });
     const searchInput = panel.querySelector('.ovl-search');
     if (searchInput && state.ovl.search) {
       searchInput.value = state.ovl.search;
@@ -6451,6 +6472,15 @@
     }
   }
 
+  // Touch/no-hover devices show the corner remove × permanently (no hover to reveal it on demand),
+  // which makes accidental removal easy. `armedRemoveEl` tracks a × awaiting its confirm tap.
+  const NO_HOVER = window.matchMedia('(hover: none)');
+  let armedRemoveEl = null, armRemoveTimer = null;
+  function disarmRemove() {
+    if (armRemoveTimer) { clearTimeout(armRemoveTimer); armRemoveTimer = null; }
+    if (armedRemoveEl) { armedRemoveEl.classList.remove('armed'); armedRemoveEl = null; }
+  }
+
   function handleAppClick(e) {
     // Left-click an evo-path node (info panel) → open that object's detail page. (Right-click
     // still quick-adds via handleAppContextMenu — untouched.) Nodes carry data-evo-item, not
@@ -6458,7 +6488,22 @@
     const evoEl = e.target.closest('[data-evo-item]');
     if (evoEl) { openRef(resolveRef(evoEl.dataset.evoItem), state.infoPanel?.playerIdx ?? 0); return; }
     const btn = e.target.closest('[data-action]');
-    if (!btn) return;
+    if (!btn) { if (NO_HOVER.matches) disarmRemove(); return; }
+
+    // Two-tap confirm for the tiny corner remove (×) on touch/no-hover devices, where it can't be
+    // hover-gated and so is easy to fat-finger. First tap arms it (turns red); a second tap on the
+    // SAME × removes; any other tap disarms. Desktop (has hover) is unaffected.
+    if (NO_HOVER.matches) {
+      const remBtn = btn.classList.contains('slot-remove') ? btn : null;
+      if (remBtn && armedRemoveEl !== remBtn) {
+        e.preventDefault(); e.stopPropagation();
+        disarmRemove();
+        armedRemoveEl = remBtn; remBtn.classList.add('armed');
+        armRemoveTimer = setTimeout(disarmRemove, 3000);
+        return;
+      }
+      disarmRemove(); // 2nd tap on the armed × falls through to remove; other taps just clear it
+    }
     const action = btn.dataset.action;
     const playerIdx = parseInt(btn.dataset.player ?? '0');
     const slotIdx   = parseInt(btn.dataset.slot   ?? '0');
