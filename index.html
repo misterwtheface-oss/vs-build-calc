@@ -1517,8 +1517,16 @@
       .player-header-actions { flex-wrap: wrap; }
       .player-body { flex-direction: column; gap: .6rem; padding: .6rem; }
       .char-col { align-self: center; }
-      .slot-row { flex-wrap: wrap; }
       .slot-row-label { width: 100%; margin-bottom: .1rem; }
+      /* Center the weapon/passive rows (like the centered character) and keep them on ONE line.
+         Slots stay full size until they'd overflow (a 7th slot), then shrink to fit instead of
+         wrapping. Hidden/absorbed rows still wrap (they can hold many items), just centered. */
+      .slots-col .slot-row:not(.slot-row-hidden) { flex-wrap: nowrap; justify-content: center; gap: .35rem; }
+      .slots-col .slot-row:not(.slot-row-hidden) .slot {
+        flex: 0 1 var(--slot-size); min-width: 0; max-width: var(--slot-size);
+        width: auto; height: auto; aspect-ratio: 1;
+      }
+      .slots-col .slot-row-hidden { flex-wrap: wrap; justify-content: center; }
 
       /* ── Selection overlay (mobile): exactly TWO scroll regions — the grid and ONE info panel.
          Nothing selected → the grid is the whole screen. Something selected → grid on the top half,
