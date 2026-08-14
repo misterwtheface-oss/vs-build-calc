@@ -1695,7 +1695,7 @@
     detail: { stack: [], idx: -1, player: 0, appendixQuery: '', appendixTraits: [] },
     // Build loadouts overlay. `user` = localStorage-backed builds (vsbc.builds); featured
     // builds live in window.VS_BUILDS. See captureBuild/applyBuild and builds/SCHEMA.md.
-    builds: { active: false, user: [], charScope: null },
+    builds: { active: false, user: [], charScope: null, hideFeatured: false },
   };
 
   // ── Collection persistence (localStorage; first persisted state in the app) ──
@@ -1866,6 +1866,17 @@
       const arr = JSON.parse(raw);
       if (Array.isArray(arr)) state.builds.user = arr.filter(b => b && b.schema === BUILD_SCHEMA);
     } catch (e) { /* malformed — ignore, keep defaults */ }
+  }
+  // "Hide featured builds" is a single GLOBAL preference (not per-character): once set it
+  // suppresses the repo-bundled Featured section for every character scope.
+  const FEATURED_HIDE_KEY = 'vsbc.hideFeatured';
+  function saveFeaturedPref() {
+    try { localStorage.setItem(FEATURED_HIDE_KEY, state.builds.hideFeatured ? '1' : '0'); }
+    catch (e) { /* file:// or private mode — persistence just no-ops */ }
+  }
+  function loadFeaturedPref() {
+    try { state.builds.hideFeatured = localStorage.getItem(FEATURED_HIDE_KEY) === '1'; }
+    catch (e) { /* ignore — keep default (shown) */ }
   }
 
   // Run the shared legality validator (builds/validate.js) against the current game data.
@@ -4481,7 +4492,8 @@
     const attrs = ref.kind === 'affinity'
       ? `data-action="nav-affinity" data-affinity="${esc(ref.name)}"`
       : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(ref.name)}"${opts?.quickAdd ? ` data-evo-item="${esc(ref.name)}"` : ''}`;
-    const cls = 'ref-nav-icon' + (ref.sprite ? ' sprite' : ref.arcana ? ' arcana' : '');
+    const unc = ref.kind !== 'affinity' && objUncollected(ref.type, ref.name) ? ' uncollected' : '';
+    const cls = 'ref-nav-icon' + (ref.sprite ? ' sprite' : ref.arcana ? ' arcana' : '') + unc;
     const title = opts?.quickAdd && ref.kind !== 'affinity' ? `${ref.name} — click for details, right-click to add` : ref.name;
     return `<span class="${cls}" ${attrs} title="${esc(title)}"><img src="${esc(ref.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
   }
@@ -4706,6 +4718,10 @@
       </details>`;
     }
     const infoEntries = combo ? [] : affinityInfoEntries(primary.name);
+    // Objects that already appear (with their art) in an info-blurb entry on this page. They
+    // must not be repeated as bare icons in the category grids below — each object shows once
+    // per detail page. (An object in >1 blurb still shows once per blurb; that's the blurb side.)
+    const blurbedNames = new Set(infoEntries.flatMap(e => e.objects));
     const blurbsFor = t => {
       const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t).map(e => infoEntryHTML(e)).join('');
       return cells ? `<div class="detail-info-grid">${cells}</div>` : '';
@@ -4721,12 +4737,13 @@
       const catBlurbs = blurbsFor(cat.type);
       if (!catNames.length && !catBlurbs) continue;
       const entries = detailCatEntries(cat, catNames, primary.name); // [{navName,title,icon}], deduped for chars
-      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}" data-action="nav-object" data-detail-type="${cat.type}"
+      const gridEntries = entries.filter(e => !blurbedNames.has(e.navName)); // drop the blurbed ones
+      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}${objUncollected(cat.type, e.navName) ? ' uncollected' : ''}" data-action="nav-object" data-detail-type="${cat.type}"
           data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
       main += `<details class="detail-cat" open>
         <summary class="detail-cat-label">${cat.label} <span style="color:var(--text-dim);font-size:.75rem">(${entries.length})</span></summary>
         ${catBlurbs}
-        <div class="aff-icon-grid">${entries.map(iconCell).join('')}</div>
+        ${gridEntries.length ? `<div class="aff-icon-grid">${gridEntries.map(iconCell).join('')}</div>` : ''}
       </details>`;
     }
     if (!main) main = combo
@@ -4779,15 +4796,19 @@
 
   // Mirror the selector overlays' dimming: when collection tracking is on, an object the
   // player doesn't own reads as `.uncollected` (dim + 🔒). Traits aren't collectible.
-  function appendixUncollected(entry) {
-    if (!collectionEnabled() || entry.kind !== 'object') return false;
-    switch (entry.type) {
-      case 'weapon':    return !weaponAccessible(entry.name);
-      case 'passive':   return !passiveAccessible(entry.name);
-      case 'character': return !charAccessible(entry.name);
-      case 'arcana':    return !arcanaAccessible(entry.name);
+  // Shared by the Appendix rows AND the Detail-page ref/category icon grids (parity).
+  function objUncollected(type, name) {
+    if (!collectionEnabled()) return false;
+    switch (type) {
+      case 'weapon':    return !weaponAccessible(name);
+      case 'passive':   return !passiveAccessible(name);
+      case 'character': return !charAccessible(name);
+      case 'arcana':    return !arcanaAccessible(name);
       default:          return false;
     }
+  }
+  function appendixUncollected(entry) {
+    return entry.kind === 'object' && objUncollected(entry.type, entry.name);
   }
 
   function appendixRow(entry, extraCls) {
@@ -5072,18 +5093,27 @@
     const { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem } = state.overlay;
     const sel = state.ovl.selected;
 
-    // Collection gate: an unowned item can still be selected to VIEW its info, but it
-    // cannot be committed to a tile. Block the commit (keep the overlay open) with a toast.
-    if (sel && collectionEnabled() && (confirmed || (fromEmpty && sel))) {
+    // Should we commit the current selection? An explicit Confirm always does; an empty slot
+    // auto-commits its selection on a plain dismiss (X / ESC / click-away) as a convenience.
+    let applying = confirmed || (fromEmpty && sel);
+
+    // Collection gate: an unowned item can be selected to VIEW its info, but it can't be
+    // committed to a tile. On explicit Confirm, block with a toast and keep the overlay open.
+    // On a plain dismiss, DON'T commit it and just let the window close — the user is only
+    // closing the overlay, not trying to add the item.
+    if (applying && sel && collectionEnabled()) {
       let ok = true;
       if (type === 'char')             ok = charAccessible(sel.name);
       else if (type === 'arcana')      ok = arcanaAccessible(sel.name);
       else if (slotType === 'weapon')  ok = weaponAccessible(sel.name);
       else if (slotType === 'passive') ok = passiveAccessible(sel.name);
-      if (!ok) { showToast(`${sel.name} is not in your collection`, 'err'); return; }
+      if (!ok) {
+        if (confirmed) { showToast(`${sel.name} is not in your collection`, 'err'); return; }
+        applying = false; // plain dismiss → close without committing the uncollected item
+      }
     }
 
-    if (confirmed || (fromEmpty && sel)) {
+    if (applying) {
       // Apply selection
       const fp = state.overlay.freePick;
       if (fp) {
@@ -6289,12 +6319,16 @@
           <button class="btn btn-sm" data-action="save-build">＋ Save current build</button>
           <button class="btn btn-sm" data-action="import-build">⬆ Import…</button>
           ${scoped ? `<button class="btn btn-sm" data-action="open-builds">All builds ▸</button>` : ''}
+          <label title="Hide the repo-bundled Featured builds for every character (global)">
+            <input type="checkbox" id="builds-featured-chk" ${state.builds.hideFeatured ? 'checked' : ''}>
+            Hide featured builds
+          </label>
         </div>
         <div class="builds-hint">${scoped
           ? `Showing builds that run ${esc(charScope)}. Save captures the current planner. Load fills the planner; the Seal Advisor is left untouched.`
           : `Load fills the planner (characters, weapons, passives, arcana, stage). The Seal Advisor is left untouched.`}</div>
         <div class="builds-scroll">
-          ${buildsSectionHTML('Featured', entries(featured), 'featured', scoped ? `No featured builds for ${esc(charScope)}.` : 'No featured builds bundled yet.')}
+          ${state.builds.hideFeatured ? '' : buildsSectionHTML('Featured', entries(featured), 'featured', scoped ? `No featured builds for ${esc(charScope)}.` : 'No featured builds bundled yet.')}
           ${buildsSectionHTML('My Builds', entries(user), 'user', scoped ? `No saved builds for ${esc(charScope)} yet. Build a loadout, then “Save current build”.` : 'None saved yet. Build a loadout, then “Save current build”.')}
         </div>
       </div>`;
@@ -7237,10 +7271,10 @@
     if (state.collection.active) { closeCollectionOverlay(); return; }
     if (state.builds.active) { closeBuildsOverlay(); return; }
     if (!state.overlay) return;
-    const { fromEmpty } = state.overlay;
-    const hasSelection = !!state.ovl.selected;
-    if (fromEmpty && hasSelection) closeOverlay(true);
-    else closeOverlay(false);
+    // ESC is a DISMISS gesture (like the ✕ / click-away): pass false. closeOverlay still
+    // auto-commits an empty-slot selection via its own `fromEmpty && sel` path, but an
+    // uncollected pick is dropped rather than blocking the close.
+    closeOverlay(false);
   });
 
   // ═══════════════════════════════════════════════════════
@@ -7259,6 +7293,7 @@
     D.stats.forEach(s => { state.powerUps[s.name] = s.max_level; });
     loadCollection();
     loadBuilds();
+    loadFeaturedPref();
     render();
     // Bind once to persistent elements — survives innerHTML replacements
     document.getElementById('app').addEventListener('click', handleAppClick);
@@ -7313,6 +7348,12 @@
         state.collection.enabled = e.target.checked;
         saveCollection();
         renderCollectionOverlay();
+        return;
+      }
+      if (e.target.id === 'builds-featured-chk') {
+        state.builds.hideFeatured = e.target.checked;
+        saveFeaturedPref();
+        renderBuildsOverlay();
         return;
       }
       if (e.target.id !== 'seal-passives-chk') return;
