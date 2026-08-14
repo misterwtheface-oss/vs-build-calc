@@ -955,6 +955,16 @@
     .ovl-center, .ovl-center-wide { order: 2; }
     .ovl-right { order: 3; }
 
+    /* Overscroll containment: overscrolling inside ANY overlay's scroll region must not chain to /
+       nudge the planner behind it. One rule for every overlay scroller (selection, detail/appendix,
+       seal, collection, builds, power-ups). Purely a scroll-chaining behavior — no layout change.
+       (Excludes the planner's own .planning-main / .sidebar-body, which aren't overlays.) */
+    .ovl-center-scroll, .ovl-left, .ovl-right-body, .ovl-info,
+    .detail-main, .detail-left, .detail-body, .xref-wrap, .aff-add-list,
+    .seal-grid-wrap, .collection-grid-wrap, .builds-scroll, .pu-list-wrap {
+      overscroll-behavior: contain;
+    }
+
     /* left panel (stats) */
     .ovl-left {
       width: 320px;
