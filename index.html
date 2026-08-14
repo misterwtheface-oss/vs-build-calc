@@ -947,6 +947,13 @@
       flex: 1;
       overflow: hidden;
     }
+    /* Right + left info panels are wrapped in .ovl-info so mobile can scroll them as ONE region
+       (detail above stats). On desktop the wrapper is display:contents — invisible to layout — and
+       `order` restores the exact left | center | right arrangement, so the web layout is unchanged. */
+    .ovl-info { display: contents; }
+    .ovl-left { order: 1; }
+    .ovl-center, .ovl-center-wide { order: 2; }
+    .ovl-right { order: 3; }
 
     /* left panel (stats) */
     .ovl-left {
@@ -1503,35 +1510,35 @@
       .slot-row { flex-wrap: wrap; }
       .slot-row-label { width: 100%; margin-bottom: .1rem; }
 
-      /* ── Selection overlay (mobile): nothing selected → the grid is the whole screen; once
-         something IS selected → grid on the top half, the info panels on the bottom half, each
-         with its OWN scroll that a selection never resets. `.has-selection` is toggled in JS from
-         state.ovl.selected. Desktop keeps its 3-column layout (these rules are mobile-only). ── */
+      /* ── Selection overlay (mobile): exactly TWO scroll regions — the grid and ONE info panel.
+         Nothing selected → the grid is the whole screen. Something selected → grid on the top half,
+         and .ovl-info on the bottom half as a SINGLE scroller holding the detail (right) followed by
+         the stats (left). Headers aren't locked, so there's no dead zone; overscroll-behavior stops
+         chaining to the page behind. `.has-selection` is toggled in JS from state.ovl.selected.
+         Desktop keeps its 3-column layout (these rules are mobile-only). ── */
       .overlay-body { flex-direction: column; overflow: hidden; overscroll-behavior: contain; }
-      .ovl-left, .ovl-center, .ovl-center-wide, .ovl-right {
-        width: 100%; border-left: none; border-right: none; min-height: 0;
-      }
-      .ovl-center, .ovl-center-wide { order: 1; display: flex; flex-direction: column; overflow: hidden; }
-      /* Info panels: unlike the web layout, DON'T lock the header (.ovl-right-top icon+name). The
-         whole panel scrolls as one so there's no dead zone to swipe on, and overscroll-behavior
-         keeps an overscroll from chaining to the page behind the overlay (the "clunky" feel). */
-      .ovl-right { order: 2; border-top: 1px solid var(--border); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
-      .ovl-right-body { flex: none; min-height: 0; overflow: visible; }
-      .ovl-left  { order: 3; border-top: 1px solid var(--border); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
-      /* Grid keeps its own scroll region; each info panel scrolls as one unit. All preserved across
-         a re-render in refreshOverlay. */
+      .ovl-center, .ovl-center-wide { order: 1; width: 100%; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
       .ovl-center-scroll { flex: 1; min-height: 0; max-height: none; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
-      /* Nothing selected → grid fills the screen, info panels hidden. */
+      /* The one info scroller. Its panels (detail then stats) flow inside it — no inner scrollers,
+         no locked headers — so the whole thing scrolls as a single window. */
+      .ovl-info {
+        display: flex; flex-direction: column; order: 2; width: 100%; min-height: 0;
+        overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+      }
+      .ovl-info .ovl-right, .ovl-info .ovl-left {
+        order: 0; width: 100%; flex: none; min-height: 0; overflow: visible;
+        border-left: none; border-right: none;
+      }
+      .ovl-info .ovl-left { border-top: 1px solid var(--border); }
+      .ovl-info .ovl-right-body { flex: none; overflow: visible; }
+      /* Nothing selected → grid fills the screen, info hidden. */
       .overlay-body:not(.has-selection) .ovl-center,
       .overlay-body:not(.has-selection) .ovl-center-wide { flex: 1 1 100%; }
-      .overlay-body:not(.has-selection) .ovl-left,
-      .overlay-body:not(.has-selection) .ovl-right { display: none; }
-      /* Something selected → grid = top half, info panels share the bottom half (detail gets the
-         larger share; stats below it). Each keeps its own scroll. */
+      .overlay-body:not(.has-selection) .ovl-info { display: none; }
+      /* Something selected → grid = top half, the single info panel = bottom half. */
       .overlay-body.has-selection .ovl-center,
       .overlay-body.has-selection .ovl-center-wide { flex: 0 0 50%; }
-      .overlay-body.has-selection .ovl-right { flex: 3 1 0; }
-      .overlay-body.has-selection .ovl-left  { flex: 2 1 0; }
+      .overlay-body.has-selection .ovl-info { flex: 1 1 0; }
       .ovl-right-top .detail-icon { width: 72px; height: 72px; }
       /* Stage picker: two smaller side-by-side tiles instead of one big column (names removed;
          the icon art already contains the stage name). */
@@ -3792,14 +3799,16 @@
         <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
       </div>
       <div class="overlay-body">
-        <div class="ovl-left">${left}</div>
         <div class="ovl-center">
           <div class="ovl-center-search">${searchBarHTML('Search characters…')}</div>
           <div class="ovl-center-scroll"><div class="char-grid">${cards}</div></div>
         </div>
-        <div class="ovl-right">
-          <div class="ovl-right-top">${rightTop}</div>
-          <div class="ovl-right-body">${rightBody}</div>
+        <div class="ovl-info">
+          <div class="ovl-right">
+            <div class="ovl-right-top">${rightTop}</div>
+            <div class="ovl-right-body">${rightBody}</div>
+          </div>
+          <div class="ovl-left">${left}</div>
         </div>
       </div>
       <div class="overlay-footer">
@@ -4070,9 +4079,11 @@
         <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
       </div>
       <div class="overlay-body">
-        <div class="ovl-left">${leftHTML}</div>
         <div class="ovl-center">${centerHTML}</div>
-        <div class="ovl-right">${rightHTML}</div>
+        <div class="ovl-info">
+          <div class="ovl-right">${rightHTML}</div>
+          <div class="ovl-left">${leftHTML}</div>
+        </div>
       </div>
       <div class="overlay-footer">
         <button class="btn btn-back" data-action="ovl-close">Cancel</button>
@@ -4138,12 +4149,14 @@
         <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
       </div>
       <div class="overlay-body">
-        <div class="ovl-left">${leftHTML}</div>
         <div class="ovl-center">
           <div class="ovl-center-search">${searchBarHTML('Search passives…')}</div>
           <div class="ovl-center-scroll"><div class="item-grid">${cards}</div></div>
         </div>
-        <div class="ovl-right">${rightHTML}</div>
+        <div class="ovl-info">
+          <div class="ovl-right">${rightHTML}</div>
+          <div class="ovl-left">${leftHTML}</div>
+        </div>
       </div>
       <div class="overlay-footer">
         <button class="btn btn-back" data-action="ovl-close">Cancel</button>
@@ -4234,7 +4247,9 @@
           <div class="ovl-center-search">${searchBarHTML('Search arcana…')}</div>
           <div class="ovl-center-scroll"><div class="arcana-grid">${cards}</div></div>
         </div>
-        <div class="ovl-right">${rightHTML}</div>
+        <div class="ovl-info">
+          <div class="ovl-right">${rightHTML}</div>
+        </div>
       </div>
       <div class="overlay-footer">
         <button class="btn btn-back" data-action="ovl-close">Cancel</button>
@@ -4282,7 +4297,9 @@
       </div>
       <div class="overlay-body">
         <div class="ovl-center"><div class="ovl-center-scroll"><div class="stage-grid">${tiles}</div></div></div>
-        <div class="ovl-right">${rightHTML}</div>
+        <div class="ovl-info">
+          <div class="ovl-right">${rightHTML}</div>
+        </div>
       </div>
       <div class="overlay-footer">
         <button class="btn btn-back" data-action="ovl-close">Cancel</button>
@@ -5002,10 +5019,10 @@
     else if (type === 'stage')  inner = stageOverlayHTML();
     const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
     // Preserve scroll across the re-render for every independent scroll region — the grid
-    // (.ovl-center-scroll), the stats (.ovl-left), and the detail panel (which scrolls on its body
-    // on desktop, but as the whole .ovl-right on mobile where its header is unlocked). Selecting an
-    // item must never fling any of them back to the top.
-    const SCROLLERS = ['.ovl-center-scroll', '.ovl-left', '.ovl-right-body', '.ovl-right'];
+    // (.ovl-center-scroll), the mobile single info scroller (.ovl-info), and the desktop info
+    // scrollers (.ovl-left stats + .ovl-right-body detail). Selecting an item must never fling any
+    // of them back to the top.
+    const SCROLLERS = ['.ovl-center-scroll', '.ovl-info', '.ovl-left', '.ovl-right-body'];
     const saved = SCROLLERS.map(sel => { const el = panel.querySelector(sel); return el ? el.scrollTop : 0; });
     panel.innerHTML = inner;
     SCROLLERS.forEach((sel, i) => { const el = panel.querySelector(sel); if (el) el.scrollTop = saved[i]; });
