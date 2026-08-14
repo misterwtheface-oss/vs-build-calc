@@ -1574,8 +1574,11 @@
       /* Combo-trait picker popover fits the viewport */
       .aff-add-pop { width: min(88vw, 300px); }
 
-      /* Seal / collection dense grids wrap to width instead of overflowing 8-wide */
-      .seal-grid { grid-template-columns: repeat(auto-fill, var(--slot-size)); justify-content: center; }
+      /* Keep the full 8-icon width on mobile (matches web) for the seal grid + collection W&P tab.
+         The desktop rule's width:fit-content made `auto-fill` collapse to a single column; use fixed
+         8 columns with fluid (1fr) tracks + fluid cells so all 8 always fit the phone width. */
+      .seal-grid { grid-template-columns: repeat(8, 1fr); width: auto; margin: 0; }
+      .seal-cell { width: 100%; height: auto; aspect-ratio: 1; }
       .seal-controls { gap: .45rem; }
 
       /* Builds rows: keep actions from squishing the name */
