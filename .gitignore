@@ -5,3 +5,6 @@ Progress.md
 # GitHub Pages requires .nojekyll to serve this vanilla-JS site verbatim
 # (without it the Jekyll build fails). Never ignore it.
 !.nojekyll
+
+# Windows-generated per-folder view settings (System+Hidden); never our files
+desktop.ini
