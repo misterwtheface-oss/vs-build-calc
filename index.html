@@ -1573,7 +1573,17 @@
       .detail-left .detail-name { font-size: 1.3rem; }
       .detail-main { overflow: visible; padding: 1rem 1.1rem; }
       .detail-info-grid { grid-template-columns: 1fr; }
-      .xref-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      /* The trait matrix is one tall block inside the overlay's single vertical scroller: a
+         swipe up ANYWHERE (header, table, margin) carries the whole page up, headers included.
+         The table only needs to pan HORIZONTALLY to reach far-right columns. No max-height, so
+         the box has no vertical scroll of its own to trap the gesture; touch-action:pan-x hands
+         every vertical swipe to the overlay scroller while keeping horizontal pan on the table. */
+      .xref-wrap { overflow-x: auto; overflow-y: visible; -webkit-overflow-scrolling: touch; touch-action: pan-x; }
+      /* Headers are sticky on desktop; on mobile the top column-header row and the bottom totals
+         row must scroll away with the page instead of locking, so drop their vertical pinning.
+         Row labels keep only their horizontal (left) stick, which doesn't impede vertical scroll. */
+      .player-xref thead th, .xref-shared th, .xref-shared td { position: static; }
+      .xref-corner { top: auto; }
 
       /* Combo-trait picker popover fits the viewport */
       .aff-add-pop { width: min(88vw, 300px); }
@@ -2111,15 +2121,9 @@
   function isOwned(kind, name) { return !state.collection.unowned[kind].has(name); }
   function passiveAccessible(name) { return !collectionEnabled() || isOwned('passives', name); }
   function charAccessible(name)    { return !collectionEnabled() || isOwned('characters', name); }
+  // Arcana and Darkana are SEPARATE collectables — each is owned/unowned by its own name,
+  // even though a pair shares a base_num. One being uncollected never gates the other.
   function arcanaAccessible(name)  { return !collectionEnabled() || isOwned('arcana', name); }
-  // Arcana + its Darkana variant share one unlock, keyed on the Arcana name. Resolve any
-  // variant name to that key before checking (a Darkana is accessible iff its Arcana is).
-  function arcanaAccessibleByAny(name) {
-    const a = arcanaByName(name);
-    if (!a) return true;
-    const key = D.arcana.find(x => x.base_num === a.base_num && x.type === 'Arcana') || a;
-    return arcanaAccessible(key.name);
-  }
   // A weapon is accessible iff every BASE in its full backward chain (incl. union
   // partners — they share the final as their trans_result) is owned AND every passive
   // any chain member requires is owned. Reuses collectWeaponChain + collectChainPassives.
@@ -4231,8 +4235,8 @@
       } else {
         const display = cur || arcana;
         const isUsed  = !isSel && equippedElsewhere.has(display.name);
-        // Arcana/Darkana share one unlock (keyed on the Arcana name in the collection).
-        const inaccessible = !arcanaAccessible((arcana || display).name);
+        // Arcana and Darkana are collected separately — gate on the displayed variant's own name.
+        const inaccessible = !arcanaAccessible(display.name);
         cards += `<div class="item-card${isSel ? ' selected' : ''}${isUsed ? ' consumed' : ''}${inaccessible && !isSel && !isUsed ? ' uncollected' : ''}"
           ${isUsed ? '' : 'data-action="ovl-select-arcana"'} data-arcana="${esc(display.name)}" data-base="${esc(key)}"
           data-search="${searchVal}" title="${esc(display.name)} (${display.type})${isUsed ? ' — already equipped' : inaccessible ? ' — not in your collection' : ''}">
@@ -4775,11 +4779,25 @@
     return appendixRow(entry);
   }
 
+  // Mirror the selector overlays' dimming: when collection tracking is on, an object the
+  // player doesn't own reads as `.uncollected` (dim + 🔒). Traits aren't collectible.
+  function appendixUncollected(entry) {
+    if (!collectionEnabled() || entry.kind !== 'object') return false;
+    switch (entry.type) {
+      case 'weapon':    return !weaponAccessible(entry.name);
+      case 'passive':   return !passiveAccessible(entry.name);
+      case 'character': return !charAccessible(entry.name);
+      case 'arcana':    return !arcanaAccessible(entry.name);
+      default:          return false;
+    }
+  }
+
   function appendixRow(entry, extraCls) {
     const dataAttrs = entry.kind === 'affinity'
       ? `data-action="nav-affinity" data-affinity="${esc(entry.name)}"`
       : `data-action="nav-object" data-detail-type="${entry.type}" data-detail-name="${esc(entry.name)}"`;
-    return `<div class="appendix-row ${extraCls || ''}" ${dataAttrs} title="${esc(entry.name)}">
+    const unc = appendixUncollected(entry) ? ' uncollected' : '';
+    return `<div class="appendix-row ${extraCls || ''}${unc}" ${dataAttrs} title="${esc(entry.name)}">
       <span class="appendix-icon ${entry.sprite ? 'sprite' : ''}"><img src="${esc(entry.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>
       <span class="appendix-row-name">${esc(entry.name)}</span>
       <span class="appendix-row-kind">${esc(entry.tag)}</span>
@@ -5061,7 +5079,7 @@
     if (sel && collectionEnabled() && (confirmed || (fromEmpty && sel))) {
       let ok = true;
       if (type === 'char')             ok = charAccessible(sel.name);
-      else if (type === 'arcana')      ok = arcanaAccessibleByAny(sel.name);
+      else if (type === 'arcana')      ok = arcanaAccessible(sel.name);
       else if (slotType === 'weapon')  ok = weaponAccessible(sel.name);
       else if (slotType === 'passive') ok = passiveAccessible(sel.name);
       if (!ok) { showToast(`${sel.name} is not in your collection`, 'err'); return; }
@@ -6104,10 +6122,10 @@
           </div>`;
         }
         const display = sub === 'arcana' ? arcana : darkana;
-        // Arcana + Darkana share one unlock, keyed on the Arcana name — toggling either flips both.
-        const owned = !u.arcana.has(arcana.name);
+        // Arcana + Darkana are separate collectables — each toggles/owns by its own name.
+        const owned = !u.arcana.has(display.name);
         return `<div class="item-card${owned ? '' : ' uncollected'}"
-          data-action="collection-toggle" data-kind="arcana" data-name="${esc(arcana.name)}"
+          data-action="collection-toggle" data-kind="arcana" data-name="${esc(display.name)}"
           data-search="${searchVal}" title="${esc(display.name)}${owned ? '' : ' — not in your collection'}">
           <img src="${esc(display.icon||EMPTY_ICON)}" alt="${esc(display.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
         </div>`;
@@ -6999,7 +7017,7 @@
     // ── Arcana ──
     const arcanaObj = D.arcana.find(a => a.name === name);
     if (arcanaObj) {
-      if (collectionEnabled() && !arcanaAccessibleByAny(name)) { showToast(`${name} is not in your collection`, 'err'); return; }
+      if (collectionEnabled() && !arcanaAccessible(name)) { showToast(`${name} is not in your collection`, 'err'); return; }
       if (state.arcana.some(a => a?.name === name) || extraArcanaNames().includes(name)) { showToast(`${name} already in build`, 'warn'); return; }
       const slot = state.arcana.findIndex(a => !a);
       if (slot < 0) { showToast('No arcana slots available', 'err'); return; }
