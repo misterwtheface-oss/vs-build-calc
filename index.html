@@ -1688,6 +1688,7 @@
       active: false,
       enabled: false,
       tab: 'wp',   // 'wp' | 'characters' | 'arcana'
+      arcanaTab: 'arcana', // 'arcana' | 'darkana' — sub-view within the Arcana tab
       unowned: { weapons: new Set(), passives: new Set(), characters: new Set(), arcana: new Set() },
     },
     // Detailed Info Overlay: a STACKING layer (renders over the selector overlay) with its own
@@ -6083,18 +6084,36 @@
     }
 
     if (tab === 'arcana') {
+      const sub = state.collection.arcanaTab; // 'arcana' | 'darkana'
+      const EMPTY_DARKANA = 'assets/icons/arcana/empty_darkana.png';
+      const curLabel    = sub === 'arcana' ? 'Arcana' : 'Darkana';
+      const switchLabel = sub === 'arcana' ? '→ Darkana' : '→ Arcana';
+      // Same toggle button + placement as the Arcana selector overlay (first grid cell).
+      const tabBtn = `<button class="arcana-tab-btn" data-action="collection-arcana-tab" data-tab="${sub}">
+        <span class="arcana-tab-current">${curLabel}</span>
+        <span class="arcana-tab-switch">${switchLabel}</span>
+      </button>`;
       const cells = arcanaGroups().map(group => {
         const arcana  = group.find(a => a.type === 'Arcana') || group[0];
-        const owned = !u.arcana.has(arcana.name);
+        const darkana = group.find(a => a.type === 'Darkana');
         const searchVal = esc(group.map(a => a.name).join('|'));
+        if (sub === 'darkana' && !darkana) {
+          // Positions without a Darkana variant — non-toggleable placeholder.
+          return `<div class="item-card arcana-placeholder" data-search="${searchVal}" title="No Darkana variant">
+            <img src="${EMPTY_DARKANA}" alt="No Darkana">
+          </div>`;
+        }
+        const display = sub === 'arcana' ? arcana : darkana;
+        // Arcana + Darkana share one unlock, keyed on the Arcana name — toggling either flips both.
+        const owned = !u.arcana.has(arcana.name);
         return `<div class="item-card${owned ? '' : ' uncollected'}"
           data-action="collection-toggle" data-kind="arcana" data-name="${esc(arcana.name)}"
-          data-search="${searchVal}" title="${esc(arcana.name)}${owned ? '' : ' — not in your collection'}">
-          <img src="${esc(arcana.icon||EMPTY_ICON)}" alt="${esc(arcana.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
+          data-search="${searchVal}" title="${esc(display.name)}${owned ? '' : ' — not in your collection'}">
+          <img src="${esc(display.icon||EMPTY_ICON)}" alt="${esc(display.name)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'">
         </div>`;
       }).join('');
       // Reuse the arcana selector's grid (8-up, arcana-card aspect ratio, object-fit:fill).
-      return `<div class="arcana-grid">${cells}</div>`;
+      return `<div class="arcana-grid">${tabBtn}${cells}</div>`;
     }
 
     // wp — banish layout of base weapons + passives. Only atoms (bases/passives) are
@@ -6350,6 +6369,10 @@
     if (action === 'collection-tab') {
       state.collection.tab = btn.dataset.tab;
       renderCollectionOverlay(); return;
+    }
+    if (action === 'collection-arcana-tab') {
+      state.collection.arcanaTab = state.collection.arcanaTab === 'arcana' ? 'darkana' : 'arcana';
+      refreshCollectionGrid(); return;
     }
     if (action === 'collection-toggle') {
       const kind = btn.dataset.kind, name = btn.dataset.name;
