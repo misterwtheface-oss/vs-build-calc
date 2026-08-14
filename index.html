@@ -1338,18 +1338,6 @@
     .req-icons { display: flex; gap: 4px; flex-wrap: wrap; margin-top: .3rem; }
     .req-icon { width: 28px; height: 28px; border-radius: 4px; overflow: hidden; }
     .req-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .hi-badge {
-      display: inline-block;
-      font-size: .65rem;
-      padding: 1px 4px;
-      border-radius: 3px;
-      font-family: var(--font-title);
-      letter-spacing: .04em;
-      margin: 2px;
-    }
-    .hi-badge.char   { background: rgba(58,122,217,.25);  color: #6aadff; border: 1px solid rgba(58,122,217,.4);  }
-    .hi-badge.arcana { background: rgba(155,63,217,.25);   color: #c08dff; border: 1px solid rgba(155,63,217,.4);  }
-    .hi-badge.item   { background: rgba(180,30,30,.25);    color: #ff8080; border: 1px solid rgba(220,60,60,.4);   }
 
     /* ── Character grid (overlay) ── */
     .char-grid {
@@ -3503,8 +3491,10 @@
     }
 
     if (type === 'arcana') {
-      const aObj = D.arcana.find(a => a.name === item.name);
-      if (aObj) html += `<div class="hi-badge ${aObj.type === 'Arcana' ? 'arcana' : 'item'}" style="text-align:center;margin:.4rem 0">${esc(aObj.type)}</div>`;
+      // Affected weapons/passives as a clickable icon grid — left-click opens the detail page,
+      // right-click quick-adds to the build (same guard rails as an evo-path node). Icons use
+      // icon_path (not the sprite), matching every other arcana surface.
+      html += arcanaAffectsSectionsHTML(item, 'panel');
     }
 
     if (type === 'stage') {
@@ -4250,7 +4240,6 @@
            ${infoDetailButtonHTML('arcana', sel.name)}
            <div class="detail-icon arcana-card"><img src="${esc(sel.icon||EMPTY_ICON)}" onerror="this.parentElement.classList.add('broken');this.src='${esc(EMPTY_ICON)}'"></div>
            <div class="detail-name">${esc(sel.name)}</div>
-           <div class="hi-badge ${sel.type === 'Arcana' ? 'arcana' : 'item'}" style="display:block;text-align:center;margin-bottom:.3rem">${esc(sel.type)}</div>
          </div>
          <div class="ovl-right-body">
            <div class="detail-desc">${esc(sel.description)}</div>
@@ -4475,27 +4464,32 @@
   // Resolve a bare name to a navigable reference across every dataset (weapon/passive/arcana/
   // character/affinity). Used by starting loadouts + arcana `affects_*` lists, whose names can
   // land in any file. Returns null for unmatched names (source typos, mechanics like "Reroll").
-  function resolveRef(name) {
-    const w = weaponByName(name);  if (w) return { kind: 'object', type: 'weapon',    name, icon: weaponSprite(w) };
+  // `opts.icons` forces the flat icon_path (not the weapon/character sprite) — used by arcana
+  // surfaces, which show affected weapons as their plain in-game icons rather than sprites.
+  function resolveRef(name, opts) {
+    const w = weaponByName(name);  if (w) return { kind: 'object', type: 'weapon',    name, icon: opts?.icons ? w.icon : weaponSprite(w) };
     const p = passiveByName(name); if (p) return { kind: 'object', type: 'passive',   name, icon: p.icon };
     const a = arcanaByName(name);  if (a) return { kind: 'object', type: 'arcana',     name, icon: a.icon, arcana: true };
-    const c = D.characters.find(x => x.name === name); if (c) return { kind: 'object', type: 'character', name, icon: charSpriteIcon(c), sprite: true };
+    const c = D.characters.find(x => x.name === name); if (c) return { kind: 'object', type: 'character', name, icon: opts?.icons ? c.icon : charSpriteIcon(c), sprite: !opts?.icons };
     const af = affinityByName(name); if (af) return { kind: 'affinity', name, icon: af.icon };
     return null;
   }
   // A compact navigable icon for a resolved ref (affinity → its page, object → its page).
-  function refNavIcon(ref) {
+  // `opts.quickAdd` also tags objects with data-evo-item so a right-click quick-adds them to the
+  // build (handleAppContextMenu), mirroring evo-path nodes — used by the planner arcana panel.
+  function refNavIcon(ref, opts) {
     const attrs = ref.kind === 'affinity'
       ? `data-action="nav-affinity" data-affinity="${esc(ref.name)}"`
-      : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(ref.name)}"`;
+      : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(ref.name)}"${opts?.quickAdd ? ` data-evo-item="${esc(ref.name)}"` : ''}`;
     const cls = 'ref-nav-icon' + (ref.sprite ? ' sprite' : ref.arcana ? ' arcana' : '');
-    return `<span class="${cls}" ${attrs} title="${esc(ref.name)}"><img src="${esc(ref.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
+    const title = opts?.quickAdd && ref.kind !== 'affinity' ? `${ref.name} — click for details, right-click to add` : ref.name;
+    return `<span class="${cls}" ${attrs} title="${esc(title)}"><img src="${esc(ref.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
   }
-  function resolveRefs(names) { return (names || []).map(resolveRef).filter(Boolean); }
+  function resolveRefs(names, opts) { return (names || []).map(n => resolveRef(n, opts)).filter(Boolean); }
   // A grid of ref icons from already-resolved refs. Unmatched names are dropped upstream by
   // resolveRefs (a handful of source typos + mechanics like Reroll/Skip/Banish have no page).
-  function refIconsGridHTML(refs) {
-    return `<div class="ref-icon-grid">${refs.map(refNavIcon).join('')}</div>`;
+  function refIconsGridHTML(refs, opts) {
+    return `<div class="ref-icon-grid">${refs.map(r => refNavIcon(r, opts)).join('')}</div>`;
   }
   // Open the detail page for a resolved ref (shared by evo-node clicks).
   function openRef(ref, player) {
@@ -4518,11 +4512,15 @@
 
   // Arcana `affects_explicit` as a navigable icon list — a single UNLABELED list (the implicit
   // column was removed; those associations are handled via shared traits). `context` picks the
-  // wrapper for spacing: 'overlay' → detail-cat; 'selector' → info-panel section.
+  // wrapper for spacing: 'overlay' → detail-cat; 'selector'/'panel' → info-panel section.
+  // Affected items always render as their flat icon_path icon (not sprites). In the planner
+  // 'panel' context they're also quick-addable (left-click details, right-click add-to-build;
+  // the add target is resolved from the info panel's player at click time).
   function arcanaAffectsSectionsHTML(a, context) {
-    const refs = resolveRefs(a.affects_explicit);
+    const refs = resolveRefs(a.affects_explicit, { icons: true });
     if (!refs.length) return '';
-    return `<div class="${context === 'overlay' ? 'detail-cat' : 'detail-section'}">${refIconsGridHTML(refs)}</div>`;
+    const grid = refIconsGridHTML(refs, context === 'panel' ? { quickAdd: true } : undefined);
+    return `<div class="${context === 'overlay' ? 'detail-cat' : 'detail-section'}">${grid}</div>`;
   }
 
   // The Arcana associated with a weapon (its `arcana` column) → navigable arcana card icons.
@@ -6755,7 +6753,10 @@
     }
     // Detail overlay access from the planner info panel — the add-to-build target is that
     // panel's player. (Handled here for #app; selector panels route via handleOverlayClick.)
-    if (action === 'open-object-page' || action === 'open-affinity-page') {
+    // nav-object/nav-affinity: the arcana panel's affected-item icons (left-click → detail page;
+    // right-click quick-adds via handleAppContextMenu's data-evo-item path).
+    if (action === 'open-object-page' || action === 'open-affinity-page'
+        || action === 'nav-object' || action === 'nav-affinity') {
       openDetailFromEl(btn, state.infoPanel?.playerIdx ?? 0);
       return;
     }

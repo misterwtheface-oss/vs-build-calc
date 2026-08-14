@@ -22361,7 +22361,8 @@ window.VS_DATA = {
             "Speed",
             "Duration",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -22370,7 +22371,8 @@ window.VS_DATA = {
         "Speed",
         "Duration",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Area"
@@ -22702,7 +22704,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed"
+            "Move Speed",
+            "Magic Weapon"
           ]
         }
       ],
@@ -22712,7 +22715,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Move Speed"
+        "Move Speed",
+        "Magic Weapon"
       ],
       "conflict": [
         "Duration"
@@ -23031,7 +23035,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -23041,7 +23046,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -23744,7 +23750,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze"
+            "Freeze",
+            "Magic Weapon"
           ]
         }
       ],
@@ -23755,7 +23762,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": [
@@ -24084,7 +24092,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         },
         {
@@ -24099,6 +24108,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Magic Weapon",
         "Fire"
       ],
       "conflict": [
@@ -25591,14 +25601,16 @@ window.VS_DATA = {
           "items": [
             "Might",
             "Cooldown",
-            "Invulnerable"
+            "Invulnerable",
+            "Ambiguous Power"
           ]
         }
       ],
       "affinity": [
         "Might",
         "Cooldown",
-        "Invulnerable"
+        "Invulnerable",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -27070,7 +27082,8 @@ window.VS_DATA = {
             "Might",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -27078,7 +27091,8 @@ window.VS_DATA = {
         "Might",
         "Cooldown",
         "Amount",
-        "Recovery"
+        "Recovery",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Speed",
@@ -27373,7 +27387,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Luck"
+            "Luck",
+            "Magic Weapon"
           ]
         }
       ],
@@ -27383,7 +27398,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Magic Weapon"
       ],
       "conflict": [
         "Duration"
@@ -29339,7 +29355,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         }
       ],
@@ -29347,7 +29364,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed",
@@ -42146,7 +42164,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42155,7 +42174,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed"
@@ -42227,7 +42247,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Critical Damage",
-            "Luck"
+            "Luck",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42238,7 +42259,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Critical Damage",
-        "Luck"
+        "Luck",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed"
@@ -42282,7 +42304,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42293,7 +42316,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Recovery"
+        "Recovery",
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": []
@@ -42326,7 +42350,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42337,7 +42362,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Recovery"
+        "Recovery",
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": []
@@ -42376,7 +42402,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42384,7 +42411,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed",
@@ -42418,7 +42446,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         },
         {
@@ -42434,6 +42463,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Magic Weapon",
         "Move Speed"
       ],
       "conflict": [
@@ -42494,7 +42524,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42502,7 +42533,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed",
@@ -42562,7 +42594,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Critical Damage",
-            "Luck"
+            "Luck",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42572,7 +42605,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Critical Damage",
-        "Luck"
+        "Luck",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed",
@@ -42621,7 +42655,8 @@ window.VS_DATA = {
             "Amount",
             "Armor",
             "Retaliation",
-            "Low Health"
+            "Low Health",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42634,7 +42669,8 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Retaliation",
-        "Low Health"
+        "Low Health",
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": []
@@ -42670,7 +42706,8 @@ window.VS_DATA = {
             "Armor",
             "Retaliation",
             "Low Health",
-            "Critical Hit"
+            "Critical Hit",
+            "Magic Weapon"
           ]
         },
         {
@@ -42691,6 +42728,7 @@ window.VS_DATA = {
         "Retaliation",
         "Low Health",
         "Critical Hit",
+        "Magic Weapon",
         "Invulnerable"
       ],
       "conflict": [],
@@ -42758,7 +42796,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Move Speed",
-            "Recovery"
+            "Recovery",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42769,7 +42808,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
-        "Recovery"
+        "Recovery",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed"
@@ -42830,7 +42870,8 @@ window.VS_DATA = {
             "Amount",
             "Move Speed",
             "Recovery",
-            "Invulnerable"
+            "Invulnerable",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42842,7 +42883,8 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Recovery",
-        "Invulnerable"
+        "Invulnerable",
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": []
@@ -42884,7 +42926,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42895,7 +42938,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Magic Weapon"
       ],
       "conflict": [
         "Duration"
@@ -42933,7 +42977,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42945,7 +42990,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Magic Weapon"
       ],
       "conflict": [],
       "arcana": [
@@ -42984,7 +43030,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         }
       ],
@@ -42992,7 +43039,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Magic Weapon"
       ],
       "conflict": [
         "Speed",
@@ -43032,7 +43080,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         },
         {
@@ -43047,6 +43096,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Magic Weapon",
         "Fire"
       ],
       "conflict": [
@@ -43080,7 +43130,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         },
         {
@@ -43095,6 +43146,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Magic Weapon",
         "Fire"
       ],
       "conflict": [
@@ -43153,7 +43205,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43170,6 +43223,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Luck",
         "Critical Damage"
       ],
@@ -43230,7 +43284,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43247,6 +43302,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Luck",
         "Critical Damage"
       ],
@@ -43307,7 +43363,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43324,6 +43381,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Luck",
         "Critical Damage"
       ],
@@ -43395,7 +43453,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43412,6 +43471,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Counterpart"
       ],
       "conflict": [],
@@ -43455,7 +43515,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43472,6 +43533,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Counterpart"
       ],
       "conflict": [],
@@ -43529,7 +43591,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43546,6 +43609,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Counterpart"
       ],
       "conflict": [],
@@ -43613,7 +43677,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -43622,7 +43687,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Duration"
@@ -43681,7 +43747,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Charm"
+            "Charm",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43698,6 +43765,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Charm",
+        "Ambiguous Power",
         "Gold Fever"
       ],
       "conflict": [
@@ -43757,7 +43825,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43772,6 +43841,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Ambiguous Power",
         "Fire"
       ],
       "conflict": [
@@ -43834,7 +43904,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -43842,7 +43913,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Speed",
@@ -43900,7 +43972,8 @@ window.VS_DATA = {
             "Amount",
             "Armor",
             "Recovery",
-            "Low Health"
+            "Low Health",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -43912,7 +43985,8 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Recovery",
-        "Low Health"
+        "Low Health",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Speed",
@@ -43949,7 +44023,8 @@ window.VS_DATA = {
             "Amount",
             "Armor",
             "Recovery",
-            "Low Health"
+            "Low Health",
+            "Ambiguous Power"
           ]
         },
         {
@@ -43968,6 +44043,7 @@ window.VS_DATA = {
         "Armor",
         "Recovery",
         "Low Health",
+        "Ambiguous Power",
         "Fire"
       ],
       "conflict": [
@@ -44012,7 +44088,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Low Health"
+            "Low Health",
+            "Ambiguous Power"
           ]
         },
         {
@@ -44029,6 +44106,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Low Health",
+        "Ambiguous Power",
         "Fire"
       ],
       "conflict": [
@@ -44073,7 +44151,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Low Health"
+            "Low Health",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44083,7 +44162,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Low Health"
+        "Low Health",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Duration"
@@ -44144,7 +44224,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Low Health"
+            "Low Health",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44154,7 +44235,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Low Health"
+        "Low Health",
+        "Ambiguous Power"
       ],
       "conflict": [
         "Amount"
@@ -44189,7 +44271,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Low Health"
+            "Low Health",
+            "Ambiguous Power"
           ]
         },
         {
@@ -44207,6 +44290,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Low Health",
+        "Ambiguous Power",
         "Fire"
       ],
       "conflict": [],
@@ -44249,7 +44333,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed"
+            "Move Speed",
+            "Ambiguous Power"
           ]
         },
         {
@@ -44267,6 +44352,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Ambiguous Power",
         "Magnet"
       ],
       "conflict": [],
@@ -44302,7 +44388,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed"
+            "Move Speed",
+            "Ambiguous Power"
           ]
         },
         {
@@ -44320,6 +44407,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Ambiguous Power",
         "Magnet"
       ],
       "conflict": [],
@@ -44398,7 +44486,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44408,7 +44497,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -44482,7 +44572,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Growth"
+            "Growth",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44493,7 +44584,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Growth"
+        "Growth",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -44569,7 +44661,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44579,7 +44672,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -44653,7 +44747,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Magnet"
+            "Magnet",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44664,7 +44759,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Magnet"
+        "Magnet",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -44696,7 +44792,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Ambiguous Power"
           ]
         }
       ],
@@ -44706,7 +44803,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Ambiguous Power"
       ],
       "conflict": [],
       "arcana": []
@@ -44943,7 +45041,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Magic Weapon"
           ]
         },
         {
@@ -44960,6 +45059,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Magic Weapon",
         "Luck",
         "Critical Damage"
       ],
@@ -45024,7 +45124,8 @@ window.VS_DATA = {
             "Amount",
             "Charm",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Magic Weapon"
           ]
         },
         {
@@ -45043,6 +45144,7 @@ window.VS_DATA = {
         "Charm",
         "Luck",
         "Critical Damage",
+        "Magic Weapon",
         "Armor"
       ],
       "conflict": [
@@ -45860,7 +45962,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze"
+            "Freeze",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -45870,7 +45973,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Duration"
@@ -45933,7 +46037,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze"
+            "Freeze",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -45943,7 +46048,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Duration"
@@ -45999,7 +46105,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze"
+            "Freeze",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46009,7 +46116,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Duration"
@@ -46051,7 +46159,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46059,7 +46168,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -46099,7 +46209,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46107,7 +46218,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -46140,7 +46252,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46148,7 +46261,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -46192,7 +46306,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46201,7 +46316,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed"
@@ -46241,7 +46357,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46250,7 +46367,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed"
@@ -46310,7 +46428,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46320,7 +46439,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -46383,7 +46503,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46393,7 +46514,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -46449,7 +46571,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Damage",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -46459,7 +46582,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -46502,7 +46626,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46524,6 +46649,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Glimmer Tech",
         "Fire",
         "Fire"
       ],
@@ -46569,7 +46695,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46591,6 +46718,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Glimmer Tech",
         "Fire",
         "Fire"
       ],
@@ -46629,7 +46757,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46651,6 +46780,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Glimmer Tech",
         "Fire",
         "Fire"
       ],
@@ -46699,7 +46829,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46715,6 +46846,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Glimmer Tech",
         "Move Speed"
       ],
       "conflict": [
@@ -46777,7 +46909,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46793,6 +46926,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Glimmer Tech",
         "Move Speed"
       ],
       "conflict": [
@@ -46837,7 +46971,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46860,6 +46995,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Fire",
         "Fire"
       ],
@@ -46903,7 +47039,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46926,6 +47063,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Fire",
         "Fire"
       ],
@@ -46962,7 +47100,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -46985,6 +47124,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Fire",
         "Fire"
       ],
@@ -47027,7 +47167,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47043,6 +47184,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Fire"
       ],
       "conflict": [
@@ -47086,7 +47228,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze"
+            "Freeze",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47103,6 +47246,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
+        "Glimmer Tech",
         "Fire"
       ],
       "conflict": [
@@ -47140,7 +47284,8 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze"
+            "Freeze",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47157,6 +47302,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
+        "Glimmer Tech",
         "Fire"
       ],
       "conflict": [
@@ -47203,7 +47349,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47219,6 +47366,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Luck"
       ],
       "conflict": [
@@ -47261,7 +47409,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47277,6 +47426,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Luck"
       ],
       "conflict": [
@@ -47322,7 +47472,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47339,6 +47490,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Luck",
         "Critical Damage"
       ],
@@ -47385,7 +47537,8 @@ window.VS_DATA = {
             "Amount",
             "Luck",
             "Critical Damage",
-            "Invulnerable"
+            "Invulnerable",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -47397,7 +47550,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Invulnerable"
+        "Invulnerable",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed"
@@ -47441,7 +47595,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47457,6 +47612,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Critical Damage",
         "Luck"
       ],
@@ -47500,7 +47656,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47523,6 +47680,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Charm",
         "Gold Fever",
         "Critical Damage",
@@ -47572,7 +47730,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47589,6 +47748,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Luck",
         "Critical Damage"
       ],
@@ -47632,7 +47792,8 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47655,6 +47816,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Curse",
         "Luck",
         "Critical Damage"
@@ -47701,7 +47863,8 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -47709,7 +47872,8 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -47753,7 +47917,8 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Greed",
-            "Recovery"
+            "Recovery",
+            "Glimmer Tech"
           ]
         }
       ],
@@ -47763,7 +47928,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Greed",
-        "Recovery"
+        "Recovery",
+        "Glimmer Tech"
       ],
       "conflict": [
         "Speed",
@@ -47806,7 +47972,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47822,6 +47989,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Curse"
       ],
       "conflict": [
@@ -47864,7 +48032,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47880,6 +48049,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Curse"
       ],
       "conflict": [
@@ -47915,7 +48085,8 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Glimmer Tech"
           ]
         },
         {
@@ -47931,6 +48102,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Glimmer Tech",
         "Curse"
       ],
       "conflict": [
@@ -52178,12 +52350,14 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Curse"
+            "Curse",
+            "Twilight"
           ]
         }
       ],
       "affinity": [
-        "Curse"
+        "Curse",
+        "Twilight"
       ],
       "conflict": []
     },
@@ -52224,12 +52398,14 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Constant Motion"
           ]
         }
       ],
       "affinity": [
-        "Move Speed"
+        "Move Speed",
+        "Constant Motion"
       ],
       "conflict": []
     },
@@ -52250,7 +52426,8 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Revival"
+            "Revival",
+            "Resurrection"
           ]
         },
         {
@@ -52267,6 +52444,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Revival",
+        "Resurrection",
         "Max Health",
         "Armor",
         "Might",
@@ -52293,12 +52471,14 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Speed"
+            "Speed",
+            "Chaos"
           ]
         }
       ],
       "affinity": [
-        "Speed"
+        "Speed",
+        "Chaos"
       ],
       "conflict": []
     },
@@ -52330,7 +52510,8 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Recovery"
+            "Recovery",
+            "Healing Damage"
           ]
         },
         {
@@ -52342,6 +52523,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Recovery",
+        "Healing Damage",
         "Area"
       ],
       "conflict": []
@@ -52412,12 +52594,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Light Source"
+            "Plentiful Pickups"
           ]
         }
       ],
       "affinity": [
-        "Light Source"
+        "Plentiful Pickups"
       ],
       "conflict": []
     },
@@ -53305,13 +53487,11 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Arcana",
             "Treasure"
           ]
         }
       ],
       "affinity": [
-        "Arcana",
         "Treasure"
       ],
       "conflict": []
@@ -53385,7 +53565,8 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Luck",
-            "Amount"
+            "Amount",
+            "Plentiful Pickups"
           ]
         },
         {
@@ -53401,6 +53582,7 @@ window.VS_DATA = {
       "affinity": [
         "Luck",
         "Amount",
+        "Plentiful Pickups",
         "Orologion",
         "Rosary",
         "Gold Coin",
@@ -53539,7 +53721,7 @@ window.VS_DATA = {
       "base_num": "19",
       "type": "Darkana",
       "weapon_col": null,
-      "description": "Defeating enemies with FIRE gives bonus MaxHealth[sic] and Might. Triggers an[sic] Nduja Fritta when health reaches a critically low level.",
+      "description": "Defeating enemies with FIRE gives bonus Max Health and Might. Triggers a Nduja Fritta when health reaches a critically low level.",
       "notes": "",
       "affects_explicit": [
         "Fire Wand",
@@ -53625,7 +53807,8 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Recovery",
-            "Low Health"
+            "Low Health",
+            "Healing Damage"
           ]
         },
         {
@@ -53640,6 +53823,7 @@ window.VS_DATA = {
       "affinity": [
         "Recovery",
         "Low Health",
+        "Healing Damage",
         "Magnet",
         "Amount",
         "Speed"
@@ -53656,6 +53840,12 @@ window.VS_DATA = {
       "is_parent": true,
       "description": "Amount most commonly increases the number of projectiles fired by weapons but has unique interactions with certain weapons and Arcana.",
       "info_entries": [
+        {
+          "objects": [
+            "Beginning (X)"
+          ],
+          "blurb": "Main weapon gains +3 Amount and the listed weapons gain +1 Amount (+4 total if also the main weapon)."
+        },
         {
           "objects": [
             "Blood Astronomia (XXI)"
@@ -54130,9 +54320,7 @@ window.VS_DATA = {
         "weapons": [],
         "passives": [],
         "characters": [],
-        "arcana": [
-          "Moonlight Bolero (VI)"
-        ]
+        "arcana": []
       }
     },
     {
@@ -54155,7 +54343,7 @@ window.VS_DATA = {
     {
       "name": "Bounce",
       "icon": "assets/icons/affinities/bounce.png",
-      "color": "#875a9e",
+      "color": "#71599e",
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
@@ -54173,7 +54361,7 @@ window.VS_DATA = {
     {
       "name": "Counterpart",
       "icon": "assets/icons/affinities/counterpart.png",
-      "color": "#88715b",
+      "color": "#162d44",
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
@@ -54254,11 +54442,19 @@ window.VS_DATA = {
     {
       "name": "Halted XP",
       "icon": "assets/icons/affinities/halted_xp.png",
-      "color": "#6f0a08",
+      "color": "#5a9e9e",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "",
-      "info_entries": [],
+      "description": "Characters with strong level 1 bonuses that diminish quickly benefit from suspending experience gain to maintain their bonus permanently. The 0 Arcana are the primary support for this archetype.",
+      "info_entries": [
+        {
+          "objects": [
+            "Game Killer (0)",
+            "Stake to Your Heart (0)"
+          ],
+          "blurb": "Suspends experience gain from experience gems."
+        }
+      ],
       "related": {
         "weapons": [],
         "passives": [],
@@ -54300,6 +54496,21 @@ window.VS_DATA = {
           "Beginning (X)",
           "Silent Old Sanctuary (XX)"
         ]
+      }
+    },
+    {
+      "name": "Requiem",
+      "icon": "assets/icons/affinities/requiem.png",
+      "color": "#6a4010",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
       }
     },
     {
@@ -56867,7 +57078,6 @@ window.VS_DATA = {
           "Perkeo"
         ],
         "arcana": [
-          "Mad Groove (VIII)",
           "Heart of Fire (XIX)",
           "Hidden Anathema (III)",
           "Edge of the Earth (VIII)"
@@ -58596,6 +58806,33 @@ window.VS_DATA = {
       "info_entries": [],
       "related": {
         "weapons": [
+          "Summon Spirit",
+          "Dark Rift",
+          "Sword Brothers",
+          "Soul Steal",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Speculo Globus",
+          "Nitesco",
+          "Optical Shot",
+          "Acerbatus",
+          "Dextro Custos",
+          "Sinestro Custos",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
           "Ebony Diabologue"
         ],
         "passives": [],
@@ -58617,6 +58854,24 @@ window.VS_DATA = {
       "info_entries": [],
       "related": {
         "weapons": [
+          "Anura",
+          "Summon Spirit Tornado",
+          "Raging Fire",
+          "Salamender",
+          "Ice Fang",
+          "Cocytus",
+          "Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Keremet Morbus",
+          "Hex",
+          "Nightmare",
+          "Refectio",
+          "Sanctuary",
           "Belnades' Spellbook"
         ],
         "passives": [],
@@ -58658,7 +58913,43 @@ window.VS_DATA = {
       "description": "",
       "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Splashers",
+          "Pursuant Blades",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Sanguine Star",
+          "Blood Chalice",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin"
+        ],
         "passives": [],
         "characters": [
           "Bonnie Blair (Punch)",
@@ -58712,7 +59003,31 @@ window.VS_DATA = {
       "info_entries": [],
       "related": {
         "weapons": [
-          "Spectral Sword"
+          "Valmanway",
+          "Icebrand",
+          "Aura Blast",
+          "Arrow of Goth",
+          "Kaiser Knuckle",
+          "Mace",
+          "Stamazza",
+          "Star Flail",
+          "Moon Rod",
+          "Alucard Spear",
+          "Thunderbolt Spear",
+          "Trident",
+          "Gungnir-Souris",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Tyrfing",
+          "Rune Sword",
+          "Alucart Sworb",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Spectral Sword",
+          "Pocket Knife",
+          "Claimh Solais"
         ],
         "passives": [],
         "characters": [],
@@ -58748,6 +59063,43 @@ window.VS_DATA = {
         "weapons": [
           "Whip",
           "Bloody Tear",
+          "Knife",
+          "Thousand Edge",
+          "Axe",
+          "Death Spiral",
+          "Cross",
+          "Heaven Sword",
+          "Grand Cross",
+          "Arch Angle",
+          "King Bible",
+          "Unholy Vespers",
+          "Santa Water",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Troll Bomb",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Svarog Statue",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
           "Coat of Arms"
         ],
         "passives": [],
