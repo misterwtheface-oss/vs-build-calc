@@ -1515,11 +1515,13 @@
       /* ── Player card: character on top, slots below; slot rows wrap ── */
       .player-header { flex-wrap: wrap; gap: .3rem; }
       .player-header-actions { flex-wrap: wrap; }
-      .player-body { flex-direction: column; gap: .6rem; padding: .6rem; }
-      .char-col { align-self: center; }
+      /* Stack the tile and CENTER its columns. The base .player-body uses align-items:flex-start,
+         which (in a column) left-anchors the slots column and shrinks it to content — so a full
+         6-slot row looked left-aligned. align-items:center centers the character AND the slots
+         column in the tile; justify-content:center then centers partial/wrapped rows within it. */
+      .player-body { flex-direction: column; align-items: center; gap: .6rem; padding: .6rem; }
       .slot-row-label { width: 100%; margin-bottom: .1rem; }
-      /* Center the weapon/passive rows in the tile (like the centered character); slots keep their
-         normal size and simply wrap to the next line when they don't fit. */
+      .slots-col { flex: none; }
       .slots-col .slot-row { flex-wrap: wrap; justify-content: center; }
 
       /* ── Selection overlay (mobile): exactly TWO scroll regions — the grid and ONE info panel.
