@@ -1507,17 +1507,20 @@
          something IS selected → grid on the top half, the info panels on the bottom half, each
          with its OWN scroll that a selection never resets. `.has-selection` is toggled in JS from
          state.ovl.selected. Desktop keeps its 3-column layout (these rules are mobile-only). ── */
-      .overlay-body { flex-direction: column; overflow: hidden; }
+      .overlay-body { flex-direction: column; overflow: hidden; overscroll-behavior: contain; }
       .ovl-left, .ovl-center, .ovl-center-wide, .ovl-right {
         width: 100%; border-left: none; border-right: none; min-height: 0;
       }
       .ovl-center, .ovl-center-wide { order: 1; display: flex; flex-direction: column; overflow: hidden; }
-      .ovl-right { order: 2; border-top: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
-      .ovl-left  { order: 3; border-top: 1px solid var(--border); }
-      /* Independent scroll regions (each preserved across a re-render in refreshOverlay). */
-      .ovl-center-scroll { flex: 1; min-height: 0; max-height: none; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-      .ovl-right-body { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-      .ovl-left { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      /* Info panels: unlike the web layout, DON'T lock the header (.ovl-right-top icon+name). The
+         whole panel scrolls as one so there's no dead zone to swipe on, and overscroll-behavior
+         keeps an overscroll from chaining to the page behind the overlay (the "clunky" feel). */
+      .ovl-right { order: 2; border-top: 1px solid var(--border); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+      .ovl-right-body { flex: none; min-height: 0; overflow: visible; }
+      .ovl-left  { order: 3; border-top: 1px solid var(--border); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+      /* Grid keeps its own scroll region; each info panel scrolls as one unit. All preserved across
+         a re-render in refreshOverlay. */
+      .ovl-center-scroll { flex: 1; min-height: 0; max-height: none; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
       /* Nothing selected → grid fills the screen, info panels hidden. */
       .overlay-body:not(.has-selection) .ovl-center,
       .overlay-body:not(.has-selection) .ovl-center-wide { flex: 1 1 100%; }
@@ -4999,9 +5002,10 @@
     else if (type === 'stage')  inner = stageOverlayHTML();
     const panel = document.getElementById('overlay-root').querySelector('.overlay-panel');
     // Preserve scroll across the re-render for every independent scroll region — the grid
-    // (.ovl-center-scroll) and the info panels (.ovl-left stats, .ovl-right-body detail). Selecting
-    // an item must never fling any of them back to the top (desktop + mobile top/bottom split).
-    const SCROLLERS = ['.ovl-center-scroll', '.ovl-left', '.ovl-right-body'];
+    // (.ovl-center-scroll), the stats (.ovl-left), and the detail panel (which scrolls on its body
+    // on desktop, but as the whole .ovl-right on mobile where its header is unlocked). Selecting an
+    // item must never fling any of them back to the top.
+    const SCROLLERS = ['.ovl-center-scroll', '.ovl-left', '.ovl-right-body', '.ovl-right'];
     const saved = SCROLLERS.map(sel => { const el = panel.querySelector(sel); return el ? el.scrollTop : 0; });
     panel.innerHTML = inner;
     SCROLLERS.forEach((sel, i) => { const el = panel.querySelector(sel); if (el) el.scrollTop = saved[i]; });
