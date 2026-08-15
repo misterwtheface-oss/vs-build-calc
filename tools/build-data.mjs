@@ -302,6 +302,7 @@ function parseScaling(raw) {
     const colonIdx = part.indexOf(':');
     if (colonIdx < 0) return [];
     const key  = part.slice(0, colonIdx).trim();
+    if (key === 'stat_choice') return []; // handled separately by parseStatChoices
     const rest = part.slice(colonIdx + 1).trim();
     const valM = rest.match(/^(-?\d+(?:\.\d+)?)/);
     if (!valM) return [];
@@ -312,6 +313,104 @@ function parseScaling(raw) {
     if (!perM) return [{ key, value, interval: 0, max }];           // flat, no `per`
     const interval = perM[1] !== undefined ? parseInt(perM[1]) : null; // null = per level
     return [{ key, value, interval, max }];
+  });
+}
+
+// `stat_choice` rows in level_scaling → player-picked per-level bonuses. Each is a `value per N
+// level [from level GATE]` term; the player chooses WHICH stat it lands on (a dropdown per gate).
+// Blackmore = 5 gated (10/20/30/40/50); Joachim = 1 bare (gate 1). Emits { value, interval, gate }.
+function parseStatChoices(raw) {
+  const cell = (raw || '').replace(/^\{|\}$/g, '').trim();
+  if (!cell || cell === '-') return [];
+  return cell.split('|').map(s => s.trim()).filter(Boolean).flatMap(part => {
+    if (!/^stat_choice\s*:/i.test(part)) return [];
+    const rest = part.replace(/^stat_choice\s*:/i, '').trim();
+    const valM = rest.match(/^(-?\d+(?:\.\d+)?)/);
+    if (!valM) return [];
+    const perM  = rest.match(/per\s+(\d+)?/i);
+    const gateM = rest.match(/from\s+level\s+(\d+)/i);
+    return [{ value: parseFloat(valM[1]), interval: perM && perM[1] ? parseInt(perM[1]) : 1, gate: gateM ? parseInt(gateM[1]) : 1 }];
+  });
+}
+
+// ─── Parse reference_scaling ──────────────────────────────────────────────
+// Character bonuses derived from OTHER build elements. Brace-wrapped, pipe-separated:
+//   stat: value per <ref> [max M]
+// <ref> is either
+//   "<refValue> <refStat>"  → per-increment off another stat's ABOVE-BASE total (refValue may be
+//                             negative, e.g. `-0.01 cooldown`); one `value` per `refValue` step.
+//   "[Item]" / "[A, B, C]"  → per equipped copy of the referenced weapon/passive, SUMMED.
+// Emits { key, value, max, refStat, refValue } or { key, value, max, refItems:[…] }.
+function parseReferenceScaling(raw) {
+  const cell = unwrap(raw);
+  if (!cell) return [];
+  return cell.split('|').map(s => s.trim()).filter(Boolean).flatMap(part => {
+    const colon = part.indexOf(':');
+    if (colon < 0) return [];
+    const key  = part.slice(0, colon).trim();
+    const rest = part.slice(colon + 1).trim();
+    const valM = rest.match(/^(-?\d+(?:\.\d+)?)/);
+    if (!valM) return [];
+    const value = parseFloat(valM[1]);
+    const maxM  = rest.match(/max\s+(-?\d+(?:\.\d+)?)/i);
+    const max   = maxM ? parseFloat(maxM[1]) : null;
+    const perM  = rest.match(/per\s+(.+?)(?:\s+max\s+-?\d|$)/i);
+    if (!perM) { console.warn(`reference_scaling: no "per" in "${part}"`); return []; }
+    const refRaw = perM[1].trim();
+    const rule = { key, value, max };
+    const itemM = refRaw.match(/^\[(.*)\]$/);
+    if (itemM) {
+      rule.refItems = itemM[1].split(',').map(s => s.trim()).filter(Boolean);
+    } else {
+      const m = refRaw.match(/^(-?\d+(?:\.\d+)?)\s+(.+)$/);
+      if (!m) { console.warn(`reference_scaling: bad ref "${refRaw}" in "${part}"`); return []; }
+      rule.refValue = parseFloat(m[1]);
+      rule.refStat  = m[2].trim();
+    }
+    return [rule];
+  });
+}
+
+// ─── Parse manual_scaling ─────────────────────────────────────────────────
+// User-controlled bonuses tied to a conditional SOURCE (a per-player slider/toggle). Grammar:
+//   stat: source <SourceName> min <minExpr> max <maxExpr> by <mode>
+// mode = `boolean` (toggle 0/max) · `pct` (1%-step slider) · `<number>` (stepped slider).
+// min/max are a plain number OR a derivative expr resolved at runtime against post-bonus totals:
+//   `<stat>` | `<stat>*<n>` | `<n>*<stat>` | `<stat>/<n>` → { stat, factor }; number → { num };
+//   anything more exotic (e.g. `(9999/6)*[Freeze]`, `1/(1+speed)`) is kept raw + flagged.
+function parseManualExpr(s) {
+  s = (s || '').trim();
+  if (/^-?\d+(?:\.\d+)?$/.test(s)) return { num: parseFloat(s) };
+  let m = s.match(/^([a-z_]+)\s*\*\s*(-?\d+(?:\.\d+)?)$/i); if (m) return { stat: m[1], factor: parseFloat(m[2]) };
+  m = s.match(/^(-?\d+(?:\.\d+)?)\s*\*\s*([a-z_]+)$/i);     if (m) return { stat: m[2], factor: parseFloat(m[1]) };
+  m = s.match(/^([a-z_]+)\s*\/\s*(-?\d+(?:\.\d+)?)$/i);     if (m) return { stat: m[1], factor: 1 / parseFloat(m[2]) };
+  m = s.match(/^([a-z_]+)$/i);                              if (m) return { stat: m[1], factor: 1 };
+  // Trait-count forms: `[Trait]` counts equipped items with that affinity; `n*[Trait]` /
+  // `(a/b)*[Trait]` scale that count (Crystal Cries `(9999/6)*[Freeze]`, Heir of Fate `[Fire]`).
+  m = s.match(/^\(?\s*([\d.]+)\s*\/\s*([\d.]+)\s*\)?\s*\*\s*\[([^\]]+)\]$/); if (m) return { const: parseFloat(m[1]) / parseFloat(m[2]), trait: m[3].trim() };
+  m = s.match(/^([\d.]+)\s*\*\s*\[([^\]/(),*+]+)\]$/);                       if (m) return { const: parseFloat(m[1]), trait: m[2].trim() };
+  m = s.match(/^\[([^\]/(),*+]+)\]$/);                                      if (m) return { const: 1, trait: m[1].trim() }; // trait names only — no arithmetic
+  return { raw: s }; // unresolved (complex arcana expr, e.g. 1/(1+speed), [a,b]) — runtime skips the rule
+}
+function parseManualScaling(raw) {
+  const cell = unwrap(raw);
+  if (!cell) return [];
+  return cell.split('|').map(s => s.trim()).filter(Boolean).flatMap(part => {
+    const colon = part.indexOf(':');
+    if (colon < 0) return [];
+    const key  = part.slice(0, colon).trim();
+    const rest = part.slice(colon + 1).trim();
+    const srcM = rest.match(/source\s+(.+?)\s+min\b/i);
+    const minM = rest.match(/\bmin\s+(.+?)\s+max\b/i);
+    const maxM = rest.match(/\bmax\s+(.+?)\s+by\b/i);
+    const byM  = rest.match(/\bby\s+(\S+)\s*$/i);
+    if (!srcM || !minM || !maxM || !byM) { console.warn(`manual_scaling: malformed "${part}"`); return []; }
+    const byRaw = byM[1].trim();
+    let mode, step = null;
+    if (/^boolean$/i.test(byRaw)) mode = 'boolean';
+    else if (/^pct$/i.test(byRaw)) mode = 'pct';
+    else { mode = 'step'; step = parseFloat(byRaw); if (!isFinite(step)) { console.warn(`manual_scaling: bad step "${byRaw}"`); return []; } }
+    return [{ key, source: srcM[1].trim(), min: parseManualExpr(minM[1]), max: parseManualExpr(maxM[1]), mode, step }];
   });
 }
 
@@ -456,6 +555,9 @@ function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
     let work = rest.replace(/\[[^\]]*\]/, ' ').replace(/[\[\]]/g, ' ');
     const per = work.match(/per\s+(?:levels?\s+)?(\d+)(?:\s+levels?)?/i); if (per) work = work.replace(per[0], ' ');
     const max = work.match(/max\s+(\d+(?:\.\d+)?)/i);                     if (max) work = work.replace(max[0], ' ');
+    // `between LO and HI` = level window for a per-N grant (Young Maria: familiars from Lv2–50).
+    // Parse before `at`/amount so its two numbers aren't mistaken for a level list / amount.
+    const btw = work.match(/between\s+(\d+)\s+and\s+(\d+)/i);             if (btw) work = work.replace(btw[0], ' ');
     const at  = work.match(/at\s+(?:levels?\s+)?([\d\s,]+)/i);            if (at)  { work = work.replace(at[0], ' ').replace(/\blevels?\b/i, ' '); }
     const amt = work.match(/(\d+(?:\.\d+)?)/); // remaining lone number = amount
     for (const name of refs) {
@@ -465,6 +567,7 @@ function parseRuleBlocks(raw, kindOf = () => null, ctx = '') {
       if (per) g.interval = parseInt(per[1]);
       if (max) g.max = parseFloat(max[1]);
       if (at)  g.at = at[1].trim().split(/[\s,]+/).filter(Boolean).map(Number);
+      if (btw) { g.betweenLo = parseInt(btw[1]); g.betweenHi = parseInt(btw[2]); }
       out.push(g);
     }
   }
@@ -514,13 +617,18 @@ const characters = rawChars.map(r => ({
   // trait never becomes an association. Brace-wrapped, pipe-separated: `{Curse|Cooldown}`.
   conflict: conflictList(r.affinity_conflict),
   scaling: parseScaling(r.level_scaling),
-  // Phase-2 rule columns, passed through unparsed until their runtime features exist.
-  reference_scaling: unwrap(r.reference_scaling),
-  manual_scaling: unwrap(r.manual_scaling),
+  stat_choices: parseStatChoices(r.level_scaling),
+  reference_scaling: parseReferenceScaling(r.reference_scaling),
+  manual_scaling: parseManualScaling(r.manual_scaling),
   charge_ability: unwrap(r.charge_ability),
   grants: [], // filled in a second pass below (needs weapon/passive/arcana names for kind)
   stats: {
-    max_health: parseFloat(r.max_health)  || 0,
+    // Multiplicative stats (max_health, magnet) split flat vs. percent:
+    //   *_flat → additive to the stat's base (pre-multiplier); bare key → percentage factor.
+    // `magnet` column holds percentages (0.25 = +25%); `magnet_flat` is a new column (default 0).
+    max_health_flat: parseFloat(r.max_health_flat) || 0,
+    magnet_flat:     parseFloat(r.magnet_flat)     || 0,
+    magnet:          parseFloat(r.magnet)          || 0,
     recovery:   parseFloat(r.recovery)    || 0,
     armor:      parseFloat(r.armor)       || 0,
     move_speed: parseFloat(r.move_speed)  || 0,
@@ -531,7 +639,6 @@ const characters = rawChars.map(r => ({
     cooldown:   parseFloat(r.cooldown)    || 0,
     amount:     parseFloat(r.amount)      || 0,
     revival:    parseFloat(r.revival)     || 0,
-    magnet:     parseFloat(r.magnet)      || 0,
     luck:       parseFloat(r.luck)        || 0,
     growth:     parseFloat(r.growth)      || 0,
     greed:      parseFloat(r.greed)       || 0,
@@ -676,6 +783,14 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
     // affects_* pipe-lists are captured as arrays for the future Arcana Info Panel rework.
     notes: '',
     affects_explicit: splitItems(r.affects_explicit),
+    // Character-bonus columns (same grammar as characters) — fed into the SAME calc engine, but
+    // applied GLOBALLY to all players (like power-ups). manual_scaling grants its source to each
+    // player's Character Sources (per-player independent sliders). `grants` filled in a 2nd pass.
+    scaling: parseScaling(r.level_scaling),
+    reference_scaling: parseReferenceScaling(r.reference_scaling),
+    manual_scaling: parseManualScaling(r.manual_scaling),
+    _grantRaw: r.add_item,
+    grants: [],
     ...affinityFields(r.affinity, r.name),
     conflict: conflictList(r.affinity_conflict), // traits BAD for this arcana (own column; not `affinity`)
   };
@@ -767,6 +882,7 @@ function phantomStarterIcon(name) {
   });
   // Passive grants (e.g. Mini <X> → a hidden weapon) resolved with the same kindOf.
   passives.forEach(p => { p.grants = parseRuleBlocks(p._grantRaw, kindOf, p.name); delete p._grantRaw; });
+  arcana.forEach(a => { a.grants = parseRuleBlocks(a._grantRaw, kindOf, a.name); delete a._grantRaw; });
 }
 
 // ─── Process stats (power-ups) ───────────────────────────────────────────

@@ -1029,6 +1029,22 @@
 
     /* ── Stat grid ── */
     .stat-grid { display: flex; flex-direction: column; gap: 1px; }
+    /* manual_scaling "Character Sources" — sliders/toggles below the stat table */
+    .char-sources { margin-top: .5rem; border: 1px solid var(--gold-dim); border-radius: 5px; background: var(--surface); padding: .4rem .5rem; }
+    .char-sources-title { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); margin-bottom: .35rem; }
+    .src-row { padding: .3rem 0; border-top: 1px solid rgba(176,140,40,.18); }
+    .src-row:first-of-type { border-top: none; }
+    .src-head { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+    .src-name { font-size: .82rem; font-weight: 600; color: var(--text); }
+    .src-val { font-size: .78rem; font-family: var(--font-title); color: var(--gold); }
+    .src-slider { width: 100%; accent-color: var(--gold); margin: .25rem 0 .1rem; }
+    .src-slider:disabled { opacity: .4; }
+    .src-drives { font-size: .68rem; color: var(--text-muted); }
+    .src-toggle { font-size: .72rem; padding: .12rem .55rem; border-radius: 4px; border: 1px solid var(--border-hi); background: var(--surface2); color: var(--text-muted); cursor: pointer; }
+    .src-toggle.on { background: #16324d; border-color: #3b74b0; color: #cfe6ff; }
+    .src-choices { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .25rem; }
+    .src-choice { display: flex; flex-direction: column; gap: .1rem; font-size: .64rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+    .src-choice select { font-size: .74rem; padding: .12rem .2rem; background: var(--surface2); color: var(--text); border: 1px solid var(--border-hi); border-radius: 4px; }
     .stat-header {
       display: grid; grid-template-columns: 1fr 50px 50px 56px 62px;
       font-size: .74rem; text-transform: uppercase;
@@ -1631,6 +1647,9 @@
   // Stats expressed as percentage multipliers (0.4 → +40%)
   const PCT_STATS      = new Set(['move_speed','might','speed','duration','area','cooldown','luck','growth','greed','curse']);
   const INVERTED_STATS = new Set(['cooldown']); // negative is good
+  const FLOOR_STATS    = new Set(['magnet']);   // total rounds DOWN (radius truncates, not rounds)
+  // stat_choice dropdown pool (Blackmore/Joachim pick which stat their per-level bonus lands on).
+  const STAT_CHOICE_POOL = ['might', 'area', 'speed', 'duration', 'recovery', 'growth', 'luck', 'greed', 'curse', 'move_speed'];
 
   const EMPTY_ICONS = {
     char:    'assets/icons/characters/empty.png',
@@ -1735,7 +1754,8 @@
   // arcana, stage, gifts, familiars, absorb-unions). It intentionally does NOT touch the
   // Seal Advisor, Power-Ups, or Collection. Featured builds ship in builds/builds.js
   // (window.VS_BUILDS); user builds persist to localStorage. See builds/SCHEMA.md.
-  const BUILD_SCHEMA = 1;
+  const BUILD_SCHEMA = 2;               // v2 adds weaponsExtra/passivesExtra + arcana length > 3
+  const BUILD_SCHEMA_SUPPORTED = new Set([1, 2]); // v1 builds still load (missing fields → empty)
   const BUILDS_STORAGE_KEY = 'vsbc.builds';
 
   // Snapshot current state → a schema object. Objects are mapped to their `.name`.
@@ -1752,17 +1772,40 @@
       playerCount: state.playerCount,
       stage: state.stage ? state.stage.name : null,
       arcana: state.arcana.map(a => a ? a.name : null),
-      players: state.players.map(p => ({
-        character: p.character ? p.character.name : null,
-        charLevel: p.charLevel || 1,
-        weapons: (p.weapons || []).filter(Boolean).map(w => w.name),
-        passives: (p.passives || []).filter(Boolean).map(pa => pa.name),
-        extraPassives: [...(p.extraPassives || [])],
-        giftWeapon: p.giftWeapon ? p.giftWeapon.name : null,
-        giftPassive: p.giftPassive ? p.giftPassive.name : null,
-        familiars: [...(p.familiars || [])],
-        absorbed: Object.fromEntries(Object.entries(p.absorbed || {}).map(([k, v]) => [k, [...v]])),
-      })),
+      players: state.players.map(p => {
+        const counts = SLOT_COUNTS[state.playerCount];
+        // Split each slot array: core picks (positional, ≤ cap) vs. granted-slot fills — transient
+        // occupants that are NOT stage pickups or character-granted items (those are re-derived on
+        // load, so we don't store them). This is what lets the loader place each into the right slot.
+        const split = (arr, coreCount) => {
+          const core = [], extra = [];
+          (arr || []).forEach((o, i) => {
+            if (!o) return;
+            if (i < coreCount) core.push(o.name);
+            else if (!charGrantsItemNow(p, o.name) && !itemProvidedFree(o.name, p)) extra.push(o.name);
+          });
+          return { core, extra };
+        };
+        const w = split(p.weapons, counts.weapons);
+        const pa = split(p.passives, counts.passives);
+        const obj = {
+          character: p.character ? p.character.name : null,
+          charLevel: p.charLevel || 1,
+          weapons: w.core,
+          passives: pa.core,
+          extraPassives: [...(p.extraPassives || [])],
+          giftWeapon: p.giftWeapon ? p.giftWeapon.name : null,
+          giftPassive: p.giftPassive ? p.giftPassive.name : null,
+          familiars: [...(p.familiars || [])],
+          absorbed: Object.fromEntries(Object.entries(p.absorbed || {}).map(([k, v]) => [k, [...v]])),
+        };
+        if (w.extra.length)  obj.weaponsExtra  = w.extra;  // user picks in granted weapon slots
+        if (pa.extra.length) obj.passivesExtra = pa.extra; // user picks in granted passive slots
+        // Character-bonus controls: manual_scaling source sliders + stat_choice picks (only if set).
+        if (p.sourceIndex && Object.keys(p.sourceIndex).length) obj.sourceIndex = { ...p.sourceIndex };
+        if (p.statChoices && Object.keys(p.statChoices).length) obj.statChoices = { ...p.statChoices };
+        return obj;
+      }),
     };
     // Cache the derived top traits so saved/exported builds carry their trait banners even
     // where affinity data isn't available (e.g. skill/repo tooling). Rendered fresh when the
@@ -1794,7 +1837,7 @@
   // Rehydrate a schema object into `state` and re-render. Unresolvable names are collected
   // and surfaced in a toast rather than silently dropped; the rest of the build still loads.
   function applyBuild(build) {
-    if (!build || build.schema !== BUILD_SCHEMA) {
+    if (!build || !BUILD_SCHEMA_SUPPORTED.has(build.schema)) {
       showToast('Unsupported build format', 'warn');
       return;
     }
@@ -1816,11 +1859,17 @@
       p.charLevel = Math.max(1, Math.min(999, bp.charLevel || 1));
       p.weapons  = (bp.weapons  || []).map(n => resolve(n, weaponByName)).filter(Boolean);
       p.passives = (bp.passives || []).map(n => resolve(n, passiveByName)).filter(Boolean);
+      // Granted-slot fills (v2) → appended transient slots; the syncStageSlots budget keeps them.
+      (bp.weaponsExtra  || []).forEach(n => { const w  = resolve(n, weaponByName);  if (w)  placeTransientItem(p, 'weapon',  w);  });
+      (bp.passivesExtra || []).forEach(n => { const pa = resolve(n, passiveByName); if (pa) placeTransientItem(p, 'passive', pa); });
       // extraPassives / familiars are stored as NAME strings — validate but keep the string.
       p.extraPassives = (bp.extraPassives || []).filter(n => resolve(n, passiveByName));
       p.familiars     = (bp.familiars     || []).filter(n => resolve(n, weaponByName));
       p.giftWeapon  = resolve(bp.giftWeapon,  weaponByName);
       p.giftPassive = resolve(bp.giftPassive, passiveByName);
+      // Character-bonus controls (v2): manual source-slider indices + stat_choice picks.
+      p.sourceIndex = { ...(bp.sourceIndex || {}) };
+      p.statChoices = { ...(bp.statChoices || {}) };
       // absorbed: { resultName: [hiddenNames] } — validate each, keep names as-is.
       p.absorbed = {};
       for (const [result, hidden] of Object.entries(bp.absorbed || {})) {
@@ -1829,18 +1878,25 @@
       }
     });
 
-    // Globals: arcana (3 positional slots) + stage.
+    // Globals: arcana (base 3 + any granted slots, positional) + stage. syncArcanaSlots (below)
+    // sizes the row to the loaded characters' grants; extra entries beyond that are trimmed.
     const arc = build.arcana || [];
-    state.arcana = [0, 1, 2].map(i => resolve(arc[i], arcanaByName));
+    state.arcana = arc.map(n => resolve(n, arcanaByName));
     state.stage = resolve(build.stage, stageByName);
 
-    // Self-heal to a legal state (defence-in-depth alongside validateBuildLegality): prune
-    // orphaned absorb entries, drop stage items the loaded stage doesn't supply, reconcile
-    // extra-bar passives, then cascade-devolve any evolution whose requirements aren't met
-    // (also handles chaos finals on the wrong character). For a VALID build these are no-ops.
-    state.players.forEach(syncAbsorbed);
-    state.players.forEach(syncStageSlots);
+    // Self-heal to a legal state (defence-in-depth alongside validateBuildLegality). Mirrors the
+    // render sweep so the new grant mechanics reconstruct: reconcile extra-bar passives, prune
+    // orphaned absorb entries, restore familiar starters, re-derive character item grants, drop
+    // stage items the loaded stage no longer supplies, size the arcana row + free granted-item
+    // slots, then cascade-devolve any evolution whose requirements aren't met (also handles chaos
+    // finals on the wrong character). For a VALID build these are no-ops.
     state.players.forEach(syncExtraPassives);
+    state.players.forEach(syncAbsorbed);
+    state.players.forEach(syncFamiliarStarter);
+    state.players.forEach(syncCharacterGrants);
+    state.players.forEach(syncStageSlots);
+    syncArcanaSlots();
+    syncGrantedArcana();
     autoDevolveBrokenEvos();
     state.infoPanel = null;
     state.page = 'planning';
@@ -1864,7 +1920,7 @@
       const raw = localStorage.getItem(BUILDS_STORAGE_KEY);
       if (!raw) return;
       const arr = JSON.parse(raw);
-      if (Array.isArray(arr)) state.builds.user = arr.filter(b => b && b.schema === BUILD_SCHEMA);
+      if (Array.isArray(arr)) state.builds.user = arr.filter(b => b && BUILD_SCHEMA_SUPPORTED.has(b.schema));
     } catch (e) { /* malformed — ignore, keep defaults */ }
   }
   // "Hide featured builds" is a single GLOBAL preference (not per-character): once set it
@@ -1901,7 +1957,7 @@
     // familiars: familiar weapons picked via Familiar Forge — they live in the hidden/extra
     // row, never a normal weapon slot (a Familiar Forge STARTER slot clears once one is picked,
     // and is restored by syncFamiliarStarter when no familiars remain).
-    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {}, giftWeapon: null, giftPassive: null, familiars: [] };
+    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {}, giftWeapon: null, giftPassive: null, familiars: [], sourceIndex: {}, statChoices: {} };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -2155,8 +2211,20 @@
   // NOT count toward the 3-arcana pool. Extra arcana are derived from the players'
   // characters at render time (no pool mutation) and shown as locked slots to the
   // right of the 3 arcana. De-duplicated because the arcana pool is shared globally.
+  // Character add_extra ARCANA item grants (John Morris' Iron Blue Will (VII) at Lv10) — level-
+  // gated names, provided free like a starting arcana.
+  function grantedArcanaNames() {
+    const names = [];
+    state.players.forEach(p => (p.character?.grants || []).forEach(g => {
+      if (g.op === 'add_extra' && g.kind === 'arcana' && grantInstanceCount(g, p) > 0) names.push(g.name);
+    }));
+    return names;
+  }
   function extraArcanaNames() {
-    return [...new Set(state.players.map(p => p.character?.starting_arcana).filter(Boolean))];
+    return [...new Set([
+      ...state.players.map(p => p.character?.starting_arcana).filter(Boolean),
+      ...grantedArcanaNames(),
+    ])];
   }
 
   // A character's `starting_weapons` list mixes actual weapons and passives (e.g.
@@ -2218,6 +2286,9 @@
     const counts = SLOT_COUNTS[state.playerCount];
     for (const nm of names) {
       if (player.weapons.some(w => w && w.name === nm)) continue; // already present
+      // A character-granted base (Annette's non-starter clockwork pieces) belongs in a TRANSIENT
+      // slot — leave it for syncCharacterGrants to re-place there; only starters/others go to core.
+      if (charGrantsItemNow(player, nm)) continue;
       let empty = -1;
       for (let j = 0; j < counts.weapons; j++) { if (!player.weapons[j]) { empty = j; break; } }
       if (empty >= 0) player.weapons[empty] = weaponByName(nm);
@@ -2273,12 +2344,23 @@
   // row. Used when a user picks Clock Tower / Alucard Shield straight from the selector.
   function placeAbsorbUnion(player, wDef, slotIdx, counts) {
     const hiddenNames = absorbHiddenSet(player, wDef.name, slotIdx, counts);
-    for (let i = 0; i < counts.weapons; i++) {
+    // Pull hidden inputs from the WHOLE array (core + transient/granted slots), not just core —
+    // Annette's clockwork bases arrive in transient slots and must be consumed, not duplicated.
+    for (let i = 0; i < player.weapons.length; i++) {
       if (i === slotIdx) continue;
       const w = player.weapons[i];
       if (w && hiddenNames.includes(w.name)) player.weapons[i] = null;
     }
-    player.weapons[slotIdx] = wDef;
+    // The result must live in a STABLE (core) slot — a transient index would be swept away by
+    // syncStageSlots. If the union was formed from a transient input, relocate the result to the
+    // first free core slot (one is free after the inputs were pulled).
+    let target = slotIdx;
+    if (target >= counts.weapons) {
+      let core = -1;
+      for (let i = 0; i < counts.weapons; i++) if (!player.weapons[i]) { core = i; break; }
+      if (core >= 0) { player.weapons[slotIdx] = null; target = core; }
+    }
+    player.weapons[target] = wDef;
     player.absorbed[wDef.name] = hiddenNames;
   }
 
@@ -3173,15 +3255,84 @@
     return `<span class="stat-val ${cls}">${sign}${num}${suffix}</span>`;
   }
 
-  function statsHTML(char, player, level) {
-    const showPassive = !!player;
+  // manual_scaling "Character Sources": one slider/toggle per SOURCE (from the character AND every
+  // equipped arcana), shared across every stat that names it. Per-player index in player.sourceIndex.
+  function playerSourceList(char, player, level) {
+    const rules = playerManualRules(char);
+    if (!rules.length) return [];
+    const map = new Map();
+    for (const r of rules) {
+      if (!map.has(r.source)) map.set(r.source, { source: r.source, mode: r.mode, keys: new Set() });
+      map.get(r.source).keys.add(r.key);
+    }
+    const cs = char?.stats;
+    return [...map.values()].map(sg => ({
+      source: sg.source, mode: sg.mode,
+      N: manualSourceN(sg.source, char, cs, player, level),
+      index: manualSliderIndex(sg.source, char, cs, player, level),
+      stats: [...new Set([...sg.keys].map(k => k.replace(/^(?:mult|multiply)_/, '').replace(/_flat$/, '')))],
+    }));
+  }
+  // char = the character whose sources to show; player = the slot holding sourceIndex state;
+  // playerIdx = the real slot index for slider events (needed in the char-select overlay where the
+  // preview player isn't `state.players[idx]` by identity).
+  // stat_choice dropdowns: one per gate the character has reached (Blackmore's unlock as he levels;
+  // Joachim's single one is always available). Each picks which stat the per-level bonus lands on.
+  function statChoiceRowsHTML(char, player, level, idx) {
+    const choices = char?.stat_choices;
+    if (!choices?.length) return '';
+    const active = choices.filter(sc => level >= sc.gate);
+    if (!active.length) {
+      const next = Math.min(...choices.map(sc => sc.gate));
+      return `<div class="src-row"><div class="src-head"><span class="src-name">Stat Choice</span>
+        <span class="src-val" style="color:var(--text-muted)">unlocks Lv${next}</span></div></div>`;
+    }
+    const cells = active.map(sc => {
+      const cur = player?.statChoices?.[sc.gate] || '';
+      const opts = `<option value=""${cur ? '' : ' selected'}>—</option>` +
+        STAT_CHOICE_POOL.map(k => `<option value="${k}"${k === cur ? ' selected' : ''}>${esc(STAT_LABELS[k] || k)}</option>`).join('');
+      return `<label class="src-choice"><span>Lv${sc.gate}</span><select class="src-choice-sel" data-player="${idx}" data-gate="${sc.gate}">${opts}</select></label>`;
+    }).join('');
+    return `<div class="src-row"><div class="src-head"><span class="src-name">Stat Choice</span></div><div class="src-choices">${cells}</div></div>`;
+  }
+  function characterSourcesHTML(char, player, level, playerIdx) {
+    if (!char || !player) return '';
+    const idx = playerIdx ?? state.players.indexOf(player);
+    const sources = playerSourceList(char, player, level ?? 1);
+    const choiceRows = statChoiceRowsHTML(char, player, level ?? 1, idx);
+    if (!sources.length && !choiceRows) return '';
+    const rows = sources.map(sg => {
+      const drives = '→ ' + sg.stats.map(k => STAT_LABELS[k] || k).join(', ');
+      if (sg.mode === 'boolean') {
+        const on = sg.index > 0;
+        return `<div class="src-row">
+          <div class="src-head"><span class="src-name">${esc(sg.source)}</span>
+            <button class="src-toggle${on ? ' on' : ''}" data-action="src-toggle" data-player="${idx}" data-source="${esc(sg.source)}">${on ? 'ON' : 'OFF'}</button></div>
+          <div class="src-drives">${esc(drives)}</div></div>`;
+      }
+      const label = sg.mode === 'pct' ? sg.index + '%' : sg.index + '/' + sg.N;
+      return `<div class="src-row">
+        <div class="src-head"><span class="src-name">${esc(sg.source)}</span><span class="src-val">${esc(label)}</span></div>
+        <input type="range" class="src-slider" min="0" max="${Math.max(1, sg.N)}" value="${sg.index}" data-player="${idx}" data-source="${esc(sg.source)}"${sg.N === 0 ? ' disabled' : ''}>
+        <div class="src-drives">${esc(drives)}</div></div>`;
+    }).join('');
+    return `<div class="char-sources"><div class="char-sources-title">Character Sources</div>${rows}${choiceRows}</div>`;
+  }
+
+  function statsHTML(char, player, level, opts = {}) {
+    const showPassive = !!player && !opts.hidePassive;
     let rows = '';
     for (const [key, label] of Object.entries(STAT_LABELS)) {
-      const { dispBase, dispChar, dispPU, dispPassive, total, isPct, isCapped } = calcStatTotal(key, char?.stats, player, char, level);
+      const { dispBase, dispChar, dispPU, dispPassive, total, isPct, isCapped, baseChanged } = calcStatTotal(key, char?.stats, player, char, level);
       const suffix = isPct ? '%' : '';
-      const charIsZero = dispChar === 0;
-      const charSign = dispChar > 0 ? '+' : '';
-      const isGood = INVERTED_STATS.has(key) ? dispChar < 0 : dispChar > 0;
+      // dispChar may be a preformatted string for multiplicative stats (e.g. Magnet "×1.25"),
+      // which already carries its own sign/operator — don't add a "+" or numeric coloring to it.
+      const charIsStr = typeof dispChar === 'string';
+      const charIsZero = !charIsStr && dispChar === 0;
+      const charSign = (!charIsStr && dispChar > 0) ? '+' : '';
+      const isGood = charIsStr
+        ? parseFloat(dispChar.replace(/[×\s]/g, '')) > 1   // ×factor: >1 is good (no inverted mult stats)
+        : (INVERTED_STATS.has(key) ? dispChar < 0 : dispChar > 0);
       const charCls = charIsZero ? '' : (isGood ? 'pos' : 'neg');
       const charDisplay = charIsZero
         ? '<span class="stat-char stat-val">—</span>'
@@ -3194,11 +3345,11 @@
             ? `<span class="stat-passive">${dispPassive}</span>`
             : '<span class="stat-passive" style="color:var(--text-muted)">—</span>')
         : '';
-      const changed = dispChar !== 0;
+      const changed = dispChar !== 0 || baseChanged;
       const rowCls = ['stat-row', changed ? 'changed' : '', isCapped ? 'capped' : ''].filter(Boolean).join(' ');
       rows += `<div class="${rowCls}">
         <span class="stat-key">${label}</span>
-        <span class="stat-base">${dispBase}</span>
+        <span class="stat-base stat-val${baseChanged ? ' pos' : ''}">${dispBase}</span>
         ${charDisplay}
         ${puDisplay}
         ${passiveDisplay}
@@ -3208,7 +3359,8 @@
     const header = showPassive
       ? `<div class="stat-header"><span>Stat</span><span>Base</span><span>Char</span><span>PU</span><span>Pass</span><span>Total</span></div>`
       : `<div class="stat-header"><span>Stat</span><span>Base</span><span>Char</span><span>PU</span><span>Total</span></div>`;
-    return `<div class="stat-grid${showPassive ? ' with-pass' : ''}">${header}${rows}</div>`;
+    return `<div class="stat-grid${showPassive ? ' with-pass' : ''}">${header}${rows}</div>`
+      + characterSourcesHTML(char, player, level, opts.playerIdx);
   }
 
   // ═══════════════════════════════════════════════════════
@@ -3535,8 +3687,14 @@
     players.forEach(syncAbsorbed);
     // Restore/clear a Familiar Forge starter slot based on whether a familiar is held.
     players.forEach(syncFamiliarStarter);
+    // Place character add_extra item grants (Academy Badge, spell weapons, Sacred familiars, …).
+    players.forEach(syncCharacterGrants);
     // Drop appended transient stage-pickup slots the current stage no longer supplies.
     players.forEach(syncStageSlots);
+    // Global arcana grants: resize the row for arcana SLOT grants, and free the main slot for any
+    // arcana ITEM grant now in play (John Morris' Iron Blue Will (VII) → extra row at Lv10).
+    syncArcanaSlots();
+    syncGrantedArcana();
 
     const playerCards = players.map((player, idx) => {
       const char = player.character;
@@ -3584,10 +3742,35 @@
         ...counterparts,
         ...passiveHidden,
       ])];
+      // Character add_hidden grants (Scorej-Oni/Galamoth Lightning Ring, Axe Armor Axe, Leon's
+      // Svarog Statue, Ruler Sword Body, …) — level-gated COUNTS. Like multiple Weapon Power-Up,
+      // identical instances collapse to one icon with an ×N badge instead of N separate cells.
+      const charHiddenCounts = {};
+      (char?.grants || []).forEach(g => {
+        if (g.op === 'add_hidden' && g.kind === 'weapon') {
+          const n = grantInstanceCount(g, player);
+          if (n > 0) charHiddenCounts[g.name] = (charHiddenCounts[g.name] || 0) + n;
+        }
+      });
+      // Converge a hidden weapon that ALSO appears as a starter/other-hidden into ONE badged
+      // cell (Scorej's starting Lightning Ring + its 5 granted ones → ×6), pulling it from allHidden.
+      const mergedHidden = allHidden.filter(nm => {
+        if (charHiddenCounts[nm] != null) { charHiddenCounts[nm] += 1; return false; }
+        return true;
+      });
+      const charHiddenCells = Object.entries(charHiddenCounts).map(([nm, count]) => {
+        const w = weaponByName(nm);
+        const icon = w ? (w.icon || EMPTY_ICONS.weapon) : EMPTY_ICONS.weapon;
+        const badge = count > 1 ? `<span class="dupe-badge">×${count}</span>` : '';
+        return `<div class="slot hidden-weapon" data-action="view-hidden" data-player="${idx}" data-type="weapon" data-hidden-name="${esc(nm)}" title="${esc(nm)} (hidden ×${count})">
+          <img src="${esc(icon)}" alt="${esc(nm)}" onerror="this.src='${EMPTY_ICONS.weapon}'">
+          ${badge}
+        </div>`;
+      }).join('');
       // Hidden/extra weapons get their own conditional row (between Weapons and
       // Passives) so they never push the Weapons row rightward / overflow. Familiars
       // (picked via Familiar Forge) share this row but are REMOVABLE (× → remove-familiar).
-      const hiddenCells = allHidden.map(nm =>
+      const hiddenCells = mergedHidden.map(nm =>
         slotHTML(weaponByName(nm), { type:'weapon', playerIdx:idx, slotIdx:-1, hidden:true })).join('');
       const familiarCells = (player.familiars || []).map((nm, fi) => {
         const w = weaponByName(nm);
@@ -3597,8 +3780,8 @@
           <button class="slot-remove" data-action="remove-familiar" data-player="${idx}" data-fam-idx="${fi}" title="Remove">×</button>
         </div>`;
       }).join('');
-      const hiddenWeaponRow = (hiddenCells || familiarCells)
-        ? `<div class="slot-row slot-row-hidden">${hiddenCells}${familiarCells}</div>` : '';
+      const hiddenWeaponRow = (hiddenCells || charHiddenCells || familiarCells)
+        ? `<div class="slot-row slot-row-hidden">${hiddenCells}${charHiddenCells}${familiarCells}</div>` : '';
       // Weapons hidden by an equipped absorb-union (Clock Tower's 4 bases / Alucard
       // Shield's 5 evolutions) render their own row: Alucard's stay evolvable (editable),
       // Clock Tower's are read-only.
@@ -3634,6 +3817,24 @@
       const transientPassiveSlots = player.passives
         .map((p, i) => (i >= counts.passives && p) ? slotHTML(p, { type:'passive', playerIdx:idx, slotIdx:i, transient:true }) : '')
         .join('');
+
+      // Character SLOT grants (Santa Ladonna, Engineer Gino, …) add empty, user-fillable slots.
+      // Filled ones already render above as transient occupants (and are kept alive by the
+      // syncStageSlots budget); here we render the still-EMPTY ones as open-slot cells at the
+      // next free appended indices. A grant-slot fill = a transient occupant that's neither
+      // stage-provided nor a character-granted item.
+      const emptyGrantedSlots = (kind, arr, coreCount) => {
+        const want = grantedSlotCount(player, kind);
+        if (!want) return '';
+        const fills = arr.slice(coreCount).filter(o => o && !itemProvidedFree(o.name, player) && !charGrantsItemNow(player, o.name)).length;
+        const empties = Math.max(0, want - fills);
+        const type = kind === 'weapons' ? 'weapon' : 'passive';
+        let next = coreCount; while (arr[next]) next++;
+        return Array.from({ length: empties }, (_, k) =>
+          slotHTML(null, { type, playerIdx: idx, slotIdx: next + k, transient: true })).join('');
+      };
+      const emptyGrantedWeaponSlots  = emptyGrantedSlots('weapons',  player.weapons,  counts.weapons);
+      const emptyGrantedPassiveSlots = emptyGrantedSlots('passives', player.passives, counts.passives);
 
       // Hidden/extra passives — instances that don't occupy a core slot. Identical
       // instances collapse to ONE icon with an ×N badge to save space; the × removes a
@@ -3671,10 +3872,10 @@
         <div class="player-body">
           <div class="char-col">${charSlot}</div>
           <div class="slots-col">
-            <div class="slot-row">${wSlots}${transientWeaponSlots}${giftWeaponSlot}</div>
+            <div class="slot-row">${wSlots}${transientWeaponSlots}${emptyGrantedWeaponSlots}${giftWeaponSlot}</div>
             ${hiddenWeaponRow}
             ${absorbedWeaponRow}
-            <div class="slot-row">${pSlots}${transientPassiveSlots}${giftPassiveSlot}</div>
+            <div class="slot-row">${pSlots}${transientPassiveSlots}${emptyGrantedPassiveSlots}${giftPassiveSlot}</div>
             ${hiddenPassiveRow}
           </div>
         </div>
@@ -3683,7 +3884,7 @@
 
     // ── Global arcana + stage row
     const gASlots = state.arcana.map((arc, si) =>
-      slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si })
+      slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si, transient: si >= BASE_ARCANA_SLOTS })
     ).join('');
     // Extra (character starting) arcana: locked, view-only, don't count toward the 3.
     const gExtraArcana = extraArcanaNames().map(nm =>
@@ -3701,6 +3902,10 @@
     // back to the top. Mirrors the overlay-scroll handling in refreshOverlay.
     const prevMain = document.querySelector('.planning-main');
     const prevScroll = prevMain ? prevMain.scrollTop : 0;
+    // The info sidebar scrolls independently (.sidebar-body overflow-y:auto); preserve it too, or
+    // interacting with a Character-Sources slider (below the stat table) would jump it to the top.
+    const prevSidebar = document.querySelector('.sidebar-body');
+    const prevSidebarScroll = prevSidebar ? prevSidebar.scrollTop : 0;
 
     document.getElementById('app').innerHTML = `
       <div id="planning">
@@ -3739,6 +3944,8 @@
 
     const newMain = document.querySelector('.planning-main');
     if (newMain) newMain.scrollTop = prevScroll;
+    const newSidebar = document.querySelector('.sidebar-body');
+    if (newSidebar) newSidebar.scrollTop = prevSidebarScroll;
   }
 
   // ═══════════════════════════════════════════════════════
@@ -3804,7 +4011,15 @@
     }
 
     const charLevel = state.players[playerIdx]?.charLevel ?? 1;
-    const left = `${levelRowHTML(playerIdx, charLevel)}${statsHTML(sel, null, charLevel)}`;
+    // Character Sources preview: use a proxy player carrying the slot's live sourceIndex (so the
+    // sliders drive the preview and persist to the slot) but NO equipment — the stat table stays a
+    // clean base+power-up+manual preview and the passive column stays hidden (as before).
+    const slot = state.players[playerIdx];
+    if (slot) slot.sourceIndex = slot.sourceIndex || {};
+    const previewPlayer = sel && slot
+      ? { character: sel, charLevel, weapons: [], passives: [], extraPassives: [], familiars: [], absorbed: {}, sourceIndex: slot.sourceIndex }
+      : null;
+    const left = `${levelRowHTML(playerIdx, charLevel)}${statsHTML(sel, previewPlayer, charLevel, { hidePassive: true, playerIdx })}`;
     const rightTop = sel
       ? `${infoDetailButtonHTML('char', sel.name)}${charSpriteHTML(sel, false)}
          <div class="detail-name">${esc(sel.name)}</div>`
@@ -5221,8 +5436,9 @@
         // A chaos-morph final still equipped after the character no longer matches (e.g.
         // character removed, or a survivor of the rebuild) devolves back to its base.
         autoDevolveBrokenEvos();
-        // Selecting a qualifying character already at Lv30 auto-earns Academy Badge.
-        autoGrantAcademyBadge(state.players[playerIdx]);
+        // Place any character add_extra item grants for the new character (Academy Badge at
+        // Lv30, spell weapons, Sacred familiars, …). render() below also reconciles these.
+        syncCharacterGrants(state.players[playerIdx]);
       } else if (type === 'item') {
         if (sel) {
           const isWeapon = D.weapons.some(w => w.name === sel.name);
@@ -5418,9 +5634,11 @@
   //  POWER-UP CALCULATIONS
   // ═══════════════════════════════════════════════════════
 
-  function calcCharScalingBonus(charStatKey, char, level) {
-    if (!char?.scaling?.length || !level || level < 1) return 0;
-    let total = 0;
+  // Per-entry character level-scaling bonuses for a stat (before summing/producting). Additive
+  // stats sum these; multiplicative stats (max_health, magnet) treat each as a % factor (1+v).
+  function calcCharScalingList(charStatKey, char, level) {
+    if (!char?.scaling?.length || !level || level < 1) return [];
+    const out = [];
     for (const s of char.scaling) {
       if (s.key !== charStatKey) continue;
       let bonus;
@@ -5436,30 +5654,49 @@
       if (s.max !== null) {
         bonus = s.value > 0 ? Math.min(s.max, bonus) : Math.max(s.max, bonus);
       }
-      total += bonus;
+      out.push(bonus);
+    }
+    return out;
+  }
+  function calcCharScalingBonus(charStatKey, char, level) {
+    return calcCharScalingList(charStatKey, char, level).reduce((a, b) => a + b, 0);
+  }
+  // stat_choice: player-picked per-level bonus. For each gate the player has assigned to this stat
+  // (and reached), add `value × increments-since-gate` (like level scaling, offset by the gate).
+  function calcStatChoiceBonus(charStatKey, char, player, level) {
+    const choices = char?.stat_choices;
+    if (!choices?.length || !player?.statChoices) return 0;
+    let total = 0;
+    for (const sc of choices) {
+      if (level < sc.gate || player.statChoices[sc.gate] !== charStatKey) continue;
+      const steps = Math.max(0, level - sc.gate);
+      total += sc.value * (sc.interval === 1 ? steps : Math.floor(steps / sc.interval));
     }
     return total;
   }
 
+  // Multiplicative stats (max_health, magnet) combine as a PRODUCT of (1+val) per level — NOT
+  // an additive sum. Two +25% Magnet levels = ×1.5625, not ×1.5 (stats.csv Magnet Note is
+  // explicit). Additive stats still sum. Returns { additive, factors:[(1+val)…] }.
   function calcPowerUpBonus(charStatKey) {
     let additive = 0;
-    let multiplierSum = 0;
+    const factors = [];
     D.stats.forEach(stat => {
       const level = state.powerUps[stat.name] ?? stat.max_level;
       for (let i = 0; i < level; i++) {
         const val = stat.levels[i]?.[charStatKey];
         if (val === undefined || val === null) continue;
-        if (stat.stacking === 'multiplicative') multiplierSum += val;
+        if (stat.stacking === 'multiplicative') factors.push(1 + val);
         else additive += val;
       }
     });
-    return { additive, multiplierSum, multiplier: 1 + multiplierSum };
+    return { additive, factors };
   }
 
   function calcPassiveBonus(charStatKey, player) {
     let additive = 0;
-    let multiplierSum = 0;
-    if (!player) return { additive, multiplierSum };
+    const factors = [];
+    if (!player) return { additive, factors };
     const isMultStat = D.stats.find(s => s.key === charStatKey)?.stacking === 'multiplicative';
     // Slotted passives + extra-passive instances (e.g. Weapon Power-Up) — the latter
     // may repeat, so each instance contributes the passive's real stats once.
@@ -5469,13 +5706,13 @@
       passive.level_up_values.forEach(lvl => {
         const val = lvl[charStatKey];
         if (val === undefined || val === null) return;
-        if (isMultStat) multiplierSum += val;
+        if (isMultStat) factors.push(1 + val); // multiplicative stats multiply (see calcPowerUpBonus)
         else additive += val;
       });
     };
     player.passives.filter(Boolean).forEach(p => contribute(p.name));
     (player.extraPassives || []).forEach(contribute);
-    return { additive, multiplierSum };
+    return { additive, factors };
   }
 
   // ── Character grant instances (count engine for the later dupe-badge render) ──
@@ -5485,7 +5722,15 @@
     const level  = player?.charLevel ?? 1;
     const amount = grant.amount ?? 1;
     if (grant.interval) {
-      return Math.max(0, Math.min(Math.floor(level / grant.interval), grant.max ?? Infinity)) * amount;
+      let n;
+      if (grant.betweenLo != null) {
+        // Windowed per-N grant (Young Maria: one per level from Lv `betweenLo` to `betweenHi`).
+        const hi = grant.betweenHi ?? Infinity;
+        n = level < grant.betweenLo ? 0 : Math.floor((Math.min(level, hi) - grant.betweenLo) / grant.interval) + 1;
+      } else {
+        n = Math.floor(level / grant.interval);
+      }
+      return Math.max(0, Math.min(n, grant.max ?? Infinity)) * amount;
     }
     if (grant.at?.length) return grant.at.filter(l => level >= l).length * amount;
     return amount; // static
@@ -5528,20 +5773,72 @@
   function stageItemGateOpen(player, name) {
     if (stageProvidesItem(name)) return true;
     // Academy Badge is obtainable by its 3 characters at ANY level (so it's selectable during
-    // level-1 planning); the Lv30 unlock only drives the AUTO-grant (autoGrantAcademyBadge),
+    // level-1 planning); the Lv30 unlock only drives the auto-grant (syncCharacterGrants),
     // not selectability/retention.
     if (name === ACADEMY_BADGE) return isAcademyChar(player?.character);
     return false;
   }
-  // Guard rail: a qualifying character (Eleanor/Maruto/Keitha) automatically earns Academy
-  // Badge at Lv30 in-game — drop it into a free transient slot so a forgetful user doesn't
-  // miss it. One per build; no-op if already owned. Fired on the Lv30 threshold crossing and
-  // on character change (below level 30 the user adds it manually if they want it).
-  function autoGrantAcademyBadge(player) {
-    if (!player || !isAcademyChar(player.character)) return;
-    if ((player.charLevel || 1) < ACADEMY_LEVEL) return;
-    if (anyPlayerOwnsPassive(ACADEMY_BADGE)) return;
-    placeTransientItem(player, 'passive', passiveByName(ACADEMY_BADGE));
+  // Character `add_extra` ITEM grants (weapon/passive) → transient slots, level-gated by
+  // grantInstanceCount. SUPERSEDES the old Academy-Badge hardcode: the 3 academy chars carry
+  // `add_extra [Academy Badge] at 30` in data, so the badge now places through here too, as do
+  // Eleanor's spell weapons, Maria's Sacred familiars, Annette's clockwork bases, etc. Slot-kind
+  // grants (empty slots) and add_hidden (hidden row) are handled in the render; Familiar Forge
+  // grants keep the dedicated familiar system. One-per-build stage-exclusive passives dedup
+  // globally; everything else per-player. Idempotent — safe to run every render.
+  const GRANT_SKIP_ITEMS = new Set(['Familiar Forge']);
+  function isGrantItem(g) {
+    return g.op === 'add_extra' && (g.kind === 'weapon' || g.kind === 'passive') && !GRANT_SKIP_ITEMS.has(g.name);
+  }
+  // Is `name` currently granted (count>0) by this player's character? Keeps such items alive
+  // through syncStageSlots' drop-sweep; a char change / level drop stops granting → it's dropped.
+  function charGrantsItemNow(player, name) {
+    return (player?.character?.grants || []).some(g =>
+      isGrantItem(g) && g.name === name && grantInstanceCount(g, player) > 0);
+  }
+  // Character add_extra SLOT grants add empty, user-fillable slots of a kind (Santa Ladonna:
+  // +Weapon/Passive Slot; Engineer Gino: +Passive; Blackmore/Nathan: +Arcana). Level-gated count.
+  const SLOT_GRANT_KIND = { 'Weapon Slot': 'weapons', 'Passive Slot': 'passives', 'Arcana Slot': 'arcana' };
+  function grantedSlotCount(player, slotKind) {
+    if (!player?.character) return 0;
+    let n = 0;
+    for (const g of (player.character.grants || [])) {
+      if (g.op === 'add_extra' && g.kind === 'slot' && SLOT_GRANT_KIND[g.name] === slotKind) n += grantInstanceCount(g, player);
+    }
+    return n;
+  }
+  const BASE_ARCANA_SLOTS = 3;
+  // A granted arcana ITEM that's also sitting in a main global slot is redundant — the grant
+  // provides it free as an extra. Free the main slot (John Morris: Iron Blue Will (VII) moves out
+  // of its slot into the extra row when he hits Lv10).
+  function syncGrantedArcana() {
+    const granted = new Set(grantedArcanaNames());
+    if (!granted.size) return;
+    for (let i = 0; i < state.arcana.length; i++) {
+      if (state.arcana[i] && granted.has(state.arcana[i].name)) state.arcana[i] = null;
+    }
+  }
+  // Arcana SLOT grants (Blackmore +2, Nathan Graves +2) add empty, user-fillable GLOBAL arcana
+  // slots. Resize state.arcana to the base 3 + granted total (summed across all players' chars);
+  // trailing granted slots (and their contents) drop when the grant goes away.
+  function syncArcanaSlots() {
+    const total = BASE_ARCANA_SLOTS + state.players.reduce((s, p) => s + grantedSlotCount(p, 'arcana'), 0);
+    while (state.arcana.length < total) state.arcana.push(null);
+    if (state.arcana.length > total) state.arcana.length = total;
+  }
+  function syncCharacterGrants(player) {
+    if (!player?.character) return;
+    // Items hidden inside an equipped absorb-union (Clock Tower's clockwork bases) count as
+    // owned — don't re-place them into transient while they're absorbed, or they'd duplicate.
+    const absorbed = new Set(Object.values(player.absorbed || {}).flat());
+    for (const g of (player.character.grants || [])) {
+      if (!isGrantItem(g) || grantInstanceCount(g, player) <= 0 || absorbed.has(g.name)) continue;
+      const owned = STAGE_EXCLUSIVE_PASSIVES.has(g.name)
+        ? (g.kind === 'passive' ? anyPlayerOwnsPassive(g.name) : anyPlayerOwnsWeapon(g.name))
+        : (g.kind === 'passive' ? ownsPassiveName(player, g.name) : ownsWeaponName(player, g.name));
+      if (owned) continue;
+      const obj = g.kind === 'passive' ? passiveByName(g.name) : weaponByName(g.name);
+      if (obj) placeTransientItem(player, g.kind, obj);
+    }
   }
   // ── Transient (stage) slots ─────────────────────────────────────────────────
   // Free stage pickups occupy APPENDED "real" slots at indices >= the core slot count of
@@ -5613,12 +5910,17 @@
       for (let i = base; i < arr.length; i++) if (arr[i]) tail.push(arr[i]);
       arr.length = base;
       const owned = new Set(arr.filter(Boolean).map(o => o.name));
+      let slotBudget = grantedSlotCount(player, kind); // user-fillable granted extra slots
       for (const obj of tail) {
         if (owned.has(obj.name)) continue;
-        const valid = kind === 'weapons'
+        const valid = (kind === 'weapons'
           ? [...collectWeaponChain(obj.name)].some(n => itemProvidedFree(n, player))
-          : itemProvidedFree(obj.name, player);
-        if (!valid) continue;
+          : itemProvidedFree(obj.name, player))
+          || charGrantsItemNow(player, obj.name); // keep character-granted transient items
+        if (!valid) {
+          if (slotBudget > 0) slotBudget--; // occupies a user-fillable granted slot → keep it
+          else continue;                    // otherwise a stale stage pickup → drop it
+        }
         let i = base; while (arr[i]) i++;
         arr[i] = obj;
         owned.add(obj.name);
@@ -5717,72 +6019,250 @@
     }
   }
 
-  function calcStatTotal(charStatKey, charStats, player, char, level) {
-    const statDef  = D.stats.find(s => s.key === charStatKey);
-    const isPct    = PCT_STATS.has(charStatKey);
-    const inverted = INVERTED_STATS.has(charStatKey);
-    const rawBase  = statDef ? statDef.base_value : (isPct ? 100 : 0);
-    const rawCharBase = charStats ? (charStats[charStatKey] || 0) : 0;
-    const scaling  = calcCharScalingBonus(charStatKey, char, level ?? 1);
-    const rawChar  = rawCharBase + scaling;
-    const { additive, multiplierSum, multiplier } = calcPowerUpBonus(charStatKey);
-    const { additive: passiveAdd, multiplierSum: passiveMultSum } = calcPassiveBonus(charStatKey, player);
+  // ── reference_scaling: character bonuses derived from other build elements ──────────────────
+  // Count equipped copies of a referenced weapon/passive/arcana (Leon's Vampire Killer, Ariana's
+  // Prototypes, Glimmer Tech) across every slot the player holds (incl. transient/hidden/absorbed).
+  // A ref inside [...] matches an equipped object by exact NAME (Vampire Killer, Prototype A) OR by
+  // TRAIT/affinity (Glimmer Tech, Fire, Freeze) — the two are disjoint in the data.
+  function refMatches(obj, ref) { return !!obj && (obj.name === ref || (obj.affinity || []).includes(ref)); }
+  function countEquippedRef(ref, player) {
+    let n = 0;
+    (player?.weapons  || []).forEach(o => { if (refMatches(o, ref)) n++; });
+    (player?.passives || []).forEach(o => { if (refMatches(o, ref)) n++; });
+    (player?.extraPassives || []).forEach(nm => { if (refMatches(passiveByName(nm), ref)) n++; });
+    (player?.familiars     || []).forEach(nm => { if (refMatches(weaponByName(nm), ref)) n++; });
+    Object.values(player?.absorbed || {}).forEach(list => (list || []).forEach(nm => { if (refMatches(weaponByName(nm), ref)) n++; }));
+    (state.arcana || []).forEach(a => { if (refMatches(a, ref)) n++; });
+    return n;
+  }
+  // A reference stat's ABOVE-BASE total in the CSV's native units (pct → fractional, flat → raw).
+  // Computed with reference DISABLED so references can't loop (current data has no ref-on-ref).
+  function refNativeAbove(refStat, charStats, player, char, level) {
+    const statDef = D.stats.find(s => s.key === refStat);
+    const isPct = PCT_STATS.has(refStat);
+    const base = statDef ? statDef.base_value : (isPct ? 100 : 0);
+    // Base total (reference + manual BOTH off) so references can't loop (via manual maxes either).
+    const total = calcStatTotal(refStat, charStats, player, char, level, { skipReference: true, skipManual: true }).total;
+    return isPct ? (total - base) / 100 : (total - base);
+  }
+  // Character-bonus rules for a player = the character's own + EVERY equipped arcana's (arcana
+  // bonuses apply globally to all players, like power-ups; manual sources are granted per-player).
+  function playerReferenceRules(char) {
+    const rules = char?.reference_scaling ? char.reference_scaling.slice() : [];
+    (state.arcana || []).forEach(a => { if (a?.reference_scaling?.length) rules.push(...a.reference_scaling); });
+    return rules;
+  }
+  function playerManualRules(char) {
+    const rules = char?.manual_scaling ? char.manual_scaling.slice() : [];
+    (state.arcana || []).forEach(a => { if (a?.manual_scaling?.length) rules.push(...a.manual_scaling); });
+    return rules;
+  }
+  // Equipped-arcana level_scaling for a stat (global; per-entry, so a mult stat gets each as a
+  // %-factor). Reuses the character scaling engine by passing the arcana object as `char`.
+  function arcanaScalingList(charStatKey, level) {
+    const out = [];
+    (state.arcana || []).forEach(a => { if (a?.scaling?.length) out.push(...calcCharScalingList(charStatKey, a, level)); });
+    return out;
+  }
+
+  // ── manual_scaling: per-player, source-slider-driven bonuses (character + granted by arcana) ──
+  const MULT_KEY_RE = /^(?:mult|multiply)_(.+)$/; // mult_speed / multiply_might → post-assembly ×
+  // Resolve a min/max expr to a number. Derivative exprs (`revival*20`, `max_health_flat/180`) read
+  // the referenced stat's POST-BONUS total with manual OFF (so a source's max can't depend on itself).
+  // A stat's fractional bonus (above-base) for use inside a min/max expression — e.g. +200% move
+  // speed → 2.0. pct stats → (total−100)/100; flat stats → total−base. Manual+reference OFF (no loops).
+  function statFractionalBonus(statKey, charStats, player, char, level) {
+    const key = statKey === 'max_health_flat' ? 'max_health' : statKey === 'magnet_flat' ? 'magnet' : statKey;
+    const statDef = D.stats.find(s => s.key === key);
+    if (!statDef) return 0;
+    const total = calcStatTotal(key, charStats, player, char, level, { skipManual: true, skipReference: true }).total;
+    return PCT_STATS.has(key) ? (total - statDef.base_value) / 100 : (total - statDef.base_value);
+  }
+  // Safe recursive-descent evaluator for a raw min/max expression: numbers, + - * /, parentheses,
+  // stat identifiers (→ statFractionalBonus), and `[a, b]` lists (→ MAX, i.e. a floor). Used for the
+  // reciprocal caps like Tragic Princess `1/move_speed` and Pale Diamond `[1/(1+speed), 0.2]`.
+  function evalManualExpr(raw, resolveStat) {
+    let i = 0; const s = String(raw);
+    const skip = () => { while (i < s.length && s[i] === ' ') i++; };
+    function expr() { let v = term(); skip(); while (s[i] === '+' || s[i] === '-') { const op = s[i++]; const t = term(); v = op === '+' ? v + t : v - t; skip(); } return v; }
+    function term() { let v = factor(); skip(); while (s[i] === '*' || s[i] === '/') { const op = s[i++]; const f = factor(); v = op === '*' ? v * f : v / f; skip(); } return v; }
+    function factor() {
+      skip();
+      if (s[i] === '(') { i++; const v = expr(); skip(); if (s[i] === ')') i++; return v; }
+      if (s[i] === '[') { i++; const parts = [expr()]; skip(); while (s[i] === ',') { i++; parts.push(expr()); skip(); } if (s[i] === ']') i++; return Math.max(...parts); }
+      const num = s.slice(i).match(/^-?\d+(?:\.\d+)?/); if (num) { i += num[0].length; return parseFloat(num[0]); }
+      const id = s.slice(i).match(/^[A-Za-z_][A-Za-z0-9_]*/); if (id) { i += id[0].length; return resolveStat(id[0]); }
+      i++; return 0; // skip an unexpected char
+    }
+    const r = expr();
+    return isFinite(r) ? r : 0;
+  }
+
+  function resolveManualExpr(expr, charStats, player, char, level) {
+    if (!expr) return 0;
+    if (expr.num != null) return expr.num;
+    if (expr.raw != null) return evalManualExpr(expr.raw, k => statFractionalBonus(k, charStats, player, char, level));
+    if (expr.trait != null) return (expr.const ?? 1) * countEquippedRef(expr.trait, player); // n × trait count
+    if (expr.stat) {
+      const key = expr.stat === 'max_health_flat' ? 'max_health' : expr.stat === 'magnet_flat' ? 'magnet' : expr.stat;
+      if (!D.stats.some(s => s.key === key)) return 0; // unknown pseudo-stat → treat as no cap
+      // Resolve against a base total (reference + manual BOTH off) so a derivative max can't loop.
+      return calcStatTotal(key, charStats, player, char, level, { skipManual: true, skipReference: true }).total * expr.factor;
+    }
+    return 0; // unresolved complex expr → contributes nothing (rule effectively inert)
+  }
+  // One rule's step count N (how many discrete slider positions above min). Sources SHOULD share N
+  // across their rules (data invariant); the source uses the max N so one index drives them all.
+  function manualRuleN(r, charStats, player, char, level) {
+    if (r.mode === 'boolean') return 1;
+    if (r.mode === 'pct') return 100;
+    const minV = resolveManualExpr(r.min, charStats, player, char, level);
+    const maxV = resolveManualExpr(r.max, charStats, player, char, level);
+    return r.step ? Math.max(0, Math.round((maxV - minV) / r.step)) : 0;
+  }
+  function manualSourceN(source, char, charStats, player, level) {
+    let N = 0;
+    for (const r of playerManualRules(char)) if (r.source === source)
+      N = Math.max(N, manualRuleN(r, charStats, player, char, level));
+    return N;
+  }
+  // Current slider position for a source on this player (clamped to its live N).
+  function manualSliderIndex(source, char, charStats, player, level) {
+    const N = manualSourceN(source, char, charStats, player, level);
+    const raw = player?.sourceIndex?.[source] ?? 0;
+    return Math.max(0, Math.min(raw, N));
+  }
+  // A single rule's current value at the source's slider index.
+  function manualRuleValue(r, charStats, player, char, level) {
+    const i = manualSliderIndex(r.source, char, charStats, player, level);
+    const minV = resolveManualExpr(r.min, charStats, player, char, level);
+    const maxV = resolveManualExpr(r.max, charStats, player, char, level);
+    if (r.mode === 'boolean') return i > 0 ? maxV : minV;
+    if (r.mode === 'pct')     return minV + (i / 100) * (maxV - minV);
+    return minV + i * r.step;
+  }
+  // Additive manual bonus for `refKey` (stat key or `<stat>_flat`); mult_* keys are handled by
+  // calcCharMult instead. Sums character + arcana rules driven by their per-player sliders.
+  function calcManualFlat(refKey, char, player, charStats, level) {
+    let flat = 0;
+    for (const r of playerManualRules(char)) {
+      if (r.key !== refKey || MULT_KEY_RE.test(r.key)) continue;
+      flat += manualRuleValue(r, charStats, player, char, level);
+    }
+    return flat;
+  }
+  // Post-assembly multiplier for a stat: product of every mult_/multiply_<stat> manual rule's value
+  // (the value IS the factor, e.g. multiply_might max 2 → ×2). 1 when none.
+  function calcCharMult(charStatKey, char, player, charStats, level) {
+    let mult = 1;
+    for (const r of playerManualRules(char)) {
+      const m = MULT_KEY_RE.exec(r.key);
+      if (!m || m[1] !== charStatKey) continue;
+      mult *= manualRuleValue(r, charStats, player, char, level);
+    }
+    return mult;
+  }
+
+  // Sum of reference_scaling bonuses targeting `refKey` (a stat key, or `<stat>_flat`). Additive in
+  // native units; stat-refs read the ref stat's above-base total, item-refs count equipped copies.
+  function calcReferenceFlat(refKey, char, player, charStats, level) {
+    const rules = playerReferenceRules(char);
+    if (!rules.length) return 0;
+    let flat = 0;
+    for (const r of rules) {
+      if (r.key !== refKey) continue;
+      const inc = r.refItems
+        ? r.refItems.reduce((c, nm) => c + countEquippedRef(nm, player), 0)
+        : Math.floor(refNativeAbove(r.refStat, charStats, player, char, level) / r.refValue);
+      let bonus = r.value * inc;
+      if (r.max != null) bonus = r.value > 0 ? Math.min(r.max, bonus) : Math.max(r.max, bonus);
+      flat += bonus;
+    }
+    return flat;
+  }
+
+  function calcStatTotal(charStatKey, charStats, player, char, level, opts = {}) {
+    const statDef    = D.stats.find(s => s.key === charStatKey);
+    const isPct      = PCT_STATS.has(charStatKey);
+    const inverted   = INVERTED_STATS.has(charStatKey);
     const isMultStat = statDef?.stacking === 'multiplicative';
+    const rawBase    = statDef ? statDef.base_value : (isPct ? 100 : 0);
+    const showPassive = !!player;
+    // reference_scaling + manual_scaling contribute to the flat bucket (additive stats) or the
+    // `<key>_flat` bucket (multiplicative stats). Reference is skipped when resolving a reference
+    // target, manual when resolving a manual derivative-max — so neither can loop on itself.
+    const lvl = level ?? 1;
+    const skR = opts.skipReference, skM = opts.skipManual;
+    const bonusKey = isMultStat ? charStatKey + '_flat' : charStatKey;
+    // Flat bucket: additive stats, or the pre-multiplier flat of a mult stat (`<key>_flat`).
+    const extraFlat = (skR ? 0 : calcReferenceFlat(bonusKey, char, player, charStats, lvl))
+                    + (skM ? 0 : calcManualFlat(bonusKey, char, player, charStats, lvl));
+    // Percent bucket (mult stats only): a bare-key reference/manual bonus is a (1+v) factor
+    // (Awake (IV)'s `max_health` Revived %, vs. Lucia's flat `max_health_flat`).
+    const extraPct = isMultStat
+      ? (skR ? 0 : calcReferenceFlat(charStatKey, char, player, charStats, lvl))
+        + (skM ? 0 : calcManualFlat(charStatKey, char, player, charStats, lvl))
+      : 0;
+    const charMult = skM ? 1 : calcCharMult(charStatKey, char, player, charStats, lvl);
+    const pu = calcPowerUpBonus(charStatKey);           // { additive, factors }
+    const pv = calcPassiveBonus(charStatKey, player);   // { additive, factors }
+    const trimNum = n => Number.isInteger(n) ? n : parseFloat(n.toFixed(2));
 
-    // Base column: power-up-adjusted baseline (no char bonus)
-    let adjBase;
+    let total, isCapped = false, dispBase, dispChar, dispPU, dispPassive, baseChanged = false;
+
     if (isMultStat) {
-      adjBase = Math.round(rawBase * multiplier);
-    } else if (isPct) {
-      adjBase = Math.round(rawBase + additive * 100);
+      // Multiplicative stats: flat char bonus (`<key>_flat`) adds to base pre-multiplier; the
+      // bare-key char column (magnet % — max_health has none) and any %-scaling are product
+      // factors, multiplied with the power-up/passive factors: (base+flat)·Π(1+v).
+      const charFlat = (charStats ? (charStats[charStatKey + '_flat'] || 0) : 0) + extraFlat;
+      const charPct  = charStats ? (charStats[charStatKey] || 0) : 0;
+      let charFactor = charPct ? (1 + charPct) : 1;
+      for (const v of calcCharScalingList(charStatKey, char, lvl)) charFactor *= (1 + v);
+      for (const v of arcanaScalingList(charStatKey, lvl)) charFactor *= (1 + v); // global arcana %
+      if (extraPct) charFactor *= (1 + extraPct); // bare-key reference/manual % (Awake HP, etc.)
+      const puFactor = pu.factors.reduce((a, f) => a * f, 1);
+      const pvFactor = pv.factors.reduce((a, f) => a * f, 1);
+
+      const roundFn = FLOOR_STATS.has(charStatKey) ? Math.floor : Math.round;
+      total = roundFn((rawBase + charFlat) * charFactor * puFactor * pvFactor * charMult);
+      // Fold the flat char bonus into the BASE column (shown green when changed) so a stat with
+      // both flat + % doesn't display two values in Char; Char then carries only the ×multiplier.
+      dispBase = rawBase + charFlat;
+      baseChanged = charFlat !== 0;
+      dispChar = charFactor !== 1 ? '×' + trimNum(charFactor) : 0; // 0 → “—”
+      dispPU = puFactor !== 1 ? '×' + trimNum(puFactor) : null;
+      dispPassive = showPassive && pvFactor !== 1 ? '×' + trimNum(pvFactor) : null;
     } else {
-      adjBase = Math.round(rawBase + additive);
+      // Additive stats: flat/pct additive from char (incl. reference + manual) + global arcana
+      // level-scaling + power-ups + passives, all × the post-assembly manual multiplier (charMult).
+      const rawChar    = (charStats ? (charStats[charStatKey] || 0) : 0)
+                       + calcCharScalingBonus(charStatKey, char, lvl)
+                       + calcStatChoiceBonus(charStatKey, char, player, lvl)
+                       + arcanaScalingList(charStatKey, lvl).reduce((a, b) => a + b, 0)
+                       + extraFlat;
+      const additive   = pu.additive;
+      const passiveAdd = pv.additive;
+      total = isPct
+        ? Math.round((rawBase + rawChar * 100 + additive * 100 + passiveAdd * 100) * charMult)
+        : Math.round((rawBase + rawChar + additive + passiveAdd) * charMult);
+
+      dispBase = isPct ? rawBase + '%' : rawBase;
+      dispChar = isPct ? Math.round(rawChar * 100) : Math.round(rawChar);
+      if (additive !== 0) {
+        const val = isPct ? Math.round(additive * 100) : Math.round(additive);
+        dispPU = (val > 0 ? '+' : '') + val + (isPct ? '%' : '');
+      } else dispPU = null;
+      if (passiveAdd !== 0) {
+        const val = isPct ? Math.round(passiveAdd * 100) : parseFloat(passiveAdd.toFixed(1));
+        dispPassive = (val > 0 ? '+' : '') + val + (isPct ? '%' : '');
+      } else dispPassive = null;
     }
 
-    // Total: PU and passive both contribute
-    let total;
-    if (isMultStat) {
-      total = Math.round((rawBase + rawChar) * (1 + multiplierSum + passiveMultSum));
-    } else if (isPct) {
-      total = Math.round(rawBase + rawChar * 100 + additive * 100 + passiveAdd * 100);
-    } else {
-      total = Math.round(rawBase + rawChar + additive + passiveAdd);
-    }
-
-    // Cap
-    let isCapped = false;
     if (statDef?.max_value != null) {
       const cap = statDef.max_value;
       if (inverted ? total <= cap : total >= cap) { total = cap; isCapped = true; }
     }
-
-    // PU column display
-    let dispPU;
-    if (isMultStat && multiplierSum !== 0) {
-      const factor = (1 + multiplierSum);
-      dispPU = '×' + (Number.isInteger(factor) ? factor : parseFloat(factor.toFixed(2)));
-    } else if (!isMultStat && additive !== 0) {
-      const val = isPct ? Math.round(additive * 100) : Math.round(additive);
-      dispPU = (val > 0 ? '+' : '') + val + (isPct ? '%' : '');
-    } else {
-      dispPU = null;
-    }
-
-    // Passive column display
-    let dispPassive;
-    if (isMultStat && passiveMultSum !== 0) {
-      const factor = 1 + passiveMultSum;
-      dispPassive = '×' + (Number.isInteger(factor) ? factor : parseFloat(factor.toFixed(2)));
-    } else if (!isMultStat && passiveAdd !== 0) {
-      const val = isPct ? Math.round(passiveAdd * 100) : parseFloat(passiveAdd.toFixed(1));
-      dispPassive = (val > 0 ? '+' : '') + val + (isPct ? '%' : '');
-    } else {
-      dispPassive = null;
-    }
-
-    const dispBase = isPct ? rawBase + '%' : rawBase;
-    const dispChar = isPct ? Math.round(rawChar * 100) : Math.round(rawChar);
-    return { dispBase, dispChar, dispPU, dispPassive, total, isPct, isCapped };
+    return { dispBase, dispChar, dispPU, dispPassive, total, isPct: isPct, isCapped, baseChanged };
   }
 
   // ═══════════════════════════════════════════════════════
@@ -6374,6 +6854,17 @@
     e.stopPropagation();
     const action = btn.dataset.action;
 
+    if (action === 'src-toggle') { // manual_scaling boolean source (char-select overlay)
+      const player = state.players[parseInt(btn.dataset.player ?? '0')];
+      if (player) {
+        player.sourceIndex = player.sourceIndex || {};
+        const src = btn.dataset.source;
+        player.sourceIndex[src] = player.sourceIndex[src] > 0 ? 0 : 1;
+        refreshOverlay();
+      }
+      return;
+    }
+
     // Detail overlay access from a selector's right info panel — stacks the detail overlay
     // ABOVE this selector. Covers the info-"i"/affinity banners AND the arcana affects icons
     // (nav-*). Add-to-build target = the selector's player.
@@ -6513,7 +7004,7 @@
       let obj;
       try { obj = JSON.parse(raw); }
       catch (e) { showToast('Invalid JSON', 'warn'); return; }
-      if (!obj || obj.schema !== BUILD_SCHEMA || !Array.isArray(obj.players)) {
+      if (!obj || !BUILD_SCHEMA_SUPPORTED.has(obj.schema) || !Array.isArray(obj.players)) {
         showToast('Not a valid build', 'warn'); return;
       }
       // Enforce the same legality rules as the planner — reject an illegal import outright so an
@@ -6662,6 +7153,16 @@
       state.players = initPlayers(n, state.players);
       state.page = 'planning';
       render();
+      return;
+    }
+    if (action === 'src-toggle') { // manual_scaling boolean source (on/off)
+      const player = state.players[playerIdx];
+      if (player) {
+        player.sourceIndex = player.sourceIndex || {};
+        const src = btn.dataset.source;
+        player.sourceIndex[src] = player.sourceIndex[src] > 0 ? 0 : 1;
+        render();
+      }
       return;
     }
     if (action === 'open-power-ups') {
@@ -7299,14 +7800,24 @@
     document.getElementById('app').addEventListener('click', handleAppClick);
     document.getElementById('app').addEventListener('contextmenu', handleAppContextMenu);
     document.getElementById('app').addEventListener('change', e => {
-      if (!e.target.classList.contains('level-input')) return;
-      const playerIdx = parseInt(e.target.dataset.player ?? '0');
-      const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
-      const player = state.players[playerIdx];
-      const prev = player.charLevel || 1;
-      player.charLevel = val;
-      if (prev < ACADEMY_LEVEL && val >= ACADEMY_LEVEL) autoGrantAcademyBadge(player);
-      render();
+      if (e.target.classList.contains('level-input')) {
+        const playerIdx = parseInt(e.target.dataset.player ?? '0');
+        const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
+        const player = state.players[playerIdx];
+        player.charLevel = val;
+        syncCharacterGrants(player); // grants that unlock at this level (Academy Badge, familiars, …)
+        render();
+        return;
+      }
+      if (e.target.classList.contains('src-slider')) {
+        const player = state.players[parseInt(e.target.dataset.player ?? '0')];
+        if (player) { (player.sourceIndex = player.sourceIndex || {})[e.target.dataset.source] = parseInt(e.target.value) || 0; render(); }
+        return;
+      }
+      if (e.target.classList.contains('src-choice-sel')) {
+        const player = state.players[parseInt(e.target.dataset.player ?? '0')];
+        if (player) { (player.statChoices = player.statChoices || {})[e.target.dataset.gate] = e.target.value; render(); }
+      }
     });
     const ovlRoot = document.getElementById('overlay-root');
     ovlRoot.addEventListener('click', handleOverlayClick);
@@ -7338,10 +7849,19 @@
         const playerIdx = parseInt(e.target.dataset.player ?? '0');
         const val = Math.max(1, Math.min(999, parseInt(e.target.value) || 1));
         const player = state.players[playerIdx];
-        const prev = player.charLevel || 1;
         player.charLevel = val;
-        if (prev < ACADEMY_LEVEL && val >= ACADEMY_LEVEL) autoGrantAcademyBadge(player);
+        syncCharacterGrants(player); // grants that unlock at this level (Academy Badge, familiars, …)
         refreshOverlay();
+        return;
+      }
+      if (e.target.classList.contains('src-slider')) { // Character-Sources slider in the char overlay
+        const player = state.players[parseInt(e.target.dataset.player ?? '0')];
+        if (player) { (player.sourceIndex = player.sourceIndex || {})[e.target.dataset.source] = parseInt(e.target.value) || 0; refreshOverlay(); }
+        return;
+      }
+      if (e.target.classList.contains('src-choice-sel')) { // stat_choice dropdown in the char overlay
+        const player = state.players[parseInt(e.target.dataset.player ?? '0')];
+        if (player) { (player.statChoices = player.statChoices || {})[e.target.dataset.gate] = e.target.value; refreshOverlay(); }
         return;
       }
       if (e.target.id === 'collection-enable-chk') {

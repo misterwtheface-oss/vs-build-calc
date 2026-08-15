@@ -1,8 +1,19 @@
-# Build JSON Schema (`schema: 1`)
+# Build JSON Schema (`schema: 2`)
 
 A **build** is a saved, name-keyed snapshot of a full planner loadout — characters, weapons,
 passives, arcana, stage, gifts, familiars, and absorb-unions — for one or more players (co-op).
 Builds are the interchange format between the `vampire-survivors-theorycraft` skill and this site.
+
+**Design principle — persist intent, derive the rest.** A build stores only what the user *chose*;
+the loader **places** each item into the correct slot type (normal / transient / hidden) by
+replaying the planner's rules, then self-heals + validates. So character-granted items (Academy
+Badge, Sacred familiars, Scorej's hidden rings), stage pickups, hidden weapons, and granted arcana
+*items* are **not** stored — they're reconstructed on load. Only user picks are stored: core slots,
+**granted-slot fills** (`weaponsExtra`/`passivesExtra`), base + granted **arcana**, absorb-unions,
+gifts, familiars, extra passives.
+
+**Version.** Current is `schema: 2`. `schema: 1` builds still load (the added v2 fields default to
+empty; a v1 flat list places into core slots and self-heals).
 
 - **Repo builds**: one `builds/<id>.json` file per build. Run `node tools/build-builds.mjs` to
   bundle every `builds/*.json` into `builds/builds.js` (which sets `window.VS_BUILDS`). The site
@@ -32,7 +43,7 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 
 | Field         | Type              | Req | Notes |
 |---------------|-------------------|-----|-------|
-| `schema`      | number            | ✔   | Must be `1`. |
+| `schema`      | number            | ✔   | `1` or `2` (current is `2`; v1 still loads). |
 | `id`          | string (slug)     | ✔   | Unique kebab-case id; also the filename (`builds/<id>.json`). |
 | `name`        | string            | ✔   | Display name. |
 | `author`      | string            |     | Credit. |
@@ -43,7 +54,7 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 | `dataVersion` | string            |     | Free-form marker of the data snapshot authored against (e.g. `"2026-08"`). |
 | `playerCount` | number (1–4)      | ✔   | Number of player entries. |
 | `stage`       | string \| null    |     | Stage name, or `null`. |
-| `arcana`      | (string\|null)[]  |     | Up to 3 **positional** arcana slots; `null` = empty slot. |
+| `arcana`      | (string\|null)[]  |     | **Positional** arcana slots; `null` = empty. Base 3 + any character-**granted** arcana slots (Blackmore, Nathan Graves), so length may exceed 3. Granted arcana *items* (John Morris) are derived, not listed here. |
 | `players`     | Player[]          | ✔   | Length should equal `playerCount`. |
 
 ## Player object
@@ -52,13 +63,17 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 |-----------------|-----------------------------|-------|
 | `character`     | string \| null              | Full character name (with variant prefix). |
 | `charLevel`     | number                      | Defaults to `1`. |
-| `weapons`       | string[]                    | Weapon names, in slot order (compact — omit empties). |
-| `passives`      | string[]                    | Passive names, in slot order. |
+| `weapons`       | string[]                    | **Core** weapon picks, in slot order (compact — omit empties). Excludes granted-slot fills and derived items. |
+| `passives`      | string[]                    | **Core** passive picks, in slot order. |
+| `weaponsExtra`  | string[]                    | v2. User picks in character **granted** weapon slots (Santa Ladonna). Ride transient slots; don't count against the core cap. Optional. |
+| `passivesExtra` | string[]                    | v2. User picks in character **granted** passive slots (Santa Ladonna, Engineer Gino). Optional. |
 | `extraPassives` | string[]                    | Non-slot passive instances (e.g. Weapon Power-Up). Optional. |
 | `giftWeapon`    | string \| null              | Super Candybox II Turbo free weapon pick. Optional. |
 | `giftPassive`   | string \| null              | Arma Dio free passive pick. Optional. |
 | `familiars`     | string[]                    | Familiar Forge picks (live in the hidden row). Optional. |
 | `absorbed`      | `{ [result]: string[] }`    | Absorb-union map. Optional. |
+| `sourceIndex`   | `{ [source]: number }`      | v2. manual_scaling source-slider positions (integer step index). Optional. |
+| `statChoices`   | `{ [gate]: string }`        | v2. stat_choice picks — chosen stat key per level gate (Blackmore/Joachim). Optional. |
 
 ### Absorb-unions (`absorbed`)
 
@@ -86,8 +101,10 @@ dropped from the bundle). Produce builds that satisfy all of these:
   against the cap; stage-exclusive passives (below) don't count against the passive cap.
 - **No duplicate** weapon or passive *within a single player*. (Co-op allows the same weapon/passive
   across *different* players.)
-- At most **3 arcana**, no duplicates, and a manual arcana slot may not repeat a character's
-  starting arcana.
+- At most **3 + character-granted arcana slots** (Blackmore/Nathan Graves add slots), no
+  duplicates, and a manual arcana slot may not repeat a character's starting arcana.
+- **Granted-slot fills** (`weaponsExtra`/`passivesExtra`) must fit the character's granted
+  extra-slot budget at its level (e.g. Santa Ladonna's weapon slot only exists at Lv80).
 
 **Evolution requirements** (the big one — requirements live on the *source* weapon)
 - If a player equips an evolved/union weapon, every **passive** required along its evolution chain

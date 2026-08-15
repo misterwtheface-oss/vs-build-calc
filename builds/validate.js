@@ -32,12 +32,37 @@
   const ABSORB_UNIONS = new Set(['Clock Tower', 'Alucard Shield']);
   const ALUCARD_ABSORB_COUNT = 5;
 
+  // Character add_item grant counts (mirror grantInstanceCount / grantedSlotCount in index.html) —
+  // needed to size the arcana cap and validate granted-slot fills against the character's budget.
+  const SLOT_GRANT_KIND = { 'Weapon Slot': 'weapons', 'Passive Slot': 'passives', 'Arcana Slot': 'arcana' };
+  function grantCount(g, level) {
+    const amount = g.amount == null ? 1 : g.amount;
+    if (g.interval) {
+      let n;
+      if (g.betweenLo != null) {
+        const hi = g.betweenHi == null ? Infinity : g.betweenHi;
+        n = level < g.betweenLo ? 0 : Math.floor((Math.min(level, hi) - g.betweenLo) / g.interval) + 1;
+      } else n = Math.floor(level / g.interval);
+      return Math.max(0, Math.min(n, g.max == null ? Infinity : g.max)) * amount;
+    }
+    if (g.at && g.at.length) return g.at.filter(l => level >= l).length * amount;
+    return amount;
+  }
+  function grantedSlots(charObj, level, kind) {
+    if (!charObj) return 0;
+    let n = 0;
+    (charObj.grants || []).forEach(g => {
+      if (g.op === 'add_extra' && g.kind === 'slot' && SLOT_GRANT_KIND[g.name] === kind) n += grantCount(g, level);
+    });
+    return n;
+  }
+
   function validateBuild(build, data) {
     const errors = [], warnings = [];
     const E = m => errors.push(m);
     const W = m => warnings.push(m);
     if (!build || typeof build !== 'object') { E('Build is not an object'); return { errors, warnings }; }
-    if (build.schema !== 1) E(`Unsupported schema (expected 1, got ${build.schema})`);
+    if (build.schema !== 1 && build.schema !== 2) E(`Unsupported schema (expected 1 or 2, got ${build.schema})`);
 
     const D = data || {};
     const weapons = D.weapons || [], passives = D.passives || [], arcana = D.arcana || [],
@@ -105,8 +130,11 @@
       return false;
     }
 
-    // ── Global caps: arcana ──
-    if ((build.arcana || []).length > 3) E(`Too many arcana (${build.arcana.length}); max 3 slots`);
+    // ── Global caps: arcana (base 3 + character-granted arcana slots) ──
+    const grantedArcanaTotal = players.reduce((s, p, i) =>
+      s + grantedSlots(charObjs[i], clampInt(p && p.charLevel, 1, 999, 1), 'arcana'), 0);
+    const arcanaCap = 3 + grantedArcanaTotal;
+    if ((build.arcana || []).length > arcanaCap) E(`Too many arcana (${(build.arcana || []).length}); max ${arcanaCap} slots`);
     dupes(arcanaSlots).forEach(n => E(`Duplicate arcana: ${n}`));
     arcanaSlots.forEach(n => { if (!aByName[n]) W(`Unknown arcana "${n}" — will be skipped on load`); });
     if (build.stage && !stageObj) W(`Unknown stage "${build.stage}" — will be skipped on load`);
@@ -131,14 +159,25 @@
 
       const pWeapons = (p.weapons || []).filter(Boolean);
       const pPassives = (p.passives || []).filter(Boolean);
+      // Granted-slot fills (v2): equipped like core, but they ride the character's granted extra
+      // slots — so they don't count against the core cap, but DO count for dupes/requirements.
+      const pWeaponsExtra  = (p.weaponsExtra  || []).filter(Boolean);
+      const pPassivesExtra = (p.passivesExtra || []).filter(Boolean);
+      const level = clampInt(p.charLevel, 1, 999, 1);
+      if (pWeaponsExtra.length  > grantedSlots(charObj, level, 'weapons'))
+        E(`${who}${pWeaponsExtra.length} granted-slot weapon fill(s) exceed this character's granted weapon slots`);
+      if (pPassivesExtra.length > grantedSlots(charObj, level, 'passives'))
+        E(`${who}${pPassivesExtra.length} granted-slot passive fill(s) exceed this character's granted passive slots`);
+      const allW = pWeapons.concat(pWeaponsExtra);
+      const allP = pPassives.concat(pPassivesExtra);
 
       // Unknown names → warnings (load skips them).
-      pWeapons.forEach(n => { if (!wByName[n]) W(`${who}unknown weapon "${n}" — will be skipped on load`); });
-      pPassives.forEach(n => { if (!pByName[n]) W(`${who}unknown passive "${n}" — will be skipped on load`); });
+      allW.forEach(n => { if (!wByName[n]) W(`${who}unknown weapon "${n}" — will be skipped on load`); });
+      allP.forEach(n => { if (!pByName[n]) W(`${who}unknown passive "${n}" — will be skipped on load`); });
 
       // Duplicates within a player (co-op allows dupes ACROSS players, never within one).
-      dupes(pWeapons).forEach(n => E(`${who}duplicate weapon: ${n}`));
-      dupes(pPassives).forEach(n => E(`${who}duplicate passive: ${n}`));
+      dupes(allW).forEach(n => E(`${who}duplicate weapon: ${n}`));
+      dupes(allP).forEach(n => E(`${who}duplicate passive: ${n}`));
 
       // Slot caps. Counterpart weapons (Gemini duplicates) and absorbed-hidden weapons don't
       // take a slot; stage-supplied free weapons ride transient slots. Stage-exclusive passives
@@ -154,7 +193,7 @@
       if (corePassives.length > counts.passives) E(`${who}${corePassives.length} passives exceeds the ${counts.passives}-slot cap for ${pc}-player`);
 
       // A weapon can't be both equipped in a slot and hidden in an absorb-union.
-      pWeapons.forEach(n => { if (absorbedHidden.has(n)) E(`${who}${n} is both equipped and absorbed`); });
+      allW.forEach(n => { if (absorbedHidden.has(n)) E(`${who}${n} is both equipped and absorbed`); });
 
       // Stage-exclusive / Academy passive gating.
       pPassives.forEach(n => {
@@ -168,7 +207,7 @@
       });
 
       // Chaos-morph finals are character-gated.
-      pWeapons.concat([...absorbedHidden]).forEach(n => {
+      allW.concat([...absorbedHidden]).forEach(n => {
         const info = chaosByFinal[n];
         if (info && (!charObj || charObj.name !== info.character))
           E(`${who}${n} can only be formed by ${info.character}`);
@@ -178,7 +217,7 @@
       // passives must be in the build (weapon/union-partner requirements are inherent to the
       // chain). Only count chain weapons whose trans_result is ALSO in the chain — i.e. evos
       // that actually happened en route — so a plain base isn't blocked by its own forward req.
-      const allChainTargets = pWeapons.concat([...absorbedHidden]);
+      const allChainTargets = allW.concat([...absorbedHidden]);
       const flaggedReq = new Set();
       allChainTargets.forEach(target => {
         if (!wByName[target]) return;

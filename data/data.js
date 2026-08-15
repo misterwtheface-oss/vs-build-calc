@@ -45,12 +45,15 @@ window.VS_DATA = {
           "max": 0.5
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -61,7 +64,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -103,12 +105,15 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -119,7 +124,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -170,12 +174,15 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -186,7 +193,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -228,12 +234,15 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -244,7 +253,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -286,12 +294,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -302,7 +313,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -351,12 +361,15 @@ window.VS_DATA = {
           "max": -0.15
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -367,7 +380,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -418,12 +430,15 @@ window.VS_DATA = {
           "max": 0.9
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -434,7 +449,6 @@ window.VS_DATA = {
         "cooldown": -0.9,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -499,12 +513,15 @@ window.VS_DATA = {
           "max": 0.2
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 10,
+        "max_health_flat": 10,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.1,
@@ -515,7 +532,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -552,12 +568,15 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -30,
+        "max_health_flat": -30,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -568,7 +587,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -608,12 +626,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 5,
         "armor": 0,
         "move_speed": 0,
@@ -624,7 +645,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -677,12 +697,15 @@ window.VS_DATA = {
           "max": -4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.5,
         "armor": 0,
         "move_speed": 0,
@@ -693,7 +716,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -732,12 +754,15 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": -0.4,
@@ -748,7 +773,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -792,12 +816,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -808,7 +835,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -853,12 +879,15 @@ window.VS_DATA = {
         "Might"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -50,
+        "max_health_flat": -50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -869,7 +898,6 @@ window.VS_DATA = {
         "cooldown": -0.25,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -919,12 +947,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -935,7 +966,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -984,12 +1014,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -1000,7 +1033,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1049,12 +1081,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -1065,7 +1100,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1116,12 +1150,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -1132,7 +1169,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1201,12 +1237,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -1217,7 +1256,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1294,12 +1332,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -1310,7 +1351,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1361,12 +1401,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -1377,7 +1420,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1446,12 +1488,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -1462,7 +1507,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1523,12 +1567,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.2,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -1539,7 +1586,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 10,
         "revival": 0,
-        "magnet": 0.2,
         "luck": 0.2,
         "growth": 0,
         "greed": 0.2,
@@ -1592,12 +1638,15 @@ window.VS_DATA = {
           "max": 0.5
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -1608,7 +1657,6 @@ window.VS_DATA = {
         "cooldown": -0.15,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": -0.5,
@@ -1661,12 +1709,15 @@ window.VS_DATA = {
           "max": 5
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0,
@@ -1677,7 +1728,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.3,
         "growth": 0,
         "greed": -0.5,
@@ -1752,12 +1802,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -1768,7 +1821,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1843,12 +1895,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 233,
+        "max_health_flat": 233,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 3,
         "armor": 3,
         "move_speed": 0.5,
@@ -1859,7 +1914,6 @@ window.VS_DATA = {
         "cooldown": -0.25,
         "amount": 1,
         "revival": 1,
-        "magnet": 1,
         "luck": 0.5,
         "growth": 0,
         "greed": 0,
@@ -1905,12 +1959,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Overheal min 32 max 665 by 32",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "HP Critical",
+          "min": {
+            "num": 32
+          },
+          "max": {
+            "num": 665
+          },
+          "mode": "step",
+          "step": 32
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.5,
         "armor": 1,
         "move_speed": 0.2,
@@ -1921,7 +1991,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -1973,12 +2042,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.3,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -1989,7 +2061,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.3,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -2035,12 +2106,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -2051,7 +2125,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.3,
@@ -2095,12 +2168,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -2111,7 +2187,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2165,12 +2240,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -2181,7 +2259,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 7,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -2228,12 +2305,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2244,7 +2324,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2288,12 +2367,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2304,7 +2386,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2348,12 +2429,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2364,7 +2448,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2408,12 +2491,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2424,7 +2510,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2468,12 +2553,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2484,7 +2572,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2528,12 +2615,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2544,7 +2634,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2588,12 +2677,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -2604,7 +2696,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2661,8 +2752,9 @@ window.VS_DATA = {
           "max": 0.6
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -2687,7 +2779,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0,
@@ -2698,7 +2792,6 @@ window.VS_DATA = {
         "cooldown": -0.7,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.3,
         "growth": 0,
         "greed": 0,
@@ -2762,12 +2855,160 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Overheal min 0 max 220 by pct|\r\nrecovery: source Overheal min 0 max 2 by pct|\r\narmor: source Overheal min 0 max 2 by pct|\r\nmove_speed: source Overheal min 0 max 0.5 by pct|\r\nmight: source Overheal min 0 max 0.5 by pct|\r\nspeed: source Overheal min 0 max 0.5 by pct|\r\nduration: source Overheal min 0 max 0.5 by pct|\r\narea: source Overheal min 0 max 0.5 by pct|\r\ncooldown: source Overheal min 0 max -0.25 by pct|\r\namount: source Overheal min 0 max 2 by pct|\r\nrevival: source Overheal min 0 max 3 by pct|\r\nmagnet: source Overheal min 0 max 16 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 220
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "recovery",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "armor",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.25
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "amount",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "revival",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 3
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "magnet",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 16
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -2778,7 +3019,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2828,12 +3068,28 @@ window.VS_DATA = {
         "Curse"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "luck: source Lucky! min 0 max 9999 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "luck",
+          "source": "Lucky!",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 9999
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.07,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.07,
@@ -2844,7 +3100,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.07,
         "luck": 0.07,
         "growth": 0,
         "greed": 0,
@@ -2879,12 +3134,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -2895,7 +3153,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -2944,12 +3201,15 @@ window.VS_DATA = {
           "max": 0.5
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -23,
+        "max_health_flat": -23,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": -0.1,
@@ -2960,7 +3220,6 @@ window.VS_DATA = {
         "cooldown": 0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -3030,12 +3289,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -99,
+        "max_health_flat": -99,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -3046,7 +3308,6 @@ window.VS_DATA = {
         "cooldown": 0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -3144,12 +3405,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -93,
+        "max_health_flat": -93,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -3160,7 +3424,6 @@ window.VS_DATA = {
         "cooldown": 0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -3186,12 +3449,15 @@ window.VS_DATA = {
       "affinity": [],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -3202,7 +3468,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3251,12 +3516,15 @@ window.VS_DATA = {
         "Greed"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -3267,7 +3535,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": -0.8,
@@ -3346,12 +3613,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 60,
+        "max_health_flat": 60,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -3362,7 +3632,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 1,
         "luck": 0.5,
         "growth": 0,
         "greed": 0,
@@ -3419,12 +3688,15 @@ window.VS_DATA = {
           "max": 0.8
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.5,
         "armor": 0,
         "move_speed": 0,
@@ -3435,7 +3707,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3484,12 +3755,15 @@ window.VS_DATA = {
         "Greed"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 5,
         "move_speed": -0.2,
@@ -3500,7 +3774,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": -0.8,
@@ -3571,12 +3844,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -80,
+        "max_health_flat": -80,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.3,
@@ -3587,7 +3863,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -3640,12 +3915,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 0,
         "armor": 2,
         "move_speed": -1,
@@ -3656,7 +3934,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 1,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3707,12 +3984,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -3723,7 +4003,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.2,
@@ -3750,12 +4029,15 @@ window.VS_DATA = {
       "affinity": [],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -3766,7 +4048,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3808,12 +4089,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -3824,7 +4108,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3879,12 +4162,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 200,
+        "max_health_flat": 200,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -3895,7 +4181,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 2,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3939,12 +4224,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 155,
+        "max_health_flat": 155,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -3955,7 +4243,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -3999,12 +4286,23 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "amount: 1 per 1 revival",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "max": null,
+          "refValue": 1,
+          "refStat": "revival"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 80,
+        "max_health_flat": 80,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -4015,7 +4313,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 2,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4082,12 +4379,15 @@ window.VS_DATA = {
           "max": 0.3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -4098,7 +4398,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": -0.8,
         "greed": 0,
@@ -4217,12 +4516,15 @@ window.VS_DATA = {
           "max": 0.2
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -4233,7 +4535,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4279,8 +4580,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -4294,7 +4596,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 8,
+        "max_health_flat": 8,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": -0.2,
@@ -4305,7 +4609,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4358,12 +4661,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 3,
         "move_speed": 0.8,
@@ -4374,7 +4680,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4418,12 +4723,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.07,
@@ -4434,7 +4742,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4478,12 +4785,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -4494,7 +4804,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4538,12 +4847,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Overheal min 0 max 9999 by 0.2",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 9999
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.2,
@@ -4554,7 +4879,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4608,12 +4932,64 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean|\r\ncurse: source Megalo State min 0 max 0.5 by boolean|\r\nmove_speed: source Megalo State min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -20,
+        "max_health_flat": -20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -4624,7 +5000,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.1,
         "growth": 0,
         "greed": 0,
@@ -4681,12 +5056,76 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nspeed: source Megalo State min 0 max 0.3 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\narea: source Megalo State min 0 max 0.3 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 100
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "armor",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.3
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.4
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.3
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": -0.2,
@@ -4697,7 +5136,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4735,12 +5173,15 @@ window.VS_DATA = {
         "Cooldown"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -4751,7 +5192,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -4797,12 +5237,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "multiply_area: source Expansion min 1 max 1.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "multiply_area",
+          "source": "Expansion",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 8,
+        "max_health_flat": 8,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -4813,7 +5269,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0.2,
         "greed": 0,
@@ -4863,12 +5318,15 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -20,
+        "max_health_flat": -20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -4879,7 +5337,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.1,
         "growth": 0,
         "greed": 0,
@@ -4936,12 +5393,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 150,
+        "max_health_flat": 150,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -4952,7 +5412,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -5001,12 +5460,15 @@ window.VS_DATA = {
           "max": 4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5017,7 +5479,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5056,8 +5517,9 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -5092,7 +5554,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": -10,
+        "max_health_flat": -10,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5103,7 +5567,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0.25,
         "greed": 0,
@@ -5142,8 +5605,9 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -5178,7 +5642,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": -10,
+        "max_health_flat": -10,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5189,7 +5655,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0.25,
         "greed": 0,
@@ -5228,8 +5693,9 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -5264,7 +5730,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": -10,
+        "max_health_flat": -10,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5275,7 +5743,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0.25,
         "greed": 0,
@@ -5321,8 +5788,22 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "armor: source Damage Taken min 0 max 50 by 1",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "armor",
+          "source": "Damage Taken",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 50
+          },
+          "mode": "step",
+          "step": 1
+        }
+      ],
       "charge_ability": "",
       "grants": [
         {
@@ -5337,7 +5818,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -5348,7 +5831,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5403,8 +5885,9 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Flash Arrow Volley cooldown 10 charge by Moving reduce by luck min 2",
       "grants": [
         {
@@ -5419,7 +5902,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -5430,7 +5915,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.1,
         "growth": 0,
         "greed": 0,
@@ -5478,12 +5962,52 @@ window.VS_DATA = {
         "Cooldown"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Revived min 0 max 2 by boolean|\r\ncooldown: source Revived min 0 max -1 by boolean|\r\nmove_speed: source Revived min 0 max 0.6 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.6
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.5,
         "armor": 0,
         "move_speed": 0.4,
@@ -5494,7 +6018,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 7,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5551,12 +6074,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.5,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5567,7 +6093,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.5,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -5632,8 +6157,9 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -5668,7 +6194,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 150,
+        "max_health_flat": 150,
+        "magnet_flat": 0,
+        "magnet": 0.5,
         "recovery": 0,
         "armor": 5,
         "move_speed": 0,
@@ -5679,7 +6207,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.5,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -5732,12 +6259,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 2,
         "armor": 0,
         "move_speed": 0,
@@ -5748,7 +6278,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5797,12 +6326,15 @@ window.VS_DATA = {
           "max": 4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5813,7 +6345,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5855,12 +6386,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5871,7 +6405,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5906,8 +6439,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -5923,7 +6457,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -5934,7 +6470,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -5978,12 +6513,15 @@ window.VS_DATA = {
         "Might"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 156,
+        "max_health_flat": 156,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -5994,7 +6532,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -6040,12 +6577,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Body Parts min 0 max 999 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Body Parts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 9999
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.1,
@@ -6056,7 +6609,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6102,12 +6654,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "revival: source Revived min 0 max 10 by 1",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "revival",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 20
+          },
+          "mode": "step",
+          "step": 1
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.1,
         "armor": 1,
         "move_speed": 0.2,
@@ -6118,7 +6686,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6166,12 +6733,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.8 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.8
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -6182,7 +6789,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6240,44 +6846,43 @@ window.VS_DATA = {
           "value": -0.1,
           "interval": 10,
           "max": -0.9
-        },
-        {
-          "key": "stat_choice",
-          "value": 0.01,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "stat_choice",
-          "value": 0.01,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "stat_choice",
-          "value": 0.01,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "stat_choice",
-          "value": 0.01,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "stat_choice",
-          "value": 0.01,
-          "interval": 1,
-          "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [
+        {
+          "value": 0.01,
+          "interval": 1,
+          "gate": 10
+        },
+        {
+          "value": 0.01,
+          "interval": 1,
+          "gate": 20
+        },
+        {
+          "value": 0.01,
+          "interval": 1,
+          "gate": 30
+        },
+        {
+          "value": 0.01,
+          "interval": 1,
+          "gate": 40
+        },
+        {
+          "value": 0.01,
+          "interval": 1,
+          "gate": 50
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -6288,7 +6893,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6337,12 +6941,15 @@ window.VS_DATA = {
           "max": 4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -6353,7 +6960,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6399,8 +7005,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -6414,7 +7021,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 80,
+        "max_health_flat": 80,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -6425,7 +7034,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6469,12 +7077,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\r\nmight: source Kills min 0 max 0.25 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "speed",
+          "source": "Kills",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Kills",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.35
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -6485,7 +7121,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6529,12 +7164,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "speed: source Kills min 0 max 0.5 by pct|\r\ncooldown: source Kills min 0 max -0.25 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "speed",
+          "source": "Kills",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Kills",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.25
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -6545,7 +7208,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6595,12 +7257,33 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "armor: 1 per 0.1 move_speed|cooldown: -0.05 per [Prototype A,Prototype B,Prototype C]",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refValue": 0.1,
+          "refStat": "move_speed"
+        },
+        {
+          "key": "cooldown",
+          "value": -0.05,
+          "max": null,
+          "refItems": [
+            "Prototype A",
+            "Prototype B",
+            "Prototype C"
+          ]
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -6611,7 +7294,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0.1,
         "greed": 0,
@@ -6677,12 +7359,185 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Revived min 0 max revival*20 by 20|\r\nrecovery: source Revived min 0 max revival*0.1 by 0.1|\r\narmor: source Revived min 0 max revival*0.2 by 0.2|\r\nmove_speed: source Revived min 0 max revival*0.08 by 0.08|\r\nmight: source Revived min 0 max revival*0.04 by 0.04|\r\nspeed: source Revived min 0 max revival*0.04 by 0.04|\r\nduration: source Revived min 0 max revival*0.04 by 0.04|\r\narea: source Revived min 0 max revival*0.04 by 0.04|\r\ncooldown: source Revived min 0 max revival*-0.03 by -0.03|\r\namount: source Revived min 0 max revival*0.2 by 0.2|\r\nluck: source Revived min 0 max revival*0.05 by 0.05|\r\ngrowth: source Revived min 0 max revival*0.05 by 0.05|\r\ngreed: source Revived min 0 max revival*0.01 by 0.01",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 20
+          },
+          "mode": "step",
+          "step": 20
+        },
+        {
+          "key": "recovery",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.1
+          },
+          "mode": "step",
+          "step": 0.1
+        },
+        {
+          "key": "armor",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.2
+          },
+          "mode": "step",
+          "step": 0.2
+        },
+        {
+          "key": "move_speed",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.08
+          },
+          "mode": "step",
+          "step": 0.08
+        },
+        {
+          "key": "might",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.04
+          },
+          "mode": "step",
+          "step": 0.04
+        },
+        {
+          "key": "speed",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.04
+          },
+          "mode": "step",
+          "step": 0.04
+        },
+        {
+          "key": "duration",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.04
+          },
+          "mode": "step",
+          "step": 0.04
+        },
+        {
+          "key": "area",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.04
+          },
+          "mode": "step",
+          "step": 0.04
+        },
+        {
+          "key": "cooldown",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": -0.03
+          },
+          "mode": "step",
+          "step": -0.03
+        },
+        {
+          "key": "amount",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.2
+          },
+          "mode": "step",
+          "step": 0.2
+        },
+        {
+          "key": "luck",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.05
+          },
+          "mode": "step",
+          "step": 0.05
+        },
+        {
+          "key": "growth",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.05
+          },
+          "mode": "step",
+          "step": 0.05
+        },
+        {
+          "key": "greed",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.01
+          },
+          "mode": "step",
+          "step": 0.01
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.2,
@@ -6693,7 +7548,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6743,12 +7597,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "cooldown: source Missing Health min 0 max -0.5 by pct|\r\nmove_speed: source Missing Health min 0 max 0.1 by pct|\r\nspeed: source Missing Health min 0 max 0.1 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "cooldown",
+          "source": "Missing Health",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Missing Health",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.1
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Missing Health",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.1
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -6759,7 +7653,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6796,12 +7689,23 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "area: 0.02 per -0.01 cooldown max 0.5",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "area",
+          "value": 0.02,
+          "max": 0.5,
+          "refValue": -0.01,
+          "refStat": "cooldown"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.4,
@@ -6812,7 +7716,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -6849,12 +7752,23 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "cooldown: -0.01 per 0.02 move_speed",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "cooldown",
+          "value": -0.01,
+          "max": null,
+          "refValue": 0.02,
+          "refStat": "move_speed"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.4,
@@ -6865,7 +7779,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6909,12 +7822,23 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "might: 0.1 per 1 armor",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.1,
+          "max": null,
+          "refValue": 1,
+          "refStat": "armor"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -6925,7 +7849,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -6969,12 +7892,23 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "armor: 1 per 0.1 might",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refValue": 0.1,
+          "refStat": "might"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -6985,7 +7919,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7022,12 +7955,23 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "might: 0.01 per 0.01 speed max 9",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": 9,
+          "refValue": 0.01,
+          "refStat": "speed"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -7038,7 +7982,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -7090,12 +8033,30 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "might: 0.01 per 0.01 greed|might: 0.01 per 0.01 curse",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "greed"
+        },
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "curse"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.8,
@@ -7106,7 +8067,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7159,12 +8119,15 @@ window.VS_DATA = {
           "max": 4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -7175,7 +8138,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7235,8 +8197,106 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 80,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "recovery",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "amount",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "move_speed",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "might",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "speed",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "area",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "luck",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "growth",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "cooldown",
+          "value": -0.05,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -7251,7 +8311,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -7262,7 +8324,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7322,8 +8383,106 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "max_health_flat: 80 per [Vampire Killer]|recovery: 0.1 per [Vampire Killer]|armor: 1 per [Vampire Killer]|revival: 1 per [Vampire Killer]|amount: 1 per [Vampire Killer]|move_speed: 0.1 per [Vampire Killer]|might: 0.1 per [Vampire Killer]|speed: 0.1 per [Vampire Killer]|area: 0.1 per [Vampire Killer]|luck: 0.1 per [Vampire Killer]|growth: 0.1 per [Vampire Killer]|cooldown: -0.05 per [Vampire Killer]",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 80,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "recovery",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "revival",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "amount",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "move_speed",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "might",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "speed",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "area",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "luck",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "growth",
+          "value": 0.1,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        },
+        {
+          "key": "cooldown",
+          "value": -0.05,
+          "max": null,
+          "refItems": [
+            "Vampire Killer"
+          ]
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -7338,7 +8497,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -7349,7 +8510,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7395,12 +8555,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -7411,7 +8574,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.1,
         "growth": 0,
         "greed": 0,
@@ -7457,12 +8619,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -7473,7 +8638,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.1,
         "growth": 0,
         "greed": 0,
@@ -7522,12 +8686,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -7538,7 +8705,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7587,12 +8753,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -7603,7 +8772,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7651,12 +8819,30 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.02,
+          "refStat": "greed"
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refValue": 2,
+          "refStat": "greed"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -7667,7 +8853,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7715,12 +8900,30 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: 0.01 per 0.02 greed|armor: 1 per 2 greed",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.02,
+          "refStat": "greed"
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refValue": 2,
+          "refStat": "greed"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -7731,7 +8934,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7779,12 +8981,30 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.02,
+          "refStat": "growth"
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refValue": 2,
+          "refStat": "growth"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -7795,7 +9015,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7843,12 +9062,30 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: 0.01 per 0.02 growth|armor: 1 per growth: 2",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.02,
+          "refStat": "growth"
+        },
+        {
+          "key": "armor",
+          "value": 1,
+          "max": null,
+          "refValue": 2,
+          "refStat": "growth"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -7859,7 +9096,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7905,12 +9141,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -7921,7 +9160,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -7967,12 +9205,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -7983,7 +9224,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8020,12 +9260,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -8036,7 +9279,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8073,12 +9315,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -8089,7 +9334,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8135,12 +9379,29 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "multiply_might",
+          "source": "Missing Health",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "stat": "max_health_flat",
+            "factor": 0.005555555555555556
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 80,
+        "max_health_flat": 80,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8151,7 +9412,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8197,12 +9457,29 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "multiply_might: source Missing Health min 1 max max_health_flat/180 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "multiply_might",
+          "source": "Missing Health",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "stat": "max_health_flat",
+            "factor": 0.005555555555555556
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 80,
+        "max_health_flat": 80,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8213,7 +9490,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8261,12 +9537,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.6,
@@ -8277,7 +9556,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.4,
         "growth": 0,
         "greed": 0,
@@ -8325,12 +9603,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.6,
@@ -8341,7 +9622,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.4,
         "growth": 0,
         "greed": 0,
@@ -8353,7 +9633,7 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/john_morris_iron_ball.png",
       "sprite_static": "assets/icons/characters/john_morris_sprite.png",
       "sprite_gif": "assets/icons/characters/john_morris_sprite.gif",
-      "base_name": "John Morris (Iron Ball)",
+      "base_name": "John Morris",
       "starting_weapons": [
         "Iron Ball"
       ],
@@ -8385,8 +9665,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -8401,7 +9682,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8412,7 +9695,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8424,7 +9706,7 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/john_morris_coat_of_arms.png",
       "sprite_static": "assets/icons/characters/john_morris_sprite.png",
       "sprite_gif": "assets/icons/characters/john_morris_sprite.gif",
-      "base_name": "John Morris (Coat of Arms)",
+      "base_name": "John Morris",
       "starting_weapons": [
         "Coat of Arms"
       ],
@@ -8456,8 +9738,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -8472,7 +9755,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8483,7 +9768,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8495,7 +9779,7 @@ window.VS_DATA = {
       "icon": "assets/icons/characters/john_morris_morning_star.png",
       "sprite_static": "assets/icons/characters/john_morris_sprite.png",
       "sprite_gif": "assets/icons/characters/john_morris_sprite.gif",
-      "base_name": "John Morris (Morning Star)",
+      "base_name": "John Morris",
       "starting_weapons": [
         "Morning Star"
       ],
@@ -8527,8 +9811,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -8543,7 +9828,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8554,7 +9841,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8600,12 +9886,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8616,7 +9905,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8662,12 +9950,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8678,7 +9969,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8724,12 +10014,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8740,7 +10033,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8786,12 +10078,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -8802,7 +10097,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -8853,12 +10147,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -8869,7 +10166,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -8920,12 +10216,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -8936,7 +10235,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -8999,12 +10297,52 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "greed: source Soul Collector min 0 max 4.5 by pct|\r\nmight: source Soul Collector min 0 max 2.25 by pct|\r\ngrowth: source Soul Collector min 0 max 2.25 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "greed",
+          "source": "Soul Collector",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 4.5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Soul Collector",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2.25
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "growth",
+          "source": "Soul Collector",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2.25
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 566,
+        "max_health_flat": 566,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -9015,7 +10353,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -9063,12 +10400,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -9079,7 +10419,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9127,12 +10466,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -9143,7 +10485,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9180,12 +10521,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -9196,7 +10540,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9233,12 +10576,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -9249,7 +10595,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9288,12 +10633,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.5,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -9304,7 +10652,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.5,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9343,12 +10690,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.5,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -9359,7 +10709,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.5,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9405,12 +10754,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -9421,7 +10773,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9467,12 +10818,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -9483,7 +10837,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9535,12 +10888,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -9551,7 +10920,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9603,12 +10971,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -9619,7 +11003,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9671,12 +11054,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "cooldown: source HP Critical min 0 max -0.2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -9687,7 +11086,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -9731,8 +11129,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -9746,7 +11145,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -9757,7 +11158,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0.2,
@@ -9801,8 +11201,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -9816,7 +11217,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -9827,7 +11230,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0.2,
@@ -9871,8 +11273,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -9886,7 +11289,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -9897,7 +11302,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0.2,
@@ -9943,8 +11347,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -9989,7 +11394,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -10000,7 +11407,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.25,
         "growth": 0,
         "greed": 0,
@@ -10046,8 +11452,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -10092,7 +11499,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -10103,7 +11512,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.25,
         "growth": 0,
         "greed": 0,
@@ -10149,8 +11557,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -10195,7 +11604,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -10206,7 +11617,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.25,
         "growth": 0,
         "greed": 0,
@@ -10259,12 +11669,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -10275,7 +11688,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10328,12 +11740,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -10344,7 +11759,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10390,12 +11804,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Neutron Bomb cooldown 75 charge by Standing reduce by might min 15",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -10406,7 +11823,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 4,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10452,12 +11868,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Neutron Bomb cooldown 75 charge by Standing reduce by might min 15",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -10468,7 +11887,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 4,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10516,12 +11934,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\r\nmultiply_might: source Overheal min 1 max 2 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "speed",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 4
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "multiply_might",
+          "source": "Overheal",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -10532,7 +11978,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10580,12 +12025,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "speed: source Overheal min 0 max 4 by pct|\r\nmultiply_might: source Overheal min 1 max 2 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "speed",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 4
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "multiply_might",
+          "source": "Overheal",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -10596,7 +12069,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10646,12 +12118,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\r\narea: source Enemy Presence min 0 max by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "luck",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -10662,7 +12162,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10712,12 +12211,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "luck: source Enemy Presence min 0 max by pct|\r\narea: source Enemy Presence min 0 max by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "luck",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -10728,7 +12255,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -10789,12 +12315,72 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\r\nmight: source Megalo State min 0 max 1.5 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "curse"
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "armor",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 666,
+        "max_health_flat": 666,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -10805,7 +12391,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -10866,12 +12451,72 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "armor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.5 by boolean|\r\nmight: source Megalo State min 0 max 1.5 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "curse"
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "armor",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 666,
+        "max_health_flat": 666,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -10882,7 +12527,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -10928,12 +12572,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 8,
+        "max_health_flat": 8,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 3,
         "armor": 0,
         "move_speed": 0.2,
@@ -10944,7 +12591,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.5,
         "growth": 0,
         "greed": 0,
@@ -10990,12 +12636,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 8,
+        "max_health_flat": 8,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 3,
         "armor": 0,
         "move_speed": 0.2,
@@ -11006,7 +12655,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.5,
         "growth": 0,
         "greed": 0,
@@ -11050,12 +12698,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.5,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -11066,7 +12717,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0.5,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11110,12 +12760,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.5,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -11126,7 +12779,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0.5,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11172,12 +12824,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -11188,7 +12843,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11234,12 +12888,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -11250,7 +12907,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11296,12 +12952,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.5,
         "armor": 0,
         "move_speed": 0.2,
@@ -11312,7 +12971,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -11358,12 +13016,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.5,
         "armor": 0,
         "move_speed": 0.2,
@@ -11374,7 +13035,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -11428,12 +13088,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -11444,7 +13132,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -11498,12 +13185,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -11514,7 +13229,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -11568,12 +13282,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -11584,7 +13326,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -11628,12 +13369,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -11644,7 +13388,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11688,12 +13431,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -11704,7 +13450,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11748,12 +13493,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -11764,7 +13512,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11808,12 +13555,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -11824,7 +13574,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11870,8 +13619,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -11885,7 +13635,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -11896,7 +13648,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -11942,8 +13693,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -11957,7 +13709,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -11968,7 +13722,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12014,8 +13767,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -12029,7 +13783,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0.25,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -12040,7 +13796,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0.25,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12091,12 +13846,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -12107,7 +13865,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12158,12 +13915,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -12174,7 +13934,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12218,12 +13977,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "greed",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -12234,7 +14009,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.2,
@@ -12278,12 +14052,28 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "greed: source Overheal min 0 max 10 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "greed",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -12294,7 +14084,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.2,
@@ -12344,12 +14133,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\r\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.4
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.4
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -12360,7 +14177,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12410,12 +14226,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Enemy Presence min 0 max 0.4 by pct|\r\ncooldown: source Enemy Presence min 0 max -0.4 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.4
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Enemy Presence",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.4
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -12426,7 +14270,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12475,12 +14318,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -12491,7 +14337,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12540,12 +14385,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -12556,7 +14404,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12617,12 +14464,52 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\r\ncooldown: source HP Critical min 0 max -0.2 by boolean|\r\ncurse: source HP Critical min 0 max 0.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -12633,7 +14520,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12694,12 +14580,52 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 2 by boolean|\r\ncooldown: source HP Critical min 0 max -0.2 by boolean|\r\ncurse: source HP Critical min 0 max 0.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.3,
@@ -12710,7 +14636,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12761,12 +14686,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -12777,7 +14705,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12828,12 +14755,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -12844,7 +14774,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12895,12 +14824,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -12911,7 +14843,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -12955,8 +14886,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -12981,7 +14913,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 120,
+        "max_health_flat": 120,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -12992,7 +14926,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13036,8 +14969,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -13062,7 +14996,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 120,
+        "max_health_flat": 120,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -13073,7 +15009,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13117,8 +15052,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -13143,7 +15079,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 120,
+        "max_health_flat": 120,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -13154,7 +15092,6 @@ window.VS_DATA = {
         "cooldown": -0.05,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13200,12 +15137,64 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\namount: source Megalo State min 0 max 2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 100
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "armor",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.4
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "amount",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -13216,7 +15205,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13262,12 +15250,64 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\namount: source Megalo State min 0 max 2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 100
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "armor",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.4
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "amount",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -13278,7 +15318,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13324,12 +15363,64 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "max_health_flat: source Megalo State min 0 max 100 by boolean|\r\narmor: source Megalo State min 0 max 2 by boolean|\r\nmove_speed: source Megalo State min 0 max 0.4 by boolean|\r\namount: source Megalo State min 0 max 2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 100
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "armor",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.4
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "amount",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -13340,7 +15431,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13392,12 +15482,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 200,
+        "max_health_flat": 200,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -13408,7 +15526,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13460,12 +15577,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 200,
+        "max_health_flat": 200,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -13476,7 +15621,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13528,12 +15672,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 200,
+        "max_health_flat": 200,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -13544,7 +15716,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13596,12 +15767,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Overheal min 0 max 10 by pct|\r\ncurse: source Overheal min 0 max 10 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Overheal",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 200,
+        "max_health_flat": 200,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -13612,7 +15811,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13656,8 +15854,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -13687,11 +15886,15 @@ window.VS_DATA = {
           "place": "extra",
           "amount": 1,
           "interval": 1,
-          "max": 30
+          "max": 30,
+          "betweenLo": 2,
+          "betweenHi": 50
         }
       ],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -13702,7 +15905,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.8,
         "growth": 0,
         "greed": 0,
@@ -13751,12 +15953,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -13767,7 +15972,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13816,12 +16020,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -13832,7 +16039,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13881,12 +16087,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -13897,7 +16106,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -13946,12 +16154,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -13962,7 +16173,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14011,12 +16221,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14027,7 +16240,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14076,12 +16288,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14092,7 +16307,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14141,12 +16355,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14157,7 +16374,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14206,12 +16422,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14222,7 +16441,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14271,12 +16489,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14287,7 +16508,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14338,12 +16558,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14354,7 +16577,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14404,12 +16626,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -14420,7 +16645,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14476,12 +16700,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.4,
@@ -14492,7 +16719,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 3,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14548,12 +16774,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.4,
@@ -14564,7 +16793,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 3,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14592,12 +16820,15 @@ window.VS_DATA = {
       "affinity": [],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -14608,7 +16839,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14657,12 +16887,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": -0.2,
@@ -14673,7 +16906,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 10,
@@ -14717,12 +16949,28 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "multiply_amount: source Invulnerable min 1 max 2 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "multiply_amount",
+          "source": "Invulnerable",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -14733,7 +16981,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14779,12 +17026,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.2,
@@ -14795,7 +17045,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14841,12 +17090,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.4,
@@ -14857,7 +17109,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14907,12 +17158,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0,
@@ -14923,7 +17177,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -14973,12 +17226,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0,
@@ -14989,7 +17245,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15026,8 +17281,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -15062,7 +17318,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0,
@@ -15073,7 +17331,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15110,8 +17367,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -15146,7 +17404,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0,
@@ -15157,7 +17417,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15194,8 +17453,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -15230,7 +17490,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0,
@@ -15241,7 +17503,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15278,8 +17539,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -15314,7 +17576,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0,
@@ -15325,7 +17589,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15388,12 +17651,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -15404,7 +17670,6 @@ window.VS_DATA = {
         "cooldown": -0.8,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -15453,12 +17718,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -15469,7 +17737,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15518,12 +17785,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -15534,7 +17804,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15583,12 +17852,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -15599,7 +17871,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15648,12 +17919,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 30,
+        "max_health_flat": 30,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -15664,7 +17938,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15715,12 +17988,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -15731,7 +18007,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15782,12 +18057,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
-      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\r\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "name: Coat of Arms cooldown 15 charge by Standing reduce by speed min 3|\nname: Belnades' Spellbook cooldown 15 charge by Standing reduce by growth min 3",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -15798,7 +18076,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -15845,12 +18122,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -15861,7 +18141,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -15908,12 +18187,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -15924,7 +18206,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -15968,12 +18249,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -15984,7 +18268,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16028,12 +18311,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -16044,7 +18330,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16090,12 +18375,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -16106,7 +18394,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 1,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16156,12 +18443,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -16172,7 +18462,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16207,12 +18496,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -16223,7 +18515,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16249,12 +18540,15 @@ window.VS_DATA = {
       "affinity": [],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -16265,7 +18559,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16303,12 +18596,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -16319,7 +18615,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16365,12 +18660,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -16381,7 +18679,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 1,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16400,7 +18697,7 @@ window.VS_DATA = {
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
-      "description": "- Genya has the same bonuses as Alucard; Charge: Soul Steal. LevelUp: Dark Inferno (Actually Dominus Hatred). Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.\r\n- Genya must heal to full to recharge his HP Critical ability.",
+      "description": "- Genya has the same bonuses as Alucard; Charge: Soul Steal. LevelUp: Dark Inferno (Actually Dominus Hatred). Overheal +8: Summon Spirit. HP-Critical: Sword Brothers. Immune to health drain.\n- Genya must heal to full to recharge his HP Critical ability.",
       "effect_clarifications": "",
       "notes": "",
       "affinity_groups": [
@@ -16427,12 +18724,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -16443,7 +18743,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16495,20 +18794,22 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [
         {
-          "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": 1
+          "gate": 1
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -16519,7 +18820,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16569,12 +18869,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -16585,7 +18888,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16635,12 +18937,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "name: Dominus Volley cooldown 15 charge by Always reduce by curse min 3",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.8,
@@ -16651,7 +18956,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -16700,12 +19004,15 @@ window.VS_DATA = {
           "max": 4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -16716,7 +19023,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16758,12 +19064,15 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 1,
+        "max_health_flat": 1,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -16774,7 +19083,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16834,8 +19142,9 @@ window.VS_DATA = {
           "max": 0.2
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -16849,7 +19158,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 10,
+        "max_health_flat": 10,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.1,
@@ -16860,7 +19171,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16906,12 +19216,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.2,
@@ -16922,7 +19235,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -16971,12 +19283,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -16987,7 +19302,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 1,
         "growth": 0,
         "greed": 0,
@@ -17040,12 +19354,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 233,
+        "max_health_flat": 233,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 3,
         "move_speed": 0,
@@ -17056,7 +19373,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -17103,8 +19419,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -17129,7 +19446,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -17140,7 +19459,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17182,12 +19500,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -17198,7 +19519,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 1,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17269,12 +19589,15 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 2,
         "armor": 20,
         "move_speed": -1,
@@ -17285,7 +19608,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17335,12 +19657,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.2,
@@ -17351,7 +19676,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -17395,12 +19719,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -17411,7 +19738,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17464,12 +19790,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -17480,7 +19809,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -17529,12 +19857,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -17545,7 +19876,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17589,12 +19919,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.8,
@@ -17605,7 +19938,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -17654,12 +19986,15 @@ window.VS_DATA = {
           "max": 3
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -17670,7 +20005,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17712,12 +20046,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -17728,7 +20065,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17776,12 +20112,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.6,
@@ -17792,7 +20131,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.4,
         "growth": 0,
         "greed": 0,
@@ -17831,12 +20169,28 @@ window.VS_DATA = {
         "Cooldown"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "cooldown: source Enraged min 0 max -0.9 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "cooldown",
+          "source": "Enraged",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.9
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -17847,7 +20201,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17886,12 +20239,28 @@ window.VS_DATA = {
         "Cooldown"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "cooldown: source Enraged min 0 max -0.9 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "cooldown",
+          "source": "Enraged",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.9
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -17902,7 +20271,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -17954,12 +20322,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\r\ncooldown: source Orologion min 0 max -0.33 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "move_speed",
+          "source": "Orologion Active",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Orologion Active",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.33
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -17970,7 +20366,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 2,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -18022,12 +20417,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "move_speed: source Orologion min 0 max 1 by boolean|\r\ncooldown: source Orologion min 0 max -0.33 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "move_speed",
+          "source": "Orologion Active",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Orologion Active",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.33
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.5,
@@ -18038,7 +20461,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 2,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -18084,12 +20506,15 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -63,
+        "max_health_flat": -63,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.1,
@@ -18100,7 +20525,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 1,
         "greed": 0,
@@ -18152,40 +20576,36 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [
         {
-          "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": null
+          "gate": 10
         },
         {
-          "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": null
+          "gate": 20
         },
         {
-          "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": null
+          "gate": 30
         },
         {
-          "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": null
+          "gate": 40
         },
         {
-          "key": "stat_choice",
           "value": 0.01,
           "interval": 1,
-          "max": null
+          "gate": 50
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -18200,7 +20620,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.4,
@@ -18211,7 +20633,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18269,12 +20690,40 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.5 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 50,
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -18285,7 +20734,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18333,12 +20781,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.8,
@@ -18349,7 +20800,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -18397,12 +20847,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source Megalo State min 0 max 2 by boolean|\r\ncooldown: source Megalo State min 0 max -0.2 by boolean|\r\ncurse: source Megalo State min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 255,
+        "max_health_flat": 255,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -18413,7 +20903,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -18461,8 +20950,9 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [
         {
@@ -18476,7 +20966,9 @@ window.VS_DATA = {
         }
       ],
       "stats": {
-        "max_health": 256,
+        "max_health_flat": 256,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0,
@@ -18487,7 +20979,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18541,12 +21032,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 400,
+        "max_health_flat": 400,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -18557,7 +21051,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18611,12 +21104,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 400,
+        "max_health_flat": 400,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -18627,7 +21123,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18685,12 +21180,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 300,
+        "max_health_flat": 300,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -18701,7 +21199,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18759,12 +21256,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 300,
+        "max_health_flat": 300,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -18775,7 +21275,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18824,12 +21323,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 400,
+        "max_health_flat": 400,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 1,
@@ -18840,7 +21342,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18889,12 +21390,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 400,
+        "max_health_flat": 400,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 1,
@@ -18905,7 +21409,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -18966,12 +21469,23 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "curse"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 566,
+        "max_health_flat": 566,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -18982,7 +21496,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -19045,12 +21558,23 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "curse"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 566,
+        "max_health_flat": 566,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -19061,7 +21585,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -19122,12 +21645,23 @@ window.VS_DATA = {
           "max": null
         }
       ],
-      "reference_scaling": "might: 0.01 per 0.01 curse",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.01,
+          "max": null,
+          "refValue": 0.01,
+          "refStat": "curse"
+        }
+      ],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 566,
+        "max_health_flat": 566,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": 0.5,
@@ -19138,7 +21672,6 @@ window.VS_DATA = {
         "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 1,
@@ -19177,12 +21710,15 @@ window.VS_DATA = {
         "Growth"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 2097052,
+        "max_health_flat": 2097052,
+        "magnet_flat": 0,
+        "magnet": 2,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -19193,7 +21729,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 2,
         "luck": 0,
         "growth": -0.99,
         "greed": 0,
@@ -19237,12 +21772,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19253,7 +21828,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19297,12 +21871,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19313,7 +21927,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19357,12 +21970,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19373,7 +22026,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19417,12 +22069,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19433,7 +22125,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19479,20 +22170,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
         {
           "key": "might",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19503,7 +22239,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19549,20 +22284,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
         {
           "key": "might",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19573,7 +22353,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19619,20 +22398,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
         {
           "key": "might",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19643,7 +22467,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19689,20 +22512,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
         {
           "key": "might",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -19713,7 +22581,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19758,20 +22625,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
         {
           "key": "duration",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -19782,7 +22694,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19827,20 +22738,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
         {
           "key": "duration",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -19851,7 +22807,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19896,20 +22851,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
         {
           "key": "duration",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -19920,7 +22920,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -19965,20 +22964,65 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
         {
           "key": "duration",
-          "value": 0.001,
-          "interval": 1,
-          "max": null
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.2,
@@ -19989,7 +23033,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20026,12 +23069,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -20042,7 +23125,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20081,12 +23163,52 @@ window.VS_DATA = {
         "Move Speed"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 100,
+        "max_health_flat": 100,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 2,
         "move_speed": -0.2,
@@ -20097,7 +23219,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20136,12 +23257,52 @@ window.VS_DATA = {
         "Max Health"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -50,
+        "max_health_flat": -50,
+        "magnet_flat": 0,
+        "magnet": 1,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -20152,7 +23313,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 1,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20198,12 +23358,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -20214,7 +23414,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20260,12 +23459,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 40,
+        "max_health_flat": 40,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -20276,7 +23515,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20328,12 +23566,101 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "might: 0.05 per [Glimmer Tech]|\r\nspeed: 0.05 per [Glimmer Tech] max 1|\r\nduration: 0.05 per [Glimmer Tech] max 1|\r\narea: 0.025 per [Glimmer Tech] max 0.5|\r\ncooldown: -0.01 per [Glimmer Tech] max -0.1|\r\nrecovery: 0.003 per [Glimmer Tech] max 1",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.05,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "speed",
+          "value": 0.05,
+          "max": 1,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "duration",
+          "value": 0.05,
+          "max": 1,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "area",
+          "value": 0.025,
+          "max": 0.5,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "cooldown",
+          "value": -0.01,
+          "max": -0.1,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "recovery",
+          "value": 0.003,
+          "max": 1,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0,
@@ -20344,7 +23671,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20400,62 +23726,149 @@ window.VS_DATA = {
         "Magnet"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
         {
           "key": "might",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "area",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "speed",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "duration",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
         },
         {
           "key": "cooldown",
-          "value": -0.01,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
         },
         {
           "key": "luck",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.9
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
         },
         {
           "key": "growth",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
         },
         {
-          "key": "magnet",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "key": "magnet_flat",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -20466,7 +23879,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20522,62 +23934,149 @@ window.VS_DATA = {
         "Magnet"
       ],
       "conflict": [],
-      "scaling": [
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
         {
           "key": "might",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "area",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "speed",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
-        },
-        {
-          "key": "duration",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
         },
         {
           "key": "cooldown",
-          "value": -0.01,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
         },
         {
           "key": "luck",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.9
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
         },
         {
           "key": "growth",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
         },
         {
-          "key": "magnet",
-          "value": 0.02,
-          "interval": 1,
-          "max": null
+          "key": "magnet_flat",
+          "source": "Cats",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -20588,7 +24087,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20634,12 +24132,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.2,
         "armor": 0,
         "move_speed": 0.2,
@@ -20650,7 +24188,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20696,12 +24233,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0.2,
         "armor": 0,
         "move_speed": 0.2,
@@ -20712,7 +24289,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -20756,12 +24332,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -20772,7 +24388,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0.5,
@@ -20822,12 +24437,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -20838,7 +24493,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 1,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -20891,12 +24545,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -20907,7 +24601,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0.2,
         "greed": 0,
@@ -20951,12 +24644,52 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 1,
@@ -20967,7 +24700,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 1,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21006,12 +24738,69 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "revival",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "growth",
+          "value": 0.05,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.3,
@@ -21022,7 +24811,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21061,12 +24849,69 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "revival",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "growth",
+          "value": 0.05,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.3,
@@ -21077,7 +24922,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21116,12 +24960,69 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "revival",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "growth",
+          "value": 0.05,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.3,
@@ -21132,7 +25033,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21171,12 +25071,69 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "revival: 1 per [Glimmer Tech]|\r\ngrowth: 0.05 per [Glimmer Tech]",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [
+        {
+          "key": "revival",
+          "value": 1,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "growth",
+          "value": 0.05,
+          "max": null,
+          "refItems": [
+            "Glimmer Tech"
+          ]
+        }
+      ],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.3,
@@ -21187,7 +25144,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21238,12 +25194,52 @@ window.VS_DATA = {
           "max": 4
         }
       ],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -21254,7 +25250,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21304,12 +25299,52 @@ window.VS_DATA = {
         "Area"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": -50,
+        "max_health_flat": -50,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 1,
         "armor": 0,
         "move_speed": 0.4,
@@ -21320,7 +25355,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 8,
-        "magnet": 0,
         "luck": 0.4,
         "growth": 0,
         "greed": 0,
@@ -21366,12 +25400,64 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 1 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean|\r\nrecovery: source HP Critical min 0 max 10",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "recovery",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 10,
+        "max_health_flat": 10,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -21382,7 +25468,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21428,12 +25513,52 @@ window.VS_DATA = {
         "Duration"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "might: source HP Critical min 0 max 6 by boolean|\r\ncooldown: source HP Critical min 0 max -1 by boolean|\r\nluck: source HP Critical min 0 max 1 by boolean",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 6
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "HP Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.1,
@@ -21444,7 +25569,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0,
         "growth": 0,
         "greed": 0,
@@ -21497,12 +25621,28 @@ window.VS_DATA = {
         "Luck"
       ],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "multiply_might: source Glimmers Fired min 1 max 5 by pct",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Glimmers Fired",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 77,
+        "max_health_flat": 77,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 1,
         "move_speed": 0.3,
@@ -21513,7 +25653,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": -0.3,
         "growth": 0,
         "greed": 0,
@@ -21561,12 +25700,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -21577,7 +25719,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -21621,12 +25762,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -21637,7 +25781,6 @@ window.VS_DATA = {
         "cooldown": -0.1,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -21672,12 +25815,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 0,
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0.2,
@@ -21688,7 +25834,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -21732,12 +25877,15 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "scaling": [],
-      "reference_scaling": "",
-      "manual_scaling": "",
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health": 20,
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
         "recovery": 0,
         "armor": 0,
         "move_speed": 0,
@@ -21748,7 +25896,6 @@ window.VS_DATA = {
         "cooldown": 0,
         "amount": 0,
         "revival": 0,
-        "magnet": 0,
         "luck": 0.2,
         "growth": 0,
         "greed": 0,
@@ -52197,12 +56344,16 @@ window.VS_DATA = {
       "base_num": "0",
       "type": "Arcana",
       "weapon_col": "0_game_killer",
-      "description": "Halts XP gain. Experience Gems turn into exploding projectiles. All Treasure Chests contain at least 3 items.",
+      "description": "Halts XP gain. Experience Crystals turn into exploding projectiles. All Treasure Chests contain at least 3 items.",
       "notes": "",
       "affects_explicit": [
         "Experience Gem",
         "Treasure Chest"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52215,7 +56366,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Magnet",
-            "Treasure"
+            "Treasure",
+            "Area"
           ]
         }
       ],
@@ -52223,7 +56375,8 @@ window.VS_DATA = {
         "Halted XP",
         "Growth",
         "Magnet",
-        "Treasure"
+        "Treasure",
+        "Area"
       ],
       "conflict": []
     },
@@ -52280,6 +56433,10 @@ window.VS_DATA = {
         "Nduja Fritta Tanto",
         "Sorbetto"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52346,6 +56503,10 @@ window.VS_DATA = {
         "Feather Spear",
         "Lohengrin"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52394,6 +56555,23 @@ window.VS_DATA = {
         "Kick",
         "Triangle Kick"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "mult_cooldown",
+          "source": "Constant Motion",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "raw": "1/move_speed"
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52422,6 +56600,96 @@ window.VS_DATA = {
       "affects_explicit": [
         "Tirajisú"
       ],
+      "scaling": [
+        {
+          "key": "revival",
+          "value": 3,
+          "interval": 0,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.1
+          },
+          "mode": "step",
+          "step": 0.1
+        },
+        {
+          "key": "armor",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 1
+          },
+          "mode": "step",
+          "step": 1
+        },
+        {
+          "key": "might",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.05
+          },
+          "mode": "step",
+          "step": 0.05
+        },
+        {
+          "key": "area",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.05
+          },
+          "mode": "step",
+          "step": 0.05
+        },
+        {
+          "key": "duration",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.05
+          },
+          "mode": "step",
+          "step": 0.05
+        },
+        {
+          "key": "speed",
+          "source": "Revived",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 0.05
+          },
+          "mode": "step",
+          "step": 0.05
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52467,6 +56735,30 @@ window.VS_DATA = {
       "affects_explicit": [
         "Bracer"
       ],
+      "scaling": [
+        {
+          "key": "speed",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "mult_speed",
+          "source": "Oscillation",
+          "min": {
+            "num": 0.5
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52506,6 +56798,10 @@ window.VS_DATA = {
         "Paranormal Scan",
         "Floor Chicken"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52560,6 +56856,10 @@ window.VS_DATA = {
         "Shuriken",
         "Yagyu Shuriken"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52590,16 +56890,22 @@ window.VS_DATA = {
         "Gold Ring",
         "Metaglio Left"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
-            "Plentiful Pickups"
+            "Plentiful Pickups",
+            "Light Source"
           ]
         }
       ],
       "affinity": [
-        "Plentiful Pickups"
+        "Plentiful Pickups",
+        "Light Source"
       ],
       "conflict": []
     },
@@ -52624,8 +56930,44 @@ window.VS_DATA = {
         "Victory Sword",
         "Silver Wind",
         "Armor",
-        "Max Health"
+        "Hollow Heart"
       ],
+      "scaling": [
+        {
+          "key": "base_damage",
+          "value": 5,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "base_damage",
+          "value": 0.1,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "max_health_flat",
+          "value": 0.5,
+          "interval": null,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Retaliation Kills",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 9999
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52662,6 +57004,17 @@ window.VS_DATA = {
         "Cherry Bomb",
         "La Robba"
       ],
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 0,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52713,6 +57066,10 @@ window.VS_DATA = {
         "Gros Michel",
         "Cavendish"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52738,7 +57095,6 @@ window.VS_DATA = {
       "notes": "",
       "affects_explicit": [
         "Clock Lancet",
-        "Infinite Corridor",
         "Celestial Voulge",
         "Mirage Robe",
         "J'Odore",
@@ -52752,6 +57108,10 @@ window.VS_DATA = {
         "Orologion",
         "Sorbetto"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52788,6 +57148,35 @@ window.VS_DATA = {
         "Stone Mask",
         "Skull O'Maniac"
       ],
+      "scaling": [
+        {
+          "key": "growth",
+          "value": 0.01,
+          "interval": 2,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.01,
+          "interval": 2,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.01,
+          "interval": 2,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.01,
+          "interval": 2,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52832,13 +57221,6 @@ window.VS_DATA = {
         "Tri-Bracelet",
         "Lapiste Tepisto",
         "Penshin Fatcha",
-        "Tonno Subito",
-        "Tonnado",
-        "Tonn'omoto",
-        "Tonn'oddeeo",
-        "Tonne",
-        "Unsurpassed",
-        "Miracle of Multiplication",
         "Prismatic Missile",
         "Luminaire",
         "C-U-Laser",
@@ -52848,7 +57230,6 @@ window.VS_DATA = {
         "Dragon Water Whip",
         "Hydrostormer Tip",
         "Ice Fang",
-        "Speculo Ice Fang",
         "Cocytus",
         "Icebrand",
         "Ninth Circle",
@@ -52860,6 +57241,10 @@ window.VS_DATA = {
         "Spirit Rings",
         "Rings of Calamity"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52900,6 +57285,10 @@ window.VS_DATA = {
         "Rich Coin Bag",
         "Treasure Chest"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -52948,7 +57337,6 @@ window.VS_DATA = {
         "Vento Sacro",
         "Fuwalafuwaloo",
         "Ammo Appalate",
-        "Horse Cartridge",
         "Gunastrophe",
         "Victory Sword",
         "Celestial Voulge",
@@ -52997,8 +57385,21 @@ window.VS_DATA = {
         "Zweihander",
         "Galatyn",
         "Gros Michel",
-        "Cavendish"
+        "Cavendish",
+        "Unearthly Bolt",
+        "Spirit Disturbance"
       ],
+      "scaling": [
+        {
+          "key": "crit_dmg_mult",
+          "value": 2,
+          "interval": 0,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53027,6 +57428,30 @@ window.VS_DATA = {
       "affects_explicit": [
         "Spellbinder"
       ],
+      "scaling": [
+        {
+          "key": "duration",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "mult_duration",
+          "source": "Oscillation",
+          "min": {
+            "num": 0.5
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53053,6 +57478,30 @@ window.VS_DATA = {
       "affects_explicit": [
         "Candelabrador"
       ],
+      "scaling": [
+        {
+          "key": "area",
+          "value": 1,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "mult_area",
+          "source": "Oscillation",
+          "min": {
+            "num": 0.5
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53126,6 +57575,10 @@ window.VS_DATA = {
         "Spirit Rings",
         "Rings of Calamity"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53169,6 +57622,27 @@ window.VS_DATA = {
         "Skip",
         "Banish"
       ],
+      "scaling": [],
+      "reference_scaling": [
+        {
+          "key": "might",
+          "value": 0.2,
+          "max": null,
+          "refItems": [
+            "Empty Weapon"
+          ]
+        },
+        {
+          "key": "cooldown",
+          "value": -0.08,
+          "max": null,
+          "refItems": [
+            "Empty Weapon"
+          ]
+        }
+      ],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53213,6 +57687,10 @@ window.VS_DATA = {
         "Sonic Dash",
         "Rapidus Fio"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53253,6 +57731,10 @@ window.VS_DATA = {
         "Gold Coin",
         "Experience Gem"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53308,6 +57790,10 @@ window.VS_DATA = {
         "Party Popper",
         "Party Pooper"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53338,6 +57824,215 @@ window.VS_DATA = {
         "Sorbetto",
         "Wall Chicken"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 9999
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "recovery",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "armor",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 50
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 5
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.9
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "amount",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "revival",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 50
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "magnet_flat",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 50
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "growth",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "greed",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "magnet_flat",
+          "source": "Food Pickups",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53450,6 +58145,23 @@ window.VS_DATA = {
         "Gros Michel",
         "Cavendish"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "mult_cooldown",
+          "source": "Speed",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "raw": "[1/(1+speed),0.2]"
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53483,6 +58195,10 @@ window.VS_DATA = {
       "affects_explicit": [
         "Treasure Chest"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53512,6 +58228,10 @@ window.VS_DATA = {
         "Light Source",
         "Treasure Chest"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53560,6 +58280,10 @@ window.VS_DATA = {
         "Coin Bag",
         "Rich Coin Bag"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53598,12 +58322,56 @@ window.VS_DATA = {
       "base_num": "12",
       "type": "Darkana",
       "weapon_col": "dxii_crystal_cries",
-      "description": "Defeating frozen enemies gives bonus MaxHealth, Recovery, and Growth. Triggers an Orologion when health reaches a critically low level.",
+      "description": "Defeating frozen enemies gives bonus Max Health, Recovery, and Growth. Triggers an Orologion when health reaches a critically low level.",
       "notes": "",
       "affects_explicit": [
         "Orologion",
         "Crystallized Soul"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "const": 1666.5,
+            "trait": "Freeze"
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "recovery",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "const": 8.333333333333334,
+            "trait": "Freeze"
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "growth",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "const": 1.6666666666666667,
+            "trait": "Freeze"
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53648,6 +58416,10 @@ window.VS_DATA = {
         "Treasure Chest",
         "Light Source"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53683,6 +58455,47 @@ window.VS_DATA = {
         "Skull O'Maniac",
         "Little Heart"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2000
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "greed",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "curse",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 2
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53760,6 +58573,37 @@ window.VS_DATA = {
         "NaneInferno",
         "Nduja Fritta Tanto"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health_flat",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "const": 1666.5,
+            "trait": "Fire"
+          },
+          "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Crystal Hearts",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "const": 1.6666666666666667,
+            "trait": "Fire"
+          },
+          "mode": "pct",
+          "step": null
+        }
+      ],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
@@ -53802,6 +58646,10 @@ window.VS_DATA = {
         "Attractorb",
         "Floor Chicken"
       ],
+      "scaling": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "grants": [],
       "affinity_groups": [
         {
           "key": "primary",
