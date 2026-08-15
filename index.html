@@ -302,6 +302,19 @@
       font-size: .62rem; line-height: 1; opacity: .95; pointer-events: none;
       text-shadow: 0 0 2px #000, 0 0 2px #000;
     }
+    /* Currently held in a build — a gold container border on Appendix/Detail listings. */
+    .in-build { box-shadow: 0 0 0 2px var(--gold), 0 0 8px rgba(232,184,32,.4); border-radius: 4px; }
+    /* Pause/play toggle overlaid on an animated character sprite (planner panel + detail pages). */
+    .char-sprite { position: relative; }
+    .sprite-pause {
+      position: absolute; top: 4px; right: 4px; z-index: 2;
+      width: 22px; height: 22px; padding: 0; line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; cursor: pointer;
+      background: rgba(0,0,0,.6); color: var(--gold);
+      border: 1px solid var(--gold); border-radius: 4px;
+    }
+    .sprite-pause:hover { background: rgba(0,0,0,.85); }
     /* ── Builds overlay ── */
     .builds-panel { max-width: 620px; width: 95vw; }
     .builds-hint { font-size: .72rem; color: var(--text-muted); padding: .35rem .9rem 0; }
@@ -1681,6 +1694,7 @@
     arcana: [null, null, null], // global — shared across all players
     stage: null,                // global — shared across all players
     infoPanel: null,
+    spritePaused: false, // when true, char sprites render their STATIC png (pause animated gifs)
     overlay: null,   // { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem }
     ovl: {
       selected: null,
@@ -2179,11 +2193,23 @@
   // Arcana and Darkana are SEPARATE collectables — each is owned/unowned by its own name,
   // even though a pair shares a base_num. One being uncollected never gates the other.
   function arcanaAccessible(name)  { return !collectionEnabled() || isOwned('arcana', name); }
-  // A weapon is accessible iff every BASE in its full backward chain (incl. union
-  // partners — they share the final as their trans_result) is owned AND every passive
-  // any chain member requires is owned. Reuses collectWeaponChain + collectChainPassives.
+  // Collection gating happens at the ATOM level, NOT the evolved level:
+  //  • Base weapons are gated by their own ownership (a character's STARTER base bypasses the
+  //    gate elsewhere — owning the character grants it).
+  //  • Directly-obtained free-pick finals (e.g. Super Candybox II Turbo) are gated by their OWN
+  //    ownership, since they aren't reached by adding collectable ingredients.
+  //  • Evolved / union weapons are NEVER gated at the evolved level — you can only reach them by
+  //    adding their base ingredients (each gated above). So a starter's evolution is never
+  //    blocked by the starter's collection status, and a union like Fuwalafuwaloo is only ever
+  //    blocked by an uncollected base ingredient (e.g. Vento Sacro) — enforced when that base
+  //    can't be added, not by flagging the evolved form.
   function weaponAccessible(name) {
-    return !collectionEnabled() || weaponOwnedChain(name);
+    if (!collectionEnabled()) return true;
+    const w = weaponByName(name);
+    if (!w) return true;
+    if (isFreePick(name)) return isOwned('weapons', name); // e.g. Super Candybox II Turbo
+    if (w.category === 'Base') return isOwned('weapons', name);
+    return true; // evolved/union: enforcement is at the base-ingredient level
   }
   // Raw chain-ownership check, independent of the enabled flag — used by the collection
   // overlay to show derived (evolved/union) cells' accessibility while editing.
@@ -3399,13 +3425,19 @@
   // char-sprite container uses object-fit: contain so no aspect ratio is ever clipped.
   function charSpriteHTML(item, animated = true) {
     const empty = EMPTY_ICONS.char;
-    const order = animated
+    // A global pause forces the static sprite even in an animated context (planner info panel +
+    // detail pages). The pause/play toggle is only offered when the char HAS a gif candidate.
+    const useAnimated = animated && !state.spritePaused;
+    const order = useAnimated
       ? [item.sprite_gif, item.sprite_static, item.icon, empty]
       : [item.sprite_static, item.sprite_gif, item.icon, empty];
     const chain = [...new Set(order.filter(Boolean))];
     const primary = esc(chain[0] || empty);
     const fbs = chain.slice(1).map(esc).join('|');
-    return `<div class="detail-icon char-sprite"><img src="${primary}" data-fbs="${fbs}" onerror="var f=(this.dataset.fbs||'').split('|').filter(Boolean);if(f.length){this.src=f.shift();this.dataset.fbs=f.join('|');}else{this.onerror=null;}"></div>`;
+    const pauseBtn = (animated && item.sprite_gif)
+      ? `<button class="sprite-pause" data-action="toggle-sprite-pause" title="${state.spritePaused ? 'Play animation' : 'Pause animation'}">${state.spritePaused ? '▶' : '⏸'}</button>`
+      : '';
+    return `<div class="detail-icon char-sprite">${pauseBtn}<img src="${primary}" data-fbs="${fbs}" onerror="var f=(this.dataset.fbs||'').split('|').filter(Boolean);if(f.length){this.src=f.shift();this.dataset.fbs=f.join('|');}else{this.onerror=null;}"></div>`;
   }
 
   // "Starting Loadout" section for a character: starting weapons AND passives
@@ -4708,7 +4740,8 @@
       ? `data-action="nav-affinity" data-affinity="${esc(ref.name)}"`
       : `data-action="nav-object" data-detail-type="${ref.type}" data-detail-name="${esc(ref.name)}"${opts?.quickAdd ? ` data-evo-item="${esc(ref.name)}"` : ''}`;
     const unc = ref.kind !== 'affinity' && objUncollected(ref.type, ref.name) ? ' uncollected' : '';
-    const cls = 'ref-nav-icon' + (ref.sprite ? ' sprite' : ref.arcana ? ' arcana' : '') + unc;
+    const held = ref.kind !== 'affinity' && objInBuild(ref.type, ref.name) ? ' in-build' : '';
+    const cls = 'ref-nav-icon' + (ref.sprite ? ' sprite' : ref.arcana ? ' arcana' : '') + unc + held;
     const title = opts?.quickAdd && ref.kind !== 'affinity' ? `${ref.name} — click for details, right-click to add` : ref.name;
     return `<span class="${cls}" ${attrs} title="${esc(title)}"><img src="${esc(ref.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
   }
@@ -4953,7 +4986,7 @@
       if (!catNames.length && !catBlurbs) continue;
       const entries = detailCatEntries(cat, catNames, primary.name); // [{navName,title,icon}], deduped for chars
       const gridEntries = entries.filter(e => !blurbedNames.has(e.navName)); // drop the blurbed ones
-      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}${objUncollected(cat.type, e.navName) ? ' uncollected' : ''}" data-action="nav-object" data-detail-type="${cat.type}"
+      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}${objUncollected(cat.type, e.navName) ? ' uncollected' : ''}${objInBuild(cat.type, e.navName) ? ' in-build' : ''}" data-action="nav-object" data-detail-type="${cat.type}"
           data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
       main += `<details class="detail-cat" open>
         <summary class="detail-cat-label">${cat.label} <span style="color:var(--text-dim);font-size:.75rem">(${entries.length})</span></summary>
@@ -5026,12 +5059,35 @@
     return entry.kind === 'object' && objUncollected(entry.type, entry.name);
   }
 
+  // Is this object currently held in ANY player's build? Highlights it (container border) on the
+  // Appendix and Detail pages. Covers core slots, gift slots, familiars, extra-bar passives, and
+  // absorbed (hidden-union) weapons; characters/arcana check their own slots.
+  function objInBuild(type, name) {
+    switch (type) {
+      case 'weapon':
+        return state.players.some(p =>
+          p.weapons.some(w => w && w.name === name)
+          || (p.giftWeapon && p.giftWeapon.name === name)
+          || (p.familiars && p.familiars.includes(name))
+          || (p.absorbed && Object.values(p.absorbed).some(arr => arr.includes(name))));
+      case 'passive':
+        return state.players.some(p =>
+          p.passives.some(x => x && x.name === name)
+          || (p.giftPassive && p.giftPassive.name === name)
+          || (p.extraPassives && p.extraPassives.includes(name)));
+      case 'character': return state.players.some(p => p.character && p.character.name === name);
+      case 'arcana':    return state.arcana.some(a => a && a.name === name);
+      default:          return false;
+    }
+  }
+
   function appendixRow(entry, extraCls) {
     const dataAttrs = entry.kind === 'affinity'
       ? `data-action="nav-affinity" data-affinity="${esc(entry.name)}"`
       : `data-action="nav-object" data-detail-type="${entry.type}" data-detail-name="${esc(entry.name)}"`;
     const unc = appendixUncollected(entry) ? ' uncollected' : '';
-    return `<div class="appendix-row ${extraCls || ''}${unc}" ${dataAttrs} title="${esc(entry.name)}">
+    const held = entry.kind === 'object' && objInBuild(entry.type, entry.name) ? ' in-build' : '';
+    return `<div class="appendix-row ${extraCls || ''}${unc}${held}" ${dataAttrs} title="${esc(entry.name)}">
       <span class="appendix-icon ${entry.sprite ? 'sprite' : ''}"><img src="${esc(entry.icon || '')}" loading="lazy" onerror="this.style.visibility='hidden'"></span>
       <span class="appendix-row-name">${esc(entry.name)}</span>
       <span class="appendix-row-kind">${esc(entry.tag)}</span>
@@ -5224,6 +5280,7 @@
     if (action === 'detail-close')   { closeDetailOverlay(); return; }
     if (action === 'detail-back')    { detailBack(); return; }
     if (action === 'detail-forward') { detailForward(); return; }
+    if (action === 'toggle-sprite-pause') { state.spritePaused = !state.spritePaused; renderDetailOverlay(); return; }
     if (action === 'nav-affinity' || action === 'nav-object') { openDetailFromEl(btn, state.detail.player); return; }
     if (action === 'detail-add-to-build') { detailAddToBuild(btn.dataset.detailType, btn.dataset.detailName); return; }
     if (action === 'appendix-trait-add') {
@@ -7057,7 +7114,8 @@
 
     if (action === 'ovl-select-char') {
       const name = btn.dataset.char;
-      state.ovl.selected = D.characters.find(c => c.name === name) || null;
+      // Click the already-selected card again → deselect (info panel returns to placeholder).
+      state.ovl.selected = state.ovl.selected?.name === name ? null : (D.characters.find(c => c.name === name) || null);
       refreshOverlay(); return;
     }
     if (action === 'cycle-char-variant') {
@@ -7076,8 +7134,10 @@
     if (action === 'ovl-select-item') {
       const name = btn.dataset.item;
       const itemType = btn.dataset.itemType;
-      if (itemType === 'passive') state.ovl.selected = D.passives.find(p => p.name === name) || null;
-      else                        state.ovl.selected = D.weapons.find(w => w.name === name) || null;
+      // Click the already-selected card again → deselect (info panel returns to placeholder).
+      if (state.ovl.selected?.name === name) state.ovl.selected = null;
+      else if (itemType === 'passive') state.ovl.selected = D.passives.find(p => p.name === name) || null;
+      else state.ovl.selected = D.weapons.find(w => w.name === name) || null;
       state.ovl.autoAdd = null; // reset to computed default for new selection
       refreshOverlay(); return;
     }
@@ -7094,7 +7154,7 @@
 
     if (action === 'ovl-select-arcana') {
       const name = btn.dataset.arcana;
-      state.ovl.selected = D.arcana.find(a => a.name === name) || null;
+      state.ovl.selected = state.ovl.selected?.name === name ? null : (D.arcana.find(a => a.name === name) || null);
       refreshOverlay(); return;
     }
     if (action === 'arcana-tab-toggle') {
@@ -7105,7 +7165,7 @@
 
     if (action === 'ovl-select-stage') {
       const name = btn.dataset.stage;
-      state.ovl.selected = STAGES.find(s => s.name === name) || null;
+      state.ovl.selected = state.ovl.selected?.name === name ? null : (STAGES.find(s => s.name === name) || null);
       refreshOverlay(); return;
     }
   }
@@ -7260,7 +7320,18 @@
     }
     if (action === 'view-slot') {
       const refName = btn.dataset.infoName || null;
-      state.infoPanel = { type: slotType, playerIdx, slotIdx, refName, gift: btn.dataset.gift || null };
+      const gift = btn.dataset.gift || null;
+      // Click the already-open slot again → close the info panel (deselect).
+      const cur = state.infoPanel;
+      const same = cur && cur.type === slotType && cur.playerIdx === playerIdx && cur.slotIdx === slotIdx
+        && (cur.refName || null) === refName && (cur.gift || null) === gift
+        && !cur.hiddenName && !cur.absorbedResult;
+      state.infoPanel = same ? null : { type: slotType, playerIdx, slotIdx, refName, gift };
+      render();
+      return;
+    }
+    if (action === 'toggle-sprite-pause') {
+      state.spritePaused = !state.spritePaused;
       render();
       return;
     }
@@ -7271,18 +7342,26 @@
       return;
     }
     if (action === 'view-hidden') {
-      state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1, hiddenName: btn.dataset.hiddenName };
+      const cur = state.infoPanel;
+      const same = cur && cur.playerIdx === playerIdx && cur.hiddenName === btn.dataset.hiddenName;
+      state.infoPanel = same ? null : { type: 'weapon', playerIdx, slotIdx: -1, hiddenName: btn.dataset.hiddenName };
       render();
       return;
     }
     if (action === 'view-absorbed') {
-      state.infoPanel = { type: 'weapon', playerIdx, slotIdx: -1,
+      const cur = state.infoPanel;
+      const same = cur && cur.playerIdx === playerIdx && cur.absorbedResult === btn.dataset.absorbedResult
+        && cur.absorbedIdx === +btn.dataset.absorbedIdx;
+      state.infoPanel = same ? null : { type: 'weapon', playerIdx, slotIdx: -1,
         absorbedResult: btn.dataset.absorbedResult, absorbedIdx: +btn.dataset.absorbedIdx };
       render();
       return;
     }
     if (action === 'view-extra-passive') {
-      state.infoPanel = { type: 'passive', playerIdx, slotIdx: -1, refName: btn.dataset.extraName };
+      const cur = state.infoPanel;
+      const same = cur && cur.playerIdx === playerIdx && cur.type === 'passive'
+        && cur.slotIdx === -1 && cur.refName === btn.dataset.extraName;
+      state.infoPanel = same ? null : { type: 'passive', playerIdx, slotIdx: -1, refName: btn.dataset.extraName };
       render();
       return;
     }
