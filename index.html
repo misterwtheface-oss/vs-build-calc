@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vampire Survivors Build Calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'Perfect DOS VGA 437';
@@ -39,8 +39,9 @@
       --slot-bg:     #160606;
       --slot-border: #b88820;
       --can-evolve:  #ffe840;
-      --font-title:  'Cormorant', Georgia, serif;
-      --font-body:   'Cormorant', Georgia, serif;
+      --font-title:  'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-body:   'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-display: 'Cormorant', Georgia, serif;
       --slot-size:   52px;
       --char-size:   110px;
     }
@@ -62,7 +63,7 @@
 
     /* ── Typography ── */
     h1, h2, h3, .label { font-family: var(--font-title); letter-spacing: .05em; }
-    h1 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
+    h1 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
     h2 { font-size: 1.15rem; font-weight: 600; color: var(--gold); }
     h3 { font-size: .9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; }
     .label { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
@@ -1271,7 +1272,7 @@
     .arcana-tab-switch { font-size: 1rem; color: var(--text-muted); }
     .arcana-placeholder { opacity: .3; cursor: default; pointer-events: none; }
     .detail-name { font-family: var(--font-title); font-size: 1.05rem; text-align: center; color: var(--gold); margin-bottom: .3rem; }
-    .detail-desc { font-size: .88rem; color: var(--text-muted); line-height: 1.5; font-style: italic; }
+    .detail-desc { font-size: .88rem; font-weight: 400; color: var(--text-muted); line-height: 1.5; font-style: italic; }
     .detail-section { margin-top: .5rem; }
     .detail-section h3 { margin-bottom: .25rem; }
     .detail-section ul { list-style: none; padding: 0; }
