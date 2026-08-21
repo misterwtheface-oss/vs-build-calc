@@ -2,6 +2,11 @@
 PROGRESS.md
 Progress.md
 
+# Internal dev notes / planning docs — local-only, keep the public repo lean
+CLAUDE.md
+BUILD_SCHEMA_V2_PLAN.md
+CHARACTER_BONUSES_PLAN.md
+
 # GitHub Pages requires .nojekyll to serve this vanilla-JS site verbatim
 # (without it the Jekyll build fails). Never ignore it.
 !.nojekyll
