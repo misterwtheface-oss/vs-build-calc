@@ -6271,7 +6271,11 @@
       // Multiplicative stats: flat char bonus (`<key>_flat`) adds to base pre-multiplier; the
       // bare-key char column (magnet % — max_health has none) and any %-scaling are product
       // factors, multiplied with the power-up/passive factors: (base+flat)·Π(1+v).
-      const charFlat = (charStats ? (charStats[charStatKey + '_flat'] || 0) : 0) + extraFlat;
+      const roundFn = FLOOR_STATS.has(charStatKey) ? Math.floor : Math.round;
+      // Flat health/magnet units are whole numbers — round the flat bucket up front (Crystal Hearts'
+      // pct-mode slider yields fractional max_health_flat, e.g. 833.25) so the folded base display
+      // and the total both use whole units. Uses the stat's own rounding (magnet floors, else round).
+      const charFlat = roundFn((charStats ? (charStats[charStatKey + '_flat'] || 0) : 0) + extraFlat);
       const charPct  = charStats ? (charStats[charStatKey] || 0) : 0;
       let charFactor = charPct ? (1 + charPct) : 1;
       for (const v of calcCharScalingList(charStatKey, char, lvl)) charFactor *= (1 + v);
@@ -6280,7 +6284,6 @@
       const puFactor = pu.factors.reduce((a, f) => a * f, 1);
       const pvFactor = pv.factors.reduce((a, f) => a * f, 1);
 
-      const roundFn = FLOOR_STATS.has(charStatKey) ? Math.floor : Math.round;
       total = roundFn((rawBase + charFlat) * charFactor * puFactor * pvFactor * charMult);
       // Fold the flat char bonus into the BASE column (shown green when changed) so a stat with
       // both flat + % doesn't display two values in Char; Char then carries only the ×multiplier.
