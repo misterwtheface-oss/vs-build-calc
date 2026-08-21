@@ -860,7 +860,8 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Cooldown"
+            "Cooldown",
+            "Ignores Might"
           ]
         },
         {
@@ -872,6 +873,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Cooldown",
+        "Ignores Might",
         "Move Speed"
       ],
       "conflict": [
@@ -5013,7 +5015,8 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/syuuto_moonspell_sprite.gif",
       "base_name": "Syuuto Moonspell",
       "starting_weapons": [
-        "Summon Night"
+        "Summon Night",
+        "Night Sword"
       ],
       "hidden_items": [
         "Night Sword"
@@ -5149,8 +5152,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/babi-onna_sprite.gif",
       "base_name": "Babi-Onna",
       "starting_weapons": [
-        "Mirage Robe",
-        "Night Sword"
+        "Mirage Robe"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -6370,7 +6372,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Crewmate"
+            "Union"
           ]
         },
         {
@@ -6381,7 +6383,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Crewmate",
+        "Union",
         "Move Speed"
       ],
       "conflict": [],
@@ -6495,7 +6497,8 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Ghost"
+            "Ghost",
+            "Ignores Might"
           ]
         },
         {
@@ -6507,6 +6510,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Ghost",
+        "Ignores Might",
         "Luck"
       ],
       "conflict": [
@@ -19766,7 +19770,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Actrise"
+            "Magic Crystals"
           ]
         },
         {
@@ -19781,7 +19785,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Actrise",
+        "Magic Crystals",
         "Greed",
         "Amount",
         "Duration",
@@ -25274,7 +25278,8 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Low Health",
-            "Revival"
+            "Revival",
+            "Ignores Might"
           ]
         },
         {
@@ -25289,6 +25294,7 @@ window.VS_DATA = {
       "affinity": [
         "Low Health",
         "Revival",
+        "Ignores Might",
         "Luck",
         "Move Speed",
         "Recovery"
