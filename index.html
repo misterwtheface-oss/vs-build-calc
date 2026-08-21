@@ -1850,6 +1850,7 @@
         };
         if (w.extra.length)  obj.weaponsExtra  = w.extra;  // user picks in granted weapon slots
         if (pa.extra.length) obj.passivesExtra = pa.extra; // user picks in granted passive slots
+        if (p.santaHidden?.length) obj.santaHidden = [...p.santaHidden]; // Santa's formed hidden trio
         // Character-bonus controls: manual_scaling source sliders + stat_choice picks (only if set).
         if (p.sourceIndex && Object.keys(p.sourceIndex).length) obj.sourceIndex = { ...p.sourceIndex };
         if (p.statChoices && Object.keys(p.statChoices).length) obj.statChoices = { ...p.statChoices };
@@ -1925,6 +1926,9 @@
         if (!resolve(result, weaponByName)) continue;
         p.absorbed[result] = (hidden || []).filter(n => resolve(n, weaponByName));
       }
+      // santaHidden: Santa Ladonna's formed trio (evolved forms). Keep only known Santa evo names;
+      // syncSantaTrio re-forms from base weapons for builds that instead list the three bases.
+      p.santaHidden = (bp.santaHidden || []).filter(n => SANTA_EVO_TO_BASE[n]);
     });
 
     // Globals: arcana (base 3 + any granted slots, positional) + stage. syncArcanaSlots (below)
@@ -1944,6 +1948,7 @@
     state.players.forEach(syncAbsorbed);
     state.players.forEach(syncFamiliarStarter);
     state.players.forEach(syncCharacterGrants);
+    state.players.forEach(syncSantaTrio);
     state.players.forEach(syncStageSlots);
     syncArcanaSlots();
     syncGrantedArcana();
@@ -2007,7 +2012,7 @@
     // familiars: familiar weapons picked via Familiar Forge — they live in the hidden/extra
     // row, never a normal weapon slot (a Familiar Forge STARTER slot clears once one is picked,
     // and is restored by syncFamiliarStarter when no familiars remain).
-    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {}, giftWeapon: null, giftPassive: null, familiars: [], sourceIndex: {}, statChoices: {} };
+    return { character: null, weapons: [], passives: [], charLevel: 1, extraPassives: [], absorbed: {}, santaHidden: [], giftWeapon: null, giftPassive: null, familiars: [], sourceIndex: {}, statChoices: {} };
   }
 
   function initPlayers(newCount, prevPlayers = []) {
@@ -2312,6 +2317,14 @@
   const isAbsorbUnion = name => ABSORB_UNIONS.has(name);
   const ALUCARD_ABSORB_COUNT = 5; // Alucard Swords consumes any 5 other non-base weapons
 
+  // Santa Ladonna secret: with Santa Water + King Bible + Cross all equipped, all three auto-evolve
+  // and become HIDDEN (bypassing normal evo requirements). We don't track weapon levels, so the
+  // trigger is simply "all three bases present". base → evolved form:
+  const SANTA_CHAR = 'Santa Ladonna';
+  const SANTA_TRIO_EVO = { 'Santa Water': 'La Borra', 'King Bible': 'Unholy Vespers', 'Cross': 'Heaven Sword' };
+  const SANTA_TRIO_BASES = Object.keys(SANTA_TRIO_EVO);
+  const SANTA_EVO_TO_BASE = Object.fromEntries(Object.entries(SANTA_TRIO_EVO).map(([b, e]) => [e, b]));
+
   // The 4 clockwork weapons that union into Clock Tower (data-derived, fixed order).
   function clockworkInputs() {
     return D.weapons.filter(w => w.trans_result === 'Clock Tower' && w.method === 'Union').map(w => w.name);
@@ -2366,6 +2379,38 @@
     for (const resultName of Object.keys(player.absorbed)) {
       if (!equipped.has(resultName)) delete player.absorbed[resultName];
     }
+  }
+
+  // Santa Ladonna's secret trio. Idempotent, run every render:
+  //  • Not Santa → release any hidden trio back to base weapons in empty slots, clear the list.
+  //  • Santa, trio not yet formed (santaHidden < 3) → if all three bases are equipped, consume them
+  //    (free their slots) and store the three evolved forms as hidden.
+  //  • Santa, already formed → keep it (the bases are gone; santaHidden is the source of truth).
+  function syncSantaTrio(player) {
+    if (!player.santaHidden) player.santaHidden = [];
+    const isSanta = player.character?.base_name === SANTA_CHAR;
+    if (!isSanta) {
+      if (player.santaHidden.length) {
+        const counts = SLOT_COUNTS[state.playerCount];
+        for (const evolved of player.santaHidden) {
+          const base = SANTA_EVO_TO_BASE[evolved];
+          if (!base || player.weapons.some(w => w && w.name === base)) continue;
+          let empty = -1;
+          for (let j = 0; j < counts.weapons; j++) { if (!player.weapons[j]) { empty = j; break; } }
+          if (empty >= 0) player.weapons[empty] = weaponByName(base);
+        }
+        player.santaHidden = [];
+      }
+      return;
+    }
+    if (player.santaHidden.length >= SANTA_TRIO_BASES.length) return; // already formed
+    const allPresent = SANTA_TRIO_BASES.every(b => player.weapons.some(w => w && w.name === b));
+    if (!allPresent) return;
+    SANTA_TRIO_BASES.forEach(b => {
+      const i = player.weapons.findIndex(w => w && w.name === b);
+      if (i >= 0) player.weapons[i] = null; // consume the base — frees the slot
+    });
+    player.santaHidden = SANTA_TRIO_BASES.map(b => SANTA_TRIO_EVO[b]);
   }
 
   // A Familiar Forge STARTER slot (Young Maria) holds the Forge until a familiar is picked,
@@ -3757,6 +3802,8 @@
     players.forEach(syncFamiliarStarter);
     // Place character add_extra item grants (Academy Badge, spell weapons, Sacred familiars, …).
     players.forEach(syncCharacterGrants);
+    // Santa Ladonna: consume the Santa Water/King Bible/Cross trio into hidden evolved forms.
+    players.forEach(syncSantaTrio);
     // Drop appended transient stage-pickup slots the current stage no longer supplies.
     players.forEach(syncStageSlots);
     // Global arcana grants: resize the row for arcana SLOT grants, and free the main slot for any
@@ -3809,6 +3856,7 @@
         ...charOverflow,
         ...counterparts,
         ...passiveHidden,
+        ...(player.santaHidden || []), // Santa Ladonna's auto-evolved secret trio
       ])];
       // Character add_hidden grants (Scorej-Oni/Galamoth Lightning Ring, Axe Armor Axe, Leon's
       // Svarog Statue, Ruler Sword Body, …) — level-gated COUNTS. Like multiple Weapon Power-Up,

@@ -73,6 +73,7 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 | `giftPassive`   | string \| null              | Arma Dio free passive pick. Optional. |
 | `familiars`     | string[]                    | Familiar Forge picks (live in the hidden row). Optional. |
 | `absorbed`      | `{ [result]: string[] }`    | Absorb-union map. Optional. |
+| `santaHidden`   | string[]                    | Santa Ladonna's formed secret trio — the **evolved** forms (`La Borra`, `Unholy Vespers`, `Heaven Sword`) that became hidden. Optional; a build may instead just list the three **base** weapons (`Santa Water`, `King Bible`, `Cross`) in `weapons` and the loader re-forms them. |
 | `sourceIndex`   | `{ [source]: number }`      | v2. manual_scaling source-slider positions (integer step index). Optional. |
 | `statChoices`   | `{ [gate]: string }`        | v2. stat_choice picks — chosen stat key per level gate (Blackmore/Joachim). Optional. |
 
@@ -133,6 +134,13 @@ dropped from the bundle). Produce builds that satisfy all of these:
 **Absorb-unions**
 - `absorbed` keys must be `Clock Tower` or `Alucard Shield`, the result should be equipped, and a
   weapon can't be both slotted and absorbed. Alucard Shield absorbs 5 weapons.
+
+**Santa Ladonna's secret trio**
+- If **Santa Ladonna** equips **Santa Water + King Bible + Cross**, all three auto-evolve (into
+  `La Borra`, `Unholy Vespers`, `Heaven Sword`) and become **hidden**, freeing their three weapon
+  slots — bypassing the normal evolution requirements. The planner derives this on load, so express
+  it either by listing the three **bases** in `weapons`, or by the derived `santaHidden` field. It
+  reverses (bases restored) if the character is changed away from Santa Ladonna.
 
 Unknown item names (data drift) are **warnings**, not errors — they're skipped on load.
 
