@@ -1457,6 +1457,38 @@
     }
     .stage-tile:hover img { filter: brightness(1.2); }
     .stage-tile.selected img { box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(232,184,32,.55); }
+
+    /* ── Inverse Game Mode ── purple accent (evokes the inverted/darkana theme). The stage
+       overlay carries the toggle; the planner stage row shows a badge when it's active. */
+    .stage-header-right { display: flex; align-items: center; gap: .6rem; }
+    .inverse-toggle {
+      display: inline-flex; align-items: center; gap: .4rem; cursor: pointer;
+      padding: .3rem .6rem; border-radius: 4px; font-family: var(--font-title);
+      font-size: .8rem; letter-spacing: .04em; color: var(--text-muted);
+      background: rgba(120,40,200,.08); border: 1px solid rgba(155,80,220,.35);
+      transition: border-color .15s, background .15s, color .15s;
+    }
+    .inverse-toggle:hover { border-color: rgba(155,80,220,.7); color: var(--text); }
+    .inverse-toggle.active {
+      background: rgba(120,40,200,.22); border-color: rgba(175,110,235,.85);
+      color: #e6d4ff; box-shadow: 0 0 8px rgba(140,70,220,.4);
+    }
+    .inverse-toggle-box {
+      width: 16px; height: 16px; flex-shrink: 0; border-radius: 3px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .75rem; line-height: 1; color: #f0e4ff;
+      border: 1px solid rgba(155,80,220,.6); background: rgba(20,8,32,.6);
+    }
+    .inverse-toggle.active .inverse-toggle-box { background: rgba(120,40,200,.6); border-color: rgba(200,150,255,.9); }
+    .inverse-toggle-hint { font-size: .7rem; color: var(--text-dim); }
+    .inverse-toggle.active .inverse-toggle-hint { color: #b98cf0; }
+    .inverse-badge {
+      align-self: center; cursor: pointer; padding: .2rem .5rem; border-radius: 4px;
+      font-family: var(--font-title); font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      color: #e6d4ff; background: rgba(120,40,200,.25); border: 1px solid rgba(175,110,235,.75);
+      box-shadow: 0 0 8px rgba(140,70,220,.35); white-space: nowrap;
+    }
+    .inverse-badge:hover { border-color: rgba(200,150,255,.95); background: rgba(120,40,200,.4); }
     /* stage image in the detail panel — same landscape aspect */
     .stage-detail-img img {
       width: 100%;
@@ -1694,6 +1726,7 @@
     players: [],
     arcana: [null, null, null], // global — shared across all players
     stage: null,                // global — shared across all players
+    inverseMode: false,         // Inverse Game Mode — global; grants a 4th Arcana slot
     infoPanel: null,
     spritePaused: false, // when true, char sprites render their STATIC png (pause animated gifs)
     overlay: null,   // { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem }
@@ -1786,6 +1819,7 @@
       dataVersion: meta.dataVersion || '',
       playerCount: state.playerCount,
       stage: state.stage ? state.stage.name : null,
+      inverseMode: state.inverseMode || undefined, // omit when off (backward-compatible)
       arcana: state.arcana.map(a => a ? a.name : null),
       players: state.players.map(p => {
         const counts = SLOT_COUNTS[state.playerCount];
@@ -1898,6 +1932,7 @@
     const arc = build.arcana || [];
     state.arcana = arc.map(n => resolve(n, arcanaByName));
     state.stage = resolve(build.stage, stageByName);
+    state.inverseMode = !!build.inverseMode; // set before syncArcanaSlots so the 4th slot survives
 
     // Self-heal to a legal state (defence-in-depth alongside validateBuildLegality). Mirrors the
     // render sweep so the new grant mechanics reconstruct: reconcile extra-bar passives, prune
@@ -3966,6 +4001,7 @@
                 <div class="global-stage-group">
                   <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
                   ${gStageSlot}
+                  ${state.inverseMode ? '<span class="inverse-badge" title="Inverse Game Mode — 4 Arcana slots" data-action="open-stage">INVERSE</span>' : ''}
                 </div>
               </div>
             </div>
@@ -4563,7 +4599,15 @@
 
     return `<div class="overlay-header">
         <h2>Stage Selection</h2>
-        <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+        <div class="stage-header-right">
+          <button class="inverse-toggle${state.inverseMode ? ' active' : ''}" data-action="ovl-toggle-inverse"
+            title="Inverse Game Mode — adds a 4th Arcana slot">
+            <span class="inverse-toggle-box">${state.inverseMode ? '✓' : ''}</span>
+            <span class="inverse-toggle-label">Inverse Mode</span>
+            <span class="inverse-toggle-hint">+1 Arcana</span>
+          </button>
+          <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
+        </div>
       </div>
       <div class="overlay-body">
         <div class="ovl-center"><div class="ovl-center-scroll"><div class="stage-grid">${tiles}</div></div></div>
@@ -5879,7 +5923,12 @@
   // slots. Resize state.arcana to the base 3 + granted total (summed across all players' chars);
   // trailing granted slots (and their contents) drop when the grant goes away.
   function syncArcanaSlots() {
-    const total = BASE_ARCANA_SLOTS + state.players.reduce((s, p) => s + grantedSlotCount(p, 'arcana'), 0);
+    const inverseSlots = state.inverseMode ? 1 : 0; // Inverse Game Mode adds a 4th Arcana slot
+    // Queen Sigma grants one extra Arcana slot; +1 if ANY player is her (not per-copy). Stacks with
+    // Inverse (3 + 1 + 1 = 5). Recomputed every render, so deselecting her drops the slot.
+    const sigmaSlots = state.players.some(p => p.character?.base_name === 'Queen Sigma') ? 1 : 0;
+    const total = BASE_ARCANA_SLOTS + inverseSlots + sigmaSlots
+                + state.players.reduce((s, p) => s + grantedSlotCount(p, 'arcana'), 0);
     while (state.arcana.length < total) state.arcana.push(null);
     if (state.arcana.length > total) state.arcana.length = total;
   }
@@ -7172,6 +7221,14 @@
       state.ovl.selected = state.ovl.selected?.name === name ? null : (STAGES.find(s => s.name === name) || null);
       refreshOverlay(); return;
     }
+
+    if (action === 'ovl-toggle-inverse') {
+      // Inverse Game Mode is a global run setting — apply immediately (independent of the stage
+      // Confirm/Cancel). Toggling off trims the 4th Arcana slot (and its contents) via syncArcanaSlots.
+      state.inverseMode = !state.inverseMode;
+      syncArcanaSlots();
+      refreshOverlay(); return;
+    }
   }
 
   // Touch/no-hover devices show the corner remove × permanently (no hover to reveal it on demand),
@@ -7231,6 +7288,10 @@
     }
     if (action === 'open-power-ups') {
       renderPowerUpOverlay();
+      return;
+    }
+    if (action === 'open-stage') {
+      openStageOverlay();
       return;
     }
     if (action === 'open-seal') {

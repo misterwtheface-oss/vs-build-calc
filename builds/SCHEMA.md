@@ -54,7 +54,8 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 | `dataVersion` | string            |     | Free-form marker of the data snapshot authored against (e.g. `"2026-08"`). |
 | `playerCount` | number (1–4)      | ✔   | Number of player entries. |
 | `stage`       | string \| null    |     | Stage name, or `null`. |
-| `arcana`      | (string\|null)[]  |     | **Positional** arcana slots; `null` = empty. Base 3 + any character-**granted** arcana slots (Blackmore, Nathan Graves), so length may exceed 3. Granted arcana *items* (John Morris) are derived, not listed here. |
+| `inverseMode` | boolean           |     | **Inverse Game Mode** — grants a 4th Arcana slot. Omitted when off (defaults `false`). |
+| `arcana`      | (string\|null)[]  |     | **Positional** arcana slots; `null` = empty. Base 3 + Inverse Mode's 4th slot + any character-**granted** arcana slots (Blackmore, Nathan Graves), so length may exceed 3. Granted arcana *items* (John Morris) are derived, not listed here. |
 | `players`     | Player[]          | ✔   | Length should equal `playerCount`. |
 
 ## Player object
@@ -101,7 +102,8 @@ dropped from the bundle). Produce builds that satisfy all of these:
   against the cap; stage-exclusive passives (below) don't count against the passive cap.
 - **No duplicate** weapon or passive *within a single player*. (Co-op allows the same weapon/passive
   across *different* players.)
-- At most **3 + character-granted arcana slots** (Blackmore/Nathan Graves add slots), no
+- At most **3 + Inverse Mode (4th slot, `inverseMode: true`) + Queen Sigma (one extra slot if any
+  player is her) + character-granted arcana slots** (Blackmore/Nathan Graves add slots), no
   duplicates, and a manual arcana slot may not repeat a character's starting arcana.
 - **Granted-slot fills** (`weaponsExtra`/`passivesExtra`) must fit the character's granted
   extra-slot budget at its level (e.g. Santa Ladonna's weapon slot only exists at Lv80).

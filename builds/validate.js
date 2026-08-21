@@ -130,10 +130,11 @@
       return false;
     }
 
-    // ── Global caps: arcana (base 3 + character-granted arcana slots) ──
+    // ── Global caps: arcana (base 3 + Inverse Mode's 4th slot + Queen Sigma's slot + granted) ──
     const grantedArcanaTotal = players.reduce((s, p, i) =>
       s + grantedSlots(charObjs[i], clampInt(p && p.charLevel, 1, 999, 1), 'arcana'), 0);
-    const arcanaCap = 3 + grantedArcanaTotal;
+    const sigmaSlot = charObjs.some(c => c && c.base_name === 'Queen Sigma') ? 1 : 0;
+    const arcanaCap = 3 + (build.inverseMode ? 1 : 0) + sigmaSlot + grantedArcanaTotal;
     if ((build.arcana || []).length > arcanaCap) E(`Too many arcana (${(build.arcana || []).length}); max ${arcanaCap} slots`);
     dupes(arcanaSlots).forEach(n => E(`Duplicate arcana: ${n}`));
     arcanaSlots.forEach(n => { if (!aByName[n]) W(`Unknown arcana "${n}" — will be skipped on load`); });
