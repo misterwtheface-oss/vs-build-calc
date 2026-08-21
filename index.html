@@ -3139,9 +3139,15 @@
         ...state.players.flatMap(p => p.extraPassives || []),
       ]);
       for (const player of state.players) {
+        // A character that STARTS with an evolved weapon (e.g. Mask of the Red Death →
+        // Death Spiral) is granted that form outright — its lineage passives (Candelabrador)
+        // are irrelevant, so the starter form must never devolve back to its base. Guarding
+        // here also keeps the slot's starter-lock intact (the lock matches by name).
+        const starterForms = new Set(starterWeaponNames(player.character));
         for (let i = 0; i < player.weapons.length; i++) {
           const w = player.weapons[i];
           if (!w) continue;
+          if (starterForms.has(w.name)) continue;
           // Immediate bases producing w (Evolution: 1; Union: 2+), earlier branch first.
           const bases = D.weapons.filter(b => b.trans_result === w.name)
             .slice().sort((a, b) => banishRootIdx(a.name) - banishRootIdx(b.name));
