@@ -1218,20 +1218,22 @@
       flex-shrink: 0;
     }
     .stack-wrapper .item-card { position: absolute; top: 0; left: 0; }
-    .stack-nav {
-      position: absolute; bottom: -1px; right: -1px;
-      display: flex; gap: 2px;
-    }
+    /* Variant cycle arrows: split to the icon's left/right edges, translucent so they float over
+       the art instead of boxing a corner. Always visible (touch-friendly) at low alpha; brighten
+       on card hover, gold on direct hover. */
     .stack-btn {
-      width: 14px; height: 14px;
-      background: rgba(0,0,0,.85);
-      border: 1px solid var(--border-hi);
-      border-radius: 2px;
-      color: var(--text); font-size: 8px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; z-index: 2;
+      position: absolute; top: 0; bottom: 0; width: 30%; min-width: 15px; max-width: 24px;
+      display: flex; align-items: center; cursor: pointer; z-index: 3;
+      color: #fff; font-size: 17px; font-weight: 700; line-height: 1;
+      text-shadow: 0 1px 3px rgba(0,0,0,.95);
+      opacity: .5; transition: opacity .12s, color .12s;
     }
-    .stack-btn:hover { color: var(--gold); }
+    .stack-btn.nav-l { left: 0;  justify-content: flex-start; padding-left: 2px;
+      background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,0)); }
+    .stack-btn.nav-r { right: 0; justify-content: flex-end; padding-right: 2px;
+      background: linear-gradient(to left,  rgba(0,0,0,.5), rgba(0,0,0,0)); }
+    .stack-wrapper:hover .stack-btn { opacity: .8; }
+    .stack-btn:hover { opacity: 1; color: var(--gold); }
 
     /* ── Detail panels (right side) ── */
     .detail-icon { width: 64px; height: 64px; border-radius: 8px; overflow: hidden; margin: 0 auto .5rem; }
@@ -1407,14 +1409,17 @@
       z-index: -1;
       transform: translate(4px, 4px);
     }
+    /* Position pill: sleeker rounded badge in the top-right, lower alpha so it reads as a quiet
+       status marker rather than a hard corner label. Above the arrows but click-through. */
     .variant-count {
-      position: absolute; top: 2px; right: 2px;
-      background: rgba(0,0,0,.75);
+      position: absolute; top: 3px; right: 3px;
+      background: rgba(0,0,0,.5);
       color: var(--gold);
-      font-size: 8px;
+      font-size: 8px; font-weight: 700; letter-spacing: .06em;
       font-family: var(--font-title);
-      padding: 1px 3px;
-      border-radius: 2px;
+      padding: 1px 6px;
+      border-radius: 9px;
+      z-index: 4; line-height: 1.4; pointer-events: none;
     }
 
     /* arcana overlay two-panel (no left stats) */
@@ -4134,10 +4139,8 @@
           <div class="char-card stacked${isSelected ? ' selected' : ''}${uncls}" data-action="ovl-select-char" data-char="${esc(cur.name)}" data-base="${esc(group[0].base_name)}" title="${esc(cur.name)}${inaccessible ? ' — not in your collection' : ''}">
             <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
             <div class="variant-count">${vi+1}/${group.length}</div>
-          </div>
-          <div class="stack-nav">
-            <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="-1">‹</div>
-            <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="1">›</div>
+            <div class="stack-btn nav-l" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="-1">‹</div>
+            <div class="stack-btn nav-r" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="1">›</div>
           </div>
         </div>`;
       } else {
@@ -6770,18 +6773,16 @@
         const owned = !u.characters.has(cur.name);
         const searchVal = esc(group.map(c => c.name).join('|'));
         const nav = group.length > 1
-          ? `<div class="stack-nav">
-               <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="-1">‹</div>
-               <div class="stack-btn" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="1">›</div>
-             </div>` : '';
+          ? `<div class="stack-btn nav-l" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="-1">‹</div>
+             <div class="stack-btn nav-r" data-action="cycle-char-variant" data-base="${esc(group[0].base_name)}" data-dir="1">›</div>` : '';
         return `<div class="stack-wrapper" data-search="${searchVal}">
           <div class="char-card${group.length > 1 ? ' stacked' : ''}${owned ? '' : ' uncollected'}"
             data-action="collection-toggle" data-kind="characters" data-name="${esc(cur.name)}"
             title="${esc(cur.name)}${owned ? '' : ' — not in your collection'}">
             <img src="${esc(cur.icon||EMPTY_ICONS.char)}" alt="${esc(cur.name)}" onerror="this.src='${EMPTY_ICONS.char}'">
             ${group.length > 1 ? `<div class="variant-count">${vi+1}/${group.length}</div>` : ''}
+            ${nav}
           </div>
-          ${nav}
         </div>`;
       }).join('');
       return `<div class="char-grid collection-char-grid">${cells}</div>`;
