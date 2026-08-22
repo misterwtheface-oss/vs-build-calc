@@ -600,7 +600,10 @@ const characters = rawChars.map(r => ({
   // New schema compresses the three starter columns into one brace-wrapped,
   // pipe-separated `starting_loadout` (weapons + passives mixed, partitioned
   // downstream by isPassiveName).
-  starting_weapons: splitItems(r.starting_loadout),
+  // "Random" starts in-game with a random weapon; the loadout carries a placeholder
+  // "Random" weapon just to picture that, but it isn't a real weapon — drop it so the
+  // planner leaves the weapon slot open instead of locking the placeholder in.
+  starting_weapons: splitItems(r.starting_loadout).filter(n => n !== 'Random'),
   hidden_items:  splitItems(r.hidden_items),
   max_items:     splitItems(r.max_items),
   // Brace-wrapped in the new schema ({-} / {Gemini (I)}); unwrap() strips braces and
@@ -838,16 +841,17 @@ for (const [a, b] of AFFINITY_COLOR_SWAPS) {
 }
 
 // ─── Synthesize phantom starter weapons ───────────────────────────────────
-// Some characters start with an item that has no weapons.csv row. When it's a real
-// (if icon-only) weapon like Random, emit a minimal Special weapon (excluded from the
-// selector grid, non-evolving) pointing at the existing art so it can occupy a locked
-// starter slot. Extend `phantomStarterIcon` as new cases surface.
+// Some characters start with an item that has no weapons.csv row. When it's an icon-only
+// "weapon" that should still occupy a locked starter slot, emit a minimal Special weapon
+// (excluded from the selector grid, non-evolving) pointing at the existing art. Add cases to
+// `phantomStarterIcon` as they surface. (Random used to be handled here, but it starts with a
+// *random* weapon in-game, not a real item — its placeholder is filtered out of the loadout
+// above so the slot is simply left open.)
 // NOTE: the Glimmer "… Tech" innate attacks are deliberately NOT mapped here — they are
 // character abilities, not weapons/items, and will be surfaced by the future Glimmer
 // Tech overlay instead of forced into an item slot. They should be removed from the
 // characters.csv starting_loadout; an unmapped one will warn below until it is.
 function phantomStarterIcon(name) {
-  if (name === 'Random') return 'assets/icons/weapons/random.png';
   return null;
 }
 {

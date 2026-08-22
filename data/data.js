@@ -3433,14 +3433,12 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Random",
-      "icon": "assets/icons/characters/random.png",
+      "name": "Random (Aren Gijus)",
+      "icon": "assets/icons/characters/random_aren_gijus.png",
       "sprite_static": "assets/icons/characters/random_sprite.png",
       "sprite_gif": "assets/icons/characters/random_sprite.gif",
       "base_name": "Random",
-      "starting_weapons": [
-        "Random"
-      ],
+      "starting_weapons": [],
       "hidden_items": [],
       "max_items": [],
       "starting_arcana": null,
@@ -3450,7 +3448,1029 @@ window.VS_DATA = {
       "affinity_groups": [],
       "affinity": [],
       "conflict": [],
-      "scaling": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.475,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.012,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.003,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (Titto)",
+      "icon": "assets/icons/characters/random_titto.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.2375,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.012,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.003,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (Chalanda)",
+      "icon": "assets/icons/characters/random_chalanda.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.475,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.012,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.003,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (SHAtsung)",
+      "icon": "assets/icons/characters/random_shatsung.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.475,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.012,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.0045,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (Marionello)",
+      "icon": "assets/icons/characters/random_marionello.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.475,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.012,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.003,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (Birky)",
+      "icon": "assets/icons/characters/random_birky.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.475,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.012,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.003,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (Zylaz)",
+      "icon": "assets/icons/characters/random_zylaz.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.475,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.018,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.0015,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Random (Mi Kujino)",
+      "icon": "assets/icons/characters/random_mi_kujino.png",
+      "sprite_static": "assets/icons/characters/random_sprite.png",
+      "sprite_gif": "assets/icons/characters/random_sprite.gif",
+      "base_name": "Random",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Random.",
+      "effect_clarifications": "Under Construction",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "max_health_flat",
+          "value": 0.7125,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "armor",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "amount",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "revival",
+          "value": 0.002,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "magnet",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "speed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "move_speed",
+          "value": 0.003,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "might",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "cooldown",
+          "value": -0.00225,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "area",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "duration",
+          "value": 0.006,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "luck",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "growth",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "greed",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        },
+        {
+          "key": "curse",
+          "value": 0.004,
+          "interval": 1,
+          "max": null
+        }
+      ],
       "stat_choices": [],
       "reference_scaling": [],
       "manual_scaling": [],
@@ -57160,22 +58180,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": []
-    },
-    {
-      "name": "Random",
-      "icon": "assets/icons/weapons/random.png",
-      "category": "Special",
-      "method": null,
-      "description": "",
-      "level_ups": [],
-      "limit_break": [],
-      "trans_conditions": "",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Random",
-      "ode_category": null,
-      "arcana_ratings": {},
-      "rarity": 0
     }
   ],
   "passives": [
