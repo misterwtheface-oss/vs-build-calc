@@ -3781,6 +3781,11 @@
       if (wObj && absorbedName) {
         html += absorbedStageControls(wObj, player, playerIdx, absorbedResult, absorbedIdx);
       }
+
+      // Associated Arcana (weapon.arcana) — clickable card icons: left-click opens the arcana
+      // detail page, right-click quick-adds it to the shared arcana pool (same as the arcana
+      // panel's affects grid). Placed below evo/stage, above the trait banners (detail-page order).
+      if (wObj) html += weaponArcanaSectionHTML(wObj, 'panel');
     }
 
     if (type === 'passive') {
@@ -4458,7 +4463,7 @@
           <div class="detail-name">${esc(w.name)}</div>
           ${w.category !== 'Base' ? `<div style="font-size:.7rem;color:var(--gold);text-align:center;margin-bottom:.2rem">${esc(w.category)}</div>` : ''}
           ${w.description ? `<div class="detail-desc" style="margin-top:.4rem">${esc(w.description)}</div>` : ''}`;
-        const wRightBody = `${reqHTML}${chainHTML}${affinitySectionHTML('weapon', w.name, 'open-affinity-page')}`;
+        const wRightBody = `${reqHTML}${chainHTML}${weaponArcanaSectionHTML(w, 'selector')}${affinitySectionHTML('weapon', w.name, 'open-affinity-page')}`;
         rightHTML = `<div class="ovl-right-top">${wRightTop}</div><div class="ovl-right-body">${wRightBody}</div>`;
       }
     } else {
@@ -4913,11 +4918,18 @@
   }
 
   // The Arcana associated with a weapon (its `arcana` column) → navigable arcana card icons.
-  // On the weapon detail page, between the evo path and the affinity list.
-  function weaponArcanaSectionHTML(weapon) {
+  // Contexts: 'detail' (weapon detail page, between evo path and affinity list — collapsible
+  // .detail-cat), 'panel' (planner info sidebar — panel-styled section; icons also right-click
+  // quick-add to the build, mirroring the arcana panel's affects grid), 'selector' (weapon
+  // selector info pane — panel-styled, navigable only). Reuses the shared arcana ref mapping.
+  function weaponArcanaSectionHTML(weapon, context = 'detail') {
     const refs = resolveRefs(weapon.arcana || []);
     if (!refs.length) return '';
-    return `<details class="detail-cat" open><summary class="detail-cat-label">Arcana <span style="color:var(--text-dim);font-size:.75rem">(${refs.length})</span></summary>${refIconsGridHTML(refs)}</details>`;
+    if (context === 'detail') {
+      return `<details class="detail-cat" open><summary class="detail-cat-label">Arcana <span style="color:var(--text-dim);font-size:.75rem">(${refs.length})</span></summary>${refIconsGridHTML(refs)}</details>`;
+    }
+    const grid = refIconsGridHTML(refs, context === 'panel' ? { quickAdd: true } : undefined);
+    return `<div class="detail-section"><span class="detail-section-label">Arcana <span style="color:var(--text-dim);font-weight:400">(${refs.length})</span></span>${grid}</div>`;
   }
 
   // Object page: affinity banners as headers, each with the object's blurb below (blurb empty
