@@ -17,5 +17,8 @@ data/references/
 # Generated build index (tools/build-index.mjs) — not needed until builds ship
 builds/index.json
 
+# Local/mobile preview server — dev-only tool, never part of the shipped site
+tools/serve.mjs
+
 # Windows-generated per-folder view settings (System+Hidden); never our files
 desktop.ini
