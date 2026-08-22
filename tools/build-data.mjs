@@ -1,6 +1,6 @@
 /**
  * build-data.mjs
- * Converts CSV files from the vampire-survivors-theorycraft skill
+ * Converts the source CSVs in data/references/ (gitignored)
  * into data/data.js consumed by the build planner.
  *
  * Usage: node tools/build-data.mjs   (from vs-build-calc root)
@@ -13,8 +13,8 @@ import { inflateSync } from 'zlib';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT   = join(__dirname, '..');
-// workspace root is two levels up from tools/
-const SKILL_DATA  = join(__dirname, '../../.claude/skills/vampire-survivors-theorycraft/references/data');
+// Source CSVs live in-repo but are gitignored (see .gitignore); build output is committed.
+const CSV_DIR     = join(REPO_ROOT, 'data/references');
 const DATA_OUT    = join(REPO_ROOT, 'data');
 
 // ─── RFC 4180 CSV parser ──────────────────────────────────────────────────
@@ -84,7 +84,7 @@ function parseCsv(raw, bracketAware = false) {
 
 function readCsv(filename, bracketAware = false) {
   try {
-    return parseCsv(readFileSync(join(SKILL_DATA, filename), 'utf8'), bracketAware);
+    return parseCsv(readFileSync(join(CSV_DIR, filename), 'utf8'), bracketAware);
   } catch (err) {
     console.warn(`Warning: could not read ${filename} — ${err.message}`);
     return [];
@@ -924,7 +924,7 @@ const stats = rawStats.filter(r => r.name).map(r => {
 
 let banishLayout = [];
 try {
-  const rawBanish = readFileSync(join(SKILL_DATA, 'banish_layout.csv'), 'utf8');
+  const rawBanish = readFileSync(join(CSV_DIR, 'banish_layout.csv'), 'utf8');
   banishLayout = rawBanish
     .split(/\r?\n/)
     .filter(line => line.trim())

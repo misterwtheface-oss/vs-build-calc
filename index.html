@@ -2128,6 +2128,20 @@
     return _charVariants;
   }
   function charSpriteIcon(c) { return c.sprite_static || c.sprite_gif || c.icon; }
+  // A few characters change form at level 80, swapping their sprite/gif for an "evolved" version.
+  // Level is the sole trigger here. Keyed by name → evolved art; only these are wired up (others
+  // with evolved assets stay on their base sprite until we use them). evolvedChar() returns the
+  // character unchanged below the threshold, else a shallow clone with the swapped sprite paths.
+  const EVOLVE_LEVEL = 80;
+  const EVOLVED_SPRITES = {
+    'Mortaccio':     { sprite_static: 'assets/icons/characters/mortaccio_evolved_sprite.png',     sprite_gif: 'assets/icons/characters/mortaccio_evolved_sprite.gif' },
+    "O'Sole Meeo":   { sprite_static: 'assets/icons/characters/osole_meeo_evolved_sprite.png',    sprite_gif: 'assets/icons/characters/osole_meeo_evolved_sprite.gif' },
+    'Yatta Cavallo': { sprite_static: 'assets/icons/characters/yatta_cavallo_evolved_sprite.png', sprite_gif: 'assets/icons/characters/yatta_cavallo_evolved_sprite.gif' },
+  };
+  function evolvedChar(char, level) {
+    const evo = char && (level ?? 1) >= EVOLVE_LEVEL && EVOLVED_SPRITES[char.name];
+    return evo ? { ...char, ...evo } : char;
+  }
   // Weapon full-art sprite (weapons.csv `sprite_path`), falling back to the square icon.
   function weaponSprite(w) { return (w && (w.sprite || w.icon)) || ''; }
 
@@ -3612,7 +3626,7 @@
     const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     let top;
     if (type === 'char') {
-      top = charSpriteHTML(item, true); // animated gif first
+      top = charSpriteHTML(evolvedChar(item, player?.charLevel ?? 1), true); // animated gif first
     } else if (type === 'stage') {
       // Landscape stage art — fit to its aspect instead of the square cover box (which clips).
       const icon = item.icon || emptyIcon;
@@ -4144,7 +4158,7 @@
       : null;
     const left = `${levelRowHTML(playerIdx, charLevel)}${statsHTML(sel, previewPlayer, charLevel, { hidePassive: true, playerIdx })}`;
     const rightTop = sel
-      ? `${infoDetailButtonHTML('char', sel.name)}${charSpriteHTML(sel, false)}
+      ? `${infoDetailButtonHTML('char', sel.name)}${charSpriteHTML(evolvedChar(sel, charLevel), false)}
          <div class="detail-name">${esc(sel.name)}</div>`
       : `<div class="detail-desc" style="text-align:center">Select a character</div>`;
     let rightBody = '';

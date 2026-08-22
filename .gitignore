@@ -11,5 +11,11 @@ CHARACTER_BONUSES_PLAN.md
 # (without it the Jekyll build fails). Never ignore it.
 !.nojekyll
 
+# Source CSVs for tools/build-data.mjs — local-only; the built data/data.js is what ships
+data/references/
+
+# Generated build index (tools/build-index.mjs) — not needed until builds ship
+builds/index.json
+
 # Windows-generated per-folder view settings (System+Hidden); never our files
 desktop.ini

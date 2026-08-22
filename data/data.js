@@ -861,7 +861,7 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Cooldown",
-            "Ignores Might"
+            "Low Might"
           ]
         },
         {
@@ -873,7 +873,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Cooldown",
-        "Ignores Might",
+        "Low Might",
         "Move Speed"
       ],
       "conflict": [
@@ -6497,8 +6497,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Ghost",
-            "Ignores Might"
+            "Low Might"
           ]
         },
         {
@@ -6509,8 +6508,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Ghost",
-        "Ignores Might",
+        "Low Might",
         "Luck"
       ],
       "conflict": [
@@ -17074,7 +17072,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Hugh"
+            "Valmanway"
           ]
         },
         {
@@ -17087,7 +17085,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Hugh",
+        "Valmanway",
         "Move Speed",
         "Max Health",
         "Armor"
@@ -17139,7 +17137,7 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Vampire-Killing Tool",
-            "Morris",
+            "Bracers",
             "Retaliation"
           ]
         },
@@ -17154,7 +17152,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Vampire-Killing Tool",
-        "Morris",
+        "Bracers",
         "Retaliation",
         "Max Health",
         "Might",
@@ -17207,7 +17205,7 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Vampire-Killing Tool",
-            "Morris",
+            "Bracers",
             "Retaliation"
           ]
         },
@@ -17222,7 +17220,7 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Vampire-Killing Tool",
-        "Morris",
+        "Bracers",
         "Retaliation",
         "Max Health",
         "Might",
@@ -25279,7 +25277,7 @@ window.VS_DATA = {
           "items": [
             "Low Health",
             "Revival",
-            "Ignores Might"
+            "Low Might"
           ]
         },
         {
@@ -25294,7 +25292,7 @@ window.VS_DATA = {
       "affinity": [
         "Low Health",
         "Revival",
-        "Ignores Might",
+        "Low Might",
         "Luck",
         "Move Speed",
         "Recovery"
@@ -25916,7 +25914,7 @@ window.VS_DATA = {
       "sprite": "assets/icons/weapons/whip_sprite.png",
       "category": "Base",
       "method": "Evolution",
-      "description": "Attacks horizontally, passes through enemies.",
+      "description": "Attacks horizontally, passes through enemies.\nSlashes have unlimited pierce and damage all enemies in the area of effect.",
       "level_ups": [
         "Attacks horizontally, passes through enemies.",
         "Fires 1 more projectile.",
@@ -25963,7 +25961,12 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Vampire-Killing Tool"
           ]
         },
@@ -26047,14 +26050,20 @@ window.VS_DATA = {
             "Amount",
             "Critical Damage",
             "Luck",
-            "Recovery",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Vampire-Killing Tool"
           ]
         },
         {
           "key": null,
           "items": [
-            "Max Health"
+            "Max Health",
+            "Red"
           ]
         }
       ],
@@ -26067,7 +26076,8 @@ window.VS_DATA = {
         "Luck",
         "Recovery",
         "Vampire-Killing Tool",
-        "Max Health"
+        "Max Health",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -26153,6 +26163,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Divine Bloodline (IX)",
           "items": [
             "Armor"
@@ -26169,6 +26185,7 @@ window.VS_DATA = {
         "Duration",
         "Critical Damage",
         "Luck",
+        "Blue",
         "Armor"
       ],
       "conflict": [],
@@ -26246,7 +26263,9 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Max Health"
+            "Union",
+            "Max Health",
+            "Red"
           ]
         }
       ],
@@ -26261,7 +26280,9 @@ window.VS_DATA = {
         "Critical Damage",
         "Luck",
         "Recovery",
-        "Max Health"
+        "Union",
+        "Max Health",
+        "Red"
       ],
       "conflict": [],
       "arcana": [
@@ -26341,6 +26362,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -26353,6 +26380,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Freeze"
       ],
       "conflict": [
@@ -26426,6 +26454,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -26438,6 +26472,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Freeze"
       ],
       "conflict": [
@@ -26514,8 +26549,14 @@ window.VS_DATA = {
             "Speed",
             "Duration",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Blue"
           ]
         }
       ],
@@ -26525,7 +26566,8 @@ window.VS_DATA = {
         "Duration",
         "Cooldown",
         "Amount",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Blue"
       ],
       "conflict": [
         "Area"
@@ -26594,6 +26636,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Blue"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -26607,6 +26656,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Union",
+        "Blue",
         "Freeze"
       ],
       "conflict": [],
@@ -26681,8 +26732,15 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Knives",
+            "Blue"
           ]
         },
         {
@@ -26700,6 +26758,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Knives",
+        "Blue",
         "Luck",
         "Critical Damage"
       ],
@@ -26771,8 +26831,15 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Knives",
+            "Blue"
           ]
         },
         {
@@ -26790,6 +26857,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Knives",
+        "Blue",
         "Luck",
         "Critical Damage"
       ],
@@ -26857,8 +26926,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed",
-            "Magic Weapon"
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -26869,7 +26944,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -26926,6 +27002,14 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Knives",
+            "Union",
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -26940,6 +27024,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Knives",
+        "Union",
+        "Blue",
         "Luck",
         "Critical Damage"
       ],
@@ -27018,8 +27105,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         },
         {
@@ -27037,6 +27130,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Blue",
         "Luck",
         "Critical Damage"
       ],
@@ -27102,8 +27196,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         },
         {
@@ -27121,6 +27221,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Red",
         "Luck",
         "Critical Damage"
       ],
@@ -27188,8 +27289,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -27200,7 +27308,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -27266,6 +27376,14 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -27279,6 +27397,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Union",
+        "Red",
+        "Blue",
         "Luck",
         "Critical Damage"
       ],
@@ -27357,8 +27478,15 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Santa",
+            "Blue"
           ]
         },
         {
@@ -27382,6 +27510,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Santa",
+        "Blue",
         "Luck",
         "Critical Damage",
         "Armor"
@@ -27456,8 +27586,15 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
-            "Vampire-Killing Tool"
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -27469,7 +27606,9 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -27532,8 +27671,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -27542,7 +27687,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -27607,14 +27753,16 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
           ]
         },
         {
           "key": null,
           "items": [
-            "Luck"
+            "Vampire-Killing Tool",
+            "Union",
+            "Luck",
+            "Blue"
           ]
         },
         {
@@ -27631,7 +27779,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Union",
         "Luck",
+        "Blue",
         "Critical Damage"
       ],
       "conflict": [
@@ -27709,8 +27859,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Santa",
+            "Blue"
           ]
         },
         {
@@ -27734,6 +27891,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Santa",
+        "Blue",
         "Curse",
         "Armor"
       ],
@@ -27803,8 +27962,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         },
         {
@@ -27822,6 +27987,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Red",
         "Curse"
       ],
       "conflict": [],
@@ -27903,8 +28069,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze",
-            "Magic Weapon"
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -27916,7 +28088,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -27987,6 +28160,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -28001,6 +28181,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
+        "Union",
+        "Blue",
         "Curse"
       ],
       "conflict": [],
@@ -28073,6 +28255,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -28091,6 +28279,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -28161,6 +28350,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -28179,6 +28374,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -28245,8 +28441,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         },
         {
@@ -28262,6 +28464,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magic Weapon",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -28333,6 +28536,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -28351,6 +28561,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Union",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -28598,6 +28810,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -28610,6 +28828,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [
@@ -28683,8 +28902,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -28701,6 +28926,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [
@@ -28773,6 +28999,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -28793,6 +29026,8 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Freeze",
+        "Union",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -28864,8 +29099,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Santa",
+            "Blue"
           ]
         },
         {
@@ -28900,6 +29142,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Santa",
+        "Blue",
         "Move Speed",
         "Armor",
         "Speed",
@@ -28968,14 +29212,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed",
-            "Vampire-Killing Tool"
+            "Move Speed"
           ]
         },
         {
           "key": null,
           "items": [
-            "Magnet"
+            "Vampire-Killing Tool",
+            "Magnet",
+            "Blue"
           ]
         },
         {
@@ -28995,6 +29240,7 @@ window.VS_DATA = {
         "Move Speed",
         "Vampire-Killing Tool",
         "Magnet",
+        "Blue",
         "Fire"
       ],
       "conflict": [],
@@ -29058,8 +29304,14 @@ window.VS_DATA = {
             "Speed",
             "Duration",
             "Area",
-            "Cooldown",
-            "Vampire-Killing Tool"
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -29069,7 +29321,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Amount"
@@ -29141,14 +29394,16 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed",
-            "Vampire-Killing Tool"
+            "Move Speed"
           ]
         },
         {
           "key": null,
           "items": [
-            "Magnet"
+            "Vampire-Killing Tool",
+            "Union",
+            "Magnet",
+            "Blue"
           ]
         },
         {
@@ -29167,7 +29422,9 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Vampire-Killing Tool",
+        "Union",
         "Magnet",
+        "Blue",
         "Fire"
       ],
       "conflict": [],
@@ -29244,8 +29501,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Magic Crystals"
           ]
         },
         {
@@ -29269,6 +29532,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Magic Crystals",
         "Curse",
         "Freeze"
       ],
@@ -29341,8 +29605,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Armor",
-            "Retaliation",
-            "Vampire-Killing Tool"
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         },
         {
@@ -29362,6 +29632,7 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Vampire-Killing Tool",
+        "Blue",
         "Freeze"
       ],
       "conflict": [],
@@ -29416,8 +29687,14 @@ window.VS_DATA = {
           "items": [
             "Might",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -29425,7 +29702,8 @@ window.VS_DATA = {
         "Might",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -29494,8 +29772,15 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Armor",
-            "Retaliation",
-            "Vampire-Killing Tool"
+            "Retaliation"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Union",
+            "Blue"
           ]
         },
         {
@@ -29515,6 +29800,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Vampire-Killing Tool",
+        "Union",
+        "Blue",
         "Freeze"
       ],
       "conflict": [],
@@ -29576,8 +29863,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         },
         {
@@ -29611,6 +29904,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Blue",
         "Curse",
         "Move Speed",
         "Armor",
@@ -29672,8 +29966,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         },
         {
@@ -29701,6 +30001,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Blue",
         "Curse",
         "Move Speed",
         "Speed"
@@ -29754,8 +30055,15 @@ window.VS_DATA = {
           "items": [
             "Might",
             "Cooldown",
-            "Invulnerable",
-            "Ambiguous Power"
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -29763,7 +30071,9 @@ window.VS_DATA = {
         "Might",
         "Cooldown",
         "Invulnerable",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -29817,6 +30127,14 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -29841,6 +30159,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Invulnerable",
+        "Union",
+        "Red",
+        "Blue",
         "Curse",
         "Move Speed",
         "Speed"
@@ -29893,7 +30214,15 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Cooldown",
-            "Luck"
+            "Luck",
+            "Low Might"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -29907,6 +30236,9 @@ window.VS_DATA = {
       "affinity": [
         "Cooldown",
         "Luck",
+        "Low Might",
+        "Red",
+        "Blue",
         "Duration",
         "Amount"
       ],
@@ -29950,13 +30282,16 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Cooldown"
+            "Cooldown",
+            "Low Might"
           ]
         },
         {
           "key": null,
           "items": [
-            "Growth"
+            "Growth",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -29969,7 +30304,10 @@ window.VS_DATA = {
       ],
       "affinity": [
         "Cooldown",
+        "Low Might",
         "Growth",
+        "Red",
+        "Blue",
         "Duration",
         "Amount"
       ],
@@ -30042,8 +30380,14 @@ window.VS_DATA = {
             "Speed",
             "Duration",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         }
       ],
@@ -30053,7 +30397,8 @@ window.VS_DATA = {
         "Duration",
         "Cooldown",
         "Amount",
-        "Belnades' Spell"
+        "Belnades' Spell",
+        "Blue"
       ],
       "conflict": [
         "Area"
@@ -30091,13 +30436,16 @@ window.VS_DATA = {
           "items": [
             "Cooldown",
             "Amount",
-            "Recovery"
+            "Recovery",
+            "Low Might"
           ]
         },
         {
           "key": null,
           "items": [
-            "Growth"
+            "Union",
+            "Growth",
+            "Blue"
           ]
         }
       ],
@@ -30105,7 +30453,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
-        "Growth"
+        "Low Might",
+        "Union",
+        "Growth",
+        "Blue"
       ],
       "conflict": [
         "Might",
@@ -30248,6 +30599,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30267,6 +30624,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart",
         "Freeze"
       ],
@@ -30408,6 +30766,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30427,6 +30791,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Counterpart",
         "Fire"
       ],
@@ -30504,6 +30869,14 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30517,6 +30890,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Union",
+        "Red",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -30596,6 +30972,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30614,6 +30996,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Counterpart",
         "Fire"
       ],
@@ -30658,6 +31041,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30676,6 +31065,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Counterpart",
         "Fire"
       ],
@@ -30757,6 +31147,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30775,6 +31171,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart",
         "Freeze"
       ],
@@ -30819,6 +31216,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30837,6 +31240,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart",
         "Freeze"
       ],
@@ -30909,6 +31313,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -30922,6 +31332,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Revival",
+        "Union",
         "Counterpart"
       ],
       "conflict": [
@@ -31235,8 +31646,15 @@ window.VS_DATA = {
             "Might",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Ambiguous Power"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -31245,7 +31663,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -31289,7 +31709,10 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Greed"
+            "Union",
+            "Greed",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -31302,7 +31725,10 @@ window.VS_DATA = {
         "Amount",
         "Gold Coin",
         "Gold Fever",
-        "Greed"
+        "Union",
+        "Greed",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -31359,7 +31785,7 @@ window.VS_DATA = {
       "rarity": 50,
       "affinity_groups": [
         {
-          "key": "primary",
+          "key": "{Primary",
           "items": [
             "Might",
             "Duration",
@@ -31368,16 +31794,16 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Divine Bloodline (IX)",
+          "key": null,
           "items": [
-            "Armor"
+            "Red",
+            "Blue"
           ]
         },
         {
-          "key": "Blood Astronomia (XXI)",
+          "key": "Divine Bloodline (IX)",
           "items": [
-            "Amount",
-            "Magnet"
+            "Armor"
           ]
         }
       ],
@@ -31386,9 +31812,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Armor",
-        "Amount",
-        "Magnet"
+        "Red",
+        "Blue",
+        "Armor"
       ],
       "conflict": [
         "Speed"
@@ -31439,7 +31865,7 @@ window.VS_DATA = {
       "rarity": 0,
       "affinity_groups": [
         {
-          "key": "primary",
+          "key": "{Primary",
           "items": [
             "Might",
             "Duration",
@@ -31451,14 +31877,9 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Curse"
-          ]
-        },
-        {
-          "key": "Blood Astronomia (XXI)",
-          "items": [
-            "Amount",
-            "Magnet"
+            "Curse",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -31469,8 +31890,8 @@ window.VS_DATA = {
         "Cooldown",
         "Slow",
         "Curse",
-        "Amount",
-        "Magnet"
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -31540,8 +31961,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Luck",
-            "Magic Weapon"
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         }
       ],
@@ -31552,7 +31979,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -31629,7 +32057,9 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Curse"
+            "Union",
+            "Curse",
+            "Red"
           ]
         },
         {
@@ -31652,7 +32082,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Luck",
+        "Union",
         "Curse",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -31736,6 +32168,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -31750,6 +32188,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Red",
         "Curse"
       ],
       "conflict": [],
@@ -31823,6 +32262,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -31843,6 +32288,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -31914,8 +32360,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed",
-            "Vampire-Killing Tool"
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         },
         {
@@ -31939,6 +32391,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Vampire-Killing Tool",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -32013,6 +32466,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -32033,6 +32493,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Move Speed",
+        "Union",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -32087,6 +32549,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue",
+            "Low Might"
+          ]
+        },
+        {
           "key": "Blood Astronomia (XXI)",
           "items": [
             "Amount",
@@ -32099,6 +32568,8 @@ window.VS_DATA = {
         "Duration",
         "Cooldown",
         "Freeze",
+        "Blue",
+        "Low Might",
         "Amount",
         "Magnet",
         "Slow"
@@ -32151,7 +32622,9 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Area",
-            "Curse"
+            "Curse",
+            "Blue",
+            "Low Might"
           ]
         }
       ],
@@ -32160,7 +32633,9 @@ window.VS_DATA = {
         "Cooldown",
         "Freeze",
         "Area",
-        "Curse"
+        "Curse",
+        "Blue",
+        "Low Might"
       ],
       "conflict": [
         "Might",
@@ -32286,7 +32761,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Max Health",
-            "Recovery"
+            "Recovery",
+            "Red"
           ]
         }
       ],
@@ -32300,7 +32776,8 @@ window.VS_DATA = {
         "Invulnerable",
         "Retaliation",
         "Max Health",
-        "Recovery"
+        "Recovery",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -32379,6 +32856,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -32392,6 +32875,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Curse"
       ],
       "conflict": [],
@@ -32463,6 +32947,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -32476,6 +32966,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Curse"
       ],
       "conflict": [],
@@ -32560,6 +33051,13 @@ window.VS_DATA = {
             "Amount",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -32569,7 +33067,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -32638,6 +33138,13 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -32648,7 +33155,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -32725,6 +33234,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Tragic Princess (III)",
           "items": [
             "Move Speed"
@@ -32737,6 +33252,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Move Speed"
       ],
       "conflict": [
@@ -32885,6 +33401,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -32899,6 +33422,8 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Recovery",
+        "Red",
+        "Blue",
         "Curse"
       ],
       "conflict": [
@@ -32974,6 +33499,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -32988,6 +33520,8 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Recovery",
+        "Red",
+        "Blue",
         "Curse"
       ],
       "conflict": [
@@ -33064,6 +33598,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -33072,7 +33612,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red"
       ],
       "conflict": [],
       "arcana": [
@@ -33151,6 +33692,13 @@ window.VS_DATA = {
             "Luck",
             "Light Source"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -33162,7 +33710,9 @@ window.VS_DATA = {
         "Amount",
         "Critical Damage",
         "Luck",
-        "Light Source"
+        "Light Source",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -33231,6 +33781,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -33244,6 +33800,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Freeze"
       ],
       "conflict": [],
@@ -33315,6 +33872,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -33334,6 +33897,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Curse",
         "Freeze"
       ],
@@ -33409,6 +33973,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -33440,6 +34010,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Curse",
         "Freeze",
         "Fire",
@@ -33508,8 +34079,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         }
       ],
@@ -33518,7 +34095,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -33581,6 +34159,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Union",
+            "Red"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -33605,6 +34190,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Union",
+        "Red",
         "Curse",
         "Freeze",
         "Fire"
@@ -34183,6 +34770,12 @@ window.VS_DATA = {
             "Armor",
             "Retaliation"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -34193,7 +34786,8 @@ window.VS_DATA = {
         "Critical Damage",
         "Amount",
         "Armor",
-        "Retaliation"
+        "Retaliation",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -34317,6 +34911,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -34336,6 +34936,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -34642,6 +35243,12 @@ window.VS_DATA = {
             "Freeze",
             "Light Source"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -34652,7 +35259,8 @@ window.VS_DATA = {
         "Move Speed",
         "Orologion",
         "Freeze",
-        "Light Source"
+        "Light Source",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -34712,6 +35320,12 @@ window.VS_DATA = {
             "Critical Damage",
             "Light Sources"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -34724,7 +35338,8 @@ window.VS_DATA = {
         "Freeze",
         "Luck",
         "Critical Damage",
-        "Light Sources"
+        "Light Sources",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -35553,6 +36168,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -35585,6 +36206,7 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
+        "Blue",
         "Counterpart",
         "Curse",
         "Move Speed",
@@ -35633,6 +36255,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -35653,6 +36281,7 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -35727,6 +36356,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -35755,6 +36390,7 @@ window.VS_DATA = {
         "Critical Damage",
         "Light Source",
         "Rosary",
+        "Blue",
         "Counterpart",
         "Curse",
         "Move Speed"
@@ -35993,6 +36629,14 @@ window.VS_DATA = {
             "Amount",
             "Growth"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Crystals",
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -36000,7 +36644,10 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Growth"
+        "Growth",
+        "Magic Crystals",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Might",
@@ -36059,6 +36706,14 @@ window.VS_DATA = {
             "Growth",
             "Charm"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Crystals",
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -36067,7 +36722,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
-        "Charm"
+        "Charm",
+        "Magic Crystals",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Might",
@@ -36462,6 +37120,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -36483,6 +37147,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Luck",
+        "Blue",
         "Curse",
         "Armor"
       ],
@@ -36632,6 +37297,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -36639,7 +37311,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -36687,6 +37361,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -36694,7 +37375,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -36763,6 +37446,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -36770,7 +37459,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red"
       ],
       "conflict": [
         "Speed"
@@ -36830,6 +37520,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -36837,7 +37534,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -36910,6 +37609,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Pale Diamond Incursion (V)",
           "items": [
             "Speed"
@@ -36924,6 +37629,7 @@ window.VS_DATA = {
         "Amount",
         "Freeze",
         "Luck",
+        "Blue",
         "Speed"
       ],
       "conflict": [],
@@ -37081,6 +37787,12 @@ window.VS_DATA = {
             "Armor",
             "Retaliation"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -37092,7 +37804,8 @@ window.VS_DATA = {
         "Luck",
         "Greed",
         "Armor",
-        "Retaliation"
+        "Retaliation",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -37162,6 +37875,12 @@ window.VS_DATA = {
             "Low Health",
             "Critical Damage"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -37175,7 +37894,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
-        "Critical Damage"
+        "Critical Damage",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -37256,6 +37976,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -37264,7 +37990,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -37332,6 +38059,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -37340,7 +38073,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -37396,6 +38130,12 @@ window.VS_DATA = {
             "Luck",
             "Curse"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -37403,7 +38143,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Luck",
-        "Curse"
+        "Curse",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -37461,13 +38202,20 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Speed",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Blue"
       ],
       "conflict": [
         "Duration",
@@ -37530,6 +38278,12 @@ window.VS_DATA = {
             "Area",
             "Cooldown"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -37537,7 +38291,8 @@ window.VS_DATA = {
         "Speed",
         "Duration",
         "Area",
-        "Cooldown"
+        "Cooldown",
+        "Blue"
       ],
       "conflict": [
         "Amount"
@@ -37592,13 +38347,20 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Speed",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Blue"
       ],
       "conflict": [
         "Duration",
@@ -37660,6 +38422,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Union",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -37668,7 +38437,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Union",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -37814,6 +38585,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Slash (XVI)}",
           "items": [
             "Critical Damage",
@@ -37830,6 +38607,7 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Retaliation",
+        "Red",
         "Critical Damage",
         "Luck"
       ],
@@ -38082,6 +38860,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -38106,6 +38891,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
+        "Blue",
         "Curse",
         "Freeze",
         "Fire"
@@ -38177,7 +38964,9 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Growth"
+            "Growth",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -38206,6 +38995,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
+        "Red",
+        "Blue",
         "Curse",
         "Freeze",
         "Fire"
@@ -38522,6 +39313,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -38541,6 +39338,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Counterpart",
         "Luck"
       ],
@@ -38580,7 +39378,7 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount[Blue"
           ]
         },
         {
@@ -38602,7 +39400,7 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount",
+        "Amount[Blue",
         "Counterpart",
         "Luck"
       ],
@@ -38835,6 +39633,12 @@ window.VS_DATA = {
             "Amount",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -38843,7 +39647,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Blue"
       ],
       "conflict": [
         "Duration",
@@ -38911,6 +39716,13 @@ window.VS_DATA = {
             "Amount",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -38919,7 +39731,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Duration",
@@ -39201,13 +40015,22 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -39435,6 +40258,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -39448,6 +40277,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Red",
         "Counterpart"
       ],
       "conflict": [
@@ -39490,6 +40320,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -39503,6 +40339,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [
@@ -39568,6 +40405,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -39583,6 +40426,7 @@ window.VS_DATA = {
         "Recovery",
         "Luck",
         "Critical Chance",
+        "Red",
         "Counterpart"
       ],
       "conflict": [
@@ -39657,6 +40501,13 @@ window.VS_DATA = {
             "Slow",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -39666,7 +40517,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Slow",
-        "Luck"
+        "Luck",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -39728,6 +40581,12 @@ window.VS_DATA = {
             "Slow",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -39737,7 +40596,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Slow",
-        "Luck"
+        "Luck",
+        "Red"
       ],
       "conflict": [
         "Speed"
@@ -39811,6 +40671,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -39819,7 +40686,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -40258,6 +41127,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -40270,6 +41145,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -40437,6 +41313,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -40456,6 +41338,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Curse",
         "Freeze"
       ],
@@ -40621,6 +41504,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -40633,6 +41522,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -40796,6 +41686,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -40804,7 +41700,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red"
       ],
       "conflict": [],
       "arcana": [
@@ -40871,7 +41768,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Armor",
-            "Revival"
+            "Revival",
+            "Red"
           ]
         }
       ],
@@ -40883,7 +41781,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Armor",
-        "Revival"
+        "Revival",
+        "Red"
       ],
       "conflict": [],
       "arcana": [
@@ -40956,6 +41855,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -40968,6 +41873,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -41032,6 +41938,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -41044,6 +41956,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -41123,6 +42036,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -41131,7 +42051,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -41201,7 +42123,9 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Revival",
-            "Magnet"
+            "Magnet",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -41213,7 +42137,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Revival",
-        "Magnet"
+        "Magnet",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -41294,6 +42220,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -41302,7 +42234,8 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red"
       ],
       "conflict": [],
       "arcana": []
@@ -41457,6 +42390,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -41472,6 +42411,7 @@ window.VS_DATA = {
         "Amount",
         "Freeze",
         "Luck",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -41516,6 +42456,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -41531,6 +42477,7 @@ window.VS_DATA = {
         "Amount",
         "Freeze",
         "Luck",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -41607,7 +42554,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Revival",
-            "Move Speed"
+            "Move Speed",
+            "Blue"
           ]
         },
         {
@@ -41629,6 +42577,7 @@ window.VS_DATA = {
         "Defang",
         "Revival",
         "Move Speed",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -41701,6 +42650,12 @@ window.VS_DATA = {
             "Amount",
             "Low Health"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -41709,7 +42664,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Low Health"
+        "Low Health",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -41841,6 +42797,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -41859,6 +42821,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Critical Damage",
         "Luck",
         "Fire"
@@ -41920,6 +42883,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -41944,6 +42913,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Curse",
         "Critical Damage",
         "Luck",
@@ -42017,6 +42987,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42030,6 +43006,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
+        "Blue",
         "Critical Damage",
         "Luck"
       ],
@@ -42092,6 +43069,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42107,6 +43090,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
+        "Blue",
         "Critical Damage",
         "Luck"
       ],
@@ -42179,6 +43163,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42192,6 +43182,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Critical Damage",
         "Luck"
       ],
@@ -42257,6 +43248,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42270,6 +43267,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Critical Damage",
         "Luck"
       ],
@@ -42350,6 +43348,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -42369,6 +43373,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Freeze",
         "Critical Damage",
         "Luck"
@@ -42444,7 +43449,8 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Magnet"
+            "Magnet",
+            "Blue"
           ]
         },
         {
@@ -42468,6 +43474,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magnet",
+        "Blue",
         "Freeze",
         "Critical Damage",
         "Luck"
@@ -42545,6 +43552,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42559,6 +43572,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Curse",
+        "Blue",
         "Critical Damage",
         "Luck"
       ],
@@ -42625,6 +43639,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42639,6 +43659,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Curse",
+        "Blue",
         "Critical Damage",
         "Luck"
       ],
@@ -42707,6 +43728,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -42726,6 +43753,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Max Health",
+        "Red",
         "Curse",
         "Critical Damage",
         "Luck"
@@ -42788,6 +43816,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -42807,6 +43841,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Max Health",
+        "Red",
         "Curse",
         "Critical Damage",
         "Luck"
@@ -42885,6 +43920,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -42899,6 +43940,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Max Health",
+        "Red",
         "Critical Damage",
         "Luck"
       ],
@@ -42963,6 +44005,12 @@ window.VS_DATA = {
             "Amount",
             "Max Health"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red"
+          ]
         }
       ],
       "affinity": [
@@ -42971,7 +44019,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Max Health"
+        "Max Health",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -43038,6 +44087,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -43057,6 +44112,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Max Health",
+        "Red",
         "Critical Damage",
         "Luck",
         "Fire"
@@ -43125,6 +44181,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage",
@@ -43144,6 +44206,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Max Health",
+        "Red",
         "Critical Damage",
         "Luck",
         "Fire"
@@ -43192,8 +44255,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -43203,7 +44272,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -43239,8 +44309,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -43250,7 +44326,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -43296,8 +44373,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Knives",
+            "Blue"
           ]
         }
       ],
@@ -43308,7 +44392,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Knives",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -43343,8 +44429,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Knives",
+            "Blue"
           ]
         }
       ],
@@ -43355,7 +44448,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Knives",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -43436,8 +44531,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -43448,7 +44549,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -43520,8 +44622,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -43532,7 +44640,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -43575,8 +44684,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -43586,7 +44701,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -43620,14 +44736,20 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Invulnerable",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Vampire-Killing Tool"
           ]
         },
         {
           "key": null,
           "items": [
-            "Armor"
+            "Armor",
+            "Blue"
           ]
         }
       ],
@@ -43639,7 +44761,8 @@ window.VS_DATA = {
         "Amount",
         "Invulnerable",
         "Vampire-Killing Tool",
-        "Armor"
+        "Armor",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -43706,8 +44829,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Blue"
           ]
         }
       ],
@@ -43717,7 +44846,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -43778,14 +44908,20 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Vampire-Killing Tool"
           ]
         },
         {
           "key": null,
           "items": [
-            "Armor"
+            "Armor",
+            "Blue"
           ]
         }
       ],
@@ -43796,7 +44932,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Armor"
+        "Armor",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -43842,8 +44979,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         }
       ],
@@ -43854,7 +44997,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Red"
       ],
       "conflict": [],
       "arcana": []
@@ -43919,8 +45063,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Critical Chance",
-            "Luck",
-            "Vampire-Killing Tool"
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         }
       ],
@@ -43933,7 +45083,8 @@ window.VS_DATA = {
         "Amount",
         "Critical Chance",
         "Luck",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Red"
       ],
       "conflict": [],
       "arcana": []
@@ -43993,8 +45144,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         },
         {
@@ -44012,6 +45169,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Red",
         "Fire"
       ],
       "conflict": [],
@@ -44065,8 +45223,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         },
         {
@@ -44084,6 +45248,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
+        "Red",
         "Fire"
       ],
       "conflict": [],
@@ -44151,8 +45316,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Vampire-Killing Tool"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         }
       ],
@@ -44162,7 +45333,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -44222,8 +45394,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Revival",
-            "Recovery",
-            "Vampire-Killing Tool"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Vampire-Killing Tool",
+            "Red"
           ]
         }
       ],
@@ -44235,7 +45413,8 @@ window.VS_DATA = {
         "Amount",
         "Revival",
         "Recovery",
-        "Vampire-Killing Tool"
+        "Vampire-Killing Tool",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -44311,8 +45490,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Red"
           ]
         },
         {
@@ -44342,6 +45527,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Red",
         "Counterpart",
         "Fire",
         "Fire"
@@ -44386,6 +45572,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -44411,6 +45603,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Red",
         "Counterpart",
         "Fire",
         "Fire"
@@ -44478,8 +45671,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Red"
           ]
         },
         {
@@ -44509,6 +45708,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Red",
         "Counterpart",
         "Fire",
         "Fire"
@@ -44587,8 +45787,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -44612,6 +45818,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart",
         "Freeze"
       ],
@@ -44654,6 +45861,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -44673,6 +45886,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart",
         "Freeze"
       ],
@@ -44739,8 +45953,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -44764,6 +45984,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart",
         "Freeze"
       ],
@@ -44840,7 +46061,12 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Belnades' Spell"
           ]
         },
@@ -44976,7 +46202,12 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Belnades' Spell"
           ]
         },
@@ -45070,8 +46301,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -45089,6 +46326,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -45130,6 +46368,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -45143,6 +46387,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -45206,8 +46451,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Magic Crystals",
+            "Blue"
           ]
         },
         {
@@ -45225,6 +46477,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Magic Crystals",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -45300,8 +46554,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -45325,6 +46585,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -45367,6 +46628,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -45386,6 +46653,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -45452,8 +46720,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -45477,6 +46751,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -45553,8 +46828,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -45578,6 +46859,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -45620,6 +46902,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -45639,6 +46927,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
+        "Blue",
         "Counterpart",
         "Move Speed"
       ],
@@ -45705,8 +46994,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -45736,6 +47031,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Blue",
         "Armor",
         "Counterpart",
         "Move Speed"
@@ -45814,8 +47110,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Curse",
-            "Belnades' Spell"
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Red"
           ]
         },
         {
@@ -45834,15 +47136,11 @@ window.VS_DATA = {
         "Amount",
         "Curse",
         "Belnades' Spell",
+        "Red",
         "Counterpart"
       ],
       "conflict": [
-        "Might",
-        "Speed",
-        "Duration",
-        "Area",
-        "Cooldown",
-        "Amount"
+        "-"
       ],
       "arcana": [
         "Gemini (I)",
@@ -45883,6 +47181,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -45897,15 +47201,11 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Curse",
+        "Red",
         "Counterpart"
       ],
       "conflict": [
-        "Might",
-        "Speed",
-        "Duration",
-        "Area",
-        "Cooldown",
-        "Amount"
+        "-"
       ],
       "arcana": [
         "Twilight Requiem (II)"
@@ -45975,8 +47275,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Belnades' Spell"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Red"
           ]
         },
         {
@@ -46000,16 +47306,12 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
+        "Red",
         "Counterpart",
         "Curse"
       ],
       "conflict": [
-        "Might",
-        "Speed",
-        "Duration",
-        "Area",
-        "Cooldown",
-        "Amount"
+        "-"
       ],
       "arcana": [
         "Gemini (I)",
@@ -46084,8 +47386,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Belnades' Spell"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Belnades' Spell",
+            "Blue"
           ]
         },
         {
@@ -46110,6 +47418,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Belnades' Spell",
+        "Blue",
         "Counterpart",
         "Curse"
       ],
@@ -46153,6 +47462,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
+        },
+        {
           "key": "Gemini (I)",
           "items": [
             "Counterpart"
@@ -46173,6 +47488,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
+        "Blue",
         "Counterpart",
         "Curse"
       ],
@@ -46240,7 +47556,12 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Belnades' Spell"
           ]
         },
@@ -46317,8 +47638,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -46328,7 +47655,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -46400,8 +47728,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Critical Damage",
-            "Luck",
-            "Magic Weapon"
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         }
       ],
@@ -46413,7 +47747,8 @@ window.VS_DATA = {
         "Amount",
         "Critical Damage",
         "Luck",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red"
       ],
       "conflict": [
         "Speed"
@@ -46457,8 +47792,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Magic Weapon"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -46470,7 +47811,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -46503,8 +47845,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Magic Weapon"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -46516,7 +47864,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -46555,8 +47904,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -46565,7 +47920,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -46599,14 +47955,15 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
           ]
         },
         {
           "key": null,
           "items": [
-            "Move Speed"
+            "Magic Weapon",
+            "Move Speed",
+            "Blue"
           ]
         }
       ],
@@ -46617,7 +47974,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magic Weapon",
-        "Move Speed"
+        "Move Speed",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -46677,8 +48035,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         }
       ],
@@ -46687,7 +48051,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -46747,8 +48112,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Critical Damage",
-            "Luck",
-            "Magic Weapon"
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         }
       ],
@@ -46759,7 +48130,8 @@ window.VS_DATA = {
         "Amount",
         "Critical Damage",
         "Luck",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -46808,8 +48180,14 @@ window.VS_DATA = {
             "Amount",
             "Armor",
             "Retaliation",
-            "Low Health",
-            "Magic Weapon"
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -46823,7 +48201,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -46859,14 +48238,15 @@ window.VS_DATA = {
             "Armor",
             "Retaliation",
             "Low Health",
-            "Critical Hit",
-            "Magic Weapon"
+            "Critical Hit"
           ]
         },
         {
           "key": null,
           "items": [
-            "Invulnerable"
+            "Magic Weapon",
+            "Invulnerable",
+            "Blue"
           ]
         }
       ],
@@ -46882,7 +48262,8 @@ window.VS_DATA = {
         "Low Health",
         "Critical Hit",
         "Magic Weapon",
-        "Invulnerable"
+        "Invulnerable",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -46949,8 +48330,15 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Move Speed",
-            "Recovery",
-            "Magic Weapon"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -46962,7 +48350,9 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Recovery",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -47023,8 +48413,15 @@ window.VS_DATA = {
             "Amount",
             "Move Speed",
             "Recovery",
-            "Invulnerable",
-            "Magic Weapon"
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -47037,7 +48434,9 @@ window.VS_DATA = {
         "Move Speed",
         "Recovery",
         "Invulnerable",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -47079,8 +48478,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
-            "Magic Weapon"
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         }
       ],
@@ -47092,7 +48497,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -47130,8 +48536,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
-            "Magic Weapon"
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -47144,7 +48556,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -47183,8 +48596,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Blue"
           ]
         }
       ],
@@ -47193,7 +48612,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Magic Weapon"
+        "Magic Weapon",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -47233,8 +48653,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red"
           ]
         },
         {
@@ -47250,6 +48676,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magic Weapon",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -47283,8 +48710,15 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -47300,6 +48734,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magic Weapon",
+        "Red",
+        "Blue",
         "Fire"
       ],
       "conflict": [
@@ -47358,8 +48794,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         },
         {
@@ -47377,6 +48819,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
+        "Red",
         "Luck",
         "Critical Damage"
       ],
@@ -47437,8 +48880,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         },
         {
@@ -47456,6 +48905,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
+        "Red",
         "Luck",
         "Critical Damage"
       ],
@@ -47516,8 +48966,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         },
         {
@@ -47535,6 +48991,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
+        "Red",
         "Luck",
         "Critical Damage"
       ],
@@ -47606,8 +49063,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -47625,6 +49089,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
+        "Red",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -47668,7 +49134,12 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Ambiguous Power"
           ]
         },
@@ -47744,8 +49215,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -47763,6 +49241,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
+        "Red",
+        "Blue",
         "Counterpart"
       ],
       "conflict": [],
@@ -47830,7 +49310,12 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Ambiguous Power"
           ]
         }
@@ -47900,13 +49385,13 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Charm",
-            "Ambiguous Power"
+            "Charm"
           ]
         },
         {
           "key": null,
           "items": [
+            "Ambiguous Power",
             "Gold Fever"
           ]
         }
@@ -47978,8 +49463,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         },
         {
@@ -47995,6 +49486,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -48057,8 +49549,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         }
       ],
@@ -48067,7 +49565,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -48125,8 +49624,14 @@ window.VS_DATA = {
             "Amount",
             "Armor",
             "Recovery",
-            "Low Health",
-            "Ambiguous Power"
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         }
       ],
@@ -48139,7 +49644,8 @@ window.VS_DATA = {
         "Armor",
         "Recovery",
         "Low Health",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -48176,8 +49682,15 @@ window.VS_DATA = {
             "Amount",
             "Armor",
             "Recovery",
-            "Low Health",
-            "Ambiguous Power"
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Union",
+            "Red"
           ]
         },
         {
@@ -48197,6 +49710,8 @@ window.VS_DATA = {
         "Recovery",
         "Low Health",
         "Ambiguous Power",
+        "Union",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -48241,8 +49756,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Low Health",
-            "Ambiguous Power"
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         },
         {
@@ -48260,6 +49781,7 @@ window.VS_DATA = {
         "Amount",
         "Low Health",
         "Ambiguous Power",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -48304,8 +49826,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Low Health",
-            "Ambiguous Power"
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red"
           ]
         }
       ],
@@ -48316,7 +49844,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Low Health",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red"
       ],
       "conflict": [
         "Duration"
@@ -48377,7 +49906,12 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Low Health",
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Ambiguous Power"
           ]
         }
@@ -48424,8 +49958,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Low Health",
-            "Ambiguous Power"
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Union",
+            "Red"
           ]
         },
         {
@@ -48444,6 +49985,8 @@ window.VS_DATA = {
         "Amount",
         "Low Health",
         "Ambiguous Power",
+        "Union",
+        "Red",
         "Fire"
       ],
       "conflict": [],
@@ -48486,8 +50029,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed",
-            "Ambiguous Power"
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Blue"
           ]
         },
         {
@@ -48506,6 +50055,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Ambiguous Power",
+        "Blue",
         "Magnet"
       ],
       "conflict": [],
@@ -48541,8 +50091,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Move Speed",
-            "Ambiguous Power"
+            "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Blue"
           ]
         },
         {
@@ -48561,6 +50117,7 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Ambiguous Power",
+        "Blue",
         "Magnet"
       ],
       "conflict": [],
@@ -48639,8 +50196,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -48651,7 +50215,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -48725,8 +50291,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Growth",
-            "Ambiguous Power"
+            "Growth"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -48738,7 +50311,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -48814,8 +50389,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -48826,7 +50408,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -48900,8 +50484,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Magnet",
-            "Ambiguous Power"
+            "Magnet"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -48913,7 +50504,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magnet",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -48945,8 +50538,15 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Ambiguous Power"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Ambiguous Power",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -48957,7 +50557,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -49194,8 +50796,15 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Magic Weapon"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Magic Weapon",
+            "Knives",
+            "Red"
           ]
         },
         {
@@ -49213,6 +50822,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Magic Weapon",
+        "Knives",
+        "Red",
         "Luck",
         "Critical Damage"
       ],
@@ -49277,14 +50888,16 @@ window.VS_DATA = {
             "Amount",
             "Charm",
             "Luck",
-            "Critical Damage",
-            "Magic Weapon"
+            "Critical Damage"
           ]
         },
         {
           "key": null,
           "items": [
-            "Armor"
+            "Magic Weapon",
+            "Knives",
+            "Armor",
+            "Blue"
           ]
         }
       ],
@@ -49298,7 +50911,9 @@ window.VS_DATA = {
         "Luck",
         "Critical Damage",
         "Magic Weapon",
-        "Armor"
+        "Knives",
+        "Armor",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -49374,6 +50989,13 @@ window.VS_DATA = {
             "Amount",
             "Orologion"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -49383,7 +51005,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Orologion"
+        "Orologion",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -49455,6 +51079,13 @@ window.VS_DATA = {
             "Amount",
             "Orologion"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -49464,7 +51095,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Orologion"
+        "Orologion",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -49536,6 +51169,13 @@ window.VS_DATA = {
             "Amount",
             "Orologion"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -49545,7 +51185,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Orologion"
+        "Orologion",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -49617,6 +51259,13 @@ window.VS_DATA = {
             "Amount",
             "Orologion"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -49626,7 +51275,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Orologion"
+        "Orologion",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -49661,6 +51312,14 @@ window.VS_DATA = {
             "Amount",
             "Orologion"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Union",
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -49670,7 +51329,10 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Orologion"
+        "Orologion",
+        "Union",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -50115,8 +51777,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze",
-            "Glimmer Tech"
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         }
       ],
@@ -50127,7 +51795,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -50190,8 +51859,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze",
-            "Glimmer Tech"
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         }
       ],
@@ -50202,7 +51877,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -50258,8 +51934,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze",
-            "Glimmer Tech"
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         }
       ],
@@ -50270,7 +51952,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Freeze",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -50312,8 +51995,15 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -50322,7 +52012,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -50362,8 +52054,15 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -50372,7 +52071,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -50405,8 +52106,15 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -50415,7 +52123,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -50459,8 +52169,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         }
       ],
@@ -50470,7 +52186,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -50510,8 +52227,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         }
       ],
@@ -50521,7 +52244,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Blue"
       ],
       "conflict": [
         "Speed"
@@ -50581,8 +52305,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
-            "Glimmer Tech"
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         }
       ],
@@ -50593,7 +52323,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -50656,8 +52387,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
-            "Glimmer Tech"
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         }
       ],
@@ -50668,7 +52405,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -50724,8 +52462,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
-            "Glimmer Tech"
+            "Critical Damage"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         }
       ],
@@ -50736,7 +52480,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -50779,8 +52524,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Glimmer Tech"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -50803,6 +52554,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Glimmer Tech",
+        "Blue",
         "Fire",
         "Fire"
       ],
@@ -50848,8 +52600,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Glimmer Tech"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -50872,6 +52630,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Glimmer Tech",
+        "Blue",
         "Fire",
         "Fire"
       ],
@@ -50910,8 +52669,14 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Glimmer Tech"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -50934,6 +52699,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Glimmer Tech",
+        "Blue",
         "Fire",
         "Fire"
       ],
@@ -50982,8 +52748,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Glimmer Tech"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -51000,6 +52773,8 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Glimmer Tech",
+        "Red",
+        "Blue",
         "Move Speed"
       ],
       "conflict": [
@@ -51062,8 +52837,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Recovery",
-            "Glimmer Tech"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -51080,6 +52862,8 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Glimmer Tech",
+        "Red",
+        "Blue",
         "Move Speed"
       ],
       "conflict": [
@@ -51124,8 +52908,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         },
         {
@@ -51149,6 +52939,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -51192,8 +52983,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         },
         {
@@ -51217,6 +53014,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -51253,8 +53051,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         },
         {
@@ -51278,6 +53082,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Red",
         "Fire",
         "Fire"
       ],
@@ -51320,8 +53125,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         },
         {
@@ -51338,6 +53149,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -51381,7 +53193,12 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze",
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Glimmer Tech"
           ]
         },
@@ -51437,8 +53254,15 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Freeze",
-            "Glimmer Tech"
+            "Freeze"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red",
+            "Blue"
           ]
         },
         {
@@ -51456,6 +53280,8 @@ window.VS_DATA = {
         "Amount",
         "Freeze",
         "Glimmer Tech",
+        "Red",
+        "Blue",
         "Fire"
       ],
       "conflict": [
@@ -51502,8 +53328,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -51520,6 +53352,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Blue",
         "Luck"
       ],
       "conflict": [
@@ -51562,8 +53395,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -51580,6 +53419,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Blue",
         "Luck"
       ],
       "conflict": [
@@ -51625,7 +53465,12 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Glimmer Tech"
           ]
         },
@@ -51690,7 +53535,12 @@ window.VS_DATA = {
             "Amount",
             "Luck",
             "Critical Damage",
-            "Invulnerable",
+            "Invulnerable"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Glimmer Tech"
           ]
         }
@@ -51748,7 +53598,12 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Glimmer Tech"
           ]
         },
@@ -51809,7 +53664,12 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
             "Glimmer Tech"
           ]
         },
@@ -51883,8 +53743,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         },
         {
@@ -51902,6 +53768,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Red",
         "Luck",
         "Critical Damage"
       ],
@@ -51945,8 +53812,14 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         },
         {
@@ -51970,6 +53843,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Red",
         "Curse",
         "Luck",
         "Critical Damage"
@@ -52016,8 +53890,14 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         }
       ],
@@ -52026,7 +53906,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -52070,8 +53951,14 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Greed",
-            "Recovery",
-            "Glimmer Tech"
+            "Recovery"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Red"
           ]
         }
       ],
@@ -52082,7 +53969,8 @@ window.VS_DATA = {
         "Amount",
         "Greed",
         "Recovery",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Red"
       ],
       "conflict": [
         "Speed",
@@ -52125,8 +54013,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -52143,6 +54037,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Blue",
         "Curse"
       ],
       "conflict": [
@@ -52185,8 +54080,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -52203,6 +54104,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Blue",
         "Curse"
       ],
       "conflict": [
@@ -52238,8 +54140,14 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Glimmer Tech"
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Glimmer Tech",
+            "Blue"
           ]
         },
         {
@@ -52256,6 +54164,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
+        "Blue",
         "Curse"
       ],
       "conflict": [
@@ -52304,6 +54213,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -52336,6 +54252,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
+        "Red",
+        "Blue",
         "Curse",
         "Freeze",
         "Fire",
@@ -52400,6 +54318,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Twilight Requiem (II)",
           "items": [
             "Curse"
@@ -52432,6 +54357,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Growth",
+        "Red",
+        "Blue",
         "Curse",
         "Freeze",
         "Fire",
@@ -52508,6 +54435,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -52516,7 +54450,9 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -52579,7 +54515,9 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Growth"
+            "Growth",
+            "Red",
+            "Blue"
           ]
         }
       ],
@@ -52590,7 +54528,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Growth"
+        "Growth",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -52677,6 +54617,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -52689,6 +54635,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Charm",
+        "Red",
         "Fire"
       ],
       "conflict": [
@@ -52749,6 +54696,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -52762,6 +54716,8 @@ window.VS_DATA = {
         "Cooldown",
         "Charm",
         "Gold Coin",
+        "Red",
+        "Blue",
         "Fire"
       ],
       "conflict": [
@@ -52850,6 +54806,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -52860,7 +54822,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Blue"
       ],
       "conflict": [],
       "arcana": [
@@ -53020,6 +54983,12 @@ window.VS_DATA = {
             "Amount",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -53028,7 +54997,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -53089,6 +55059,12 @@ window.VS_DATA = {
             "Amount",
             "Luck"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -53097,7 +55073,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Luck"
+        "Luck",
+        "Blue"
       ],
       "conflict": [
         "Duration"
@@ -53161,6 +55138,13 @@ window.VS_DATA = {
             "Amount",
             "Greed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -53168,7 +55152,9 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Amount",
-        "Greed"
+        "Greed",
+        "Red",
+        "Blue"
       ],
       "conflict": [
         "Duration",
@@ -53225,6 +55211,13 @@ window.VS_DATA = {
             "Amount",
             "Greed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Blue"
+          ]
         }
       ],
       "affinity": [
@@ -53234,7 +55227,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Greed"
+        "Greed",
+        "Red",
+        "Blue"
       ],
       "conflict": [],
       "arcana": []
@@ -56744,7 +58739,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "speed",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -57128,13 +59123,15 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Orologion"
+            "Orologion",
+            "Blue"
           ]
         }
       ],
       "affinity": [
         "Freeze",
-        "Orologion"
+        "Orologion",
+        "Blue"
       ],
       "conflict": []
     },
@@ -57437,7 +59434,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "duration",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -57487,7 +59484,7 @@ window.VS_DATA = {
       "scaling": [
         {
           "key": "area",
-          "value": 1,
+          "value": 0.01,
           "interval": 1,
           "max": null
         }
@@ -57599,7 +59596,8 @@ window.VS_DATA = {
             "Retaliation",
             "Armor",
             "Might",
-            "Area"
+            "Area",
+            "Red"
           ]
         }
       ],
@@ -57609,7 +59607,8 @@ window.VS_DATA = {
         "Retaliation",
         "Armor",
         "Might",
-        "Area"
+        "Area",
+        "Red"
       ],
       "conflict": []
     },
@@ -57710,7 +59709,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Cooldown"
+            "Cooldown",
+            "Red"
           ]
         }
       ],
@@ -57719,7 +59719,8 @@ window.VS_DATA = {
         "Amount",
         "Magnet",
         "Duration",
-        "Cooldown"
+        "Cooldown",
+        "Red"
       ],
       "conflict": []
     },
@@ -59168,7 +61169,7 @@ window.VS_DATA = {
       "color": "#470793",
       "base_affinity": "Arcana",
       "is_parent": true,
-      "description": "Arcana affinities are enabled solely from the associated Arcana and features are not present without them.",
+      "description": "The listed Arcana represent exclusive support for an associated archetype or are notable as crucial cornerstones.",
       "info_entries": [],
       "related": {
         "weapons": [],
@@ -59180,7 +61181,7 @@ window.VS_DATA = {
     {
       "name": "Astronomia",
       "icon": "assets/icons/affinities/astronomia.png",
-      "color": "#5a0007",
+      "color": "#2d2d5a",
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
@@ -59218,7 +61219,7 @@ window.VS_DATA = {
       "color": "#162d44",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "",
+      "description": "Gemini is the sole support for Counterpart weapons; the Counterpart trait references base weapons and their evolutions that come with a Counterpart along with the Counterparts themselves while Gemini (I) references only the base weapons and evolutions.",
       "info_entries": [],
       "related": {
         "weapons": [
@@ -59306,7 +61307,7 @@ window.VS_DATA = {
             "Game Killer (0)",
             "Stake to Your Heart (0)"
           ],
-          "blurb": "Suspends experience gain from experience gems."
+          "blurb": "Supports Level 1 archetypes by suspending experience gain from experience gems."
         }
       ],
       "related": {
@@ -59353,28 +61354,19 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Requiem",
-      "icon": "assets/icons/affinities/requiem.png",
-      "color": "#6a4010",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": []
-      }
-    },
-    {
       "name": "Area",
       "icon": "assets/icons/affinities/area.png",
       "color": "#9e8821",
       "base_affinity": "Area",
       "is_parent": true,
-      "description": "",
+      "description": "Area most commonly increases the size of projectiles or weapon effects. It is most effective for weapons with piercing effects to maximize the number of enemies affected.",
       "info_entries": [
+        {
+          "objects": [
+            "Game Killer (0)"
+          ],
+          "blurb": "Experience gem explosion area of effect is affected by Area."
+        },
         {
           "objects": [
             "SpellStream",
@@ -59395,6 +61387,12 @@ window.VS_DATA = {
             "Rings of Calamity"
           ],
           "blurb": "Gains the Vermillion Sands glimmer tech at +55% Area."
+        },
+        {
+          "objects": [
+            "Whip"
+          ],
+          "blurb": "Size of weapon effect zone is affected by Area."
         }
       ],
       "related": {
@@ -59773,6 +61771,7 @@ window.VS_DATA = {
           "Malevolent Door Spirit"
         ],
         "arcana": [
+          "Game Killer (0)",
           "Awake (IV)",
           "Sarabande of Healing (VI)",
           "Boogaloo of Illusions (XVIII)",
@@ -59987,124 +61986,6 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Character",
-      "icon": "assets/icons/affinities/character.png",
-      "color": "#8b7252",
-      "base_affinity": "Character",
-      "is_parent": true,
-      "description": "Affinities related only to a specific character with unique interactions with the associated items.",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Actrise",
-      "icon": "assets/icons/affinities/actrise.png",
-      "color": "#700404",
-      "base_affinity": "Character",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Witch Actrise"
-        ],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Crewmate",
-      "icon": "assets/icons/affinities/crewmate.png",
-      "color": "#7b0b09",
-      "base_affinity": "Character",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Crewmate Dino"
-        ],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Ghost",
-      "icon": "assets/icons/affinities/ghost.png",
-      "color": "#989937",
-      "base_affinity": "Character",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Ghost Lino"
-        ],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Hugh",
-      "icon": "assets/icons/affinities/hugh.png",
-      "color": "#797e88",
-      "base_affinity": "Character",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Hugh Baldwin"
-        ],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Morris",
-      "icon": "assets/icons/affinities/morris.png",
-      "color": "#2f4501",
-      "base_affinity": "Character",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Morris Baldwin (Kaiser Knuckle)",
-          "Morris Baldwin (Coat of Arms)"
-        ],
-        "arcana": []
-      }
-    },
-    {
-      "name": "Santa",
-      "icon": "assets/icons/affinities/santa.png",
-      "color": "#6f1b06",
-      "base_affinity": "Character",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [
-          "Santa Ladonna"
-        ],
-        "arcana": []
-      }
-    },
-    {
       "name": "Charm",
       "icon": "assets/icons/affinities/charm.png",
       "color": "#6a4010",
@@ -60179,8 +62060,15 @@ window.VS_DATA = {
       "color": "#620508",
       "base_affinity": "Cooldown",
       "is_parent": true,
-      "description": "",
-      "info_entries": [],
+      "description": "Cooldown most commonly affects the frequency of weapon activations and is capped at -90% (10x attack frequency) but can be reduced further by some Arcana effects.",
+      "info_entries": [
+        {
+          "objects": [
+            "Whip"
+          ],
+          "blurb": "Activation frequency is affected by Cooldown."
+        }
+      ],
       "related": {
         "weapons": [
           "Whip",
@@ -61391,6 +63279,12 @@ window.VS_DATA = {
       "info_entries": [
         {
           "objects": [
+            "Game Killer (0)"
+          ],
+          "blurb": "Damage dealt by experience gems is multiplied by Growth."
+        },
+        {
+          "objects": [
             "Magi-Stone",
             "Kyra-Stones"
           ],
@@ -61730,7 +63624,7 @@ window.VS_DATA = {
     {
       "name": "Critical Damage",
       "icon": "assets/icons/affinities/critical_damage.png",
-      "color": "#171717",
+      "color": "#878787",
       "base_affinity": "Luck",
       "is_parent": false,
       "description": "Some weapons possess low innate crit chance which is generally affected by Luck but all Critical Damage builds benefit from Slash (XVI) for its double critical multiplier and elevated critical chance.",
@@ -61932,6 +63826,7 @@ window.VS_DATA = {
           "Perkeo"
         ],
         "arcana": [
+          "Mad Groove (VIII)",
           "Heart of Fire (XIX)",
           "Hidden Anathema (III)",
           "Edge of the Earth (VIII)"
@@ -61939,10 +63834,25 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Low Luck",
+      "icon": "assets/icons/affinities/low_luck.png",
+      "color": "#565656",
+      "base_affinity": "Luck",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
       "name": "Orologion",
       "icon": "assets/icons/affinities/orologion.png",
       "color": "#9e823a",
-      "base_affinity": "Light Source",
+      "base_affinity": "Luck",
       "is_parent": false,
       "description": "",
       "info_entries": [],
@@ -61972,7 +63882,7 @@ window.VS_DATA = {
       "name": "Rosary",
       "icon": "assets/icons/affinities/rosary.png",
       "color": "#6a4010",
-      "base_affinity": "Light Source",
+      "base_affinity": "Luck",
       "is_parent": false,
       "description": "",
       "info_entries": [],
@@ -61993,8 +63903,15 @@ window.VS_DATA = {
       "color": "#3c459e",
       "base_affinity": "Magnet",
       "is_parent": true,
-      "description": "",
-      "info_entries": [],
+      "description": "Magnet governs the radius in which pickups and experience gems are collected by the character. \nNotably, Magnet bonuses stack multiplicatively and can dramatically improve the collection radius. Even for characters with no means of converting Magnet into a damage multiplier - Magnet is a critical quality of life stat.",
+      "info_entries": [
+        {
+          "objects": [
+            "Game Killer (0)"
+          ],
+          "blurb": "While not a direct damage contributor, improved collection radius from Magnet indirectly improves the rate of experience gem projectiles."
+        }
+      ],
       "related": {
         "weapons": [
           "Garlic",
@@ -62301,6 +64218,12 @@ window.VS_DATA = {
             "Claimh Solais"
           ],
           "blurb": "Global modifier applies to Might (max +50%)."
+        },
+        {
+          "objects": [
+            "Whip"
+          ],
+          "blurb": "Base damage is affected by Might."
         }
       ],
       "related": {
@@ -62774,6 +64697,31 @@ window.VS_DATA = {
           "Victorian Horror (XVIII)",
           "Heir of Fate (XIX)"
         ]
+      }
+    },
+    {
+      "name": "Low Might",
+      "icon": "assets/icons/affinities/low_might.png",
+      "color": "#0d0d0d",
+      "base_affinity": "Might",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Pentagram",
+          "Gorgeous Moon",
+          "Venus Crescent",
+          "Clock Lancet",
+          "Infinite Corridor"
+        ],
+        "passives": [],
+        "characters": [
+          "Christine Davain",
+          "Ghost Lino",
+          "Lolo, Hiss, Meow, and Purr"
+        ],
+        "arcana": []
       }
     },
     {
@@ -63619,7 +65567,14 @@ window.VS_DATA = {
       "base_affinity": "Treasure",
       "is_parent": true,
       "description": "",
-      "info_entries": [],
+      "info_entries": [
+        {
+          "objects": [
+            "Game Killer (0)"
+          ],
+          "blurb": "Guarantees a minimum of 3 draws from every Treasure Chest."
+        }
+      ],
       "related": {
         "weapons": [],
         "passives": [],
@@ -63742,6 +65697,45 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Bracers",
+      "icon": "assets/icons/affinities/bracers.png",
+      "color": "#66321a",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Morris Baldwin (Kaiser Knuckle)",
+          "Morris Baldwin (Coat of Arms)"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Santa",
+      "icon": "assets/icons/affinities/santa.png",
+      "color": "#6f1b06",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Cross",
+          "King Bible",
+          "Santa Water"
+        ],
+        "passives": [],
+        "characters": [
+          "Santa Ladonna"
+        ],
+        "arcana": []
+      }
+    },
+    {
       "name": "Dominus",
       "icon": "assets/icons/affinities/dominus.png",
       "color": "#3d0b65",
@@ -63832,10 +65826,18 @@ window.VS_DATA = {
       "color": "#757d87",
       "base_affinity": "Weapon Type",
       "is_parent": false,
-      "description": "",
+      "description": "Knife weapons with special interactions when equipped by Grant, Fake Grant, or Zephyr.",
       "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Pocket Knife",
+          "Claimh Solais"
+        ],
         "passives": [],
         "characters": [
           "Grant Danasty (Curved Knife)",
@@ -63843,6 +65845,28 @@ window.VS_DATA = {
           "Fake Trio (Grant)",
           "Zephyr (Knife)",
           "Zephyr (Curved Knife)"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Magic Crystals",
+      "icon": "assets/icons/affinities/magic_crystals.png",
+      "color": "#00785f",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Runetracer",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Gemma Torpor"
+        ],
+        "passives": [],
+        "characters": [
+          "Witch Actrise"
         ],
         "arcana": []
       }
@@ -63902,6 +65926,63 @@ window.VS_DATA = {
         ],
         "passives": [],
         "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Union",
+      "icon": "assets/icons/affinities/union.png",
+      "color": "#060b83",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Fuwalafuwaloo",
+          "Spirit of Light",
+          "Million Cut",
+          "Legacy of Death: Soul River",
+          "Arch Angle",
+          "Ninth Circle",
+          "Kardía Phlegeton",
+          "Dark Frogamorphosis",
+          "Hydro Pump Climax",
+          "Carnage Heart",
+          "Vjaya Sisters",
+          "Venus Crescent",
+          "Vandalier",
+          "Phieraggi",
+          "Power of Lire",
+          "Dies Irae",
+          "Darkness Illusion",
+          "Lapiste Tepisto",
+          "SpellStrom",
+          "Trinum Custodem",
+          "Power of Sire",
+          "Clock Tower"
+        ],
+        "passives": [],
+        "characters": [
+          "Crewmate Dino"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Valmanway",
+      "icon": "assets/icons/affinities/valmanway.png",
+      "color": "#09317e",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [
+          "Hugh Baldwin"
+        ],
         "arcana": []
       }
     },
@@ -63972,6 +66053,383 @@ window.VS_DATA = {
           "Atlantis Shrine Wizard"
         ],
         "arcana": []
+      }
+    },
+    {
+      "name": "Astral Stair",
+      "icon": "assets/icons/affinities/astral_stair.png",
+      "color": "#715423",
+      "base_affinity": "Astral Stair",
+      "is_parent": true,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Red",
+      "icon": "assets/icons/affinities/red.png",
+      "color": "#790f0b",
+      "base_affinity": "Astral Stair",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Bloody Tear",
+          "Fuwalafuwaloo",
+          "Death Spiral",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Heaven Sword",
+          "Unholy Vespers",
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Sword Brothers",
+          "Vjaya Sisters",
+          "Pentagram",
+          "Gorgeous Moon",
+          "Zhar Ptytsia",
+          "Vandalier",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Soul Steal",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Arrow of Goth",
+          "Dies Irae",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Crimson Shroud",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "La Robba",
+          "Greatest Jubilee",
+          "Kaiser Knuckle",
+          "Lapiste Tepisto",
+          "Flames of Misspell",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Summon Night",
+          "Echo Night",
+          "Night Sword",
+          "Muramasa",
+          "108 Bocce",
+          "Legionnaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Party Popper",
+          "Crossed Wires",
+          "Unjust Ejection",
+          "Sharp Tongue",
+          "Impostongue",
+          "Science Rocks",
+          "Rocket Science",
+          "Hats",
+          "Spread Shot",
+          "Firearm",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Blade Crossbow",
+          "Metal Claw",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Silver Revolver",
+          "Jewel Gun",
+          "Hand Grenade",
+          "The RPG",
+          "Wine Glass",
+          "Meal Ticket",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Hex",
+          "Speculo Hex",
+          "Nightmare",
+          "Stamazza",
+          "Trident",
+          "Gungnir-Souris",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Tyrfing",
+          "Alucard Swords",
+          "Alucard Shield",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Globus",
+          "Nitesco",
+          "Dextro Custos",
+          "Sinestro Custos",
+          "Centralis Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Dominus Hatred",
+          "Power of Sire",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Pocket Knife",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Kick",
+          "Triangle Kick",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hyperion Bazooka",
+          "Bullova",
+          "Falconwind",
+          "Sanguine Star",
+          "Blood Chalice",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "Infernolatro",
+          "NaneInferno",
+          "Celestial Booster",
+          "Negative Space"
+        ],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Heart of Fire (XIX)",
+          "Blood Astronomia (XXI)"
+        ]
+      }
+    },
+    {
+      "name": "Blue",
+      "icon": "assets/icons/affinities/blue.png",
+      "color": "#00019d",
+      "base_affinity": "Astral Stair",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Vento Sacro",
+          "Magic Wand",
+          "Holy Wand",
+          "Summon Spirit",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Valmanway",
+          "Million Cut",
+          "Axe",
+          "Dark Rift",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Grand Cross",
+          "Arch Angle",
+          "King Bible",
+          "Icebrand",
+          "Ninth Circle",
+          "Speculo Anura",
+          "Anura",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Storm",
+          "Hydro Pump Climax",
+          "NO FUTURE",
+          "Troll Bomb",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Sword Brothers",
+          "Vjaya Sisters",
+          "Pentagram",
+          "Gorgeous Moon",
+          "Summon Spirit Tornado",
+          "Venus Crescent",
+          "Cygnus",
+          "Vandalier",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Soul Steal",
+          "Power of Lire",
+          "Song of Mana",
+          "Mannajja",
+          "Clock Lancet",
+          "Infinite Corridor",
+          "Bone",
+          "Anima of Mortaccio",
+          "Cherry Bomb",
+          "Yatta Daikarin",
+          "Carréllo",
+          "Celestial Dusting",
+          "Profusione D'Amore",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Victory Sword",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Silver Wind",
+          "Four Seasons",
+          "Godai Shuffle",
+          "Echo Night",
+          "Mirage Robe",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "SpellString",
+          "SpellStream",
+          "SpellStrike",
+          "SpellStrom",
+          "Prismatic Missile",
+          "Luminaire",
+          "Party Pooper",
+          "Lucky Swipe",
+          "Crossed Wires",
+          "Unjust Ejection",
+          "Silver Tongue",
+          "Science Rocks",
+          "Hats",
+          "C-U-Laser",
+          "Diver Mines",
+          "Atmo-Torpedo",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Discus",
+          "Stellar Blade",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Rock Riot",
+          "Speculo Rock Riot",
+          "Gemma Torpor",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Refectio",
+          "Speculo Refectio",
+          "Mace",
+          "Star Flail",
+          "Moon Rod",
+          "Alucard Spear",
+          "Thunderbolt Spear",
+          "Iron Shield",
+          "Dark Iron Shield",
+          "Guardian's Targe",
+          "Sacred Beasts Tower Shield",
+          "Rune Sword",
+          "Alucart Sworb",
+          "Alucard Shield",
+          "Globus",
+          "Nitesco",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Luminatio",
+          "Vol Luminatio",
+          "Umbra",
+          "Vol Umbra",
+          "Universitas",
+          "Claimh Solais",
+          "Endo Gears",
+          "Peri Pendulum",
+          "Myo Lift",
+          "Epi Head",
+          "Clock Tower",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Town Sword",
+          "Lordstar",
+          "Dayblade",
+          "Splashers",
+          "Pursuant Blades",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Kick",
+          "Triangle Kick",
+          "Hyperion Bazooka",
+          "Eagle Gun",
+          "Pendragon",
+          "Glaive",
+          "Feather Spear",
+          "Lohengrin",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Emerald Rapture",
+          "Emerald Wave",
+          "NaneInferno",
+          "Gros Michel",
+          "Fibonacci Spritz",
+          "Royal Flush",
+          "Celestial Booster",
+          "Negative Space"
+        ],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Out of Bounds (XII)"
+        ]
       }
     }
   ],
