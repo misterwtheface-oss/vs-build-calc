@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vampire Survivors Build Calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <!-- font FILES are served from gstatic; preconnecting shrinks the swap window (reduces CLS). -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- display=optional: use the fallback if the web font isn't ready almost immediately and DON'T
+       swap it in later — eliminates the font-swap layout shift that moved the centered landing grid. -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=optional" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'Perfect DOS VGA 437';
