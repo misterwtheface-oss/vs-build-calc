@@ -742,7 +742,6 @@
     /* Blurb paragraphs (official desc + clarifications): small controlled gap, not a full line. */
     .blurb-p { display: block; }
     .blurb-p + .blurb-p { margin-top: .5rem; }
-    .detail-kicker { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dim); margin-bottom: .5rem; }
     .detail-main { flex: 1; overflow-y: auto; padding: 1.5rem 1.8rem; }
     .detail-cat { margin-bottom: 1.5rem; }
     .detail-cat-label {
@@ -1661,8 +1660,13 @@
 
       /* ── Detail overlay: art on top, single column, page scrolls ── */
       .detail-body { flex-direction: column; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      /* .detail-left is its own scroller on desktop (a 320px sidebar). On mobile it's a full-width
+         block at the TOP of the single .detail-body scroller — drop its overflow:auto so it isn't a
+         (non-scrolling, since its content fits) inner scroll container that eats vertical swipes over
+         the sprite/name/description. overflow:visible hands the gesture to .detail-body → no dead zone.
+         Same "no inner scrollers" fix used on the selection overlay + the xref table. */
       .detail-left {
-        width: 100%; flex: none; border-right: none;
+        width: 100%; flex: none; border-right: none; overflow: visible;
         border-bottom: 1px solid var(--border); padding: 1rem; text-align: center;
       }
       .detail-left .detail-icon { width: 128px; height: 128px; margin: 0 auto .6rem; }
@@ -1671,6 +1675,21 @@
       .detail-left .detail-name { font-size: 1.3rem; }
       .detail-main { overflow: visible; padding: 1rem 1.1rem; }
       .detail-info-grid { grid-template-columns: 1fr; }
+      /* ── Appendix search: keyboard-friendly mode (mobile only) ──
+         The on-screen keyboard covers the bottom ~45% of the screen, hiding results below the
+         search bar. Focusing the input adds `.searching` to `.detail-body` (JS focusin/out), which:
+         (1) collapses the page header (Appendix title + description) so the search bar pins to the
+             very top and results get the full column — solves the short-list case (everything sits
+             above the keyboard, no scroll needed);
+         (2) makes the search bar sticky so a long result list scrolls beneath it while the query
+             stays visible;
+         (3) adds a bottom spacer so even a short list has enough over-scroll room to lift the last
+             result clear of the keyboard — solves the long-list tail-obscured edge case. */
+      .detail-body.searching .detail-left { display: none; }
+      .detail-body.searching .appendix-search {
+        position: sticky; top: 0; z-index: 5; margin-bottom: .75rem;
+      }
+      .detail-body.searching .appendix { padding-bottom: 50vh; }
       /* The trait matrix is one tall block inside the overlay's single vertical scroller: a
          swipe up ANYWHERE (header, table, margin) carries the whole page up, headers included.
          The table only needs to pan HORIZONTALLY to reach far-right columns. No max-height, so
@@ -4865,7 +4884,6 @@
     { key: 'passives',   label: 'Passives',   type: 'passive',   empty: EMPTY_ICONS.passive, cls: '',        lookup: passiveByName },
     { key: 'weapons',    label: 'Weapons',    type: 'weapon',     empty: EMPTY_ICONS.weapon,  cls: '',        lookup: weaponByName, iconOf: weaponSprite },
   ];
-  const DETAIL_KIND_LABEL = { weapon: 'Weapon', passive: 'Passive', character: 'Character', arcana: 'Arcana' };
 
   function detailObjByType(type, name) {
     if (type === 'weapon')    return weaponByName(name);
@@ -5028,8 +5046,7 @@
     // so a page reached from the deduped list reads as the character, not a weapon loadout.
     const displayName = (type === 'character' && charVariantInfo().collapsible.has(item.base_name))
       ? item.base_name : item.name;
-    const left = `<div class="detail-kicker">${DETAIL_KIND_LABEL[type] || ''}</div>
-      ${detailObjArt(type, item)}
+    const left = `${detailObjArt(type, item)}
       <div class="detail-name">${esc(displayName)}</div>
       ${descBlurbHTML(item)}`;
 
@@ -5070,8 +5087,7 @@
     const char = player.character;
     const title = char ? char.name : `Player ${playerIdx + 1}`;
     const art = char ? charSpriteHTML(char, true) : `<div class="detail-icon char-sprite"><img src="${EMPTY_ICONS.char}"></div>`;
-    const left = `<div class="detail-kicker">Player ${playerIdx + 1} · Trait Table</div>
-      ${art}
+    const left = `${art}
       <div class="detail-name">${esc(title)}</div>`;
 
     // Equipped objects (weapons + passives are per-player; arcana are global). The CHARACTER
@@ -5176,8 +5192,7 @@
         <img src="${esc(a.icon || '')}" onerror="this.style.display='none'"><span>${esc(a.name)}</span>
         <button class="appendix-chip-x" data-action="affinity-remove" data-affinity="${esc(a.name)}" title="Remove this condition">✕</button></span>`;
     }).join('')}</div>` : '';
-    const left = `<div class="detail-kicker">${combo ? 'Traits (shared)' : 'Trait'}</div>
-      <div class="detail-icon"><img src="${esc(primary.icon || EMPTY_ICON)}" onerror="this.style.visibility='hidden'"></div>
+    const left = `<div class="detail-icon"><img src="${esc(primary.icon || EMPTY_ICON)}" onerror="this.style.visibility='hidden'"></div>
       <div class="detail-name">${esc(title)}</div>
       ${!combo && primary.description ? `<div class="detail-desc">${esc(primary.description)}</div>` : ''}
       ${chips}`;
@@ -5344,8 +5359,7 @@
     const arcanaHTML  = D.arcana.map(a => appendixRow({ kind: 'object', type: 'arcana', name: a.name, icon: a.icon, tag: 'Arcana' })).join('');
     const passiveHTML = D.passives.map(p => appendixRow({ kind: 'object', type: 'passive', name: p.name, icon: p.icon, tag: 'Passive' })).join('');
 
-    const left = `<div class="detail-kicker">Appendix</div>
-      <div class="detail-name">Appendix</div>
+    const left = `<div class="detail-name">Appendix</div>
       <div class="detail-desc">Browse every trait, arcana, and passive. Search to also find characters and weapons.</div>
       <div class="detail-desc" style="margin-top:.5rem">Add two or more <b>traits</b> as filters (the ＋ on a trait) to narrow to items that share <i>all</i> of them.</div>`;
 
@@ -8153,6 +8167,17 @@
     const ovlRoot = document.getElementById('overlay-root');
     ovlRoot.addEventListener('click', handleOverlayClick);
     document.getElementById('detail-overlay-root').addEventListener('click', handleDetailClick);
+    // Appendix search focus → keyboard-friendly mode (mobile only; CSS gates the effect to ≤600px).
+    // `.searching` on .detail-body collapses the header, pins the search bar, and adds scroll room
+    // so results aren't trapped under the on-screen keyboard.
+    document.getElementById('detail-overlay-root').addEventListener('focusin', e => {
+      if (e.target.classList.contains('appendix-search'))
+        e.target.closest('.detail-body')?.classList.add('searching');
+    });
+    document.getElementById('detail-overlay-root').addEventListener('focusout', e => {
+      if (e.target.classList.contains('appendix-search'))
+        e.target.closest('.detail-body')?.classList.remove('searching');
+    });
     document.getElementById('detail-overlay-root').addEventListener('input', e => {
       if (e.target.classList.contains('appendix-search')) applyAppendixSearch(e.target);
       else if (e.target.classList.contains('aff-add-search')) {
