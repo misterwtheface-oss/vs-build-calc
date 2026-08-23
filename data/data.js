@@ -5038,7 +5038,6 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/missingno_sprite.gif",
       "base_name": "missingN▯",
       "starting_weapons": [
-        "Axe",
         "Death Spiral"
       ],
       "hidden_items": [],
@@ -13826,7 +13825,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Counterpart",
+            "Gemini",
             "Might"
           ]
         },
@@ -13839,7 +13838,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Counterpart",
+        "Gemini",
         "Might",
         "Max Health",
         "Armor"
@@ -13890,7 +13889,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Counterpart",
+            "Gemini",
             "Might"
           ]
         },
@@ -13903,7 +13902,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Counterpart",
+        "Gemini",
         "Might",
         "Max Health",
         "Armor"
@@ -22179,7 +22178,6 @@ window.VS_DATA = {
           "items": [
             "Greed",
             "Cooldown",
-            "Fire",
             "Duration",
             "Move Speed",
             "Max Health",
@@ -22193,7 +22191,6 @@ window.VS_DATA = {
         "Might",
         "Greed",
         "Cooldown",
-        "Fire",
         "Duration",
         "Move Speed",
         "Max Health",
@@ -22255,7 +22252,6 @@ window.VS_DATA = {
           "items": [
             "Greed",
             "Cooldown",
-            "Fire",
             "Duration",
             "Move Speed",
             "Max Health",
@@ -22269,7 +22265,6 @@ window.VS_DATA = {
         "Might",
         "Greed",
         "Cooldown",
-        "Fire",
         "Duration",
         "Move Speed",
         "Max Health",
@@ -27085,6 +27080,13 @@ window.VS_DATA = {
             "Max Health",
             "Red"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -27097,7 +27099,9 @@ window.VS_DATA = {
         "Recovery",
         "Vampire-Killing Tool",
         "Max Health",
-        "Red"
+        "Red",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Speed",
@@ -27287,6 +27291,13 @@ window.VS_DATA = {
             "Max Health",
             "Red"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -27302,7 +27313,9 @@ window.VS_DATA = {
         "Recovery",
         "Union",
         "Max Health",
-        "Red"
+        "Red",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [],
       "arcana": [
@@ -27388,6 +27401,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -27401,6 +27420,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
+        "Bounce",
         "Freeze"
       ],
       "conflict": [
@@ -27480,6 +27500,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -27493,6 +27519,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
+        "Bounce",
         "Freeze"
       ],
       "conflict": [
@@ -27663,6 +27690,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -27678,6 +27711,7 @@ window.VS_DATA = {
         "Amount",
         "Union",
         "Blue",
+        "Bounce",
         "Freeze"
       ],
       "conflict": [],
@@ -27764,6 +27798,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -27780,6 +27820,7 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Knives",
         "Blue",
+        "Bounce",
         "Luck",
         "Critical Damage"
       ],
@@ -27863,6 +27904,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -27879,6 +27926,7 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Knives",
         "Blue",
+        "Bounce",
         "Luck",
         "Critical Damage"
       ],
@@ -28035,6 +28083,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -28048,7 +28102,8 @@ window.VS_DATA = {
         "Union",
         "Blue",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -28136,6 +28191,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -28151,6 +28212,7 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Blue",
+        "Bounce",
         "Luck",
         "Critical Damage"
       ],
@@ -28227,6 +28289,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -28242,6 +28310,7 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Red",
+        "Bounce",
         "Luck",
         "Critical Damage"
       ],
@@ -28404,6 +28473,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -28420,6 +28495,7 @@ window.VS_DATA = {
         "Union",
         "Red",
         "Blue",
+        "Bounce",
         "Luck",
         "Critical Damage"
       ],
@@ -28510,6 +28586,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
@@ -28532,6 +28614,7 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Santa",
         "Blue",
+        "Bounce",
         "Luck",
         "Critical Damage",
         "Armor"
@@ -28616,6 +28699,12 @@ window.VS_DATA = {
             "Red",
             "Blue"
           ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -28628,7 +28717,8 @@ window.VS_DATA = {
         "Critical Damage",
         "Vampire-Killing Tool",
         "Red",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -28786,6 +28876,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Slash (XVI)",
           "items": [
             "Critical Damage"
@@ -28802,6 +28898,7 @@ window.VS_DATA = {
         "Union",
         "Luck",
         "Blue",
+        "Bounce",
         "Critical Damage"
       ],
       "conflict": [
@@ -29281,6 +29378,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -29300,6 +29403,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
+        "Bounce",
         "Fire",
         "Fire"
       ],
@@ -29376,6 +29480,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -29395,6 +29505,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
+        "Bounce",
         "Fire",
         "Fire"
       ],
@@ -29563,6 +29674,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -29583,6 +29700,7 @@ window.VS_DATA = {
         "Amount",
         "Union",
         "Red",
+        "Bounce",
         "Fire",
         "Fire"
       ],
@@ -29661,6 +29779,7 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
             "Amount",
             "Magnet",
             "Duration"
@@ -29674,6 +29793,7 @@ window.VS_DATA = {
         "Freeze",
         "Move Speed",
         "Armor",
+        "Blood Astronomia",
         "Amount",
         "Magnet",
         "Duration"
@@ -29740,9 +29860,17 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
             "Amount",
             "Magnet",
             "Duration"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
           ]
         }
       ],
@@ -29753,9 +29881,12 @@ window.VS_DATA = {
         "Recovery",
         "Freeze",
         "Move Speed",
+        "Blood Astronomia",
         "Amount",
         "Magnet",
-        "Duration"
+        "Duration",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Speed"
@@ -29838,7 +29969,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -29849,7 +29980,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Speed"
@@ -29935,7 +30066,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -29947,7 +30078,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Speed"
@@ -30028,13 +30159,20 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
           "key": "Tragic Princess (III)",
           "items": [
             "Move Speed"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
           ]
         }
       ],
@@ -30048,8 +30186,10 @@ window.VS_DATA = {
         "Freeze",
         "Union",
         "Blue",
-        "Counterpart",
-        "Move Speed"
+        "Gemini",
+        "Move Speed",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Speed"
@@ -31248,6 +31388,7 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
             "Duration",
             "Amount"
           ]
@@ -31259,6 +31400,7 @@ window.VS_DATA = {
         "Low Might",
         "Red",
         "Blue",
+        "Blood Astronomia",
         "Duration",
         "Amount"
       ],
@@ -31317,6 +31459,7 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
             "Duration",
             "Amount"
           ]
@@ -31328,6 +31471,7 @@ window.VS_DATA = {
         "Growth",
         "Red",
         "Blue",
+        "Blood Astronomia",
         "Duration",
         "Amount"
       ],
@@ -31559,7 +31703,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -31576,7 +31720,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Counterpart",
+        "Gemini",
         "Curse"
       ],
       "conflict": [],
@@ -31627,7 +31771,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -31645,7 +31789,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Freeze"
       ],
       "conflict": [],
@@ -31726,7 +31870,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -31743,7 +31887,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Counterpart",
+        "Gemini",
         "Curse"
       ],
       "conflict": [],
@@ -31794,7 +31938,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -31812,7 +31956,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Fire"
       ],
       "conflict": [],
@@ -31899,7 +32043,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -31913,7 +32057,7 @@ window.VS_DATA = {
         "Union",
         "Red",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -32000,7 +32144,13 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
+          ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
           ]
         },
         {
@@ -32017,7 +32167,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Counterpart",
+        "Gemini",
+        "Bounce",
         "Fire"
       ],
       "conflict": [
@@ -32069,7 +32220,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -32086,7 +32237,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Fire"
       ],
       "conflict": [
@@ -32175,7 +32326,13 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
+          ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
           ]
         },
         {
@@ -32192,7 +32349,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart",
+        "Gemini",
+        "Bounce",
         "Freeze"
       ],
       "conflict": [
@@ -32244,7 +32402,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -32261,7 +32419,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Freeze"
       ],
       "conflict": [
@@ -32341,7 +32499,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -32353,7 +32511,7 @@ window.VS_DATA = {
         "Amount",
         "Revival",
         "Union",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Duration"
@@ -32437,7 +32595,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -32450,7 +32608,7 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Light Source",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -32495,7 +32653,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -32508,7 +32666,7 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Light Source",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": []
@@ -32588,7 +32746,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -32609,7 +32767,7 @@ window.VS_DATA = {
         "Gold Fever",
         "Light Source",
         "Greed",
-        "Counterpart",
+        "Gemini",
         "Recovery"
       ],
       "conflict": [],
@@ -33578,6 +33736,7 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
             "Amount",
             "Magnet",
             "Slow"
@@ -33590,6 +33749,7 @@ window.VS_DATA = {
         "Freeze",
         "Blue",
         "Low Might",
+        "Blood Astronomia",
         "Amount",
         "Magnet",
         "Slow"
@@ -33704,6 +33864,7 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
             "Duration",
             "Amount",
             "Magnet"
@@ -33713,6 +33874,7 @@ window.VS_DATA = {
       "affinity": [
         "Cooldown",
         "Invulnerable",
+        "Blood Astronomia",
         "Duration",
         "Amount",
         "Magnet"
@@ -33767,37 +33929,14 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Might",
-            "Area",
             "Cooldown",
-            "Amount",
-            "Armor",
-            "Curse",
-            "Invulnerable",
-            "Retaliation"
-          ]
-        },
-        {
-          "key": null,
-          "items": [
-            "Max Health",
-            "Recovery",
-            "Red"
+            "Invulnerable"
           ]
         }
       ],
       "affinity": [
-        "Might",
-        "Area",
         "Cooldown",
-        "Amount",
-        "Armor",
-        "Curse",
-        "Invulnerable",
-        "Retaliation",
-        "Max Health",
-        "Recovery",
-        "Red"
+        "Invulnerable"
       ],
       "conflict": [
         "Speed",
@@ -34264,6 +34403,13 @@ window.VS_DATA = {
           "items": [
             "Move Speed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Iron Blue Will (VII)",
+            "Waltz of Pearls (XI)"
+          ]
         }
       ],
       "affinity": [
@@ -34273,7 +34419,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Move Speed"
+        "Move Speed",
+        "Iron Blue Will (VII)",
+        "Waltz of Pearls (XI)"
       ],
       "conflict": [
         "Duration"
@@ -34432,6 +34580,13 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -34444,7 +34599,9 @@ window.VS_DATA = {
         "Recovery",
         "Red",
         "Blue",
-        "Curse"
+        "Curse",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Speed"
@@ -35505,7 +35662,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -35528,7 +35685,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Counterpart",
+        "Gemini",
         "Critical Damage",
         "Luck",
         "Fire"
@@ -35608,7 +35765,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -35631,7 +35788,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Counterpart",
+        "Gemini",
         "Critical Damage",
         "Luck",
         "Fire"
@@ -35689,7 +35846,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -35712,7 +35869,7 @@ window.VS_DATA = {
         "Duration",
         "Cooldown",
         "Amount",
-        "Counterpart",
+        "Gemini",
         "Critical Damage",
         "Luck",
         "Fire"
@@ -36389,8 +36546,17 @@ window.VS_DATA = {
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50,
-      "affinity_groups": [],
-      "affinity": [],
+      "affinity_groups": [
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
+        }
+      ],
+      "affinity": [
+        "Limited"
+      ],
       "conflict": [],
       "arcana": [
         "Jail of Crystal (XIV)",
@@ -36486,6 +36652,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -36495,7 +36667,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -36592,6 +36765,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -36601,7 +36780,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -36698,6 +36878,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -36707,7 +36893,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -36804,6 +36991,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -36813,7 +37006,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -36910,6 +37104,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -36919,7 +37119,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -37016,6 +37217,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -37025,7 +37232,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -37099,6 +37307,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Silent Old Sanctuary (XX)",
+          "items": [
+            "Limited"
+          ]
         }
       ],
       "affinity": [
@@ -37108,7 +37322,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Freeze"
+        "Freeze",
+        "Limited"
       ],
       "conflict": [],
       "arcana": [
@@ -37196,7 +37411,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -37227,7 +37442,7 @@ window.VS_DATA = {
         "Luck",
         "Critical Damage",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Curse",
         "Move Speed",
         "Speed"
@@ -37283,7 +37498,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -37302,7 +37517,7 @@ window.VS_DATA = {
         "Luck",
         "Critical Damage",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -37384,7 +37599,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -37411,7 +37626,7 @@ window.VS_DATA = {
         "Light Source",
         "Rosary",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Curse",
         "Move Speed"
       ],
@@ -38156,6 +38371,13 @@ window.VS_DATA = {
           "items": [
             "Armor"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -38169,7 +38391,9 @@ window.VS_DATA = {
         "Luck",
         "Blue",
         "Curse",
-        "Armor"
+        "Armor",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [],
       "arcana": [
@@ -38247,6 +38471,13 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -38258,7 +38489,9 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Luck",
-        "Curse"
+        "Curse",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [],
       "arcana": [
@@ -38813,6 +39046,13 @@ window.VS_DATA = {
           "items": [
             "Red"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -38825,7 +39065,9 @@ window.VS_DATA = {
         "Greed",
         "Armor",
         "Retaliation",
-        "Red"
+        "Red",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Speed",
@@ -38901,6 +39143,13 @@ window.VS_DATA = {
           "items": [
             "Red"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -38915,7 +39164,9 @@ window.VS_DATA = {
         "Retaliation",
         "Low Health",
         "Critical Damage",
-        "Red"
+        "Red",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Speed",
@@ -39706,6 +39957,12 @@ window.VS_DATA = {
             "Critical Damage",
             "Luck"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -39715,7 +39972,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Critical Damage",
-        "Luck"
+        "Luck",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -39789,6 +40047,12 @@ window.VS_DATA = {
             "Gold Coin",
             "Light Source"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -39800,7 +40064,8 @@ window.VS_DATA = {
         "Critical Damage",
         "Luck",
         "Gold Coin",
-        "Light Source"
+        "Light Source",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -40100,7 +40365,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -40113,7 +40378,7 @@ window.VS_DATA = {
         "Amount",
         "Slow",
         "Luck",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -40158,7 +40423,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -40171,7 +40436,7 @@ window.VS_DATA = {
         "Amount",
         "Slow",
         "Luck",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": []
@@ -40241,7 +40506,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -40254,7 +40519,7 @@ window.VS_DATA = {
         "Slow",
         "Luck",
         "Curse",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Speed"
@@ -40341,7 +40606,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -40359,7 +40624,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Luck"
       ],
       "conflict": [],
@@ -40404,7 +40669,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -40421,7 +40686,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount[Blue",
-        "Counterpart",
+        "Gemini",
         "Luck"
       ],
       "conflict": [],
@@ -40810,13 +41075,22 @@ window.VS_DATA = {
             "Amount",
             "Recovery"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
         "Area",
         "Cooldown",
         "Amount",
-        "Recovery"
+        "Recovery",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [
         "Might",
@@ -40883,6 +41157,13 @@ window.VS_DATA = {
             "Luck",
             "Growth"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Sarabande of Healing (VI)",
+            "Wandering the Jet Black (XXI)"
+          ]
         }
       ],
       "affinity": [
@@ -40899,7 +41180,9 @@ window.VS_DATA = {
         "Armor",
         "Move Speed",
         "Luck",
-        "Growth"
+        "Growth",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
       ],
       "conflict": [],
       "arcana": [
@@ -41286,7 +41569,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -41298,7 +41581,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Red",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Duration"
@@ -41348,7 +41631,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -41360,7 +41643,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Duration"
@@ -41433,7 +41716,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -41447,7 +41730,7 @@ window.VS_DATA = {
         "Luck",
         "Critical Chance",
         "Red",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "Duration"
@@ -41698,6 +41981,12 @@ window.VS_DATA = {
             "Red",
             "Blue"
           ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -41708,7 +41997,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -41869,6 +42159,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -41882,6 +42178,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Revival",
+        "Bounce",
         "Fire"
       ],
       "conflict": [
@@ -42052,6 +42349,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -42065,6 +42368,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Revival",
+        "Bounce",
         "Fire"
       ],
       "conflict": [
@@ -42243,6 +42547,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -42256,6 +42566,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Revival",
+        "Bounce",
         "Fire"
       ],
       "conflict": [
@@ -42712,6 +43023,12 @@ window.VS_DATA = {
           "items": [
             "Red"
           ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -42721,7 +43038,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Red"
+        "Red",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -42791,6 +43109,12 @@ window.VS_DATA = {
             "Revival",
             "Red"
           ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -42802,7 +43126,8 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Revival",
-        "Red"
+        "Red",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -43418,7 +43743,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -43432,7 +43757,7 @@ window.VS_DATA = {
         "Freeze",
         "Luck",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -43484,7 +43809,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -43498,7 +43823,7 @@ window.VS_DATA = {
         "Freeze",
         "Luck",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -43581,7 +43906,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -43598,7 +43923,7 @@ window.VS_DATA = {
         "Revival",
         "Move Speed",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -45284,6 +45609,12 @@ window.VS_DATA = {
             "Vampire-Killing Tool",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45293,7 +45624,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -45338,6 +45670,12 @@ window.VS_DATA = {
             "Vampire-Killing Tool",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45347,7 +45685,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -45403,6 +45742,12 @@ window.VS_DATA = {
             "Knives",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45414,7 +45759,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Knives",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -45459,6 +45805,12 @@ window.VS_DATA = {
             "Knives",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45470,7 +45822,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Knives",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -45560,6 +45913,12 @@ window.VS_DATA = {
             "Vampire-Killing Tool",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45570,7 +45929,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -45651,6 +46011,12 @@ window.VS_DATA = {
             "Vampire-Killing Tool",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45661,7 +46027,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -45858,6 +46225,12 @@ window.VS_DATA = {
             "Vampire-Killing Tool",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45867,7 +46240,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Vampire-Killing Tool",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -45943,6 +46317,12 @@ window.VS_DATA = {
             "Armor",
             "Blue"
           ]
+        },
+        {
+          "key": "Iron Blue Will (VII)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -45953,7 +46333,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Armor",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [
         "Duration"
@@ -46523,7 +46904,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -46548,7 +46929,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Fire",
         "Fire"
       ],
@@ -46600,7 +46981,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -46624,7 +47005,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Fire",
         "Fire"
       ],
@@ -46704,7 +47085,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -46729,7 +47110,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Fire",
         "Fire"
       ],
@@ -46820,7 +47201,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -46839,7 +47220,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Freeze"
       ],
       "conflict": [],
@@ -46889,7 +47270,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -46907,7 +47288,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Freeze"
       ],
       "conflict": [],
@@ -46986,7 +47367,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -47005,7 +47386,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Freeze"
       ],
       "conflict": [],
@@ -47093,7 +47474,13 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
+          ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
           ]
         }
       ],
@@ -47105,7 +47492,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
-        "Counterpart"
+        "Gemini",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -47148,7 +47536,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -47159,7 +47547,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": []
@@ -47234,7 +47622,13 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
+          ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
           ]
         }
       ],
@@ -47246,7 +47640,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Belnades' Spell",
-        "Counterpart"
+        "Gemini",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -47334,7 +47729,13 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
+          ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
           ]
         }
       ],
@@ -47347,7 +47748,8 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart"
+        "Gemini",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -47396,7 +47798,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -47408,7 +47810,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": []
@@ -47485,7 +47887,13 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
+          ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
           ]
         }
       ],
@@ -47499,7 +47907,8 @@ window.VS_DATA = {
         "Belnades' Spell",
         "Magic Crystals",
         "Blue",
-        "Counterpart"
+        "Gemini",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -47587,7 +47996,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -47606,7 +48015,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -47656,7 +48065,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -47674,7 +48083,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -47753,7 +48162,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -47772,7 +48181,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -47861,7 +48270,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -47880,7 +48289,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -47930,7 +48339,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -47948,7 +48357,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -48033,7 +48442,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -48053,7 +48462,7 @@ window.VS_DATA = {
         "Belnades' Spell",
         "Blue",
         "Armor",
-        "Counterpart",
+        "Gemini",
         "Move Speed"
       ],
       "conflict": [],
@@ -48143,7 +48552,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -48157,7 +48566,7 @@ window.VS_DATA = {
         "Curse",
         "Belnades' Spell",
         "Red",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "-"
@@ -48209,7 +48618,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -48222,7 +48631,7 @@ window.VS_DATA = {
         "Amount",
         "Curse",
         "Red",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [
         "-"
@@ -48308,7 +48717,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -48327,7 +48736,7 @@ window.VS_DATA = {
         "Amount",
         "Belnades' Spell",
         "Red",
-        "Counterpart",
+        "Gemini",
         "Curse"
       ],
       "conflict": [
@@ -48419,7 +48828,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -48439,7 +48848,7 @@ window.VS_DATA = {
         "Recovery",
         "Belnades' Spell",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Curse"
       ],
       "conflict": [],
@@ -48490,7 +48899,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -48509,7 +48918,7 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Blue",
-        "Counterpart",
+        "Gemini",
         "Curse"
       ],
       "conflict": [],
@@ -48594,7 +49003,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         },
         {
@@ -48614,7 +49023,7 @@ window.VS_DATA = {
         "Recovery",
         "Belnades' Spell",
         "Luck",
-        "Counterpart",
+        "Gemini",
         "Curse"
       ],
       "conflict": [],
@@ -49675,29 +50084,13 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
-        },
-        {
-          "key": null,
-          "items": [
-            "Magic Weapon",
-            "Red"
-          ]
-        },
-        {
-          "key": "Heir of Fate (XIX)",
-          "items": [
-            "Fire"
-          ]
         }
       ],
       "affinity": [
         "Might",
         "Area",
         "Cooldown",
-        "Amount",
-        "Magic Weapon",
-        "Red",
-        "Fire"
+        "Amount"
       ],
       "conflict": [
         "Speed",
@@ -49740,12 +50133,6 @@ window.VS_DATA = {
             "Red",
             "Blue"
           ]
-        },
-        {
-          "key": "Heir of Fate (XIX)",
-          "items": [
-            "Fire"
-          ]
         }
       ],
       "affinity": [
@@ -49755,8 +50142,7 @@ window.VS_DATA = {
         "Amount",
         "Magic Weapon",
         "Red",
-        "Blue",
-        "Fire"
+        "Blue"
       ],
       "conflict": [
         "Speed",
@@ -50097,7 +50483,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -50111,7 +50497,7 @@ window.VS_DATA = {
         "Ambiguous Power",
         "Red",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -50166,7 +50552,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -50178,7 +50564,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Ambiguous Power",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": []
@@ -50249,7 +50635,7 @@ window.VS_DATA = {
         {
           "key": "Gemini (I)",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
@@ -50263,7 +50649,7 @@ window.VS_DATA = {
         "Ambiguous Power",
         "Red",
         "Blue",
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": [],
       "arcana": [
@@ -51048,7 +51434,6 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
             "Move Speed"
           ]
         },
@@ -51062,6 +51447,8 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
+            "Amount",
             "Magnet"
           ]
         }
@@ -51072,10 +51459,11 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount",
         "Move Speed",
         "Ambiguous Power",
         "Blue",
+        "Blood Astronomia",
+        "Amount",
         "Magnet"
       ],
       "conflict": [],
@@ -51110,7 +51498,6 @@ window.VS_DATA = {
             "Duration",
             "Area",
             "Cooldown",
-            "Amount",
             "Move Speed"
           ]
         },
@@ -51124,6 +51511,8 @@ window.VS_DATA = {
         {
           "key": "Blood Astronomia (XXI)",
           "items": [
+            "Blood Astronomia",
+            "Amount",
             "Magnet"
           ]
         }
@@ -51134,10 +51523,11 @@ window.VS_DATA = {
         "Duration",
         "Area",
         "Cooldown",
-        "Amount",
         "Move Speed",
         "Ambiguous Power",
         "Blue",
+        "Blood Astronomia",
+        "Amount",
         "Magnet"
       ],
       "conflict": [],
@@ -55832,6 +56222,12 @@ window.VS_DATA = {
           "items": [
             "Blue"
           ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -55843,7 +56239,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Blue"
+        "Blue",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -55920,6 +56317,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
+          ]
         }
       ],
       "affinity": [
@@ -55930,7 +56333,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Bounce"
       ],
       "conflict": [],
       "arcana": [
@@ -59446,12 +59850,12 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Counterpart"
+            "Gemini"
           ]
         }
       ],
       "affinity": [
-        "Counterpart"
+        "Gemini"
       ],
       "conflict": []
     },
@@ -59517,13 +59921,13 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Curse",
-            "Twilight"
+            "Twilight Requiem"
           ]
         }
       ],
       "affinity": [
         "Curse",
-        "Twilight"
+        "Twilight Requiem"
       ],
       "conflict": []
     },
@@ -59582,13 +59986,13 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Move Speed",
-            "Constant Motion"
+            "Tragic Princess"
           ]
         }
       ],
       "affinity": [
         "Move Speed",
-        "Constant Motion"
+        "Tragic Princess"
       ],
       "conflict": []
     },
@@ -59980,7 +60384,8 @@ window.VS_DATA = {
             "Armor",
             "Max Health",
             "Retaliation",
-            "Low Health"
+            "Low Health",
+            "Divine Bloodline"
           ]
         }
       ],
@@ -59988,7 +60393,8 @@ window.VS_DATA = {
         "Armor",
         "Max Health",
         "Retaliation",
-        "Low Health"
+        "Low Health",
+        "Divine Bloodline"
       ],
       "conflict": []
     },
@@ -60704,7 +61110,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Astronomia",
+            "Blood Astronomia",
             "Amount",
             "Magnet"
           ]
@@ -60713,17 +61119,15 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Duration",
-            "Cooldown",
             "Red"
           ]
         }
       ],
       "affinity": [
-        "Astronomia",
+        "Blood Astronomia",
         "Amount",
         "Magnet",
         "Duration",
-        "Cooldown",
         "Red"
       ],
       "conflict": []
@@ -60809,12 +61213,14 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Luck"
+            "Luck",
+            "Sapphire Mist"
           ]
         }
       ],
       "affinity": [
-        "Luck"
+        "Luck",
+        "Sapphire Mist"
       ],
       "conflict": []
     },
@@ -61055,14 +61461,18 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Luck",
-            "Light Source"
+            "Light Source",
+            "Plentiful Pickups",
+            "Food"
           ]
         }
       ],
       "affinity": [
         "Recovery",
         "Luck",
-        "Light Source"
+        "Light Source",
+        "Plentiful Pickups",
+        "Food"
       ],
       "conflict": []
     },
@@ -61183,13 +61593,15 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Cooldown"
+            "Cooldown",
+            "Pale Diamond"
           ]
         }
       ],
       "affinity": [
         "Speed",
-        "Cooldown"
+        "Cooldown",
+        "Pale Diamond"
       ],
       "conflict": []
     },
@@ -61396,7 +61808,8 @@ window.VS_DATA = {
             "Growth",
             "Recovery",
             "Max Health",
-            "Orologion"
+            "Orologion",
+            "Low Health"
           ]
         }
       ],
@@ -61405,7 +61818,8 @@ window.VS_DATA = {
         "Growth",
         "Recovery",
         "Max Health",
-        "Orologion"
+        "Orologion",
+        "Low Health"
       ],
       "conflict": []
     },
@@ -61623,12 +62037,19 @@ window.VS_DATA = {
             "Max Health",
             "Might"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Low Health"
+          ]
         }
       ],
       "affinity": [
         "Fire",
         "Max Health",
-        "Might"
+        "Might",
+        "Low Health"
       ],
       "conflict": []
     },
@@ -61771,6 +62192,24 @@ window.VS_DATA = {
             "Dayblade"
           ],
           "blurb": "Amount increases the number of hits."
+        },
+        {
+          "objects": [
+            "Garlic",
+            "Soul Eater",
+            "Pentagram",
+            "Gorgeous Moon",
+            "Song of Mana",
+            "Mannajja",
+            "Clock Lancet",
+            "Laurel",
+            "Sonic Dash",
+            "Rapidus Fio"
+          ],
+          "blurb": "Only affected by Amount when using Blood Astronomia (XXI)",
+          "conditions": [
+            "Blood Astronomia (XXI)"
+          ]
         }
       ],
       "related": {
@@ -61846,7 +62285,6 @@ window.VS_DATA = {
           "Darkness Illusion",
           "Clock Lancet",
           "Laurel",
-          "Crimson Shroud",
           "Bone",
           "Anima of Mortaccio",
           "Cherry Bomb",
@@ -62173,7 +62611,7 @@ window.VS_DATA = {
       "color": "#470793",
       "base_affinity": "Arcana",
       "is_parent": true,
-      "description": "The listed Arcana represent exclusive support for an associated archetype or are notable as crucial cornerstones.",
+      "description": "The listed Archetypes are significantly or exclusively supported by their associated Arcana.",
       "info_entries": [],
       "related": {
         "weapons": [],
@@ -62183,15 +62621,57 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Astronomia",
-      "icon": "assets/icons/affinities/astronomia.png",
+      "name": "Blood Astronomia",
+      "icon": "assets/icons/affinities/blood_astronomia.png",
       "color": "#2d2d5a",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "",
-      "info_entries": [],
+      "description": "Blood Astronomia (XXI) adds weapon effects that deal damage and benefit from Amount, Magnet, and Duration when they would normally be non-damaging and/or ignore these stats.",
+      "info_entries": [
+        {
+          "objects": [
+            "Clock Lancet"
+          ],
+          "blurb": "Places low-damage zones with Magnet-based size that are affected Duration and apply an Amount-based slow affect."
+        },
+        {
+          "objects": [
+            "Laurel"
+          ],
+          "blurb": "Places damaging zones with Magnet-based size, that deal damage multiples times both based on Amount, and are affected Duration."
+        },
+        {
+          "objects": [
+            "Pentagram",
+            "Gorgeous Moon"
+          ],
+          "blurb": "Places instant-kill zones that are affected by Amount and Duration."
+        },
+        {
+          "objects": [
+            "Garlic",
+            "Soul Eater",
+            "Song of Mana",
+            "Mannajja",
+            "Sonic Dash",
+            "Rapidus Fio"
+          ],
+          "blurb": "Places persistent damaging effects with Magnet-based size that are affected by Amount and Duration."
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Garlic",
+          "Soul Eater",
+          "Pentagram",
+          "Gorgeous Moon",
+          "Song of Mana",
+          "Mannajja",
+          "Clock Lancet",
+          "Laurel",
+          "Sonic Dash",
+          "Rapidus Fio"
+        ],
         "passives": [],
         "characters": [],
         "arcana": [
@@ -62205,10 +62685,150 @@ window.VS_DATA = {
       "color": "#71599e",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "",
-      "info_entries": [],
+      "description": "The listed Arcana add a bouncing effect to supported weapon projectiles causing them to bounce off of enemies or the edge of the screen.",
+      "info_entries": [
+        {
+          "objects": [
+            "Carréllo"
+          ],
+          "blurb": "Gains 3 (max 6) additional bounces from each Arcana.",
+          "conditions": [
+            "Iron Blue Will (VII)",
+            "Waltz of Pearls (XI)"
+          ]
+        },
+        {
+          "objects": [
+            "Death Spiral"
+          ],
+          "blurb": "Weapon projectiles bounce 1 time off of the screen edge.",
+          "conditions": [
+            "Iron Blue Will (VII)"
+          ]
+        },
+        {
+          "objects": [
+            "Prototype A",
+            "Prototype B",
+            "Prototype C"
+          ],
+          "blurb": "Projectiles fired by the drones gain 1 additional bounce.",
+          "conditions": [
+            "Iron Blue Will (VII)"
+          ]
+        },
+        {
+          "objects": [
+            "Knife",
+            "Thousand Edge",
+            "Million Cut",
+            "Axe",
+            "Legacy of Death: Soul River",
+            "Phiera Der Tuphello",
+            "Eight The Sparrow",
+            "Carréllo",
+            "Flash Arrow",
+            "Millionaire",
+            "Javelin",
+            "Long Inus",
+            "Iron Ball",
+            "Wrecking Ball",
+            "Curved Knife",
+            "Bwaka Knife",
+            "Shuriken",
+            "Yagyu Shuriken"
+          ],
+          "blurb": "Weapon projectiles gain the ability to bounce 3 times before expiring.",
+          "conditions": [
+            "Iron Blue Will (VII)"
+          ]
+        },
+        {
+          "objects": [
+            "Hellfire",
+            "Wave Beam"
+          ],
+          "blurb": "Weapon projectiles bounce 1 time off of the screen edge.",
+          "conditions": [
+            "Waltz of Pearls (XI)"
+          ]
+        },
+        {
+          "objects": [
+            "Cross",
+            "Heaven Sword"
+          ],
+          "blurb": "Weapon projectiles bounce 2 times off of the screen edge.",
+          "conditions": [
+            "Waltz of Pearls (XI)"
+          ]
+        },
+        {
+          "objects": [
+            "Magic Wand",
+            "Holy Wand",
+            "Spirit of Light",
+            "Fire Wand",
+            "Kardía Phlegeton",
+            "Arch Angle",
+            "Hats",
+            "Sonic Bloom",
+            "Gale Force",
+            "Pneuma Tempestas",
+            "Rock Riot",
+            "Gemma Torpor",
+            "Gros Michel",
+            "Cavendish"
+          ],
+          "blurb": "Weapon projectiles gain the ability to bounce 3 times before expiring.",
+          "conditions": [
+            "Waltz of Pearls (XI)"
+          ]
+        }
+      ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Magic Wand",
+          "Holy Wand",
+          "Spirit of Light",
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Arch Angle",
+          "Fire Wand",
+          "Hellfire",
+          "Kardía Phlegeton",
+          "Phiera Der Tuphello",
+          "Eight The Sparrow",
+          "Carréllo",
+          "Flash Arrow",
+          "Millionaire",
+          "Hats",
+          "Prototype A",
+          "Prototype B",
+          "Prototype C",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Gale Force",
+          "Pneuma Tempestas",
+          "Rock Riot",
+          "Gemma Torpor",
+          "Gros Michel",
+          "Cavendish"
+        ],
         "passives": [],
         "characters": [],
         "arcana": [
@@ -62218,13 +62838,583 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Counterpart",
-      "icon": "assets/icons/affinities/counterpart.png",
+      "name": "Critical Damage",
+      "icon": "assets/icons/affinities/critical_damage.png",
+      "color": "#878787",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "Some weapons possess low innate crit chance which is generally affected by Luck but all Critical Damage builds benefit from Slash (XVI) for its double critical multiplier and elevated critical chance.",
+      "info_entries": [
+        {
+          "objects": [
+            "Celestial Voulge",
+            "Santa Javelin"
+          ],
+          "blurb": "Innate chance to deal 2x critical damage (5%)."
+        },
+        {
+          "objects": [
+            "Claimh Solais"
+          ],
+          "blurb": "Global modifier applies to Critical Damage (max +100%)."
+        },
+        {
+          "objects": [
+            "Tyrfing",
+            "Rune Sword"
+          ],
+          "blurb": "Innate chance to deal 3x critical damage."
+        },
+        {
+          "objects": [
+            "Rune Sword"
+          ],
+          "blurb": "Critical damage also affected by Area, Speed, and Duration."
+        },
+        {
+          "objects": [
+            "Gungnir-Souris"
+          ],
+          "blurb": "Innate chance to deal 2x critical damage (25%)"
+        },
+        {
+          "objects": [
+            "Flamberge",
+            "Zweihander",
+            "Galatyn"
+          ],
+          "blurb": "Innate chance to deal 2x critical damage (2%)."
+        },
+        {
+          "objects": [
+            "Stamazza"
+          ],
+          "blurb": "Innate chance to deal 100x critical damage (1%), unaffected by Slash (XVI)."
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Legacy of Death: Soul River",
+          "Cross",
+          "Heaven Sword",
+          "Arch Angle",
+          "Yatta Daikarin",
+          "Greatest Jubilee",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Victory Sword",
+          "Celestial Voulge",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Muramasa",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Stamazza",
+          "Gungnir-Souris",
+          "Tyrfing",
+          "Rune Sword",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Gros Michel",
+          "Cavendish"
+        ],
+        "passives": [],
+        "characters": [
+          "Reinhardt Schneider (Tyrfing)",
+          "Reinhardt Schneider (Morning Star)",
+          "Reinhardt Schneider (Spectral Sword)",
+          "Reinhardt Schneider (Coat of Arms)"
+        ],
+        "arcana": [
+          "Slash (XVI)"
+        ]
+      }
+    },
+    {
+      "name": "Divine Bloodline",
+      "icon": "assets/icons/affinities/divine_bloodline.png",
+      "color": "#000016",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Divine Bloodline (IX)"
+        ]
+      }
+    },
+    {
+      "name": "Fire",
+      "icon": "assets/icons/affinities/fire.png",
+      "color": "#9e442d",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "The listed Arcana support weapons that with a fire-based damage effects by adding explosive AoEs and causing enemies to drop Scorched Souls on kill, improving Might or Max Health.",
+      "info_entries": [
+        {
+          "objects": [
+            "Dario Bossi"
+          ],
+          "blurb": "The weapons that are affected by Dario's ability are the same as those supported by Heir of Fate (XIX)."
+        },
+        {
+          "objects": [
+            "Count Olrox"
+          ],
+          "blurb": "Gains a Nduja Fritta Tanto effect during the duration of Megalo State."
+        },
+        {
+          "objects": [
+            "Fire Wand",
+            "Hellfire",
+            "Kardía Phlegeton",
+            "Valkyrie Turner",
+            "Svarog Statue",
+            "Darkness Illusion",
+            "Tri-Bracelet",
+            "Flames of Misspell",
+            "Ashes of Muspell",
+            "Firearm",
+            "Fire-L3GS",
+            "Raging Fire",
+            "Salamender",
+            "Dies Irae",
+            "Punch",
+            "Pressure Point",
+            "Gilded Hand",
+            "Saber Machine Gun",
+            "Hecaton Machine Gun",
+            "Divergence",
+            "Spirit Rings",
+            "Rings of Calamity"
+          ],
+          "blurb": "Listed weapons benefit from both Arcana effects, causing their attacks to gain explosive AoEs that cause all enemies killed to drop Scorched Souls.",
+          "conditions": [
+            "Heart of Fire (XIX)",
+            "Heir of Fate (XIX)"
+          ]
+        },
+        {
+          "objects": [
+            "Aura Blast",
+            "Phiera Der Tuphello",
+            "Red Muscle",
+            "Zhar Ptytsia",
+            "Lapiste Tepisto",
+            "Ammo Appalate",
+            "Horse Cartridge",
+            "Gunastrophe",
+            "Prismatic Missile",
+            "Luminaire",
+            "Long Gun",
+            "Prototype A",
+            "Short Gun",
+            "Prototype B",
+            "Spread Shot",
+            "Prototype C",
+            "Homing Miss",
+            "Multistage Missiles",
+            "Vanitas Whip",
+            "Aurablaster Tip",
+            "Speculo Raging Fire",
+            "Hand Grenade",
+            "The RPG",
+            "Super Missile",
+            "Hydra Cannon",
+            "Hyperion Bazooka"
+          ],
+          "blurb": "The listed weapons gain an explosive effect on their projectiles but do not count as Fire damage for Scorched Soul drops.",
+          "conditions": [
+            "Heart of Fire (XIX)"
+          ]
+        },
+        {
+          "objects": [
+            "Santa Water",
+            "La Borra",
+            "Hydro Pump Climax",
+            "Bracelet",
+            "Bi-Bracelet",
+            "Alchemy Whip",
+            "Vampire Killer",
+            "Dextro Custos",
+            "Trinum Custodem",
+            "Dominus Anger",
+            "Power of Sire",
+            "Infernolatro",
+            "NaneInferno",
+            "Nduja Fritta Tanto"
+          ],
+          "blurb": "The listed weapons are considered Fire damage and cause Scorched Souls to drop from killed enemies but do not gain an explosive effect on their projectiles.",
+          "conditions": [
+            "Heir of Fate (XIX)"
+          ]
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Fire Wand",
+          "Hellfire",
+          "Aura Blast",
+          "Kardía Phlegeton",
+          "Santa Water",
+          "La Borra",
+          "Hydro Pump Climax",
+          "Zhar Ptytsia",
+          "Phiera Der Tuphello",
+          "Red Muscle",
+          "Dies Irae",
+          "Valkyrie Turner",
+          "Svarog Statue",
+          "Darkness Illusion",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Prismatic Missile",
+          "Luminaire",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "Firearm",
+          "Homing Miss",
+          "Multistage Missiles",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Hand Grenade",
+          "The RPG",
+          "Raging Fire",
+          "Speculo Raging Fire",
+          "Salamender",
+          "Dextro Custos",
+          "Trinum Custodem",
+          "Dominus Anger",
+          "Power of Sire",
+          "Punch",
+          "Pressure Point",
+          "Gilded Hand",
+          "Saber Machine Gun",
+          "Hecaton Machine Gun",
+          "Divergence",
+          "Super Missile",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Spirit Rings",
+          "Rings of Calamity",
+          "Infernolatro",
+          "NaneInferno"
+        ],
+        "passives": [],
+        "characters": [
+          "Dario Bossi",
+          "Count Olrox"
+        ],
+        "arcana": [
+          "Heart of Fire (XIX)",
+          "Heir of Fate (XIX)"
+        ]
+      }
+    },
+    {
+      "name": "Freeze",
+      "icon": "assets/icons/affinities/freeze.png",
+      "color": "#169e9d",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "The listed Arcana support weapons that with a freeze-based damage effects by adding explosive AoEs, granting a freezing effect to weapons, and causing enemies to drop Crystallized Souls on kill, improving Growth or Recovery.",
+      "info_entries": [
+        {
+          "objects": [
+            "Glass Fandango",
+            "Celestial Voulge"
+          ],
+          "blurb": "Deals 3x damage to frozen enemies."
+        },
+        {
+          "objects": [
+            "Garlic",
+            "Soul Eater",
+            "Dark Frogamorphosis"
+          ],
+          "blurb": "Each hit reduces the freeze resistance of enemies that are not resistant to debuffs."
+        },
+        {
+          "objects": [
+            "Prism Lass",
+            "Prism Damsel",
+            "Icebrand",
+            "Fleuret",
+            "Dress Sword",
+            "Espada Ropera"
+          ],
+          "blurb": "Listed weapons have innate freezing effects that are improved with Jail of Crystal (XII)",
+          "conditions": [
+            "Out of Bounds (XII)",
+            "Jail of Crystal (XIV)"
+          ]
+        },
+        {
+          "objects": [
+            "Magic Wand",
+            "Holy Wand",
+            "Spirit of Light",
+            "Runetracer",
+            "NO FUTURE",
+            "Carnage Heart",
+            "Eight The Sparrow",
+            "Twice Upon a Time",
+            "Cygnus",
+            "Bracelet",
+            "Bi-Bracelet",
+            "Tri-Bracelet",
+            "Lapiste Tepisto",
+            "Penshin Fatcha",
+            "Tonno Subito",
+            "Tonnado",
+            "Tonn'omoto",
+            "Tonn'oddeeo",
+            "Tonne",
+            "Unsurpassed",
+            "Miracle of Multiplication",
+            "Prismatic Missile",
+            "Luminaire",
+            "C-U-Laser",
+            "Pronto Beam",
+            "Dragon Water Whip",
+            "Hydrostormer Tip",
+            "Ice Fang",
+            "Speculo Ice Fang",
+            "Cocytus",
+            "Ninth Circle",
+            "Hydra Cannon",
+            "Hyperion Bazooka",
+            "Spirit Rings",
+            "Rings of Calamity"
+          ],
+          "blurb": "Listed weapons only have a freezing effect when using Jail of Crystal and can then interact with other Freeze Arcana.",
+          "conditions": [
+            "Out of Bounds (XII)",
+            "Jail of Crystal (XIV)"
+          ]
+        },
+        {
+          "objects": [
+            "Clock Lancet",
+            "Infinite Corridor",
+            "Celestial Voulge",
+            "Mirage Robe",
+            "J'Odore",
+            "Time Warp",
+            "Orologion",
+            "Sorbetto"
+          ],
+          "blurb": "Listed weapons have innate freeze effects that are not reliant on Arcana support.",
+          "conditions": [
+            "Out of Bounds (XII)"
+          ]
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Magic Wand",
+          "Holy Wand",
+          "Spirit of Light",
+          "Icebrand",
+          "Ninth Circle",
+          "Garlic",
+          "Soul Eater",
+          "Dark Frogamorphosis",
+          "Runetracer",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Cygnus",
+          "Eight The Sparrow",
+          "Twice Upon a Time",
+          "Clock Lancet",
+          "Infinite Corridor",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Glass Fandango",
+          "Celestial Voulge",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication",
+          "Mirage Robe",
+          "J'Odore",
+          "Prismatic Missile",
+          "Luminaire",
+          "C-U-Laser",
+          "Pronto Beam",
+          "Prism Lass",
+          "Prism Damsel",
+          "Time Warp",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Ice Fang",
+          "Speculo Ice Fang",
+          "Cocytus",
+          "Fleuret",
+          "Dress Sword",
+          "Espada Ropera",
+          "Hydra Cannon",
+          "Hyperion Bazooka",
+          "Spirit Rings",
+          "Rings of Calamity"
+        ],
+        "passives": [],
+        "characters": [
+          "She-Moon Eeta",
+          "She-Moon Eeta (Reborn)",
+          "Frozenshade"
+        ],
+        "arcana": [
+          "Out of Bounds (XII)",
+          "Jail of Crystal (XIV)",
+          "Crystal Cries (XII)"
+        ]
+      }
+    },
+    {
+      "name": "Gemini",
+      "icon": "assets/icons/affinities/gemini.png",
       "color": "#162d44",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "Gemini is the sole support for Counterpart weapons; the Counterpart trait references base weapons and their evolutions that come with a Counterpart along with the Counterparts themselves while Gemini (I) references only the base weapons and evolutions.",
-      "info_entries": [],
+      "description": "Gemini (0) grants a counterpart to listed weapons and their evolutions that mirror the attack patterns of the support weapon.",
+      "info_entries": [
+        {
+          "objects": [
+            "Peachone",
+            "Ebony Wings",
+            "Vandalier",
+            "Phiera Der Tuphello",
+            "Eight The Sparrow",
+            "Phieraggi",
+            "Gatti Amari",
+            "Vicious Hunger",
+            "Ammo Appalate",
+            "Gunastrophe",
+            "Santa Javelin",
+            "Seraphic Cry",
+            "Shadow Servant",
+            "Ophion",
+            "Party Popper",
+            "Sharp Tongue",
+            "Impostongue",
+            "Prism Lass",
+            "Time Warp",
+            "Raging Fire",
+            "Salamender",
+            "Ice Fang",
+            "Cocytus",
+            "Rock Riot",
+            "Pneuma Tempestas",
+            "Gale Force",
+            "Gemma Torpor",
+            "Fulgur",
+            "Tenebris Tonitrus",
+            "Keremet Bubbles",
+            "Keremet Morbus",
+            "Refectio",
+            "Nightmare",
+            "Hex",
+            "Sanctuary",
+            "Globus",
+            "Nitesco",
+            "Anura",
+            "Dark Frogamorphosis",
+            "Nduja Fritta Tanto",
+            "Sorbetto"
+          ],
+          "blurb": "Base weapons and their evolutions or unions that have a counterpart when Gemini (0) is active."
+        },
+        {
+          "objects": [
+            "Speculo Anura",
+            "Cygnus",
+            "Zhar Ptytsia",
+            "Red Muscle",
+            "Twice Upon a Time",
+            "Flock Destroyer",
+            "Horse Cartridge",
+            "Levelin'Eh",
+            "Silver Sliver",
+            "Party Pooper",
+            "Silver Tongue",
+            "Prism Damsel",
+            "Speculo Raging Fire",
+            "Speculo Ice Fang",
+            "Speculo Gale Force",
+            "Speculo Rock Riot",
+            "Speculo Fulgur",
+            "Speculo Keremet Bubbles",
+            "Speculo Hex",
+            "Speculo Refectio",
+            "Speculo Globus"
+          ],
+          "blurb": "Counterpart weapons granted by Gemini (0), listed weapons mirror attack patterns of the supported base weapon and can have their own unique Arcana support."
+        }
+      ],
       "related": {
         "weapons": [
           "Speculo Anura",
@@ -62312,6 +63502,42 @@ window.VS_DATA = {
             "Stake to Your Heart (0)"
           ],
           "blurb": "Supports Level 1 archetypes by suspending experience gain from experience gems."
+        },
+        {
+          "objects": [
+            "Porta Ladonna"
+          ],
+          "blurb": "-90% Cooldown at level 1"
+        },
+        {
+          "objects": [
+            "Suor Clerici"
+          ],
+          "blurb": "+400% Area at level 1"
+        },
+        {
+          "objects": [
+            "Sir Ambrojoe"
+          ],
+          "blurb": "+10 Amount at level 1"
+        },
+        {
+          "objects": [
+            "Santa Ladonna"
+          ],
+          "blurb": "-70% Cooldown at level 1"
+        },
+        {
+          "objects": [
+            "Tera"
+          ],
+          "blurb": "-80% Cooldown at level 1"
+        },
+        {
+          "objects": [
+            "Fleaman"
+          ],
+          "blurb": "Forced to start with Game Killer (0) preventing experience gain. Also choosing Stake to your Heart (0) can largely negate the effect Max Health malus."
         }
       ],
       "related": {
@@ -62332,15 +63558,54 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Healing Damage",
+      "icon": "assets/icons/affinities/healing_damage.png",
+      "color": "#570103",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "The listed Arcana convert player healing into a source of damage and the supported weapons have healing effects that benefit this archetype.",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Bloody Tear",
+          "Fuwalafuwaloo",
+          "Soul Eater",
+          "Dark Frogamorphosis",
+          "Celestial Dusting",
+          "Silver Wind",
+          "Festive Winds",
+          "Night Sword",
+          "Muramasa",
+          "Lifesign Scan",
+          "Paranormal Scan"
+        ],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Sarabande of Healing (VI)",
+          "Wandering the Jet Black (XXI)"
+        ]
+      }
+    },
+    {
       "name": "Limited",
       "icon": "assets/icons/affinities/limited.png",
       "color": "#2d5a87",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "",
+      "description": "The primary support for a limited weapon build is Silent Old Sanctuary (XX) and while any weapon can generally function in this archetype Para Kooleo and Penshin Fatcha are notable mentions.",
       "info_entries": [],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Penshin Fatcha",
+          "Tonno Subito",
+          "Tonnado",
+          "Tonn'omoto",
+          "Tonn'oddeeo",
+          "Tonne",
+          "Unsurpassed",
+          "Miracle of Multiplication"
+        ],
         "passives": [],
         "characters": [
           "Para Kooleo (Penshin Fatcha)",
@@ -62354,6 +63619,110 @@ window.VS_DATA = {
         "arcana": [
           "Beginning (X)",
           "Silent Old Sanctuary (XX)"
+        ]
+      }
+    },
+    {
+      "name": "Pale Diamond",
+      "icon": "assets/icons/affinities/pale_diamond.png",
+      "color": "#6a4010",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Pale Diamond Incursion (V)"
+        ]
+      }
+    },
+    {
+      "name": "Plentiful Pickups",
+      "icon": "assets/icons/affinities/plentiful_pickups.png",
+      "color": "#01715a",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Mad Groove (VIII)",
+          "Hidden Anathema (III)",
+          "Hail from the Future (X)"
+        ]
+      }
+    },
+    {
+      "name": "Resurrection",
+      "icon": "assets/icons/affinities/resurrection.png",
+      "color": "#9e7116",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Awake (IV)"
+        ]
+      }
+    },
+    {
+      "name": "Sapphire Mist",
+      "icon": "assets/icons/affinities/sapphire_mist.png",
+      "color": "#6a4010",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Sapphire Mist (I)"
+        ]
+      }
+    },
+    {
+      "name": "Tragic Princess",
+      "icon": "assets/icons/affinities/tragic_princess.png",
+      "color": "#9e8771",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Tragic Princess (III)"
+        ]
+      }
+    },
+    {
+      "name": "Twilight Requiem",
+      "icon": "assets/icons/affinities/twilight_requiem.png",
+      "color": "#001616",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [],
+        "passives": [],
+        "characters": [],
+        "arcana": [
+          "Twilight Requiem (II)"
         ]
       }
     },
@@ -62466,7 +63835,6 @@ window.VS_DATA = {
           "Svarog Statue",
           "Darkness Illusion",
           "Infinite Corridor",
-          "Crimson Shroud",
           "Bone",
           "Anima of Mortaccio",
           "Cherry Bomb",
@@ -62810,7 +64178,6 @@ window.VS_DATA = {
           "Carnage Heart",
           "Lightning Ring",
           "Song of Mana",
-          "Crimson Shroud",
           "Pako Battiliar",
           "Mazo Familiar",
           "Victory Sword",
@@ -62955,7 +64322,6 @@ window.VS_DATA = {
         "weapons": [
           "NO FUTURE",
           "Carnage Heart",
-          "Crimson Shroud",
           "Pako Battiliar",
           "Mazo Familiar",
           "Victory Sword",
@@ -63491,7 +64857,6 @@ window.VS_DATA = {
         ],
         "arcana": [
           "Silent Old Sanctuary (XX)",
-          "Blood Astronomia (XXI)",
           "Pale Diamond Incursion (V)"
         ]
       }
@@ -63519,7 +64884,6 @@ window.VS_DATA = {
           "Dies Irae",
           "Shadow Pinion",
           "Infinite Corridor",
-          "Crimson Shroud",
           "Bone",
           "Anima of Mortaccio",
           "Celestial Dusting",
@@ -63656,6 +65020,19 @@ window.VS_DATA = {
             "Rings of Calamity"
           ],
           "blurb": "Gains the Aqua Spheres glimmer tech at +55% Duration."
+        },
+        {
+          "objects": [
+            "Garlic",
+            "Soul Eater",
+            "Pentagram",
+            "Gorgeous Moon",
+            "Laurel"
+          ],
+          "blurb": "Only affected by Duration when using Blood Astronomia (XXI)",
+          "conditions": [
+            "Blood Astronomia (XXI)"
+          ]
         }
       ],
       "related": {
@@ -63923,230 +65300,6 @@ window.VS_DATA = {
           "Jail of Crystal (XIV)",
           "Lost & Found Painting (XVII)",
           "Blood Astronomia (XXI)"
-        ]
-      }
-    },
-    {
-      "name": "Fire",
-      "icon": "assets/icons/affinities/fire.png",
-      "color": "#9e442d",
-      "base_affinity": "Fire",
-      "is_parent": true,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [
-          "Fire Wand",
-          "Hellfire",
-          "Aura Blast",
-          "Kardía Phlegeton",
-          "Santa Water",
-          "La Borra",
-          "Hydro Pump Climax",
-          "Zhar Ptytsia",
-          "Phiera Der Tuphello",
-          "Red Muscle",
-          "Dies Irae",
-          "Valkyrie Turner",
-          "Svarog Statue",
-          "Darkness Illusion",
-          "Bracelet",
-          "Bi-Bracelet",
-          "Tri-Bracelet",
-          "Lapiste Tepisto",
-          "Ammo Appalate",
-          "Horse Cartridge",
-          "Gunastrophe",
-          "Flames of Misspell",
-          "Ashes of Muspell",
-          "Prismatic Missile",
-          "Luminaire",
-          "Long Gun",
-          "Prototype A",
-          "Short Gun",
-          "Prototype B",
-          "Spread Shot",
-          "Prototype C",
-          "Firearm",
-          "Homing Miss",
-          "Multistage Missiles",
-          "Alchemy Whip",
-          "Vampire Killer",
-          "Vanitas Whip",
-          "Aurablaster Tip",
-          "Hand Grenade",
-          "The RPG",
-          "Raging Fire",
-          "Speculo Raging Fire",
-          "Salamender",
-          "Alucard Swords",
-          "Alucard Shield",
-          "Dextro Custos",
-          "Trinum Custodem",
-          "Dominus Anger",
-          "Power of Sire",
-          "Punch",
-          "Pressure Point",
-          "Gilded Hand",
-          "Saber Machine Gun",
-          "Hecaton Machine Gun",
-          "Divergence",
-          "Super Missile",
-          "Hydra Cannon",
-          "Hyperion Bazooka",
-          "Spirit Rings",
-          "Rings of Calamity",
-          "Infernolatro",
-          "NaneInferno"
-        ],
-        "passives": [],
-        "characters": [
-          "Dario Bossi",
-          "Count Olrox",
-          "Megalo Olrox (Dark Rift)",
-          "Megalo Olrox (Ebony Diabologue)"
-        ],
-        "arcana": [
-          "Heart of Fire (XIX)",
-          "Heir of Fate (XIX)"
-        ]
-      }
-    },
-    {
-      "name": "Freeze",
-      "icon": "assets/icons/affinities/freeze.png",
-      "color": "#169e9d",
-      "base_affinity": "Freeze",
-      "is_parent": true,
-      "description": "",
-      "info_entries": [
-        {
-          "objects": [
-            "Glass Fandango"
-          ],
-          "blurb": "Cannot freeze directly but deals 3x damage to frozen enemies."
-        },
-        {
-          "objects": [
-            "Celestial Voulge"
-          ],
-          "blurb": "Innate chance freeze enemies (5%)]."
-        },
-        {
-          "objects": [
-            "Fleuret",
-            "Dress Sword",
-            "Espada Ropera",
-            "Hydra Cannon",
-            "Hyperion Bazooka"
-          ],
-          "blurb": "Glimmer tech can freeze enemies"
-        }
-      ],
-      "related": {
-        "weapons": [
-          "Magic Wand",
-          "Holy Wand",
-          "Spirit of Light",
-          "Icebrand",
-          "Ninth Circle",
-          "Garlic",
-          "Soul Eater",
-          "Dark Frogamorphosis",
-          "Runetracer",
-          "NO FUTURE",
-          "Carnage Heart",
-          "Cygnus",
-          "Eight The Sparrow",
-          "Twice Upon a Time",
-          "Clock Lancet",
-          "Infinite Corridor",
-          "Bracelet",
-          "Bi-Bracelet",
-          "Tri-Bracelet",
-          "Lapiste Tepisto",
-          "Glass Fandango",
-          "Celestial Voulge",
-          "Tonno Subito",
-          "Tonnado",
-          "Tonn'omoto",
-          "Tonn'oddeeo",
-          "Tonne",
-          "Unsurpassed",
-          "Miracle of Multiplication",
-          "Mirage Robe",
-          "J'Odore",
-          "Prismatic Missile",
-          "Luminaire",
-          "C-U-Laser",
-          "Pronto Beam",
-          "Prism Lass",
-          "Prism Damsel",
-          "Time Warp",
-          "Dragon Water Whip",
-          "Hydrostormer Tip",
-          "Ice Fang",
-          "Speculo Ice Fang",
-          "Cocytus",
-          "Fleuret",
-          "Dress Sword",
-          "Espada Ropera",
-          "Hydra Cannon",
-          "Hyperion Bazooka",
-          "Spirit Rings",
-          "Rings of Calamity"
-        ],
-        "passives": [],
-        "characters": [
-          "She-Moon Eeta",
-          "She-Moon Eeta (Reborn)",
-          "Frozenshade"
-        ],
-        "arcana": [
-          "Out of Bounds (XII)",
-          "Jail of Crystal (XIV)",
-          "Crystal Cries (XII)"
-        ]
-      }
-    },
-    {
-      "name": "Orologion",
-      "icon": "assets/icons/affinities/orologion.png",
-      "color": "#9e823a",
-      "base_affinity": "Freeze",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [
-        {
-          "objects": [
-            "Endo Gears",
-            "Peri Pendulum",
-            "Myo Lift",
-            "Epi Head",
-            "Clock Tower"
-          ],
-          "blurb": "Damage receives a bonus from the number of Orologions found."
-        }
-      ],
-      "related": {
-        "weapons": [
-          "Glass Fandango",
-          "Celestial Voulge",
-          "Endo Gears",
-          "Peri Pendulum",
-          "Myo Lift",
-          "Epi Head",
-          "Clock Tower"
-        ],
-        "passives": [],
-        "characters": [
-          "Zephyr (Knife)",
-          "Zephyr (Curved Knife)"
-        ],
-        "arcana": [
-          "Out of Bounds (XII)",
-          "Hail from the Future (X)",
-          "Crystal Cries (XII)"
         ]
       }
     },
@@ -64626,135 +65779,19 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Critical Damage",
-      "icon": "assets/icons/affinities/critical_damage.png",
-      "color": "#878787",
+      "name": "Food",
+      "icon": "assets/icons/affinities/food.png",
+      "color": "#9e5107",
       "base_affinity": "Luck",
       "is_parent": false,
-      "description": "Some weapons possess low innate crit chance which is generally affected by Luck but all Critical Damage builds benefit from Slash (XVI) for its double critical multiplier and elevated critical chance.",
-      "info_entries": [
-        {
-          "objects": [
-            "Celestial Voulge",
-            "Santa Javelin"
-          ],
-          "blurb": "Innate chance to deal 2x critical damage (5%)."
-        },
-        {
-          "objects": [
-            "Claimh Solais"
-          ],
-          "blurb": "Global modifier applies to Critical Damage (max +100%)."
-        },
-        {
-          "objects": [
-            "Tyrfing",
-            "Rune Sword"
-          ],
-          "blurb": "Innate chance to deal 3x critical damage."
-        },
-        {
-          "objects": [
-            "Rune Sword"
-          ],
-          "blurb": "Critical damage also affected by Area, Speed, and Duration."
-        },
-        {
-          "objects": [
-            "Gungnir-Souris"
-          ],
-          "blurb": "Innate chance to deal 2x critical damage (25%)"
-        },
-        {
-          "objects": [
-            "Flamberge",
-            "Zweihander",
-            "Galatyn"
-          ],
-          "blurb": "Innate chance to deal 2x critical damage (2%)."
-        },
-        {
-          "objects": [
-            "Stamazza"
-          ],
-          "blurb": "Innate chance to deal 100x critical damage (1%), unaffected by Slash (XVI)."
-        }
-      ],
+      "description": "",
+      "info_entries": [],
       "related": {
-        "weapons": [
-          "Whip",
-          "Bloody Tear",
-          "Vento Sacro",
-          "Fuwalafuwaloo",
-          "Knife",
-          "Thousand Edge",
-          "Million Cut",
-          "Axe",
-          "Death Spiral",
-          "Legacy of Death: Soul River",
-          "Cross",
-          "Heaven Sword",
-          "Arch Angle",
-          "Yatta Daikarin",
-          "Greatest Jubilee",
-          "Ammo Appalate",
-          "Horse Cartridge",
-          "Gunastrophe",
-          "Victory Sword",
-          "Celestial Voulge",
-          "Santa Javelin",
-          "Levelin'Eh",
-          "Seraphic Cry",
-          "Muramasa",
-          "Eskizzibur",
-          "Legionnaire",
-          "Flash Arrow",
-          "Millionaire",
-          "Alchemy Whip",
-          "Vampire Killer",
-          "Wind Whip",
-          "Spirit Tornado Tip",
-          "Platinum Whip",
-          "Cross Crasher Tip",
-          "Dragon Water Whip",
-          "Hydrostormer Tip",
-          "Sonic Whip",
-          "Crissaegrim Tip",
-          "Jet Black Whip",
-          "Mormegil Tip",
-          "Vibhuti Whip",
-          "Vanitas Whip",
-          "Aurablaster Tip",
-          "Stamazza",
-          "Gungnir-Souris",
-          "Tyrfing",
-          "Rune Sword",
-          "Confodere",
-          "Vol Confodere",
-          "Melio Confodere",
-          "Pocket Knife",
-          "Claimh Solais",
-          "Flamberge",
-          "Zweihander",
-          "Galatyn",
-          "Khukuri",
-          "Jetstream",
-          "Twin Dragon",
-          "Gekkabijin",
-          "Bullova",
-          "Falconwind",
-          "Gros Michel",
-          "Cavendish"
-        ],
+        "weapons": [],
         "passives": [],
-        "characters": [
-          "Reinhardt Schneider (Tyrfing)",
-          "Reinhardt Schneider (Morning Star)",
-          "Reinhardt Schneider (Spectral Sword)",
-          "Reinhardt Schneider (Coat of Arms)"
-        ],
+        "characters": [],
         "arcana": [
-          "Slash (XVI)"
+          "Hidden Anathema (III)"
         ]
       }
     },
@@ -64989,7 +66026,6 @@ window.VS_DATA = {
         "weapons": [
           "Bloody Tear",
           "Fuwalafuwaloo",
-          "Crimson Shroud",
           "Mazo Familiar",
           "Paranormal Scan",
           "Jet Black Whip",
@@ -65198,6 +66234,8 @@ window.VS_DATA = {
         ],
         "arcana": [
           "Divine Bloodline (IX)",
+          "Crystal Cries (XII)",
+          "Heir of Fate (XIX)",
           "Wandering the Jet Black (XXI)"
         ]
       }
@@ -65301,7 +66339,6 @@ window.VS_DATA = {
           "Valkyrie Turner",
           "Svarog Statue",
           "Darkness Illusion",
-          "Crimson Shroud",
           "Bone",
           "Anima of Mortaccio",
           "Cherry Bomb",
@@ -66037,7 +67074,6 @@ window.VS_DATA = {
           "Venus Crescent",
           "Vicious Hunger",
           "Soul Steal",
-          "Crimson Shroud",
           "Celestial Dusting",
           "Profusione D'Amore",
           "Silver Wind",
@@ -66936,7 +67972,7 @@ window.VS_DATA = {
     {
       "name": "Union",
       "icon": "assets/icons/affinities/union.png",
-      "color": "#060b83",
+      "color": "#6a4010",
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
@@ -67113,7 +68149,6 @@ window.VS_DATA = {
           "Valkyrie Turner",
           "Svarog Statue",
           "Darkness Illusion",
-          "Crimson Shroud",
           "Cherry Bomb",
           "Yatta Daikarin",
           "Celestial Dusting",

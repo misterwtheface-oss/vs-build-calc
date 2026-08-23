@@ -517,15 +517,49 @@ function splitTopLevel(s, sep) {
 function parseInfoEntries(raw, ctx = '') {
   const cell = unwrap(raw);            // strips the outer `{ … }` and normalizes `{-}` → ''
   if (!cell) return [];
+  const norm = s => s.replace(/\s+/g, ' ').trim();
   const entries = [];
   for (const group of splitTopLevel(cell, '|').map(g => g.trim()).filter(Boolean)) {
     const at = group.indexOf(':[');
     if (at < 0) { console.warn(`info: group without ":[" (${ctx}): ${group}`); continue; }
     let key = group.slice(0, at).trim();
-    let blurb = group.slice(at + 1).trim().replace(/^\[/, '').replace(/\]$/, '').replace(/\s+/g, ' ').trim();
     if (key.startsWith('[') && key.endsWith(']')) key = key.slice(1, -1);
-    const objects = key.split(',').map(s => s.trim()).filter(Boolean);
-    if (objects.length && blurb) entries.push({ objects, blurb });
+    // Extract the bracketed `[ … ]` block(s) that follow the key (detection is by block count).
+    //   ONE block  → normal entry: `[objects]:[blurb]` (key = objects).
+    //   TWO blocks → conditional container: `[condition]:[objects]:[blurb]` (canonical 3-list form;
+    //                the condition key may also be written bare, brackets are stripped either way).
+    //                The condition is one or more Arcana (comma-separated) that gate the objects;
+    //                2+ arcana render as ONE container (both icons + blended color). Rendered as an
+    //                arcana-colored container on the trait detail page.
+    const blocks = [];
+    const rest = group.slice(at);
+    for (let i = 0; i < rest.length; ) {
+      const open = rest.indexOf('[', i);
+      if (open < 0) break;
+      let depth = 0, end = -1;
+      for (let j = open; j < rest.length; j++) {
+        if (rest[j] === '[') depth++;
+        else if (rest[j] === ']') { depth--; if (depth === 0) { end = j; break; } }
+      }
+      if (end < 0) break;
+      blocks.push(rest.slice(open + 1, end));
+      i = end + 1;
+    }
+    if (blocks.length >= 2) {
+      // The condition key may list MULTIPLE arcana (comma-separated) — e.g. two arcana of the same
+      // trait that gate the same objects. They collapse into ONE container (both icons, blended color).
+      const conditions = key.split(',').map(s => s.trim()).filter(Boolean);
+      const objects = blocks[0].split(',').map(s => s.trim()).filter(Boolean);
+      const blurb = norm(blocks[1]);
+      if (conditions.length && objects.length && blurb) entries.push({ objects, blurb, conditions });
+      else console.warn(`info: incomplete conditional entry (${ctx}): ${group}`);
+    } else if (blocks.length === 1) {
+      const objects = key.split(',').map(s => s.trim()).filter(Boolean);
+      const blurb = norm(blocks[0]);
+      if (objects.length && blurb) entries.push({ objects, blurb });
+    } else {
+      console.warn(`info: group without a [blurb] block (${ctx}): ${group}`);
+    }
   }
   return entries;
 }

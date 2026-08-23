@@ -491,11 +491,20 @@
     }
     .arcana-traits-head img { width: 18px; height: 26px; object-fit: contain; image-rendering: pixelated; flex-shrink: 0; }
     .arcana-traits-head:hover { filter: brightness(1.25); }
+    /* Multi-arcana conditional header: each Arcana icon is individually navigable (the label itself
+       isn't a link), so the head shouldn't look wholly clickable. Icons wrap if several. */
+    .arcana-cond-head { cursor: default; flex-wrap: wrap; }
+    .arcana-cond-icon { display: inline-flex; cursor: pointer; }
+    .arcana-cond-icon:hover { filter: brightness(1.35); }
     /* A ghost directly under a real primary container drops its top padding (no reserved
        header space) so it sits snug beneath; a standalone ghost keeps its top spacing. */
     .primary-traits + .primary-traits.trait-ghost { padding-top: 0; }
     #detail-overlay-root .primary-traits { padding: 9px 12px 3px; margin-bottom: 12px; }
     #detail-overlay-root .primary-traits + .primary-traits.trait-ghost { padding-top: 0; }
+    /* The conditional info-blurb container reuses .primary-traits, but that detail-overlay override
+       gives it 12px left padding — leaving its icons 5px right of the plain-blurb / bare-grid icons
+       (which sit at the 8px inset). Pin its padding so border(1px)+padding-left(7px)=8px, aligning. */
+    #detail-overlay-root .info-cond-box { padding: 8px 7px; }
     .info-sidebar .req-row { display: flex; flex-wrap: wrap; gap: 4px; }
     .info-sidebar .req-icon { width: 32px; height: 32px; }
     .info-sidebar .req-icon img { width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
@@ -748,14 +757,31 @@
     details.detail-cat:not([open]) > summary.detail-cat-label::before { content: '▸ '; }
     /* Per-object interaction blurb: the objects' icon row, then the italic note below it. */
     .detail-info-entry { margin: 0 0 .9rem; }
-    .detail-info-entry .ref-icon-grid { margin-bottom: .35rem; }
     .detail-info-entry .detail-info-blurb { font-size: .95rem; margin: 0; text-align: left; }
     /* Affinity-page blurbs pack into a compact 3-up grid (icons over text) to save height. */
     .detail-info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem 1.1rem; margin-bottom: .8rem; }
-    .detail-info-grid .detail-info-entry { margin: 0; }
-    .aff-icon-grid { display: flex; flex-wrap: wrap; gap: 9px; }
+    /* Plain blurb cells get an 8px left inset matching the conditional container's box inset
+       (.primary-traits = 1px border + 7px padding) so plain-blurb, container, and bare-grid icons
+       all START at the same x. The container is a .info-cond-box (not .detail-info-entry) and uses
+       its own box inset, so it's excluded from this rule. */
+    .detail-info-grid .detail-info-entry { margin: 0; padding-left: 8px; }
+    /* Conditional info-blurb container (arcana-gated) — a NORMAL grid cell (same width as the other
+       blurb entries), reusing .arcana-traits box coloring; its object icons wrap within the cell. */
+    .info-cond-box { margin: 0; }
+    /* Info-blurb icons: weapons/passives are 48px squares; arcana/sprite keep their card aspect.
+       Matches the category grid's .aff-nav-icon so an object isn't shown at two sizes on a page. */
+    .detail-info-entry .ref-icon-grid,
+    .info-cond-box .ref-icon-grid { gap: 9px; margin: .1rem 0 .4rem; align-items: flex-start; }
+    .detail-info-entry .ref-nav-icon,
+    .info-cond-box .ref-nav-icon { width: 48px; height: 48px; border-radius: 6px; }
+    .detail-info-entry .ref-nav-icon.arcana,
+    .info-cond-box .ref-nav-icon.arcana { width: 60px; height: 84px; }
+    .detail-info-entry .ref-nav-icon.sprite,
+    .info-cond-box .ref-nav-icon.sprite { width: 66px; height: 88px; }
+    .info-cond-box .detail-info-blurb { font-size: .95rem; margin: 0; text-align: left; }
+    .aff-icon-grid { display: flex; flex-wrap: wrap; gap: 9px; padding-left: 8px; }
     .aff-nav-icon {
-      width: 60px; height: 60px; flex-shrink: 0;
+      width: 48px; height: 48px; flex-shrink: 0;
       border-radius: 6px; overflow: hidden;
       cursor: pointer;
     }
@@ -2104,8 +2130,52 @@
   // object's own page (its icon would repeat once per interaction) — pass withIcons:false there.
   function infoEntryHTML(entry, withIcons = true) {
     const refs = withIcons ? resolveRefs(entry.objects) : [];
+    // Note: a conditional entry's blurb text already states its condition (e.g. "…when using
+    // Blood Astronomia (XXI)"), so we don't append a separate note here — it would duplicate.
+    // The trait page renders conditional entries as an arcana-headed container instead.
     return `<div class="detail-info-entry">${refs.length ? refIconsGridHTML(refs) : ''}
       <div class="detail-desc detail-info-blurb">${mdBold(entry.blurb)}</div></div>`;
+  }
+
+  // Conditional info-blurb container: the listed objects interact with the trait ONLY when
+  // `entry.condition` (an Arcana) is equipped. Mirrors arcanaBoxHTML — an arcana-colored box with
+  // a navigable arcana header, then the objects' icons and the blurb. Falls back to a plain-headed
+  // box if the condition doesn't resolve to a known Arcana (bad data shouldn't break rendering).
+  // Average N hex colors into one — a multi-arcana container's blended identity color.
+  function mixHexColors(colors) {
+    const rgb = colors.map(c => { const h = String(c || '').replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16) || 0); });
+    if (!rgb.length) return '#6a4010';
+    const avg = [0, 1, 2].map(i => Math.round(rgb.reduce((s, c) => s + c[i], 0) / rgb.length));
+    return '#' + avg.map(v => v.toString(16).padStart(2, '0')).join('');
+  }
+  // Blended identity color for a set of arcana (each {name, obj}); falls back if none resolve.
+  function arcanaCondColor(arcs) {
+    const colors = arcs.map(a => a.obj?.color).filter(Boolean);
+    return colors.length ? mixHexColors(colors) : '#6a4010';
+  }
+  // Shared header for arcana-conditional containers (the info-blurb container AND the trait
+  // container): each Arcana as a navigable icon; a SINGLE arcana also shows its name (multiple →
+  // icons only, to stay compact). `objAction` is the nav click action (nav-object/open-object-page).
+  function arcanaCondHeadHTML(arcs, objAction, titleSuffix = '') {
+    const icons = arcs.map(a => a.obj
+      ? `<span class="arcana-cond-icon" data-action="${esc(objAction)}" data-detail-type="arcana" data-detail-name="${esc(a.obj.name)}" title="${esc(a.obj.name)}"><img src="${esc(a.obj.icon || '')}" onerror="this.style.visibility='hidden'"></span>`
+      : `<span class="arcana-cond-icon" title="${esc(a.name)}"></span>`).join('');
+    const nameSpan = arcs.length === 1 ? `<span>${esc(arcs[0].obj?.name || arcs[0].name)}</span>` : '';
+    const label = arcs.map(a => a.obj?.name || a.name).join(' / ');
+    return `<div class="arcana-traits-head arcana-cond-head" title="${esc(label + (titleSuffix ? ' — ' + titleSuffix : ''))}">${icons}${nameSpan}</div>`;
+  }
+  function infoConditionEntryHTML(entry) {
+    // `conditions` is a list of Arcana names (usually 1; 2+ when same-trait arcana share a blurb —
+    // they collapse into ONE container: both icons + blended color, no repeated blurb).
+    const names = entry.conditions || (entry.condition ? [entry.condition] : []);
+    const arcs = names.map(n => ({ name: n, obj: arcanaByName(n) }));
+    const refs = resolveRefs(entry.objects);
+    const head = arcanaCondHeadHTML(arcs, 'nav-object', 'these only interact with this trait when the Arcana is equipped');
+    return `<div class="primary-traits arcana-traits info-cond-box" style="--arc-color:${esc(arcanaCondColor(arcs))}">
+      ${head}
+      ${refs.length ? refIconsGridHTML(refs) : ''}
+      <div class="detail-desc detail-info-blurb">${mdBold(entry.blurb)}</div>
+    </div>`;
   }
 
   // Names in a given group of an object's grouped-affinity schema (e.g. 'priority'). Returns
@@ -2208,10 +2278,20 @@
     // Arcana-conditional groups: a group whose key resolves to an arcana — its traits are valid
     // only WHEN that arcana is equipped. Sourced from the group (not the derived set) and
     // colored by the arcana's identity color; excluded from `rest` to avoid dupes.
-    const arcanaGroups = groups
+    const rawArcanaGroups = groups
       .filter(g => g.key && g.key !== 'primary' && arcanaByName(g.key))
       .map(g => ({ arcana: arcanaByName(g.key), traits: g.items.map(affinityByName).filter(Boolean) }))
       .filter(g => g.traits.length);
+    // Merge arcana groups that gate an IDENTICAL trait set → ONE container with multiple arcana
+    // (both icons + blended color) instead of repeating the same traits once per arcana.
+    const arcanaGroups = [];
+    const bySig = new Map();
+    for (const g of rawArcanaGroups) {
+      const sig = g.traits.map(t => t.name).sort().join('|');
+      const existing = bySig.get(sig);
+      if (existing) existing.arcanas.push(g.arcana);
+      else { const m = { arcanas: [g.arcana], traits: g.traits }; bySig.set(sig, m); arcanaGroups.push(m); }
+    }
     const arcanaTraitNames = new Set(arcanaGroups.flatMap(g => g.traits.map(a => a.name)));
     const derived = objectAffinities(type, name);
     return {
@@ -2222,14 +2302,15 @@
     };
   }
 
-  // A single arcana-conditional trait container: colored by the arcana, with a navigable
-  // arcana header (icon + name), then its trait banners. `renderBanner` renders each trait.
+  // An arcana-conditional trait container: colored by the arcana(s), a navigable header, then its
+  // trait banners. `g.arcanas` holds one OR MORE arcana that share this exact trait set (merged in
+  // objectAffinityGroups) — multiple render as both icons + a blended color. `renderBanner` renders
+  // each trait. Reuses the shared arcana-condition header/color helpers (same as the blurb container).
   function arcanaBoxHTML(g, objAction, renderBanner) {
-    const color = g.arcana.color || '#6a4010';
-    return `<div class="primary-traits arcana-traits" style="--arc-color:${esc(color)}">
-      <div class="arcana-traits-head" data-action="${esc(objAction)}" data-detail-type="arcana" data-detail-name="${esc(g.arcana.name)}" title="${esc(g.arcana.name)} — traits only with this Arcana">
-        <img src="${esc(g.arcana.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(g.arcana.name)}</span>
-      </div>
+    const arcanas = g.arcanas || (g.arcana ? [g.arcana] : []);
+    const arcs = arcanas.map(a => ({ name: a.name, obj: a }));
+    return `<div class="primary-traits arcana-traits" style="--arc-color:${esc(arcanaCondColor(arcs))}">
+      ${arcanaCondHeadHTML(arcs, objAction, 'traits only with this Arcana')}
       ${g.traits.map(renderBanner).join('')}
     </div>`;
   }
@@ -5115,8 +5196,11 @@
     // must not be repeated as bare icons in the category grids below — each object shows once
     // per detail page. (An object in >1 blurb still shows once per blurb; that's the blurb side.)
     const blurbedNames = new Set(infoEntries.flatMap(e => e.objects));
+    // Plain and conditional (arcana-gated) blurbs share the same grid; a conditional entry renders
+    // as a full-width container cell within it (spans all columns) so it stays in the grid layout.
     const blurbsFor = t => {
-      const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t).map(e => infoEntryHTML(e)).join('');
+      const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t)
+        .map(e => e.conditions?.length ? infoConditionEntryHTML(e) : infoEntryHTML(e)).join('');
       return cells ? `<div class="detail-info-grid">${cells}</div>` : '';
     };
     for (const cat of DETAIL_CATS) {
