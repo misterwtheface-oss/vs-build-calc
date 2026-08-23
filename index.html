@@ -743,7 +743,10 @@
     .blurb-p { display: block; }
     .blurb-p + .blurb-p { margin-top: .5rem; }
     .detail-main { flex: 1; overflow-y: auto; padding: 1.5rem 1.8rem; }
-    .detail-cat { margin-bottom: 1.5rem; }
+    /* Extra breathing room at the end of each category (before the next one starts). Applied as
+       padding so it sits inside the category's box after its icon grid; zeroed for a collapsed
+       <details> below so a folded-up header doesn't grow a gap beneath it. */
+    .detail-cat { margin-bottom: 1.5rem; padding-bottom: 1rem; }
     .detail-cat-label {
       font-family: var(--font-title); font-size: 1.2rem; color: var(--gold);
       border-bottom: 1px solid var(--border); padding-bottom: .35rem; margin-bottom: .7rem;
@@ -752,6 +755,7 @@
     summary.detail-cat-label { cursor: pointer; user-select: none; list-style: none; }
     summary.detail-cat-label::-webkit-details-marker { display: none; }
     summary.detail-cat-label::before { content: '▾ '; color: var(--gold-dim); font-size: 1rem; }
+    details.detail-cat:not([open]) { padding-bottom: 0; }
     details.detail-cat:not([open]) > summary.detail-cat-label { margin-bottom: 0; }
     details.detail-cat:not([open]) > summary.detail-cat-label::before { content: '▸ '; }
     /* Per-object interaction blurb: the objects' icon row, then the italic note below it. */
@@ -882,7 +886,7 @@
     /* Reused evo-path sections (weapon/passive detail pages): make their <h3> match the gold
        category headers, and tile a passive's many "Used In" paths into a compact grid. */
     #detail-overlay-root .detail-section h3 {
-      font-family: var(--font-title); color: var(--gold); font-size: 1.2rem;
+      font-family: var(--font-title); color: var(--gold); font-size: 1rem;
       border-bottom: 1px solid var(--border); padding-bottom: .35rem; margin-bottom: .6rem;
     }
     /* Breathing room between stacked detail-page sections so a section's last entry —
@@ -1330,8 +1334,12 @@
     .ovl-left h3 { font-size: 1.12rem; }
     .ovl-left .detail-desc { font-size: 1.1rem; }
     .evo-flow { display: flex; flex-direction: column; gap: 18px; margin-top: .35rem; }
-    .evo-path-group { padding-top: .6rem; border-top: 1px solid var(--border); }
+    /* Each "Used In" evo path is one .evo-path-group. Forced padding below each entry (before the
+       next one's top border) gives them room to breathe; the last entry skips it. Shared by the
+       detail page and the planner info-panel sidebar (both render via buildPassiveEvoHTML). */
+    .evo-path-group { padding-top: .6rem; padding-bottom: .8rem; border-top: 1px solid var(--border); }
     .evo-path-group:first-child { padding-top: 0; border-top: none; }
+    .evo-path-group:last-child { padding-bottom: 0; }
     .evo-row { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; }
     .evo-node { width: 44px; height: 44px; flex-shrink: 0; border-radius: 5px; overflow: hidden; }
     .evo-node.current { outline: 1px solid var(--gold); box-shadow: 0 0 6px rgba(232,184,32,.4); }
@@ -8177,6 +8185,18 @@
     document.getElementById('detail-overlay-root').addEventListener('focusout', e => {
       if (e.target.classList.contains('appendix-search'))
         e.target.closest('.detail-body')?.classList.remove('searching');
+    });
+    // Tapping a search result while the input is focused fires focusout FIRST — that removes
+    // `.searching` and reflows the list (header re-expands, sticky bar un-pins, the 50vh spacer
+    // drops) BETWEEN the blur and the synthesized click, so the result shifts out from under the
+    // finger and the first tap misses (it took a second tap to navigate). Preventing the default on
+    // mousedown keeps the input focused (no blur → no focusout → no reflow), so the click lands and
+    // navigates on the first tap. Navigation rebuilds the detail DOM, removing the input and
+    // dismissing the keyboard. mousedown only fires on taps (not scrolls), so result scrolling is
+    // unaffected. Scoped to `.searching` so it's inert outside keyboard-mode.
+    document.getElementById('detail-overlay-root').addEventListener('mousedown', e => {
+      if (e.target.closest('.detail-body.searching') && e.target.closest('.appendix-results'))
+        e.preventDefault();
     });
     document.getElementById('detail-overlay-root').addEventListener('input', e => {
       if (e.target.classList.contains('appendix-search')) applyAppendixSearch(e.target);
