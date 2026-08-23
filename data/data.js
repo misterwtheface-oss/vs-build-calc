@@ -7578,7 +7578,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Retaliation",
+            "Low Health",
             "Max Health"
           ]
         },
@@ -7591,7 +7591,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Retaliation",
+        "Low Health",
         "Max Health",
         "Recovery",
         "Move Speed"
@@ -10271,13 +10271,15 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Move Speed",
-            "Cooldown"
+            "Cooldown",
+            "Divine Bloodline"
           ]
         }
       ],
       "affinity": [
         "Move Speed",
-        "Cooldown"
+        "Cooldown",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "scaling": [],
@@ -10326,13 +10328,15 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Move Speed",
-            "Cooldown"
+            "Cooldown",
+            "Divine Bloodline"
           ]
         }
       ],
       "affinity": [
         "Move Speed",
-        "Cooldown"
+        "Cooldown",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "scaling": [],
@@ -10675,14 +10679,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Max Health",
-            "Might"
+            "Might",
+            "Bounce"
           ]
         }
       ],
       "affinity": [
         "Amount",
         "Max Health",
-        "Might"
+        "Might",
+        "Bounce"
       ],
       "conflict": [],
       "scaling": [],
@@ -10748,14 +10754,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Max Health",
-            "Might"
+            "Might",
+            "Bounce"
           ]
         }
       ],
       "affinity": [
         "Amount",
         "Max Health",
-        "Might"
+        "Might",
+        "Bounce"
       ],
       "conflict": [],
       "scaling": [],
@@ -10821,14 +10829,16 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Max Health",
-            "Might"
+            "Might",
+            "Bounce"
           ]
         }
       ],
       "affinity": [
         "Amount",
         "Max Health",
-        "Might"
+        "Might",
+        "Bounce"
       ],
       "conflict": [],
       "scaling": [],
@@ -11645,12 +11655,19 @@ window.VS_DATA = {
             "Move Speed",
             "Speed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
         "Magnet",
         "Move Speed",
-        "Speed"
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "scaling": [],
@@ -11702,12 +11719,19 @@ window.VS_DATA = {
             "Move Speed",
             "Speed"
           ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
         "Magnet",
         "Move Speed",
-        "Speed"
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "scaling": [],
@@ -13708,14 +13732,16 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Amount"
+            "Amount",
+            "Bounce"
           ]
         }
       ],
       "affinity": [
         "Magnet",
         "Move Speed",
-        "Amount"
+        "Amount",
+        "Bounce"
       ],
       "conflict": [],
       "scaling": [],
@@ -13770,14 +13796,16 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Amount"
+            "Amount",
+            "Bounce"
           ]
         }
       ],
       "affinity": [
         "Magnet",
         "Move Speed",
-        "Amount"
+        "Amount",
+        "Bounce"
       ],
       "conflict": [],
       "scaling": [],
@@ -19384,7 +19412,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Move Speed",
-            "Armor"
+            "Armor",
+            "Blood Astronomia"
           ]
         }
       ],
@@ -19392,7 +19421,8 @@ window.VS_DATA = {
         "Magnet",
         "Greed",
         "Move Speed",
-        "Armor"
+        "Armor",
+        "Blood Astronomia"
       ],
       "conflict": [],
       "scaling": [],
@@ -27197,6 +27227,12 @@ window.VS_DATA = {
           "items": [
             "Armor"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -27210,7 +27246,8 @@ window.VS_DATA = {
         "Critical Damage",
         "Luck",
         "Blue",
-        "Armor"
+        "Armor",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -27298,6 +27335,12 @@ window.VS_DATA = {
             "Sarabande of Healing (VI)",
             "Wandering the Jet Black (XXI)"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -27315,7 +27358,8 @@ window.VS_DATA = {
         "Max Health",
         "Red",
         "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Wandering the Jet Black (XXI)",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -27809,6 +27853,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -27822,7 +27872,8 @@ window.VS_DATA = {
         "Blue",
         "Bounce",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -27915,6 +27966,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -27928,7 +27985,8 @@ window.VS_DATA = {
         "Blue",
         "Bounce",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -28089,6 +28147,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -28103,7 +28167,8 @@ window.VS_DATA = {
         "Blue",
         "Luck",
         "Critical Damage",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -28202,6 +28267,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -28214,7 +28285,8 @@ window.VS_DATA = {
         "Blue",
         "Bounce",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -28300,6 +28372,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -28312,7 +28390,8 @@ window.VS_DATA = {
         "Red",
         "Bounce",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -28484,6 +28563,12 @@ window.VS_DATA = {
             "Luck",
             "Critical Damage"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -28497,7 +28582,8 @@ window.VS_DATA = {
         "Blue",
         "Bounce",
         "Luck",
-        "Critical Damage"
+        "Critical Damage",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -29390,6 +29476,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -29405,6 +29497,7 @@ window.VS_DATA = {
         "Red",
         "Bounce",
         "Fire",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [
@@ -29492,6 +29585,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -29507,6 +29606,7 @@ window.VS_DATA = {
         "Red",
         "Bounce",
         "Fire",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [
@@ -29686,6 +29786,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -29702,6 +29808,7 @@ window.VS_DATA = {
         "Red",
         "Bounce",
         "Fire",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [
@@ -29767,7 +29874,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -29792,6 +29900,7 @@ window.VS_DATA = {
         "Cooldown",
         "Freeze",
         "Move Speed",
+        "Cooldown Speed",
         "Armor",
         "Blood Astronomia",
         "Amount",
@@ -29854,7 +29963,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -29881,6 +29991,7 @@ window.VS_DATA = {
         "Recovery",
         "Freeze",
         "Move Speed",
+        "Cooldown Speed",
         "Blood Astronomia",
         "Amount",
         "Magnet",
@@ -30165,7 +30276,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -30188,6 +30300,7 @@ window.VS_DATA = {
         "Blue",
         "Gemini",
         "Move Speed",
+        "Cooldown Speed",
         "Sarabande of Healing (VI)",
         "Wandering the Jet Black (XXI)"
       ],
@@ -30273,7 +30386,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -30285,7 +30399,8 @@ window.VS_DATA = {
         {
           "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Speed"
+            "Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -30305,8 +30420,10 @@ window.VS_DATA = {
         "Santa",
         "Blue",
         "Move Speed",
+        "Cooldown Speed",
         "Armor",
         "Speed",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [],
@@ -30384,6 +30501,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Tragic Princess (III)",
+            "Pale Diamond Incursion (V)"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -30401,6 +30525,8 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Magnet",
         "Blue",
+        "Tragic Princess (III)",
+        "Pale Diamond Incursion (V)",
         "Fire"
       ],
       "conflict": [],
@@ -30567,6 +30693,13 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Tragic Princess (III)",
+            "Pale Diamond Incursion (V)"
+          ]
+        },
+        {
           "key": "Heir of Fate (XIX)",
           "items": [
             "Fire"
@@ -30585,6 +30718,8 @@ window.VS_DATA = {
         "Union",
         "Magnet",
         "Blue",
+        "Tragic Princess (III)",
+        "Pale Diamond Incursion (V)",
         "Fire"
       ],
       "conflict": [],
@@ -30678,6 +30813,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        },
+        {
           "key": "Jail of Crystal (XIV)",
           "items": [
             "Freeze"
@@ -30694,6 +30835,7 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Magic Crystals",
         "Curse",
+        "Cooldown Speed",
         "Freeze"
       ],
       "conflict": [],
@@ -30776,9 +30918,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Jail of Crystal (XIV)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Freeze"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -30793,7 +30935,7 @@ window.VS_DATA = {
         "Retaliation",
         "Vampire-Killing Tool",
         "Blue",
-        "Freeze"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -30944,9 +31086,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Jail of Crystal (XIV)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Freeze"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -30962,7 +31104,7 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Union",
         "Blue",
-        "Freeze"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -31042,7 +31184,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -31054,7 +31197,8 @@ window.VS_DATA = {
         {
           "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Speed"
+            "Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -31067,8 +31211,10 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Move Speed",
+        "Cooldown Speed",
         "Armor",
-        "Speed"
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -31145,13 +31291,15 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
           "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Speed"
+            "Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -31164,7 +31312,9 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Move Speed",
-        "Speed"
+        "Cooldown Speed",
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -31303,13 +31453,15 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
           "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Speed"
+            "Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -31324,7 +31476,9 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Move Speed",
-        "Speed"
+        "Cooldown Speed",
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -31711,6 +31865,12 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -31721,7 +31881,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Gemini",
-        "Curse"
+        "Curse",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -31878,6 +32039,12 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -31888,7 +32055,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Gemini",
-        "Curse"
+        "Curse",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -32045,6 +32213,12 @@ window.VS_DATA = {
           "items": [
             "Gemini"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -32057,7 +32231,8 @@ window.VS_DATA = {
         "Union",
         "Red",
         "Blue",
-        "Gemini"
+        "Gemini",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -32597,6 +32772,12 @@ window.VS_DATA = {
           "items": [
             "Gemini"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -32608,7 +32789,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Light Source",
-        "Gemini"
+        "Gemini",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -32754,6 +32936,12 @@ window.VS_DATA = {
           "items": [
             "Recovery"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -32768,7 +32956,8 @@ window.VS_DATA = {
         "Light Source",
         "Greed",
         "Gemini",
-        "Recovery"
+        "Recovery",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -33356,6 +33545,12 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -33367,7 +33562,8 @@ window.VS_DATA = {
         "Amount",
         "Move Speed",
         "Red",
-        "Curse"
+        "Curse",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -33452,9 +33648,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heir of Fate (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -33468,7 +33664,7 @@ window.VS_DATA = {
         "Move Speed",
         "Red",
         "Fire",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -33657,9 +33853,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heir of Fate (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -33674,7 +33870,7 @@ window.VS_DATA = {
         "Union",
         "Red",
         "Fire",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -34025,6 +34221,12 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -34035,7 +34237,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Curse"
+        "Curse",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -34116,6 +34319,12 @@ window.VS_DATA = {
           "items": [
             "Curse"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -34126,7 +34335,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Curse"
+        "Curse",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -34401,7 +34611,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
@@ -34409,6 +34620,12 @@ window.VS_DATA = {
           "items": [
             "Iron Blue Will (VII)",
             "Waltz of Pearls (XI)"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
           ]
         }
       ],
@@ -34420,8 +34637,10 @@ window.VS_DATA = {
         "Amount",
         "Blue",
         "Move Speed",
+        "Cooldown Speed",
         "Iron Blue Will (VII)",
-        "Waltz of Pearls (XI)"
+        "Waltz of Pearls (XI)",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -34481,6 +34700,12 @@ window.VS_DATA = {
             "Cooldown",
             "Amount"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -34488,7 +34713,8 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -34781,6 +35007,12 @@ window.VS_DATA = {
           "items": [
             "Red"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -34790,7 +35022,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Red"
+        "Red",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -34876,6 +35109,12 @@ window.VS_DATA = {
             "Red",
             "Blue"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -34889,7 +35128,8 @@ window.VS_DATA = {
         "Luck",
         "Light Source",
         "Red",
-        "Blue"
+        "Blue",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -34968,6 +35208,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -34978,7 +35224,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Freeze"
+        "Freeze",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -35065,6 +35312,12 @@ window.VS_DATA = {
           "items": [
             "Freeze"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -35076,7 +35329,8 @@ window.VS_DATA = {
         "Amount",
         "Blue",
         "Curse",
-        "Freeze"
+        "Freeze",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -35174,9 +35428,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heir of Fate (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -35191,7 +35445,7 @@ window.VS_DATA = {
         "Curse",
         "Freeze",
         "Fire",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -35355,9 +35609,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heart of Fire (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -35371,7 +35625,7 @@ window.VS_DATA = {
         "Red",
         "Curse",
         "Freeze",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -35496,6 +35750,12 @@ window.VS_DATA = {
             "Retaliation",
             "Low Health"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -35506,7 +35766,8 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Retaliation",
-        "Low Health"
+        "Low Health",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -35572,6 +35833,12 @@ window.VS_DATA = {
             "Low Health",
             "Max Health"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -35583,7 +35850,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
-        "Max Health"
+        "Max Health",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -35673,6 +35941,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -35688,6 +35962,7 @@ window.VS_DATA = {
         "Gemini",
         "Critical Damage",
         "Luck",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [
@@ -35857,6 +36132,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        },
+        {
           "key": "Heart of Fire (XIX)",
           "items": [
             "Fire"
@@ -35872,6 +36153,7 @@ window.VS_DATA = {
         "Gemini",
         "Critical Damage",
         "Luck",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [
@@ -36100,9 +36382,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heir of Fate (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -36115,7 +36397,7 @@ window.VS_DATA = {
         "Amount",
         "Red",
         "Fire",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -36194,9 +36476,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heir of Fate (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -36210,7 +36492,7 @@ window.VS_DATA = {
         "Charm",
         "Curse",
         "Fire",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37423,13 +37705,15 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         },
         {
           "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Speed"
+            "Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -37445,7 +37729,9 @@ window.VS_DATA = {
         "Gemini",
         "Curse",
         "Move Speed",
-        "Speed"
+        "Cooldown Speed",
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37504,7 +37790,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -37518,7 +37805,8 @@ window.VS_DATA = {
         "Critical Damage",
         "Blue",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37611,7 +37899,14 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
           ]
         }
       ],
@@ -37628,7 +37923,9 @@ window.VS_DATA = {
         "Blue",
         "Gemini",
         "Curse",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -37872,6 +38169,12 @@ window.VS_DATA = {
             "Red",
             "Blue"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -37882,7 +38185,8 @@ window.VS_DATA = {
         "Growth",
         "Magic Crystals",
         "Red",
-        "Blue"
+        "Blue",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Might",
@@ -37949,6 +38253,12 @@ window.VS_DATA = {
             "Red",
             "Blue"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -37960,7 +38270,8 @@ window.VS_DATA = {
         "Charm",
         "Magic Crystals",
         "Red",
-        "Blue"
+        "Blue",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Might",
@@ -38870,7 +39181,8 @@ window.VS_DATA = {
         {
           "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Speed"
+            "Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -38883,7 +39195,8 @@ window.VS_DATA = {
         "Freeze",
         "Luck",
         "Blue",
-        "Speed"
+        "Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -38960,6 +39273,12 @@ window.VS_DATA = {
           "items": [
             "Magnet"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -38972,7 +39291,8 @@ window.VS_DATA = {
         "Move Speed",
         "Luck",
         "Freeze",
-        "Magnet"
+        "Magnet",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -39253,6 +39573,12 @@ window.VS_DATA = {
           "items": [
             "Blue"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -39262,7 +39588,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Blue"
+        "Blue",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -39336,6 +39663,12 @@ window.VS_DATA = {
           "items": [
             "Blue"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -39345,7 +39678,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Blue"
+        "Blue",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -39963,6 +40297,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -39973,7 +40313,8 @@ window.VS_DATA = {
         "Amount",
         "Critical Damage",
         "Luck",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -40053,6 +40394,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -40065,7 +40412,8 @@ window.VS_DATA = {
         "Luck",
         "Gold Coin",
         "Light Source",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -40164,9 +40512,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heart of Fire (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -40180,7 +40528,7 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Freeze",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -40267,9 +40615,9 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": "Heart of Fire (XIX)",
+          "key": "Pale Diamond Incursion (V)",
           "items": [
-            "Fire"
+            "Cooldown Speed"
           ]
         }
       ],
@@ -40284,7 +40632,7 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Freeze",
-        "Fire"
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -40367,6 +40715,12 @@ window.VS_DATA = {
           "items": [
             "Gemini"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -40378,7 +40732,8 @@ window.VS_DATA = {
         "Amount",
         "Slow",
         "Luck",
-        "Gemini"
+        "Gemini",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -40508,6 +40863,12 @@ window.VS_DATA = {
           "items": [
             "Gemini"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -40519,7 +40880,8 @@ window.VS_DATA = {
         "Slow",
         "Luck",
         "Curse",
-        "Gemini"
+        "Gemini",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Speed"
@@ -40614,6 +40976,12 @@ window.VS_DATA = {
           "items": [
             "Luck"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -40625,7 +40993,8 @@ window.VS_DATA = {
         "Amount",
         "Red",
         "Gemini",
-        "Luck"
+        "Luck",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -41987,6 +42356,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -41998,7 +42373,8 @@ window.VS_DATA = {
         "Amount",
         "Red",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -42074,6 +42450,12 @@ window.VS_DATA = {
           "items": [
             "Fire"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -42082,7 +42464,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Fire"
+        "Fire",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -42169,6 +42552,12 @@ window.VS_DATA = {
           "items": [
             "Fire"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -42179,7 +42568,8 @@ window.VS_DATA = {
         "Amount",
         "Revival",
         "Bounce",
-        "Fire"
+        "Fire",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -42264,6 +42654,12 @@ window.VS_DATA = {
           "items": [
             "Fire"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -42272,7 +42668,8 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Fire"
+        "Fire",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -42359,6 +42756,12 @@ window.VS_DATA = {
           "items": [
             "Fire"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -42369,7 +42772,8 @@ window.VS_DATA = {
         "Amount",
         "Revival",
         "Bounce",
-        "Fire"
+        "Fire",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -42461,6 +42865,12 @@ window.VS_DATA = {
           "items": [
             "Fire"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -42470,7 +42880,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Fire"
+        "Fire",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -42557,6 +42968,12 @@ window.VS_DATA = {
           "items": [
             "Fire"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -42567,7 +42984,8 @@ window.VS_DATA = {
         "Amount",
         "Revival",
         "Bounce",
-        "Fire"
+        "Fire",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -43029,6 +43447,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -43039,7 +43463,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -43115,6 +43540,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -43127,7 +43558,8 @@ window.VS_DATA = {
         "Armor",
         "Revival",
         "Red",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -45615,6 +46047,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -45625,7 +46063,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -45676,6 +46115,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -45686,7 +46131,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -45748,6 +46194,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -45760,7 +46212,8 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Knives",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -45811,6 +46264,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -45823,7 +46282,8 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Knives",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -45919,6 +46379,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -45930,7 +46396,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -46017,6 +46484,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -46028,7 +46501,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -46231,6 +46705,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -46241,7 +46721,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -46323,6 +46804,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -46334,7 +46821,8 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Armor",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Duration"
@@ -48002,7 +48490,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -48016,7 +48505,8 @@ window.VS_DATA = {
         "Belnades' Spell",
         "Blue",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -48071,7 +48561,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -48084,7 +48575,8 @@ window.VS_DATA = {
         "Amount",
         "Blue",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -48168,7 +48660,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -48182,7 +48675,8 @@ window.VS_DATA = {
         "Belnades' Spell",
         "Blue",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -48276,7 +48770,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -48290,7 +48785,8 @@ window.VS_DATA = {
         "Belnades' Spell",
         "Blue",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -48345,7 +48841,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -48358,7 +48855,8 @@ window.VS_DATA = {
         "Amount",
         "Blue",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -48448,7 +48946,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -48463,7 +48962,8 @@ window.VS_DATA = {
         "Blue",
         "Armor",
         "Gemini",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -54172,7 +54672,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -54185,7 +54686,8 @@ window.VS_DATA = {
         "Glimmer Tech",
         "Red",
         "Blue",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Speed",
@@ -54261,7 +54763,8 @@ window.VS_DATA = {
         {
           "key": "Tragic Princess (III)",
           "items": [
-            "Move Speed"
+            "Move Speed",
+            "Cooldown Speed"
           ]
         }
       ],
@@ -54274,7 +54777,8 @@ window.VS_DATA = {
         "Glimmer Tech",
         "Red",
         "Blue",
-        "Move Speed"
+        "Move Speed",
+        "Cooldown Speed"
       ],
       "conflict": [
         "Speed",
@@ -56228,6 +56732,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -56240,7 +56750,8 @@ window.VS_DATA = {
         "Luck",
         "Critical Damage",
         "Blue",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -56323,6 +56834,12 @@ window.VS_DATA = {
           "items": [
             "Bounce"
           ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
         }
       ],
       "affinity": [
@@ -56334,7 +56851,8 @@ window.VS_DATA = {
         "Amount",
         "Luck",
         "Critical Damage",
-        "Bounce"
+        "Bounce",
+        "Cooldown Speed"
       ],
       "conflict": [],
       "arcana": [
@@ -59981,19 +60499,8 @@ window.VS_DATA = {
         }
       ],
       "grants": [],
-      "affinity_groups": [
-        {
-          "key": "primary",
-          "items": [
-            "Move Speed",
-            "Tragic Princess"
-          ]
-        }
-      ],
-      "affinity": [
-        "Move Speed",
-        "Tragic Princess"
-      ],
+      "affinity_groups": [],
+      "affinity": [],
       "conflict": []
     },
     {
@@ -61594,14 +62101,14 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Cooldown",
-            "Pale Diamond"
+            "Cooldown Speed"
           ]
         }
       ],
       "affinity": [
         "Speed",
         "Cooldown",
-        "Pale Diamond"
+        "Cooldown Speed"
       ],
       "conflict": []
     },
@@ -62673,7 +63180,9 @@ window.VS_DATA = {
           "Rapidus Fio"
         ],
         "passives": [],
-        "characters": [],
+        "characters": [
+          "Brauner"
+        ],
         "arcana": [
           "Blood Astronomia (XXI)"
         ]
@@ -62830,10 +63339,244 @@ window.VS_DATA = {
           "Cavendish"
         ],
         "passives": [],
-        "characters": [],
+        "characters": [
+          "John Morris (Iron Ball)",
+          "John Morris (Coat of Arms)",
+          "John Morris (Morning Star)",
+          "Carrie Fernandez (Rock Riot)",
+          "Carrie Fernandez (Belnades' Spellbook)"
+        ],
         "arcana": [
           "Iron Blue Will (VII)",
           "Waltz of Pearls (XI)"
+        ]
+      }
+    },
+    {
+      "name": "Cooldown Speed",
+      "icon": "assets/icons/affinities/cooldown_speed.png",
+      "color": "#9e8771",
+      "base_affinity": "Arcana",
+      "is_parent": false,
+      "description": "The listed Arcana reduce the Cooldown of supported weapons using Speed or Move Speed. Cooldown reductions from the listed Arcana can exceed the -90% Cooldown reduction limit.",
+      "info_entries": [
+        {
+          "objects": [
+            "Santa Water",
+            "La Borra",
+            "Hydro Pump Climax",
+            "Lightning Ring",
+            "Thunder Loop",
+            "Vjaya Sisters",
+            "Santa Javelin",
+            "Seraphic Cry",
+            "Carréllo"
+          ],
+          "blurb": "Cooldown can be reduced by both Speed and Move Speed while moving with the associated Arcana active.",
+          "conditions": [
+            "Tragic Princess (III)",
+            "Pale Diamond Incursion (V)"
+          ]
+        },
+        {
+          "objects": [
+            "Garlic",
+            "Soul Eater",
+            "Dark Frogamorphosis",
+            "Levelin'Eh",
+            "Fulgur",
+            "Speculo Fulgur",
+            "Tenebris Tonitrus",
+            "Keremet Bubbles",
+            "Speculo Keremet Bubbles",
+            "Keremet Morbus",
+            "Kick",
+            "Triangle Kick"
+          ],
+          "blurb": "Cooldown can be reduced by Move Speed while moving with the associated Arcana active.",
+          "conditions": [
+            "Tragic Princess (III)"
+          ]
+        },
+        {
+          "objects": [
+            "Knife",
+            "Thousand Edge",
+            "Million Cut",
+            "Axe",
+            "Death Spiral",
+            "Legacy of Death: Soul River",
+            "Fire Wand",
+            "Hellfire",
+            "Kardía Phlegeton",
+            "Runetracer",
+            "NO FUTURE",
+            "Carnage Heart",
+            "Peachone",
+            "Ebony Wings",
+            "Vandalier",
+            "Gatti Amari",
+            "Vicious Hunger",
+            "Shadow Pinion",
+            "Valkyrie Turner",
+            "Darkness Illusion",
+            "Vento Sacro",
+            "Fuwalafuwaloo",
+            "Bone",
+            "Anima of Mortaccio",
+            "Carozza!",
+            "La Robba",
+            "Greatest Jubilee",
+            "Bracelet",
+            "Bi-Bracelet",
+            "Tri-Bracelet",
+            "Lapiste Tepisto",
+            "Flames of Misspell",
+            "Ashes of Muspell",
+            "Pako Battiliar",
+            "Mazo Familiar",
+            "Ammo Appalate",
+            "Gunastrophe",
+            "Magi-Stone",
+            "Kyra-Stones",
+            "Mirage Robe",
+            "J'Odore",
+            "Mille Bolle Blu",
+            "Boo Roo Boolle",
+            "Flash Arrow",
+            "Millionaire",
+            "Prismatic Missile",
+            "Luminaire",
+            "Shadow Servant",
+            "Ophion",
+            "Party Popper",
+            "Hats",
+            "Long Gun",
+            "Prototype A",
+            "Short Gun",
+            "Prototype B",
+            "Spread Shot",
+            "Prototype C",
+            "Sonic Bloom",
+            "Wave Beam",
+            "Shuriken",
+            "Yagyu Shuriken",
+            "Curved Knife",
+            "Bwaka Knife",
+            "Javelin",
+            "Long Inus",
+            "Iron Ball",
+            "Wrecking Ball",
+            "Gros Michel",
+            "Cavendish"
+          ],
+          "blurb": "Cooldown can be reduced by both Speed with the associated Arcana active.",
+          "conditions": [
+            "Pale Diamond Incursion (V)"
+          ]
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Legacy of Death: Soul River",
+          "Fire Wand",
+          "Hellfire",
+          "Kardía Phlegeton",
+          "Garlic",
+          "Soul Eater",
+          "Dark Frogamorphosis",
+          "Santa Water",
+          "La Borra",
+          "Hydro Pump Climax",
+          "Runetracer",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Thunder Loop",
+          "Vjaya Sisters",
+          "Peachone",
+          "Ebony Wings",
+          "Vandalier",
+          "Gatti Amari",
+          "Vicious Hunger",
+          "Shadow Pinion",
+          "Valkyrie Turner",
+          "Darkness Illusion",
+          "Bone",
+          "Anima of Mortaccio",
+          "Carréllo",
+          "Carozza!",
+          "La Robba",
+          "Greatest Jubilee",
+          "Bracelet",
+          "Bi-Bracelet",
+          "Tri-Bracelet",
+          "Lapiste Tepisto",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Ammo Appalate",
+          "Gunastrophe",
+          "Flames of Misspell",
+          "Ashes of Muspell",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Magi-Stone",
+          "Kyra-Stones",
+          "Mirage Robe",
+          "J'Odore",
+          "Mille Bolle Blu",
+          "Boo Roo Boolle",
+          "Flash Arrow",
+          "Millionaire",
+          "Prismatic Missile",
+          "Luminaire",
+          "Shadow Servant",
+          "Ophion",
+          "Party Popper",
+          "Hats",
+          "Long Gun",
+          "Prototype A",
+          "Short Gun",
+          "Prototype B",
+          "Spread Shot",
+          "Prototype C",
+          "Sonic Bloom",
+          "Wave Beam",
+          "Shuriken",
+          "Yagyu Shuriken",
+          "Curved Knife",
+          "Bwaka Knife",
+          "Javelin",
+          "Long Inus",
+          "Iron Ball",
+          "Wrecking Ball",
+          "Fulgur",
+          "Speculo Fulgur",
+          "Tenebris Tonitrus",
+          "Keremet Bubbles",
+          "Speculo Keremet Bubbles",
+          "Keremet Morbus",
+          "Kick",
+          "Triangle Kick",
+          "Gros Michel",
+          "Cavendish"
+        ],
+        "passives": [],
+        "characters": [
+          "Yoko Belnades (Fulgur)",
+          "Yoko Belnades (Belnades' Spellbook)"
+        ],
+        "arcana": [
+          "Tragic Princess (III)",
+          "Pale Diamond Incursion (V)"
         ]
       }
     },
@@ -62976,12 +63719,47 @@ window.VS_DATA = {
       "color": "#000016",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "",
-      "info_entries": [],
+      "description": "Divine Bloodline (IX) is a cornerstone support for Retaliation archetypes and also adds flat damage based on Armor and mising Max Health. The missing health Bloodline damage component applies to all weapons, not just those supported by the Arcana.",
+      "info_entries": [
+        {
+          "objects": [
+            "Cross",
+            "King Bible",
+            "Garlic",
+            "Santa Water",
+            "Lightning Ring",
+            "Song of Mana",
+            "Vento Sacro",
+            "Victory Sword",
+            "Silver Wind"
+          ],
+          "blurb": "Listed weapons gain 5 flat base damage per Armor (max 250), this effect does not support the evolved forms of listed weapons."
+        },
+        {
+          "objects": [
+            "NO FUTURE",
+            "Carnage Heart",
+            "Pako Battiliar",
+            "Mazo Familiar",
+            "Victory Sword",
+            "Embrace of Gaea",
+            "Night Sword",
+            "Muramasa",
+            "Eskizzibur",
+            "Legionnaire",
+            "Iron Shield",
+            "Dark Iron Shield"
+          ],
+          "blurb": "Listed Arcana, characters, and weapons have a damage component that counts as retaliatory damage and grants +0.5 flat Max Health on kill."
+        }
+      ],
       "related": {
         "weapons": [],
         "passives": [],
-        "characters": [],
+        "characters": [
+          "Richter Belmont (Platinum Whip)",
+          "Richter Belmont (Morning Star)"
+        ],
         "arcana": [
           "Divine Bloodline (IX)"
         ]
@@ -63032,7 +63810,7 @@ window.VS_DATA = {
             "Spirit Rings",
             "Rings of Calamity"
           ],
-          "blurb": "Listed weapons benefit from both Arcana effects, causing their attacks to gain explosive AoEs that cause all enemies killed to drop Scorched Souls.",
+          "blurb": "Weapon deals Fire damage that also counts as explosive and is supported by both Fire Arcana.",
           "conditions": [
             "Heart of Fire (XIX)",
             "Heir of Fate (XIX)"
@@ -63262,7 +64040,7 @@ window.VS_DATA = {
             "Orologion",
             "Sorbetto"
           ],
-          "blurb": "Listed weapons have innate freeze effects that are not reliant on Arcana support.",
+          "blurb": "Weapon effect freezes enemies innately and is not reliant on Arcana support.",
           "conditions": [
             "Out of Bounds (XII)"
           ]
@@ -63564,7 +64342,27 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "The listed Arcana convert player healing into a source of damage and the supported weapons have healing effects that benefit this archetype.",
-      "info_entries": [],
+      "info_entries": [
+        {
+          "objects": [
+            "Sarabande of Healing (VI)"
+          ],
+          "blurb": "Doubles all healing received and generates a damaging pulse on every healing instance that deals damage equal to the amount healed, unaffected by Might."
+        },
+        {
+          "objects": [
+            "Wandering the Jet Black (XXI)"
+          ],
+          "blurb": "Generates exploding projectiles on every healing instance and total accumulated healing increases explosion damage with no limit."
+        },
+        {
+          "objects": [
+            "Bloody Tear",
+            "Fuwalafuwaloo"
+          ],
+          "blurb": "The critical hit healing effect"
+        }
+      ],
       "related": {
         "weapons": [
           "Bloody Tear",
@@ -63623,23 +64421,6 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Pale Diamond",
-      "icon": "assets/icons/affinities/pale_diamond.png",
-      "color": "#6a4010",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": [
-          "Pale Diamond Incursion (V)"
-        ]
-      }
-    },
-    {
       "name": "Plentiful Pickups",
       "icon": "assets/icons/affinities/plentiful_pickups.png",
       "color": "#01715a",
@@ -63678,7 +64459,7 @@ window.VS_DATA = {
     {
       "name": "Sapphire Mist",
       "icon": "assets/icons/affinities/sapphire_mist.png",
-      "color": "#6a4010",
+      "color": "#71729e",
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "",
@@ -63689,23 +64470,6 @@ window.VS_DATA = {
         "characters": [],
         "arcana": [
           "Sapphire Mist (I)"
-        ]
-      }
-    },
-    {
-      "name": "Tragic Princess",
-      "icon": "assets/icons/affinities/tragic_princess.png",
-      "color": "#9e8771",
-      "base_affinity": "Arcana",
-      "is_parent": false,
-      "description": "",
-      "info_entries": [],
-      "related": {
-        "weapons": [],
-        "passives": [],
-        "characters": [],
-        "arcana": [
-          "Tragic Princess (III)"
         ]
       }
     },
@@ -64339,7 +65103,6 @@ window.VS_DATA = {
         "characters": [
           "Torino",
           "Scorej-Oni",
-          "Shapeshifter Nino",
           "Grant Danasty (Curved Knife)",
           "Grant Danasty (Coat of Arms)",
           "Morris Baldwin (Kaiser Knuckle)",
@@ -64814,6 +65577,8 @@ window.VS_DATA = {
           "Sonia Belmont (Morning Star)",
           "Richter Belmont (Platinum Whip)",
           "Richter Belmont (Morning Star)",
+          "Yoko Belnades (Fulgur)",
+          "Yoko Belnades (Belnades' Spellbook)",
           "Eric Lecarde (Alucard Spear)",
           "Eric Lecarde (Spectral Sword)",
           "Eric Lecarde (Coat of Arms)",
@@ -64856,6 +65621,7 @@ window.VS_DATA = {
           "Canio"
         ],
         "arcana": [
+          "Tragic Princess (III)",
           "Silent Old Sanctuary (XX)",
           "Pale Diamond Incursion (V)"
         ]
@@ -65951,6 +66717,24 @@ window.VS_DATA = {
             "Game Killer (0)"
           ],
           "blurb": "While not a direct damage contributor, improved collection radius from Magnet indirectly improves the rate of experience gem projectiles."
+        },
+        {
+          "objects": [
+            "Garlic",
+            "Soul Eater",
+            "Pentagram",
+            "Gorgeous Moon",
+            "Song of Mana",
+            "Mannajja",
+            "Clock Lancet",
+            "Laurel",
+            "Sonic Dash",
+            "Rapidus Fio"
+          ],
+          "blurb": "Only affected by Magnet when using Blood Astronomia (XXI)",
+          "conditions": [
+            "Blood Astronomia (XXI)"
+          ]
         }
       ],
       "related": {
@@ -66221,6 +67005,7 @@ window.VS_DATA = {
         ],
         "passives": [],
         "characters": [
+          "Shapeshifter Nino",
           "Brad Fang",
           "Julius Belmont (Vanitas Whip)",
           "Julius Belmont (Morning Star)",
@@ -67972,7 +68757,7 @@ window.VS_DATA = {
     {
       "name": "Union",
       "icon": "assets/icons/affinities/union.png",
-      "color": "#6a4010",
+      "color": "#060b83",
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "description": "",
@@ -70272,7 +71057,7 @@ window.VS_DATA = {
       "b3_r": null,
       "related_to": [
         "Victory Sword",
-        "Torona's Box",
+        "Torrona's Box",
         "Sole Solution"
       ]
     },
@@ -70292,7 +71077,7 @@ window.VS_DATA = {
       "b3_r": null,
       "related_to": [
         "Flames of Misspell",
-        "Torona's Box",
+        "Torrona's Box",
         "Ashes of Muspell"
       ]
     },
