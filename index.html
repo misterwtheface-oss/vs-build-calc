@@ -2461,6 +2461,52 @@
   const isAbsorbUnion = name => ABSORB_UNIONS.has(name);
   const ALUCARD_ABSORB_COUNT = 5; // Alucard Swords consumes any 5 other non-base weapons
 
+  // ── Gift-hidden-finals ───────────────────────────────────────────────────
+  // The INVERSE of an absorb-union: a source weapon whose "evolution" is really a GIFT —
+  // the source (final_state === itself, method 'Gift') STAYS in its slot and the result is
+  // added to the Hidden row instead of replacing the source. Victory Sword (+ Torrona's Box)
+  // gifts Sole Solution; Vol Luminatio + Vol Umbra gift Universitas (both sources stay).
+  // Fully DERIVED (no stored state): the gift is present whenever every required weapon is
+  // equipped and disappears the moment a source is removed — like Santa's auto-trio.
+  const GIFT_HIDDEN_FINALS = new Set(['Sole Solution', 'Universitas']);
+  const isGiftHiddenFinal = name => GIFT_HIDDEN_FINALS.has(name);
+  // result name → Set of item names (weapons AND/OR passives) that must ALL be equipped for
+  // the gift to form. Derived from data: the gift's source weapons (trans_result === result,
+  // method 'Gift', final_state === source) plus their requirements — which may be a weapon
+  // (Vol Umbra) OR a passive (Torrona's Box is a PASSIVE, not a weapon).
+  let _giftReqCache = null;
+  function giftHiddenFinalReqs() {
+    if (_giftReqCache) return _giftReqCache;
+    const m = new Map();
+    for (const w of D.weapons) {
+      if (!GIFT_HIDDEN_FINALS.has(w.trans_result)) continue;
+      if (w.method !== 'Gift' || w.final_state !== w.name) continue;
+      const req = m.get(w.trans_result) || new Set();
+      req.add(w.name);
+      (w.requirements || []).forEach(r => {
+        if (D.weapons.some(x => x.name === r) || D.passives.some(x => x.name === r)) req.add(r);
+      });
+      m.set(w.trans_result, req);
+    }
+    _giftReqCache = m;
+    return m;
+  }
+  const giftHiddenFinalReq = resultName => giftHiddenFinalReqs().get(resultName) || new Set();
+  // Everything a player has equipped that can satisfy a gift requirement (weapons + core and
+  // extra-bar passives), by name.
+  const equippedItemNames = player => new Set([
+    ...player.weapons.filter(Boolean).map(w => w.name),
+    ...player.passives.filter(Boolean).map(p => p.name),
+    ...(player.extraPassives || []),
+  ]);
+  // Is a source weapon's gift currently formed for this player (all required items equipped)?
+  function giftActive(player, resultName) {
+    const req = giftHiddenFinalReq(resultName);
+    if (!req.size) return false;
+    const have = equippedItemNames(player);
+    return [...req].every(nm => have.has(nm));
+  }
+
   // Santa Ladonna secret: with Santa Water + King Bible + Cross all equipped, all three auto-evolve
   // and become HIDDEN (bypassing normal evo requirements). We don't track weapon levels, so the
   // trigger is simply "all three bases present". base → evolved form:
@@ -3806,7 +3852,24 @@
           let stageInner = '';
 
           // ── Advance (Evolve / Union / Gift / …) ────────────
-          if (nextW && wObj.method) {
+          if (nextW && wObj.method && isGiftHiddenFinal(nextW.name)) {
+            // Gift-hidden-final: the source STAYS in its slot and the result auto-appears in
+            // the Hidden row once every required weapon is equipped — no button (automatic,
+            // matching the game). Victory Sword (+ Torrona's Box) gifts Sole Solution;
+            // Vol Luminatio + Vol Umbra gift Universitas.
+            const req = giftHiddenFinalReq(nextW.name);
+            const active = giftActive(player, nextW.name);
+            const have = equippedItemNames(player);
+            const missing = [...req].filter(nm => nm !== wObj.name && !have.has(nm));
+            const statusColor = active ? 'color:var(--can-evolve)' : '';
+            stageInner += `<div class="req-row" style="align-items:center;gap:.5rem;margin-bottom:.3rem">
+              <div class="req-icon" title="${esc(nextW.name)}"><img src="${esc(nextW.icon||EMPTY_ICONS.weapon)}" onerror="this.src='${EMPTY_ICONS.weapon}'"></div>
+              <span style="font-size:.75rem;${statusColor}">Gifts ${esc(nextW.name)}${active ? ' — in Hidden row' : ''}</span>
+            </div>
+            <div class="stage-missing">${active
+              ? `${esc(wObj.name)} stays equipped; ${esc(nextW.name)} sits in the Hidden row.`
+              : `Needs: ${missing.map(esc).join(', ') || '—'}`}</div>`;
+          } else if (nextW && wObj.method) {
             const methodStr = wObj.method;
             const counts = SLOT_COUNTS[state.playerCount];
             let label     = methodStr === 'Evolution' ? 'Evolve' : methodStr;
@@ -4006,12 +4069,20 @@
             for (let i = 0; i < (g.amount || 1); i++) passiveHidden.push(g.name);
           }
         }));
+      // Gift-hidden-finals: a source weapon gifts a result into the Hidden row while the
+      // source(s) stay equipped. Derived — present iff every required weapon is equipped
+      // (Victory Sword + Torrona's Box → Sole Solution; Vol Luminatio + Vol Umbra → Universitas).
+      const giftHidden = [];
+      giftHiddenFinalReqs().forEach((_req, result) => {
+        if (giftActive(player, result)) giftHidden.push(result);
+      });
       const allHidden = [...new Set([
         ...hiddenStarters.filter(wn => !occupied.has(wn)),
         ...charOverflow,
         ...counterparts,
         ...passiveHidden,
         ...(player.santaHidden || []), // Santa Ladonna's auto-evolved secret trio
+        ...giftHidden,                 // Sole Solution / Universitas gift results
       ])];
       // Character add_hidden grants (Scorej-Oni/Galamoth Lightning Ring, Axe Armor Axe, Leon's
       // Svarog Statue, Ruler Sword Body, …) — level-gated COUNTS. Like multiple Weapon Power-Up,
@@ -5776,6 +5847,33 @@
               render();
               return;
             }
+            // Gift-hidden-finals (Sole Solution / Universitas) never occupy a real slot —
+            // they auto-appear in the Hidden row when their source weapons are equipped. So
+            // selecting one drops in its source(s) instead: the clicked slot takes the primary
+            // source, remaining sources are quick-added, and the gift then forms on its own.
+            if (isGiftHiddenFinal(wDef.name)) {
+              const req = [...giftHiddenFinalReq(wDef.name)];
+              if (giftActive(player, wDef.name)) {
+                showToast(`${wDef.name} already in build`, 'warn');
+              } else {
+                // Clicked slot takes the primary SOURCE weapon; the rest (weapons or the
+                // Torrona's Box passive) are quick-added so the gift auto-forms.
+                const primaryW = req.find(nm => D.weapons.some(w => w.name === nm)) || req[0];
+                player.weapons[slotIdx] = weaponByName(primaryW);
+                const have = equippedItemNames(player);
+                for (const nm of req) {
+                  if (nm === primaryW || have.has(nm)) continue;
+                  evoQuickAdd(nm, playerIdx);
+                }
+                showToast(`Added ${req.join(' + ')} → ${wDef.name} (Hidden)`);
+              }
+              syncExtraPassives(player);
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
             // Chaos-morph final picked without its mapped character — drop in the base weapon
             // instead (mirrors Alucard Shield's unmet-condition fallback).
             const cInfo = chaosBlocked(wDef.name, player);
@@ -6355,7 +6453,7 @@
     const isPct = PCT_STATS.has(refStat);
     const base = statDef ? statDef.base_value : (isPct ? 100 : 0);
     // Base total (reference + manual BOTH off) so references can't loop (via manual maxes either).
-    const total = calcStatTotal(refStat, charStats, player, char, level, { skipReference: true, skipManual: true }).total;
+    const total = calcStatTotal(refStat, charStats, player, char, level).total;
     return isPct ? (total - base) / 100 : (total - base);
   }
   // Character-bonus rules for a player = the character's own + EVERY equipped arcana's (arcana
@@ -6388,7 +6486,7 @@
     const key = statKey === 'max_health_flat' ? 'max_health' : statKey === 'magnet_flat' ? 'magnet' : statKey;
     const statDef = D.stats.find(s => s.key === key);
     if (!statDef) return 0;
-    const total = calcStatTotal(key, charStats, player, char, level, { skipManual: true, skipReference: true }).total;
+    const total = calcStatTotal(key, charStats, player, char, level).total;
     return PCT_STATS.has(key) ? (total - statDef.base_value) / 100 : (total - statDef.base_value);
   }
   // Safe recursive-descent evaluator for a raw min/max expression: numbers, + - * /, parentheses,
@@ -6419,8 +6517,9 @@
     if (expr.stat) {
       const key = expr.stat === 'max_health_flat' ? 'max_health' : expr.stat === 'magnet_flat' ? 'magnet' : expr.stat;
       if (!D.stats.some(s => s.key === key)) return 0; // unknown pseudo-stat → treat as no cap
-      // Resolve against a base total (reference + manual BOTH off) so a derivative max can't loop.
-      return calcStatTotal(key, charStats, player, char, level, { skipManual: true, skipReference: true }).total * expr.factor;
+      // Resolve the referenced stat's real post-bonus total (all OTHER sources on). _resolvingStats
+      // breaks only a genuine self-referential cycle — so Divine Bloodline's Max Health counts here.
+      return calcStatTotal(key, charStats, player, char, level).total * expr.factor;
     }
     return 0; // unresolved complex expr → contributes nothing (rule effectively inert)
   }
@@ -6494,6 +6593,13 @@
     return flat;
   }
 
+  // Re-entrancy guard for derivative min/max expressions. A manual/reference rule's max can
+  // reference another stat (Julius's Missing-Health→Might mult reads Max Health); that stat is
+  // now resolved WITH all its other sources on, so e.g. Divine Bloodline's Max Health feeds the
+  // multiplier. Only if resolving a stat recurses back INTO ITSELF do we break the loop by
+  // computing that inner instance at base (manual + reference forced off). Replaces the old
+  // blanket skip, which dropped legitimate cross-source contributions.
+  const _resolvingStats = new Set();
   function calcStatTotal(charStatKey, charStats, player, char, level, opts = {}) {
     const statDef    = D.stats.find(s => s.key === charStatKey);
     const isPct      = PCT_STATS.has(charStatKey);
@@ -6502,11 +6608,15 @@
     const rawBase    = statDef ? statDef.base_value : (isPct ? 100 : 0);
     const showPassive = !!player;
     // reference_scaling + manual_scaling contribute to the flat bucket (additive stats) or the
-    // `<key>_flat` bucket (multiplicative stats). Reference is skipped when resolving a reference
-    // target, manual when resolving a manual derivative-max — so neither can loop on itself.
+    // `<key>_flat` bucket (multiplicative stats). An explicit opts skip (or a self-referential
+    // cycle detected via _resolvingStats) turns the respective bucket off so it can't loop.
     const lvl = level ?? 1;
-    const skR = opts.skipReference, skM = opts.skipManual;
+    const inCycle = _resolvingStats.has(charStatKey);
+    const skR = opts.skipReference || inCycle, skM = opts.skipManual || inCycle;
     const bonusKey = isMultStat ? charStatKey + '_flat' : charStatKey;
+    // Mark this stat as in-progress so any derivative max that recurses back to it (and only it)
+    // resolves at base instead of looping. Removed right after the source buckets are computed.
+    if (!inCycle) _resolvingStats.add(charStatKey);
     // Flat bucket: additive stats, or the pre-multiplier flat of a mult stat (`<key>_flat`).
     const extraFlat = (skR ? 0 : calcReferenceFlat(bonusKey, char, player, charStats, lvl))
                     + (skM ? 0 : calcManualFlat(bonusKey, char, player, charStats, lvl));
@@ -6517,6 +6627,7 @@
         + (skM ? 0 : calcManualFlat(charStatKey, char, player, charStats, lvl))
       : 0;
     const charMult = skM ? 1 : calcCharMult(charStatKey, char, player, charStats, lvl);
+    if (!inCycle) _resolvingStats.delete(charStatKey);
     const pu = calcPowerUpBonus(charStatKey);           // { additive, factors }
     const pv = calcPassiveBonus(charStatKey, player);   // { additive, factors }
     const trimNum = n => Number.isInteger(n) ? n : parseFloat(n.toFixed(2));
@@ -7658,6 +7769,10 @@
     }
     if (action === 'perform-evolve') {
       const resultW = weaponByName(btn.dataset.result);
+      // Gift-hidden-finals are never reached via perform-evolve (the info panel offers no
+      // button for them) — but guard anyway so a stray action can't replace/consume the
+      // source. The gift is derived and shows in the Hidden row on its own.
+      if (resultW && isGiftHiddenFinal(resultW.name)) { render(); return; }
       if (resultW) {
         const p = state.players[playerIdx];
         p.weapons[slotIdx] = resultW;
@@ -7959,6 +8074,26 @@
     // ring/metaglio to be obtainable on the selected stage.
     const sInfo = stageBlockedWeapon(name, player);
     if (sInfo) { showToast(`${name} needs ${sInfo.missing.join(' + ')} — not on this stage`, 'warn'); return; }
+
+    // Gift-hidden-finals (Sole Solution / Universitas) never take a real slot — right-clicking
+    // one means "give me this gift," so add its source weapon(s) and let it auto-appear in the
+    // Hidden row. (Placing the gift itself would replace/consume its source — the original bug.)
+    if (isGiftHiddenFinal(name)) {
+      if (giftActive(player, name)) { showToast(`${name} already in build`, 'warn'); return; }
+      const req = [...giftHiddenFinalReq(name)];
+      const have = equippedItemNames(player);
+      let addedAny = false;
+      for (const src of req) {
+        if (have.has(src)) continue;
+        evoQuickAdd(src, playerIdx); // recursive: pulls each source's own chain/passives (weapon or passive)
+        addedAny = true;
+      }
+      showToast(addedAny
+        ? (giftActive(player, name) ? `Added ${name} (Hidden)` : `Added sources for ${name}`)
+        : `${name} needs its sources equipped`, addedAny ? 'ok' : 'warn');
+      render();
+      return;
+    }
 
     const equippedW = new Set(player.weapons.filter(Boolean).map(w => w.name));
     // Cross-player evo: a passive equipped by any player satisfies the condition.

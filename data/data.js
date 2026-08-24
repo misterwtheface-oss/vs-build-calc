@@ -69745,7 +69745,7 @@ window.VS_DATA = {
       "description": "Modifies the damage of all attacks.",
       "base_value": 100,
       "base_raw": "100%",
-      "max_value": 1000,
+      "max_value": null,
       "stacking": "additive",
       "levels": [
         {
