@@ -461,7 +461,17 @@ function parseAffinityGroups(raw, ctx = '') {
     const items = cell.split('|').map(s => s.trim()).filter(Boolean);
     return items.length ? [{ key: null, items }] : [];
   }
-  return splitOutsideBrackets(cell, '|').map(s => s.trim()).filter(Boolean).map(seg => {
+  return splitOutsideBrackets(cell, '|').map(s => s.trim()).filter(Boolean).flatMap(seg => {
+    // Bracketed multi-condition form: `[Arcana A, Arcana B]:[trait, trait]` — the LEADING bracket
+    // list is the key (one or more arcana that gate the traits), mirroring the info-blurb syntax.
+    // Expand to one group per arcana so downstream (objectAffinityGroups) auto-merges the shared
+    // trait set back into a single blended container — no special-casing needed there.
+    const cond = seg.match(/^\[([^\]]*)\]\s*:\s*\[([^\]]*)\]/);
+    if (cond) {
+      const keys = cond[1].split(',').map(s => s.trim()).filter(Boolean);
+      const items = cond[2].split(',').map(s => s.trim()).filter(Boolean);
+      return keys.map(key => ({ key, items }));
+    }
     // key = any text before the ":[" that opens the list, e.g. "Primary" or an arcana name
     // like "Slash (XVI)" (spaces/parens allowed). `primary` is normalized lowercase (canonical
     // op); everything else keeps its original case so an arcana-name key matches by name.
@@ -476,7 +486,7 @@ function parseAffinityGroups(raw, ctx = '') {
     }
     const inner = (seg.match(/\[([^\]]*)\]/) || [, ''])[1];
     const items = inner.split(',').map(s => s.trim()).filter(Boolean);
-    return { key, items };
+    return [{ key, items }];
   }).filter(g => g.items.length);
 }
 

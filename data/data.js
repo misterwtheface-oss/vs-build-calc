@@ -27112,10 +27112,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -27130,8 +27135,8 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Max Health",
         "Red",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Speed",
@@ -27330,10 +27335,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         },
         {
@@ -27357,8 +27367,8 @@ window.VS_DATA = {
         "Union",
         "Max Health",
         "Red",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)",
+        "Healing Damage",
+        "Healing Damage",
         "Cooldown Speed"
       ],
       "conflict": [],
@@ -29977,10 +29987,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -29996,8 +30011,8 @@ window.VS_DATA = {
         "Amount",
         "Magnet",
         "Duration",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Speed"
@@ -30281,10 +30296,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -30301,8 +30321,8 @@ window.VS_DATA = {
         "Gemini",
         "Move Speed",
         "Cooldown Speed",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Speed"
@@ -30501,10 +30521,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Tragic Princess (III)",
           "items": [
-            "Tragic Princess (III)",
-            "Pale Diamond Incursion (V)"
+            "Cooldown Speed"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
           ]
         },
         {
@@ -30525,8 +30550,8 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Magnet",
         "Blue",
-        "Tragic Princess (III)",
-        "Pale Diamond Incursion (V)",
+        "Cooldown Speed",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [],
@@ -30693,10 +30718,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Tragic Princess (III)",
           "items": [
-            "Tragic Princess (III)",
-            "Pale Diamond Incursion (V)"
+            "Cooldown Speed"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
           ]
         },
         {
@@ -30718,8 +30748,8 @@ window.VS_DATA = {
         "Union",
         "Magnet",
         "Blue",
-        "Tragic Princess (III)",
-        "Pale Diamond Incursion (V)",
+        "Cooldown Speed",
+        "Cooldown Speed",
         "Fire"
       ],
       "conflict": [],
@@ -34616,10 +34646,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Iron Blue Will (VII)",
           "items": [
-            "Iron Blue Will (VII)",
-            "Waltz of Pearls (XI)"
+            "Bounce"
+          ]
+        },
+        {
+          "key": "Waltz of Pearls (XI)",
+          "items": [
+            "Bounce"
           ]
         },
         {
@@ -34638,8 +34673,8 @@ window.VS_DATA = {
         "Blue",
         "Move Speed",
         "Cooldown Speed",
-        "Iron Blue Will (VII)",
-        "Waltz of Pearls (XI)",
+        "Bounce",
+        "Bounce",
         "Cooldown Speed"
       ],
       "conflict": [
@@ -34808,10 +34843,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -34826,8 +34866,8 @@ window.VS_DATA = {
         "Red",
         "Blue",
         "Curse",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Speed"
@@ -38684,10 +38724,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -38703,8 +38748,8 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Armor",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [],
       "arcana": [
@@ -38784,10 +38829,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -38801,8 +38851,8 @@ window.VS_DATA = {
         "Recovery",
         "Luck",
         "Curse",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [],
       "arcana": [
@@ -39368,10 +39418,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -39386,8 +39441,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Red",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Speed",
@@ -39465,10 +39520,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -39485,8 +39545,8 @@ window.VS_DATA = {
         "Low Health",
         "Critical Damage",
         "Red",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Speed",
@@ -41446,10 +41506,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -41458,8 +41523,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Recovery",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [
         "Might",
@@ -41528,10 +41593,15 @@ window.VS_DATA = {
           ]
         },
         {
-          "key": null,
+          "key": "Sarabande of Healing (VI)",
           "items": [
-            "Sarabande of Healing (VI)",
-            "Wandering the Jet Black (XXI)"
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
           ]
         }
       ],
@@ -41550,8 +41620,8 @@ window.VS_DATA = {
         "Move Speed",
         "Luck",
         "Growth",
-        "Sarabande of Healing (VI)",
-        "Wandering the Jet Black (XXI)"
+        "Healing Damage",
+        "Healing Damage"
       ],
       "conflict": [],
       "arcana": [
