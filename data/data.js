@@ -27230,7 +27230,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         },
         {
@@ -27252,6 +27253,7 @@ window.VS_DATA = {
         "Luck",
         "Blue",
         "Armor",
+        "Divine Bloodline",
         "Cooldown Speed"
       ],
       "conflict": [],
@@ -28697,7 +28699,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         }
       ],
@@ -28713,7 +28716,8 @@ window.VS_DATA = {
         "Bounce",
         "Luck",
         "Critical Damage",
-        "Armor"
+        "Armor",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Duration"
@@ -29092,7 +29096,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         }
       ],
@@ -29107,7 +29112,8 @@ window.VS_DATA = {
         "Santa",
         "Blue",
         "Curse",
-        "Armor"
+        "Armor",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "arcana": [
@@ -29891,7 +29897,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         },
         {
@@ -29912,6 +29919,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown Speed",
         "Armor",
+        "Divine Bloodline",
         "Blood Astronomia",
         "Amount",
         "Magnet",
@@ -30413,7 +30421,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         },
         {
@@ -30442,6 +30451,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown Speed",
         "Armor",
+        "Divine Bloodline",
         "Speed",
         "Cooldown Speed",
         "Fire"
@@ -30952,6 +30962,18 @@ window.VS_DATA = {
           "items": [
             "Cooldown Speed"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -30965,7 +30987,9 @@ window.VS_DATA = {
         "Retaliation",
         "Vampire-Killing Tool",
         "Blue",
-        "Cooldown Speed"
+        "Cooldown Speed",
+        "Divine Bloodline",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -31120,6 +31144,18 @@ window.VS_DATA = {
           "items": [
             "Cooldown Speed"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
+        },
+        {
+          "key": "Jail of Crystal (XIV)",
+          "items": [
+            "Freeze"
+          ]
         }
       ],
       "affinity": [
@@ -31134,7 +31170,9 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Union",
         "Blue",
-        "Cooldown Speed"
+        "Cooldown Speed",
+        "Divine Bloodline",
+        "Freeze"
       ],
       "conflict": [],
       "arcana": [
@@ -31221,7 +31259,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         },
         {
@@ -31243,6 +31282,7 @@ window.VS_DATA = {
         "Move Speed",
         "Cooldown Speed",
         "Armor",
+        "Divine Bloodline",
         "Speed",
         "Cooldown Speed"
       ],
@@ -33200,7 +33240,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         }
       ],
@@ -33211,7 +33252,8 @@ window.VS_DATA = {
         "Cooldown",
         "Red",
         "Blue",
-        "Armor"
+        "Armor",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Speed"
@@ -35796,6 +35838,12 @@ window.VS_DATA = {
           "items": [
             "Cooldown Speed"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -35807,7 +35855,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
-        "Cooldown Speed"
+        "Cooldown Speed",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Duration"
@@ -35879,6 +35928,12 @@ window.VS_DATA = {
           "items": [
             "Cooldown Speed"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -35891,7 +35946,8 @@ window.VS_DATA = {
         "Retaliation",
         "Low Health",
         "Max Health",
-        "Cooldown Speed"
+        "Cooldown Speed",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "arcana": [
@@ -36275,6 +36331,12 @@ window.VS_DATA = {
           "items": [
             "Blue"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -36286,7 +36348,8 @@ window.VS_DATA = {
         "Amount",
         "Armor",
         "Retaliation",
-        "Blue"
+        "Blue",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Speed",
@@ -38126,6 +38189,12 @@ window.VS_DATA = {
             "Armor",
             "Invulnerable"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -38138,7 +38207,8 @@ window.VS_DATA = {
         "Luck",
         "Retaliation",
         "Armor",
-        "Invulnerable"
+        "Invulnerable",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Speed"
@@ -38720,7 +38790,8 @@ window.VS_DATA = {
         {
           "key": "Divine Bloodline (IX)",
           "items": [
-            "Armor"
+            "Armor",
+            "Divine Bloodline"
           ]
         },
         {
@@ -38748,6 +38819,7 @@ window.VS_DATA = {
         "Blue",
         "Curse",
         "Armor",
+        "Divine Bloodline",
         "Healing Damage",
         "Healing Damage"
       ],
@@ -39428,6 +39500,12 @@ window.VS_DATA = {
           "items": [
             "Healing Damage"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -39442,7 +39520,8 @@ window.VS_DATA = {
         "Retaliation",
         "Red",
         "Healing Damage",
-        "Healing Damage"
+        "Healing Damage",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Speed",
@@ -39530,6 +39609,12 @@ window.VS_DATA = {
           "items": [
             "Healing Damage"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -39546,7 +39631,8 @@ window.VS_DATA = {
         "Critical Damage",
         "Red",
         "Healing Damage",
-        "Healing Damage"
+        "Healing Damage",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Speed",
@@ -40172,6 +40258,12 @@ window.VS_DATA = {
             "Critical Damage",
             "Luck"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -40181,7 +40273,8 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Critical Damage",
-        "Luck"
+        "Luck",
+        "Divine Bloodline"
       ],
       "conflict": [
         "Speed",
@@ -40261,6 +40354,12 @@ window.VS_DATA = {
             "Critical Damage",
             "Luck"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -40274,7 +40373,8 @@ window.VS_DATA = {
         "Retaliation",
         "Red",
         "Critical Damage",
-        "Luck"
+        "Luck",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "arcana": [
@@ -50188,6 +50288,12 @@ window.VS_DATA = {
             "Magic Weapon",
             "Blue"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -50201,7 +50307,8 @@ window.VS_DATA = {
         "Retaliation",
         "Low Health",
         "Magic Weapon",
-        "Blue"
+        "Blue",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "arcana": []
@@ -50247,6 +50354,12 @@ window.VS_DATA = {
             "Invulnerable",
             "Blue"
           ]
+        },
+        {
+          "key": "Divine Bloodline (IX)",
+          "items": [
+            "Divine Bloodline"
+          ]
         }
       ],
       "affinity": [
@@ -50262,7 +50375,8 @@ window.VS_DATA = {
         "Critical Hit",
         "Magic Weapon",
         "Invulnerable",
-        "Blue"
+        "Blue",
+        "Divine Bloodline"
       ],
       "conflict": [],
       "arcana": []
@@ -63203,7 +63317,7 @@ window.VS_DATA = {
       "color": "#2d2d5a",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "Blood Astronomia (XXI) adds weapon effects that deal damage and benefit from Amount, Magnet, and Duration when they would normally be non-damaging and/or ignore these stats.",
+      "description": "Blood Astronomia (XXI) adds an effect to supported weapons that deals damage and benefits from Amount, Magnet, and Duration when these weapons would normally be non-damaging or ignore these stats.",
       "info_entries": [
         {
           "objects": [
@@ -63305,7 +63419,6 @@ window.VS_DATA = {
             "Legacy of Death: Soul River",
             "Phiera Der Tuphello",
             "Eight The Sparrow",
-            "Carréllo",
             "Flash Arrow",
             "Millionaire",
             "Javelin",
@@ -63540,7 +63653,7 @@ window.VS_DATA = {
             "Gros Michel",
             "Cavendish"
           ],
-          "blurb": "Cooldown can be reduced by both Speed with the associated Arcana active.",
+          "blurb": "Cooldown can be reduced by Speed with the associated Arcana active.",
           "conditions": [
             "Pale Diamond Incursion (V)"
           ]
@@ -63656,53 +63769,37 @@ window.VS_DATA = {
       "color": "#878787",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "Some weapons possess low innate crit chance which is generally affected by Luck but all Critical Damage builds benefit from Slash (XVI) for its double critical multiplier and elevated critical chance.",
+      "description": "Slash (XVI) is a key support for the Critical Damage archetype, doubling the damage of critical hits from all sources and enabling critical hits for supported weapons that cannot crit innately. In general, critical hit chance is affected by luck with some exceptions.",
       "info_entries": [
         {
           "objects": [
-            "Celestial Voulge",
-            "Santa Javelin"
+            "Bloody Tear",
+            "Fuwalafuwaloo"
           ],
-          "blurb": "Innate chance to deal 2x critical damage (5%)."
+          "blurb": "Critical Hits heal the user for 8 health."
         },
         {
           "objects": [
-            "Claimh Solais"
+            "Fuwalafuwaloo"
           ],
-          "blurb": "Global modifier applies to Critical Damage (max +100%)."
+          "blurb": "Critical Hits trigger an explosion that is affected by Area."
         },
         {
           "objects": [
-            "Tyrfing",
-            "Rune Sword"
+            "Bloody Tear",
+            "Vento Sacro",
+            "Fuwalafuwaloo"
           ],
-          "blurb": "Innate chance to deal 3x critical damage."
+          "blurb": "Capable of critical hits innately."
         },
         {
           "objects": [
-            "Rune Sword"
+            "Whip"
           ],
-          "blurb": "Critical damage also affected by Area, Speed, and Duration."
-        },
-        {
-          "objects": [
-            "Gungnir-Souris"
-          ],
-          "blurb": "Innate chance to deal 2x critical damage (25%)"
-        },
-        {
-          "objects": [
-            "Flamberge",
-            "Zweihander",
-            "Galatyn"
-          ],
-          "blurb": "Innate chance to deal 2x critical damage (2%)."
-        },
-        {
-          "objects": [
-            "Stamazza"
-          ],
-          "blurb": "Innate chance to deal 100x critical damage (1%), unaffected by Slash (XVI)."
+          "blurb": "Capable of critical hits only when Slash (XVI) is active.",
+          "conditions": [
+            "Slash (XVI)"
+          ]
         }
       ],
       "related": {
@@ -63789,7 +63886,7 @@ window.VS_DATA = {
       "color": "#000016",
       "base_affinity": "Arcana",
       "is_parent": false,
-      "description": "Divine Bloodline (IX) is a cornerstone support for Retaliation archetypes and also adds flat damage based on Armor and mising Max Health. The missing health Bloodline damage component applies to all weapons, not just those supported by the Arcana.",
+      "description": "Divine Bloodline (IX) is a key support for Retaliation and Armor archetypes, granting infinite scaling to Max Health from retaliatory damage kills and 1 flat damage to all weapons for each 10 health missing.",
       "info_entries": [
         {
           "objects": [
@@ -63803,7 +63900,7 @@ window.VS_DATA = {
             "Victory Sword",
             "Silver Wind"
           ],
-          "blurb": "Listed weapons gain 5 flat base damage per Armor (max 250), this effect does not support the evolved forms of listed weapons."
+          "blurb": "Gains 5 flat base damage per Armor (max 250), this effect does not support weapon evolutions."
         },
         {
           "objects": [
@@ -63820,11 +63917,32 @@ window.VS_DATA = {
             "Iron Shield",
             "Dark Iron Shield"
           ],
-          "blurb": "Listed Arcana, characters, and weapons have a damage component that counts as retaliatory damage and grants +0.5 flat Max Health on kill."
+          "blurb": "Deals retaliatory damage that grants +0.5 flat Max Health per kill with the Arcana active."
         }
       ],
       "related": {
-        "weapons": [],
+        "weapons": [
+          "Vento Sacro",
+          "Cross",
+          "King Bible",
+          "Garlic",
+          "Santa Water",
+          "NO FUTURE",
+          "Carnage Heart",
+          "Lightning Ring",
+          "Song of Mana",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Victory Sword",
+          "Embrace of Gaea",
+          "Silver Wind",
+          "Night Sword",
+          "Muramasa",
+          "Eskizzibur",
+          "Legionnaire",
+          "Iron Shield",
+          "Dark Iron Shield"
+        ],
         "passives": [],
         "characters": [
           "Richter Belmont (Platinum Whip)",
@@ -63880,7 +63998,7 @@ window.VS_DATA = {
             "Spirit Rings",
             "Rings of Calamity"
           ],
-          "blurb": "Weapon deals Fire damage that also counts as explosive and is supported by both Fire Arcana.",
+          "blurb": "Deals Fire damage that is supported by both Heir of Fate (XIX) and Heart of Fire (XIX).",
           "conditions": [
             "Heart of Fire (XIX)",
             "Heir of Fate (XIX)"
@@ -63915,7 +64033,7 @@ window.VS_DATA = {
             "Hydra Cannon",
             "Hyperion Bazooka"
           ],
-          "blurb": "The listed weapons gain an explosive effect on their projectiles but do not count as Fire damage for Scorched Soul drops.",
+          "blurb": "Damage dealt is not considered Fire damage and is only supported by Heart of Fire (XIX).",
           "conditions": [
             "Heart of Fire (XIX)"
           ]
@@ -63937,7 +64055,7 @@ window.VS_DATA = {
             "NaneInferno",
             "Nduja Fritta Tanto"
           ],
-          "blurb": "The listed weapons are considered Fire damage and cause Scorched Souls to drop from killed enemies but do not gain an explosive effect on their projectiles.",
+          "blurb": "Deals Fire damage that is supported by Heir of Fate (XIX), this damage is not supported by Heart of Fire (XIX).",
           "conditions": [
             "Heir of Fate (XIX)"
           ]
@@ -64049,7 +64167,7 @@ window.VS_DATA = {
             "Dress Sword",
             "Espada Ropera"
           ],
-          "blurb": "Listed weapons have innate freezing effects that are improved with Jail of Crystal (XII)",
+          "blurb": "Weapon effect innately freezes enemies, freeze chance can be improved with Jail of Crystal (XII).",
           "conditions": [
             "Out of Bounds (XII)",
             "Jail of Crystal (XIV)"
@@ -64462,7 +64580,32 @@ window.VS_DATA = {
       "base_affinity": "Arcana",
       "is_parent": false,
       "description": "The primary support for a limited weapon build is Silent Old Sanctuary (XX) and while any weapon can generally function in this archetype Para Kooleo and Penshin Fatcha are notable mentions.",
-      "info_entries": [],
+      "info_entries": [
+        {
+          "objects": [
+            "Para Kooleo (Tonno Subito)",
+            "Para Kooleo (Tonnado)",
+            "Para Kooleo (Tonn'omoto)",
+            "Para Kooleo (Tonn'oddeeo)",
+            "Para Kooleo (Tonne)",
+            "Para Kooleo (Unsurpassed)"
+          ],
+          "blurb": "Starting weapon cannot evolve but gains significantly greater bonuses from Limit Break and benefits from being the sole level up option."
+        },
+        {
+          "objects": [
+            "Penshin Fatcha",
+            "Tonno Subito",
+            "Tonnado",
+            "Tonn'omoto",
+            "Tonn'oddeeo",
+            "Tonne",
+            "Unsurpassed",
+            "Miracle of Multiplication"
+          ],
+          "blurb": "Weapon can evolve infinitely and limited weapon slots ensures"
+        }
+      ],
       "related": {
         "weapons": [
           "Penshin Fatcha",
