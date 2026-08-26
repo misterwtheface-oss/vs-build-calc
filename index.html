@@ -4992,6 +4992,12 @@
   // forward history. `player` (add-to-build target) is only updated when provided.
   function openDetailPage(page, player) {
     if (typeof player === 'number') state.detail.player = player;
+    // If a slot selector is open underneath, opening a detail is a VIEW action — suppress that
+    // selector's tap-away auto-commit so dismissing it later doesn't silently commit the viewed
+    // item (e.g. a base weapon) over whatever the detail's own "Add to build" added. This is the
+    // single chokepoint for EVERY detail entry point from the selector (evo-path nodes, info-"i",
+    // affinity/arcana affect icons, nav-*). See closeOverlay's `applying` guard.
+    if (state.overlay) state.ovl.viewedDetail = true;
     const d = state.detail;
     if (d.idx < 0) { d.stack = [page]; d.idx = 0; }
     else { d.stack = d.stack.slice(0, d.idx + 1); d.stack.push(page); d.idx = d.stack.length - 1; }
@@ -7334,11 +7340,6 @@
     // (nav-*). Add-to-build target = the selector's player.
     if (action === 'open-object-page' || action === 'open-affinity-page'
         || action === 'nav-object' || action === 'nav-affinity') {
-      // Opening a detail page only VIEWS an item — it must not arm this selector's tap-away
-      // auto-commit. Otherwise dismissing the still-open selector afterwards would silently
-      // commit the viewed base weapon (e.g. Cross) over whatever the detail's own "Add to build"
-      // added (e.g. Heaven Sword). See closeOverlay's `applying` guard.
-      state.ovl.viewedDetail = true;
       openDetailFromEl(btn, state.overlay?.playerIdx ?? 0);
       return;
     }
