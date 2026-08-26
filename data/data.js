@@ -17503,7 +17503,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/innocent_devil_bitterfly_sprite.gif",
       "base_name": "Innocent",
       "starting_weapons": [
-        "Summon Spirit"
+        "Garlic"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -17707,8 +17707,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/blue_crescent_moon_cornell_sprite.gif",
       "base_name": "Blue Crescent Moon Cornell",
       "starting_weapons": [
-        "Trinum Custodem",
-        "Ebony Diabologue"
+        "Trinum Custodem"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -17781,7 +17780,6 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/blue_crescent_moon_cornell_sprite.gif",
       "base_name": "Blue Crescent Moon Cornell",
       "starting_weapons": [
-        "Trinum Custodem",
         "Ebony Diabologue"
       ],
       "hidden_items": [],
@@ -22338,7 +22336,9 @@ window.VS_DATA = {
         "Death Spiral",
         "Death Hand"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Death Hand"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
@@ -22405,7 +22405,9 @@ window.VS_DATA = {
         "Death Spiral",
         "Death Hand"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Death Hand"
+      ],
       "max_items": [],
       "starting_arcana": null,
       "description": "Doesn't appreciate getting blasphemously mockered.",
@@ -23185,8 +23187,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
-        "Punch",
-        "Kick"
+        "Punch"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -23299,7 +23300,6 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
-        "Punch",
         "Kick"
       ],
       "hidden_items": [],
@@ -23413,8 +23413,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
-        "Punch",
-        "Kick"
+        "Punch"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -23527,7 +23526,6 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/bonnie_blair_sprite.gif",
       "base_name": "Bonnie Blair",
       "starting_weapons": [
-        "Punch",
         "Kick"
       ],
       "hidden_items": [],
@@ -24731,8 +24729,7 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/ameya_aisling_sprite.gif",
       "base_name": "Ameya Aisling",
       "starting_weapons": [
-        "Spirit Rings",
-        "Intuition"
+        "Spirit Rings"
       ],
       "hidden_items": [],
       "max_items": [],
@@ -24939,7 +24936,6 @@ window.VS_DATA = {
       "sprite_gif": "assets/icons/characters/ameya_aisling_sprite.gif",
       "base_name": "Ameya Aisling",
       "starting_weapons": [
-        "Spirit Rings",
         "Intuition"
       ],
       "hidden_items": [],

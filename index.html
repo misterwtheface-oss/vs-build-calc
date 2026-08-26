@@ -2542,6 +2542,19 @@
     return info && player?.character?.name !== info.character ? info : null;
   }
 
+  // Para Kooleo's alternate forms (every form EXCEPT Penshin Fatcha) lock into a single tuna
+  // that CANNOT evolve — only the default Penshin Fatcha form evolves freely into Miracle of
+  // Multiplication. Returns { base, character } (the form's locked tuna weapon) when `name` is
+  // that blocked evolution result, else null. Same shape as chaosBlocked so it wires in the same
+  // spots (evoQuickAdd guard, selector fallback-to-base, sidebar Evolve-button disable).
+  function paraKooleoEvoBlocked(name, player) {
+    const c = player?.character;
+    if (!c || c.base_name !== 'Para Kooleo' || c.name === 'Para Kooleo (Penshin Fatcha)') return null;
+    const tuna  = (c.starting_weapons || []).find(wn => !isPassiveName(wn));
+    const tunaW = tuna && weaponByName(tuna);
+    return (tunaW && tunaW.trans_result === name) ? { base: tuna, character: c.name } : null;
+  }
+
   // Restore a result's absorbed weapons into empty weapon slots (dropping any that don't
   // fit, with a toast) and clear the entry. Does not touch the result slot itself.
   function releaseAbsorbed(player, resultName) {
@@ -3907,8 +3920,11 @@
               // Chaos-morph finals also require the mapped character (e.g. Bone → Anima of
               // Mortaccio only as Mortaccio) — disable the arrow otherwise.
               const cInfo = chaosBlocked(nextW.name, player);
-              ready = missing.length === 0 && !cInfo;
+              // Para Kooleo alt forms can't evolve their locked tuna (Penshin Fatcha still can).
+              const pkInfo = paraKooleoEvoBlocked(nextW.name, player);
+              ready = missing.length === 0 && !cInfo && !pkInfo;
               missingText = cInfo ? `Requires ${esc(cInfo.character)}`
+                : pkInfo ? `${esc(pkInfo.base)} can't be evolved`
                 : missing.length ? `Missing: ${missing.map(n => esc(n)).join(', ')}` : '';
               dataAction = 'perform-evolve';
             }
@@ -5887,6 +5903,19 @@
               render();
               return;
             }
+            // Para Kooleo alt form picking its tuna's final form — drop in the locked base tuna
+            // instead (mirrors the chaos-morph unmet-condition fallback; the tuna can't evolve).
+            const pkInfo = paraKooleoEvoBlocked(wDef.name, player);
+            if (pkInfo) {
+              player.weapons[slotIdx] = weaponByName(pkInfo.base);
+              showToast(`${pkInfo.character} can't evolve ${pkInfo.base} — added ${pkInfo.base}`, 'warn');
+              syncExtraPassives(player);
+              state.overlay = null;
+              state.ovl = { selected: null, variantIdx: state.ovl.variantIdx, arcanaTab: 'arcana', autoAdd: null, search: '' };
+              document.getElementById('overlay-root').classList.add('hidden');
+              render();
+              return;
+            }
             // Evolved weapon requiring a stage-exclusive passive not obtainable here (rings/
             // metaglios only on the right stage) — drop in the base instead (stage-gated evo,
             // mirrors the chaos-morph / Alucard Shield unmet-condition fallback).
@@ -6228,9 +6257,9 @@
   // trailing granted slots (and their contents) drop when the grant goes away.
   function syncArcanaSlots() {
     const inverseSlots = state.inverseMode ? 1 : 0; // Inverse Game Mode adds a 4th Arcana slot
-    // Queen Sigma grants one extra Arcana slot; +1 if ANY player is her (not per-copy). Stacks with
-    // Inverse (3 + 1 + 1 = 5). Recomputed every render, so deselecting her drops the slot.
-    const sigmaSlots = state.players.some(p => p.character?.base_name === 'Queen Sigma') ? 1 : 0;
+    // Queen Sigma grants two extra Arcana slots; +2 if ANY player is her (not per-copy). Stacks with
+    // Inverse (3 + 1 + 2 = 6). Recomputed every render, so deselecting her drops the slots.
+    const sigmaSlots = state.players.some(p => p.character?.base_name === 'Queen Sigma') ? 2 : 0;
     const total = BASE_ARCANA_SLOTS + inverseSlots + sigmaSlots
                 + state.players.reduce((s, p) => s + grantedSlotCount(p, 'arcana'), 0);
     while (state.arcana.length < total) state.arcana.push(null);
@@ -7773,6 +7802,8 @@
       // button for them) — but guard anyway so a stray action can't replace/consume the
       // source. The gift is derived and shows in the Hidden row on its own.
       if (resultW && isGiftHiddenFinal(resultW.name)) { render(); return; }
+      // Para Kooleo alt forms can't evolve their tuna — the button is disabled, but guard anyway.
+      if (resultW && paraKooleoEvoBlocked(resultW.name, state.players[playerIdx])) { render(); return; }
       if (resultW) {
         const p = state.players[playerIdx];
         p.weapons[slotIdx] = resultW;
@@ -8074,6 +8105,10 @@
     // ring/metaglio to be obtainable on the selected stage.
     const sInfo = stageBlockedWeapon(name, player);
     if (sInfo) { showToast(`${name} needs ${sInfo.missing.join(' + ')} — not on this stage`, 'warn'); return; }
+
+    // Para Kooleo alt forms can't evolve their locked tuna — refuse to quick-add its final form.
+    const pkInfo = paraKooleoEvoBlocked(name, player);
+    if (pkInfo) { showToast(`${pkInfo.character} can't evolve ${pkInfo.base}`, 'warn'); return; }
 
     // Gift-hidden-finals (Sole Solution / Universitas) never take a real slot — right-clicking
     // one means "give me this gift," so add its source weapon(s) and let it auto-appear in the
