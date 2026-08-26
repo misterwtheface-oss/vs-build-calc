@@ -5704,8 +5704,10 @@
     const sel = state.ovl.selected;
 
     // Should we commit the current selection? An explicit Confirm always does; an empty slot
-    // auto-commits its selection on a plain dismiss (X / ESC / click-away) as a convenience.
-    let applying = confirmed || (fromEmpty && sel);
+    // auto-commits its selection on a plain dismiss (X / ESC / click-away) as a convenience —
+    // UNLESS a detail page was opened from this selector (info-"i"/nav), in which case the
+    // selection was only being viewed and its detail's own "Add to build" is the commit path.
+    let applying = confirmed || (fromEmpty && sel && !state.ovl.viewedDetail);
 
     // Collection gate: an unowned item can be selected to VIEW its info, but it can't be
     // committed to a tile. On explicit Confirm, block with a toast and keep the overlay open.
@@ -5980,9 +5982,6 @@
               if (isExtraPassive(pname)) continue; // extra-bar passive; backed after placement
               if (!addRequiredPassive(player, pname)) skippedPassives.push(pname);
             }
-            if (skippedPassives.length) {
-              showToast(`No passive slot for: ${skippedPassives.join(', ')}`, 'warn');
-            }
             // Collapse target: if a chain member currently occupies a locked starter
             // slot, the result lands there (locked slots stay bound to their lineage —
             // e.g. selecting Million Cut from Valmanway's slot collapses onto the locked
@@ -5996,20 +5995,31 @@
               const w = player.weapons[i];
               if (w && chain.has(w.name)) { targetSlot = i; break; }
             }
-            // Place weapon in the target slot
-            player.weapons[targetSlot] = wDef;
-            // Clear other chain members from this player's slots (consumed by this evo)
-            for (let i = 0; i < counts.weapons; i++) {
-              if (i === targetSlot) continue;
-              const w = player.weapons[i];
-              if (w && chain.has(w.name)) player.weapons[i] = null;
+            // An evolved form is INACCESSIBLE without its required passives. If any couldn't be
+            // added (passive slots full), place the chain's ROOT BASE instead of the evolved
+            // weapon — consistent with evoQuickAdd. Never downgrade a more-evolved chain weapon
+            // already in the target slot, and skip the chain-consume (nothing is being formed).
+            const curTarget = player.weapons[targetSlot];
+            const placeWeapon = skippedPassives.length
+              ? (curTarget && chain.has(curTarget.name) ? curTarget : (weaponByName(rootBaseWeapon(wDef.name)) || wDef))
+              : wDef;
+            player.weapons[targetSlot] = placeWeapon;
+            if (skippedPassives.length) {
+              showToast(`${wDef.name} left as ${placeWeapon.name} — no room for ${skippedPassives.join(', ')}`, 'warn');
+            } else {
+              // Clear other chain members from this player's slots (consumed by this evo)
+              for (let i = 0; i < counts.weapons; i++) {
+                if (i === targetSlot) continue;
+                const w = player.weapons[i];
+                if (w && chain.has(w.name)) player.weapons[i] = null;
+              }
             }
             // Extra-passive auto-add: adding a weapon contributes one instance of each
             // extra-bar passive it requires (Weapon Power-Up, Outer Saboteur, Mini …) to
             // the extra bar, up to that passive's cap, when auto-add is on. Unbacked
             // evolved OG weapons are devolved by syncExtraPassives.
             const extraAutoAdd = state.ovl.autoAdd ?? true;
-            if (extraAutoAdd) {
+            if (extraAutoAdd && !skippedPassives.length) {
               for (const pname of collectChainPassives(chain)) {
                 if (!isExtraPassive(pname)) continue;
                 if (extraCount(player, pname) < extraCap(player, pname)) player.extraPassives.push(pname);
@@ -7324,6 +7334,11 @@
     // (nav-*). Add-to-build target = the selector's player.
     if (action === 'open-object-page' || action === 'open-affinity-page'
         || action === 'nav-object' || action === 'nav-affinity') {
+      // Opening a detail page only VIEWS an item — it must not arm this selector's tap-away
+      // auto-commit. Otherwise dismissing the still-open selector afterwards would silently
+      // commit the viewed base weapon (e.g. Cross) over whatever the detail's own "Add to build"
+      // added (e.g. Heaven Sword). See closeOverlay's `applying` guard.
+      state.ovl.viewedDetail = true;
       openDetailFromEl(btn, state.overlay?.playerIdx ?? 0);
       return;
     }
@@ -7945,6 +7960,22 @@
     return visited;
   }
 
+  // Walk an evolution chain back to its equippable ROOT BASE weapon, following the primary
+  // predecessor at each step (union results have multiple predecessors; we take the first —
+  // the main weapon lineage, not the union partner). Returns the target itself if it's already
+  // a base (nothing evolves/unions into it).
+  function rootBaseWeapon(targetName) {
+    let cur = targetName;
+    const seen = new Set();
+    while (!seen.has(cur)) {
+      seen.add(cur);
+      const bases = D.weapons.filter(b => b.trans_result === cur);
+      if (!bases.length) break;
+      cur = bases[0].name;
+    }
+    return cur;
+  }
+
   // Walk forward from targetName via trans_result to collect all future forms.
   // Used to block forward-evo weapons in the selector when a base is already equipped.
   function collectDescendants(targetName, visited = new Set()) {
@@ -8184,11 +8215,28 @@
       else failed.push(pname);
     }
 
-    // Place target weapon — replace anchor slot, or claim an empty slot
+    // An evolved form is INACCESSIBLE without its required passives — so if any couldn't be
+    // added (passive slots full), don't drop the evolved weapon into the build. Fall back to the
+    // chain's ROOT BASE weapon: the user levels that and it evolves once they free a passive slot.
+    // Any passives that DID fit stay in place (progress toward the evo).
+    const passivesShort = failed.length > 0;
+    let placeName;
+
+    // Place the weapon — replace an equipped chain slot (anchor), or claim an empty slot.
     if (anchorSlot >= 0) {
-      player.weapons[anchorSlot] = weaponObj;
-      added.unshift(name);
+      // A chain weapon is already equipped. Evolve it in place normally; but if passives were
+      // short, leave the existing form untouched — never DEVOLVE what the user already has.
+      if (passivesShort) {
+        placeName = player.weapons[anchorSlot].name;
+      } else {
+        player.weapons[anchorSlot] = weaponObj;
+        placeName = name;
+      }
+      added.unshift(placeName);
     } else {
+      // Empty-slot placement: the root base when passives were short, else the evolved form.
+      const placeObj = passivesShort ? (weaponByName(rootBaseWeapon(name)) || weaponObj) : weaponObj;
+      placeName = placeObj.name;
       const char = player.character;
       const hiddenSet = new Set(char?.hidden_items ?? []);
       const starterCount = char
@@ -8198,15 +8246,16 @@
       for (let i = starterCount; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
       if (slot < 0) for (let i = 0; i < counts.weapons; i++) { if (!player.weapons[i]) { slot = i; break; } }
       if (slot >= 0) {
-        player.weapons[slot] = weaponObj;
-        added.unshift(name);
+        player.weapons[slot] = placeObj;
+        added.unshift(placeName);
       } else {
-        failed.unshift(name);
+        failed.unshift(placeName);
       }
     }
 
     // Consume other chain weapons already in player's slots (e.g. union partners
-    // placed before the final form was committed via right-click).
+    // placed before the final form was committed via right-click). Only when the FULL
+    // evolved form was placed — never when we fell back to the base.
     if (added.length && added[0] === name) {
       for (let i = 0; i < counts.weapons; i++) {
         const w = player.weapons[i];
@@ -8227,6 +8276,9 @@
     if (!added.length) {
       const label = failed.length === 1 ? failed[0] : failed.slice(0, 2).join(', ') + (failed.length > 2 ? '…' : '');
       showToast(`No room for ${label}`, 'err');
+    } else if (passivesShort && added[0] === placeName && placeName !== name) {
+      // Left as the base form because a required passive wouldn't fit (evolved form unreachable).
+      showToast(`${name} left as ${placeName} — no room for ${failed.join(', ')}`, 'warn');
     } else {
       const [wAdded, ...pAdded] = added;
       let msg = `Added ${wAdded}`;
