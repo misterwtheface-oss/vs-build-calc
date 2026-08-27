@@ -530,7 +530,12 @@ function parseInfoEntries(raw, ctx = '') {
   const norm = s => s.replace(/\s+/g, ' ').trim();
   const entries = [];
   for (const group of splitTopLevel(cell, '|').map(g => g.trim()).filter(Boolean)) {
-    const at = group.indexOf(':[');
+    // Match the key→block separator whitespace-tolerantly: authors sometimes break `]:` and the
+    // following `[blurb]` onto separate lines for legibility (e.g. editing the CSV on mobile). The
+    // `at` index still points at the `:` so `key` excludes it; block extraction below scans forward
+    // to the first `[` regardless of intervening whitespace. Mirrors parseAffinityGroups' `\s*:\s*\[`.
+    const sep = group.match(/:\s*\[/);
+    const at = sep ? sep.index : -1;
     if (at < 0) { console.warn(`info: group without ":[" (${ctx}): ${group}`); continue; }
     let key = group.slice(0, at).trim();
     if (key.startsWith('[') && key.endsWith(']')) key = key.slice(1, -1);
