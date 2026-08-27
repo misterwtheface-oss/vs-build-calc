@@ -63551,7 +63551,7 @@ window.VS_DATA = {
             "Seraphic Cry",
             "Carréllo"
           ],
-          "blurb": "Cooldown can be reduced by both Speed and Move Speed while moving with the associated Arcana active.",
+          "blurb": "Cooldown reduced by both Speed and Move Speed (while moving) with the associated Arcana active.",
           "conditions": [
             "Tragic Princess (III)",
             "Pale Diamond Incursion (V)"
@@ -63572,7 +63572,7 @@ window.VS_DATA = {
             "Kick",
             "Triangle Kick"
           ],
-          "blurb": "Cooldown can be reduced by Move Speed while moving with the associated Arcana active.",
+          "blurb": "Cooldown reduced by Move Speed (while moving).",
           "conditions": [
             "Tragic Princess (III)"
           ]
@@ -63649,7 +63649,7 @@ window.VS_DATA = {
             "Gros Michel",
             "Cavendish"
           ],
-          "blurb": "Cooldown can be reduced by Speed with the associated Arcana active.",
+          "blurb": "Cooldown reduced by Speed.",
           "conditions": [
             "Pale Diamond Incursion (V)"
           ]
@@ -63913,7 +63913,7 @@ window.VS_DATA = {
             "Iron Shield",
             "Dark Iron Shield"
           ],
-          "blurb": "Deals retaliatory damage that grants +0.5 flat Max Health per kill with the Arcana active."
+          "blurb": "Deals retaliatory damage that grants +0.5 flat Max Health per kill."
         }
       ],
       "related": {
@@ -63994,7 +63994,7 @@ window.VS_DATA = {
             "Spirit Rings",
             "Rings of Calamity"
           ],
-          "blurb": "Deals Fire damage that is supported by both Heir of Fate (XIX) and Heart of Fire (XIX).",
+          "blurb": "Deals Fire damage that creates an explosion on impact dealing 50% base damage.",
           "conditions": [
             "Heart of Fire (XIX)",
             "Heir of Fate (XIX)"
@@ -64348,7 +64348,7 @@ window.VS_DATA = {
             "Nduja Fritta Tanto",
             "Sorbetto"
           ],
-          "blurb": "Base weapons and their evolutions or unions that have a counterpart when Gemini (0) is active."
+          "blurb": "With Gemini (I) active, a counterpart of the base weapon is added."
         },
         {
           "objects": [
@@ -64374,7 +64374,7 @@ window.VS_DATA = {
             "Speculo Refectio",
             "Speculo Globus"
           ],
-          "blurb": "Counterpart weapons granted by Gemini (0), listed weapons mirror attack patterns of the supported base weapon and can have their own unique Arcana support."
+          "blurb": "Counterpart weapon only granted by Gemini (I), mirrors attack patterns of the base weapon and can have unique Arcana support."
         }
       ],
       "related": {
@@ -64544,7 +64544,7 @@ window.VS_DATA = {
             "Bloody Tear",
             "Fuwalafuwaloo"
           ],
-          "blurb": "The critical hit healing effect"
+          "blurb": "Critical hits heal the player for 8 health, unaffected by recovery but doubled with Sarabande of Healing (VI)."
         }
       ],
       "related": {
@@ -64586,7 +64586,7 @@ window.VS_DATA = {
             "Para Kooleo (Tonne)",
             "Para Kooleo (Unsurpassed)"
           ],
-          "blurb": "Starting weapon cannot evolve but gains significantly greater bonuses from Limit Break and benefits from being the sole level up option."
+          "blurb": "Starting weapon cannot evolve but gains significantly greater bonuses from Limit Break and benefits from a limited weapon build."
         },
         {
           "objects": [
@@ -64599,7 +64599,7 @@ window.VS_DATA = {
             "Unsurpassed",
             "Miracle of Multiplication"
           ],
-          "blurb": "Weapon can evolve infinitely and limited weapon slots ensures"
+          "blurb": "Weapon can evolve infinitely and benefits from a limited weapon build."
         }
       ],
       "related": {
@@ -64733,12 +64733,6 @@ window.VS_DATA = {
             "Rings of Calamity"
           ],
           "blurb": "Gains the Vermillion Sands glimmer tech at +55% Area."
-        },
-        {
-          "objects": [
-            "Whip"
-          ],
-          "blurb": "Size of weapon effect zone is affected by Area."
         }
       ],
       "related": {
@@ -65403,14 +65397,7 @@ window.VS_DATA = {
       "base_affinity": "Cooldown",
       "is_parent": true,
       "description": "Cooldown most commonly affects the frequency of weapon activations and is capped at -90% (10x attack frequency) but can be reduced further by some Arcana effects.",
-      "info_entries": [
-        {
-          "objects": [
-            "Whip"
-          ],
-          "blurb": "Activation frequency is affected by Cooldown."
-        }
-      ],
+      "info_entries": [],
       "related": {
         "weapons": [
           "Whip",
