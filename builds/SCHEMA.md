@@ -55,6 +55,7 @@ the rest of the build still loads. Keep names in sync with the current `data/dat
 | `playerCount` | number (1–4)      | ✔   | Number of player entries. |
 | `stage`       | string \| null    |     | Stage name, or `null`. |
 | `inverseMode` | boolean           |     | **Inverse Game Mode** — grants a 4th Arcana slot. Omitted when off (defaults `false`). |
+| `sharePassives` | boolean         |     | **Share Passives** (co-op) — a passive on any player counts toward every player's evolutions and shares its stats. Defaults **`true`**; stored as `false` only when explicitly disabled in a 2+ player build (absent → shared). |
 | `arcana`      | (string\|null)[]  |     | **Positional** arcana slots; `null` = empty. Base 3 + Inverse Mode's 4th slot + any character-**granted** arcana slots (Blackmore, Nathan Graves), so length may exceed 3. Granted arcana *items* (John Morris) are derived, not listed here. |
 | `players`     | Player[]          | ✔   | Length should equal `playerCount`. |
 

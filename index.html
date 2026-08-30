@@ -586,6 +586,15 @@
        layout and the labels/slots render exactly as a flat row, so the web layout is unchanged. */
     .global-arcana-group, .global-stage-group { display: contents; }
 
+    /* ── Options tile: holds the Inverse Mode + Share Passives toggles in their own row above the
+       Arcana/Stage tile, so the toggles never disturb those slot grids. ── */
+    .global-toggles-row { margin-bottom: .5rem; padding-top: .5rem; padding-bottom: .5rem; }
+    .global-toggles-row .global-row-inner { gap: .6rem; }
+    .toggles-label {
+      width: auto; margin-right: .3rem; font-family: var(--font-title);
+      font-size: .8rem; letter-spacing: .04em; color: var(--text-muted);
+    }
+
     /* ── Player card ── */
     .player-card {
       background: var(--surface);
@@ -1534,6 +1543,27 @@
     .inverse-toggle.active .inverse-toggle-box { background: rgba(120,40,200,.6); border-color: rgba(200,150,255,.9); }
     .inverse-toggle-hint { font-size: .7rem; color: var(--text-dim); }
     .inverse-toggle.active .inverse-toggle-hint { color: #b98cf0; }
+
+    /* ── "Share Passives" co-op toggle (gold accent; lives in the planner global row) ── */
+    .share-toggle {
+      display: inline-flex; align-items: center; gap: .4rem; cursor: pointer;
+      padding: .3rem .6rem; border-radius: 4px; font-family: var(--font-title);
+      font-size: .8rem; letter-spacing: .04em; color: var(--text-muted);
+      background: rgba(232,184,32,.07); border: 1px solid rgba(232,184,32,.35);
+      transition: border-color .15s, background .15s, color .15s;
+    }
+    .share-toggle:hover { border-color: rgba(232,184,32,.7); color: var(--text); }
+    .share-toggle.active {
+      background: rgba(232,184,32,.18); border-color: rgba(232,184,32,.85);
+      color: var(--gold); box-shadow: 0 0 8px rgba(232,184,32,.35);
+    }
+    .share-toggle-box {
+      width: 16px; height: 16px; flex-shrink: 0; border-radius: 3px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .75rem; line-height: 1; color: #fff4cf;
+      border: 1px solid rgba(232,184,32,.6); background: rgba(30,22,4,.6);
+    }
+    .share-toggle.active .share-toggle-box { background: rgba(232,184,32,.55); border-color: rgba(255,230,150,.9); }
     .inverse-badge {
       align-self: center; cursor: pointer; padding: .2rem .5rem; border-radius: 4px;
       font-family: var(--font-title); font-size: .72rem; font-weight: 700; letter-spacing: .12em;
@@ -1803,6 +1833,7 @@
     arcana: [null, null, null], // global — shared across all players
     stage: null,                // global — shared across all players
     inverseMode: false,         // Inverse Game Mode — global; grants a 4th Arcana slot
+    sharePassives: true,        // "Share Passives" co-op rule — a passive on any player counts for every player's evolutions + shares its stats (only meaningful with 2+ players)
     infoPanel: null,
     spritePaused: false, // when true, char sprites render their STATIC png (pause animated gifs)
     overlay: null,   // { type, playerIdx, slotIdx, slotType, fromEmpty, prevItem }
@@ -1896,6 +1927,8 @@
       playerCount: state.playerCount,
       stage: state.stage ? state.stage.name : null,
       inverseMode: state.inverseMode || undefined, // omit when off (backward-compatible)
+      // Share Passives defaults ON; store only when explicitly OFF in co-op (old builds → shared).
+      sharePassives: (state.playerCount > 1 && !state.sharePassives) ? false : undefined,
       arcana: state.arcana.map(a => a ? a.name : null),
       players: state.players.map(p => {
         const counts = SLOT_COUNTS[state.playerCount];
@@ -2013,6 +2046,7 @@
     state.arcana = arc.map(n => resolve(n, arcanaByName));
     state.stage = resolve(build.stage, stageByName);
     state.inverseMode = !!build.inverseMode; // set before syncArcanaSlots so the 4th slot survives
+    state.sharePassives = build.sharePassives !== false; // absent → ON (old builds were always shared)
 
     // Self-heal to a legal state (defence-in-depth alongside validateBuildLegality). Mirrors the
     // render sweep so the new grant mechanics reconstruct: reconcile extra-bar passives, prune
@@ -2710,7 +2744,9 @@
     }
     for (const pn of missingPassiveReqs(cur, player)) {
       if (isExtraPassive(pn)) { if (extraCount(player, pn) < extraCap(player, pn)) player.extraPassives.push(pn); continue; }
-      if (player.passives.some(p => p && p.name === pn)) continue;
+      // Global pool: if the one copy is already held (by this player, or a teammate while sharing is
+      // off), don't mint a second — a teammate holding it just means this evo can't be acquired here.
+      if (anyPlayerOwnsPassive(pn)) { if (!ownsPassiveName(player, pn)) showToast(`${pn} is held by another player`, 'warn'); continue; }
       let empty = -1;
       for (let j = 0; j < counts.passives; j++) { if (!player.passives[j]) { empty = j; break; } }
       if (empty >= 0) player.passives[empty] = passiveByName(pn);
@@ -2955,14 +2991,28 @@
     return `<div class="evo-u2f"><div class="u2l">${leftHTML}</div><div class="u2b"></div><div class="u2t">${midHTML}</div><div class="u2m">${partHTML}</div><div class="u2f">${finalHTML}</div></div>`;
   }
 
+  // ── "Share Passives" (co-op rule) ────────────────────────────────────────────
+  // ON (2+ players + toggle): a normal passive held by ANY player satisfies every player's
+  // evolution requirements AND its stats are shared with everyone. OFF: each player's evolutions
+  // and passive stats use only their OWN passives. Pool availability is GLOBAL either way —
+  // anyPlayerOwnsPassive still caps a normal passive to one instance across the whole build (only
+  // one Attractorb exists), so turning sharing off never unlocks a second copy.
+  const sharePassivesOn = () => state.playerCount > 1 && state.sharePassives;
+  // Normal-passive names usable to satisfy `player`'s evolution requirements under the current rule.
+  // (Extra-bar passives stay player-local and are handled separately by each caller.)
+  function evoPassivePool(player) {
+    const src = sharePassivesOn() ? state.players : [player];
+    return new Set([
+      ...src.flatMap(p => p.passives.filter(Boolean).map(x => x.name)),
+      ...src.flatMap(p => p.extraPassives || []),
+    ]);
+  }
+
   // Passive requirements of wObj that this player can't currently satisfy.
   // Shared by the info-panel Evolve and Union readiness checks — a union can also
   // carry a passive requirement (Phieraggi needs Tirajisú), not just partner weapons.
   function missingPassiveReqs(wObj, player) {
-    const allPassives = new Set([
-      ...state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
-      ...state.players.flatMap(p => p.extraPassives || []),
-    ]);
+    const allPassives = evoPassivePool(player);
     const passiveReqs = (wObj.requirements || []).filter(r => D.passives.some(p => p.name === r));
     return passiveReqs.filter(r => {
       if (isExtraPassive(r)) {
@@ -3207,10 +3257,7 @@
     const pending = []; // {name, slot} — needs to be added to this player
     const missing = []; // names — needed but no slot available
     const virtuallyTaken = new Set();
-    // Passive equipped by ANY player satisfies the evo condition (cross-player sharing).
-    const allEquippedPassives = new Set(
-      state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
-    );
+    const shared = sharePassivesOn();
     for (const req of (selW.requirements || [])) {
       if (!D.passives.some(p => p.name === req)) continue; // weapon req, skip
       if (isExtraPassive(req)) {
@@ -3219,8 +3266,12 @@
         pending.push({ name: req, slot: -1 });
         continue;
       }
-      if (allEquippedPassives.has(req)) continue; // satisfied by any player
-      // Passive is missing entirely — find an empty slot on this player to add it.
+      // Satisfied: shared → any player holds it; not shared → THIS player holds it.
+      if (shared ? anyPlayerOwnsPassive(req) : ownsPassiveName(player, req)) continue;
+      // Not satisfied. The pool is global (one instance across the build): if another player
+      // holds the only copy and we're not sharing, this player can't acquire it → blocked.
+      if (anyPlayerOwnsPassive(req)) { missing.push(req); continue; }
+      // Free to add a fresh copy to this player — find an empty slot.
       let emptySlot = -1;
       for (let i = 0; i < counts.passives; i++) {
         if (!player.passives[i] && !virtuallyTaken.has(i)) { emptySlot = i; break; }
@@ -3336,13 +3387,12 @@
     while (changed) {
       changed = false;
       const counts = SLOT_COUNTS[state.playerCount];
-      // Include extra-bar passives (e.g. Weapon Power-Up) so evolved OG weapons aren't
-      // seen as "missing" their requirement — syncExtraPassives owns the precise 1:1 binding.
-      const allPassiveNames = new Set([
-        ...state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name)),
-        ...state.players.flatMap(p => p.extraPassives || []),
-      ]);
       for (const player of state.players) {
+        // Passives that can keep this player's evolutions alive. Shared → the whole-build pool;
+        // not shared → this player's own only, so flipping Share Passives off cascades any
+        // teammate-reliant evolution back down. Includes extra-bar passives (e.g. Weapon Power-Up)
+        // so evolved OG weapons aren't seen as "missing" — syncExtraPassives owns the 1:1 binding.
+        const allPassiveNames = evoPassivePool(player);
         // A character that STARTS with an evolved weapon (e.g. Mask of the Red Death →
         // Death Spiral) is granted that form outright — its lineage passives (Candelabrador)
         // are irrelevant, so the starter form must never devolve back to its base. Guarding
@@ -4258,6 +4308,31 @@
     const gStageSlot = slotHTML(state.stage ? { name:state.stage.name, icon:state.stage.icon } : null,
       { type:'stage', playerIdx:0, slotIdx:0 });
 
+    // Options tile toggles (rendered in their own row above Arcana/Stage so they don't disturb the
+    // slot grids). Inverse Mode is always available; Share Passives is co-op-only (2+ players).
+    const gInverseToggle = `<button class="inverse-toggle${state.inverseMode ? ' active' : ''}" data-action="toggle-inverse-planner"
+           title="Inverse Game Mode — adds a 4th Arcana slot.">
+           <span class="inverse-toggle-box">${state.inverseMode ? '✓' : ''}</span>
+           <span class="inverse-toggle-label">Inverse Mode</span>
+           <span class="inverse-toggle-hint">+1 Arcana</span>
+         </button>`;
+    // Share Passives — shares passives across players for BOTH evolution eligibility and passive
+    // stat bonuses (pool stays one-per-build).
+    const gShareToggle = playerCount > 1
+      ? `<button class="share-toggle${state.sharePassives ? ' active' : ''}" data-action="toggle-share-passives"
+           title="Share Passives — a passive held by any player counts toward every player's evolutions and shares its stats with everyone. Pool availability stays one-per-build either way.">
+           <span class="share-toggle-box">${state.sharePassives ? '✓' : ''}</span>
+           <span class="share-toggle-label">Share Passives</span>
+         </button>`
+      : '';
+    const gTogglesRow = `<div class="global-row global-toggles-row">
+              <div class="global-row-inner">
+                <span class="slot-row-label toggles-label">Options</span>
+                ${gInverseToggle}
+                ${gShareToggle}
+              </div>
+            </div>`;
+
     // Preserve the player-list scroll position across every re-render. With the
     // single-column layout, stacked tiles (3-4 players) make `.planning-main`
     // scroll; clicking any icon rebuilds `#app`, so without this the list jumps
@@ -4284,6 +4359,7 @@
         </div>
         <div class="planning-body">
           <div class="planning-main">
+            ${gTogglesRow}
             <div class="global-row">
               <div class="global-row-inner">
                 <div class="global-arcana-group">
@@ -4295,7 +4371,6 @@
                 <div class="global-stage-group">
                   <span class="slot-row-label" style="width:auto;margin-right:.3rem">Stage</span>
                   ${gStageSlot}
-                  ${state.inverseMode ? '<span class="inverse-badge" title="Inverse Game Mode — 4 Arcana slots" data-action="open-stage">INVERSE</span>' : ''}
                 </div>
               </div>
             </div>
@@ -6063,6 +6138,11 @@
               } else {
                 placeTransientItem(player, 'passive', D.passives.find(p => p.name === sel.name));
               }
+            } else if (anyPlayerOwnsPassive(sel.name) && player.passives[slotIdx]?.name !== sel.name) {
+              // Normal passives are one-per-build across all players (shared pool). A grid item is
+              // dimmed when another player holds it, but a dimmed card is still clickable — block
+              // the commit so it can't slip a cross-player duplicate into the slot.
+              showToast(`${sel.name} already in build`, 'warn');
             } else {
               // Replacing a passive can remove one an equipped evo depends on — re-check.
               player.passives[slotIdx] = D.passives.find(p => p.name === sel.name);
@@ -6174,8 +6254,16 @@
         else additive += val;
       });
     };
-    player.passives.filter(Boolean).forEach(p => contribute(p.name));
-    (player.extraPassives || []).forEach(contribute);
+    // Share Passives (co-op): every player's passives contribute to everyone, stacking with no
+    // dedup — a passive held by two players counts twice for all (e.g. two Weapon Power-Ups). Off
+    // (or single-player), only this player's own passives contribute. Detached preview players
+    // (character-select overlay) aren't in state.players — keep them own-only so the preview total
+    // doesn't fold in teammates' passives it can't show.
+    const sources = (sharePassivesOn() && state.players.includes(player)) ? state.players : [player];
+    sources.forEach(pl => {
+      pl.passives.filter(Boolean).forEach(p => contribute(p.name));
+      (pl.extraPassives || []).forEach(contribute);
+    });
     return { additive, factors };
   }
 
@@ -6415,7 +6503,10 @@
   // else the first empty core slot. (Extra-bar passives are handled separately by callers.)
   // Returns false only when it needed a core slot and none was free.
   function addRequiredPassive(player, pname) {
-    if (anyPlayerOwnsPassive(pname)) return true;
+    // Already satisfied for THIS player? Shared → any holder counts; not shared → only self.
+    if (sharePassivesOn() ? anyPlayerOwnsPassive(pname) : ownsPassiveName(player, pname)) return true;
+    // Pool is global — another player holding the only copy (while not sharing) blocks a 2nd one.
+    if (anyPlayerOwnsPassive(pname)) return false;
     if (itemProvidedFree(pname, player) || isGiftPassive(pname)) { placeTransientItem(player, 'passive', passiveByName(pname)); return true; }
     const counts = SLOT_COUNTS[state.playerCount];
     for (let i = 0; i < counts.passives; i++) if (!player.passives[i]) { player.passives[i] = passiveByName(pname); return true; }
@@ -7758,6 +7849,23 @@
       evoQuickAdd(btn.dataset.stageItem, playerIdx);
       return;
     }
+    if (action === 'toggle-inverse-planner') {
+      // Planner-level Inverse Mode toggle (mirrors the stage overlay's ovl-toggle-inverse, but
+      // re-renders the planner). Toggling off trims the 4th Arcana slot via syncArcanaSlots.
+      state.inverseMode = !state.inverseMode;
+      syncArcanaSlots();
+      render();
+      return;
+    }
+    if (action === 'toggle-share-passives') {
+      // Global co-op rule. Flipping it changes which passives satisfy evolutions and whose stats
+      // are shared. Turning it OFF can strand an evolution built on a teammate's passive, so cascade
+      // devolve; render() then re-runs the sync sweep and recomputes stats under the new rule.
+      state.sharePassives = !state.sharePassives;
+      autoDevolveBrokenEvos();
+      render();
+      return;
+    }
     if (action === 'change-player-count') {
       state.page = 'landing';
       render();
@@ -8179,7 +8287,12 @@
         syncExtraPassives(player);
         showToast(`Added ${name}`); render(); return;
       }
-      if (player.passives.some(p => p?.name === name)) { showToast(`${name} already equipped`, 'warn'); return; }
+      // Normal passives are one-per-build across ALL players (shared pool — only one Attractorb
+      // exists). Block if any player already holds it, whether or not passives are being shared.
+      if (anyPlayerOwnsPassive(name)) {
+        showToast(ownsPassiveName(player, name) ? `${name} already equipped` : `${name} already in build`, 'warn');
+        return;
+      }
       // Stage-exclusive / stage-supplied passive → free transient slot (gate + one-per-build).
       if (STAGE_EXCLUSIVE_PASSIVES.has(name) || itemProvidedFree(name, player) || isGiftPassive(name)) {
         if (STAGE_EXCLUSIVE_PASSIVES.has(name) && !stageItemGateOpen(player, name)) { showToast(`${name} isn't available here`, 'warn'); return; }
@@ -8243,10 +8356,9 @@
     }
 
     const equippedW = new Set(player.weapons.filter(Boolean).map(w => w.name));
-    // Cross-player evo: a passive equipped by any player satisfies the condition.
-    const equippedP = new Set(
-      state.players.flatMap(p => p.passives.filter(Boolean).map(p => p.name))
-    );
+    // Cross-player evo: with Share Passives on, a passive equipped by any player satisfies the
+    // condition; off, only this player's own passives do (evoPassivePool encodes the rule).
+    const equippedP = evoPassivePool(player);
 
     if (equippedW.has(name)) { showToast(`${name} already in build`, 'warn'); return; }
 

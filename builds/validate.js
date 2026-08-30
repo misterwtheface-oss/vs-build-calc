@@ -119,10 +119,15 @@
       (p.passives || []).forEach(n => n && allEquippedPassives.add(n));
       (p.extraPassives || []).forEach(n => n && allEquippedPassives.add(n));
     });
-    // A required passive is satisfied if any player equips it, OR it's a stage-exclusive that a
-    // character grants / the stage supplies (those ride a transient slot, not a core slot).
-    function passiveSatisfied(req, charObj) {
-      if (allEquippedPassives.has(req)) return true;
+    // "Share Passives" co-op rule (defaults ON; only meaningful with 2+ players). When ON, a passive
+    // on any player satisfies every player's evolution requirements; when OFF, only the player's own
+    // passives count. Mirrors the planner's sharePassivesOn().
+    const sharePassives = pc > 1 ? (build.sharePassives !== false) : true;
+    // A required passive is satisfied if an eligible holder equips it (any player when sharing, else
+    // only this player via `ownPassives`), OR it's a stage-exclusive that a character grants / the
+    // stage supplies (those ride a transient slot, not a core slot).
+    function passiveSatisfied(req, charObj, ownPassives) {
+      if ((sharePassives ? allEquippedPassives : ownPassives).has(req)) return true;
       if (STAGE_EXCLUSIVE.has(req)) {
         if (req === ACADEMY_BADGE && isAcademyChar(charObj)) return true;
         if (stageProvides(req)) return true;
@@ -171,6 +176,9 @@
         E(`${who}${pPassivesExtra.length} granted-slot passive fill(s) exceed this character's granted passive slots`);
       const allW = pWeapons.concat(pWeaponsExtra);
       const allP = pPassives.concat(pPassivesExtra);
+      // This player's OWN passives (core + granted-slot + extra-bar) — used for evolution
+      // requirement checks when Share Passives is off.
+      const ownPassives = new Set(allP.concat((p.extraPassives || []).filter(Boolean)));
 
       // Unknown names → warnings (load skips them).
       allW.forEach(n => { if (!wByName[n]) W(`${who}unknown weapon "${n}" — will be skipped on load`); });
@@ -231,7 +239,7 @@
             if (!pByName[req]) return; // not a known passive; ignore
             const key = target + '|' + req;
             if (flaggedReq.has(key)) return;
-            if (!passiveSatisfied(req, charObj)) { E(`${who}${target} requires ${req}, which isn't in the build`); flaggedReq.add(key); }
+            if (!passiveSatisfied(req, charObj, ownPassives)) { E(`${who}${target} requires ${req}, which isn't in the build`); flaggedReq.add(key); }
           });
           // Arcana-gated evolutions (e.g. Gemini counterparts): soft-check the trans_conditions.
           const cond = cw.trans_conditions;
