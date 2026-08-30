@@ -887,11 +887,23 @@
     /* Character row (top): set it apart from the item rows. */
     .xref-char-row .xref-rowhead { color: var(--gold); font-weight: 700; }
     .xref-char-row td, .xref-char-row .xref-rowhead { border-bottom: 2px solid var(--border-hi); }
-    /* Priority traits (from the character's grouped affinity schema) — bold the whole column. */
-    .player-xref .xref-priority { font-weight: 800; }
-    .player-xref td.xref-priority { background: rgba(232,184,32,.09); }
-    .player-xref td.xref-on.xref-priority { color: var(--gold); }
-    .xref-colhead.xref-priority .xref-col { outline: 2px solid var(--gold); outline-offset: -2px; }
+    /* Trait-column highlight tiers (detailPlayerPageHTML): High = char PRIMARY trait a passive
+       also carries; Med = char primary, or a non-primary char trait a passive backs; Low = a
+       non-primary char trait. Gold intensity ranks importance (also the primary sort key). */
+    .player-xref .xref-hl-high, .player-xref .xref-hl-med { font-weight: 800; }
+    .player-xref .xref-hl-low { font-weight: 700; }
+    .player-xref td.xref-hl-low  { background: rgba(232,184,32,.11); }
+    .player-xref td.xref-hl-med  { background: rgba(232,184,32,.20); }
+    .player-xref td.xref-hl-high { background: rgba(232,184,32,.32); }
+    .player-xref td.xref-on.xref-hl-low,
+    .player-xref td.xref-on.xref-hl-med,
+    .player-xref td.xref-on.xref-hl-high { color: var(--gold); }
+    .xref-colhead.xref-hl-low  .xref-col { outline: 2px solid rgba(232,184,32,.4); outline-offset: -2px; }
+    .xref-colhead.xref-hl-med  .xref-col { outline: 2px solid rgba(232,184,32,.75); outline-offset: -2px; }
+    .xref-colhead.xref-hl-high .xref-col { outline: 3px solid var(--gold); outline-offset: -3px; }
+    /* Condensed passives row (traits summed within it, but NOT counted in Shared). */
+    .xref-pass-row .xref-rowhead { color: var(--text); font-style: italic; }
+    .xref-pass-row td { color: var(--text-muted); }
     /* Reused evo-path sections (weapon/passive detail pages): make their <h3> match the gold
        category headers, and tile a passive's many "Used In" paths into a compact grid. */
     #detail-overlay-root .detail-section h3 {
@@ -1125,7 +1137,11 @@
     .ovl-left .stat-header,
     .ovl-left .stat-row { grid-template-columns: 1fr 48px 48px 54px 60px; font-size: .82rem; }
     .ovl-left .stat-header { font-size: .74rem; }
-    .stat-row.changed { background: rgba(232,184,32,.12); }
+    /* Highlight stratification (statsHTML): High = char bonus ∩ passive investment (brightest),
+       Med = char bonus only (classic gold), Low = passive investment only (faint gold). */
+    .stat-row.hl-low  { background: rgba(232,184,32,.05); }
+    .stat-row.hl-med  { background: rgba(232,184,32,.12); }
+    .stat-row.hl-high { background: rgba(232,184,32,.24); }
     .stat-key { color: var(--text-muted); min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .stat-base  { text-align: right; color: var(--text-muted); font-size: .82rem; }
     .stat-char  { text-align: right; font-weight: 600; }
@@ -3713,8 +3729,15 @@
             ? `<span class="stat-passive">${dispPassive}</span>`
             : '<span class="stat-passive" style="color:var(--text-muted)">—</span>')
         : '';
-      const changed = dispChar !== 0 || baseChanged;
-      const rowCls = ['stat-row', changed ? 'changed' : '', isCapped ? 'capped' : ''].filter(Boolean).join(' ');
+      // Highlight stratification: character-derived change (gold) vs. manual passive investment.
+      // High = both touch this stat (overlap → elevated priority); Med = character bonus only
+      // (the classic highlight); Low = passive investment only, no character-derived change.
+      const charTouches = dispChar !== 0 || baseChanged;
+      const passTouches = showPassive && !!dispPassive;
+      const hl = charTouches && passTouches ? 'hl-high'
+               : charTouches ? 'hl-med'
+               : passTouches ? 'hl-low' : '';
+      const rowCls = ['stat-row', hl, isCapped ? 'capped' : ''].filter(Boolean).join(' ');
       rows += `<div class="${rowCls}">
         <span class="stat-key">${label}</span>
         <span class="stat-base stat-val${baseChanged ? ' pos' : ''}">${dispBase}</span>
@@ -5266,10 +5289,11 @@
     return detailChrome(displayName, left, main, footer);
   }
 
-  // Player page: character sprite on the left, and a cross-reference matrix of the build's
-  // shared traits — rows = the player's equipped weapons/passives/arcana, columns = every trait
-  // present (banners, sorted most-shared first), ● at each intersection, and a "Shared" totals
-  // row. Row/column headers navigate to the object/trait detail pages.
+  // Player page: character sprite on the left, and a cross-reference matrix of the build's traits.
+  // Rows top-to-bottom: the CHARACTER, a single condensed PASSIVES row (cells count how many
+  // passives carry each trait), then one row per weapon/arcana. Columns = every trait present,
+  // sorted by the "Shared" count (weapons + arcana ONLY), then highlight tier (char-primary/passive
+  // overlap), then name. Row/column headers navigate to the object/trait detail pages.
   function detailPlayerPageHTML(playerIdx) {
     const player = state.players[playerIdx];
     if (!player) return detailChrome(`Player ${playerIdx + 1}`, '', `<div class="detail-empty">No player.</div>`, '');
@@ -5279,56 +5303,99 @@
     const left = `${art}
       <div class="detail-name">${esc(title)}</div>`;
 
-    // Equipped objects (weapons + passives are per-player; arcana are global). The CHARACTER
-    // leads the chart as its own row. Deduped by name.
-    const rows = [];
+    // Sources split by role: the CHARACTER leads as its own row; PASSIVES are condensed into a
+    // single row just beneath it (their traits are summed WITHIN the row but NOT into "Shared");
+    // weapons + arcana each get a row and are the ONLY sources counted in "Shared". Deduped by name.
+    const affNamesOf = (type, name) => new Set(objectAffinities(type, name).map(a => a.name));
+    const charAff = char ? affNamesOf('character', char.name) : new Set();
+
+    // Weapon + arcana rows — the summed sources.
+    const sumRows = [];
     const seen = new Set();
-    const add = (obj, type) => {
+    const addSum = (obj, type) => {
       if (!obj || seen.has(type + '|' + obj.name)) return;
       seen.add(type + '|' + obj.name);
-      // The character row uses its static sprite PNG (falls back to the square icon).
-      const icon = type === 'character' ? (obj.sprite_static || obj.icon) : obj.icon;
-      rows.push({ type, name: obj.name, icon, affSet: new Set(objectAffinities(type, obj.name).map(a => a.name)) });
+      sumRows.push({ type, name: obj.name, icon: obj.icon, affSet: affNamesOf(type, obj.name) });
     };
-    if (char) add(char, 'character');
-    player.weapons.filter(Boolean).forEach(w => add(w, 'weapon'));
-    player.passives.filter(Boolean).forEach(p => add(p, 'passive'));
-    state.arcana.filter(Boolean).forEach(a => add(a, 'arcana'));
+    player.weapons.filter(Boolean).forEach(w => addSum(w, 'weapon'));
+    state.arcana.filter(Boolean).forEach(a => addSum(a, 'arcana'));
 
-    if (!rows.length) return detailChrome(title, left, `<div class="detail-empty">No character, weapons, passives, or arcana in this build yet.</div>`, '');
+    // Passives, condensed: dedupe by name, then count how many carry each trait (the row's cells
+    // show that count — a direct read on manual passive allocation into a trait).
+    const passSeen = new Set();
+    const passList = player.passives.filter(Boolean).filter(p => passSeen.has(p.name) ? false : (passSeen.add(p.name), true));
+    const passCount = new Map();
+    passList.forEach(p => affNamesOf('passive', p.name).forEach(n => passCount.set(n, (passCount.get(n) || 0) + 1)));
+    const passAff = new Set(passCount.keys());
 
-    // The character's PRIMARY traits (from the grouped affinity schema) bold their columns.
+    if (!char && !sumRows.length && !passList.length)
+      return detailChrome(title, left, `<div class="detail-empty">No character, weapons, passives, or arcana in this build yet.</div>`, '');
+
+    // "Shared" totals count weapons + arcana ONLY.
+    const sumCount = new Map();
+    sumRows.forEach(r => r.affSet.forEach(n => sumCount.set(n, (sumCount.get(n) || 0) + 1)));
+
+    // Every trait present on ANY source becomes a column.
+    const allTraits = new Set();
+    charAff.forEach(n => allTraits.add(n));
+    passAff.forEach(n => allTraits.add(n));
+    sumRows.forEach(r => r.affSet.forEach(n => allTraits.add(n)));
+    if (!allTraits.size) return detailChrome(title, left, `<div class="detail-empty">These items share no traits.</div>`, '');
+
+    // Character PRIMARY traits (grouped affinity schema) drive the highlight tiers.
     const prioritySet = char ? affinityGroupNames(char, 'primary') : new Set();
+    // Column tier: High = char PRIMARY trait a passive also carries; Med = any char primary, or a
+    // non-primary char trait a passive backs; Low = a non-primary char trait. Weapon/arcana-only
+    // traits get no character tier. Intensity ranks importance and is the primary sort key.
+    const tierOf = name => {
+      const cp = prioritySet.has(name), ch = charAff.has(name), pv = passAff.has(name);
+      if (cp && pv) return 'high';
+      if (cp || (ch && pv)) return 'med';
+      if (ch) return 'low';
+      return '';
+    };
+    const TIER_RANK = { high: 3, med: 2, low: 1, '': 0 };
+    const TIER_CLS  = { high: ' xref-hl-high', med: ' xref-hl-med', low: ' xref-hl-low', '': '' };
+    const tc = c => TIER_CLS[tierOf(c.name)];
 
-    // Columns = traits present, sorted by how many objects share them (desc), then name.
-    const colCount = new Map();
-    rows.forEach(r => r.affSet.forEach(n => colCount.set(n, (colCount.get(n) || 0) + 1)));
-    const cols = [...colCount.keys()].map(affinityByName).filter(Boolean)
-      .sort((a, b) => (colCount.get(b.name) - colCount.get(a.name)) || a.name.localeCompare(b.name));
-    if (!cols.length) return detailChrome(title, left, `<div class="detail-empty">These items share no traits.</div>`, '');
+    // Columns sorted by Shared (weapon+arcana) count, then highlight tier, then name.
+    const cols = [...allTraits].map(affinityByName).filter(Boolean)
+      .sort((a, b) => ((sumCount.get(b.name) || 0) - (sumCount.get(a.name) || 0))
+        || (TIER_RANK[tierOf(b.name)] - TIER_RANK[tierOf(a.name)])
+        || a.name.localeCompare(b.name));
 
-    const priCls = c => prioritySet.has(c.name) ? ' xref-priority' : '';
     const colHead = c => {
       const color = c.color || '#6a4010';
-      return `<th class="xref-colhead${priCls(c)}"><div class="xref-col" style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}"
+      return `<th class="xref-colhead${tc(c)}"><div class="xref-col" style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}"
         data-action="nav-affinity" data-affinity="${esc(c.name)}" title="${esc(c.name)}">
         <img class="xref-col-icon" src="${esc(c.icon || '')}" onerror="this.style.visibility='hidden'">
         <span class="xref-col-name">${esc(c.name)}</span></div></th>`;
     };
-    const rowHTML = r => `<tr class="${r.type === 'character' ? 'xref-char-row' : ''}">
+    const charRow = char ? `<tr class="xref-char-row">
+      <th class="xref-rowhead" data-action="nav-object" data-detail-type="character" data-detail-name="${esc(char.name)}" title="${esc(char.name)}">
+        <img src="${esc(char.sprite_static || char.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(char.name)}</span>
+      </th>
+      ${cols.map(c => `<td class="${charAff.has(c.name) ? 'xref-on' : ''}${tc(c)}">${charAff.has(c.name) ? '●' : ''}</td>`).join('')}
+    </tr>` : '';
+    // Condensed passives row: cell = # of equipped passives carrying that trait (blank = 0).
+    const passRow = passList.length ? `<tr class="xref-pass-row">
+      <th class="xref-rowhead" title="${esc(passList.map(p => p.name).join(', '))}"><span>Passives (${passList.length})</span></th>
+      ${cols.map(c => { const n = passCount.get(c.name) || 0; return `<td class="${n ? 'xref-on' : ''}${tc(c)}">${n || ''}</td>`; }).join('')}
+    </tr>` : '';
+    const rowHTML = r => `<tr>
       <th class="xref-rowhead" data-action="nav-object" data-detail-type="${r.type}" data-detail-name="${esc(r.name)}" title="${esc(r.name)}">
         <img src="${esc(r.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(r.name)}</span>
       </th>
-      ${cols.map(c => `<td class="${r.affSet.has(c.name) ? 'xref-on' : ''}${priCls(c)}">${r.affSet.has(c.name) ? '●' : ''}</td>`).join('')}
+      ${cols.map(c => `<td class="${r.affSet.has(c.name) ? 'xref-on' : ''}${tc(c)}">${r.affSet.has(c.name) ? '●' : ''}</td>`).join('')}
     </tr>`;
     const sharedRow = `<tr class="xref-shared">
       <th class="xref-rowhead">Shared</th>
-      ${cols.map(c => { const n = colCount.get(c.name); return `<td class="${n >= 2 ? 'xref-sh' : ''}${priCls(c)}">${n}</td>`; }).join('')}
+      ${cols.map(c => { const n = sumCount.get(c.name) || 0; return `<td class="${n >= 2 ? 'xref-sh' : ''}${tc(c)}">${n}</td>`; }).join('')}
     </tr>`;
 
     const table = `<div class="xref-wrap"><table class="player-xref">
       <thead><tr><th class="xref-corner"></th>${cols.map(colHead).join('')}</tr></thead>
-      <tbody>${rows.map(rowHTML).join('')}${sharedRow}</tbody>
+      <tbody>${charRow}${passRow}${sumRows.map(rowHTML).join('')}${sharedRow}</tbody>
     </table></div>`;
     return detailChrome(title, left, table, '');
   }
