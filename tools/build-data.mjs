@@ -58,10 +58,17 @@ function parseCsv(raw, bracketAware = false) {
 
   function parseLine() {
     const fields = [];
-    while (pos < n) {
+    // Loop unconditionally: parseField() safely returns '' at EOF, so a trailing comma
+    // immediately before end-of-file still emits its (empty) following field — matching how a
+    // trailing comma before a newline behaves. Without this, a final row that lacks a terminating
+    // newline parses one field short (a spurious "expected N fields" warning). parseLine is only
+    // entered from the outer `while (pos < n)` loop, so the first parseField() always reads real content.
+    while (true) {
       fields.push(parseField());
-      if (pos < n && raw[pos] === ',') { pos++; }
-      else { if (pos < n && raw[pos] === '\r') pos++; if (pos < n && raw[pos] === '\n') pos++; break; }
+      if (pos < n && raw[pos] === ',') { pos++; continue; } // another field follows (may be empty at EOF)
+      if (pos < n && raw[pos] === '\r') pos++;
+      if (pos < n && raw[pos] === '\n') pos++;
+      break;
     }
     return fields;
   }
@@ -426,7 +433,10 @@ function parseManualScaling(raw) {
 // `op` maps to placement. `max` caps THIS rule only; sources sum at render time.
 // kind (weapon|passive|arcana) is inferred from the reference; unresolved refs warn.
 // <<PARSE_RULE_BLOCKS_START>>
-const GRANT_OP_PLACE = { add_hidden: 'hidden', add_extra: 'extra' };
+// add_transient: like add_extra (weapon/passive → an appended transient slot), but semantically
+// a REAL build item — it's removed from the shared pool when placed and evolves in place (Spiritoso's
+// Mille Bolle Blu). The runtime routes it through the same transient machinery as add_extra items.
+const GRANT_OP_PLACE = { add_hidden: 'hidden', add_extra: 'extra', add_transient: 'transient' };
 
 // Split on `delim` only at bracket depth 0 (so a delimiter inside [] is literal).
 function splitOutsideBrackets(str, delim) {

@@ -5844,7 +5844,7 @@ window.VS_DATA = {
       "max_items": [],
       "starting_arcana": null,
       "description": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health.",
-      "effect_clarifications": "Gains 0.2 Max Health when overhealing.Healing multiplier applies to healing sources that are exempt from the Recovery multiplier.",
+      "effect_clarifications": "Gains 0.2 Max Health when overhealing. Healing multiplier applies to healing sources that are exempt from the Recovery multiplier. With Pearl Megatama, changes form when Argent Flow is evolved gaining 80% Move Speed, 100% Might, -20% Cooldown, 10% Luck and becoming invincible for the remainder of the run. Disappears when the time limit is reached.",
       "notes": "",
       "affinity_groups": [
         {
@@ -5878,9 +5878,57 @@ window.VS_DATA = {
             "num": 0
           },
           "max": {
-            "num": 9999
+            "num": 99999
           },
           "mode": "pct",
+          "step": null
+        },
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "move_speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.8
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "luck",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.1
+          },
+          "mode": "boolean",
           "step": null
         }
       ],
@@ -6220,41 +6268,41 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "McCoy-Oni",
-      "icon": "assets/icons/characters/mccoy-oni.png",
-      "sprite_static": "assets/icons/characters/mccoy-oni_sprite.png",
-      "sprite_gif": "assets/icons/characters/mccoy-oni_sprite.gif",
-      "base_name": "McCoy-Oni",
+      "name": "Megalo Miang Moonspell",
+      "icon": "assets/icons/characters/megalo_miang_moonspell.png",
+      "sprite_static": "assets/icons/characters/megalo_miang_moonspell_sprite.png",
+      "sprite_gif": "assets/icons/characters/megalo_miang_moonspell_sprite.gif",
+      "base_name": "Megalo Miang Moonspell",
       "starting_weapons": [
-        "108 Bocce"
+        "Argent Flow"
       ],
-      "hidden_items": [],
+      "hidden_items": [
+        "Argent Flow"
+      ],
       "max_items": [],
       "starting_arcana": null,
-      "description": "Area temporarily increases at fixed intervals.",
-      "effect_clarifications": "Area oscillates between 100% and 150%.",
+      "description": "Max Health is equal to Current Health. Has a hidden Argent Flow.",
+      "effect_clarifications": "Max Health increases to match Current Health when Overhealing by any amount but decreases when damage is taken.",
       "notes": "",
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
-            "Area"
+            "Recovery",
+            "Max Health"
           ]
         },
         {
           "key": null,
           "items": [
-            "Growth",
-            "Armor",
-            "Max Health"
+            "Move Speed"
           ]
         }
       ],
       "affinity": [
-        "Area",
-        "Growth",
-        "Armor",
-        "Max Health"
+        "Recovery",
+        "Max Health",
+        "Move Speed"
       ],
       "conflict": [],
       "scaling": [],
@@ -6262,36 +6310,36 @@ window.VS_DATA = {
       "reference_scaling": [],
       "manual_scaling": [
         {
-          "key": "multiply_area",
-          "source": "Expansion",
+          "key": "max_health_flat",
+          "source": "Overheal",
           "min": {
-            "num": 1
+            "num": 0
           },
           "max": {
-            "num": 1.5
+            "num": 99999
           },
-          "mode": "boolean",
+          "mode": "pct",
           "step": null
         }
       ],
       "charge_ability": "",
       "grants": [],
       "stats": {
-        "max_health_flat": 8,
+        "max_health_flat": 20,
         "magnet_flat": 0,
         "magnet": 0,
-        "recovery": 0,
-        "armor": 1,
-        "move_speed": 0,
-        "might": 0,
+        "recovery": 1,
+        "armor": 0,
+        "move_speed": 1,
+        "might": 1,
         "speed": 0,
         "duration": 0,
         "area": 0,
-        "cooldown": 0,
+        "cooldown": -0.2,
         "amount": 0,
         "revival": 0,
-        "luck": 0,
-        "growth": 0.2,
+        "luck": 0.1,
+        "growth": 0,
         "greed": 0,
         "curse": 0
       }
@@ -6440,6 +6488,83 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "McCoy-Oni",
+      "icon": "assets/icons/characters/mccoy-oni.png",
+      "sprite_static": "assets/icons/characters/mccoy-oni_sprite.png",
+      "sprite_gif": "assets/icons/characters/mccoy-oni_sprite.gif",
+      "base_name": "McCoy-Oni",
+      "starting_weapons": [
+        "108 Bocce"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Area temporarily increases at fixed intervals.",
+      "effect_clarifications": "Area oscillates between 100% and 150%.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Area"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Growth",
+            "Armor",
+            "Max Health"
+          ]
+        }
+      ],
+      "affinity": [
+        "Area",
+        "Growth",
+        "Armor",
+        "Max Health"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "multiply_area",
+          "source": "Expansion",
+          "min": {
+            "num": 1
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 8,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 1,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0.2,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
       "name": "Gav'Et-Oni",
       "icon": "assets/icons/characters/gavet-oni.png",
       "sprite_static": "assets/icons/characters/gavet-oni_sprite.png",
@@ -6503,6 +6628,1482 @@ window.VS_DATA = {
         "luck": 0,
         "growth": 0,
         "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Spiritoso",
+      "icon": "assets/icons/characters/spiritoso.png",
+      "sprite_static": "assets/icons/characters/spiritoso_sprite.png",
+      "sprite_gif": "assets/icons/characters/spiritoso_sprite.gif",
+      "base_name": "Spiritoso",
+      "starting_weapons": [
+        "LunarMight"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Overheal +64: spawns a water or lunar weapon. Adept with Mille Bolle Blu and Penshin Fatcha weapons.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Water",
+            "Lunar"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Recovery",
+        "Water",
+        "Lunar",
+        "Amount"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_transient",
+          "name": "Mille Bolle Blu",
+          "kind": "weapon",
+          "place": "transient",
+          "amount": 1
+        }
+      ],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 1,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Spiritosa",
+      "icon": "assets/icons/characters/spiritosa.png",
+      "sprite_static": "assets/icons/characters/spiritosa_sprite.png",
+      "sprite_gif": "assets/icons/characters/spiritosa_sprite.gif",
+      "base_name": "Spiritosa",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Overheal +16: Gains a follower (max 30). Gains a hidden Mille Bolle Blu every 8 levels (max 6). Adept with Mille Bolle Blu and Penshin Fatcha weapons.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [
+        {
+          "op": "add_hidden",
+          "name": "Mille Bolle Blu",
+          "kind": "weapon",
+          "place": "hidden",
+          "amount": 1,
+          "interval": 8,
+          "max": 6
+        }
+      ],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 1,
+        "armor": 0,
+        "move_speed": 0.5,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Gekkojin (LunarMight)",
+      "icon": "assets/icons/characters/gekkojin_lunarmight.png",
+      "sprite_static": "assets/icons/characters/gekkojin_sprite.png",
+      "sprite_gif": "assets/icons/characters/gekkojin_sprite.gif",
+      "base_name": "Gekkojin",
+      "starting_weapons": [
+        "LunarMight",
+        "Pearl Megatama"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Recovers HP instead of receiving damage, but disappears after reaching the current Time Limit. Starts with a Pearl Megatama.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might"
+          ]
+        }
+      ],
+      "affinity": [
+        "Recovery",
+        "Luck",
+        "Might"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0.5,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 1,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Gekkojin (LunarSight)",
+      "icon": "assets/icons/characters/gekkojin_lunarsight.png",
+      "sprite_static": "assets/icons/characters/gekkojin_sprite.png",
+      "sprite_gif": "assets/icons/characters/gekkojin_sprite.gif",
+      "base_name": "Gekkojin",
+      "starting_weapons": [
+        "LunarSight",
+        "Pearl Megatama"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Recovers HP instead of receiving damage, but disappears after reaching the current Time Limit. Starts with a Pearl Megatama.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might"
+          ]
+        }
+      ],
+      "affinity": [
+        "Recovery",
+        "Luck",
+        "Might"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0.5,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 1,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Gekkojin (LunarBight)",
+      "icon": "assets/icons/characters/gekkojin_lunarbight.png",
+      "sprite_static": "assets/icons/characters/gekkojin_sprite.png",
+      "sprite_gif": "assets/icons/characters/gekkojin_sprite.gif",
+      "base_name": "Gekkojin",
+      "starting_weapons": [
+        "LunarBight",
+        "Pearl Megatama"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Recovers HP instead of receiving damage, but disappears after reaching the current Time Limit. Starts with a Pearl Megatama.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Luck"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might"
+          ]
+        }
+      ],
+      "affinity": [
+        "Recovery",
+        "Luck",
+        "Might"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0.5,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 1,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Malice Bloodmoon",
+      "icon": "assets/icons/characters/malice_bloodmoon.png",
+      "sprite_static": "assets/icons/characters/malice_bloodmoon_sprite.png",
+      "sprite_gif": "assets/icons/characters/malice_bloodmoon_sprite.gif",
+      "base_name": "Malice Bloodmoon",
+      "starting_weapons": [
+        "Scarlet Needle"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Gains 0.1 Recovery every 4 levels. Retaliation, HP-Critical, Last Breath, and On Revival: triggers a wide area blood hex.",
+      "effect_clarifications": "Blood Hex damage is considered retaliatory and increases with recovery and on level-up. Blood Hex can only be triggered once every 5 seconds.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Recovery",
+            "Retaliation",
+            "Low Health",
+            "Resurrection",
+            "Blood"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Max Health",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Recovery",
+        "Retaliation",
+        "Low Health",
+        "Resurrection",
+        "Blood",
+        "Move Speed",
+        "Max Health",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "recovery",
+          "value": 0.1,
+          "interval": 4,
+          "max": null
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 20,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.4,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Calogero Bloodmoon",
+      "icon": "assets/icons/characters/calogero_bloodmoon.png",
+      "sprite_static": "assets/icons/characters/calogero_bloodmoon_sprite.png",
+      "sprite_gif": "assets/icons/characters/calogero_bloodmoon_sprite.gif",
+      "base_name": "Calogero Bloodmoon",
+      "starting_weapons": [
+        "Ashella"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Last Breath: increases Max Health by 50%. Retaliation: gains a temporary stat bonus.",
+      "effect_clarifications": "Gains 150% Might, 75% Area, and -20% Cooldown for 5 seconds when retaliating. This effect can occur once every 30 seconds.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Max Health",
+            "Low Health"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Armor",
+            "Greed",
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Max Health",
+        "Low Health",
+        "Armor",
+        "Greed",
+        "Area",
+        "Cooldown"
+      ],
+      "conflict": [
+        "Move Speed",
+        "Speed"
+      ],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Retaliation",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 1.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Retaliation",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.75
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "cooldown",
+          "source": "Retaliation",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -0.2
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "max_health",
+          "source": "Last Breath",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "step",
+          "step": 0.5
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 50,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 2,
+        "move_speed": -0.2,
+        "might": 0.5,
+        "speed": -0.3,
+        "duration": 0,
+        "area": -0.3,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Ashtart",
+      "icon": "assets/icons/characters/ashtart.png",
+      "sprite_static": "assets/icons/characters/ashtart_sprite.png",
+      "sprite_gif": "assets/icons/characters/ashtart_sprite.gif",
+      "base_name": "Ashtart",
+      "starting_weapons": [
+        "Incineration"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "HP-Critical: Gets +1 Revival. Summons remnants of defeated enemies every time the clock strikes a minute.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival",
+            "Low Health",
+            "Low Might"
+          ]
+        }
+      ],
+      "affinity": [
+        "Revival",
+        "Low Health",
+        "Low Might"
+      ],
+      "conflict": [
+        "Might"
+      ],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "revival",
+          "source": "HP-Critical",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 10
+          },
+          "mode": "step",
+          "step": 1
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": -0.2,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": -0.1,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Sargon (FireFall)",
+      "icon": "assets/icons/characters/sargon_firefall.png",
+      "sprite_static": "assets/icons/characters/sargon_sprite.png",
+      "sprite_gif": "assets/icons/characters/sargon_sprite.gif",
+      "base_name": "Sargon",
+      "starting_weapons": [
+        "FireFall"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Generates spacial distortions that confuse enemies,. Master of FireFall, FireWall, and FireBall. On Revival: spawns an additional spacial distortion.",
+      "effect_clarifications": "With Velvet Dodecahedron, changes form when FireStall is unioned gaining 50% Might, Speed, Duration, and Area and becoming invincible for the remainder of the run. Disappears when the time limit is reached.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Resurrection"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Growth",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Resurrection",
+        "Move Speed",
+        "Cooldown",
+        "Growth",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.2,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": -0.1,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0.2,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Sargon (FireBall)",
+      "icon": "assets/icons/characters/sargon_fireball.png",
+      "sprite_static": "assets/icons/characters/sargon_sprite.png",
+      "sprite_gif": "assets/icons/characters/sargon_sprite.gif",
+      "base_name": "Sargon",
+      "starting_weapons": [
+        "FireBall"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Generates spacial distortions that confuse enemies,. Master of FireFall, FireWall, and FireBall. On Revival: spawns an additional spacial distortion.",
+      "effect_clarifications": "With Velvet Dodecahedron, changes form when FireStall is unioned gaining 50% Might, Speed, Duration, and Area and becoming invincible for the remainder of the run. Disappears when the time limit is reached.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Resurrection"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Growth",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Resurrection",
+        "Move Speed",
+        "Cooldown",
+        "Growth",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.2,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": -0.1,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0.2,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Sargon (FireWall)",
+      "icon": "assets/icons/characters/sargon_firewall.png",
+      "sprite_static": "assets/icons/characters/sargon_sprite.png",
+      "sprite_gif": "assets/icons/characters/sargon_sprite.gif",
+      "base_name": "Sargon",
+      "starting_weapons": [
+        "FireWall"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Generates spacial distortions that confuse enemies,. Master of FireFall, FireWall, and FireBall. On Revival: spawns an additional spacial distortion.",
+      "effect_clarifications": "With Velvet Dodecahedron, changes form when FireStall is unioned gaining 50% Might, Speed, Duration, and Area and becoming invincible for the remainder of the run. Disappears when the time limit is reached.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Resurrection"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed",
+            "Cooldown",
+            "Growth",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Resurrection",
+        "Move Speed",
+        "Cooldown",
+        "Growth",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "might",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "speed",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "duration",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        },
+        {
+          "key": "area",
+          "source": "Megalo State",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 0.5
+          },
+          "mode": "boolean",
+          "step": null
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.2,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": -0.1,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0.2,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Nameless Fool",
+      "icon": "assets/icons/characters/nameless_fool.png",
+      "sprite_static": "assets/icons/characters/nameless_fool_sprite.png",
+      "sprite_gif": "assets/icons/characters/nameless_fool_sprite.gif",
+      "base_name": "Nameless Fool",
+      "starting_weapons": [
+        "Descent into Misery"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Last Breath: loses half of Max Health and receives a random Darkana (if available). On Revival: Last Breath ability can award an extra Darkana (max 3).",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Low Health",
+            "Resurrection"
+          ]
+        }
+      ],
+      "affinity": [
+        "Low Health",
+        "Resurrection"
+      ],
+      "conflict": [
+        "Max Health"
+      ],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "max_health",
+          "source": "Last Breath",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": -11
+          },
+          "mode": "step",
+          "step": -0.5
+        },
+        {
+          "key": "add_darkana_transient",
+          "source": "Last Breath",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "num": 22
+          },
+          "mode": "step",
+          "step": 1
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.2,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Congregation",
+      "icon": "assets/icons/characters/congregation.png",
+      "sprite_static": "assets/icons/characters/congregation_sprite.png",
+      "sprite_gif": "assets/icons/characters/congregation_sprite.gif",
+      "base_name": "Congregation",
+      "starting_weapons": [
+        "Screams from the Void"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Gains a passive weapon slot for any Revivals exceeding 1. HP-Critical and Last Breath: frantically activate their main weapon depending on Revivals left. On Revival: spawns a Velvet Dodecahedron.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival",
+            "Low Health"
+          ]
+        }
+      ],
+      "affinity": [
+        "Revival",
+        "Low Health"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [
+        {
+          "key": "add_passive_transient",
+          "source": "Revivals",
+          "min": {
+            "num": 0
+          },
+          "max": {
+            "stat": "revival",
+            "factor": 1
+          },
+          "mode": "step",
+          "step": 1
+        }
+      ],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 194,
+        "magnet_flat": 0,
+        "magnet": 0.25,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0.7,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Nameless Saint",
+      "icon": "assets/icons/characters/nameless_saint.png",
+      "sprite_static": "assets/icons/characters/nameless_saint_sprite.png",
+      "sprite_gif": "assets/icons/characters/nameless_saint_sprite.gif",
+      "base_name": "Nameless Saint",
+      "starting_weapons": [
+        "Laurel",
+        "108 Bocce",
+        "108 Responsive Prayers"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Starts and is adept with an array of holy weapons, depending on their availability in the Collection. Last Breath: triggers a Rosary.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Holy"
+          ]
+        }
+      ],
+      "affinity": [
+        "Holy"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0.2,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Baal'thasar",
+      "icon": "assets/icons/characters/baalthasar.png",
+      "sprite_static": "assets/icons/characters/baalthasar_sprite.png",
+      "sprite_gif": "assets/icons/characters/baalthasar_sprite.gif",
+      "base_name": "Baal'thasar",
+      "starting_weapons": [
+        "Blacken Firmament"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Adept with Hell type weapons. Enemies killed by Blood type weapons drop Blood. Last Breath: gains a temporary Might and Cooldown bonus depending on collected blood.",
+      "effect_clarifications": "Gains 10% Might and -10% Cooldown when triggering Last Breath and an additional 2% Might and -1% Cooldown for every 2 Blood collected.\nWith Velvet Dodecahedron, changes form when Damnation is evolved gaining 70% Might, 70% Duration, 0.3 Recovery and becoming invincible for the duration. Disappears when the time limit is reached.",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Hell",
+            "Blood",
+            "Might",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Duration",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Hell",
+        "Blood",
+        "Might",
+        "Cooldown",
+        "Max Health",
+        "Duration",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 66,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 0.3,
+        "speed": 0,
+        "duration": 0.3,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0.5,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Jamon Jato",
+      "icon": "assets/icons/characters/jamon_jato.png",
+      "sprite_static": "assets/icons/characters/jamon_jato_sprite.png",
+      "sprite_gif": "assets/icons/characters/jamon_jato_sprite.gif",
+      "base_name": "Jamon Jato",
+      "starting_weapons": [
+        "108 Responsive Prayers"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Gets more projectiles every 20 levels (max 4). Complete a stage to gain a Prestige rank.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Move Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Amount",
+        "Move Speed"
+      ],
+      "conflict": [],
+      "scaling": [
+        {
+          "key": "amount",
+          "value": 1,
+          "interval": 20,
+          "max": 4
+        }
+      ],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.2,
+        "might": 0,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "In' Kujata",
+      "icon": "assets/icons/characters/in_kujata.png",
+      "sprite_static": "assets/icons/characters/in_kujata_sprite.png",
+      "sprite_gif": "assets/icons/characters/in_kujata_sprite.gif",
+      "base_name": "In' Kujata",
+      "starting_weapons": [],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Slams the ground every few steps. Grows bigger when accumulating Armor. HP-Critical: gains a temporary Armor bonus.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Armor",
+            "Low Health"
+          ]
+        }
+      ],
+      "affinity": [
+        "Armor",
+        "Low Health"
+      ],
+      "conflict": [
+        "Move Speed",
+        "Cooldown"
+      ],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 300,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": -0.5,
+        "might": 1,
+        "speed": 0,
+        "duration": 0,
+        "area": 0,
+        "cooldown": 0.45,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0,
+        "curse": 0
+      }
+    },
+    {
+      "name": "Megalo Sargon",
+      "icon": "assets/icons/characters/megalo_sargon.png",
+      "sprite_static": "assets/icons/characters/megalo_sargon_sprite.png",
+      "sprite_gif": "assets/icons/characters/sargon_sprite.gif",
+      "base_name": "Megalo Sargon",
+      "starting_weapons": [
+        "FireStall"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "Backhanded gifts. Dark illusions. Echoes of the past.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Revival",
+            "Resurrection"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Move Speed",
+            "Cooldown",
+            "Growth",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Revival",
+        "Resurrection",
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Move Speed",
+        "Cooldown",
+        "Growth",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0,
+        "armor": 0,
+        "move_speed": 0.5,
+        "might": 0.5,
+        "speed": 0.5,
+        "duration": 0.5,
+        "area": 0.5,
+        "cooldown": -0.1,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0.2,
+        "greed": 0.5,
+        "curse": 0.5
+      }
+    },
+    {
+      "name": "Baal'thamut",
+      "icon": "assets/icons/characters/baalthamut.png",
+      "sprite_static": "assets/icons/characters/baalthamut_sprite.png",
+      "sprite_gif": "assets/icons/characters/baalthamut_sprite.gif",
+      "base_name": "Baal'thamut",
+      "starting_weapons": [
+        "Damnation"
+      ],
+      "hidden_items": [],
+      "max_items": [],
+      "starting_arcana": null,
+      "description": "It is ground and horizon both, and still it devours itself.",
+      "effect_clarifications": "",
+      "notes": "",
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Hell",
+            "Blood",
+            "Might",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Max Health",
+            "Duration",
+            "Greed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Hell",
+        "Blood",
+        "Might",
+        "Cooldown",
+        "Max Health",
+        "Duration",
+        "Greed"
+      ],
+      "conflict": [],
+      "scaling": [],
+      "stat_choices": [],
+      "reference_scaling": [],
+      "manual_scaling": [],
+      "charge_ability": "",
+      "grants": [],
+      "stats": {
+        "max_health_flat": 0,
+        "magnet_flat": 0,
+        "magnet": 0,
+        "recovery": 0.3,
+        "armor": 0,
+        "move_speed": 0,
+        "might": 1,
+        "speed": 0,
+        "duration": 1,
+        "area": 0,
+        "cooldown": 0,
+        "amount": 0,
+        "revival": 0,
+        "luck": 0,
+        "growth": 0,
+        "greed": 0.5,
         "curse": 0
       }
     },
@@ -27097,7 +28698,8 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Vampire-Killing Tool"
+            "Vampire-Killing Tool",
+            "Blood"
           ]
         },
         {
@@ -27129,6 +28731,7 @@ window.VS_DATA = {
         "Luck",
         "Recovery",
         "Vampire-Killing Tool",
+        "Blood",
         "Max Health",
         "Red",
         "Healing Damage",
@@ -29581,7 +31184,8 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Red"
+            "Red",
+            "Hell"
           ]
         },
         {
@@ -29616,6 +31220,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
+        "Hell",
         "Bounce",
         "Fire",
         "Cooldown Speed",
@@ -29975,6 +31580,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Hell"
+          ]
+        },
+        {
           "key": "Tragic Princess (III)",
           "items": [
             "Move Speed",
@@ -30009,6 +31620,7 @@ window.VS_DATA = {
         "Cooldown",
         "Recovery",
         "Freeze",
+        "Hell",
         "Move Speed",
         "Cooldown Speed",
         "Blood Astronomia",
@@ -31602,7 +33214,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Red",
-            "Blue"
+            "Blue",
+            "Hell"
           ]
         },
         {
@@ -31620,6 +33233,7 @@ window.VS_DATA = {
         "Low Might",
         "Red",
         "Blue",
+        "Hell",
         "Blood Astronomia",
         "Duration",
         "Amount"
@@ -32988,7 +34602,8 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Greed"
+            "Greed",
+            "Hell"
           ]
         },
         {
@@ -33021,6 +34636,7 @@ window.VS_DATA = {
         "Gold Fever",
         "Light Source",
         "Greed",
+        "Hell",
         "Gemini",
         "Recovery",
         "Cooldown Speed"
@@ -34086,9 +35702,7 @@ window.VS_DATA = {
         "Speed",
         "Amount"
       ],
-      "arcana": [
-        "Out of Bounds (XII)"
-      ]
+      "arcana": []
     },
     {
       "name": "Laurel",
@@ -34126,6 +35740,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Holy"
+          ]
+        },
+        {
           "key": "Blood Astronomia (XXI)",
           "items": [
             "Blood Astronomia",
@@ -34138,6 +35758,7 @@ window.VS_DATA = {
       "affinity": [
         "Cooldown",
         "Invulnerable",
+        "Holy",
         "Blood Astronomia",
         "Duration",
         "Amount",
@@ -35830,6 +37451,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blood"
+          ]
+        },
+        {
           "key": "Pale Diamond Incursion (V)",
           "items": [
             "Cooldown Speed"
@@ -35851,6 +37478,7 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
+        "Blood",
         "Cooldown Speed",
         "Divine Bloodline"
       ],
@@ -35920,6 +37548,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": null,
+          "items": [
+            "Blood"
+          ]
+        },
+        {
           "key": "Pale Diamond Incursion (V)",
           "items": [
             "Cooldown Speed"
@@ -35942,6 +37576,7 @@ window.VS_DATA = {
         "Retaliation",
         "Low Health",
         "Max Health",
+        "Blood",
         "Cooldown Speed",
         "Divine Bloodline"
       ],
@@ -36164,7 +37799,6 @@ window.VS_DATA = {
         "Duration"
       ],
       "arcana": [
-        "Slash (XVI)",
         "Heart of Fire (XIX)"
       ]
     },
@@ -36678,7 +38312,9 @@ window.VS_DATA = {
         "Speed",
         "Duration"
       ],
-      "arcana": []
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Spirit Disturbance",
@@ -36740,7 +38376,9 @@ window.VS_DATA = {
         "Speed",
         "Duration"
       ],
-      "arcana": []
+      "arcana": [
+        "Slash (XVI)"
+      ]
     },
     {
       "name": "Glass Fandango",
@@ -37053,7 +38691,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -37166,7 +38803,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -37279,7 +38915,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -37392,7 +39027,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -37505,7 +39139,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -37618,7 +39251,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -37708,7 +39340,6 @@ window.VS_DATA = {
       ],
       "conflict": [],
       "arcana": [
-        "Jail of Crystal (XIV)",
         "Sapphire Mist (I)"
       ]
     },
@@ -38253,7 +39884,7 @@ window.VS_DATA = {
       "requirements": [
         "Karoma's Mana"
       ],
-      "final_state": "Kyra-Stones",
+      "final_state": "Shimmering Sands",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 60,
@@ -38308,7 +39939,7 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/kyra-stones.png",
       "sprite": "assets/icons/weapons/kyra-stones_sprite.png",
       "category": "Evolution",
-      "method": null,
+      "method": "Union",
       "description": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies.",
       "level_ups": [
         "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies."
@@ -38333,10 +39964,12 @@ window.VS_DATA = {
           "max": "10"
         }
       ],
-      "trans_conditions": "",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Kyra-Stones",
+      "trans_conditions": "Max Required",
+      "trans_result": "Shimmering Sands",
+      "requirements": [
+        "Descent into Misery"
+      ],
+      "final_state": "Shimmering Sands",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0,
@@ -38386,6 +40019,76 @@ window.VS_DATA = {
       "arcana": [
         "Sapphire Mist (I)",
         "Pale Diamond Incursion (V)"
+      ]
+    },
+    {
+      "name": "Descent into Misery",
+      "icon": "assets/icons/weapons/descent_into_misery.png",
+      "sprite": "assets/icons/weapons/descent_into_misery_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Cursed Item. Amount affects Damage. Critical hits or changing movement direction ensure extra attacks.",
+      "level_ups": [
+        "Cursed Item. Amount affects Damage. Critical hits or changing movement direction ensure extra attacks."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "Shimmering Sands",
+      "requirements": [
+        "Kyra-Stones"
+      ],
+      "final_state": "Shimmering Sands",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration"
+      ],
+      "arcana": [
+        "Slash (XVI)"
+      ]
+    },
+    {
+      "name": "Shimmering Sands",
+      "icon": "assets/icons/weapons/shimmering_sands.png",
+      "sprite": "assets/icons/weapons/shimmering_sands_sprite.png",
+      "category": "Union",
+      "method": null,
+      "description": "Union of Kyra-Stones and Descent Into Misery. Quicksand drags enemies down to hell.",
+      "level_ups": [
+        "Union of Kyra-Stones and Descent Into Misery. Quicksand drags enemies down to hell."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Shimmering Sands",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [],
+      "affinity": [],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
       ]
     },
     {
@@ -38753,7 +40456,7 @@ window.VS_DATA = {
       "requirements": [
         "Pummarola"
       ],
-      "final_state": "Festive Winds",
+      "final_state": "Argent Flow",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 50,
@@ -38832,7 +40535,7 @@ window.VS_DATA = {
       "icon": "assets/icons/weapons/festive_winds.png",
       "sprite": "assets/icons/weapons/festive_winds_sprite.png",
       "category": "Evolution",
-      "method": null,
+      "method": "Evolution",
       "description": "Evolved Silver Wind. Weakens enemies defenses.",
       "level_ups": [
         "Evolved Silver Wind. Weakens enemies defenses."
@@ -38869,10 +40572,12 @@ window.VS_DATA = {
           "max": "20"
         }
       ],
-      "trans_conditions": "",
-      "trans_result": null,
-      "requirements": [],
-      "final_state": "Festive Winds",
+      "trans_conditions": "Max Required",
+      "trans_result": "Argent Flow",
+      "requirements": [
+        "Torrona's Box"
+      ],
+      "final_state": "Argent Flow",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0,
@@ -38928,6 +40633,290 @@ window.VS_DATA = {
         "Sarabande of Healing (VI)",
         "Wandering the Jet Black (XXI)"
       ]
+    },
+    {
+      "name": "Argent Flow",
+      "icon": "assets/icons/weapons/argent_flow.png",
+      "sprite": "assets/icons/weapons/argent_flow_sprite.png",
+      "category": "Evolution",
+      "method": null,
+      "description": "Evolved Festive Winds. Shreds enemies defenses.",
+      "level_ups": [
+        "Evolved Festive Winds. Shreds enemies defenses."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "1",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "20"
+        }
+      ],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Argent Flow",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Recovery",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Twilight Requiem (II)",
+          "items": [
+            "Curse"
+          ]
+        },
+        {
+          "key": "Sarabande of Healing (VI)",
+          "items": [
+            "Healing Damage"
+          ]
+        },
+        {
+          "key": "Wandering the Jet Black (XXI)",
+          "items": [
+            "Healing Damage"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Recovery",
+        "Luck",
+        "Curse",
+        "Healing Damage",
+        "Healing Damage"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Sarabande of Healing (VI)",
+        "Wandering the Jet Black (XXI)"
+      ]
+    },
+    {
+      "name": "108 Bocce",
+      "icon": "assets/icons/weapons/108_bocce.png",
+      "sprite": "assets/icons/weapons/108_bocce_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Actually it's just 8. Damage affected by the difference between Curse and Luck.",
+      "level_ups": [
+        "\"Actually it's just 8. Damages nearby enemies.\"",
+        "Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Damage up by 4.",
+        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
+        "Base Damage up by 4."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "Max Required",
+      "trans_result": "Road to Heaven",
+      "requirements": [
+        "108 Responsive Prayers"
+      ],
+      "final_state": "Road to Heaven",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 10,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Area",
+            "Cooldown",
+            "Luck",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Holy"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Area",
+        "Cooldown",
+        "Luck",
+        "Curse",
+        "Red",
+        "Holy"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Amount",
+        "Luck"
+      ],
+      "arcana": []
+    },
+    {
+      "name": "108 Responsive Prayers",
+      "icon": "assets/icons/weapons/108_responsive_prayers.png",
+      "sprite": "assets/icons/weapons/108_responsive_prayers_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Actually it's just 16. Damage affected by the difference between Curse and Luck.",
+      "level_ups": [
+        "Actually it's just 16. Damage affected by the difference between Curse and Luck."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "Road to Heaven",
+      "requirements": [
+        "108 Bocce"
+      ],
+      "final_state": "Road to Heaven",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Holy"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Curse",
+        "Holy"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": []
+    },
+    {
+      "name": "Road to Heaven",
+      "icon": "assets/icons/weapons/road_to_heaven.png",
+      "sprite": "assets/icons/weapons/road_to_heaven_sprite.png",
+      "category": "Union",
+      "method": null,
+      "description": "Union of 108 Bocce and 108 Responsive Prayers. Activate 108 times to glimpse enlightenment",
+      "level_ups": [
+        "Union of 108 Bocce and 108 Responsive Prayers. Activate 108 times to glimpse enlightenment"
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Road to Heaven",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Luck",
+            "Curse"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Holy"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Luck",
+        "Curse",
+        "Holy"
+      ],
+      "conflict": [],
+      "arcana": []
     },
     {
       "name": "Four Seasons",
@@ -39419,6 +41408,388 @@ window.VS_DATA = {
       ]
     },
     {
+      "name": "Mille Bolle Blu",
+      "icon": "assets/icons/weapons/mille_bolle_blu.png",
+      "sprite": "assets/icons/weapons/mille_bolle_blu_sprite.png",
+      "category": "Base",
+      "method": "Evolution",
+      "description": "Fires lingering projectiles.",
+      "level_ups": [
+        "\"Fires lingering projectiles.\"",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
+        "Fires 1 more projectile. Base Area up by 10%.",
+        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
+        "Fires 1 more projectile."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "10",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "Max Required",
+      "trans_result": "Boo Roo Boolle",
+      "requirements": [
+        "Spellbinder"
+      ],
+      "final_state": "Boo Roo Boolle",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 1,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue",
+            "Water"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Blue",
+        "Water",
+        "Cooldown Speed"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
+    },
+    {
+      "name": "Boo Roo Boolle",
+      "icon": "assets/icons/weapons/boo_roo_boolle.png",
+      "sprite": "assets/icons/weapons/boo_roo_boolle_sprite.png",
+      "category": "Evolution",
+      "method": null,
+      "description": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once.",
+      "level_ups": [
+        "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once."
+      ],
+      "limit_break": [
+        {
+          "stat": "Might",
+          "value": "0.01",
+          "rarity": "10",
+          "max": ""
+        },
+        {
+          "stat": "Area",
+          "value": "0.025",
+          "rarity": "10",
+          "max": "10"
+        },
+        {
+          "stat": "Speed",
+          "value": "0.05",
+          "rarity": "10",
+          "max": "3"
+        },
+        {
+          "stat": "Duration",
+          "value": "100ms",
+          "rarity": "10",
+          "max": "9.0 seconds"
+        },
+        {
+          "stat": "Amount",
+          "value": "1",
+          "rarity": "1",
+          "max": "10"
+        }
+      ],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Boo Roo Boolle",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blue",
+            "Water"
+          ]
+        },
+        {
+          "key": "Pale Diamond Incursion (V)",
+          "items": [
+            "Cooldown Speed"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Blue",
+        "Water",
+        "Cooldown Speed"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Sapphire Mist (I)",
+        "Pale Diamond Incursion (V)"
+      ]
+    },
+    {
+      "name": "LunarMight",
+      "icon": "assets/icons/weapons/lunarmight.png",
+      "sprite": "assets/icons/weapons/lunarmight_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Generates a damaging zone that slightly increases Might.",
+      "level_ups": [],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "LunarFlight",
+      "requirements": [
+        "LunarSight",
+        "LunarBight"
+      ],
+      "final_state": "LunarFlight",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Lunar"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Lunar"
+      ],
+      "conflict": [
+        "Area",
+        "Speed",
+        "Amount"
+      ],
+      "arcana": []
+    },
+    {
+      "name": "LunarSight",
+      "icon": "assets/icons/weapons/lunarsight.png",
+      "sprite": "assets/icons/weapons/lunarsight_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Generates damaging zones that occaisonally follow the character.",
+      "level_ups": [],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "LunarFlight",
+      "requirements": [
+        "LunarMight",
+        "LunarBight"
+      ],
+      "final_state": "LunarFlight",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Lunar"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Lunar"
+      ],
+      "conflict": [
+        "Area",
+        "Speed",
+        "Amount"
+      ],
+      "arcana": []
+    },
+    {
+      "name": "LunarBight",
+      "icon": "assets/icons/weapons/lunarbight.png",
+      "sprite": "assets/icons/weapons/lunarbight_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Has a chance to slow down enemies hit.",
+      "level_ups": [],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "LunarFlight",
+      "requirements": [
+        "LunarMight",
+        "LunarSight"
+      ],
+      "final_state": "LunarFlight",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Lunar"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Lunar"
+      ],
+      "conflict": [
+        "Area",
+        "Speed",
+        "Amount"
+      ],
+      "arcana": []
+    },
+    {
+      "name": "LunarFlight",
+      "icon": "assets/icons/weapons/lunarflight.png",
+      "sprite": "assets/icons/weapons/lunarflight_sprite.png",
+      "category": "Union",
+      "method": null,
+      "description": "Union of LunarMight, LunarSight, and LunarBight. Become one with the lunar glyphs.",
+      "level_ups": [],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "LunarFlight",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Lunar"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Lunar"
+      ],
+      "conflict": [
+        "Area",
+        "Speed",
+        "Amount"
+      ],
+      "arcana": []
+    },
+    {
       "name": "Night Sword",
       "icon": "assets/icons/weapons/night_sword.png",
       "sprite": "assets/icons/weapons/night_sword_sprite.png",
@@ -39482,7 +41853,8 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Red"
+            "Red",
+            "Blood"
           ]
         },
         {
@@ -39515,6 +41887,7 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Red",
+        "Blood",
         "Healing Damage",
         "Healing Damage",
         "Divine Bloodline"
@@ -39591,7 +41964,8 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Red"
+            "Red",
+            "Blood"
           ]
         },
         {
@@ -39626,6 +42000,7 @@ window.VS_DATA = {
         "Low Health",
         "Critical Damage",
         "Red",
+        "Blood",
         "Healing Damage",
         "Healing Damage",
         "Divine Bloodline"
@@ -39641,70 +42016,31 @@ window.VS_DATA = {
       ]
     },
     {
-      "name": "Mille Bolle Blu",
-      "icon": "assets/icons/weapons/mille_bolle_blu.png",
-      "sprite": "assets/icons/weapons/mille_bolle_blu_sprite.png",
+      "name": "Scarlet Needle",
+      "icon": "assets/icons/weapons/scarlet_needle.png",
+      "sprite": "assets/icons/weapons/scarlet_needle_sprite.png",
       "category": "Base",
       "method": "Evolution",
-      "description": "Fires lingering projectiles.",
+      "description": "Damaging needles pin the nearest enemy in place.",
       "level_ups": [
-        "\"Fires lingering projectiles.\"",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
-        "Fires 1 more projectile. Base Area up by 10%.",
-        "Cooldown reduced by 0.2 seconds. Base Damage up by 2.5.",
-        "Fires 1 more projectile."
+        "Damaging needles pin the nearest enemy in place."
       ],
-      "limit_break": [
-        {
-          "stat": "Might",
-          "value": "0.01",
-          "rarity": "10",
-          "max": ""
-        },
-        {
-          "stat": "Area",
-          "value": "0.025",
-          "rarity": "10",
-          "max": "10"
-        },
-        {
-          "stat": "Speed",
-          "value": "0.05",
-          "rarity": "10",
-          "max": "3"
-        },
-        {
-          "stat": "Duration",
-          "value": "100ms",
-          "rarity": "10",
-          "max": "9.0 seconds"
-        },
-        {
-          "stat": "Amount",
-          "value": "1",
-          "rarity": "1",
-          "max": "10"
-        }
-      ],
+      "limit_break": [],
       "trans_conditions": "Max Required",
-      "trans_result": "Boo Roo Boolle",
+      "trans_result": "Cardinal Rain",
       "requirements": [
-        "Spellbinder"
+        "Pummarola"
       ],
-      "final_state": "Boo Roo Boolle",
+      "final_state": "Cardinal Rain",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 1,
+      "rarity": 0,
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
             "Might",
             "Speed",
-            "Duration",
             "Area",
             "Cooldown",
             "Amount"
@@ -39713,78 +42049,192 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Blue"
-          ]
-        },
-        {
-          "key": "Pale Diamond Incursion (V)",
-          "items": [
-            "Cooldown Speed"
+            "Blood"
           ]
         }
       ],
       "affinity": [
         "Might",
         "Speed",
-        "Duration",
         "Area",
         "Cooldown",
         "Amount",
-        "Blue",
-        "Cooldown Speed"
+        "Blood"
       ],
-      "conflict": [],
+      "conflict": [
+        "Duration"
+      ],
       "arcana": [
-        "Sapphire Mist (I)",
-        "Pale Diamond Incursion (V)"
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)"
       ]
     },
     {
-      "name": "Boo Roo Boolle",
-      "icon": "assets/icons/weapons/boo_roo_boolle.png",
-      "sprite": "assets/icons/weapons/boo_roo_boolle_sprite.png",
+      "name": "Cardinal Rain",
+      "icon": "assets/icons/weapons/cardinal_rain.png",
+      "sprite": "assets/icons/weapons/cardinal_rain_sprite.png",
       "category": "Evolution",
       "method": null,
-      "description": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once.",
+      "description": "Evolved Scarlet Needle. Endless rain can hit in any location.",
       "level_ups": [
-        "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once."
+        "Evolved Scarlet Needle. Endless rain can hit in any location."
       ],
-      "limit_break": [
-        {
-          "stat": "Might",
-          "value": "0.01",
-          "rarity": "10",
-          "max": ""
-        },
-        {
-          "stat": "Area",
-          "value": "0.025",
-          "rarity": "10",
-          "max": "10"
-        },
-        {
-          "stat": "Speed",
-          "value": "0.05",
-          "rarity": "10",
-          "max": "3"
-        },
-        {
-          "stat": "Duration",
-          "value": "100ms",
-          "rarity": "10",
-          "max": "9.0 seconds"
-        },
-        {
-          "stat": "Amount",
-          "value": "1",
-          "rarity": "1",
-          "max": "10"
-        }
-      ],
+      "limit_break": [],
       "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
-      "final_state": "Boo Roo Boolle",
+      "final_state": "Cardinal Rain",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blood"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Blood"
+      ],
+      "conflict": [
+        "Duration"
+      ],
+      "arcana": [
+        "Twilight Requiem (II)",
+        "Tragic Princess (III)"
+      ]
+    },
+    {
+      "name": "Ashella",
+      "icon": "assets/icons/weapons/ashella.png",
+      "sprite": "assets/icons/weapons/ashella_sprite.png",
+      "category": "Base",
+      "method": "Evolution",
+      "description": "Can deal critical hits.",
+      "level_ups": [
+        "Can deal critical hits."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "Bloodlust",
+      "requirements": [
+        "Duplicator"
+      ],
+      "final_state": "Bloodlust",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
+    },
+    {
+      "name": "Bloodlust",
+      "icon": "assets/icons/weapons/bloodlust.png",
+      "sprite": "assets/icons/weapons/bloodlust_sprite.png",
+      "category": "Evolution",
+      "method": null,
+      "description": "Evolved Ashella. Critical damage affected by Amount.",
+      "level_ups": [
+        "Evolved Ashella. Critical damage affected by Amount."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Bloodlust",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Speed",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Blood"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Speed",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Blood"
+      ],
+      "conflict": [],
+      "arcana": [
+        "Slash (XVI)"
+      ]
+    },
+    {
+      "name": "Incineration",
+      "icon": "assets/icons/weapons/incineration.png",
+      "sprite": "assets/icons/weapons/incineration_sprite.png",
+      "category": "Base",
+      "method": "Evolution",
+      "description": "Erases enemies in the faced direction.",
+      "level_ups": [
+        "Erases enemies in the faced direction."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "Dust to Dust",
+      "requirements": [
+        "Candelabrador"
+      ],
+      "final_state": "Dust to Dust",
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0,
@@ -39803,13 +42253,7 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Blue"
-          ]
-        },
-        {
-          "key": "Pale Diamond Incursion (V)",
-          "items": [
-            "Cooldown Speed"
+            "Hell"
           ]
         }
       ],
@@ -39820,86 +42264,452 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Blue",
-        "Cooldown Speed"
+        "Hell"
       ],
       "conflict": [],
-      "arcana": [
-        "Sapphire Mist (I)",
-        "Pale Diamond Incursion (V)"
-      ]
+      "arcana": []
     },
     {
-      "name": "108 Bocce",
-      "icon": "assets/icons/weapons/108_bocce.png",
-      "sprite": "assets/icons/weapons/108_bocce_sprite.png",
-      "category": "Base",
+      "name": "Dust to Dust",
+      "icon": "assets/icons/weapons/dust_to_dust.png",
+      "sprite": "assets/icons/weapons/dust_to_dust_sprite.png",
+      "category": "Evolution",
       "method": null,
-      "description": "Actually it's just 8. Damage affected by the difference between Curse and Luck.",
+      "description": "Evolved Incineration. Infernal ashes blow back, erasing enemies.",
       "level_ups": [
-        "\"Actually it's just 8. Damages nearby enemies.\"",
-        "Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Damage up by 4.",
-        "Cooldown reduced by 0.1 seconds. Base Damage up by 4.",
-        "Base Damage up by 4."
+        "Evolved Incineration. Infernal ashes blow back, erasing enemies."
       ],
-      "limit_break": [
-        {
-          "stat": "Might",
-          "value": "0.01",
-          "rarity": "10",
-          "max": ""
-        },
-        {
-          "stat": "Area",
-          "value": "0.025",
-          "rarity": "10",
-          "max": "10"
-        }
-      ],
+      "limit_break": [],
       "trans_conditions": "",
       "trans_result": null,
       "requirements": [],
-      "final_state": "108 Bocce",
+      "final_state": "Dust to Dust",
       "ode_category": null,
       "arcana_ratings": {},
-      "rarity": 10,
+      "rarity": 0,
       "affinity_groups": [
         {
           "key": "primary",
           "items": [
             "Might",
+            "Speed",
+            "Duration",
             "Area",
             "Cooldown",
-            "Luck",
-            "Curse"
+            "Amount"
           ]
         },
         {
           "key": null,
           "items": [
+            "Hell"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Hell"
+      ],
+      "conflict": [],
+      "arcana": []
+    },
+    {
+      "name": "Screams from the Void",
+      "icon": "assets/icons/weapons/screams_from_the_void.png",
+      "sprite": "assets/icons/weapons/screams_from_the_void_sprite.png",
+      "category": "Base",
+      "method": "Evolution",
+      "description": "Unleash screams with high knockback. Retaliates.",
+      "level_ups": [
+        "Unleash screams with high knockback. Retaliates."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "Forbidden Siren",
+      "requirements": [
+        "Attractorb"
+      ],
+      "final_state": "Forbidden Siren",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor"
+      ],
+      "conflict": [],
+      "arcana": []
+    },
+    {
+      "name": "Forbidden Siren",
+      "icon": "assets/icons/weapons/forbidden_siren.png",
+      "sprite": "assets/icons/weapons/forbidden_siren_sprite.png",
+      "category": "Evolution",
+      "method": null,
+      "description": "Evolved Screams from the Void. Pulls and defangs enemies.",
+      "level_ups": [
+        "Evolved Screams from the Void. Pulls and defangs enemies."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Forbidden Siren",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount",
+            "Armor"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Armor"
+      ],
+      "conflict": [],
+      "arcana": []
+    },
+    {
+      "name": "Blacken Firmament",
+      "icon": "assets/icons/weapons/blacken_firmament.png",
+      "sprite": "assets/icons/weapons/blacken_firmament_sprite.png",
+      "category": "Base",
+      "method": "Evolution",
+      "description": "Erases a random enemy, occaisonally leaving a damaging tear in reality.",
+      "level_ups": [
+        "Erases a random enemy, occaisonally leaving a damaging tear in reality."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "Damnation",
+      "requirements": [
+        "Torrona's Box"
+      ],
+      "final_state": "Damnation",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Hell"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Red",
+        "Hell"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": [
+        "Tragic Princess (III)"
+      ]
+    },
+    {
+      "name": "Damnation",
+      "icon": "assets/icons/weapons/damnation.png",
+      "sprite": "assets/icons/weapons/damnation_sprite.png",
+      "category": "Evolution",
+      "method": null,
+      "description": "Evolved Blacken Firmament. Draws enemies to ruin.",
+      "level_ups": [
+        "Evolved Blacken Firmament. Draws enemies to ruin."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "Damnation",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Red",
+            "Hell"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Area",
+        "Cooldown",
+        "Amount",
+        "Red",
+        "Hell"
+      ],
+      "conflict": [
+        "Speed"
+      ],
+      "arcana": [
+        "Tragic Princess (III)"
+      ]
+    },
+    {
+      "name": "FireFall",
+      "icon": "assets/icons/weapons/firefall.png",
+      "sprite": "assets/icons/weapons/firefall_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Strikes at the furthest enemy. Damage further multiplied by Might.",
+      "level_ups": [
+        "Strikes at the furthest enemy. Damage further multiplied by Might."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "FireStall",
+      "requirements": [
+        "FireBall",
+        "FireWall"
+      ],
+      "final_state": "FireStall",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Duration",
+        "Area"
+      ],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
+    },
+    {
+      "name": "FireBall",
+      "icon": "assets/icons/weapons/fireball.png",
+      "sprite": "assets/icons/weapons/fireball_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Generates an expanding damaging zone. Damage multiplied by Area.",
+      "level_ups": [
+        "Generates an expanding zone. Damage multiplied by Area."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "FireStall",
+      "requirements": [
+        "FireFall",
+        "FireWall"
+      ],
+      "final_state": "FireStall",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Speed",
+        "Duration",
+        "Area",
+        "Cooldown"
+      ],
+      "conflict": [
+        "Amount"
+      ],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
+    },
+    {
+      "name": "FireWall",
+      "icon": "assets/icons/weapons/firewall.png",
+      "sprite": "assets/icons/weapons/firewall_sprite.png",
+      "category": "Base",
+      "method": "Union",
+      "description": "Generates a directional damaging zone. Greatly affected by Amount.",
+      "level_ups": [
+        "Generates a directional damaging zone. Greatly affected by Amount."
+      ],
+      "limit_break": [],
+      "trans_conditions": "Max Required",
+      "trans_result": "FireStall",
+      "requirements": [
+        "FireFall",
+        "FireBall"
+      ],
+      "final_state": "FireStall",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 70,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Duration",
+            "Cooldown",
+            "Amount"
+          ]
+        }
+      ],
+      "affinity": [
+        "Might",
+        "Duration",
+        "Cooldown",
+        "Amount"
+      ],
+      "conflict": [
+        "Speed",
+        "Area"
+      ],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
+    },
+    {
+      "name": "FireStall",
+      "icon": "assets/icons/weapons/firestall.png",
+      "sprite": "assets/icons/weapons/firestall_sprite.png",
+      "category": "Union",
+      "method": null,
+      "description": "Union of FireFall, FireWall, and FireBall. Grows stronger after every singularity.",
+      "level_ups": [
+        "Union of FireFall, FireWall, and FireBall. Grows stronger after every singularity."
+      ],
+      "limit_break": [],
+      "trans_conditions": "",
+      "trans_result": null,
+      "requirements": [],
+      "final_state": "FireStall",
+      "ode_category": null,
+      "arcana_ratings": {},
+      "rarity": 0,
+      "affinity_groups": [
+        {
+          "key": "primary",
+          "items": [
+            "Might",
+            "Speed",
+            "Duration",
+            "Area",
+            "Cooldown",
+            "Amount"
+          ]
+        },
+        {
+          "key": null,
+          "items": [
+            "Union",
             "Red"
           ]
         }
       ],
       "affinity": [
         "Might",
-        "Area",
-        "Cooldown",
-        "Luck",
-        "Curse",
-        "Red"
-      ],
-      "conflict": [
         "Speed",
         "Duration",
+        "Area",
+        "Cooldown",
         "Amount",
-        "Luck"
+        "Union",
+        "Red"
       ],
-      "arcana": []
+      "conflict": [],
+      "arcana": [
+        "Heart of Fire (XIX)",
+        "Heir of Fate (XIX)"
+      ]
     },
     {
       "name": "SpellString",
@@ -45666,8 +48476,7 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Max Health"
+            "Amount"
           ]
         },
         {
@@ -45695,7 +48504,6 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Max Health",
         "Red",
         "Curse",
         "Critical Damage",
@@ -45754,13 +48562,13 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount",
-            "Max Health"
+            "Amount"
           ]
         },
         {
           "key": null,
           "items": [
+            "Greed",
             "Red"
           ]
         },
@@ -45783,7 +48591,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Max Health",
+        "Greed",
         "Red",
         "Curse",
         "Critical Damage",
@@ -45858,8 +48666,7 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Max Health"
+            "Amount"
           ]
         },
         {
@@ -45882,7 +48689,6 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Max Health",
         "Red",
         "Critical Damage",
         "Luck"
@@ -45945,8 +48751,7 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount",
-            "Max Health"
+            "Amount"
           ]
         },
         {
@@ -45962,7 +48767,6 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Max Health",
         "Red"
       ],
       "conflict": [
@@ -47946,9 +50750,7 @@ window.VS_DATA = {
         "Freeze"
       ],
       "conflict": [],
-      "arcana": [
-        "Jail of Crystal (XIV)"
-      ]
+      "arcana": []
     },
     {
       "name": "Cocytus",
@@ -51919,7 +54721,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Ambiguous Power",
-            "Red"
+            "Red",
+            "Hell"
           ]
         }
       ],
@@ -51931,7 +54734,8 @@ window.VS_DATA = {
         "Amount",
         "Low Health",
         "Ambiguous Power",
-        "Red"
+        "Red",
+        "Hell"
       ],
       "conflict": [
         "Duration"
@@ -51998,7 +54802,9 @@ window.VS_DATA = {
         {
           "key": null,
           "items": [
-            "Ambiguous Power"
+            "Ambiguous Power",
+            "Blood",
+            "Hell"
           ]
         }
       ],
@@ -52009,7 +54815,9 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Low Health",
-        "Ambiguous Power"
+        "Ambiguous Power",
+        "Blood",
+        "Hell"
       ],
       "conflict": [
         "Amount"
@@ -52052,7 +54860,8 @@ window.VS_DATA = {
           "items": [
             "Ambiguous Power",
             "Union",
-            "Red"
+            "Red",
+            "Blood"
           ]
         },
         {
@@ -52073,6 +54882,7 @@ window.VS_DATA = {
         "Ambiguous Power",
         "Union",
         "Red",
+        "Blood",
         "Fire"
       ],
       "conflict": [],
@@ -55991,7 +58801,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Glimmer Tech",
-            "Red"
+            "Red",
+            "Blood"
           ]
         }
       ],
@@ -56001,7 +58812,8 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
-        "Red"
+        "Red",
+        "Blood"
       ],
       "conflict": [
         "Speed",
@@ -56052,7 +58864,8 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Glimmer Tech",
-            "Red"
+            "Red",
+            "Blood"
           ]
         }
       ],
@@ -56064,7 +58877,8 @@ window.VS_DATA = {
         "Greed",
         "Recovery",
         "Glimmer Tech",
-        "Red"
+        "Red",
+        "Blood"
       ],
       "conflict": [
         "Speed",
@@ -60116,6 +62930,34 @@ window.VS_DATA = {
       "grants": []
     },
     {
+      "name": "Pearl Megatama",
+      "icon": "assets/icons/passives/pearl_megatama.png",
+      "max_level": 0,
+      "rarity": 0,
+      "description": "Gift. Will provide bonus Recovery and Revivals in exchange for Greed. Fully heals.",
+      "level_ups": [
+        "Gift. Will provide bonus Recovery and Revivals in exchange for Greed. Fully heals."
+      ],
+      "level_up_values": [],
+      "consumed_on_evo": false,
+      "conflict": [],
+      "grants": []
+    },
+    {
+      "name": "Velvet Dodecahedron",
+      "icon": "assets/icons/passives/velvet_dodecahedron.png",
+      "max_level": 0,
+      "rarity": 0,
+      "description": "Gift. Will provide bonus Growth and Greed in exchange for Max Health. Triggers Last Breath, On Revival, and HP Critical skills.",
+      "level_ups": [
+        "Gift. Will provide bonus Growth and Greed in exchange for Max Health. Triggers Last Breath, On Revival, and HP Critical skills."
+      ],
+      "level_up_values": [],
+      "consumed_on_evo": false,
+      "conflict": [],
+      "grants": []
+    },
+    {
       "name": "Academy Badge",
       "icon": "assets/icons/passives/academy_badge.png",
       "max_level": 6,
@@ -60589,6 +63431,9 @@ window.VS_DATA = {
         "Seraphic Cry",
         "Silver Wind",
         "Festive Winds",
+        "Argent Flow",
+        "Scarlet Needle",
+        "Cardinal Rain",
         "Prismatic Missile",
         "Luminaire",
         "C-U-Laser",
@@ -60653,6 +63498,10 @@ window.VS_DATA = {
         "Levelin'Eh",
         "Seraphic Cry",
         "Carréllo",
+        "Scarlet Needle",
+        "Cardinal Rain",
+        "Blacken Firmament",
+        "Damnation",
         "Fulgur",
         "Speculo Fulgur",
         "Tenebris Tonitrus",
@@ -60888,6 +63737,7 @@ window.VS_DATA = {
         "Pummarola",
         "Silver Wind",
         "Festive Winds",
+        "Argent Flow",
         "Night Sword",
         "Muramasa",
         "Lifesign Scan",
@@ -61446,6 +64296,10 @@ window.VS_DATA = {
         "Greatest Jubilee",
         "Yatta Daikarin",
         "Muramasa",
+        "Ashella",
+        "Bloodlust",
+        "Descent into Misery",
+        "Shimmering Sands",
         "Eskizzibur",
         "Legionnaire",
         "Flash Arrow",
@@ -61640,6 +64494,10 @@ window.VS_DATA = {
         "Lapiste Tepisto",
         "Flames of Misspell",
         "Ashes of Muspell",
+        "FireFall",
+        "FireBall",
+        "FireWall",
+        "FireStall",
         "Ammo Appalate",
         "Horse Cartridge",
         "Gunastrophe",
@@ -61799,7 +64657,8 @@ window.VS_DATA = {
           "items": [
             "Blood Astronomia",
             "Amount",
-            "Magnet"
+            "Magnet",
+            "Blood"
           ]
         },
         {
@@ -61814,6 +64673,7 @@ window.VS_DATA = {
         "Blood Astronomia",
         "Amount",
         "Magnet",
+        "Blood",
         "Duration",
         "Red"
       ],
@@ -62661,6 +65521,10 @@ window.VS_DATA = {
         "Tri-Bracelet",
         "Flames of Misspell",
         "Ashes of Muspell",
+        "FireFall",
+        "FireBall",
+        "FireWall",
+        "FireStall",
         "Firearm",
         "Fire-L3GS",
         "Alchemy Whip",
@@ -62758,6 +65622,7 @@ window.VS_DATA = {
         "Pummarola",
         "Silver Wind",
         "Festive Winds",
+        "Argent Flow",
         "Night Sword",
         "Muramasa",
         "Lifesign Scan",
@@ -62775,7 +65640,8 @@ window.VS_DATA = {
           "items": [
             "Recovery",
             "Low Health",
-            "Healing Damage"
+            "Healing Damage",
+            "Blood"
           ]
         },
         {
@@ -62791,6 +65657,7 @@ window.VS_DATA = {
         "Recovery",
         "Low Health",
         "Healing Damage",
+        "Blood",
         "Magnet",
         "Amount",
         "Speed"
@@ -63013,22 +65880,39 @@ window.VS_DATA = {
           "Embrace of Gaea",
           "Magi-Stone",
           "Kyra-Stones",
+          "Descent into Misery",
           "Phas3r",
           "Photonstorm",
           "Chaos Rune",
           "Wicked Ruler",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
+          "108 Responsive Prayers",
+          "Road to Heaven",
           "Four Seasons",
           "Godai Shuffle",
           "Summon Night",
           "Echo Night",
           "Mirage Robe",
           "J'Odore",
-          "Night Sword",
-          "Muramasa",
           "Mille Bolle Blu",
           "Boo Roo Boolle",
+          "Night Sword",
+          "Muramasa",
+          "Scarlet Needle",
+          "Cardinal Rain",
+          "Ashella",
+          "Bloodlust",
+          "Incineration",
+          "Dust to Dust",
+          "Screams from the Void",
+          "Forbidden Siren",
+          "Blacken Firmament",
+          "Damnation",
+          "FireFall",
+          "FireWall",
+          "FireStall",
           "SpellString",
           "SpellStrike",
           "SpellStrom",
@@ -63243,6 +66127,8 @@ window.VS_DATA = {
           "Queen Sigma",
           "Gazebo",
           "Gav'Et-Oni",
+          "Spiritoso",
+          "Jamon Jato",
           "Rottin'Ghoul",
           "Horse",
           "Lucia Zero",
@@ -64261,6 +67147,7 @@ window.VS_DATA = {
           "Tonne",
           "Unsurpassed",
           "Miracle of Multiplication",
+          "Road to Heaven",
           "Mirage Robe",
           "J'Odore",
           "Prismatic Missile",
@@ -64556,6 +67443,7 @@ window.VS_DATA = {
           "Celestial Dusting",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
           "Night Sword",
           "Muramasa",
           "Lifesign Scan",
@@ -64659,7 +67547,14 @@ window.VS_DATA = {
       "related": {
         "weapons": [],
         "passives": [],
-        "characters": [],
+        "characters": [
+          "Malice Bloodmoon",
+          "Sargon (FireFall)",
+          "Sargon (FireBall)",
+          "Sargon (FireWall)",
+          "Nameless Fool",
+          "Megalo Sargon"
+        ],
         "arcana": [
           "Awake (IV)"
         ]
@@ -64843,23 +67738,39 @@ window.VS_DATA = {
           "Embrace of Gaea",
           "Magi-Stone",
           "Kyra-Stones",
+          "Descent into Misery",
           "Phas3r",
           "Photonstorm",
           "Chaos Rune",
           "Wicked Ruler",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
+          "108 Bocce",
+          "108 Responsive Prayers",
+          "Road to Heaven",
           "Four Seasons",
           "Godai Shuffle",
           "Summon Night",
           "Echo Night",
           "Mirage Robe",
           "J'Odore",
-          "Night Sword",
-          "Muramasa",
           "Mille Bolle Blu",
           "Boo Roo Boolle",
-          "108 Bocce",
+          "Night Sword",
+          "Muramasa",
+          "Scarlet Needle",
+          "Cardinal Rain",
+          "Ashella",
+          "Bloodlust",
+          "Incineration",
+          "Dust to Dust",
+          "Screams from the Void",
+          "Forbidden Siren",
+          "Blacken Firmament",
+          "Damnation",
+          "FireBall",
+          "FireStall",
           "SpellStream",
           "SpellStrom",
           "Eskizzibur",
@@ -65079,6 +67990,8 @@ window.VS_DATA = {
           "Leda",
           "Scorej-Oni",
           "McCoy-Oni",
+          "Calogero Bloodmoon",
+          "Megalo Sargon",
           "Scientist Mina",
           "Lucia Zero",
           "Browny",
@@ -65152,6 +68065,8 @@ window.VS_DATA = {
           "Silver Wind",
           "Night Sword",
           "Muramasa",
+          "Screams from the Void",
+          "Forbidden Siren",
           "Eskizzibur",
           "Legionnaire",
           "Paranormal Scan",
@@ -65187,8 +68102,10 @@ window.VS_DATA = {
           "Torino",
           "Gyoruntin",
           "Syuuto Moonspell",
-          "McCoy-Oni",
           "Megalo Syuuto Moonspell",
+          "McCoy-Oni",
+          "Calogero Bloodmoon",
+          "In' Kujata",
           "Maruto Cuts",
           "Je-Ne-Viv",
           "Guardian Pina",
@@ -65306,6 +68223,7 @@ window.VS_DATA = {
         "characters": [
           "Torino",
           "Scorej-Oni",
+          "Malice Bloodmoon",
           "Grant Danasty (Curved Knife)",
           "Grant Danasty (Coat of Arms)",
           "Morris Baldwin (Kaiser Knuckle)",
@@ -65517,23 +68435,45 @@ window.VS_DATA = {
           "Embrace of Gaea",
           "Magi-Stone",
           "Kyra-Stones",
+          "Descent into Misery",
           "Phas3r",
           "Photonstorm",
           "Chaos Rune",
           "Wicked Ruler",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
+          "108 Bocce",
+          "108 Responsive Prayers",
+          "Road to Heaven",
           "Four Seasons",
           "Godai Shuffle",
           "Summon Night",
           "Echo Night",
           "Mirage Robe",
           "J'Odore",
-          "Night Sword",
-          "Muramasa",
           "Mille Bolle Blu",
           "Boo Roo Boolle",
-          "108 Bocce",
+          "LunarMight",
+          "LunarSight",
+          "LunarBight",
+          "LunarFlight",
+          "Night Sword",
+          "Muramasa",
+          "Scarlet Needle",
+          "Cardinal Rain",
+          "Ashella",
+          "Bloodlust",
+          "Incineration",
+          "Dust to Dust",
+          "Screams from the Void",
+          "Forbidden Siren",
+          "Blacken Firmament",
+          "Damnation",
+          "FireFall",
+          "FireBall",
+          "FireWall",
+          "FireStall",
           "SpellString",
           "SpellStream",
           "SpellStrike",
@@ -65757,6 +68697,13 @@ window.VS_DATA = {
           "Leda",
           "Menya Moonspell",
           "Megalo Menya Moonspell",
+          "Calogero Bloodmoon",
+          "Sargon (FireFall)",
+          "Sargon (FireBall)",
+          "Sargon (FireWall)",
+          "Baal'thasar",
+          "Megalo Sargon",
+          "Baal'thamut",
           "Keitha Muort",
           "Impostor Rina",
           "Megalo Impostor Rina",
@@ -65859,6 +68806,7 @@ window.VS_DATA = {
           "Seraphic Cry",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
           "108 Bocce",
           "Prismatic Missile",
           "Luminaire",
@@ -66073,6 +69021,9 @@ window.VS_DATA = {
           "Wicked Ruler",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
+          "108 Responsive Prayers",
+          "Road to Heaven",
           "Four Seasons",
           "Godai Shuffle",
           "Summon Night",
@@ -66081,6 +69032,21 @@ window.VS_DATA = {
           "J'Odore",
           "Mille Bolle Blu",
           "Boo Roo Boolle",
+          "LunarMight",
+          "LunarSight",
+          "LunarBight",
+          "LunarFlight",
+          "Ashella",
+          "Bloodlust",
+          "Incineration",
+          "Dust to Dust",
+          "Screams from the Void",
+          "Forbidden Siren",
+          "Blacken Firmament",
+          "Damnation",
+          "FireBall",
+          "FireWall",
+          "FireStall",
           "SpellStream",
           "SpellStrom",
           "Legionnaire",
@@ -66215,6 +69181,9 @@ window.VS_DATA = {
           "Smith IV",
           "Minnah Mannarah",
           "Torino",
+          "Baal'thasar",
+          "Megalo Sargon",
+          "Baal'thamut",
           "Scientist Mina",
           "Lucia Zero",
           "Juste Belmont (Vibhuti Whip)",
@@ -66293,6 +69262,7 @@ window.VS_DATA = {
           "Power of Lire",
           "Night Sword",
           "Muramasa",
+          "Mormegil Tip",
           "Blood Chalice",
           "Celestial Booster",
           "Negative Space"
@@ -66305,6 +69275,14 @@ window.VS_DATA = {
           "Big Troubler",
           "Big Trouser",
           "Megalo Syuuto Moonspell",
+          "Malice Bloodmoon",
+          "Calogero Bloodmoon",
+          "Sargon (FireFall)",
+          "Sargon (FireBall)",
+          "Sargon (FireWall)",
+          "Baal'thasar",
+          "Megalo Sargon",
+          "Baal'thamut",
           "Genevieve Gruyère",
           "Je-Ne-Viv",
           "Sammy",
@@ -66445,6 +69423,10 @@ window.VS_DATA = {
           "Gains Boros",
           "Rose De Infernas",
           "McCoy-Oni",
+          "Sargon (FireFall)",
+          "Sargon (FireBall)",
+          "Sargon (FireWall)",
+          "Megalo Sargon",
           "Eleanor Uziron (SpellString)",
           "Eleanor Uziron (SpellStream)",
           "Eleanor Uziron (SpellStrike)",
@@ -66602,11 +69584,13 @@ window.VS_DATA = {
           "Photonstorm",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
+          "108 Bocce",
+          "Road to Heaven",
           "Mirage Robe",
           "J'Odore",
           "Night Sword",
           "Muramasa",
-          "108 Bocce",
           "Eskizzibur",
           "Legionnaire",
           "Flash Arrow",
@@ -66688,6 +69672,9 @@ window.VS_DATA = {
           "Secretino Dagsson",
           "Menya Moonspell",
           "Megalo Menya Moonspell",
+          "Gekkojin (LunarMight)",
+          "Gekkojin (LunarSight)",
+          "Gekkojin (LunarBight)",
           "Keitha Muort",
           "Sammy",
           "Ghost Lino",
@@ -67008,10 +69995,6 @@ window.VS_DATA = {
           "Fuwalafuwaloo",
           "Mazo Familiar",
           "Paranormal Scan",
-          "Jet Black Whip",
-          "Mormegil Tip",
-          "Vibhuti Whip",
-          "Daybreaker Tip",
           "Vanitas Whip",
           "Aurablaster Tip"
         ],
@@ -67044,8 +70027,13 @@ window.VS_DATA = {
           "Gyoruntin",
           "Miang Moonspell",
           "Syuuto Moonspell",
-          "McCoy-Oni",
+          "Megalo Miang Moonspell",
           "Megalo Syuuto Moonspell",
+          "McCoy-Oni",
+          "Malice Bloodmoon",
+          "Calogero Bloodmoon",
+          "Baal'thasar",
+          "Baal'thamut",
           "Maruto Cuts",
           "Je-Ne-Viv",
           "Shapeshifter Nino",
@@ -67201,6 +70189,12 @@ window.VS_DATA = {
         ],
         "passives": [],
         "characters": [
+          "Malice Bloodmoon",
+          "Calogero Bloodmoon",
+          "Ashtart",
+          "Nameless Fool",
+          "Congregation",
+          "In' Kujata",
           "Shapeshifter Nino",
           "Brad Fang",
           "Julius Belmont (Vanitas Whip)",
@@ -67360,23 +70354,45 @@ window.VS_DATA = {
           "Seraphic Cry",
           "Gaze of Gaea",
           "Embrace of Gaea",
+          "Descent into Misery",
           "Phas3r",
           "Photonstorm",
           "Chaos Rune",
           "Wicked Ruler",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
+          "108 Bocce",
+          "108 Responsive Prayers",
+          "Road to Heaven",
           "Four Seasons",
           "Godai Shuffle",
           "Summon Night",
           "Echo Night",
           "Mirage Robe",
           "J'Odore",
-          "Night Sword",
-          "Muramasa",
           "Mille Bolle Blu",
           "Boo Roo Boolle",
-          "108 Bocce",
+          "LunarMight",
+          "LunarSight",
+          "LunarBight",
+          "LunarFlight",
+          "Night Sword",
+          "Muramasa",
+          "Scarlet Needle",
+          "Cardinal Rain",
+          "Ashella",
+          "Bloodlust",
+          "Incineration",
+          "Dust to Dust",
+          "Screams from the Void",
+          "Forbidden Siren",
+          "Blacken Firmament",
+          "Damnation",
+          "FireFall",
+          "FireBall",
+          "FireWall",
+          "FireStall",
           "SpellString",
           "SpellStream",
           "SpellStrike",
@@ -67607,6 +70623,13 @@ window.VS_DATA = {
           "Syuuto Moonspell",
           "Megalo Menya Moonspell",
           "Megalo Syuuto Moonspell",
+          "Gekkojin (LunarMight)",
+          "Gekkojin (LunarSight)",
+          "Gekkojin (LunarBight)",
+          "Calogero Bloodmoon",
+          "Baal'thasar",
+          "Megalo Sargon",
+          "Baal'thamut",
           "Maruto Cuts",
           "Luminaire Foscari",
           "Je-Ne-Viv",
@@ -67740,6 +70763,7 @@ window.VS_DATA = {
         "passives": [],
         "characters": [
           "Christine Davain",
+          "Ashtart",
           "Ghost Lino",
           "Lolo, Hiss, Meow, and Purr"
         ],
@@ -67849,9 +70873,16 @@ window.VS_DATA = {
           "Menya Moonspell",
           "Syuuto Moonspell",
           "Babi-Onna",
+          "Megalo Miang Moonspell",
           "Megalo Menya Moonspell",
           "Megalo Syuuto Moonspell",
           "Gav'Et-Oni",
+          "Malice Bloodmoon",
+          "Sargon (FireFall)",
+          "Sargon (FireBall)",
+          "Sargon (FireWall)",
+          "Jamon Jato",
+          "Megalo Sargon",
           "Eleanor Uziron (SpellString)",
           "Eleanor Uziron (SpellStream)",
           "Eleanor Uziron (SpellStrike)",
@@ -68059,6 +71090,7 @@ window.VS_DATA = {
           "Profusione D'Amore",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
           "Night Sword",
           "Muramasa",
           "Lifesign Scan",
@@ -68097,6 +71129,12 @@ window.VS_DATA = {
           "Smith IV",
           "Cosmo Pavone",
           "Miang Moonspell",
+          "Megalo Miang Moonspell",
+          "Spiritoso",
+          "Gekkojin (LunarMight)",
+          "Gekkojin (LunarSight)",
+          "Gekkojin (LunarBight)",
+          "Malice Bloodmoon",
           "Luminaire Foscari",
           "Sammy",
           "Shapeshifter Nino",
@@ -68198,6 +71236,11 @@ window.VS_DATA = {
           "Cosmo Pavone",
           "Gyorunton",
           "Bats Bats Bats",
+          "Ashtart",
+          "Sargon (FireFall)",
+          "Sargon (FireBall)",
+          "Congregation",
+          "Megalo Sargon",
           "Luminaire Foscari",
           "Guardian Pina",
           "Lucia Zero",
@@ -68365,10 +71408,21 @@ window.VS_DATA = {
           "Wicked Ruler",
           "Silver Wind",
           "Festive Winds",
+          "Argent Flow",
           "Mirage Robe",
           "J'Odore",
           "Mille Bolle Blu",
           "Boo Roo Boolle",
+          "Scarlet Needle",
+          "Cardinal Rain",
+          "Ashella",
+          "Bloodlust",
+          "Incineration",
+          "Dust to Dust",
+          "Screams from the Void",
+          "Forbidden Siren",
+          "FireBall",
+          "FireStall",
           "SpellString",
           "SpellStream",
           "SpellStrike",
@@ -68529,6 +71583,7 @@ window.VS_DATA = {
           "Zi'Appunta Belpaese",
           "Gazebo",
           "Minnah Mannarah",
+          "Megalo Sargon",
           "Keitha Muort",
           "Scientist Mina",
           "Bill Rizer",
@@ -68718,6 +71773,52 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Blood",
+      "icon": "assets/icons/affinities/blood.png",
+      "color": "#5b1717",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Bloody Tear",
+          "Garlic",
+          "Soul Eater",
+          "Pentagram",
+          "Gorgeous Moon",
+          "Song of Mana",
+          "Mannajja",
+          "Clock Lancet",
+          "Laurel",
+          "Pako Battiliar",
+          "Mazo Familiar",
+          "Night Sword",
+          "Muramasa",
+          "Scarlet Needle",
+          "Cardinal Rain",
+          "Bloodlust",
+          "Dominus Agony",
+          "Power of Sire",
+          "Sonic Dash",
+          "Rapidus Fio",
+          "Sanguine Star",
+          "Blood Chalice"
+        ],
+        "passives": [],
+        "characters": [
+          "Malice Bloodmoon",
+          "Baal'thasar",
+          "Baal'thamut",
+          "Brauner"
+        ],
+        "arcana": [
+          "Blood Astronomia (XXI)",
+          "Wandering the Jet Black (XXI)"
+        ]
+      }
+    },
+    {
       "name": "Bracers",
       "icon": "assets/icons/affinities/bracers.png",
       "color": "#66321a",
@@ -68842,6 +71943,57 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Hell",
+      "icon": "assets/icons/affinities/hell.png",
+      "color": "#292929",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Hellfire",
+          "Soul Eater",
+          "Pentagram",
+          "Vicious Hunger",
+          "Incineration",
+          "Dust to Dust",
+          "Blacken Firmament",
+          "Damnation",
+          "Dominus Hatred",
+          "Dominus Agony"
+        ],
+        "passives": [],
+        "characters": [
+          "Baal'thasar",
+          "Baal'thamut"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Holy",
+      "icon": "assets/icons/affinities/holy.png",
+      "color": "#969595",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Laurel",
+          "108 Bocce",
+          "108 Responsive Prayers",
+          "Road to Heaven"
+        ],
+        "passives": [],
+        "characters": [
+          "Nameless Saint"
+        ],
+        "arcana": []
+      }
+    },
+    {
       "name": "Knives",
       "icon": "assets/icons/affinities/knives.png",
       "color": "#757d87",
@@ -68866,6 +72018,28 @@ window.VS_DATA = {
           "Fake Trio (Grant)",
           "Zephyr (Knife)",
           "Zephyr (Curved Knife)"
+        ],
+        "arcana": []
+      }
+    },
+    {
+      "name": "Lunar",
+      "icon": "assets/icons/affinities/lunar.png",
+      "color": "#0e6e73",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "LunarMight",
+          "LunarSight",
+          "LunarBight",
+          "LunarFlight"
+        ],
+        "passives": [],
+        "characters": [
+          "Spiritoso"
         ],
         "arcana": []
       }
@@ -68978,6 +72152,7 @@ window.VS_DATA = {
           "Dies Irae",
           "Darkness Illusion",
           "Lapiste Tepisto",
+          "FireStall",
           "SpellStrom",
           "Trinum Custodem",
           "Power of Sire",
@@ -69077,6 +72252,26 @@ window.VS_DATA = {
       }
     },
     {
+      "name": "Water",
+      "icon": "assets/icons/affinities/water.png",
+      "color": "#045892",
+      "base_affinity": "Weapon Type",
+      "is_parent": false,
+      "description": "",
+      "info_entries": [],
+      "related": {
+        "weapons": [
+          "Mille Bolle Blu",
+          "Boo Roo Boolle"
+        ],
+        "passives": [],
+        "characters": [
+          "Spiritoso"
+        ],
+        "arcana": []
+      }
+    },
+    {
       "name": "Astral Stair",
       "icon": "assets/icons/affinities/astral_stair.png",
       "color": "#715423",
@@ -69141,13 +72336,16 @@ window.VS_DATA = {
           "Flames of Misspell",
           "Magi-Stone",
           "Kyra-Stones",
+          "108 Bocce",
           "Four Seasons",
           "Godai Shuffle",
           "Summon Night",
           "Echo Night",
           "Night Sword",
           "Muramasa",
-          "108 Bocce",
+          "Blacken Firmament",
+          "Damnation",
+          "FireStall",
           "Legionnaire",
           "Prismatic Missile",
           "Luminaire",
@@ -69570,17 +72768,42 @@ window.VS_DATA = {
     "Metaglio Right",
     "Silver Wind",
     "Festive Winds",
+    "Argent Flow",
+    "108 Bocce",
     "Four Seasons",
     "Godai Shuffle",
     "Summon Night",
     "Echo Night",
     "Mirage Robe",
     "J'Odore",
-    "Night Sword",
-    "Muramasa",
     "Mille Bolle Blu",
     "Boo Roo Boolle",
-    "108 Bocce",
+    "LunarMight",
+    "LunarSight",
+    "LunarBight",
+    "LunarFlight",
+    "Night Sword",
+    "Muramasa",
+    "Pearl Megatama",
+    "Scarlet Needle",
+    "Cardinal Rain",
+    "Ashella",
+    "Bloodlust",
+    "Incineration",
+    "Dust to Dust",
+    "Screams from the Void",
+    "Forbidden Siren",
+    "Blacken Firmament",
+    "Damnation",
+    "108 Responsive Prayers",
+    "Road to Heaven",
+    "FireFall",
+    "FireBall",
+    "FireWall",
+    "FireStall",
+    "Descent into Misery",
+    "Shimmering Sands",
+    "Velvet Dodecahedron",
     "SpellString",
     "SpellStream",
     "SpellStrike",
@@ -69594,11 +72817,9 @@ window.VS_DATA = {
     "Shadow Servant",
     "Ophion",
     "Party Popper",
-    "Silver Sliver",
-    "Party Pooper",
     "Academy Badge",
-    "Silver Sliver",
     "Party Pooper",
+    "Silver Sliver",
     "Report!",
     "Emergency Meeting",
     "Lucky Swipe",
@@ -69835,6 +73056,7 @@ window.VS_DATA = {
     "Celestial Booster",
     "Negative Space",
     "Outer Saboteur",
+    null,
     null,
     null,
     null
@@ -71385,23 +74607,25 @@ window.VS_DATA = {
       ]
     },
     {
-      "evo_path": "Kyra-Stones",
-      "pattern": "Evo>Final",
+      "evo_path": "Shimmering Sands",
+      "pattern": "Evo>Union>Final",
       "b1_1": "Magi-Stone",
       "b1_2": "Karoma's Mana",
       "b1_3": null,
       "b1_4": null,
       "b1_r": "Kyra-Stones",
-      "b2_1": null,
-      "b2_2": null,
-      "b2_r": null,
+      "b2_1": "Kyra-Stones",
+      "b2_2": "Descent into Misery",
+      "b2_r": "Shimmering Sands",
       "b3_1": null,
       "b3_2": null,
       "b3_r": null,
       "related_to": [
         "Magi-Stone",
         "Karoma's Mana",
-        "Kyra-Stones"
+        "Kyra-Stones",
+        "Descent into Misery",
+        "Shimmering Sands"
       ]
     },
     {
@@ -71445,23 +74669,25 @@ window.VS_DATA = {
       ]
     },
     {
-      "evo_path": "Festive Winds",
-      "pattern": "Evo(Max)>Final",
+      "evo_path": "Argent Flow",
+      "pattern": "Evo(Max)>Evo(Max)>Final",
       "b1_1": "Silver Wind",
       "b1_2": "Pummarola",
       "b1_3": null,
       "b1_4": null,
       "b1_r": "Festive Winds",
-      "b2_1": null,
-      "b2_2": null,
-      "b2_r": null,
+      "b2_1": "Festive Winds",
+      "b2_2": "Torrona's Box",
+      "b2_r": "Argent Flow",
       "b3_1": null,
       "b3_2": null,
       "b3_r": null,
       "related_to": [
         "Silver Wind",
         "Pummarola",
-        "Festive Winds"
+        "Festive Winds",
+        "Torrona's Box",
+        "Argent Flow"
       ]
     },
     {
@@ -71565,13 +74791,13 @@ window.VS_DATA = {
       ]
     },
     {
-      "evo_path": "108 Bocce",
-      "pattern": "Final",
-      "b1_1": null,
-      "b1_2": null,
+      "evo_path": "Road to Heaven",
+      "pattern": "Union>Final",
+      "b1_1": "108 Bocce",
+      "b1_2": "108 Responsive Prayers",
       "b1_3": null,
       "b1_4": null,
-      "b1_r": null,
+      "b1_r": "Road to Heaven",
       "b2_1": null,
       "b2_2": null,
       "b2_r": null,
@@ -71579,7 +74805,151 @@ window.VS_DATA = {
       "b3_2": null,
       "b3_r": null,
       "related_to": [
-        "108 Bocce"
+        "108 Bocce",
+        "108 Responsive Prayers",
+        "Road to Heaven"
+      ]
+    },
+    {
+      "evo_path": "LunarFlight",
+      "pattern": "TripleUnion>Final",
+      "b1_1": "LunarMight",
+      "b1_2": "LunarSight",
+      "b1_3": "LunarBight",
+      "b1_4": null,
+      "b1_r": "LunarFlight",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "LunarMight",
+        "LunarSight",
+        "LunarBight",
+        "LunarFlight"
+      ]
+    },
+    {
+      "evo_path": "Cardinal Rain",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Scarlet Needle",
+      "b1_2": "Pummarola",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Cardinal Rain",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Scarlet Needle",
+        "Pummarola",
+        "Cardinal Rain"
+      ]
+    },
+    {
+      "evo_path": "Bloodlust",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Ashella",
+      "b1_2": "Duplicator",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Bloodlust",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Ashella",
+        "Duplicator",
+        "Bloodlust"
+      ]
+    },
+    {
+      "evo_path": "Dust to Dust",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Incineration",
+      "b1_2": "Candelabrador",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Dust to Dust",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Incineration",
+        "Candelabrador",
+        "Dust to Dust"
+      ]
+    },
+    {
+      "evo_path": "Forbidden Siren",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Screams from the Void",
+      "b1_2": "Attractorb",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Forbidden Siren",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Screams from the Void",
+        "Attractorb",
+        "Forbidden Siren"
+      ]
+    },
+    {
+      "evo_path": "Damnation",
+      "pattern": "Evo(Max)>Final",
+      "b1_1": "Blacken Firmament",
+      "b1_2": "Torrona's Box",
+      "b1_3": null,
+      "b1_4": null,
+      "b1_r": "Damnation",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "Blacken Firmament",
+        "Torrona's Box",
+        "Damnation"
+      ]
+    },
+    {
+      "evo_path": "FireStall",
+      "pattern": "TripleUnion>Final",
+      "b1_1": "FireFall",
+      "b1_2": "FireBall",
+      "b1_3": "FireWall",
+      "b1_4": null,
+      "b1_r": "FireStall",
+      "b2_1": null,
+      "b2_2": null,
+      "b2_r": null,
+      "b3_1": null,
+      "b3_2": null,
+      "b3_r": null,
+      "related_to": [
+        "FireFall",
+        "FireBall",
+        "FireWall",
+        "FireStall"
       ]
     },
     {
@@ -73821,6 +77191,29 @@ window.VS_DATA = {
         "Attractorb",
         "Stone Mask",
         "Night Sword"
+      ],
+      "conditional": []
+    },
+    {
+      "name": "Red Moon Manor",
+      "icon": "assets/icons/stages/red_moon_manor.png",
+      "description": "The mythical place sought by the vile Bloodmoon Clan, said to hide terrible secrets. The relentless pursuit of immortality of its original founders, through atrocious rituals, spawned awful abominations.",
+      "items": [
+        "108 Bocce",
+        "108 Responsive Prayers",
+        "Descent into Misery",
+        "Pearl Megatama",
+        "Velvet Dodecahedron",
+        "Attractorb",
+        "Duplicator",
+        "Pummarola",
+        "Candelabrador",
+        "Torrona's Box",
+        "Arma Dio",
+        "Silver Ring",
+        "Metaglio Right",
+        "Gold Ring",
+        "Metaglio Left"
       ],
       "conditional": []
     },

@@ -1314,6 +1314,7 @@
     .arcana-tab-btn[data-tab="darkana"]:hover { border-color: rgba(155,80,220,.8); }
     .arcana-tab-current { font-family: var(--font-title); font-size: 1rem; color: var(--gold); font-weight: 600; line-height: 1.1; }
     .arcana-tab-switch { font-size: .75rem; color: var(--text-muted); line-height: 1.1; }
+    .arcana-tab-locked { cursor: default; background: rgba(120,40,200,.2); border-color: rgba(155,80,220,.45); }
     .arcana-placeholder { opacity: .3; cursor: default; pointer-events: none; }
     .detail-name { font-family: var(--font-title); font-size: 1.05rem; text-align: center; color: var(--gold); margin-bottom: .3rem; }
     .detail-desc { font-size: .88rem; font-weight: 400; color: var(--text-muted); line-height: 1.5; font-style: italic; }
@@ -3452,9 +3453,10 @@
 
   function slotHTML(item, opts = {}) {
     const { type = 'weapon', playerIdx = 0, slotIdx = 0,
-            hidden = false, removable = true, locked = false, infoName = null, gift = null, transient = false } = opts;
+            hidden = false, removable = true, locked = false, infoName = null, gift = null, transient = false,
+            emptyIcon: emptyIconOverride = null } = opts;
     const isChar  = type === 'char';
-    const emptyIcon = EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
+    const emptyIcon = emptyIconOverride || EMPTY_ICONS[type] || EMPTY_ICONS.weapon;
     const icon = item ? (item.icon || emptyIcon) : emptyIcon;
     const classes = [
       'slot',
@@ -3618,7 +3620,7 @@
     const choiceRows = statChoiceRowsHTML(char, player, level ?? 1, idx);
     if (!sources.length && !choiceRows) return '';
     const rows = sources.map(sg => {
-      const drives = '→ ' + sg.stats.map(k => STAT_LABELS[k] || k).join(', ');
+      const drives = '→ ' + sg.stats.map(k => STAT_LABELS[k] || TRANSIENT_SLOT_LABEL[k] || k).join(', ');
       if (sg.mode === 'boolean') {
         const on = sg.index > 0;
         return `<div class="src-row">
@@ -4242,7 +4244,9 @@
 
     // ── Global arcana + stage row
     const gASlots = state.arcana.map((arc, si) =>
-      slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si, transient: si >= BASE_ARCANA_SLOTS })
+      slotHTML(arc, { type:'arcana', playerIdx:0, slotIdx:si, transient: si >= BASE_ARCANA_SLOTS,
+        // Darkana-only slots (Nameless Fool) show the empty_darkana placeholder until filled.
+        emptyIcon: isDarkanaSlot(si) ? 'assets/icons/arcana/empty_darkana.png' : null })
     ).join('');
     // Extra (character starting) arcana: locked, view-only, don't count toward the 3.
     const gExtraArcana = extraArcanaNames().map(nm =>
@@ -4765,23 +4769,32 @@
     const prev = state.arcana[slotIdx];
     state.overlay = { type:'arcana', playerIdx:0, slotIdx, fromEmpty: !prev, prevItem: prev };
     state.ovl.selected = prev;
+    // Darkana-only slots (Nameless Fool) open straight into the Darkana view — no Arcana tab.
+    if (isDarkanaSlot(slotIdx)) state.ovl.arcanaTab = 'darkana';
     buildAndShowOverlay(arcanaOverlayHTML(slotIdx));
   }
 
   function arcanaOverlayHTML(slotIdx) {
     const sel    = state.ovl.selected;
-    const tab    = state.ovl.arcanaTab; // 'arcana' | 'darkana'
+    // Darkana-only slots are locked to the Darkana view with no toggle back to Arcana.
+    const darkanaOnly = isDarkanaSlot(slotIdx);
+    const tab    = darkanaOnly ? 'darkana' : state.ovl.arcanaTab; // 'arcana' | 'darkana'
     const groups = arcanaGroups();
     const EMPTY_DARKANA = 'assets/icons/arcana/empty_darkana.png';
 
-    const otherTab  = tab === 'arcana' ? 'darkana' : 'arcana';
     const tabLabel  = tab === 'arcana' ? 'Arcana' : 'Darkana';
     const switchLabel = tab === 'arcana' ? '→ Darkana' : '→ Arcana';
 
-    const tabBtn = `<button class="arcana-tab-btn" data-action="arcana-tab-toggle" data-tab="${tab}">
-      <span class="arcana-tab-current">${tabLabel}</span>
-      <span class="arcana-tab-switch">${switchLabel}</span>
-    </button>`;
+    // A Darkana-restricted slot shows a static (non-clickable) Darkana label instead of the toggle.
+    const tabBtn = darkanaOnly
+      ? `<div class="arcana-tab-btn arcana-tab-locked" title="This slot only accepts Darkana">
+          <span class="arcana-tab-current">Darkana</span>
+          <span class="arcana-tab-switch">Darkana-only</span>
+        </div>`
+      : `<button class="arcana-tab-btn" data-action="arcana-tab-toggle" data-tab="${tab}">
+          <span class="arcana-tab-current">${tabLabel}</span>
+          <span class="arcana-tab-switch">${switchLabel}</span>
+        </button>`;
 
     // Arcana already in the build — can't be picked again (uniqueness). Covers the
     // other pool slots AND extra (character starting) arcana: an "extra" takes no
@@ -4833,7 +4846,7 @@
       : '<div class="ovl-right-top"><div class="detail-desc" style="text-align:center">Select an arcana</div></div><div class="ovl-right-body"></div>';
 
     return `<div class="overlay-header">
-        <h2>Arcana Selection — Slot ${slotIdx+1}</h2>
+        <h2>${darkanaOnly ? 'Darkana' : 'Arcana'} Selection — Slot ${slotIdx+1}</h2>
         <button class="btn btn-icon overlay-close" data-action="ovl-close">✕</button>
       </div>
       <div class="overlay-body">
@@ -6237,8 +6250,11 @@
   // grants keep the dedicated familiar system. One-per-build stage-exclusive passives dedup
   // globally; everything else per-player. Idempotent — safe to run every render.
   const GRANT_SKIP_ITEMS = new Set(['Familiar Forge']);
+  // add_transient rides the same transient-slot machinery as an add_extra item grant (placed in an
+  // appended slot, pool-consuming, evolvable in place) — Spiritoso's Mille Bolle Blu. The only
+  // difference from add_extra is intent/authoring; both flow through syncCharacterGrants here.
   function isGrantItem(g) {
-    return g.op === 'add_extra' && (g.kind === 'weapon' || g.kind === 'passive') && !GRANT_SKIP_ITEMS.has(g.name);
+    return (g.op === 'add_extra' || g.op === 'add_transient') && (g.kind === 'weapon' || g.kind === 'passive') && !GRANT_SKIP_ITEMS.has(g.name);
   }
   // Is `name` currently granted (count>0) by this player's character? Keeps such items alive
   // through syncStageSlots' drop-sweep; a char change / level drop stops granting → it's dropped.
@@ -6249,14 +6265,51 @@
   // Character add_extra SLOT grants add empty, user-fillable slots of a kind (Santa Ladonna:
   // +Weapon/Passive Slot; Engineer Gino: +Passive; Blackmore/Nathan: +Arcana). Level-gated count.
   const SLOT_GRANT_KIND = { 'Weapon Slot': 'weapons', 'Passive Slot': 'passives', 'Arcana Slot': 'arcana' };
+  // manual_scaling slot verbs: a source SLIDER adds N empty, user-fillable slots of a kind
+  // (Congregation `add_passive_transient` off Revivals; Nameless Fool `add_darkana_transient` off
+  // Last Breath). Darkana share the GLOBAL arcana row (no separate slot type), so add_darkana_transient
+  // just widens the arcana row. These flow through grantedSlotCount so rendering, the syncStageSlots
+  // budget, syncArcanaSlots sizing, and build persistence all pick them up with no other wiring.
+  const TRANSIENT_SLOT_KEY   = { add_weapon_transient: 'weapons', add_passive_transient: 'passives', add_arcana_transient: 'arcana', add_darkana_transient: 'arcana' };
+  const TRANSIENT_SLOT_LABEL = { add_weapon_transient: '+Weapon Slots', add_passive_transient: '+Passive Slots', add_arcana_transient: '+Arcana Slots', add_darkana_transient: '+Darkana Slots' };
+  // Slots added by manual_scaling for `slotKind` = each matching rule's current slider value, CLAMPED
+  // to that rule's own [min,max]. The clamp matters for a source shared with a differently-ranged stat
+  // rule (Nameless Fool's Last Breath drives Max Health 0–11 AND Darkana 0–22 off one index): each rule
+  // still caps at its own max. Character-only (the verbs are character abilities; no arcana use them).
+  function manualTransientSlots(player, slotKind, ruleKey = null) {
+    const char = player?.character;
+    if (!char?.manual_scaling?.length) return 0;
+    const cs = char.stats, level = player.charLevel || 1;
+    let n = 0;
+    for (const r of char.manual_scaling) {
+      if (TRANSIENT_SLOT_KEY[r.key] !== slotKind) continue;
+      if (ruleKey && r.key !== ruleKey) continue; // narrow to a single verb (e.g. Darkana-only slots)
+      const a = resolveManualExpr(r.min, cs, player, char, level);
+      const b = resolveManualExpr(r.max, cs, player, char, level);
+      const lo = Math.min(a, b), hi = Math.max(a, b);
+      const v = manualRuleValue(r, cs, player, char, level);
+      n += Math.max(0, Math.round(Math.min(Math.max(v, lo), hi)));
+    }
+    return n;
+  }
   function grantedSlotCount(player, slotKind) {
     if (!player?.character) return 0;
     let n = 0;
     for (const g of (player.character.grants || [])) {
       if (g.op === 'add_extra' && g.kind === 'slot' && SLOT_GRANT_KIND[g.name] === slotKind) n += grantInstanceCount(g, player);
     }
-    return n;
+    return n + manualTransientSlots(player, slotKind);
   }
+  // Of a player's granted arcana slots, how many are DARKANA-ONLY (from `add_darkana_transient` —
+  // Nameless Fool's Last Breath slider). These render as Darkana-restricted slots and are laid out
+  // as the TRAILING arcana slots (see syncArcanaSlots), so a count is enough to mark their indices.
+  // NOTE: the rule caps at 22, which is CORRECT and must NOT be "fixed" down to 3. The character
+  // description's "max 3" is the number of Darkana obtainable AT ONE TIME, not the total. The true
+  // total ceiling is however many Darkana exist in the game — currently 22 (all Darkana available).
+  function darkanaTransientCount(player) {
+    return manualTransientSlots(player, 'arcana', 'add_darkana_transient');
+  }
+  const isDarkanaSlot = i => !!state.darkanaSlots && state.darkanaSlots.has(i);
   const BASE_ARCANA_SLOTS = 3;
   // A granted arcana ITEM that's also sitting in a main global slot is redundant — the grant
   // provides it free as an extra. Free the main slot (John Morris: Iron Blue Will (VII) moves out
@@ -6280,6 +6333,11 @@
                 + state.players.reduce((s, p) => s + grantedSlotCount(p, 'arcana'), 0);
     while (state.arcana.length < total) state.arcana.push(null);
     if (state.arcana.length > total) state.arcana.length = total;
+    // Darkana-only slots occupy the TRAILING indices (appended after every normal arcana slot), so
+    // dragging Nameless Fool's Last Breath slider grows/shrinks them off the end. Recompute each render.
+    const darkanaTotal = state.players.reduce((s, p) => s + darkanaTransientCount(p), 0);
+    state.darkanaSlots = new Set();
+    for (let i = Math.max(0, total - darkanaTotal); i < total; i++) state.darkanaSlots.add(i);
   }
   function syncCharacterGrants(player) {
     if (!player?.character) return;
@@ -6289,8 +6347,8 @@
     for (const g of (player.character.grants || [])) {
       if (!isGrantItem(g) || grantInstanceCount(g, player) <= 0 || absorbed.has(g.name)) continue;
       const owned = STAGE_EXCLUSIVE_PASSIVES.has(g.name)
-        ? (g.kind === 'passive' ? anyPlayerOwnsPassive(g.name) : anyPlayerOwnsWeapon(g.name))
-        : (g.kind === 'passive' ? ownsPassiveName(player, g.name) : ownsWeaponName(player, g.name));
+        ? (g.kind === 'passive' ? anyPlayerOwnsPassive(g.name) : anyPlayerOwnsWeaponChain(g.name))
+        : (g.kind === 'passive' ? ownsPassiveName(player, g.name) : ownsWeaponChain(player, g.name));
       if (owned) continue;
       const obj = g.kind === 'passive' ? passiveByName(g.name) : weaponByName(g.name);
       if (obj) placeTransientItem(player, g.kind, obj);
@@ -6306,6 +6364,11 @@
   const ownsWeaponName  = (player, name) => (player?.weapons || []).some(w => w && w.name === name);
   const anyPlayerOwnsPassive = name => state.players.some(p => ownsPassiveName(p, name));
   const anyPlayerOwnsWeapon  = name => state.players.some(p => ownsWeaponName(p, name));
+  // Chain-aware ownership: a granted weapon that has since EVOLVED no longer matches its own name,
+  // but its evolved form's backward chain still contains it. Used so a character grant isn't
+  // re-placed as a fresh duplicate base once its transient copy evolves (Mille Bolle Blu → Boo Roo Boolle).
+  const ownsWeaponChain = (player, name) => (player?.weapons || []).some(w => w && collectWeaponChain(w.name).has(name));
+  const anyPlayerOwnsWeaponChain = name => state.players.some(p => ownsWeaponChain(p, name));
   // Is this item a "free pickup" on the current stage (→ takes a transient slot)? Exclusives
   // are gated by stage/char; everything else is free iff the selected stage lists it.
   function itemProvidedFree(name, player) {
@@ -6369,10 +6432,11 @@
       let slotBudget = grantedSlotCount(player, kind); // user-fillable granted extra slots
       for (const obj of tail) {
         if (owned.has(obj.name)) continue;
+        // keep character-granted transient items — chain-aware for weapons so a granted weapon that
+        // has evolved (its name no longer matches the grant) still survives via a backward-chain member.
         const valid = (kind === 'weapons'
-          ? [...collectWeaponChain(obj.name)].some(n => itemProvidedFree(n, player))
-          : itemProvidedFree(obj.name, player))
-          || charGrantsItemNow(player, obj.name); // keep character-granted transient items
+          ? [...collectWeaponChain(obj.name)].some(n => itemProvidedFree(n, player) || charGrantsItemNow(player, n))
+          : itemProvidedFree(obj.name, player) || charGrantsItemNow(player, obj.name));
         if (!valid) {
           if (slotBudget > 0) slotBudget--; // occupies a user-fillable granted slot → keep it
           else continue;                    // otherwise a stale stage pickup → drop it
@@ -8081,7 +8145,15 @@
     if (arcanaObj) {
       if (collectionEnabled() && !arcanaAccessible(name)) { showToast(`${name} is not in your collection`, 'err'); return; }
       if (state.arcana.some(a => a?.name === name) || extraArcanaNames().includes(name)) { showToast(`${name} already in build`, 'warn'); return; }
-      const slot = state.arcana.findIndex(a => !a);
+      // A normal Arcana can't occupy a Darkana-only slot (Nameless Fool's trailing slots); a
+      // Darkana may go anywhere. Pick the first empty slot the arcana's type is allowed in.
+      const isDark = arcanaObj.type === 'Darkana';
+      let slot = -1;
+      for (let i = 0; i < state.arcana.length; i++) {
+        if (state.arcana[i]) continue;
+        if (!isDark && isDarkanaSlot(i)) continue;
+        slot = i; break;
+      }
       if (slot < 0) { showToast('No arcana slots available', 'err'); return; }
       state.arcana[slot] = arcanaObj;
       showToast(`Added ${name}`); render(); return;
