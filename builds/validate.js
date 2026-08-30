@@ -156,6 +156,13 @@
     if (players.filter(p => p && p.giftWeapon).length > 1) E('More than one gift weapon in the build (only one per build)');
     if (players.filter(p => p && p.giftPassive).length > 1) E('More than one gift passive in the build (only one per build)');
 
+    // ── Global passive pool: a normal passive is ONE PER BUILD across all players (only one
+    // Attractorb exists — the "Share Passives" pool stays consistent whether or not sharing is on).
+    // Weapons are NOT pooled (co-op lets players run the same weapon). Extra-bar passives (Weapon
+    // Power-Up, Outer Saboteur, Mini …) live in `extraPassives`, not the core/granted arrays counted
+    // here, so their legitimate cross-player stacking is unaffected.
+    const passivePlayerCount = new Map(); // normal-passive name → # players holding it
+
     // ── Per-player checks ──
     players.forEach((p, i) => {
       if (!p) return;
@@ -179,6 +186,9 @@
       // This player's OWN passives (core + granted-slot + extra-bar) — used for evolution
       // requirement checks when Share Passives is off.
       const ownPassives = new Set(allP.concat((p.extraPassives || []).filter(Boolean)));
+      // Tally normal passives toward the build-wide one-per-build pool (dedup within the player;
+      // within-player dupes are flagged separately below).
+      new Set(allP).forEach(n => { if (pByName[n]) passivePlayerCount.set(n, (passivePlayerCount.get(n) || 0) + 1); });
 
       // Unknown names → warnings (load skips them).
       allW.forEach(n => { if (!wByName[n]) W(`${who}unknown weapon "${n}" — will be skipped on load`); });
@@ -260,6 +270,11 @@
         if (result === 'Alucard Shield' && (hidden || []).length !== ALUCARD_ABSORB_COUNT)
           W(`${who}Alucard Shield should absorb ${ALUCARD_ABSORB_COUNT} weapons (got ${(hidden || []).length})`);
       });
+    });
+
+    // Enforce the one-per-build passive pool across players (only meaningful in co-op).
+    passivePlayerCount.forEach((count, name) => {
+      if (count > 1) E(`${name} is held by ${count} players — a passive can only be in the build once (pool is shared)`);
     });
 
     return { errors, warnings };

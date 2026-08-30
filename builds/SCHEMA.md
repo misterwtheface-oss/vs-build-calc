@@ -102,8 +102,12 @@ dropped from the bundle). Produce builds that satisfy all of these:
 - Weapon/passive counts must fit the per-mode caps: **1P 6/6, 2P 4/4, 3P 3/3, 4P 2/2**. Counterpart
   weapons (Gemini duplicates), absorb-union hidden inputs, and stage-supplied free items don't count
   against the cap; stage-exclusive passives (below) don't count against the passive cap.
-- **No duplicate** weapon or passive *within a single player*. (Co-op allows the same weapon/passive
-  across *different* players.)
+- **No duplicate** weapon or passive *within a single player*.
+- **Weapons** may repeat across *different* players (co-op lets each player run the same weapon).
+- **Normal passives are one-per-build across ALL players** — the passive pool is shared, so only one
+  copy exists in the whole build (e.g. a single Attractorb), whether or not `sharePassives` is on.
+  The exception is **extra-bar passives** (Weapon Power-Up, Outer Saboteur, Mini …), stored in
+  `extraPassives`, which legitimately stack per player.
 - At most **3 + Inverse Mode (4th slot, `inverseMode: true`) + Queen Sigma (one extra slot if any
   player is her) + character-granted arcana slots** (Blackmore/Nathan Graves add slots), no
   duplicates, and a manual arcana slot may not repeat a character's starting arcana.
