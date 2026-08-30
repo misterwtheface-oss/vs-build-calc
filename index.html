@@ -4186,7 +4186,7 @@
       const emptyGrantedSlots = (kind, arr, coreCount) => {
         const want = grantedSlotCount(player, kind);
         if (!want) return '';
-        const fills = arr.slice(coreCount).filter(o => o && !itemProvidedFree(o.name, player) && !charGrantsItemNow(player, o.name)).length;
+        const fills = arr.slice(coreCount).filter(o => o && !itemProvidedFree(o.name, player) && !charGrantsItemNow(player, o.name) && !isGiftPassive(o.name)).length;
         const empties = Math.max(0, want - fills);
         const type = kind === 'weapons' ? 'weapon' : 'passive';
         let next = coreCount; while (arr[next]) next++;
@@ -6053,9 +6053,9 @@
             if (isExtraPassive(sel.name)) {
               if (extraCount(player, sel.name) < extraCap(player, sel.name)) player.extraPassives.push(sel.name);
               syncExtraPassives(player);
-            } else if (STAGE_EXCLUSIVE_PASSIVES.has(sel.name) || itemProvidedFree(sel.name, player)) {
-              // Free stage pickup → appended transient slot (never a core slot). Gate-check
-              // exclusives (one per build) and dedup against the whole build.
+            } else if (STAGE_EXCLUSIVE_PASSIVES.has(sel.name) || itemProvidedFree(sel.name, player) || isGiftPassive(sel.name)) {
+              // Free stage pickup / gift passive → appended transient slot (never a core slot).
+              // Gate-check exclusives (one per build) and dedup against the whole build.
               if (STAGE_EXCLUSIVE_PASSIVES.has(sel.name) && !stageItemGateOpen(player, sel.name)) {
                 showToast(`${sel.name} isn't available here`, 'warn');
               } else if (anyPlayerOwnsPassive(sel.name)) {
@@ -6220,6 +6220,14 @@
   const STAGE_EXCLUSIVE_PASSIVES = new Set([
     'Silver Ring', 'Gold Ring', 'Metaglio Left', 'Metaglio Right', 'Academy Badge',
   ]);
+  // ── Gift passives ───────────────────────────────────────────────────────────
+  // In-game these are "gifts" that do NOT occupy a passive slot — so, like stage pickups, they
+  // route to an appended TRANSIENT slot instead of a core one (hardcoded). Unlike stage pickups
+  // they're always available (not stage-gated) and ARE persisted in saved builds (they aren't
+  // re-derivable on load), so they flow through the passivesExtra save/load path — hence a
+  // separate predicate from itemProvidedFree rather than folding them into it.
+  const GIFT_PASSIVES = new Set(['Velvet Dodecahedron', 'Pearl Megatama']);
+  const isGiftPassive = name => GIFT_PASSIVES.has(name);
   const ACADEMY_BADGE = 'Academy Badge';
   const ACADEMY_CHARS = ['Eleanor Uziron', 'Maruto Cuts', 'Keitha Muort'];
   const ACADEMY_LEVEL = 30;
@@ -6408,7 +6416,7 @@
   // Returns false only when it needed a core slot and none was free.
   function addRequiredPassive(player, pname) {
     if (anyPlayerOwnsPassive(pname)) return true;
-    if (itemProvidedFree(pname, player)) { placeTransientItem(player, 'passive', passiveByName(pname)); return true; }
+    if (itemProvidedFree(pname, player) || isGiftPassive(pname)) { placeTransientItem(player, 'passive', passiveByName(pname)); return true; }
     const counts = SLOT_COUNTS[state.playerCount];
     for (let i = 0; i < counts.passives; i++) if (!player.passives[i]) { player.passives[i] = passiveByName(pname); return true; }
     return false;
@@ -6436,7 +6444,7 @@
         // has evolved (its name no longer matches the grant) still survives via a backward-chain member.
         const valid = (kind === 'weapons'
           ? [...collectWeaponChain(obj.name)].some(n => itemProvidedFree(n, player) || charGrantsItemNow(player, n))
-          : itemProvidedFree(obj.name, player) || charGrantsItemNow(player, obj.name));
+          : itemProvidedFree(obj.name, player) || charGrantsItemNow(player, obj.name) || isGiftPassive(obj.name));
         if (!valid) {
           if (slotBudget > 0) slotBudget--; // occupies a user-fillable granted slot → keep it
           else continue;                    // otherwise a stale stage pickup → drop it
@@ -8173,7 +8181,7 @@
       }
       if (player.passives.some(p => p?.name === name)) { showToast(`${name} already equipped`, 'warn'); return; }
       // Stage-exclusive / stage-supplied passive → free transient slot (gate + one-per-build).
-      if (STAGE_EXCLUSIVE_PASSIVES.has(name) || itemProvidedFree(name, player)) {
+      if (STAGE_EXCLUSIVE_PASSIVES.has(name) || itemProvidedFree(name, player) || isGiftPassive(name)) {
         if (STAGE_EXCLUSIVE_PASSIVES.has(name) && !stageItemGateOpen(player, name)) { showToast(`${name} isn't available here`, 'warn'); return; }
         if (anyPlayerOwnsPassive(name)) { showToast(`${name} already in build`, 'warn'); return; }
         placeTransientItem(player, 'passive', passiveObj);

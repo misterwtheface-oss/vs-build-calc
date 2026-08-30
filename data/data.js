@@ -62182,19 +62182,24 @@ window.VS_DATA = {
       ],
       "level_up_values": [
         {
-          "armor": 1
+          "armor": 1,
+          "retaliation_damage": 0.1
         },
         {
-          "armor": 1
+          "armor": 1,
+          "retaliation_damage": 0.1
         },
         {
-          "armor": 1
+          "armor": 1,
+          "retaliation_damage": 0.1
         },
         {
-          "armor": 1
+          "armor": 1,
+          "retaliation_damage": 0.1
         },
         {
-          "armor": 1
+          "armor": 1,
+          "retaliation_damage": 0.1
         }
       ],
       "consumed_on_evo": false,
@@ -62638,28 +62643,52 @@ window.VS_DATA = {
       ],
       "level_up_values": [
         {
-          "might": 0.04
+          "might": 0.04,
+          "speed": 0.04,
+          "duration": 0.04,
+          "area": 0.04
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
-          "might": 0.03
+          "might": 0.03,
+          "speed": 0.03,
+          "duration": 0.03,
+          "area": 0.03
         },
         {
           "curse": 1
@@ -62718,19 +62747,24 @@ window.VS_DATA = {
       ],
       "level_up_values": [
         {
-          "charm": 0.1
+          "charm": 0.1,
+          "fever": 0.1
         },
         {
-          "charm": 0.1
+          "charm": 0.1,
+          "fever": 0.1
         },
         {
-          "charm": 0.1
+          "charm": 0.1,
+          "fever": 0.1
         },
         {
-          "charm": 0.1
+          "charm": 0.1,
+          "fever": 0.1
         },
         {
-          "charm": 0.1
+          "charm": 0.1,
+          "fever": 0.1
         }
       ],
       "consumed_on_evo": false,
@@ -62757,28 +62791,36 @@ window.VS_DATA = {
       "level_up_values": [
         {},
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         },
         {
-          "duration": 0.05
+          "duration": 0.05,
+          "area": 0.05
         }
       ],
       "consumed_on_evo": false,
@@ -62853,28 +62895,36 @@ window.VS_DATA = {
       "level_up_values": [
         {},
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         },
         {
-          "recovery": 0.1
+          "recovery": 0.1,
+          "max_health": 0.05
         }
       ],
       "consumed_on_evo": false,
@@ -62932,13 +62982,40 @@ window.VS_DATA = {
     {
       "name": "Pearl Megatama",
       "icon": "assets/icons/passives/pearl_megatama.png",
-      "max_level": 0,
+      "max_level": 6,
       "rarity": 0,
       "description": "Gift. Will provide bonus Recovery and Revivals in exchange for Greed. Fully heals.",
       "level_ups": [
-        "Gift. Will provide bonus Recovery and Revivals in exchange for Greed. Fully heals."
+        "Gift. Will provide bonus Recovery and Revivals in exchange for Greed. Fully heals.",
+        "Greed is reduced by 7%. Health recovery increases by 0.5 HP per second. Fully heals.",
+        "Greed is reduced by 7%. Adds 1 Revival. Fully heals.",
+        "Greed is reduced by 7%. Health recovery increases by 0.5 HP per second. Fully heals.",
+        "Greed is reduced by 7%. Adds 1 Revival. Fully heals.",
+        "Greed is reduced by 7%. Health recovery increases by 0.5 HP per second. Fully heals."
       ],
-      "level_up_values": [],
+      "level_up_values": [
+        {},
+        {
+          "greed": -0.07,
+          "recovery": 0.5
+        },
+        {
+          "greed": -0.07,
+          "revival": 1
+        },
+        {
+          "greed": -0.07,
+          "recovery": 0.5
+        },
+        {
+          "greed": -0.07,
+          "revival": 1
+        },
+        {
+          "greed": -0.07,
+          "recovery": 0.5
+        }
+      ],
       "consumed_on_evo": false,
       "conflict": [],
       "grants": []
@@ -62946,13 +63023,40 @@ window.VS_DATA = {
     {
       "name": "Velvet Dodecahedron",
       "icon": "assets/icons/passives/velvet_dodecahedron.png",
-      "max_level": 0,
+      "max_level": 6,
       "rarity": 0,
       "description": "Gift. Will provide bonus Growth and Greed in exchange for Max Health. Triggers Last Breath, On Revival, and HP Critical skills.",
       "level_ups": [
-        "Gift. Will provide bonus Growth and Greed in exchange for Max Health. Triggers Last Breath, On Revival, and HP Critical skills."
+        "Gift. Will provide bonus Growth and Greed in exchange for MaxHealth. Triggers LastBreath, OnRevival, and HPCritical skills.",
+        "Gold Coins value increases by 20%. Max Health is reduced by 10%. Triggers LastBreath, OnRevival, and HPCritical skills.",
+        "XP gain increases by 30%. Max Health is reduced by 10%. Triggers LastBreath, OnRevival, and HPCritical skills.",
+        "Gold Coins value increases by 20%. Max Health is reduced by 10%. Triggers LastBreath, OnRevival, and HPCritical skills.",
+        "XP gain increases by 30%. Max Health is reduced by 10%. Triggers LastBreath, OnRevival, and HPCritical skills.",
+        "Gold Coins value increases by 20%. Max Health is reduced by 10%. Triggers LastBreath, OnRevival, and HPCritical skills."
       ],
-      "level_up_values": [],
+      "level_up_values": [
+        {},
+        {
+          "max_health": -0.1,
+          "greed": 0.2
+        },
+        {
+          "max_health": -0.1,
+          "growth": 0.3
+        },
+        {
+          "max_health": -0.1,
+          "greed": 0.2
+        },
+        {
+          "max_health": -0.1,
+          "growth": 0.3
+        },
+        {
+          "max_health": -0.1,
+          "greed": 0.2
+        }
+      ],
       "consumed_on_evo": false,
       "conflict": [],
       "grants": []
@@ -62974,19 +63078,24 @@ window.VS_DATA = {
       "level_up_values": [
         {},
         {
-          "amount": 1
+          "amount": 1,
+          "growth": 0.03
         },
         {
-          "revival": 1
+          "revival": 1,
+          "growth": 0.03
         },
         {
-          "amount": 1
+          "amount": 1,
+          "growth": 0.03
         },
         {
-          "revival": 1
+          "revival": 1,
+          "growth": 0.03
         },
         {
-          "amount": 1
+          "amount": 1,
+          "growth": 0.03
         }
       ],
       "consumed_on_evo": false,

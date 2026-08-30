@@ -790,10 +790,20 @@ function parsePassiveLevelValue(raw) {
   for (const part of splitOutsideBrackets(cell, '|')) {
     const p = part.trim();
     if (!p || p === '-') { levels.push({}); continue; }
-    const ci = p.indexOf(':');
-    const key = ci >= 0 ? p.slice(0, ci).trim() : p;
-    if (GRANT_OP_PLACE[key]) { grantSegs.push('{' + p + '}'); levels.push({}); }
-    else { const v = parseFloat(p.slice(ci + 1)); levels.push(isNaN(v) ? {} : { [key]: v }); }
+    // A level may list MULTIPLE stats, comma-separated (Velvet Dodecahedron: `max_health: -0.1,
+    // greed: 0.2`). Parse each `key: value` pair into one merged object; grant ops still peel off
+    // as raw segments for the second pass.
+    const stats = {};
+    for (const seg of splitOutsideBrackets(p, ',')) {
+      const s = seg.trim();
+      if (!s) continue;
+      const ci = s.indexOf(':');
+      const key = ci >= 0 ? s.slice(0, ci).trim() : s;
+      if (GRANT_OP_PLACE[key]) { grantSegs.push('{' + s + '}'); continue; }
+      const v = parseFloat(s.slice(ci + 1));
+      if (!isNaN(v)) stats[key] = v;
+    }
+    levels.push(stats);
   }
   return { levels, grantRaw: grantSegs.join('|') };
 }
