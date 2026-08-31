@@ -900,6 +900,15 @@
     .xref-col-name { writing-mode: vertical-rl; font-size: .8rem; font-weight: 600; white-space: nowrap; }
     .player-xref tbody td { text-align: center; width: 34px; min-width: 34px; height: 30px; color: var(--text-dim); }
     .player-xref td.xref-on { color: var(--gold); }
+    /* Arcana-conditional cells: ◆ active (counted, gold like always-on but distinct glyph); ○ latent
+       (not counted) reads dimmed so it's clearly "potential, not live" in this build. */
+    .player-xref td.xref-active { color: var(--gold); }
+    .player-xref td.xref-latent { color: var(--text-dim); opacity: .75; }
+    /* Legend under the trait table. */
+    .xref-legend { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin-top: .75rem; font-size: .8rem; color: var(--text-muted); }
+    .xref-legend b { font-style: normal; }
+    .xref-legend .xref-on, .xref-legend .xref-active { color: var(--gold); }
+    .xref-legend .xref-latent { color: var(--text-dim); }
     .xref-shared th, .xref-shared td { position: sticky; bottom: 0; z-index: 1; background: var(--surface2); font-weight: 700; }
     .xref-shared td { color: var(--text-muted); }
     .xref-shared td.xref-sh { color: var(--gold); }
@@ -5541,8 +5550,45 @@
     // Sources split by role: the CHARACTER leads as its own row; PASSIVES are condensed into a
     // single row just beneath it (their traits are summed WITHIN the row but NOT into "Shared");
     // weapons + arcana each get a row and are the ONLY sources counted in "Shared". Deduped by name.
-    const affNamesOf = (type, name) => new Set(objectAffinities(type, name).map(a => a.name));
-    const charAff = char ? affNamesOf('character', char.name) : new Set();
+    // Per-object trait info: name → { cond, arcanas:[names] }. Unconditional traits (primary + rest)
+    // beat conditional; conditional traits come from the object's arcana-keyed groups, tagged with the
+    // arcana that gate them. A conditional trait is ACTIVE when any gating arcana is equipped in THIS
+    // build, else LATENT (shown, not summed). This preserves the arcana context the old flat set lost
+    // (Vjaya's conditional Speed vs Hydro Pump's primary Speed).
+    // Active arcana = the shared slots PLUS character starting/granted "extra" arcana (Yoko's locked
+    // Tragic Princess, John Morris' Lv10 Iron Blue Will, etc.). starting_arcana can be pipe-joined
+    // (Chaos), so split it. These drive both the conditional-trait resolution and the arcana rows.
+    const extraArcObjs = extraArcanaNames()
+      .flatMap(s => String(s).split('|').map(x => x.trim()).filter(Boolean))
+      .map(arcanaByName).filter(Boolean);
+    const equipped = new Set([...state.arcana, ...extraArcObjs].filter(Boolean).map(a => a.name));
+    const traitInfoOf = (type, name) => {
+      const g = objectAffinityGroups(type, name);
+      const map = new Map();
+      for (const a of [...g.primary, ...g.rest]) map.set(a.name, { cond: false, arcanas: [] });
+      for (const grp of g.arcanaGroups) for (const t of grp.traits) {
+        if (map.get(t.name)?.cond === false) continue;          // unconditional wins
+        const cur = map.get(t.name) || { cond: true, arcanas: [] };
+        cur.cond = true;
+        for (const arc of grp.arcanas) if (!cur.arcanas.includes(arc.name)) cur.arcanas.push(arc.name);
+        map.set(t.name, cur);
+      }
+      return map;
+    };
+    // Cell state: 'on' (always-on), 'active' (conditional + a gating arcana equipped), 'latent'
+    // (conditional, arcana absent), null (absent). Only 'on'/'active' count toward Shared.
+    const cellState = (info, tn) => {
+      const e = info.get(tn);
+      if (!e) return null;
+      if (!e.cond) return 'on';
+      return e.arcanas.some(n => equipped.has(n)) ? 'active' : 'latent';
+    };
+    const CELL_SYM = { on: '●', active: '◆', latent: '○' };
+    const CELL_CLS = { on: 'xref-on', active: 'xref-on xref-active', latent: 'xref-latent' };
+    const cellTD = (st, tier) => `<td class="${st ? CELL_CLS[st] : ''}${tier}">${st ? CELL_SYM[st] : ''}</td>`;
+    const counts = st => st === 'on' || st === 'active';
+    const charInfo = char ? traitInfoOf('character', char.name) : new Map();
+    const charAff = new Set(charInfo.keys());
 
     // Weapon + arcana rows — the summed sources.
     const sumRows = [];
@@ -5550,31 +5596,34 @@
     const addSum = (obj, type) => {
       if (!obj || seen.has(type + '|' + obj.name)) return;
       seen.add(type + '|' + obj.name);
-      sumRows.push({ type, name: obj.name, icon: obj.icon, affSet: affNamesOf(type, obj.name) });
+      sumRows.push({ type, name: obj.name, icon: obj.icon, info: traitInfoOf(type, obj.name) });
     };
     player.weapons.filter(Boolean).forEach(w => addSum(w, 'weapon'));
     state.arcana.filter(Boolean).forEach(a => addSum(a, 'arcana'));
+    extraArcObjs.forEach(a => addSum(a, 'arcana'));   // starting / granted (locked-slot) arcana — dedup'd
 
     // Passives, condensed: dedupe by name, then count how many carry each trait (the row's cells
     // show that count — a direct read on manual passive allocation into a trait).
     const passSeen = new Set();
     const passList = player.passives.filter(Boolean).filter(p => passSeen.has(p.name) ? false : (passSeen.add(p.name), true));
     const passCount = new Map();
-    passList.forEach(p => affNamesOf('passive', p.name).forEach(n => passCount.set(n, (passCount.get(n) || 0) + 1)));
+    passList.forEach(p => objectAffinities('passive', p.name).forEach(a => passCount.set(a.name, (passCount.get(a.name) || 0) + 1)));
     const passAff = new Set(passCount.keys());
 
     if (!char && !sumRows.length && !passList.length)
       return detailChrome(title, left, `<div class="detail-empty">No character, weapons, passives, or arcana in this build yet.</div>`, '');
 
-    // "Shared" totals count weapons + arcana ONLY.
+    // "Shared" totals count weapons + arcana ONLY, and only where the trait is ACTIVE (always-on, or
+    // conditional with its arcana equipped) — latent conditionals don't inflate the count.
     const sumCount = new Map();
-    sumRows.forEach(r => r.affSet.forEach(n => sumCount.set(n, (sumCount.get(n) || 0) + 1)));
+    sumRows.forEach(r => r.info.forEach((_e, n) => { if (counts(cellState(r.info, n))) sumCount.set(n, (sumCount.get(n) || 0) + 1); }));
 
-    // Every trait present on ANY source becomes a column.
+    // Every trait present on ANY source becomes a column (latent-only traits included, so you can see
+    // what an arcana would unlock — they just sum to 0 until the arcana is equipped).
     const allTraits = new Set();
     charAff.forEach(n => allTraits.add(n));
     passAff.forEach(n => allTraits.add(n));
-    sumRows.forEach(r => r.affSet.forEach(n => allTraits.add(n)));
+    sumRows.forEach(r => r.info.forEach((_e, n) => allTraits.add(n)));
     if (!allTraits.size) return detailChrome(title, left, `<div class="detail-empty">These items share no traits.</div>`, '');
 
     // Character PRIMARY traits (grouped affinity schema) drive the highlight tiers.
@@ -5613,7 +5662,7 @@
       <th class="xref-rowhead" data-action="nav-object" data-detail-type="character" data-detail-name="${esc(char.name)}" title="${esc(char.name)}">
         <img src="${esc(char.sprite_static || char.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(char.name)}</span>
       </th>
-      ${cols.map(c => `<td class="${charAff.has(c.name) ? 'xref-on' : ''}${tc(c)}">${charAff.has(c.name) ? '●' : ''}</td>`).join('')}
+      ${cols.map(c => cellTD(cellState(charInfo, c.name), tc(c))).join('')}
     </tr>` : '';
     // Condensed passives row: cell = # of equipped passives carrying that trait (blank = 0).
     const passRow = passList.length ? `<tr class="xref-pass-row">
@@ -5624,7 +5673,7 @@
       <th class="xref-rowhead" data-action="nav-object" data-detail-type="${r.type}" data-detail-name="${esc(r.name)}" title="${esc(r.name)}">
         <img src="${esc(r.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(r.name)}</span>
       </th>
-      ${cols.map(c => `<td class="${r.affSet.has(c.name) ? 'xref-on' : ''}${tc(c)}">${r.affSet.has(c.name) ? '●' : ''}</td>`).join('')}
+      ${cols.map(c => cellTD(cellState(r.info, c.name), tc(c))).join('')}
     </tr>`;
     const sharedRow = `<tr class="xref-shared">
       <th class="xref-rowhead">Shared</th>
@@ -5635,7 +5684,12 @@
       <thead><tr><th class="xref-corner"></th>${cols.map(colHead).join('')}</tr></thead>
       <tbody>${charRow}${passRow}${sumRows.map(rowHTML).join('')}${sharedRow}</tbody>
     </table></div>`;
-    return detailChrome(title, left, table, '');
+    const legend = `<div class="xref-legend">
+      <span><b class="xref-on">●</b> always-on</span>
+      <span><b class="xref-active">◆</b> active via equipped Arcana</span>
+      <span><b class="xref-latent">○</b> latent — needs its Arcana (not counted)</span>
+    </div>`;
+    return detailChrome(title, left, table + legend, '');
   }
 
   // Affinity page: object-category sections (Arcana/Characters/Passives/Weapons), each with any
