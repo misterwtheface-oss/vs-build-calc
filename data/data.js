@@ -67571,7 +67571,7 @@ window.VS_DATA = {
     {
       "name": "Pseudo-Cooldown",
       "icon": "assets/icons/affinities/pseudo-cooldown.png",
-      "color": "#6a4010",
+      "color": "#9e8771",
       "base_affinity": "Arcana",
       "is_parent": false,
       "show_in_table": false,
@@ -73335,7 +73335,7 @@ window.VS_DATA = {
     {
       "name": "Prototype",
       "icon": "assets/icons/affinities/prototype.png",
-      "color": "#6a4010",
+      "color": "#5f332b",
       "base_affinity": "Weapon Type",
       "is_parent": false,
       "show_in_table": true,
