@@ -649,6 +649,16 @@ function unwrap(raw) {
   return s === '-' ? '' : s;
 }
 
+// Parse a boolean-ish cell. Empty/absent → `dflt`. Recognizes no/false/0/n/hide/off → false and
+// yes/true/1/y/show/on → true (case-insensitive); anything unrecognized falls back to `dflt`.
+function parseBool(raw, dflt = true) {
+  const s = unwrap(raw).toLowerCase();
+  if (!s) return dflt;
+  if (['no', 'false', '0', 'n', 'hide', 'off'].includes(s)) return false;
+  if (['yes', 'true', '1', 'y', 'show', 'on'].includes(s)) return true;
+  return dflt;
+}
+
 const rawChars = readCsv('characters.csv', true);
 const characters = rawChars.map(r => ({
   name: r.name,
@@ -850,9 +860,12 @@ const arcana = rawArcana.filter(r => r.name).map(r => {
     type,
     weapon_col,
     description: unwrap(r.description),
-    // New schema dropped the prose `additional_effects_clarification`; no prose source
-    // remains, so notes stays empty (the detail panel guards on truthiness). The
-    // affects_* pipe-lists are captured as arrays for the future Arcana Info Panel rework.
+    // My added context for effects unclear from the official blurb — shown below `description`
+    // (same treatment as characters, via descBlurbHTML). On the unified Arcana↔Trait page this
+    // sits between the arcana description and the trait description.
+    effect_clarifications: unwrap(r.effect_clarifications),
+    // The affects_* pipe-lists are captured as arrays for the Arcana Info Panel; `notes` stays
+    // empty (the detail panel guards on truthiness) since the new schema has no prose source.
     notes: '',
     affects_explicit: splitItems(r.affects_explicit),
     // Character-bonus columns (same grammar as characters) — fed into the SAME calc engine, but
@@ -889,6 +902,9 @@ const affinities = rawAffinities.filter(r => r.affinity).map(r => {
     color,
     base_affinity,
     is_parent: name === base_affinity,
+    // Whether this trait appears as a column in the player-page trait table (default: yes). Group
+    // parents (Bounce, Arcana) can be set to `no` so the table doesn't sum the grouping rows.
+    show_in_table: parseBool(r.show_in_table, true),
     description: unwrap(r.description),
     // Per-object interaction blurbs: `[{objects:[name…], blurb}]` (parsed from the `info` column).
     info_entries: parseInfoEntries(r.info, name),
@@ -908,6 +924,37 @@ for (const [a, b] of AFFINITY_COLOR_SWAPS) {
   if (A && B) { const t = A.color; A.color = B.color; B.color = t; }
   else console.warn(`color swap: "${a}"/"${b}" — one side not found`);
 }
+
+// ─── Validate trait / arcana references ────────────────────────────────────
+// Traits are looked up by EXACT name at runtime (affinityByName) and unresolved references are
+// silently dropped — so renaming a trait but missing one CSV reference makes it vanish from an object
+// with no error. Warn loudly here. Checks: each trait's base_affinity resolves to a real trait; each
+// object's affinity items + conflicts resolve to real traits; each arcana-conditional group KEY
+// resolves to a real Arcana (a typo there silently breaks the conditional cluster).
+(() => {
+  const affNames = new Set(affinities.map(a => a.name));
+  const arcNames = new Set(arcana.map(a => a.name));
+  let warned = 0;
+  const warn = msg => { console.warn(`ref: ${msg}`); warned++; };
+  for (const a of affinities)
+    if (a.base_affinity && !affNames.has(a.base_affinity))
+      warn(`trait "${a.name}" base_affinity "${a.base_affinity}" is not a known trait`);
+  const scanObj = (obj, kind) => {
+    for (const g of (obj.affinity_groups || [])) {
+      if (g.key && g.key !== 'primary' && !arcNames.has(g.key))
+        warn(`${kind} "${obj.name}" affinity group key "${g.key}" is neither "primary" nor a known Arcana`);
+      for (const item of (g.items || []))
+        if (item && item !== '-' && !affNames.has(item)) warn(`${kind} "${obj.name}" affinity "${item}" is not a known trait`);
+    }
+    for (const c of (obj.conflict || []))
+      if (c && c !== '-' && !affNames.has(c)) warn(`${kind} "${obj.name}" conflict "${c}" is not a known trait`);
+  };
+  weapons.forEach(o => scanObj(o, 'weapon'));
+  characters.forEach(o => scanObj(o, 'character'));
+  arcana.forEach(o => scanObj(o, 'arcana'));
+  passives.forEach(o => scanObj(o, 'passive'));
+  if (warned) console.warn(`\n⚠  ${warned} unresolved trait/arcana reference(s) above — fix the CSV; each is a silent drop at runtime.\n`);
+})();
 
 // ─── Synthesize phantom starter weapons ───────────────────────────────────
 // Some characters start with an item that has no weapons.csv row. When it's an icon-only

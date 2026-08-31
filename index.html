@@ -496,6 +496,23 @@
     .arcana-cond-head { cursor: default; flex-wrap: wrap; }
     .arcana-cond-icon { display: inline-flex; cursor: pointer; }
     .arcana-cond-icon:hover { filter: brightness(1.35); }
+    /* Parent-trait cluster: the parent trait heads the box, then one indented sub-block per member
+       arcana (its condition header + the child trait it gates), nested with a left rule. */
+    .arcana-cluster-member {
+      margin: .55rem 0 0; padding-left: .7rem;
+      border-left: 2px solid color-mix(in srgb, var(--arc-color) 45%, transparent);
+    }
+    .arcana-cluster-member .arcana-cond-head { margin-bottom: .35rem; }
+    .detail-obj-affinity.obj-aff-child { margin-bottom: .5rem; }
+    .detail-obj-affinity.obj-aff-child:last-child { margin-bottom: 0; }
+    /* Parent-cluster member: one connector line wraps the whole member — the arcana-trait banner
+       (sorted to the top) plus its blurb and related stat trait(s) all share the same left rule to
+       show they belong together. */
+    .arcana-cluster-member--v2 {
+      margin-top: .6rem; padding-left: .85rem;
+      border-left: 2px solid color-mix(in srgb, var(--arc-color) 55%, transparent);
+    }
+    .arcana-cluster-member--v2 .aff-member-id { margin-bottom: .3rem; }
     /* A ghost directly under a real primary container drops its top padding (no reserved
        header space) so it sits snug beneath; a standalone ghost keeps its top spacing. */
     .primary-traits + .primary-traits.trait-ghost { padding-top: 0; }
@@ -746,6 +763,8 @@
     .detail-left .detail-icon.char-sprite { width: 100%; height: 230px; }
     .detail-left .detail-name { font-family: var(--font-title); color: var(--gold); font-size: 1.55rem; margin-bottom: .5rem; }
     .detail-left .detail-desc { font-size: .98rem; color: var(--text-muted); font-style: italic; line-height: 1.55; text-align: left; }
+    /* Unified Arcana↔Trait page subtitle — signals the page is BOTH an arcana and a trait. */
+    .detail-kind-tag { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); margin: -.25rem 0 .55rem; }
     /* Markdown **bold** in blurbs — explicit 700 + brighter than the muted body so it reads. */
     .detail-desc strong { font-weight: 700; color: var(--text); }
     /* Blurb paragraphs (official desc + clarifications): small controlled gap, not a full line. */
@@ -983,9 +1002,15 @@
     }
     .appendix-row:hover { background: var(--surface2); }
     .appendix-row.appendix-child { margin-left: 2rem; }
-    /* Trait entries in the appendix render as banners — space them and offset nested children. */
-    .appendix .affinity-row { margin-bottom: 5px; }
-    .appendix .affinity-row.appendix-child { margin-left: 2rem; }
+    /* Trait entries in the appendix render as banners — space them and offset nested children.
+       Nesting is multi-level: --appendix-depth (1 for a direct child, 2 for a grandchild, …)
+       scales the indent so each generation steps in another 2rem. The indent rule is NOT scoped to
+       the appendix — the same nested banners drive the Sub-traits section on trait detail pages. */
+    /* Row spacing for nested trait banners — shared by the appendix and the Sub-traits section on
+       trait detail pages so both breathe the same. */
+    .appendix .affinity-row,
+    #detail-overlay-root .detail-cat .affinity-row { margin-bottom: 5px; }
+    .affinity-row.appendix-child { margin-left: calc(2rem * var(--appendix-depth, 1)); }
     .appendix-icon { width: 36px; height: 36px; flex-shrink: 0; }
     .appendix-icon.sprite { width: 32px; height: 44px; }
     .appendix-icon img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
@@ -2166,6 +2191,30 @@
   // uses only DIRECT (1-hop) links. Multi-hop daisy-chaining is a theorycraft-skill concern.
   function affinityByName(name) { return (D.affinities || []).find(a => a.name === name) || null; }
 
+  // An Arcana name minus its trailing " (roman)" tag → the base name a promoted trait would use
+  // ("Blood Astronomia (XXI)" → "Blood Astronomia").
+  function arcanaBaseName(n) { return String(n || '').replace(/\s*\([^)]*\)\s*$/, '').trim(); }
+  // Resolve a 1:1 Arcana↔Trait pairing (an Arcana that also exists as a standalone trait). A trait
+  // pairs with an arcana when their names match either exactly OR after stripping the arcana's roman
+  // tag — so the trait may be authored as "Blood Astronomia" OR "Blood Astronomia (XXI)"; both pair,
+  // no data migration required. Pass {arcana} or {trait} (name or object). Group traits (Bounce) and
+  // stat traits (Amount) match no arcana → null. Returns {arcana, trait} or null.
+  function arcanaTraitPair({ arcana, trait } = {}) {
+    if (arcana) {
+      const a = typeof arcana === 'string' ? arcanaByName(arcana) : arcana;
+      if (!a) return null;
+      const t = affinityByName(a.name) || affinityByName(arcanaBaseName(a.name));
+      return t ? { arcana: a, trait: t } : null;
+    }
+    if (trait) {
+      const t = typeof trait === 'string' ? affinityByName(trait) : trait;
+      if (!t) return null;
+      const a = arcanaByName(t.name) || (D.arcana || []).find(x => arcanaBaseName(x.name) === t.name);
+      return a ? { arcana: a, trait: t } : null;
+    }
+    return null;
+  }
+
   // Reverse index: object (type+name) → affinity objects that list it. Built once, lazily.
   // `type` is the object kind key on affinity.related: 'weapons' | 'passives' | 'characters' | 'arcana'.
   let _affinityIndex = null;
@@ -2193,6 +2242,17 @@
   // A parent affinity's children (rows whose base_affinity points at it), for its detail page.
   function childAffinities(parentName) {
     return (D.affinities || []).filter(a => a.base_affinity === parentName && a.name !== parentName);
+  }
+  // A parent affinity's FULL descendant tree as nested banners (for the Sub-traits section): direct
+  // children flush, each further generation indented one level (Bounce flush; Iron Blue Will / Waltz
+  // of Pearls one in). Depth 0 = direct children (no indent). Guards against base_affinity cycles.
+  function affinitySubtreeHTML(parentName, depth = 0, seen = new Set()) {
+    if (seen.has(parentName)) return '';
+    seen.add(parentName);
+    return childAffinities(parentName).map(kid =>
+      affinityBanner(kid, 'nav-affinity', depth ? 'appendix-child' : '', depth ? `--appendix-depth:${depth}` : '')
+      + affinitySubtreeHTML(kid.name, depth + 1, seen)
+    ).join('');
   }
   // Per-object interaction blurbs for a trait (from affinities.csv `info`). Each entry is
   // `{objects:[name…], blurb}`; a single blurb may cover several co-listed objects.
@@ -2226,10 +2286,28 @@
     const avg = [0, 1, 2].map(i => Math.round(rgb.reduce((s, c) => s + c[i], 0) / rgb.length));
     return '#' + avg.map(v => v.toString(16).padStart(2, '0')).join('');
   }
-  // Blended identity color for a set of arcana (each {name, obj}); falls back if none resolve.
+  // Lift a too-dark identity color so a conditional container's border/tint stays legible against the
+  // dark app background. Colors above the luminance floor pass through unchanged; darker ones are
+  // blended toward white just enough to clear it (hue preserved where any exists). This is a pure
+  // DISPLAY transform applied at render time — the stored color (re-derived from card art on every
+  // data rebuild) is never touched, so the fix survives rebuilds.
+  function ensureVisible(hex) {
+    const h = String(hex || '').replace('#', '');
+    if (h.length < 6) return hex || '#6a4010';
+    const r = parseInt(h.slice(0, 2), 16), g = parseInt(h.slice(2, 4), 16), b = parseInt(h.slice(4, 6), 16);
+    const L = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    const FLOOR = 120;
+    if (L >= FLOOR) return '#' + h.slice(0, 6);
+    const t = (FLOOR - L) / (255 - L);            // blend factor toward white (luminance is linear)
+    const lift = c => Math.round(c + (255 - c) * t);
+    const hx = v => v.toString(16).padStart(2, '0');
+    return '#' + hx(lift(r)) + hx(lift(g)) + hx(lift(b));
+  }
+  // Blended identity color for a set of arcana (each {name, obj}); falls back if none resolve. Run
+  // through ensureVisible so black/near-black arcana still read as a visible container.
   function arcanaCondColor(arcs) {
     const colors = arcs.map(a => a.obj?.color).filter(Boolean);
-    return colors.length ? mixHexColors(colors) : '#6a4010';
+    return ensureVisible(colors.length ? mixHexColors(colors) : '#6a4010');
   }
   // Shared header for arcana-conditional containers (the info-blurb container AND the trait
   // container): each Arcana as a navigable icon; a SINGLE arcana also shows its name (multiple →
@@ -2331,10 +2409,10 @@
 
   // One affinity banner: [icon] [name-as-colored-banner], whole row clickable via `action`
   // (info panel → 'open-affinity-page'; detail overlay → 'nav-affinity').
-  function affinityBanner(aff, action, extraCls = '') {
+  function affinityBanner(aff, action, extraCls = '', extraStyle = '') {
     const color = aff.color || '#6a4010';
     return `<div class="affinity-row ${extraCls}" data-action="${esc(action)}" data-affinity="${esc(aff.name)}"
-        style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}" title="${esc(aff.name)}">
+        style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)};${extraStyle}" title="${esc(aff.name)}">
       <span class="affinity-row-icon"><img src="${esc(aff.icon || EMPTY_ICON)}" alt="" onerror="this.style.visibility='hidden'"></span>
       <span class="affinity-row-banner">${esc(aff.name)}</span>
     </div>`;
@@ -2393,14 +2471,127 @@
     </div>`;
   }
 
+  // A trait's cluster parent, or null if it must not nest. The parent must be a real (non-self)
+  // base_affinity trait that is NOT an appendix-only category: `Arcana` and `Character Stats` exist
+  // only to organize the Appendix trait lists (is_parent + show_in_table:false) and must never
+  // surface as a cluster header anywhere else.
+  function clusterParentOf(t) {
+    if (!t.base_affinity || t.base_affinity === t.name) return null;
+    const p = affinityByName(t.base_affinity);
+    if (!p || (p.is_parent && p.show_in_table === false)) return null;
+    return p;
+  }
+
+  // Build the parent-trait clusters for an object's affinity display, unified across BOTH sources of
+  // arcana-traits: plain derived traits AND authored arcana-keyed groups. An arcana-trait (pairs 1:1
+  // with an Arcana) whose base_affinity names a real grouping trait becomes a MEMBER of that parent's
+  // cluster; the arcana itself is the member (its paired arcana-trait's blurb is shown under it), and
+  // the OTHER traits in that arcana's authored group (minus the shared parent) become the member's
+  // stat traits (Tragic Princess → Move Speed). So Cooldown Speed heads one cluster listing Tragic
+  // Princess (III) → Move Speed and Pale Diamond Incursion (V) → Speed, even though a stat trait
+  // shared the authored group. Parents become the cluster headers and leave the flat lists / groups.
+  // Returns the cleaned, ready-to-render {clusters, primary, rest, conflict, arcanaGroups}.
+  function buildTraitClusters({ primary, rest, conflict, arcanaGroups }) {
+    const byParent = new Map();
+    const addMember = (parent, arcana, arcanaTrait, statTraits) => {
+      let cl = byParent.get(parent.name);
+      if (!cl) { cl = { parentTrait: parent, members: [] }; byParent.set(parent.name, cl); }
+      cl.members.push({ arcanas: [arcana], traitForBlurb: arcanaTrait, statTraits });
+    };
+    // Authored arcana groups: the arcana-trait matching the group establishes a member of its parent
+    // cluster; that group's OTHER traits (minus the shared parent) become the member's stat traits.
+    const remainingGroups = [];
+    for (const g of arcanaGroups) {
+      let clustered = false;
+      for (const t of g.traits) {
+        const pair = arcanaTraitPair({ trait: t });
+        const parent = pair ? clusterParentOf(t) : null;
+        if (!parent) continue;
+        addMember(parent, pair.arcana, t, g.traits.filter(x => x !== t && x.name !== parent.name));
+        clustered = true;
+        break;
+      }
+      if (!clustered) remainingGroups.push(g);
+    }
+    // Plain derived arcana-traits (character/passive pages, etc.): a member with no extra stat traits.
+    const takeFlat = t => {
+      const pair = arcanaTraitPair({ trait: t });
+      const parent = pair ? clusterParentOf(t) : null;
+      if (!parent) return false;
+      addMember(parent, pair.arcana, t, []);
+      return true;
+    };
+    primary  = primary.filter(t => !takeFlat(t));
+    rest     = rest.filter(t => !takeFlat(t));
+    conflict = conflict.filter(t => !takeFlat(t));
+    // Parents are now cluster headers — drop them from the leftover flat lists and groups.
+    const parents = new Set(byParent.keys());
+    const notParent = t => !parents.has(t.name);
+    primary = primary.filter(notParent); rest = rest.filter(notParent); conflict = conflict.filter(notParent);
+    const groups = remainingGroups.map(g => ({ ...g, traits: g.traits.filter(notParent) })).filter(g => g.traits.length);
+    return { clusters: [...byParent.values()], primary, rest, conflict, arcanaGroups: groups };
+  }
+
+  // The member identity banner: the arcana-trait shown with the TRAIT icon but the arcana's full NAME
+  // (roman numeral included, e.g. "Tragic Princess (III)"), replacing the separate arcana condition
+  // header. Navigates to the unified arcana↔trait page. `affAction` = the affinity nav action for this
+  // surface (nav-affinity on the detail overlay, open-affinity-page in a panel).
+  function clusterMemberBannerHTML(trait, arcana, affAction) {
+    const color = trait.color || '#6a4010';
+    return `<div class="affinity-row aff-member-id" data-action="${esc(affAction)}" data-affinity="${esc(trait.name)}"
+        style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)}" title="${esc(arcana.name)}">
+      <span class="affinity-row-icon"><img src="${esc(trait.icon || EMPTY_ICON)}" alt="" onerror="this.style.visibility='hidden'"></span>
+      <span class="affinity-row-banner">${esc(arcana.name)}</span>
+    </div>`;
+  }
+
+  // Parent-trait cluster (drop-header / trait-icon layout): no separate arcana condition header — the
+  // arcana-trait banner (trait icon + arcana name w/ numeral) IS the member identity, sorted to the
+  // top, with the arcana's other contributed traits (Move Speed) nested UNDER it behind a connector
+  // line. Parent (e.g. Pseudo-Cooldown) still heads the box with its shared blurb.
+  function parentClusterBoxHTML(cluster, objName, objAction, bannerBox, entryHTML) {
+    const affAction = objAction === 'nav-object' ? 'nav-affinity' : 'open-affinity-page';
+    const allArcs = cluster.members.flatMap(m => m.arcanas).map(a => ({ name: a.name, obj: a }));
+    const parentHTML = bannerBox(cluster.parentTrait, affinityObjEntries(cluster.parentTrait.name, objName), 0);
+    const members = cluster.members.map(m => {
+      const arcana = m.arcanas[0];
+      const idBanner = m.traitForBlurb
+        ? clusterMemberBannerHTML(m.traitForBlurb, arcana, affAction)
+        : arcanaCondHeadHTML(m.arcanas.map(a => ({ name: a.name, obj: a })), objAction, '');
+      const blurbHTML = m.traitForBlurb
+        ? affinityObjEntries(m.traitForBlurb.name, objName).map(entryHTML || (() => '')).join('') : '';
+      const statHTML = (m.statTraits || [])
+        .map(t => bannerBox(t, affinityObjEntries(t.name, objName), 1)).join('');
+      // One connector line wraps the whole member: the arcana-trait banner (sorted to the top), its
+      // blurb, and the related stat trait(s) — all sharing the same left rule to show the relation.
+      return `<div class="arcana-cluster-member arcana-cluster-member--v2">
+        ${idBanner}
+        ${blurbHTML}
+        ${statHTML}
+      </div>`;
+    }).join('');
+    return `<div class="primary-traits arcana-traits arcana-cluster" style="--arc-color:${esc(arcanaCondColor(allArcs))}">
+      ${parentHTML}
+      ${members}
+    </div>`;
+  }
+
   // The affinity-banner section for an object's info panel (empty string when it has none).
-  // Order: primary (gold box) → default (ghost) → conflict (red box).
+  // Order: primary (gold box) → arcana-conditional clusters/boxes → default (ghost) → conflict (red).
+  // Mirrors the detail-page nesting (Bounce → Iron Blue Will in a conditional container) so the two
+  // surfaces match — but with NO blurbs (the panel is compact): the bannerBox ignores its entries and
+  // renders just the banner.
   function affinitySectionHTML(type, name, action) {
-    const { primary, rest, conflict, arcanaGroups } = objectAffinityGroups(type, name);
-    if (!primary.length && !rest.length && !conflict.length && !arcanaGroups.length) return '';
+    // Same unified clustering as the detail page (Bounce / Cooldown Speed → nested conditional boxes),
+    // so the panel and the detail page match. No blurbs here — the bannerBox ignores its entries.
+    const { clusters, primary, rest, conflict, arcanaGroups } = buildTraitClusters(objectAffinityGroups(type, name));
+    if (!primary.length && !rest.length && !conflict.length && !arcanaGroups.length && !clusters.length) return '';
     const banners = arr => arr.map(a => affinityBanner(a, action)).join('');
     const objAction = action === 'nav-affinity' ? 'nav-object' : 'open-object-page';
-    const arcanaBoxes = arcanaGroups.map(g => arcanaBoxHTML(g, objAction, a => affinityBanner(a, action))).join('');
+    const bannerBox = aff => affinityBanner(aff, action);   // panel is compact: banner only, no blurbs
+    // Parent clusters (Bounce, Cooldown Speed) first, then remaining plain arcana-conditional boxes.
+    const arcanaBoxes = clusters.map(cl => parentClusterBoxHTML(cl, name, objAction, bannerBox, () => '')).join('')
+      + arcanaGroups.map(g => arcanaBoxHTML(g, objAction, a => affinityBanner(a, action))).join('');
     // Order: primary (gold) > arcana-conditional (colored) > default/unlisted (ghost) > conflict
     // (red). The ghost box uses .primary-traits geometry (transparent) so widths match.
     return `<div class="detail-section affinity-section">
@@ -3854,10 +4045,16 @@
 
   // Description block: official blurb, plus a character's `effect_clarifications` below it (one
   // blank line between, identical format). Non-characters have no clarifications → just the blurb.
+  // Render an ordered list of prose parts as stacked blurb paragraphs (each **bold**-parsed). Empty
+  // parts are dropped; returns '' when nothing remains. Callers control the order/source of parts.
+  function descPartsHTML(parts) {
+    const clean = (parts || []).filter(Boolean).map(mdBold);
+    if (!clean.length) return '';
+    return `<div class="detail-desc">${clean.map(p => `<span class="blurb-p">${p}</span>`).join('')}</div>`;
+  }
+  // An object's own description + effect-clarifications (below it). Used by every object detail page.
   function descBlurbHTML(item) {
-    const parts = [item.description, item.effect_clarifications].filter(Boolean).map(mdBold);
-    if (!parts.length) return '';
-    return `<div class="detail-desc">${parts.map(p => `<span class="blurb-p">${p}</span>`).join('')}</div>`;
+    return descPartsHTML([item.description, item.effect_clarifications]);
   }
 
   function buildInfoSidebar(panel) {
@@ -5125,7 +5322,14 @@
   function renderDetailOverlay() {
     const page = state.detail.stack[state.detail.idx];
     if (!page) { closeDetailOverlay(); return; }
-    const inner = page.kind === 'appendix' ? detailAppendixPageHTML()
+    // An Arcana with a 1:1 trait counterpart (and vice versa) resolves to the unified page from BOTH
+    // entry points; a combo trait page (`also`) stays the multi-trait analysis view.
+    const pair = page.kind === 'appendix' || page.kind === 'player' ? null
+      : page.kind === 'affinity' ? (page.also && page.also.length ? null : arcanaTraitPair({ trait: page.name }))
+      : page.type === 'arcana' ? arcanaTraitPair({ arcana: page.name })
+      : null;
+    const inner = pair ? detailArcanaTraitPageHTML(pair.arcana, pair.trait)
+      : page.kind === 'appendix' ? detailAppendixPageHTML()
       : page.kind === 'player' ? detailPlayerPageHTML(page.playerIdx)
       : page.kind === 'affinity' ? detailAffinityPageHTML(page.name, page.also || [])
       : detailObjectPageHTML(page.type, page.name);
@@ -5247,6 +5451,49 @@
     return `<div class="detail-section"><span class="detail-section-label">Arcana <span style="color:var(--text-dim);font-weight:400">(${refs.length})</span></span>${grid}</div>`;
   }
 
+  // The full affinity-banner block for an object's detail page: primary (gold) → arcana-conditional
+  // clusters/boxes → default (ghost) → conflict (red), each banner carrying the object's per-trait
+  // blurbs. A single interaction is often authored on BOTH a group parent (Bounce) and each of its
+  // arcana children, so blurbs are deduped by text across the whole block — the first banner to carry
+  // a statement keeps it (Carréllo's showed 4× before). `opts.exclude` is a Set of trait names to omit
+  // (the unified arcana↔trait page drops the arcana's own paired trait, which would self-link).
+  function objectAffinityBannersHTML(type, name, opts = {}) {
+    const exclude = opts.exclude || null;
+    let raw = objectAffinityGroups(type, name);
+    if (exclude && exclude.size) {
+      const keep = a => !exclude.has(a.name);
+      raw = {
+        primary: raw.primary.filter(keep), rest: raw.rest.filter(keep), conflict: raw.conflict.filter(keep),
+        arcanaGroups: raw.arcanaGroups.map(g => ({ ...g, traits: g.traits.filter(keep) })).filter(g => g.traits.length),
+      };
+    }
+    // Unified clustering: child arcana-traits nest under their base_affinity parent whether they came
+    // from plain derived traits or from an authored arcana group (even one contaminated by a stat
+    // trait). Parents become headers; leftover group traits stay as plain conditional boxes.
+    const { clusters, primary, rest, conflict, arcanaGroups } = buildTraitClusters(raw);
+    const seenBlurbs = new Set();
+    const entryHTML = e => {
+      const key = (e.blurb || '').trim();
+      if (key && seenBlurbs.has(key)) return '';
+      if (key) seenBlurbs.add(key);
+      return infoEntryHTML(e, false);
+    };
+    // A trait banner with a specific set of blurb entries beneath it (depth>0 indents nested children).
+    const bannerBox = (aff, entries, depth = 0) =>
+      `<div class="detail-obj-affinity${depth ? ' obj-aff-child' : ''}">
+        <div class="detail-banner-header">${affinityBanner(aff, 'nav-affinity')}</div>
+        ${entries.map(entryHTML).join('')}
+      </div>`;
+    const renderAff = (aff, depth = 0) => bannerBox(aff, affinityObjEntries(aff.name, name), depth);
+    // Parent clusters (Bounce, Cooldown Speed) first, then any remaining plain arcana-conditional boxes.
+    const arcanaBoxes = clusters.map(cl => parentClusterBoxHTML(cl, name, 'nav-object', bannerBox, entryHTML)).join('')
+      + arcanaGroups.map(g => arcanaBoxHTML(g, 'nav-object', renderAff)).join('');
+    return (primary.length ? `<div class="primary-traits">${primary.map(renderAff).join('')}</div>` : '')
+      + arcanaBoxes
+      + (rest.length ? `<div class="primary-traits trait-ghost">${rest.map(renderAff).join('')}</div>` : '')
+      + (conflict.length ? `<div class="primary-traits conflict-traits">${conflict.map(renderAff).join('')}</div>` : '');
+  }
+
   // Object page: affinity banners as headers, each with the object's blurb below (blurb empty
   // until the per-object info column lands). Type-specific content sits around the banners:
   // character → starting loadout above; weapon → evo path above; passive → evo paths below
@@ -5262,19 +5509,7 @@
       <div class="detail-name">${esc(displayName)}</div>
       ${descBlurbHTML(item)}`;
 
-    const { primary, rest, conflict, arcanaGroups } = objectAffinityGroups(type, name);
-    const renderAff = aff => {
-      const entries = affinityObjEntries(aff.name, name);
-      return `<div class="detail-obj-affinity">
-        <div class="detail-banner-header">${affinityBanner(aff, 'nav-affinity')}</div>
-        ${entries.map(e => infoEntryHTML(e, false)).join('')}
-      </div>`;
-    };
-    const arcanaBoxes = arcanaGroups.map(g => arcanaBoxHTML(g, 'nav-object', renderAff)).join('');
-    const bannersHTML = (primary.length ? `<div class="primary-traits">${primary.map(renderAff).join('')}</div>` : '')
-      + arcanaBoxes
-      + (rest.length ? `<div class="primary-traits trait-ghost">${rest.map(renderAff).join('')}</div>` : '')
-      + (conflict.length ? `<div class="primary-traits conflict-traits">${conflict.map(renderAff).join('')}</div>` : '');
+    const bannersHTML = objectAffinityBannersHTML(type, name);
 
     let pre = '', post = '';
     if (type === 'character')    pre  = detailStartingLoadoutHTML(item);
@@ -5358,8 +5593,11 @@
     const TIER_CLS  = { high: ' xref-hl-high', med: ' xref-hl-med', low: ' xref-hl-low', '': '' };
     const tc = c => TIER_CLS[tierOf(c.name)];
 
-    // Columns sorted by Shared (weapon+arcana) count, then highlight tier, then name.
+    // Columns sorted by Shared (weapon+arcana) count, then highlight tier, then name. Traits flagged
+    // show_in_table:false (e.g. group parents like Bounce/Arcana) are omitted so the table doesn't
+    // sum the grouping rows — the child arcana-traits still appear on their own.
     const cols = [...allTraits].map(affinityByName).filter(Boolean)
+      .filter(a => a.show_in_table !== false)
       .sort((a, b) => ((sumCount.get(b.name) || 0) - (sumCount.get(a.name) || 0))
         || (TIER_RANK[tierOf(b.name)] - TIER_RANK[tierOf(a.name)])
         || a.name.localeCompare(b.name));
@@ -5429,6 +5667,74 @@
     });
   }
 
+  // The header ＋ combobox: pick another trait to AND with the current one(s) to find shared
+  // associations. `excludeNames` are the already-selected traits (hidden from the list). The list
+  // filters live via the aff-add-search handler; clicking an option fires `affinity-add`. Used by the
+  // standalone trait page AND the unified arcana↔trait page (so paired arcana-traits keep this too).
+  function affinityAddAdornHTML(excludeNames) {
+    const others = D.affinities.filter(a => !excludeNames.includes(a.name));
+    return `<div class="aff-add">
+      <button class="aff-add-btn" data-action="affinity-add-toggle" title="Add a trait condition">＋</button>
+      <div class="aff-add-pop" hidden>
+        <input type="text" class="aff-add-search" placeholder="Add a trait condition…" autocomplete="off">
+        <div class="aff-add-list">${others.map(a => `<button class="aff-add-opt" data-action="affinity-add" data-affinity="${esc(a.name)}" data-q="${esc(a.name.toLowerCase())}">
+          <img src="${esc(a.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(a.name)}</span></button>`).join('')}</div>
+      </div>
+    </div>`;
+  }
+
+  // The main-column body of a trait page: sub-traits (if any), per-object interaction blurbs, and the
+  // category association grids (Arcana/Characters/Passives/Weapons that carry the trait). Shared by the
+  // standalone trait page and the unified arcana↔trait page. `affs` is the selected trait(s) (1, or 2+
+  // in combo/AND mode — sub-traits & blurbs are single-trait concepts, shown only for a lone trait).
+  // `opts.excludeArcana` drops one arcana from the Arcana grid (the unified page omits its own paired
+  // arcana, which would self-link). Returns '' when nothing qualifies.
+  function affinityBodyHTML(affs, opts = {}) {
+    const primary = affs[0];
+    const combo = affs.length > 1;
+    let main = '';
+    if (!combo) {
+      const subtree = affinitySubtreeHTML(primary.name);
+      if (subtree) main += `<details class="detail-cat" open>
+        <summary class="detail-cat-label">Sub-traits</summary>
+        ${subtree}
+      </details>`;
+    }
+    const infoEntries = combo ? [] : affinityInfoEntries(primary.name);
+    // Objects that already appear (with their art) in an info-blurb entry on this page. They must not
+    // be repeated as bare icons in the category grids below — each object shows once per detail page.
+    const blurbedNames = new Set(infoEntries.flatMap(e => e.objects));
+    // Plain and conditional (arcana-gated) blurbs share the same grid; a conditional entry renders
+    // as a full-width container cell within it (spans all columns) so it stays in the grid layout.
+    const blurbsFor = t => {
+      const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t)
+        .map(e => e.conditions?.length ? infoConditionEntryHTML(e) : infoEntryHTML(e)).join('');
+      return cells ? `<div class="detail-info-grid">${cells}</div>` : '';
+    };
+    for (const cat of DETAIL_CATS) {
+      // Intersect this category's associated names across every selected trait.
+      let catNames = null;
+      for (const a of affs) {
+        const set = new Set(a.related?.[cat.key] || []);
+        catNames = catNames === null ? [...set] : catNames.filter(n => set.has(n));
+      }
+      catNames = catNames || [];
+      if (cat.key === 'arcana' && opts.excludeArcana) catNames = catNames.filter(n => n !== opts.excludeArcana);
+      const catBlurbs = blurbsFor(cat.type);
+      if (!catNames.length && !catBlurbs) continue;
+      const entries = detailCatEntries(cat, catNames, primary.name); // [{navName,title,icon}], deduped for chars
+      const gridEntries = entries.filter(e => !blurbedNames.has(e.navName)); // drop the blurbed ones
+      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}${objUncollected(cat.type, e.navName) ? ' uncollected' : ''}${objInBuild(cat.type, e.navName) ? ' in-build' : ''}" data-action="nav-object" data-detail-type="${cat.type}"
+          data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
+      main += `<details class="detail-cat" open>
+        <summary class="detail-cat-label">${cat.label} <span style="color:var(--text-dim);font-size:.75rem">(${entries.length})</span></summary>
+        ${catBlurbs}
+        ${gridEntries.length ? `<div class="aff-icon-grid">${gridEntries.map(iconCell).join('')}</div>` : ''}
+      </details>`;
+    }
+    return main;
+  }
+
   // Trait page. Pass extra trait names in `also` to AND them with the primary: the page then
   // shows only objects associated with EVERY selected trait (per-category set intersection),
   // but keeps the normal single-trait layout. Title becomes "Might + Revival". The header ＋
@@ -5453,64 +5759,47 @@
       ${!combo && primary.description ? `<div class="detail-desc">${esc(primary.description)}</div>` : ''}
       ${chips}`;
 
-    let main = '';
-    // Sub-traits + per-object blurbs are single-trait concepts; keep them only on a lone trait.
-    if (!combo && primary.is_parent) {
-      const kids = childAffinities(primary.name);
-      if (kids.length) main += `<details class="detail-cat" open>
-        <summary class="detail-cat-label">Sub-traits</summary>
-        ${kids.map(k => affinityBanner(k, 'nav-affinity')).join('')}
-      </details>`;
-    }
-    const infoEntries = combo ? [] : affinityInfoEntries(primary.name);
-    // Objects that already appear (with their art) in an info-blurb entry on this page. They
-    // must not be repeated as bare icons in the category grids below — each object shows once
-    // per detail page. (An object in >1 blurb still shows once per blurb; that's the blurb side.)
-    const blurbedNames = new Set(infoEntries.flatMap(e => e.objects));
-    // Plain and conditional (arcana-gated) blurbs share the same grid; a conditional entry renders
-    // as a full-width container cell within it (spans all columns) so it stays in the grid layout.
-    const blurbsFor = t => {
-      const cells = infoEntries.filter(e => resolveRef(e.objects[0])?.type === t)
-        .map(e => e.conditions?.length ? infoConditionEntryHTML(e) : infoEntryHTML(e)).join('');
-      return cells ? `<div class="detail-info-grid">${cells}</div>` : '';
-    };
-    for (const cat of DETAIL_CATS) {
-      // Intersect this category's associated names across every selected trait.
-      let catNames = null;
-      for (const a of affs) {
-        const set = new Set(a.related?.[cat.key] || []);
-        catNames = catNames === null ? [...set] : catNames.filter(n => set.has(n));
-      }
-      catNames = catNames || [];
-      const catBlurbs = blurbsFor(cat.type);
-      if (!catNames.length && !catBlurbs) continue;
-      const entries = detailCatEntries(cat, catNames, primary.name); // [{navName,title,icon}], deduped for chars
-      const gridEntries = entries.filter(e => !blurbedNames.has(e.navName)); // drop the blurbed ones
-      const iconCell = e => `<span class="aff-nav-icon ${cat.cls}${objUncollected(cat.type, e.navName) ? ' uncollected' : ''}${objInBuild(cat.type, e.navName) ? ' in-build' : ''}" data-action="nav-object" data-detail-type="${cat.type}"
-          data-detail-name="${esc(e.navName)}" title="${esc(e.title)}"><img src="${esc(e.icon || cat.empty)}" onerror="this.src='${cat.empty}'"></span>`;
-      main += `<details class="detail-cat" open>
-        <summary class="detail-cat-label">${cat.label} <span style="color:var(--text-dim);font-size:.75rem">(${entries.length})</span></summary>
-        ${catBlurbs}
-        ${gridEntries.length ? `<div class="aff-icon-grid">${gridEntries.map(iconCell).join('')}</div>` : ''}
-      </details>`;
-    }
+    let main = affinityBodyHTML(affs);
     if (!main) main = combo
       ? `<div class="detail-empty">No items share ${esc(title)}.</div>`
       : `<div class="detail-empty">No associations recorded.</div>`;
 
-    // ＋ combobox: pick another trait to AND in. Lists every trait not already selected; the
-    // input filters the list live (see the aff-add-search handler).
-    const others = D.affinities.filter(a => !names.includes(a.name));
-    const adorn = `<div class="aff-add">
-      <button class="aff-add-btn" data-action="affinity-add-toggle" title="Add a trait condition">＋</button>
-      <div class="aff-add-pop" hidden>
-        <input type="text" class="aff-add-search" placeholder="Add a trait condition…" autocomplete="off">
-        <div class="aff-add-list">${others.map(a => `<button class="aff-add-opt" data-action="affinity-add" data-affinity="${esc(a.name)}" data-q="${esc(a.name.toLowerCase())}">
-          <img src="${esc(a.icon || '')}" onerror="this.style.visibility='hidden'"><span>${esc(a.name)}</span></button>`).join('')}</div>
-      </div>
-    </div>`;
+    // ＋ combobox: pick another trait to AND in (excludes the already-selected ones).
+    return detailChrome(title, left, main, '', affinityAddAdornHTML(names));
+  }
 
-    return detailChrome(title, left, main, '', adorn);
+  // Unified Arcana↔Trait page: an Arcana that also exists as a standalone trait (Blood Astronomia
+  // (XXI) ↔ Blood Astronomia) is ONE page reached from either entry, so users never land on two
+  // near-duplicate pages. It fuses both lenses: the ARCANA lens (what it affects; the gameplay traits
+  // it carries) and the TRAIT lens (per-object interaction blurbs; every object that carries the
+  // trait). Self-references are dropped — the arcana's own paired trait is omitted from its carried
+  // traits, and the paired arcana from the trait's arcana associations. Footer adds the arcana.
+  function detailArcanaTraitPageHTML(arcana, trait) {
+    // Title keeps the arcana's full name (roman numeral included); the numeral is therefore dropped
+    // from the "Arcana · Trait" subtitle to avoid repeating it.
+    const left = `<div class="detail-icon arcana-card"><img src="${esc(arcana.icon || EMPTY_ICONS.arcana)}" onerror="this.src='${EMPTY_ICONS.arcana}'"></div>
+      <div class="detail-name">${esc(arcana.name)}</div>
+      <div class="detail-kind-tag">Arcana · Trait</div>
+      ${descPartsHTML([arcana.description, arcana.effect_clarifications, trait.description])}`;
+
+    // Arcana lens: affected items + the gameplay traits this arcana carries (minus its own trait).
+    const affectRefs = resolveRefs(arcana.affects_explicit, { icons: true });
+    const affects = affectRefs.length
+      ? `<details class="detail-cat" open><summary class="detail-cat-label">Affects <span style="color:var(--text-dim);font-size:.75rem">(${affectRefs.length})</span></summary>${refIconsGridHTML(affectRefs)}</details>`
+      : '';
+    const carried = objectAffinityBannersHTML('arcana', arcana.name, { exclude: new Set([trait.name]) });
+    const carriedSection = carried
+      ? `<details class="detail-cat" open><summary class="detail-cat-label">Traits</summary>${carried}</details>`
+      : '';
+    // Trait lens: interaction blurbs + associations (objects carrying the trait), minus the self arcana.
+    const traitBody = affinityBodyHTML([trait], { excludeArcana: arcana.name });
+
+    const main = (affects + carriedSection + traitBody) || `<div class="detail-empty">No associations recorded.</div>`;
+    const footer = `<button class="btn btn-confirm btn-add-build" data-action="detail-add-to-build"
+      data-detail-type="arcana" data-detail-name="${esc(arcana.name)}">+ Add to build</button>`;
+    // ＋ combobox stays available so a paired arcana-trait can still be AND-ed with other traits;
+    // doing so navigates to the trait combo view (see the affinity-add handler).
+    return detailChrome(arcana.name, left, main, footer, affinityAddAdornHTML([trait.name]));
   }
 
   // ── Appendix (index) page ────────────────────────────────────────────────
@@ -5595,22 +5884,27 @@
   }
 
   function detailAppendixPageHTML() {
-    // Affinities: parents in data order, each followed by its children (offset). Any affinity
-    // not caught (orphan child) is appended flat so nothing is silently dropped.
+    // Affinities render as a nested tree: each row is followed by its descendants, indented one
+    // step per level. `base_affinity` chains can be any depth (Arcana → Bounce → Iron Blue Will),
+    // so we recurse via childAffinities rather than descend a fixed level. Roots are self-parent
+    // rows (is_parent). The `rendered` set both dedupes and guards against base_affinity cycles.
+    // Any row never reached from a root (orphan / broken base_affinity) is appended flat so
+    // nothing is silently dropped.
     const rendered = new Set();
     let affHTML = '';
-    for (const a of D.affinities) {
-      if (!a.is_parent || rendered.has(a.name)) continue;
+    const renderAffTree = (a, depth) => {
+      if (rendered.has(a.name)) return;
       rendered.add(a.name);
-      affHTML += affinityBanner(a, 'nav-affinity');
-      for (const kid of childAffinities(a.name)) {
-        rendered.add(kid.name);
-        affHTML += affinityBanner(kid, 'nav-affinity', 'appendix-child');
-      }
+      affHTML += affinityBanner(a, 'nav-affinity',
+        depth > 0 ? 'appendix-child' : '',
+        depth > 0 ? `--appendix-depth:${depth}` : '');
+      for (const kid of childAffinities(a.name)) renderAffTree(kid, depth + 1);
+    };
+    for (const a of D.affinities) {
+      if (a.is_parent) renderAffTree(a, 0);
     }
     for (const a of D.affinities) {
-      if (rendered.has(a.name)) continue;
-      affHTML += affinityBanner(a, 'nav-affinity');
+      if (!rendered.has(a.name)) affHTML += affinityBanner(a, 'nav-affinity');
     }
     const arcanaHTML  = D.arcana.map(a => appendixRow({ kind: 'object', type: 'arcana', name: a.name, icon: a.icon, tag: 'Arcana' })).join('');
     const passiveHTML = D.passives.map(p => appendixRow({ kind: 'object', type: 'passive', name: p.name, icon: p.icon, tag: 'Passive' })).join('');
@@ -5817,10 +6111,17 @@
     }
     if (action === 'affinity-add') {
       const p = state.detail.stack[state.detail.idx];
-      if (p && p.kind === 'affinity') {
-        const nm = btn.dataset.affinity;
+      const nm = btn.dataset.affinity;
+      // Base trait for the combo. A unified arcana↔trait page may be reached from either entry, so
+      // resolve the trait name from an affinity page OR the arcana object page of a pair.
+      let base = p && p.kind === 'affinity' ? p.name
+        : (p && p.kind === 'object' && p.type === 'arcana' ? arcanaTraitPair({ arcana: p.name })?.trait.name : null);
+      if (p && base && nm && nm !== base) {
+        // Turn the current page into a trait combo page (also.length>0 → the AND-analysis view, not
+        // the unified page). Removing the last condition later returns to the unified/trait page.
+        p.kind = 'affinity'; p.name = base; delete p.type;
         p.also = p.also || [];
-        if (nm && nm !== p.name && !p.also.includes(nm)) p.also.push(nm);
+        if (!p.also.includes(nm)) p.also.push(nm);
         renderDetailOverlay();
       }
       return;
