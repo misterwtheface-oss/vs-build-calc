@@ -2420,10 +2420,14 @@
   // (info panel → 'open-affinity-page'; detail overlay → 'nav-affinity').
   function affinityBanner(aff, action, extraCls = '', extraStyle = '') {
     const color = aff.color || '#6a4010';
+    // Arcana-traits always display the paired arcana's full name (roman numeral included) so the
+    // numeral shows consistently in EVERY banner location. Navigation stays keyed on the trait name.
+    const pair = arcanaTraitPair({ trait: aff });
+    const label = pair ? pair.arcana.name : aff.name;
     return `<div class="affinity-row ${extraCls}" data-action="${esc(action)}" data-affinity="${esc(aff.name)}"
-        style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)};${extraStyle}" title="${esc(aff.name)}">
+        style="--aff-color:${esc(color)};--aff-text:${affinityTextColor(color)};${extraStyle}" title="${esc(label)}">
       <span class="affinity-row-icon"><img src="${esc(aff.icon || EMPTY_ICON)}" alt="" onerror="this.style.visibility='hidden'"></span>
-      <span class="affinity-row-banner">${esc(aff.name)}</span>
+      <span class="affinity-row-banner">${esc(label)}</span>
     </div>`;
   }
 

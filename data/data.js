@@ -16015,7 +16015,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -16027,7 +16027,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Critical Damage",
+        "Critical Hit",
         "Max Health",
         "Might"
       ],
@@ -16077,7 +16077,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -16089,7 +16089,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Critical Damage",
+        "Critical Hit",
         "Max Health",
         "Might"
       ],
@@ -16139,7 +16139,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -16151,7 +16151,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Critical Damage",
+        "Critical Hit",
         "Max Health",
         "Might"
       ],
@@ -16201,7 +16201,7 @@ window.VS_DATA = {
         {
           "key": "primary",
           "items": [
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -16213,7 +16213,7 @@ window.VS_DATA = {
         }
       ],
       "affinity": [
-        "Critical Damage",
+        "Critical Hit",
         "Max Health",
         "Might"
       ],
@@ -28641,7 +28641,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -28652,7 +28653,8 @@ window.VS_DATA = {
         "Amount",
         "Vampire-Killing Tool",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -28715,7 +28717,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck",
             "Recovery"
           ]
@@ -28724,12 +28726,7 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Vampire-Killing Tool",
-            "Blood"
-          ]
-        },
-        {
-          "key": null,
-          "items": [
+            "Blood",
             "Max Health",
             "Red"
           ]
@@ -28745,6 +28742,12 @@ window.VS_DATA = {
           "items": [
             "Healing Damage"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -28752,7 +28755,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Recovery",
         "Vampire-Killing Tool",
@@ -28760,7 +28763,8 @@ window.VS_DATA = {
         "Max Health",
         "Red",
         "Healing Damage",
-        "Healing Damage"
+        "Healing Damage",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -28841,7 +28845,7 @@ window.VS_DATA = {
             "Move Speed",
             "Speed",
             "Duration",
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -28856,6 +28860,12 @@ window.VS_DATA = {
           "items": [
             "Armor",
             "Divine Bloodline"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         },
         {
@@ -28874,11 +28884,12 @@ window.VS_DATA = {
         "Move Speed",
         "Speed",
         "Duration",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Blue",
         "Armor",
         "Divine Bloodline",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -28949,7 +28960,7 @@ window.VS_DATA = {
             "Move Speed",
             "Speed",
             "Duration",
-            "Critical Damage",
+            "Critical Hit",
             "Luck",
             "Recovery"
           ]
@@ -28975,6 +28986,12 @@ window.VS_DATA = {
           ]
         },
         {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
+        },
+        {
           "key": "Pale Diamond Incursion (V)",
           "items": [
             "Pseudo-Cooldown",
@@ -28990,7 +29007,7 @@ window.VS_DATA = {
         "Move Speed",
         "Speed",
         "Duration",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Recovery",
         "Union",
@@ -28998,6 +29015,7 @@ window.VS_DATA = {
         "Red",
         "Healing Damage",
         "Healing Damage",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -29498,7 +29516,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         },
         {
@@ -29521,7 +29540,8 @@ window.VS_DATA = {
         "Bounce",
         "Iron Blue Will",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -29615,7 +29635,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         },
         {
@@ -29638,7 +29659,8 @@ window.VS_DATA = {
         "Bounce",
         "Iron Blue Will",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -29793,7 +29815,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         },
         {
@@ -29822,7 +29845,8 @@ window.VS_DATA = {
         "Union",
         "Blue",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
+        "Slash",
         "Bounce",
         "Iron Blue Will",
         "Pseudo-Cooldown",
@@ -29924,7 +29948,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         },
         {
@@ -29946,7 +29971,8 @@ window.VS_DATA = {
         "Bounce",
         "Iron Blue Will",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -30033,7 +30059,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         },
         {
@@ -30055,7 +30082,8 @@ window.VS_DATA = {
         "Bounce",
         "Iron Blue Will",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -30228,7 +30256,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         },
         {
@@ -30251,7 +30280,8 @@ window.VS_DATA = {
         "Bounce",
         "Iron Blue Will",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion"
       ],
@@ -30338,7 +30368,8 @@ window.VS_DATA = {
           "items": [
             "Vampire-Killing Tool",
             "Santa",
-            "Blue"
+            "Blue",
+            "Luck"
           ]
         },
         {
@@ -30346,13 +30377,6 @@ window.VS_DATA = {
           "items": [
             "Bounce",
             "Waltz of Pearls"
-          ]
-        },
-        {
-          "key": "Slash (XVI)",
-          "items": [
-            "Luck",
-            "Critical Damage"
           ]
         },
         {
@@ -30372,10 +30396,9 @@ window.VS_DATA = {
         "Vampire-Killing Tool",
         "Santa",
         "Blue",
+        "Luck",
         "Bounce",
         "Waltz of Pearls",
-        "Luck",
-        "Critical Damage",
         "Armor",
         "Divine Bloodline"
       ],
@@ -30384,8 +30407,7 @@ window.VS_DATA = {
       ],
       "arcana": [
         "Divine Bloodline (IX)",
-        "Waltz of Pearls (XI)",
-        "Slash (XVI)"
+        "Waltz of Pearls (XI)"
       ]
     },
     {
@@ -30449,7 +30471,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -30466,6 +30488,12 @@ window.VS_DATA = {
             "Bounce",
             "Waltz of Pearls"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -30475,12 +30503,13 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Vampire-Killing Tool",
         "Red",
         "Blue",
         "Bounce",
-        "Waltz of Pearls"
+        "Waltz of Pearls",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -30647,7 +30676,8 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -30663,7 +30693,8 @@ window.VS_DATA = {
         "Blue",
         "Bounce",
         "Waltz of Pearls",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -36353,7 +36384,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -36361,6 +36392,12 @@ window.VS_DATA = {
           "items": [
             "Red",
             "Blue"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -36372,9 +36409,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Red",
-        "Blue"
+        "Blue",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -36968,7 +37006,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck",
             "Light Source"
           ]
@@ -36986,6 +37024,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Pale Diamond Incursion"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -36995,13 +37039,14 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Light Source",
         "Red",
         "Blue",
         "Pseudo-Cooldown",
-        "Pale Diamond Incursion"
+        "Pale Diamond Incursion",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -37848,8 +37893,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -37873,8 +37919,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Gemini",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion",
         "Fire"
@@ -37960,8 +38007,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -37978,8 +38026,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Gemini",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Fire"
       ],
       "conflict": [
@@ -38040,8 +38089,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -38065,8 +38115,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Gemini",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Pseudo-Cooldown",
         "Pale Diamond Incursion",
         "Fire"
@@ -38139,7 +38190,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Amount",
             "Armor",
             "Retaliation"
@@ -38156,6 +38207,12 @@ window.VS_DATA = {
           "items": [
             "Divine Bloodline"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -38163,12 +38220,13 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Amount",
         "Armor",
         "Retaliation",
         "Blue",
-        "Divine Bloodline"
+        "Divine Bloodline",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -38706,7 +38764,7 @@ window.VS_DATA = {
             "Orologion",
             "Freeze",
             "Luck",
-            "Critical Damage",
+            "Critical Hit",
             "Light Source"
           ]
         },
@@ -38714,6 +38772,12 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Blue"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -38726,9 +38790,10 @@ window.VS_DATA = {
         "Orologion",
         "Freeze",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Light Source",
-        "Blue"
+        "Blue",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -39604,7 +39669,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -39640,6 +39705,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Pale Diamond Incursion"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -39649,7 +39720,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Blue",
         "Gemini",
         "Curse",
@@ -39658,7 +39729,8 @@ window.VS_DATA = {
         "Tragic Princess",
         "Speed",
         "Pseudo-Cooldown",
-        "Pale Diamond Incursion"
+        "Pale Diamond Incursion",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -39699,7 +39771,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -39721,6 +39793,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Tragic Princess"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -39730,12 +39808,13 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Blue",
         "Gemini",
         "Move Speed",
         "Pseudo-Cooldown",
-        "Tragic Princess"
+        "Tragic Princess",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -39802,7 +39881,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
+            "Critical Hit",
             "Light Source",
             "Rosary"
           ]
@@ -39839,6 +39918,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Pale Diamond Incursion"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -39848,7 +39933,7 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Light Source",
         "Rosary",
         "Blue",
@@ -39858,7 +39943,8 @@ window.VS_DATA = {
         "Pseudo-Cooldown",
         "Tragic Princess",
         "Pseudo-Cooldown",
-        "Pale Diamond Incursion"
+        "Pale Diamond Incursion",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -40255,7 +40341,15 @@ window.VS_DATA = {
             "Might",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Critical Hit",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -40263,7 +40357,10 @@ window.VS_DATA = {
         "Might",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -40291,8 +40388,17 @@ window.VS_DATA = {
       "ode_category": null,
       "arcana_ratings": {},
       "rarity": 0,
-      "affinity_groups": [],
-      "affinity": [],
+      "affinity_groups": [
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
+        }
+      ],
+      "affinity": [
+        "Slash"
+      ],
       "conflict": [],
       "arcana": [
         "Slash (XVI)"
@@ -42173,7 +42279,7 @@ window.VS_DATA = {
             "Armor",
             "Retaliation",
             "Low Health",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -42200,6 +42306,12 @@ window.VS_DATA = {
           "items": [
             "Divine Bloodline"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -42213,12 +42325,13 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
-        "Critical Damage",
+        "Critical Hit",
         "Red",
         "Blood",
         "Healing Damage",
         "Healing Damage",
-        "Divine Bloodline"
+        "Divine Bloodline",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -42387,7 +42500,15 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Critical Hit",
+            "Luck"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -42397,7 +42518,10 @@ window.VS_DATA = {
         "Speed",
         "Area",
         "Cooldown",
-        "Amount"
+        "Amount",
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -42431,13 +42555,21 @@ window.VS_DATA = {
             "Speed",
             "Area",
             "Cooldown",
-            "Amount"
+            "Amount",
+            "Critical Hit",
+            "Luck"
           ]
         },
         {
           "key": null,
           "items": [
             "Blood"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -42448,7 +42580,10 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Blood"
+        "Critical Hit",
+        "Luck",
+        "Blood",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -43320,7 +43455,7 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -43328,6 +43463,12 @@ window.VS_DATA = {
           "key": "Divine Bloodline (IX)",
           "items": [
             "Divine Bloodline"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -43337,9 +43478,10 @@ window.VS_DATA = {
         "Cooldown",
         "Armor",
         "Retaliation",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
-        "Divine Bloodline"
+        "Divine Bloodline",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -43416,7 +43558,7 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -43424,6 +43566,12 @@ window.VS_DATA = {
           "key": "Divine Bloodline (IX)",
           "items": [
             "Divine Bloodline"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -43437,9 +43585,10 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Red",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
-        "Divine Bloodline"
+        "Divine Bloodline",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -43513,7 +43662,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -43538,7 +43687,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Bounce",
         "Iron Blue Will",
@@ -43612,7 +43761,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck",
             "Gold Coin",
             "Light Source"
@@ -43631,6 +43780,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Pale Diamond Incursion"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -43639,14 +43794,15 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Gold Coin",
         "Light Source",
         "Bounce",
         "Iron Blue Will",
         "Pseudo-Cooldown",
-        "Pale Diamond Incursion"
+        "Pale Diamond Incursion",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -45333,7 +45489,7 @@ window.VS_DATA = {
             "Amount",
             "Recovery",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -45347,6 +45503,12 @@ window.VS_DATA = {
           "items": [
             "Gemini"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -45357,9 +45519,10 @@ window.VS_DATA = {
         "Amount",
         "Recovery",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Red",
-        "Gemini"
+        "Gemini",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -47872,8 +48035,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -47889,8 +48053,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Fire"
       ],
       "conflict": [
@@ -47964,8 +48129,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -47982,8 +48148,9 @@ window.VS_DATA = {
         "Amount",
         "Red",
         "Curse",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Fire"
       ],
       "conflict": [
@@ -48062,8 +48229,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48074,8 +48242,9 @@ window.VS_DATA = {
         "Amount",
         "Growth",
         "Blue",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -48144,8 +48313,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48158,8 +48328,9 @@ window.VS_DATA = {
         "Amount",
         "Growth",
         "Blue",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -48238,8 +48409,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48250,8 +48422,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -48323,8 +48496,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48335,8 +48509,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Blue",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -48429,8 +48604,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48442,8 +48618,9 @@ window.VS_DATA = {
         "Amount",
         "Blue",
         "Freeze",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -48529,8 +48706,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48543,8 +48721,9 @@ window.VS_DATA = {
         "Magnet",
         "Blue",
         "Freeze",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -48627,8 +48806,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48640,8 +48820,9 @@ window.VS_DATA = {
         "Amount",
         "Curse",
         "Blue",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -48714,8 +48895,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48727,8 +48909,9 @@ window.VS_DATA = {
         "Amount",
         "Curse",
         "Blue",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -48808,8 +48991,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48820,8 +49004,9 @@ window.VS_DATA = {
         "Amount",
         "Red",
         "Curse",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -48895,8 +49080,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -48908,8 +49094,9 @@ window.VS_DATA = {
         "Greed",
         "Red",
         "Curse",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -48992,8 +49179,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -49004,8 +49192,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Red",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -49073,6 +49262,14 @@ window.VS_DATA = {
           "items": [
             "Red"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Critical Hit",
+            "Luck",
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -49081,7 +49278,10 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Red"
+        "Red",
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -49156,8 +49356,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -49174,8 +49375,9 @@ window.VS_DATA = {
         "Amount",
         "Max Health",
         "Red",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Fire"
       ],
       "conflict": [
@@ -49250,8 +49452,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         },
         {
@@ -49268,8 +49471,9 @@ window.VS_DATA = {
         "Amount",
         "Max Health",
         "Red",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
+        "Slash",
         "Fire"
       ],
       "conflict": [
@@ -50267,7 +50471,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -50286,7 +50490,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Vampire-Killing Tool",
         "Red"
@@ -52990,7 +53194,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -53008,7 +53212,7 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Magic Weapon",
         "Red"
@@ -53374,7 +53578,7 @@ window.VS_DATA = {
             "Area",
             "Cooldown",
             "Amount",
-            "Critical Damage",
+            "Critical Hit",
             "Luck"
           ]
         },
@@ -53384,6 +53588,12 @@ window.VS_DATA = {
             "Magic Weapon",
             "Red"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -53391,10 +53601,11 @@ window.VS_DATA = {
         "Area",
         "Cooldown",
         "Amount",
-        "Critical Damage",
+        "Critical Hit",
         "Luck",
         "Magic Weapon",
-        "Red"
+        "Red",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -53508,7 +53719,7 @@ window.VS_DATA = {
             "Armor",
             "Retaliation",
             "Low Health",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -53536,7 +53747,7 @@ window.VS_DATA = {
         "Armor",
         "Retaliation",
         "Low Health",
-        "Critical Damage",
+        "Critical Hit",
         "Magic Weapon",
         "Invulnerable",
         "Blue",
@@ -53755,7 +53966,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -53763,6 +53974,12 @@ window.VS_DATA = {
           "items": [
             "Magic Weapon",
             "Red"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -53773,9 +53990,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Magic Weapon",
-        "Red"
+        "Red",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -53813,7 +54031,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -53821,6 +54039,12 @@ window.VS_DATA = {
           "items": [
             "Magic Weapon",
             "Blue"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -53832,9 +54056,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Magic Weapon",
-        "Blue"
+        "Blue",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -54062,7 +54287,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -54075,7 +54301,8 @@ window.VS_DATA = {
         "Ambiguous Power",
         "Red",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -54148,7 +54375,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -54161,7 +54389,8 @@ window.VS_DATA = {
         "Ambiguous Power",
         "Red",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -54234,7 +54463,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -54247,7 +54477,8 @@ window.VS_DATA = {
         "Ambiguous Power",
         "Red",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -56077,7 +56308,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -56091,7 +56323,8 @@ window.VS_DATA = {
         "Knives",
         "Red",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -56154,7 +56387,7 @@ window.VS_DATA = {
             "Amount",
             "Charm",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -56164,6 +56397,12 @@ window.VS_DATA = {
             "Knives",
             "Armor",
             "Blue"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -56175,11 +56414,12 @@ window.VS_DATA = {
         "Amount",
         "Charm",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Magic Weapon",
         "Knives",
         "Armor",
-        "Blue"
+        "Blue",
+        "Slash"
       ],
       "conflict": [
         "Duration"
@@ -57571,7 +57811,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -57579,6 +57819,12 @@ window.VS_DATA = {
           "items": [
             "Glimmer Tech",
             "Red"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -57588,9 +57834,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Glimmer Tech",
-        "Red"
+        "Red",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -57653,7 +57900,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -57661,6 +57908,12 @@ window.VS_DATA = {
           "items": [
             "Glimmer Tech",
             "Red"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -57670,9 +57923,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Glimmer Tech",
-        "Red"
+        "Red",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -57728,7 +57982,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -57736,6 +57990,12 @@ window.VS_DATA = {
           "items": [
             "Glimmer Tech",
             "Red"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -57745,9 +58005,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Glimmer Tech",
-        "Red"
+        "Red",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -58752,7 +59013,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -58764,7 +59026,8 @@ window.VS_DATA = {
         "Amount",
         "Glimmer Tech",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -58808,7 +59071,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage",
+            "Critical Hit",
             "Invulnerable"
           ]
         },
@@ -58816,6 +59079,12 @@ window.VS_DATA = {
           "key": null,
           "items": [
             "Glimmer Tech"
+          ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
           ]
         }
       ],
@@ -58826,9 +59095,10 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Invulnerable",
-        "Glimmer Tech"
+        "Glimmer Tech",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -58884,8 +59154,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -58895,8 +59166,9 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Glimmer Tech",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -58957,8 +59229,9 @@ window.VS_DATA = {
         {
           "key": "Slash (XVI)",
           "items": [
-            "Critical Damage",
-            "Luck"
+            "Critical Hit",
+            "Luck",
+            "Slash"
           ]
         }
       ],
@@ -58970,8 +59243,9 @@ window.VS_DATA = {
         "Glimmer Tech",
         "Charm",
         "Gold Fever",
-        "Critical Damage",
-        "Luck"
+        "Critical Hit",
+        "Luck",
+        "Slash"
       ],
       "conflict": [
         "Speed",
@@ -59031,7 +59305,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -59044,7 +59319,8 @@ window.VS_DATA = {
         "Glimmer Tech",
         "Red",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -59106,7 +59382,8 @@ window.VS_DATA = {
           "key": "Slash (XVI)",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
@@ -59120,7 +59397,8 @@ window.VS_DATA = {
         "Red",
         "Curse",
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": [
         "Speed"
@@ -60082,7 +60360,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -60104,6 +60382,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Pale Diamond Incursion"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -60114,12 +60398,13 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Blue",
         "Bounce",
         "Waltz of Pearls",
         "Pseudo-Cooldown",
-        "Pale Diamond Incursion"
+        "Pale Diamond Incursion",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -60194,7 +60479,7 @@ window.VS_DATA = {
             "Cooldown",
             "Amount",
             "Luck",
-            "Critical Damage"
+            "Critical Hit"
           ]
         },
         {
@@ -60210,6 +60495,12 @@ window.VS_DATA = {
             "Pseudo-Cooldown",
             "Pale Diamond Incursion"
           ]
+        },
+        {
+          "key": "Slash (XVI)",
+          "items": [
+            "Slash"
+          ]
         }
       ],
       "affinity": [
@@ -60220,11 +60511,12 @@ window.VS_DATA = {
         "Cooldown",
         "Amount",
         "Luck",
-        "Critical Damage",
+        "Critical Hit",
         "Bounce",
         "Waltz of Pearls",
         "Pseudo-Cooldown",
-        "Pale Diamond Incursion"
+        "Pale Diamond Incursion",
+        "Slash"
       ],
       "conflict": [],
       "arcana": [
@@ -64883,13 +65175,15 @@ window.VS_DATA = {
           "key": "primary",
           "items": [
             "Luck",
-            "Critical Damage"
+            "Critical Hit",
+            "Slash"
           ]
         }
       ],
       "affinity": [
         "Luck",
-        "Critical Damage"
+        "Critical Hit",
+        "Slash"
       ],
       "conflict": []
     },
@@ -66667,43 +66961,48 @@ window.VS_DATA = {
       }
     },
     {
-      "name": "Critical Damage",
-      "icon": "assets/icons/affinities/critical_damage.png",
-      "color": "#878787",
+      "name": "Critical Hit",
+      "icon": "assets/icons/affinities/critical_hit.png",
+      "color": "#171717",
       "base_affinity": "Arcana",
       "is_parent": false,
       "show_in_table": true,
-      "description": "Slash (XVI) is a key support for the Critical Damage archetype, doubling the damage of critical hits from all sources and enabling critical hits for supported weapons that cannot crit innately. In general, critical hit chance is affected by luck with some exceptions.",
+      "description": "Some weapons have a chance to deal a Critical Hit based on the weapon's innate critical hit chance, generally dealing increased damage determined by the weapon's innate critical damage multiplier. Slash (XIV) enables many weapons to critically hit and doubles the critical damage multiplier of supported weapons.",
       "info_entries": [
+        {
+          "objects": [
+            "Whip"
+          ],
+          "blurb": "Damage dealt has a 20% chance, affected by Luck, to deal 400% damage.",
+          "conditions": [
+            "Slash (XVI)"
+          ]
+        },
+        {
+          "objects": [
+            "Bloody Tear"
+          ],
+          "blurb": "Damage dealt has a 10% chance, affected by Luck, to deal 200% damage."
+        },
+        {
+          "objects": [
+            "Vento Sacro",
+            "Fuwalafuwaloo"
+          ],
+          "blurb": "Damage dealt has a 5% chance, affected by Luck, to deal 200% damage."
+        },
         {
           "objects": [
             "Bloody Tear",
             "Fuwalafuwaloo"
           ],
-          "blurb": "Critical Hits heal the user for 8 health."
+          "blurb": "Critical Hits heal the user for 8 health, unaffected by Recovery."
         },
         {
           "objects": [
             "Fuwalafuwaloo"
           ],
           "blurb": "Critical Hits trigger an explosion that is affected by Area."
-        },
-        {
-          "objects": [
-            "Bloody Tear",
-            "Vento Sacro",
-            "Fuwalafuwaloo"
-          ],
-          "blurb": "Capable of critical hits innately."
-        },
-        {
-          "objects": [
-            "Whip"
-          ],
-          "blurb": "Capable of critical hits only when Slash (XVI) is active.",
-          "conditions": [
-            "Slash (XVI)"
-          ]
         }
       ],
       "related": {
@@ -66718,7 +67017,6 @@ window.VS_DATA = {
           "Axe",
           "Death Spiral",
           "Legacy of Death: Soul River",
-          "Cross",
           "Heaven Sword",
           "Arch Angle",
           "Yatta Daikarin",
@@ -66731,7 +67029,10 @@ window.VS_DATA = {
           "Santa Javelin",
           "Levelin'Eh",
           "Seraphic Cry",
+          "Descent into Misery",
           "Muramasa",
+          "Ashella",
+          "Bloodlust",
           "Eskizzibur",
           "Legionnaire",
           "Flash Arrow",
@@ -66750,6 +67051,7 @@ window.VS_DATA = {
           "Jet Black Whip",
           "Mormegil Tip",
           "Vibhuti Whip",
+          "Daybreaker Tip",
           "Vanitas Whip",
           "Aurablaster Tip",
           "Jewel Gun",
@@ -66782,6 +67084,121 @@ window.VS_DATA = {
           "Reinhardt Schneider (Spectral Sword)",
           "Reinhardt Schneider (Coat of Arms)"
         ],
+        "arcana": [
+          "Slash (XVI)"
+        ]
+      }
+    },
+    {
+      "name": "Slash",
+      "icon": "assets/icons/affinities/slash.png",
+      "color": "#878787",
+      "base_affinity": "Critical Hit",
+      "is_parent": false,
+      "show_in_table": true,
+      "description": "",
+      "info_entries": [
+        {
+          "objects": [
+            "Whip"
+          ],
+          "blurb": "Damage dealt has a 20% chance, affected by Luck, to deal 400% damage.",
+          "conditions": [
+            "Slash (XVI)"
+          ]
+        },
+        {
+          "objects": [
+            "Bloody Tear"
+          ],
+          "blurb": "Damage dealt has a 10% chance, affected by Luck, to deal 400% damage.",
+          "conditions": [
+            "Slash (XVI)"
+          ]
+        },
+        {
+          "objects": [
+            "Vento Sacro",
+            "Fuwalafuwaloo"
+          ],
+          "blurb": "Damage dealt has a 5% chance, affected by Luck, to deal 400% damage.",
+          "conditions": [
+            "Slash (XVI)"
+          ]
+        }
+      ],
+      "related": {
+        "weapons": [
+          "Whip",
+          "Bloody Tear",
+          "Vento Sacro",
+          "Fuwalafuwaloo",
+          "Knife",
+          "Thousand Edge",
+          "Million Cut",
+          "Axe",
+          "Death Spiral",
+          "Legacy of Death: Soul River",
+          "Heaven Sword",
+          "Arch Angle",
+          "Yatta Daikarin",
+          "Greatest Jubilee",
+          "Ammo Appalate",
+          "Horse Cartridge",
+          "Gunastrophe",
+          "Victory Sword",
+          "Celestial Voulge",
+          "Santa Javelin",
+          "Levelin'Eh",
+          "Seraphic Cry",
+          "Descent into Misery",
+          "Shimmering Sands",
+          "Muramasa",
+          "Ashella",
+          "Bloodlust",
+          "Eskizzibur",
+          "Legionnaire",
+          "Flash Arrow",
+          "Millionaire",
+          "Impostongue",
+          "Alchemy Whip",
+          "Vampire Killer",
+          "Wind Whip",
+          "Spirit Tornado Tip",
+          "Platinum Whip",
+          "Cross Crasher Tip",
+          "Dragon Water Whip",
+          "Hydrostormer Tip",
+          "Sonic Whip",
+          "Crissaegrim Tip",
+          "Jet Black Whip",
+          "Mormegil Tip",
+          "Vibhuti Whip",
+          "Daybreaker Tip",
+          "Vanitas Whip",
+          "Aurablaster Tip",
+          "Gungnir-Souris",
+          "Tyrfing",
+          "Rune Sword",
+          "Confodere",
+          "Vol Confodere",
+          "Melio Confodere",
+          "Pocket Knife",
+          "Claimh Solais",
+          "Flamberge",
+          "Zweihander",
+          "Galatyn",
+          "Khukuri",
+          "Jetstream",
+          "Twin Dragon",
+          "Gekkabijin",
+          "Bullova",
+          "Falconwind",
+          "Gros Michel",
+          "Cavendish"
+        ],
+        "passives": [],
+        "characters": [],
         "arcana": [
           "Slash (XVI)"
         ]
@@ -70690,6 +71107,7 @@ window.VS_DATA = {
           "Seraphic Cry",
           "Gaze of Gaea",
           "Embrace of Gaea",
+          "Descent into Misery",
           "Photonstorm",
           "Silver Wind",
           "Festive Winds",
@@ -70701,6 +71119,8 @@ window.VS_DATA = {
           "J'Odore",
           "Night Sword",
           "Muramasa",
+          "Ashella",
+          "Bloodlust",
           "Eskizzibur",
           "Legionnaire",
           "Flash Arrow",
@@ -70733,6 +71153,7 @@ window.VS_DATA = {
           "Jet Black Whip",
           "Mormegil Tip",
           "Vibhuti Whip",
+          "Daybreaker Tip",
           "Vanitas Whip",
           "Aurablaster Tip",
           "Jewel Gun",
