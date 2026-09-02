@@ -7,14 +7,17 @@
 //
 //   [1] index.html's inline <script> parses          — catches JS syntax errors before they ship.
 //   [2] data/data.js parses and sets window.VS_DATA   — catches a corrupt/empty data build.
-//   [3] every icon referenced in data.js exists       — catches broken image refs (e.g. a new trait
-//        icon that wasn't committed). Missing .png = FAIL; a missing character _sprite.gif is only a
-//        WARN, because charSpriteHTML falls back gif -> static -> icon and never shows a broken image.
+//   [3] every icon referenced in data.js is COMMITTED — checked against git-tracked filenames with
+//        EXACT case (GitHub Pages is case-sensitive Linux and ships only committed files), so it
+//        catches an uncommitted icon AND a case mismatch (Resurrection.png vs resurrection.png) that
+//        existsSync would miss on Windows. Missing/miscased .png = FAIL; a missing character
+//        _sprite.gif is only a WARN (charSpriteHTML falls back gif -> static -> icon, no broken image).
 //
 // Exit code is non-zero if anything FAILS, so it can gate a push (or a git pre-push hook). This does
 // NOT replace the manual on-device check — it's the fast automated floor beneath it.
 
 import { readFileSync, existsSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { resolve, dirname, join } from 'node:path';
 
@@ -59,27 +62,51 @@ try {
   fail('data.js parse error: ' + e.message);
 }
 
-// ── [3] icon references in data.js exist on disk ──
+// ── [3] icon references in data.js are COMMITTED, with EXACT case ──
+// GitHub Pages serves on Linux (case-sensitive) and only ships COMMITTED files. So we check each
+// referenced icon against git-tracked filenames with exact case — not existsSync, which is
+// case-insensitive on Windows (it happily "found" Resurrection.png for a resurrection.png ref that
+// then 404'd live) and can't tell a committed file from an untracked local one. Falls back to disk
+// existence only if git is unavailable.
 console.log('\n[3] icon asset references (data.js)');
 try {
   const js = readFileSync(join(ROOT, 'data/data.js'), 'utf8');
   // Paths sit inside JSON strings, so match up to the closing quote. Filenames are sanitized to
   // lowercase/underscores but a few include & (e.g. charlotte_&_jonathan_sprite.gif).
   const refs = [...new Set(js.match(/assets\/icons\/[^"]+?\.(?:png|gif)/g) || [])];
-  const missing = refs.filter(p => !existsSync(join(ROOT, p)));
-  const missPng = missing.filter(p => p.toLowerCase().endsWith('.png'));
-  const missGif = missing.filter(p => p.toLowerCase().endsWith('.gif'));
-  for (const p of missPng) fail('missing icon (would 404 on the live site): ' + p);
-  // Character sprite gifs are a permanently-absent set (none are produced) with a graceful
-  // gif->static->icon fallback, so collapse them to one line — listing each would bury a real
-  // missing .png. Pass --verbose to see the full gif list.
-  const verbose = process.argv.includes('--verbose');
-  if (missGif.length) {
-    if (verbose) missGif.forEach(p => warn('missing sprite gif — graceful fallback, ok: ' + p));
-    else warn(`${missGif.length} character sprite gif${missGif.length === 1 ? '' : 's'} absent — graceful fallback, ok (--verbose to list)`);
+  let tracked = null;
+  try {
+    tracked = new Set(execSync('git ls-files assets/icons', { cwd: ROOT }).toString().split('\n').filter(Boolean));
+  } catch { /* not a git repo / git unavailable → fall back to disk existence */ }
+  const trackedLower = tracked && new Map([...tracked].map(f => [f.toLowerCase(), f]));
+  // Classify: 'ok' | 'case' (committed but wrong case) | 'untracked' (on disk, not committed) | 'missing'.
+  const classify = p => {
+    if (!tracked) return existsSync(join(ROOT, p)) ? { s: 'ok' } : { s: 'missing' };
+    if (tracked.has(p)) return { s: 'ok' };
+    const correct = trackedLower.get(p.toLowerCase());
+    if (correct) return { s: 'case', correct };
+    return existsSync(join(ROOT, p)) ? { s: 'untracked' } : { s: 'missing' };
+  };
+  const problems = refs.map(p => ({ p, ...classify(p) })).filter(x => x.s !== 'ok');
+  const isGif = p => p.toLowerCase().endsWith('.gif');
+  const pngProblems = problems.filter(x => !isGif(x.p));
+  const gifProblems = problems.filter(x => isGif(x.p));
+  // A referenced .png that isn't committed at the exact case would 404 on the live site → FAIL.
+  for (const x of pngProblems) {
+    if (x.s === 'case') fail(`icon case mismatch (404 on Linux): data.js "${x.p}" but committed as "${x.correct}"`);
+    else if (x.s === 'untracked') fail(`icon present locally but NOT committed (would 404): ${x.p}`);
+    else fail(`missing icon (would 404 on the live site): ${x.p}`);
   }
-  if (!missing.length) ok(`all ${refs.length} referenced icons present`);
-  else if (!missPng.length) ok(`all ${refs.length - missGif.length} required icons present`);
+  // Character sprite gifs are a permanently-absent set with a graceful gif->static->icon fallback,
+  // so collapse them to one line. Pass --verbose to see the full list.
+  const verbose = process.argv.includes('--verbose');
+  if (gifProblems.length) {
+    if (verbose) gifProblems.forEach(x => warn('missing sprite gif — graceful fallback, ok: ' + x.p));
+    else warn(`${gifProblems.length} character sprite gif${gifProblems.length === 1 ? '' : 's'} absent — graceful fallback, ok (--verbose to list)`);
+  }
+  const suffix = tracked ? 'committed (exact case)' : 'present';
+  if (!problems.length) ok(`all ${refs.length} referenced icons ${suffix}`);
+  else if (!pngProblems.length) ok(`all ${refs.length - gifProblems.length} required icons ${suffix}`);
 } catch (e) {
   fail('icon sweep error: ' + e.message);
 }
